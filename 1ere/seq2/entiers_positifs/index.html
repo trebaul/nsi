@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://example.com/1ere/seq2/entiers_positifs/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>I. Les entiers positifs - Sciences informatiques</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../../extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq1/logique/" class="dropdown-item">I. Logique</a>
+</li>
+            
+<li>
+    <a href="../../seq1/archi/" class="dropdown-item">II. Architecture</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">I. Les entiers positifs</a>
+</li>
+            
+<li>
+    <a href="../entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
+</li>
+            
+<li>
+    <a href="../flottants/" class="dropdown-item">III. Les flottants</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq2/piles/" class="dropdown-item">I. Les piles</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq2/r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq2/diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq1/archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">4. Structurer les données</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq4/listes/" class="dropdown-item">I. Les listes</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/files/" class="dropdown-item">II. Les files</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/dico/" class="dropdown-item">III. Les dictionnaires</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/synthese/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
+</li>
+                                    
+<li>
+    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../ressources/" class="nav-link">Ressources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../seq1/archi/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../entiers_relatifs/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sequence-2" class="nav-link">Séquence 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#i-les-entiers-positifs" class="nav-link">I. Les entiers positifs</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#td-representation-des-entiers-positifs" class="nav-link">TD : Représentation des entiers positifs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tp-les-entiers-positifs-en-machine" class="nav-link">TP : Les entiers positifs en machine</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="sequence-2"><strong>Séquence 2</strong></h1>
+<h1 id="i-les-entiers-positifs">I. Les entiers positifs</h1>
+<h2 id="cours">Cours</h2>
+<p><img alt="" src="../img/bin.jpg" /></p>
+<p>Le type de variables <code>int</code> pour "integer" de Python permet de manipuler des entiers. Ils sont ne sont en fait pas représentés comme nous en avons l'habitude : on utilise une autre <strong>base</strong>.</p>
+<h3 id="a-la-base-10-decimale">A. La base 10 (décimale)</h3>
+<p>La base 10 est celle que nous utilisons naturellement aujourd'hui. Elle est constituée de 10 chiffres, de 0 à 9, et chacun des chiffres utilisé a une valeur différente en fonction de sa <strong>position</strong> (on parle de <strong>numération de position</strong>), nommée <strong>rang</strong> du chiffre. A chaque <strong>rang</strong> est associée une <strong>puissance</strong> de 10 différente.</p>
+<p><strong><em>Exemples :</em></strong> 
+- Prenons le nombre <span class="arithmatex">\(2005_{10}\)</span> (la notation <span class="arithmatex">\(nombre_{10}\)</span> indique que l'on considère sa représentation dans la base 10).</p>
+<table>
+<thead>
+<tr>
+<th align="center">Rang</th>
+<th align="center">Chiffre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">3</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">5</td>
+</tr>
+</tbody>
+</table>
+<p>On peut décomposer ce nombre de la manière suivante : </p>
+<p><span class="arithmatex">\(2005_{10} =\)</span></p>
+<ul>
+<li>Faire la même chose avec le nombre <span class="arithmatex">\(1990_{10}\)</span>.</li>
+</ul>
+<p><span class="arithmatex">\(1990_{10} =\)</span></p>
+<p>Qu'a-t-on fait pour décomposer ces nombres dans la base 10 ?<br />
+<br></p>
+<h3 id="b-la-base-2-binaire">B. La base 2 (binaire)</h3>
+<blockquote>
+<p>La <strong>base binaire</strong> est constituée de 2 nombres : 0 et 1 (un <strong>bit</strong>), et est très utilisée en informatique.</p>
+</blockquote>
+<h4 id="b1-du-binaire-au-decimal">B.1. Du binaire au décimal</h4>
+<p>Pour passer d'un nombre écrit en binaire à sa représentation en base décimale, on multiplie chaque chiffre par la <strong><em>puissance de 2</em></strong> associée à son <strong>rang</strong> (comme pour la base décimale, mais avec 2 au lieu de 10).</p>
+<p><em>Les puissances de 2 usuelles sont à connaître et/ou à savoir retrouver :</em></p>
+<table>
+<thead>
+<tr>
+<th align="center">Puissance de 2</th>
+<th align="center">Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(2^0\)</span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2^1\)</span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2^2\)</span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2^3\)</span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2^4\)</span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2^5\)</span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2^6\)</span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2^7\)</span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2^8\)</span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2^9\)</span></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2^10\)</span></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Exemples :</em></strong> 
+- <span class="arithmatex">\(1010_2\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Rang</th>
+<th align="center">Chiffre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">3</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><span class="arithmatex">\(1010_2 =\)</span></p>
+<ul>
+<li>Faire la même chose avec le nombre <span class="arithmatex">\(0110 0100_2\)</span>.</li>
+</ul>
+<p><span class="arithmatex">\(0110 0100_2 =\)</span></p>
+<h4 id="b2-du-decimal-au-binaire">B.2. Du décimal au binaire</h4>
+<p>Pour passer d'un nombre en écriture décimale à sa représentation en binaire, on utilise l'<em>algorithme</em> suivant :
+- On fait la division euclidienne ce nombre par 2 et on stocke le reste.
+- On remplace ce nombre par le quotient de sa division euclidienne par 2.
+- On s'arrête lorsque ce quotient devient 0.
+- Le nombre en représentation binaire se lit en associant les restes des divisions successives, <strong><em>en commençant par la dernière</em></strong>.</p>
+<p><strong><em>Exemple :</em></strong>
+<br>
+<br><br><br><br></p>
+<h4 id="b3-nombre-de-bits-necessaires">B.3. Nombre de bits nécessaires</h4>
+<p>Pour trouver le nombre de bits nécessaires pour représenter un nombre décimal, on cherche la <strong>puissance de 2 supérieure la plus proche</strong> à ce nombre. Le nombre de bits est donné par la puissance.</p>
+<h3 id="c-la-base-16-hexadecimale">C. La base 16 (hexadécimale)</h3>
+<p><img alt="" src="../img/hexa.png" /></p>
+<p>La base 2 est à la base du fonctionnement de l'informatique, mais son utilisation peut être laborieuse lorsque l'on veut manipuler des nombres relativement grands. On utilise alors la <strong>base 16</strong>, ou <strong>base hexadécimale</strong>.</p>
+<blockquote>
+<p>La <strong>base hexadécimale</strong> est une base de 16 symboles, utilisant l'ensemble des chiffres de 0 à 9 pour coder ses 10 premiers éléments, et ensuite les lettres de A à F, représentant les nombres <span class="arithmatex">\(10_{10}\)</span> à <span class="arithmatex">\(15_{10}\)</span>.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">Base 10</th>
+<th align="center">Base 16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">10</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="c1-de-lhexadecimal-au-decimal">C.1. De l'hexadécimal au décimal</h4>
+<p>Pour passer d'un nombre écrit en hexadécimal à sa représentation décimale, on multiplie chaque chiffre par la <strong><em>puissance de 16</em></strong> associée à son <strong>rang</strong>. Pour les lettres de A à F, on utilise le nombre correspondant dans la base 10 (voir le tableau ci-dessus).</p>
+<p><strong><em>Exemples :</em></strong>
+- <span class="arithmatex">\(5_{16} =\)</span>
+- <span class="arithmatex">\(2A_{16} =\)</span>
+- <span class="arithmatex">\(1BF_{16} =\)</span></p>
+<h3 id="c2-du-decimal-a-lhexadecimal">C.2. Du décimal à l'hexadécimal</h3>
+<p>Pour passer d'un nombre en base 10 à sa représentation en base 16, on utilise le même algorithme que pour passer de la base 10 à la base 2, sauf que l'on divise successivement par 16.</p>
+<p><strong><em>Exemple :</em></strong>
+<br><br><br><br></p>
+<h3 id="c3-hexadecimal-et-binaire">C.3. Hexadécimal et binaire</h3>
+<p>Cette base est facile d'utilisation de par sa relation avec la base binaire : il est facile de passer de l'une à l'autre. Pour représenter une valeur de 0 à 15, il faut 4 bits, donc pour représenter 1 octet on utilise 2 nombres en hexadécimal.</p>
+<ul>
+<li>Pour passer de l'<strong>hexadécimal au binaire</strong>, on associe la représentation binaire de chacun de ses symboles.<br />
+<span class="arithmatex">\(2A_{16} =\)</span></li>
+<li>Pour passer du <strong>binaire à l'hexadécimal</strong>, on regroupe les bits par 4 (on ajoute des <span class="arithmatex">\(0\)</span> si nécessaire) et on convertit chaque groupe dans sa représentation hexadécimale.<br />
+<span class="arithmatex">\(10001110_{2} =\)</span></li>
+</ul>
+<p><img alt="" src="../img/rgb.png" /></p>
+<p><strong><em>Exemple :</em></strong> Pour représenter la couleur des pixels d'une image, on utilise des valeurs allant de 0 à 255 pour chacune des composantes rouge, vert et bleu.
+- Combien de bits faut-il pour représenter la valeur d'une composante ?<br />
+<br>
+- Pourquoi est-il intéressant d'utiliser la base hexadécimale ?<br />
+<br></p>
+<h3 id="d-une-base-quelconque">D. Une base quelconque</h3>
+<p>Les principes de conversion entre les bases décimale, binaire et hexadécimale sont les mêmes pour les autres bases (base 5, 7, 18, ou pourquoi pas 666...). Chaque nombre est décomposable dans n'importe quelle base comme la <strong>somme des puissances de la base coefficientées</strong>.</p>
+<p><br><br></p>
+<hr />
+<h2 id="td-representation-des-entiers-positifs">TD : Représentation des entiers positifs</h2>
+<h3 id="exercice-1-representation-binaire-des-chiffres">Exercice 1 : représentation binaire des chiffres</h3>
+<p>Calculer la représentation binaire de l'ensemble des chiffres de <span class="arithmatex">\(0_{10}\)</span> à <span class="arithmatex">\(9_{10}\)</span>.</p>
+<h3 id="exercice-2-conversions-binairedecimal">Exercice 2 : conversions binaire/décimal</h3>
+<ol>
+<li>Convertir en décimal :<ul>
+<li><span class="arithmatex">\(11_2\)</span> </li>
+<li><span class="arithmatex">\(101_2\)</span></li>
+<li><span class="arithmatex">\(1010_2\)</span></li>
+<li><span class="arithmatex">\(100111_2\)</span></li>
+</ul>
+</li>
+<li>Convertir en binaire, et <em>vérifier que le résultat est correct</em> :<ul>
+<li><span class="arithmatex">\(13_{10}\)</span></li>
+<li><span class="arithmatex">\(18_{10}\)</span></li>
+<li><span class="arithmatex">\(26_{10}\)</span></li>
+</ul>
+</li>
+</ol>
+<h3 id="exercice-3-nombre-de-bits-necessaires-a-lecriture-dun-entier">Exercice 3 : nombre de bits nécessaires à l'écriture d'un entier</h3>
+<ul>
+<li>
+<p>Calculer la représentation décimale de l'entier représenté en binaire par <span class="arithmatex">\(1111\)</span>.</p>
+</li>
+<li>
+<p>Calculer la représentation décimale de l'entier représenté en binaire par <span class="arithmatex">\(111111\)</span>.</p>
+</li>
+<li>
+<p>Quelle est la valeur maximale représentable sur 4 bits ? Sur 6 bits ? (les exprimer avec des puissances de 2) </p>
+</li>
+<li>
+<p>Comment peut-on généraliser pour <span class="arithmatex">\(n\)</span> bits ?</p>
+</li>
+<li>
+<p>En déduire combien de nombres sont représentables sur <span class="arithmatex">\(n\)</span> bits.</p>
+</li>
+<li>
+<p>Je considère le nombre <span class="arithmatex">\(35_{10}\)</span>. Comment savoir combien de bits est-ce qu'il faut utiliser pour le représenter en binaire ?</p>
+</li>
+</ul>
+<h3 id="exercice-4-addition-dentiers-positifs-attention-a-loverflow">Exercice 4 : addition d'entiers positifs (attention à l'<em>overflow</em> !)</h3>
+<p>Pour faire la somme de nombres binaires, on utilise les règles suivantes :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Somme binaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(0_2+0_2 = 0_2\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(0_2+1_2 = 1_2\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(1_2 + 1_2 = 0_2\)</span> et on retient <span class="arithmatex">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Faire la somme des entiers binaires <span class="arithmatex">\(0100 1101_2\)</span> et <span class="arithmatex">\(11000110_2\)</span>, et vérifier votre résultat en utilisant la base décimale.</p>
+</li>
+<li>
+<p>En machine, si on utilise uniquement 1 octet pour représenter chaque entier, que se passerait-il lorsqu'on ferait l'addition de la question précédente ?  </p>
+</li>
+<li>
+<p>En pratique, il faut vérifier que l'on dispose de suffisamment de bits avant de faire l'addition de 2 entiers. Exprimer en fonction de <span class="arithmatex">\(n\)</span> le nombre maximal de bits nécessaires pour faire l'addition de deux entiers de taille <span class="arithmatex">\(n\)</span>.  </p>
+</li>
+</ol>
+<h3 id="exercice-5-multiplication-dentiers-positifs">Exercice 5 : multiplication d'entiers positifs</h3>
+<p>Pour faire la multiplication de nombres binaires, on utilise les règles suivantes :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Multiplication binaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(0_2*0_2 = 0_2\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(0_2*1_2 = 0_2\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(1_2 *1_2 = 1_2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>On procède de la même manière qu'avec le système décimal.<br />
+Par exemple, <span class="arithmatex">\(1100_2*1010_2=11000+1100000=1111000_2\)</span></p>
+<ol>
+<li>Poser la multiplication de <span class="arithmatex">\(1010_2\)</span> par <span class="arithmatex">\(1110_2\)</span>.  </li>
+<li>Sur combien de bits s'écrivent les résultats de ces deux exemples ?  </li>
+<li>Généraliser en fonction de <span class="arithmatex">\(n\)</span>, combien de bits sont nécessaire au maximum pour effectuer la multiplication de deux entiers positifs codés sur <span class="arithmatex">\(n\)</span> bits.  </li>
+</ol>
+<h3 id="exercice-6-representation-hexadecimale">Exercice 6 : représentation hexadécimale</h3>
+<p>Calculer la représentation hexadécimale de l'ensemble des nombres de <span class="arithmatex">\(0_{10}\)</span> à <span class="arithmatex">\(20_{10}\)</span>.</p>
+<h3 id="exercice-7-conversions-hexadecimaldecimal">Exercice 7 : conversions hexadécimal/décimal</h3>
+<ol>
+<li>
+<p>Convertir en décimal :</p>
+<ul>
+<li><span class="arithmatex">\(3_{16}\)</span></li>
+<li><span class="arithmatex">\(1C_{16}\)</span></li>
+<li><span class="arithmatex">\(2D_{16}\)</span></li>
+<li><span class="arithmatex">\(B1_{16}\)</span></li>
+</ul>
+</li>
+<li>
+<p>Convertir en hexadécimal :</p>
+<ul>
+<li><span class="arithmatex">\(18_{10}\)</span></li>
+<li><span class="arithmatex">\(75_{10}\)</span></li>
+<li><span class="arithmatex">\(926_{10}\)</span></li>
+</ul>
+</li>
+</ol>
+<h3 id="exercice-8-conversions-hexadecimalbinaire">Exercice 8 : conversions hexadécimal/binaire</h3>
+<ol>
+<li>
+<p>Convertir en hexadécimal : </p>
+<ul>
+<li><span class="arithmatex">\(01000101_2\)</span></li>
+<li><span class="arithmatex">\(11010000_2\)</span></li>
+</ul>
+</li>
+<li>
+<p>Convertir en binaire :</p>
+<ul>
+<li><span class="arithmatex">\(16_{16}\)</span></li>
+<li><span class="arithmatex">\(A5_{16}\)</span></li>
+</ul>
+</li>
+</ol>
+<h3 id="exercice-9-adresses-ip">Exercice 9 : adresses IP</h3>
+<ol>
+<li>
+<p>Le format d'une adresse IPv4 est le suivant : a.b.c.d avec a, b, c et d des entiers allant de 0 à 255.</p>
+<ul>
+<li>Combien de bits faut-il pour représenter chacun de ces entiers ?  </li>
+<li>A combien d'octets cela correspond-il en tout ?  </li>
+<li>Représenter l'adresse suivante en écriture binaire : 192.168.10.1  </li>
+</ul>
+</li>
+<li>
+<p>Une adresse IPv6 est constituée de 8 champs de 4 valeurs hexadécimales, séparés par des ":". Par exemple, celle du serveur de facebook.com est : <code>2a03:2880:f145:82:face:b00c:0:25de</code>.</p>
+<ul>
+<li>Combien de bits faut-il pour représenter chaque champ ?  </li>
+<li>Combien de bits faut-il en tout pour écrire une adresse au format IPv6 ?  </li>
+</ul>
+</li>
+</ol>
+<p><br><br></p>
+<hr />
+<h2 id="tp-les-entiers-positifs-en-machine">TP : Les entiers positifs en machine</h2>
+<h3 id="a-les-conversions-en-python">A. Les conversions en Python</h3>
+<h4 id="a1-vers-le-decimal">A.1. Vers le décimal</h4>
+<ol>
+<li>Convertir <span class="arithmatex">\(1001_2\)</span> en décimal.</li>
+<li>Vérifier votre solution en tapant dans la console Python :</li>
+</ol>
+<pre><code class="language-pycon">    &gt;&gt;&gt; 0b1001
+</code></pre>
+<ol>
+<li>Convertir <span class="arithmatex">\(5D_{16}\)</span> en décimal.</li>
+<li>Vérifier votre solution en tapant dans la console python :</li>
+</ol>
+<pre><code class="language-pycon">    &gt;&gt;&gt; 0x5d
+</code></pre>
+<h3 id="a2-vers-le-binaire-et-lhexadecimal">A.2. Vers le binaire et l'hexadécimal</h3>
+<p>Les fonctions que vous allez utiliser sont des fonctions <em>natives</em> de Python, c'est-à-dire qu'il n'y a pas besoin d'importer de bibliothèques pour les utiliser.
+1. Convertir <span class="arithmatex">\(11_{10}\)</span> en binaire.
+2. Vérifier votre solution en tapant dans la console python :</p>
+<pre><code class="language-pycon">    &gt;&gt;&gt; bin(11)
+</code></pre>
+<ol>
+<li>Quel est le format de la sortie de cette fonction ?</li>
+<li>Il est possible de la convertir en <code>int</code> avec la fonction <code>int()</code> dont  un extrait de la documentation est donné ci-dessous. Utiliser cette documentation pour convertir la sortie de la fonction <code>bin()</code> en <code>int</code>.</li>
+</ol>
+<pre><code>int(x, base=10) -&gt; integer
+Convert a number or string to an integer (...) If x is not a number or if base is given, then x must be a string, bytes, or bytearray instance (...)
+</code></pre>
+<ol>
+<li>Convertir <span class="arithmatex">\(195_{10}\)</span> en hexadécimal.</li>
+<li>Vérifier votre solution en tapant dans la console python :</li>
+</ol>
+<pre><code class="language-pycon">    &gt;&gt;&gt; hex(195)
+</code></pre>
+<h3 id="b-le-type-int">B. Le type <code>int</code></h3>
+<p>Dans certains langages informatiques, comme le C, il existe plusieurs types différents d'entiers en fonction du nombre de bits nécessaire pour représenter le nombre.</p>
+<p>En Python, il n'y a qu'un seul type. On peut donc penser que la taille des entiers qui peuvent être manipulés est infinie... mais l'infini n'existe pas en informatique. Si la <em>taille maximale</em> (souvent 32 ou 64 bits) utilisable par le processeur est dépassée, le nombre est découpé en plusieurs parties. Cela a pour conséquence un espace plus grand occupé en mémoire et un ralentissement de l'exécution du programme. </p>
+<p>La bibliothèque <em>time</em> de Python permet de mesurer ce temps d'exécution. Dans le code suivant, on importe pour cela la fonction <code>time</code> :</p>
+<pre><code class="language-python">from time import time
+
+st = time()
+for i in range(50000):
+    a = 2**i
+
+print(time()-st)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center"><code>range</code></th>
+<th align="center"><code>0</code> à <code>49 999</code></th>
+<th align="center"><code>50 000</code> à <code>99 999</code></th>
+<th align="center"><code>200 000</code> à <code>249 999</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">temps d'exécution</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Exécuter ce programme et reporter dans le tableau la valeur qui s'affiche à l'écran.</li>
+<li>Changer les bornes du <code>range</code> pour avoir i variant de <code>50 000</code> à <code>99 999</code>. Reporter la valeur obtenue.</li>
+<li>Faire de même pour faire varier i entre <code>200 000</code> et <code>249 999</code> et reporter le résultat.</li>
+<li>Qu'en concluez-vous ?</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

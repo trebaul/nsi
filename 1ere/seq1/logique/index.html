@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://example.com/1ere/seq1/logique/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>I. Logique - Sciences informatiques</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../../extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">I. Logique</a>
+</li>
+            
+<li>
+    <a href="../archi/" class="dropdown-item">II. Architecture</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
+</li>
+            
+<li>
+    <a href="../../seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
+</li>
+            
+<li>
+    <a href="../../seq2/flottants/" class="dropdown-item">III. Les flottants</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq2/piles/" class="dropdown-item">I. Les piles</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq2/r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq2/diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">4. Structurer les données</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq4/listes/" class="dropdown-item">I. Les listes</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/files/" class="dropdown-item">II. Les files</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/dico/" class="dropdown-item">III. Les dictionnaires</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/synthese/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
+</li>
+                                    
+<li>
+    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../ressources/" class="nav-link">Ressources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../archi/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sequence-1" class="nav-link">Séquence 1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#i-la-logique-booleenne" class="nav-link">I. La logique booléenne</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#exercices-les-expressions-booleennes" class="nav-link">Exercices : les expressions booléennes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#td-qui-faut-il-croire" class="nav-link">TD : Qui faut-il croire ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="sequence-1"><strong>Séquence 1</strong></h1>
+<h1 id="i-la-logique-booleenne">I. La logique booléenne</h1>
+<h2 id="cours">Cours</h2>
+<h3 id="introduction">Introduction</h3>
+<p>L'informatique est basée sur l'utilisation de <code>1</code> et de <code>0</code> : ils représentent le vrai et le faux, <code>True</code> et <code>False</code> en Python, et correspondent au type <strong>booléen</strong>. Nous avons vu que les <strong>expressions booléennes</strong> permettent de différencier différents cas dans un programme.</p>
+<p>Nous avons vu des opérateurs qui permettent de comparer des nombres (<code>int</code> ou <code>float</code>), et renvoient des booléens (<code>bool</code>). Pour combiner ces expressions booléennes, on utilise des <strong>opérateurs booléens</strong>. </p>
+<p>Passons en revue ces opérateurs, en considérant le <strong><em>problème</em></strong> suivant :</p>
+<p><img alt="sphinx" src="../img/sphinx_desert.jpg" /></p>
+<blockquote>
+<p>Au milieu du désert, deux sphinx gardent chacun une porte. Une des deux portes continue dans le désert, l'autre mène vers une oasis. L'un des deux sphinx dit toujours la vérité, l'autre ment toujours. On veut savoir par où aller pour accéder à l'oasis.</p>
+</blockquote>
+<hr />
+<h3 id="ia-le-non-not">I.A. Le NON (NOT)</h3>
+<p>L'opérateur NON (NOT en anglais) inverse la valeur d'une <strong>variable booléenne</strong>. Si <code>A</code> vaut <code>False</code>, non(<code>A</code>) vaut <code>True</code> et réciproquement. On résume cela avec une table, dite <strong>table de vérité</strong> de l'opérateur NON :</p>
+<table>
+<thead>
+<tr>
+<th align="left"><code>A</code></th>
+<th align="left">NON(<code>A</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>False</code></td>
+<td align="left"><code>True</code></td>
+</tr>
+<tr>
+<td align="left"><code>True</code></td>
+<td align="left"><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<p>La table de vérité d'une <strong>expression booléenne</strong> indique la valeur de l'expression pour chaque valeur possible de ses variables.</p>
+<blockquote>
+<p>Application au <strong><em>problème</em></strong> : On veut demander l'information, si l'on s'adresse à celui qui dit la vérité - donc à celui qui ne ment pas. On utilise une variable booléenne <code>menteur</code> qui vaut <code>True</code> si le sphinx auquel on s'adresse ment, <code>False</code> s'il dit la vérité :</p>
+</blockquote>
+<pre><code class="language-python">if not(menteur):
+    print(&quot;Pouvez-vous m'indiquer l'oasis ?&quot;)
+</code></pre>
+<h3 id="ib-le-et-and">I.B. Le ET (AND)</h3>
+<p>L'opérateur ET (AND en anglais) permet d'associer deux expressions booléennes de la manière suivante : A ET B est vrai si A est vraie et B est vraie. Cela donne la table de vérité suivante :</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>A</code></th>
+<th align="center"><code>B</code></th>
+<th align="center"><code>A</code> ET <code>B</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+</tr>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Application au <strong><em>problème</em></strong> : Si le sphinx auquel on s'adresse n'est pas un menteur <em>et</em> s'il nous dit qu'il se trouve devant la porte menant à l'oasis, on veut prendre ce chemin. On utilise une variable <code>porte</code> valant <code>True</code> si le sphinx dit qu'elle mène à l'oasis, <code>False</code> sinon :</p>
+</blockquote>
+<pre><code class="language-python">if not(menteur) and porte:
+    print(&quot;Je prends ce chemin.&quot;)
+</code></pre>
+<h3 id="ic-le-ou-or">I.C. Le OU (OR)</h3>
+<p>L'opérateur OU (OR en anglais) permet d'associer deux expressions booléennes de la manière suivante : A OU B est vrai si A est vraie, B est vraie, ou bien les deux le sont. Cela donne la table de vérité suivante :</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>A</code></th>
+<th align="center"><code>B</code></th>
+<th align="center"><code>A</code> OU <code>B</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+</tr>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Application au <strong><em>problème</em></strong> : Si le sphinx auquel on s'adresse n'est pas un menteur et s'il nous dit qu'il se trouve devant la porte menant à l'oasis <em>ou</em> s'il est un menteur et qu'il nous dit que la porte continue dans le désert, on veut prendre ce chemin.</p>
+</blockquote>
+<pre><code class="language-python">if (not(menteur) and porte) or (menteur and not(porte)):
+    print(&quot;Je prends ce chemin.&quot;)
+</code></pre>
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
+
+<h3 id="id-le-ou-exclusif-xor">I.D. Le OU exclusif (XOR)</h3>
+<p>L'opérateur OU EXCLUSIF (XOR en anglais) permet d'associer deux expressions booléennes de la manière suivante : A OU B est vrai si A est vraie ou bien B est vraie. Cela donne la table de vérité suivante :</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>A</code></th>
+<th align="center"><code>B</code></th>
+<th align="center"><code>A</code> OU <code>B</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+</tr>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Application au <strong><em>problème</em></strong> : Si le sphinx auquel on s'adresse est un menteur <em>ou (exclusif)</em> s'il nous dit qu'il ne se trouve pas devant la porte menant à l'oasis (et donc qu'il ne ment pas), on ne veut pas prendre ce chemin.</p>
+</blockquote>
+<pre><code class="language-python">from operator import xor
+
+if xor(menteur,not(porte)):
+    print(&quot;Je ne prends pas ce chemin.&quot;)
+</code></pre>
+<p><strong>N.B.</strong> : L'utilisation de cette fonction n'est pas à apprendre par coeur. </p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Une bonne utilisation des opérateurs booléens permet notamment de mieux gérer les différentes conditions traitées dans les programmes. La logique booléenne trouve aussi des applications dans la conception de circuits électroniques.</p>
+<blockquote>
+<p>Nous ne savons en fait pas quel sphinx ment et lequel dit la vérité. Nous n'avons le droit de ne poser qu'une question à un des deux sphinx pour savoir où aller. Laquelle devons-nous choisir pour aller à coup sûr vers l'oasis ?</p>
+</blockquote>
+<p><img alt="sphinx" src="../img/sphinx_statue.jpg" /></p>
+<p><br></p>
+<hr />
+<h2 id="exercices-les-expressions-booleennes">Exercices : les expressions booléennes</h2>
+<h3 id="exercice-0-amelioration-du-tp-sur-les-fonctions">Exercice 0 <em>(amélioration du TP sur les fonctions)</em> :</h3>
+<p>On dispose d'une fonction <code>pair(n)</code>, renvoyant si un entier <code>n</code> est pair ou non :</p>
+<pre><code class="language-python">def pair(n):
+    return n%2 == 0
+</code></pre>
+<p>On considère une variable <code>m</code> représentant un mois de l'année.</p>
+<ol>
+<li>
+<p>Quelle instruction écrire pour tester "m est-t-il impair" ?</p>
+</li>
+<li>
+<p>Ecrire le programme Python traduisant l'algorithme suivant :</p>
+</li>
+</ol>
+<pre><code class="language-python">Si n est impair et qu il est un mois de la fin de l année
+    nb_jours vaut 30
+</code></pre>
+<ol>
+<li>Faire la même chose avec l'algorithme suivant :</li>
+</ol>
+<pre><code class="language-python">Si n est pair et qu il est un mois du début de l année
+    nb_jours vaut 30
+</code></pre>
+<ol>
+<li>
+<p>Comment combiner les conditions des questions 2 et 3 ?</p>
+</li>
+<li>
+<p>Compléter la fonction suivante, permettant de tester tous les mois de l'année :</p>
+</li>
+</ol>
+<pre><code class="language-python">def nombre_jours(m):
+    if m == 2:
+        nb = 28
+    elif ...
+        nb = 30
+    ...
+
+    return nb
+</code></pre>
+<h3 id="exercice-1-vrai-ou-faux">Exercice 1 : Vrai ou Faux</h3>
+<ol>
+<li>
+<p>Si <code>a</code> vaut <code>True</code> et <code>b</code> vaut <code>False</code>, <code>not(a or b)</code> s'évalue à <code>True</code>.</p>
+</li>
+<li>
+<p>L'expression <code>not(a or b)</code> a la même valeur que l'expression <code>(not a) or (not b)</code>.</p>
+</li>
+<li>
+<p>Si <code>a</code> vaut <code>True</code> et <code>b</code> vaut <code>True</code>, <code>not(a and b)</code> s'évalue à <code>True</code>.</p>
+</li>
+<li>
+<p>L'expression <code>not(a and b)</code> a la même valeur que l'expression <code>not(a) or not(b)</code>.</p>
+</li>
+</ol>
+<h3 id="exercice-2">Exercice 2 :</h3>
+<p>Sélectionner la(les) bonne(s) réponse(s) parmi les différentes propositions.</p>
+<ol>
+<li>
+<p>L'expression booléenne <code>a or not(b)</code> s'évalue à <code>True</code>. Quelles peuvent être les valeurs de <code>a</code> et de <code>b</code> ?</p>
+<ul>
+<li><code>a</code> vaut <code>True</code> et <code>b</code> vaut <code>True</code></li>
+<li><code>a</code> vaut <code>True</code> et <code>b</code> vaut <code>False</code></li>
+<li><code>a</code> vaut <code>False</code> et <code>b</code> vaut <code>True</code></li>
+<li><code>a</code> vaut <code>False</code> et <code>b</code> vaut <code>False</code></li>
+</ul>
+</li>
+<li>
+<p>Parmi les expressions suivantes, laquelle s'évalue en <code>True</code> ?</p>
+<ul>
+<li><code>True and (False and True)</code></li>
+<li><code>True or (False and True)</code></li>
+<li><code>False and (False and True)</code></li>
+<li><code>False or (False and True)</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="exercice-3">Exercice 3 :</h3>
+<ol>
+<li>
+<p>On considère l'expression <code>a and b</code> où <code>a</code> et <code>b</code> sont deux expressions booléennes. Si <code>a</code> vaut <code>False</code>, quelle sera la valeur de l'expression, en fonction de la valeur de <code>b</code> ? Que pouvez-vous en déduire ?
+<br><br><br></p>
+</li>
+<li>
+<p>On considère l'expression <code>a or b</code> où <code>a</code> et <code>b</code> sont deux expressions booléennes. Si <code>a</code> vaut <code>True</code>, quelle sera la valeur de l'expression, en fonction de la valeur de <code>b</code> ? Que pouvez-vous en déduire ?
+<br><br><br></p>
+</li>
+</ol>
+<p><strong>Conclusion</strong> <strong><em>(à retenir)</em></strong> : </p>
+<p><br></p>
+<hr />
+<h2 id="td-qui-faut-il-croire">TD : Qui faut-il croire ?</h2>
+<h3 id="a-un-village-perdu">A. Un village perdu</h3>
+<p>Vous voyagez dans un endroit que vous ne connaissez pas, et demandez votre chemin à deux locaux que vous croisez. Vous souhaitez savoir où se trouve le village qui est votre objectif. Ils décident de jouer à un jeu avec vous : ils vont vous donner des informations, et soit toutes ces informations seront vraies, soit elles seront toutes fausses. </p>
+<p><img alt="village" src="../img/village.jpg" /></p>
+<p>En appliquant la logique booléenne, vous devez être capable d'obtenir l'information que vous recherchez.</p>
+<p>Voici leurs propos :</p>
+<blockquote>
+<p>X : "Le village se trouve dans la vallée."<br />
+Y : "Non, il ne s’y trouve pas."<br />
+X : "Ou alors dans les collines."</p>
+</blockquote>
+<p>On modélise le problème avec les variables suivantes : 
+- <code>V</code> et <code>C</code> qui valent <code>True</code> si, respectivement, le village se trouve dans la vallée ou dans les collines, et <code>False</code> sinon, 
+- <code>X</code> et <code>Y</code> qui valent <code>True</code> si respectivement les affirmations de X et de Y sont vraies, et <code>False</code> sinon.</p>
+<ol>
+<li>Traduire <code>X</code> et <code>Y</code> en fonction de <code>V</code>, <code>C</code>, et des opérateurs booléens qui conviennent.</li>
+<li>Compléter la table de vérité suivante (on part du principe que le village ne peut être que soit dans la vallée, soit dans la colline) :</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><code>V</code></th>
+<th align="center"><code>C</code></th>
+<th align="center"><code>X</code></th>
+<th align="center"><code>Y</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>En déduire où se trouve le village.</li>
+</ol>
+<hr />
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
+
+<h3 id="b-au-tribunal">B. Au tribunal</h3>
+<p>Vous êtes dans le jury d'un tribunal et écoutez les témoins d'une enquête. On sait que chacun des témoins soit toujours dit la vérité, soit ment toujours. Notre but est d'identifier ceux qui mentent et ceux qui ne mentent pas pour prononcer le verdict le plus juste possible.</p>
+<p><img alt="juge.jpg" src="../img/juge.jpg" /></p>
+<p>Les trois témoins s'expriment :  </p>
+<blockquote>
+<p>Ap : "Personne ne doit croire C."<br />
+Bp : "A et C disent toujours la vérité."<br />
+Cp : "B dit la vérité."</p>
+</blockquote>
+<p>On modélise le problème avec les variables suivantes : <code>A</code>, <code>B</code> et <code>C</code> qui valent <code>True</code> si, respectivement, les témoins A, B et C disent la vérité, et <code>False</code> sinon.</p>
+<ol>
+<li>Traduire Ap, Bp et Cp sous la forme d'expressions booléennes en utilisant les opérateurs appropriés.</li>
+<li>Compléter la table de vérité suivante :</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><code>A</code></th>
+<th align="center"><code>B</code></th>
+<th align="center"><code>C</code></th>
+<th align="center"><code>Ap</code></th>
+<th align="center"><code>Bp</code></th>
+<th align="center"><code>Cp</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"><code>True</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Comment pouvez-vous en déduire qui dit la vérité et qui ment ? </li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

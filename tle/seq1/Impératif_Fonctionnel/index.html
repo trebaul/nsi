@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://example.com/tle/seq1/Imp%C3%A9ratif_Fonctionnel/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>I. Paradigme impératif et fonctionnel - Sciences informatiques</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../../extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/logique/" class="dropdown-item">I. Logique</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">II. Architecture</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/flottants/" class="dropdown-item">III. Les flottants</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">I. Paradigme impératif et fonctionnel</a>
+</li>
+            
+<li>
+    <a href="../POO/" class="dropdown-item">II. Paradigme objet</a>
+</li>
+            
+<li>
+    <a href="../Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq2/piles/" class="dropdown-item">I. Les piles</a>
+</li>
+            
+<li>
+    <a href="../../seq2/r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
+</li>
+            
+<li>
+    <a href="../../seq2/diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
+</li>
+            
+<li>
+    <a href="../../seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">4. Structurer les données</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq4/listes/" class="dropdown-item">I. Les listes</a>
+</li>
+            
+<li>
+    <a href="../../seq4/files/" class="dropdown-item">II. Les files</a>
+</li>
+            
+<li>
+    <a href="../../seq4/dico/" class="dropdown-item">III. Les dictionnaires</a>
+</li>
+            
+<li>
+    <a href="../../seq4/synthese/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
+</li>
+                                    
+<li>
+    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../ressources/" class="nav-link">Ressources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../../1ere/seq2/flottants/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../POO/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sequence-1" class="nav-link">Séquence 1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#i-les-paradigmes-imperatif-et-fonctionnel" class="nav-link">I. Les paradigmes impératif et fonctionnel</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#exercices" class="nav-link">Exercices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="sequence-1"><strong>Séquence 1</strong></h1>
+<h1 id="i-les-paradigmes-imperatif-et-fonctionnel">I. Les paradigmes impératif et fonctionnel</h1>
+<hr />
+<h2 id="cours">Cours</h2>
+<h3 id="a-les-elements-de-base-de-la-programmation">A. Les éléments de base de la programmation</h3>
+<pre><code class="language-python">l = [2, 6, 9]
+s = 0
+if l[0]%2 == 0:
+    s = s + l[0]
+if l[1]%2 == 0:
+    s = s + l[1]
+if l[2]%2 == 0:
+    s = s + l[2]
+</code></pre>
+<ul>
+<li>Dans l'exemple ci-dessus, quels sont les éléments de base de la programmation utilisés ?<br />
+<strong><em>On identifie des affectations, des instructions conditionnelles. L'ensemble est une séquence d'instructions.</em></strong></li>
+<li>Que fait ce programme ?<br />
+<strong><em>Il calcule la somme des éléments pairs d'une liste Python.</em></strong></li>
+<li>Proposer une autre manière d'écrire ce programme. Quel autre élément de programmation est-il pertinent d'utiliser ici ?<br />
+<strong><em>Il est pertinent d'utiliser une boucle bornée.</em></strong></li>
+<li>Ecrire ce programme en utilisant deux fonctions intermédiaires.</li>
+</ul>
+<blockquote>
+<p>Il y a donc plusieurs manière de programmer un même algorithme, en utilisant différemment les éléments de programmation à notre disposition. Un <strong>paradigme de programmation</strong> est une manière de programmer spécifique.</p>
+</blockquote>
+<h3 id="b-le-paradigme-imperatif">B. Le paradigme impératif</h3>
+<p>Le <strong>paradigme impératif</strong> est le paradigme le plus courant, utilisé par de nombreux langages de programmation comme Python <em>(qui intègre aussi d'autres paradigmes !)</em>. Il consiste à décrire un programme sous la forme de séquences d'instructions à effectuer dans un ordre précis. Les caractéristiques de ce paradigme sont :
+- importance de l'ordre des instructions,
+- utilisation d'affectations de variables, d'expressions conditionnelles et de boucles.</p>
+<p>Cette manière de programmer est proche du fonctionnement de la machine et peut sembler la plus intuitive. </p>
+<p>Pourquoi utiliser d'autres paradigmes ?<br />
+<strong><em>On peut préférer d'autres manières de programmer en fonction du champ d'application du programme, du problème spécifique qui est traité, ou tout simplement des goûts du programmeur.</em></strong></p>
+<h3 id="c-le-paradigme-fonctionnel">C. Le paradigme fonctionnel</h3>
+<p>Le <strong>paradigme fonctionnel</strong> est un paradigme rigoureux, permettant de plus facilement tester, déboguer et optimiser les programmes.</p>
+<h4 id="c1-les-fonctions">C.1. Les fonctions</h4>
+<p>Rappeler la syntaxe de définition et d'appel d'une fonction en Python :</p>
+<pre><code class="language-python">def nom_de_la_fonction(entree1,entree2):
+    #séquence d'instructions
+    (return sortie)
+
+resultat = nom_de_la_fonction(val1, val2)
+</code></pre>
+<p>Le paradigme fonctionnel est centré, comme son nom l'indique,  sur l'utilisation de fonctions. Plus précisément, on utilise des <strong>fonctions dites "pures"</strong> : des fonctions qui, étant donné des paramètres d'entrée, renvoient toujours la même sortie. Pour cela, il ne faut pas qu'elles créent d'<strong>effets de bord</strong>.</p>
+<h4 id="c2-les-effets-de-bord">C.2. Les effets de bord</h4>
+<blockquote>
+<p>Un <strong>effet de bord</strong> correspond à la modification par une fonction d'une ou plusieurs variable(s) définie(s) en dehors de cette fonction.</p>
+<p>Une variable définie en dehors d'une fonction est une <strong>variable globale</strong>, utilisable dans tout le programme. Une variable définie dans une fonction est par défaut <strong>locale</strong> : elle n'existe que dans cette fonction.</p>
+</blockquote>
+<p><strong><em>Exemple :</em></strong></p>
+<pre><code class="language-python">l = [0,1,2,3]
+def remplace(x):
+    y = l[0]
+    l[0] = x
+    return y
+</code></pre>
+<ul>
+<li>
+<p>Que fait cette fonction ? En écrire la spécification (description des entrées et sorties).<br />
+<strong><em>Cette fonction remplace la valeur du premier élement de <code>l</code> par une valeur donnée en entrée.<br />
+Entrée : entier x remplaçant la valeur du premier élément de l<br />
+Sortie : l'entier y en première position de la liste l avant d'être remplacé</em></strong></p>
+</li>
+<li>
+<p>Que renvoie l'appel de <code>remplace(1)</code> ? Un deuxième appel de <code>remplace(1)</code> ?<br />
+<strong><em>Le premier appel renvoie <code>0</code>, alors que le deuxième renvoie <code>1</code>.</em></strong></p>
+</li>
+<li>
+<p>Que peut-on en conclure ?<br />
+<strong><em>Il y a modification d'une variable définie en dehors de <code>remplace</code> : elle crée un effet de bord. La fonction, appelée plusieurs fois avec le même paramètre ne renvoie pas la même valeur : ce n'est pas une fonction pure.</em></strong></p>
+</li>
+<li>
+<p>Proposer une fonction "pure" effectuant le même traitement que <code>remplace</code>.</p>
+</li>
+</ul>
+<pre><code class="language-python">def remplace(x, l):
+    y = l[0]
+    l[0] = x
+    return y
+</code></pre>
+<p><strong>N.B. :</strong>  une fonction pure renvoie toujours une valeur (sinon, vu qu'elle n'a pas d'effet de bord, elle ne servirait pas à grand chose...).</p>
+<h4 id="c3-les-caracteristiques-du-paradigme-fonctionnel">C.3. Les caractéristiques du paradigme fonctionnel</h4>
+<ul>
+<li>utilisation de <strong>fonctions imbriquées</strong> (cf partie A),</li>
+<li>utilisation de <strong>fonctions pures</strong> (donc pas d'effet de bord !),</li>
+<li>on évite <strong>l'affectation</strong> de valeurs à des variables (utilisation de fonctions à la place).</li>
+</ul>
+<p>Ces caractéristiques rendent les programmes plus fiables : différentes <em>bonnes pratiques de programmation</em> s'inspirent de cette manière de programmer.</p>
+<p><br></p>
+<hr />
+<h2 id="exercices">Exercices</h2>
+<h3 id="exercice-1-sur-feuille">Exercice 1 : <em>(sur feuille)</em></h3>
+<p>Dans les exemples suivant, indiquer :
+- s'il y a un effet de bord ou non,
+- si la fonction est pure,
+- s'il y a un effet de bord, proposer une autre version de la fonction qui l'élimine.</p>
+<p>1.</p>
+<pre><code class="language-python">i = 5
+def f():
+    return i&gt;5
+</code></pre>
+<p>2.</p>
+<pre><code class="language-python">def ajout(i,l):
+    tab = l + [i]
+    return tab
+</code></pre>
+<p>3.</p>
+<pre><code class="language-python">x = 11
+l = [1,3,5,7,9]
+def ajoute():
+    if x&gt;l[-1]:
+        l.append(x)
+    return l
+</code></pre>
+<h3 id="exercice-2-sur-feuille">Exercice 2 : <em>(sur feuille)</em></h3>
+<p>Identifier les caractéristiques se rapportant au paradigme impératif, et celles se rapportant au paradigme fonctionnel.
+- autorise les effets de bord,
+- l'ordre des instructions n'a pas toujours d'importance,
+- utilise des affectations de variables,
+- utilise des boucles,
+- découpe un programme en fonctions.</p>
+<h3 id="exercice-3-sur-ordinateur">Exercice 3 : <em>(sur ordinateur)</em></h3>
+<p>Les codes suivant correspondent à des algorithmes vus en première.
+- Ecrire chacun sous la forme d'une fonction, dont on aura identifié les <em>paramètres d'entrée et de sortie</em> et dont on choisira le <em>nom</em> de manière adéquate. On veut des fonctions pures, n'utilisant pas de variables globales.
+- Renommer les variables pour que l'on comprenne plus facilement leur rôle.
+- Ajouter les spécifications des entrées et des sorties.</p>
+<p>1.</p>
+<pre><code class="language-python">x = 0
+y = 0
+l = [6,8,7,1,0]
+for i in range(len(l)):
+    if l[i]&gt;x:
+        x = l[i]
+        y = i
+print(x, y)
+</code></pre>
+<p>2.</p>
+<pre><code class="language-python">o = 0
+t = [6,2,4,8,2,1,3]
+for e in t:
+    if e == 2:
+        o = o+1
+print(o)
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

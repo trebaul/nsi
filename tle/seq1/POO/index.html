@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://example.com/tle/seq1/POO/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>II. Paradigme objet - Sciences informatiques</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../../extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/logique/" class="dropdown-item">I. Logique</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">II. Architecture</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/flottants/" class="dropdown-item">III. Les flottants</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">II. Paradigme objet</a>
+</li>
+            
+<li>
+    <a href="../Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq2/piles/" class="dropdown-item">I. Les piles</a>
+</li>
+            
+<li>
+    <a href="../../seq2/r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
+</li>
+            
+<li>
+    <a href="../../seq2/diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
+</li>
+            
+<li>
+    <a href="../../seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">4. Structurer les données</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq4/listes/" class="dropdown-item">I. Les listes</a>
+</li>
+            
+<li>
+    <a href="../../seq4/files/" class="dropdown-item">II. Les files</a>
+</li>
+            
+<li>
+    <a href="../../seq4/dico/" class="dropdown-item">III. Les dictionnaires</a>
+</li>
+            
+<li>
+    <a href="../../seq4/synthese/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
+</li>
+                                    
+<li>
+    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../ressources/" class="nav-link">Ressources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Imp%C3%A9ratif_Fonctionnel/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Synth%C3%A8se_El%C3%A8ve/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sequence-1" class="nav-link">Séquence 1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ii-le-paradigme-oriente-objet" class="nav-link">II. Le paradigme orienté objet</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#tp-un-combat-de-monstres" class="nav-link">TP : Un combat de monstres</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#exercices" class="nav-link">Exercices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#probleme-gestion-dadresses-ip" class="nav-link">Problème : Gestion d'adresses IP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="sequence-1"><strong>Séquence 1</strong></h1>
+<h1 id="ii-le-paradigme-oriente-objet">II. Le paradigme orienté objet</h1>
+<hr />
+<h2 id="tp-un-combat-de-monstres">TP : Un combat de monstres</h2>
+<blockquote>
+<p>Dans ce TP, vous utiliserez un seul fichier Python que vous modifierez au fur et à mesure. Enregistrez-le au début du TP.</p>
+</blockquote>
+<p><img alt="geralt" src="../img/geralt.jpg" /></p>
+<p>Dans l'univers de la série du <strong><em>Sorceleur</em></strong> de l'écrivain Andrzej Sapkowski, différents types de personnages s'affrontent. Certains ont des caractéristiques particulières comme les sorceleurs qui sont très habiles au combat et maîtrisent une certaine forme de magie. Il sont chargés d'éliminer les monstres présents sur le continent.</p>
+<p>Pour représenter une situation de manière réaliste, le <strong>paradigme dit "objet"</strong> est le plus approprié. Il permet de modéliser des éléments du monde réel ou bien des concepts. Ce paradigme utilise des classes, une classe pouvant définir aussi bien un animal, qu'un véhicule, un humain, un steak, un schtroumpf... Les éléments de ces classes sont des <strong>objets</strong>, que nous allons utiliser pour représenter des sorceleurs et des monstres.</p>
+<ol>
+<li>Implémenter le code suivant :</li>
+</ol>
+<pre><code class="language-python">class Personnage:        # définition de la classe
+    pass                # pour l'instant, elle ne fait rien
+
+geralt = Personnage()    # création d'un élément de la classe : un objet
+monstre = Personnage()   # création d'un deuxième objet
+</code></pre>
+<p>Tous les objets de la classe <code>Sorceleur</code> auront les mêmes <em>caractéristiques</em> : des variables nommées <strong>attributs</strong>, et les mêmes <em>comportements</em> définis par des fonctions appelées <strong>méthodes</strong>. Parmi les caractéristiques des sorceleurs, on peut avoir leur nombre de points de vie.  </p>
+<ol>
+<li>Implémenter le code suivant :</li>
+</ol>
+<pre><code class="language-python">class Personnage:
+    def __init__(self): # cette fonction est une méthode de la classe Sorceleur nommée &quot;constructeur&quot; : utilisée pour &quot;construire&quot; chaque nouvel objet
+        self.vie = 50   # on attribue 50 points de vie par défaut à tout nouveau sorceleur
+
+geralt = Personnage()
+monstre = Personnage()
+</code></pre>
+<p>Taper dans la console : <code>geralt.vie</code> et <code>monstre.vie</code> et vérifier que la valeur attribuée à l'attribue <code>vie</code> est correcte.</p>
+<ol>
+<li>On peut vouloir définir au moment de la création de chaque objet une valeur initiale de points de vie différente pour chacun. Modifions le programme :</li>
+</ol>
+<pre><code class="language-python">class Personnage:
+    def __init__(self, v):  # la valeur est donnée en paramètre du constructeur
+        self.vie = v 
+
+geralt = Personnage()
+monstre = Personnage()
+</code></pre>
+<p>Vérifier que le nombre de points de vie de chacun est correct.</p>
+<blockquote>
+<p>Un constructeur peut avoir plusieurs arguments, mais il a toujours au moins l'argument <code>self</code> qui fait référence à l'objet lui-même. <code>self</code> est nécessaire pour accéder aux <strong>attributs</strong> et aux <strong>méthodes</strong> <strong><em>à l'intérieur</em></strong> de la classe. Il n'existe plus à l'extérieur.</p>
+</blockquote>
+<ol>
+<li>Ajoutons quelques méthodes à notre classe pour mieux simuler le comportement des personnages :</li>
+</ol>
+<pre><code class="language-python">class Personnage:
+    def __init__(self, v): 
+        self.vie = v
+
+    def perd_vie(self):
+        self.vie = self.vie - 1
+
+    def donne_etat(self): 
+        return self.vie
+
+geralt = Personnage(50)
+geralt.perd_vie()
+pts = geralt.donne_etat()
+</code></pre>
+<p>Que vaut la variable <code>pts</code> ?</p>
+<ol>
+<li>Modifier la méthode <code>perd_vie</code> pour que le nombre de points perdus soit défini aléatoirement à l'aide de la fonction <code>randint</code> de la bibliothèque du <code>random</code> : elle retournera un entier entre 1 et 10 qui correspondra au nombre de points perdus.</li>
+</ol>
+<pre><code class="language-python">from random import randint       # instruction pour importer la fonction
+</code></pre>
+<pre><code class="language-pycon">help(randint)       &quot;commande pour extraire la documentation de la fonction&quot;
+</code></pre>
+<ol>
+<li>
+<p>Ajouter un attribut <code>exp</code> représentant l'expérience du personnage. Créer les méthodes <code>gagne_exp</code> et <code>donne_exp</code> permettant, respectivement, de faire gagner une valeur <code>e</code> d'expérience, et de consulter la valeur de l'attribut <code>exp</code>.</p>
+</li>
+<li>
+<p>Créer un programme principal dans lequel <code>geralt</code> affronte <code>monstre</code> selon les règles suivantes :</p>
+</li>
+<li>Chacun attaque l'autre à tour de rôle jusqu'à ce que le nombre de points de vie d'un des personnages descende à 0 (ou moins),</li>
+<li>Si l'<em>expérience</em> d'un personnage est supérieure à 40, alors son adversaire perd entre 5 et 10 points à chaque attaque. Sinon, il perd entre 0 et 5 points.</li>
+<li>
+<p>Le vainqueur il gagne 2 points d'expérience. Il peut ensuite combattre un autre adversaire.</p>
+<p><strong><em>Attention !</em></strong> Pour accéder aux valeurs des attributs, il faut utiliser les méthodes <code>donne_etat</code> et <code>donne_exp</code>.</p>
+</li>
+</ol>
+<p><strong><em>Pour aller plus loin...</em></strong><br />
+<em>Vous pouvez étendre les possibilités du jeu, par exemple en organisant une sorte de tournoi avec plusieurs sorceleurs et plusieurs monstres. Il est aussi possible d'exploiter les différences entre monstres et sorceleurs en créant deux classes différentes, ayant des méthodes spécifiques traduisant les pouvoirs de chacun.</em></p>
+<p><br></p>
+<hr />
+<h2 id="cours">Cours</h2>
+<h3 id="a-syntaxe-de-la-programmation-orientee-objet-poo">A. Syntaxe de la programmation orientée objet (POO)</h3>
+<ul>
+<li>Dans le code ci-dessous, entourer la partie correspondant à la <strong>définition</strong> de la classe <code>Exemple</code> d'une couleur, et la partie correspondant à son <strong>utilisation</strong> d'une autre couleur.</li>
+</ul>
+<pre><code class="language-python">class Exemple:
+
+    def __init__(self, param1, param2):
+        self.attribut1 = param1
+        self.attribut2 = param2
+
+    def methode(self, param):
+        #traitement sur le paramètre
+
+    def accesseur_att1(self):
+        return self.attribut1
+
+    def mutateur_att1(self, val):
+        self.attribut1 = val
+
+e = Exemple()  #création d'un objet
+a1 = e.accesseur_att1()
+e.mutateur_att1(5)  #en supposant que attribut1 est de type int
+</code></pre>
+<ul>
+<li>Compléter les définitions suivantes :<blockquote>
+<p>Une <strong>classe</strong> regroupe un ensemble de propriétés (ses <strong>attributs</strong>) et de comportements (ses <strong>méthodes</strong>) communes à différents objets.</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>Un <strong>objet</strong> est un élément, une instance d'une classe.</p>
+<p>Un <strong>attribut</strong> d'un objet est une caractéristique, une propriété commune à tous les objets de la classe.</p>
+<p>Une <strong>méthode</strong> est une fonction d'une classe, traduisant le comportement de ses objets. Elle ne peut s'appliquer que sur les objets de la classe. Le <strong>constructeur</strong> de la classe (<code>__init__</code>) est une méthode particulière, appelée à la création de chaque nouvel objet. Il initialise ses attributs. Les autres méthodes manipulent les attributs : elles peuvent chercher à y accéder (<em>accesseurs</em> ou <em>"getters</em>") ou à les modifier (<em>mutateurs</em> ou <em>"setters"</em>).</p>
+</blockquote>
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
+
+<h3 id="b-exemple">B. Exemple</h3>
+<pre><code class="language-python">class Guitare:
+
+    def __init__(self, t, m):
+        self.type = t
+        self.marque = m
+        self.notes = [0,0,0,0,0,0]  #représente les 6 cordes, et le fret sélectionné pour jouer un accord par un int
+
+    def joue(self,n):
+        self.notes = n
+
+    def ecoute_son(self):
+        return self.notes
+
+gfolk = Guitare(&quot;folk&quot;, &quot;Fender&quot;)
+gelec = Guitare(&quot;électrique&quot;, &quot;Gibson&quot;)
+gelec.joue([0,3,2,0,1,0])   #accord de do
+s = gelec.ecoute_son()
+</code></pre>
+<p><img alt="gibson" src="../img/gibson_elec.png" />
+<img alt="fender" src="../img/fender_folk.png" /></p>
+<p><br></p>
+<hr />
+<h2 id="exercices">Exercices</h2>
+<h3 id="exercice-1-sur-feuille-a-tester-sur-ordinateur">Exercice 1 : <em>(sur feuille, à tester sur ordinateur)</em></h3>
+<p><img alt="chat_chien" src="../img/cat_dog.jpg" /></p>
+<pre><code class="language-python">class Chat:
+    def __init__(self):
+        self.faim = 0
+        self.fatigue = 0
+
+    def bonjour(self):
+        print(&quot;Miaou !&quot;)
+
+    def joue(self):
+        self.faim = self.faim+1
+        self.fatigue = self.fatigue+1
+
+class Chien:
+    def __init__(self):
+        self.faim = 0
+        self.fatigue = 0
+
+    def bonjour(self):
+        print(&quot;Ouaf !&quot;)
+
+    def joue(self):
+        self.faim = self.faim+1
+        self.fatigue = self.fatigue+1
+</code></pre>
+<ol>
+<li>
+<p>Quel est l'intérêt ici d'avoir défini deux classes différentes pour les chiens et pour les chats ?</p>
+</li>
+<li>
+<p>Créer un objet de la classe <code>Chat</code>, un objet de la classe <code>Chien</code>, et les faire se dire bonjour.</p>
+</li>
+<li>
+<p>La fonction <code>isinstance(objet, classe)</code> de Python teste si <code>objet</code> appartient à <code>classe</code>. On veut modifier les deux méthodes <code>bonjour</code> pour leur donner en paramètre l'animal auquel est dit bonjour et faire que :</p>
+<ul>
+<li>un chat dise bonjour à un autre chat, mais ignore un chien,</li>
+<li>un chien dise bonjour à un autre chien, et essaye de faire peur à un chat en aboyant plus fort : "OUAF !".<br />
+Tester les méthodes obtenues.</li>
+</ul>
+</li>
+<li>
+<p>Proposer une autre implémentation utilisant une seule classe <code>Animal</code>, sans perdre l'information que l'on peut avoir des chats ou bien des chiens. Reprendre la version initiale de se saluer des animaux. La tester en créant des instances de la classe.</p>
+</li>
+<li>
+<p>Ecrire une méthode <code>mange</code> et une méthode <code>repos</code> dans la classe <code>Animal</code> décrémentant respectivement l'attribut <code>faim</code> de 1, et l'attribut <code>fatigue</code> de 2.</p>
+</li>
+</ol>
+<h3 id="exercice-2-sur-feuille-a-tester-sur-ordinateur">Exercice 2 : <em>(sur feuille, à tester sur ordinateur)</em></h3>
+<pre><code class="language-python">from math import sqrt
+
+class Astre:
+    '''Corps célestes, définis par leurs propriétés physiques.'''
+
+    def __init__(self, m, p):
+        self.masse = m
+        self.position = p
+
+    def distance(self, astre):
+        return ...
+</code></pre>
+<ol>
+<li>
+<p>L'attribut <code>position</code> est une liste Python contenant deux éléments : sa coordonnée en x et sa coordonnée en y <em>(on se situe dans le plan, pas en 3D)</em>.<br />
+Pour calculer la distance entre deux astres de position, respectivement, (x1, y1) et (x2, y2), on utilise la formule mathématique suivante : <span class="arithmatex">\(d = \sqrt{ (x_{1}-x_{2})^2 + (y_{1}-y_{2})^2 }\)</span><br />
+Compléter la définition de la méthode <code>distance</code>.</p>
+</li>
+<li>
+<p>Un astre peut peser entre 0.07 et 300 fois la masse solaire, elle-même de <span class="arithmatex">\(2*10^{30}\)</span>.
+Créer deux objets de la classe <code>Astre</code>, de masse minimale et maximale et respectivement de position [15,34] et [6,27].</p>
+</li>
+<li>
+<p>Calculer la distance entre ces deux objets.</p>
+</li>
+</ol>
+<h3 id="exercice-3-les-attributs-prives-sur-ordinateur">Exercice 3 : les attributs privés <em>(sur ordinateur)</em></h3>
+<p>Les valeurs des attributs des objets Python sont par défaut modifiables après la création de l'objet. Il est possible d'interdire la modification des attributs en le déclarant avec deux tirets bas avant son nom : <code>__x</code> par exemple. Ils sont alors privés : on ne peut pas les manipuler en dehors de la définition de la classe. C'est une <strong>bonne pratique</strong> d'utiliser des attributs privés, et c'est ce qui rend les <strong>accesseurs</strong> et <strong>mutateurs</strong> nécessaires.</p>
+<p>On rend privés les attributs de la classe <code>Chat</code> de l'exercice 1:</p>
+<pre><code class="language-python">class Chat:
+    def __init__(self):
+        self.__faim = 0
+        self.__fatigue = 0
+</code></pre>
+<ol>
+<li>
+<p>Créer un objet de la classe. Que se passe-t-il si on tente d'accéder à ses attributs ?</p>
+</li>
+<li>
+<p>Créer les accesseurs et mutateurs nécessaire pour récupérer la valeur des deux attributs et pouvoir la modifier. Les tester sur un exemple d'objet.</p>
+</li>
+</ol>
+<h3 id="exercice-4-les-classes-de-python-sur-ordinateur">Exercice 4 : les classes de Python <em>(sur ordinateur)</em></h3>
+<p>Les types Python sont implémentés par des classes.</p>
+<ol>
+<li>
+<p>Afficher la valeur de l'attribut <code>__class__</code> des expressions suivantes : <code>()</code>, <code>[]</code>, <code>{}</code>, <code>int(0)</code>.</p>
+</li>
+<li>
+<p>En déduire comment utiliser la fonction <code>isinstance</code> de l'exercice 3 pour tester si une valeur est un entier, une liste, un tuple, ou bien un dictionnaire.</p>
+</li>
+<li>
+<p>Utiliser cette fonction pour écrire une fonction <code>separe</code> qui prend en argument une liste Python et sépare les chaînes de caractères des entiers qu'elle contient <em>(c'est une mauvaise pratique de mélanger les deux !)</em>.</p>
+</li>
+</ol>
+<p><strong>Exemple :</strong></p>
+<pre><code class="language-python">entiers, caracteres = separe([1, &quot;a&quot;, 666, &quot;blablabla&quot;, &quot;nsi&quot;])
+</code></pre>
+<pre><code class="language-pycon">&gt;&gt;&gt; entiers
+[1,666]
+&gt;&gt;&gt; caracteres
+[&quot;a&quot;, &quot;blablabla&quot;, &quot;nsi&quot;]
+</code></pre>
+<h3 id="exercice-5-paradigmes-objet-et-imperatif-sur-feuille-a-tester-sur-ordinateur">Exercice 5 : paradigmes objet et impératif <em>(sur feuille, à tester sur ordinateur)</em></h3>
+<p><img alt="astres" src="../img/astres.png" /></p>
+<p>Reprendre l'exemple de l'exercice 2. L'objectif est de traduire ce code utilisant le paradigme objet en un code purement impératif. </p>
+<p>Pour cela :<br />
+- On utilise un dictionnaire pour stocker les valeurs des attributs d'un objet <em>(c'est comme ça que fait Python en réalité !)</em>.<br />
+- On rédéfinit les méthodes comme de simples fonctions.</p>
+<p>Utiliser les mêmes exemples que dans l'exercice 2.</p>
+<p><br></p>
+<hr />
+<h2 id="probleme-gestion-dadresses-ip">Problème : Gestion d'adresses IP</h2>
+<p>On rappelle qu'une adresse IPv4 est une adresse de 4 octets, notée en décimale à point, en séparant chacun des octets par un point. On considère le réseau privé 192.168.1.0.</p>
+<p><img alt="reseau" src="../img/reseau.png" /></p>
+<ol>
+<li>
+<p>A quoi sert l'adresse IP attribuée à une machine ?</p>
+</li>
+<li>
+<p>Ecrire cette adresse en binaire, en faisant apparaître tous les bits utilisés.</p>
+</li>
+<li>
+<p>192.168.1.0 est une adresse réservée, la "première" du réseau. On considère qu'on ne peut pas modifier les trois premiers octets pour trouver une adresse à attribuer à une machine. On ne peut pas non plus utiliser la "dernière" adresse : celle correspondant au nombre le plus élevé écrit sur le dernier octet. Quelle est cette "dernière" adresse ?</p>
+</li>
+<li>
+<p>En déduire le nombre d'adresses de ce réseau qui peuvent être attribuées à des machines.</p>
+</li>
+<li>
+<p>Donner une adresse de ce réseau utilisable en écriture décimale, et en binaire.</p>
+</li>
+</ol>
+<p>Pour parcourir les adresses utilisables, on définit une classe <code>AdresseIP</code> :</p>
+<pre><code class="language-python">class AdresseIP:
+
+    def __init__(self, adresse):
+        self.adresse = ...
+
+    def liste_octets(self):
+        &quot;&quot;&quot; Renvoie une liste Python de nombres entiers, la liste des octets de l'adresse IP &quot;&quot;&quot;
+        return [int(i) for i in self.adresse.split(&quot;.&quot;)]
+
+    def est_reservee(self):
+        &quot;&quot;&quot; Renvoie True si l'adresse IP est une adresse réservée, False sinon &quot;&quot;&quot;
+        return ... or ...
+
+    def adresse_suivante(self):
+        &quot;&quot;&quot; Renvoie un objet de AdresseIP avec l'adresse IP qui soit celle du self si elle existe, None sinon &quot;&quot;&quot;
+        if ... &lt; 254:
+            nouvel_octet = ...
+            return AdresseIP('192.168.1.' + ...)
+        else:
+            return None
+</code></pre>
+<ol>
+<li>
+<p>Compléter le constructeur de cette classe.</p>
+</li>
+<li>
+<p>Compléter la méthode <code>est_reservee</code>, permettant d'exclure les adresses identifiées dans la question 2.</p>
+</li>
+<li>
+<p>Compléter la méthode <code>adresse_suivante</code>, en utilisant <code>liste_octets</code>.</p>
+</li>
+<li>
+<p>Créer les objets de la classe ayant pour attribut : <code>192.168.1.1</code>, <code>192.168.1.0</code> et <code>192.168.1.254</code>.</p>
+</li>
+<li>
+<p>Tester les méthodes <code>est_reservee</code> et <code>adresse_suivante</code> sur ces objets pour vérifier leur bon fonctionnement.</p>
+</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

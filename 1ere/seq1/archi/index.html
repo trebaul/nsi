@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://example.com/1ere/seq1/archi/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>I. Architecture des ordinateurs - Sciences informatiques</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../../extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../logique/" class="dropdown-item">I. Logique</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item">II. Architecture</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
+</li>
+            
+<li>
+    <a href="../../seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
+</li>
+            
+<li>
+    <a href="../../seq2/flottants/" class="dropdown-item">III. Les flottants</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq2/piles/" class="dropdown-item">I. Les piles</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq2/r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq2/diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">I. Architecture des ordinateurs</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">4. Structurer les données</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq4/listes/" class="dropdown-item">I. Les listes</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/files/" class="dropdown-item">II. Les files</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/dico/" class="dropdown-item">III. Les dictionnaires</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/synthese/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
+</li>
+                                    
+<li>
+    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../ressources/" class="nav-link">Ressources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../../tle/seq2/diviser_regner/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../../tle/seq3/Cours_SoC/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sequence-1" class="nav-link">Séquence 1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ii-larchitecture-materielle-des-ordinateurs" class="nav-link">II. L'architecture matérielle des ordinateurs</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#questionnaire-sur-le-cours" class="nav-link">Questionnaire sur le cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#td-ladditionneur-binaire" class="nav-link">TD : L'additionneur binaire</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tp-programmer-au-plus-pres-de-la-machine" class="nav-link">TP : Programmer au plus près de la machine</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="sequence-1"><strong>Séquence 1</strong></h1>
+<h1 id="ii-larchitecture-materielle-des-ordinateurs">II. L'architecture matérielle des ordinateurs</h1>
+<hr />
+<h2 id="cours">Cours</h2>
+<h3 id="a-les-circuits">A. Les circuits</h3>
+<p><img alt="" src="../img/transistor.jpg" /></p>
+<p>Un ordinateur fonctionne avec des <code>0</code> et des <code>1</code>, qu'il faut représenter de manière physique. Avant d'utiliser des transistors, les ordinateurs étaient équipés de tubes à vide (tous deux sont des composants électroniques). L'apparition des <strong>transistors</strong> a permis de miniaturiser les machines. Dans les différents cas, le passage d'un courant représente le <code>1</code>, alors que l'absence de courant représente le <code>0</code>.</p>
+<p><img alt="" src="../img/circuit_integre.png" /></p>
+<p>Les transistors peuvent aujourd'hui être aussi petit que 10 nanomètres, on ne les distingue pas à l'oeil nu. Ils sont agencés les uns à côté des autres et reliés sur des <strong>circuits intégrés</strong>. Les circuits les plus simples sont les <strong>circuits logiques</strong>, faits à partir de <strong>portes logiques</strong> qui permettent de réaliser des opérations booléennes.</p>
+<p>En combinant des circuits logiques, on parvient à fabriquer les circuits essentiels au fonctionnement de l'ordinateur, comme la mémoire et le processeur.</p>
+<h3 id="b-les-principaux-composants-de-lordinateur">B. Les principaux composants de l'ordinateur</h3>
+<h4 id="b1-la-memoire">B.1. La mémoire</h4>
+<p>Il existe différents types de mémoires. Globalement, on regroupe :  </p>
+<ul>
+<li>
+<p>La <strong>mémoire vive</strong> ou <strong>RAM (Random Access Memory)</strong> : Elle peut se représenter comme des tableaux d’octets, chacun identifié par une adresse. A cause des composants électroniques utilisés, il faut une alimentation électrique pour conserver les données. C’est pour cela que la mémoire vive est <em>volatile</em> : les données sont perdues en cas de coupure de courant. Elle permet d’accéder aux données <em>en lecture et en écriture</em> avec une vitesse relativement rapide.</p>
+</li>
+<li>
+<p>la <strong>mémoire morte</strong> ou <strong>ROM (Read-Only Memory)</strong> : Elle sert à stocker les programmes qui ne doivent pas être modifés et n'est donc accessible <em>qu'en lecture</em>. Elle contient le nécessaire pour faire démarrer un ordinateur, et est <em>non-volatile</em>.</p>
+</li>
+<li>
+<p>La <strong>mémoire de masse</strong> : C'est une mémoire <em>non-volatile</em>, à laquelle on peut accéder <em>en lecture et en écriture</em>. Elle permet de stocker une grande quantité de données, mais n'y accède pas rapidement. Ce sont les disques durs SSD ou HDD ou bien les clés USB par exemple.</p>
+</li>
+</ul>
+<p><img alt="" src="../img/Hard_disk_platter_reflection.jpg" /></p>
+<p>Plus on s'éloigne du processeur, plus la capacité de la mémoire utilisée augmente et plus le temps d'accès aux données s'allonge.</p>
+<h4 id="b2-le-processeur">B.2. Le processeur</h4>
+<p><img alt="" src="../img/cpu_intel.jpg" /></p>
+<p>Les instructions des programmes sont exécutées par le <strong>processeur</strong> ou <strong>CPU (Central Processing Unit)</strong> en anglais. Il est qualifié de <strong>microprocesseur</strong> lorsque tous ses composants sont suffisamment petits pour être regroupés dans un même boîtier.</p>
+<p>Il est constitué de 3 parties :
+- les <strong>registres</strong> qui correspondent à une petite quantité de mémoire. Leur nombre et taille varient en fonction du type de CPU. Ils sont typiquement nommés R1, R2, R3,...
+- l’<strong>Unité Arithmétique et Logique</strong> (UAL ou ALU en anglais), qui est chargée de l’exécution des calculs. Elle est composée de circuits comme l’additionneur de la partie précédente.
+- l’<strong>unité de commande/de contrôle</strong> qui coordonne l’exécution de toutes les opérations.</p>
+<p>Le rythme auquel les instructions sont traitées dépend de la fréquence de l'horloge du processeur. Une seule instruction peut être traitée à la fois, donc pour aller plus vite, il faut une grande fréquence.</p>
+<h3 id="c-les-architectures">C. Les architectures</h3>
+<h4 id="c1-larchitecture-de-von-neumann">C.1. L'architecture de von Neumann</h4>
+<p>La plupart des ordinateurs utilisés aujourd'hui sont basés sur l'<strong>architecture de von Neumann</strong>, élaborée en 1945. Il s'agit de la première architecture stockant au même endroit les données et les programmes : dans la mémoire vive.</p>
+<p><img alt="" src="../img/von_neumann.png" /></p>
+<p>Elle est constituée :
+- d'une <strong>mémoire</strong>, correspondant à de la RAM, contenant programme et données,
+- d'une <strong>UAL</strong> avec des registres comme un <strong>accumulateur</strong>,
+- d'une <strong>unité de commande</strong>,
+- d'un système d’<strong>entrées-sorties</strong>.</p>
+<p>Les <strong>entrées et sorties</strong> permettent à l’ordinateur d’interagir avec l’extérieur. Chaque périphérique est régi par un contrôleur (un ensemble de composants électroniques) adapté, permettant d’encoder et de décoder les données envoyées et reçues. Un <strong>périphérique d'entrée</strong> (comme une souris) permet d'obtenir des informations, alors qu'un <strong>périphérique de sortie</strong> (comme un écran) permet d'envoyer des informations vers l'extérieur.</p>
+<h4 id="c2-connecter-les-composants">C.2. Connecter les composants</h4>
+<p>Les données circulent entre les composants de l’ordinateur (principalement entre le processeur et la mémoire) grâce à des bus. Il en existe 3 grands types :
+- les <strong>bus d’adresse</strong>, transportant les adresses des cases mémoires auxquelles on veut accéder,
+- les <strong>bus de données</strong>, transportant les données en elles-mêmes,
+- les <strong>bus de commande/contrôle</strong> synchronisant l’ensemble (en indiquant le type d’actions à exécuter, comme la lecture ou l’écriture d’une donnée en mémoire).</p>
+<p>Les différents composants décrits dans les parties précédentes, ainsi que d’autres qui améliorent les ordinateurs d’aujourd’hui, ont besoin d’être interconnectés de manière fiable : ils sont regroupés sur une <strong>carte mère</strong>. 
+Elle intègre :</p>
+<ul>
+<li>le processeur,</li>
+<li>les barrettes de mémoire RAM,</li>
+<li>le(s) disque(s) dur(s),</li>
+<li>les ports d’entrée-sortie,</li>
+<li>les différents périphériques (lecteurs DVD, carte mémoire,...)</li>
+<li>la carte réseau,</li>
+<li>la carte graphique,</li>
+<li>l’alimentation,</li>
+<li>les systèmes de refroidissement.</li>
+</ul>
+<h4 id="c2-les-architectures-multiprocesseurs">C.2. Les architectures multiprocesseurs</h4>
+<p>L’architecture d´ecrite précédemment est une <strong>architecture monoprocesseur</strong> : ne comportant qu’un processeur.</p>
+<p><img alt="" src="../img/moore.jpg" /></p>
+<p>Pour augmenter la puissance des ordinateurs, on a misé pendant longtemps sur l’augmentation de leur fréquence d’horloge. Celle-ci est cependant devenue de plus en plus difficile, comme illustré sur la figure ci-contre, à cause d’un problème de surchauffe.</p>
+<p>L’idée a depuis été d’utiliser plusieurs processeurs dans un seul ordinateur : on parle d’<strong>ordinateur multiprocesseur</strong>. Cela crée des problèmes de partage de la mémoire, pour lesquels il a fallu établir des statégies. On utilise de la mémoire cache, d’accès très rapide, soit partagée pour les différents processeurs, soit dédiée à chacun. Il faut de plus adapter les programmes à l'architecture.</p>
+<p>Aujourd’hui, on ne se contente en fait pas de multiplier les processeurs, on utilise également des processeurs ayant plusieurs coeurs (<strong>architecture multicoeur</strong>) : plusieurs unités de traitement indépendantes.</p>
+<p><br></p>
+<hr />
+<h2 id="questionnaire-sur-le-cours">Questionnaire sur le cours</h2>
+<h3 id="a-les-circuits_1">A. Les circuits</h3>
+<ul>
+<li>Faire un schéma permettant de placer les termes suivants : processeur, porte logique, transistor, additionneur. Votre schéma représentera au centre le plus petit des éléments, et autour les éléments faits à partir des autres.</li>
+</ul>
+<h3 id="b-les-principaux-composants-de-lordinateur_1">B. Les principaux composants de l'ordinateur</h3>
+<h4 id="b1-la-memoire_1">B.1. La mémoire</h4>
+<ul>
+<li>
+<p>Par quelles <em>caractéristiques</em> différencie-t-on les différents types de mémoires ? Faire un schéma avec ces caractéristiques et les types de mémoires associés.</p>
+</li>
+<li>
+<p>Faire un schéma pouvant représenter la <em>mémoire vive</em> de l'ordinateur.</p>
+</li>
+</ul>
+<h4 id="b2-le-processeur_1">B.2. Le processeur</h4>
+<ul>
+<li>
+<p>Relever les différents composants d'un processeur. Lequel pourrait être associé, si on les comparait au corps humain, au cerveau, et lequel serait les mains ?</p>
+</li>
+<li>
+<p>Représenter des cycles d'horloge d'un processeur et indiquer à quel moment de nouvelles opérations sont faites.</p>
+</li>
+<li>
+<p>Rechercher l'ordre de grandeur en Hz de la fréquence des processeurs actuels. </p>
+</li>
+</ul>
+<h3 id="c-les-architectures_1">C. Les architectures</h3>
+<h4 id="c1-larchitecture-de-von-neumann_1">C.1. L'architecture de von Neumann</h4>
+<ul>
+<li>
+<p>Quelle est l'idée nouvelle de John Von Neumann lorsqu'il propose son architecture ? </p>
+</li>
+<li>
+<p>Que faut-il donc ajouter aux principaux composants de l'ordinateur pour avoir une machine utilisable ?</p>
+</li>
+<li>
+<p>Les périphériques suivants sont-ils des entrées, des sorties, ou bien les deux ? </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"><code>Composant</code></th>
+<th align="center"><code>Entrée</code></th>
+<th align="center"><code>Sortie</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Clavier</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Imprimante</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Scanner</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Disque</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Souris</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Ecran</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="c2-connecter-les-composants_1">C.2. Connecter les composants</h4>
+<ul>
+<li>
+<p>Expliquer comment les différents composants d'un ordinateurs sont connectés.</p>
+</li>
+<li>
+<p>Compléter le schéma suivant avec des flèches représentant les différents types de bus, permettant la communication entre les composants.
+<img alt="" src="../img/schema_bus.bmp" /></p>
+</li>
+</ul>
+<h4 id="c2-les-architectures-multiprocesseurs_1">C.2. Les architectures multiprocesseurs</h4>
+<ul>
+<li>
+<p>Sur quel paramètre peut-on jouer pour augmenter la puissance des ordinateurs, sans toucher aux processeurs ? </p>
+</li>
+<li>
+<p>Pourquoi alors augmenter le nombre de processeurs ? </p>
+</li>
+<li>
+<p>A quel problème faut-il alors penser ?</p>
+</li>
+</ul>
+<p><br></p>
+<hr />
+<h2 id="td-ladditionneur-binaire">TD : L'additionneur binaire</h2>
+<h3 id="a-representation-electronique-des-operateurs-booleens">A. Représentation électronique des opérateurs booléens</h3>
+<p>On représente physiquement les booléens et leurs opérateurs à partir de transistors, de très petits composants électroniques qui :
+- laissent passer le courant, qui est alors à sa valeur maximale : c'est un <code>1</code>, qui représente le <code>True</code> booléen.
+- ou ne le laissent pas passer : c'est un <code>0</code>, qui représente le <code>False</code> booléen.  </p>
+<p>L'implémentation physique des opérateurs s'appelle des <strong>portes logiques</strong>, que l'on représente classiquement de la manière suivante :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Opérateur booléen</th>
+<th align="center">Porte logique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">NON(<code>A</code>)</td>
+<td align="center"><img alt="" src="../img/porte_non_bis.png" /></td>
+</tr>
+<tr>
+<td align="center"><code>A</code> ET <code>B</code></td>
+<td align="center"><img alt="" src="../img/porte_et_bis.png" /></td>
+</tr>
+<tr>
+<td align="center"><code>A</code> OU <code>B</code></td>
+<td align="center"><img alt="" src="../img/porte_ou_bis.png" /></td>
+</tr>
+<tr>
+<td align="center"><code>A</code> XOR <code>B</code></td>
+<td align="center"><img alt="" src="../img/porte_xor_bis.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>En combinant ces portes logiques, on construit des circuits électroniques effectuant des opérations. </p>
+<ol>
+<li>
+<p>Réécrire la table de vérité du XOR en utilisant les valeurs <code>0</code> et <code>1</code> à la place de <code>False</code> et <code>True</code>.</p>
+</li>
+<li>
+<p>Vérifier que le circuit ci-dessous fait bien le calcul du XOR, en attribuant toutes les valeurs possibles (entre 0 et 1) aux entrées A et B et en calculant la valeur de la sortie S.</p>
+</li>
+</ol>
+<p><img alt="" src="../img/circuit_xor.png" /></p>
+<ol>
+<li>
+<p>A partir de ce circuit, trouver l'expression booléenne constituée des opérateurs NON, ET et OU qui permet de calculer le XOR.</p>
+</li>
+<li>
+<ul>
+<li>Programmer une fonction <code>xor</code> prenant en paramètres deux booléens <code>a</code> et <code>b</code> et renvoyant un booléen, en utilisant les opérateurs booléens <code>not</code>, <code>and</code> et <code>or</code>. <em>Utiliser l'expression obtenue à la question 3.</em></li>
+<li>On veut programmer la fonction équivalente <code>xor1bit</code> fonctionnant sur des entiers (ne prenant que les valeurs <code>0</code> ou <code>1</code>). Pour cela :<ul>
+<li>Ecrire une fonction <code>non1bit(a)</code> prenant un 0 ou un 1 en entrée, et renvoyant l'opposé.</li>
+<li>Ecrire la fonction <code>xor1bit(a,b)</code>, en utilisant <code>non1bit</code> à la place du <code>not</code>, le <code>&amp;</code> à la place du <code>and</code> et le <code>|</code> à la place du <code>or</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="b-ladditionneur-1-bit">B. L'additionneur 1 bit</h3>
+<p>Un additionneur 1 bit est un circuit permettant d'additionner deux bits entre eux. Il dispose de :<br />
+<img alt="" src="../img/add.png" />
+<em>Trois entrées :</em>
+- <code>a</code> : le premier bit,
+- <code>b</code> : le deuxième bit,
+- <code>re</code> : la <em>retenue</em> entrante (peut exister dans le cas où l'on combine les additionneurs)</p>
+<p><em>Deux sorties :</em>
+- <code>s</code> : la somme des deux bits,
+- <code>rs</code> : la <em>retenue</em> sortante.</p>
+<p>Aller voir le circuit électronique correspondant à l'URL suivante : https://www.cahier-nsi.fr/additionneur1bit/ </p>
+<ol>
+<li>Compléter la table de vérité de l'additionneur en changeant les valeurs d'entrée du circuit :</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><code>a</code></th>
+<th align="center"><code>b</code></th>
+<th align="center"><code>re</code></th>
+<th align="center"><code>s</code></th>
+<th align="center"><code>rs</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>0</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>0</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>0</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>0</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>1</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>1</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>1</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>1</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>De cette table, déduire combien fait <code>1 + 1</code> en binaire.</li>
+<li>
+<ul>
+<li>On donne l'expression booléenne de <code>s = (a XOR b) XOR re</code><br />
+Vérifier qu'elle convient en calculant sa valeur pour les 3 premières lignes de la table de vérité.</li>
+<li>Faire de même avec <code>rs = (a ET b) OU ((a XOR b) ET re)</code>.</li>
+</ul>
+</li>
+<li>
+<p>Programmer une fonction <code>add1bit</code>, prenant en paramètres trois entiers <code>a</code>, <code>b</code> et la retenue <code>re</code>, et renvoyant en sortie <code>s</code> et la retenue <code>rs</code>. On utilisera la fonction <code>xor1bit</code> définie dans la partie A.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>N.B.:</strong> Pour qu'une fonction renvoie 2 valeurs en sortie, il faut les séparer par une <code>,</code>, après le <code>return</code>.</p>
+</blockquote>
+<p><br></p>
+<hr />
+<h2 id="tp-programmer-au-plus-pres-de-la-machine">TP : Programmer au plus près de la machine</h2>
+<p>La machine comprend un langage qui n'est constitué que de 0 et de 1, ce qui ne nous est pas facile à manipuler... Pour le faire, les <strong>langages assembleur</strong> ont été développés. Ils sont proches du fonctionnement de la machine, mais utilisent des instructions qui nous sont plus compréhensibles.</p>
+<p>Nous allons manipuler un de ces langages avec le simulateur suivant : http://www.peterhigginson.co.uk/AQA/</p>
+<p><img alt="" src="../img/simulateur.png" /></p>
+<ol>
+<li>
+<p>On retrouve les principaux composants de l'ordinateur. Identifier les différentes parties du processeur.</p>
+</li>
+<li>
+<p>Nous allons utiliser l'éditeur situé à gauche, permettant de faire de l'assembleur. Saisir les lignes suivantes :</p>
+</li>
+</ol>
+<pre><code class="language-assembly">MOV R0,#42
+STR R0,150
+HALT
+</code></pre>
+<p>Cliquer sur le bouton "Submit".</p>
+<p>Vous allez voir des nombres apparaître dans la mémoire :
+<img alt="" src="../img/sim_cpu_1.png" /></p>
+<p>Le programme a été stocké dans la mémoire, en attendant d'être exécuté. Il a été stocké sous la forme de 3 <strong>instructions machine</strong> correspondant aux 3 lignes du programme, dans 3 cases de la mémoire. Pour voir à quoi ressemblent les instructions sous la forme de 0 et de 1, cliquer sur "OPTIONS" et "binary". 
+<img alt="" src="../img/sim_cpu_2.png" /></p>
+<p>Revenir à l'affichage en décimal avec "OPTIONS" &gt; "signed".</p>
+<ol>
+<li>
+<p>Pour exécuter le programme chargé en mémoire, cliquer sur le bouton "RUN". Pour aller plus ou moins vite, utiliser les boutons &gt;&gt; et &lt;&lt;.  </p>
+</li>
+<li>
+<p>Que fait le programme (c'est-à-dire qu'est-ce qui a été modifié ?) ? <br><br></p>
+</li>
+<li>En déduire ce que font les instructions MOV (<em>"move"</em>) et STR (<em>"store"</em>). <br><br></li>
+<li>Qu'y a-t-il dans le registre PC ? <br><br></li>
+</ol>
+<blockquote>
+<p><strong>N.B.:</strong> Pour relancer la simulation en repartant de zéro, il faut cliquer sur "RESET" et sur "OPTIONS" &gt; "clear memory". Cela réinitialisera le contenu des registres et de la mémoire. Il faut ensuite cliquer sur "ASSEMBLE" avant de relancer.</p>
+</blockquote>
+<ol>
+<li>
+<p>Modifiez le programme précédent pour qu'à la fin de l'exécution on trouve le nombre 54 à l'adresse mémoire 50. On utilisera le registre R1 à la place de R0. Testez vos modifications en exécutant la simulation. </p>
+</li>
+<li>
+<p>Saisir le programme suivant :</p>
+</li>
+</ol>
+<pre><code class="language-assembly">   MOV R0, #4
+   STR R0,30
+   MOV R0, #8
+   STR R0,75
+   LDR R0,30
+   CMP R0, #10
+   BNE else
+   MOV R0, #9
+   STR R0,75
+   B endif
+else:
+   LDR R0,30
+   ADD R0, R0, #1
+   STR R0,30
+endif:
+   MOV R0, #6
+   STR R0,23
+   HALT
+</code></pre>
+<ul>
+<li>Indiquer les cases mémoires qui sont modifiées au fur et à mesure :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">adresse</th>
+<th align="center">valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><br><br></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><br><br><br></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Que fait l'instruction STR R0,75 ?
+<br><br></p>
+</li>
+<li>
+<p>L'ensemble des lignes d'instructions est-il exécuté ? Si non, lesquelles ne le sont pas ?
+<br><br></p>
+</li>
+<li>Faire une hypothèse sur ce que font les instructions CMP et BNE. Vérifier grâce à une recherche Web.
+<br><br></li>
+<li>En déduire ce que fait ce programme. Donner son code équivalent en Python.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

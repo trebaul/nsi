@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://example.com/tle/seq4/listes/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>I. Les listes - Sciences informatiques</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../../extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/logique/" class="dropdown-item">I. Logique</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">II. Architecture</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/flottants/" class="dropdown-item">III. Les flottants</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
+</li>
+            
+<li>
+    <a href="../../seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
+</li>
+            
+<li>
+    <a href="../../seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq2/piles/" class="dropdown-item">I. Les piles</a>
+</li>
+            
+<li>
+    <a href="../../seq2/r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
+</li>
+            
+<li>
+    <a href="../../seq2/diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
+</li>
+            
+<li>
+    <a href="../../seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">4. Structurer les données</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">I. Les listes</a>
+</li>
+            
+<li>
+    <a href="../files/" class="dropdown-item">II. Les files</a>
+</li>
+            
+<li>
+    <a href="../dico/" class="dropdown-item">III. Les dictionnaires</a>
+</li>
+            
+<li>
+    <a href="../synthese/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
+</li>
+                                    
+<li>
+    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../ressources/" class="nav-link">Ressources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../seq3/Cours_SoC/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../files/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sequence-4" class="nav-link">Séquence 4</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#i-les-listes" class="nav-link">I. Les listes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tp-implementations" class="nav-link">TP : Implémentations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="sequence-4"><strong>Séquence 4</strong></h1>
+<h1 id="i-les-listes">I. Les listes</h1>
+<hr />
+<h2 id="cours">Cours</h2>
+<h3 id="a-la-notion-de-liste">A. La notion de liste</h3>
+<p>Une <strong>liste</strong> est un ensemble séquentiel (les éléments sont les uns à la suite des autres) de données de même type. Elle est classiquement implémentée par :<br />
+- un <strong>tableau</strong>,<br />
+- une <strong>liste chaînée</strong>.</p>
+<blockquote>
+<p><strong>Définition :</strong> <strong><em>Un tableau est une suite indicée d'éléments de même type.</em></strong></p>
+</blockquote>
+<p>L'avantage d'un tableau est que l'on peut accéder directement à chacun de ses éléments, grâce à leur indice. Son inconvénient est que sa <strong>taille est définie à l'avance</strong>, et ne peut être modifiée. La liste chaînée se différencie des tableaux par sa manière d'accèder aux différents éléments.</p>
+<h3 id="b-la-structure-de-liste-chainee">B. La structure de liste chaînée</h3>
+<blockquote>
+<p><strong>Définition :</strong>   Une <strong>liste chaînée</strong> est une suite d'éléments composée :<br />
+- <strong><em>d'une tête  : le premier élément auquel on peut accéder,</em></strong><br />
+- <strong><em>d'une queue  : le reste des éléments.</em></strong></p>
+</blockquote>
+<p><em>Historiquement, le langage LISP ("list processing") est un des premiers à introduire cette structure de données en 1958. Dans ce langage, la tête est nommée </em>car<em> pour </em>"content of address register"<em>, et la queue </em>cdr<em> pour </em>"content of decrement register"<em>.</em></p>
+<p>Sur une liste, on peut effectuer les opérations dites "primitives" suivantes :<br />
+- <em>créer</em> une liste vide (<code>listeCree()</code>),<br />
+- <em>obtenir la tête</em> de la liste (<code>listeTete(liste)</code>),<br />
+- <em>obtenir la queue</em> de la liste (<code>listeQueue(liste)</code>),<br />
+- renvoyer si la liste est <em>vide</em> (<code>True</code>) ou non (<code>False</code>) (<code>listeEstVide()</code>),<br />
+- <em>ajouter</em> un élément en tête d'une liste (<code>listeAjoute(element, liste)</code>).</p>
+<p><strong><em>Exercice :</em></strong> en utilisant les fonctions définie ci-dessus, créer une liste chaînée initialement vide, à laquelle on ajoute successivement les entiers 15, 2 et 3.</p>
+<pre><code class="language-python">L = listeCree()
+L = listeAjoute(15, L)   
+L = listeAjoute(2, L)
+L = listeAjoute(3, L)
+# ou L = listeAjoute(3,listeAjoute(2,listeAjoute(15, listeCree())))
+</code></pre>
+<p>En quoi est-ce une structure récursive ?<br />
+<strong><em>Une liste est une structure récursive car sa queue est elle-même une liste.</em></strong></p>
+<h3 id="c-stockage-en-memoire">C. Stockage en mémoire</h3>
+<p><strong>Tableaux</strong> et <strong>listes chaînées</strong> se distinguent par leur utilisation de la mémoire. Un <strong>tableau</strong> est stocké dans une suite contigüe de cases mémoires. Sa taille est fixe : l'ajout d'un nouvel élément, qui agrandirait la taille du tableau, n'est pas possible.</p>
+<p><img alt="" src="../img/tableau_stockage.png" /></p>
+<p>En Python, la structure de liste correspond à un <strong>tableau dynamique</strong> : un tableau auquel on peut ajouter des éléments. Ceux-ci devant toujours être placés les uns à côté des autres, s'il n'y a pas de place pour ajouter ces données dans les cases mémoires adjacentes... alors il faut réécrire le tableau ailleurs.
+<img alt="" src="../img/tableau_dynamique_stockage.png" /></p>
+<p>Les différents éléments d'une liste chaînée ne sont pas stockés de manière contigüe : chaque élément est associé à 2 cases mémoires :<br />
+- une dans laquelle on stocke <strong>la valeur</strong> de l'élément,<br />
+- une dans laquelle on stocke <strong>l'adresse mémoire</strong> de l'élément <strong>suivant</strong>. </p>
+<p><img alt="" src="../img/liste_chainee1.png" /></p>
+<p>Il est donc très facile d'ajouter des éléments à une liste chaînée :</p>
+<p><img alt="" src="../img/liste_chainee2.png" /></p>
+<p>Quelle opération faut-il faire ? <strong><em>Il faut lier le nouvel élément à l'élément que l'on veut avoir avant, et faire pointer le nouvel élément vers celui qui était à sa position.</em></strong></p>
+<p><strong><em>Exercice :</em></strong> Ecrire une fonction <code>elementListe</code> prenant comme entrées une liste <code>L</code> et un indice <code>i</code> et retournant l'élement <code>i</code> de la liste. Quelle est la complexité de cette fonction ?  </p>
+<pre><code class="language-python">def elementListe(L, i):
+    if i == 1:
+        return listeTete(L)
+    else:
+        return elementListe(listeQueue(L),i-1)
+</code></pre>
+<p><strong><em>Il faut parcourir tous les éléments précédents avant d'accéder à l'élément i : la complexité est linéaire (en O(n)).</em></strong></p>
+<h3 id="d-interface-et-implementation-dune-structure-de-donnees">D. Interface et implémentation d'une structure de données</h3>
+<p>Nous avons vu en TD que l'on pouvait implémenter de différentes manières la même structure de <strong>liste chaînée</strong>. Le <strong>type abstrait</strong>, ou définition de la structure ne change pas. On manipule la structure grâce à son <strong><em>interface</em></strong> : la description des opérations qui peuvent être faites sur ces données. La manière de les implémenter peut varier, on aura utilisé la même structure.</p>
+<p><br><br></p>
+<hr />
+<h2 id="tp-implementations">TP : Implémentations</h2>
+<h3 id="a-premiere-implementation">A. Première implémentation</h3>
+<p>On propose une première implémentation d'une liste chaînée, qui est représentée par un tuple <code>(tete, queue)</code> : </p>
+<pre><code class="language-python">def listeCree():
+    return None
+
+def listeEstVide(l):
+    return l == None
+
+def listeAjoute(x,l):
+    return (x,l)
+
+def listeTete(l):
+    return l[0]
+
+def listeQueue(l):
+    return l[1]
+</code></pre>
+<ol>
+<li>
+<p>Exécuter les instructions suivantes :</p>
+<ul>
+<li>Créer une liste vide.</li>
+<li>Vérifier qu'elle est vide.</li>
+<li>Ajouter successivement les entiers de 0 à 4.</li>
+<li>Vérifier qu'elle n'est pas vide.</li>
+</ul>
+</li>
+<li>
+<p>Créer une fonction <code>listeAffiche(l)</code> qui affiche successivement les différents éléments de la liste de manière <strong>récursive</strong>. </p>
+</li>
+<li>
+<p>Créer une fonction <code>listeCompte(l)</code> qui compte le nombre d'éléments dans une liste de manière <strong><em>récursive</em></strong>.</p>
+</li>
+<li>
+<p>Reprendre la liste de la question 1., et :</p>
+<ul>
+<li>Ajouter l'entier 5.</li>
+<li>Compter le nombre d'éléments et les afficher.</li>
+<li>Supprimer la tête de la liste.</li>
+<li>Compter à nouveau le nombre d'éléments et les afficher.</li>
+</ul>
+</li>
+</ol>
+<h3 id="b-deuxieme-implementation-poo">B. Deuxième implémentation (POO)</h3>
+<p>On propose une deuxième implémentation qui utilise la POO. Elle se base sur deux classes : une classe <code>Cellule</code> qui représente un élément de la liste, et une classe <code>Liste</code> composée d'instances de la classe <code>Cellule</code> et implémentant les primitives d'une liste :</p>
+<pre><code class="language-python">class Cellule:
+
+    def __init__(self, tete, queue):
+        self.car = tete
+        self.cdr = queue
+
+class Liste:
+
+    def __init__(self, c):
+        self.cellule = c
+
+    def isnil(self):
+        return self.cellule is None
+
+    def car(self):
+        assert(not(self.cellule is None)), 'Liste vide !'
+        return self.cellule.car
+
+    def cdr(self):
+        assert(not(self.cellule is None))
+        return self.cellule.cdr 
+
+    def cons(self, e):
+        return Liste(Cellule(e, self))
+</code></pre>
+<blockquote>
+<p><strong>Remarque :</strong> On utilise ici les noms utilisés par le langage Lisp pour implémenter les primitives. </p>
+</blockquote>
+<p>Pour construire une liste, on utilise la méthode <code>cons</code> qui ajoute un élément en tête :</p>
+<pre><code class="language-python">nil = Liste(None)
+L = nil.cons(5).cons(4).cons(3).cons(2).cons(1)
+</code></pre>
+<ol>
+<li>Représenter les éléments de la liste <code>L</code> en utilisant un schéma comme ceux du cours. </li>
+<li>Identifier le rôle des différentes méthodes et l'ajouter en commentaires.</li>
+<li>Tester le code suivant :</li>
+</ol>
+<pre><code class="language-python">print(L.isnil())
+print(L.car())
+print(L.cdr().car())
+</code></pre>
+<ol>
+<li>
+<p>Ecrire l'instruction permettant d'afficher le dernier élément de la liste.</p>
+</li>
+<li>
+<p>Créer les fonctions <code>lengthList(l)</code> et <code>displayList(l)</code> qui, respectivement, compte le nombre d'éléments dans la liste, et affiche chacun d'entre eux. On implémentera ces fonctions de manière <strong><em>récursive</em></strong>.</p>
+</li>
+<li>
+<p>Créer la fonction <code>removeList(l)</code>, qui supprime un élément en tête de liste et le retourne.</p>
+</li>
+</ol>
+<p><br></p>
+<p><strong><em>Pour aller plus loin...</em></strong>  </p>
+<p>La <strong>liste chaînée</strong> vue en cours est une liste <strong>simplement chaînée</strong> : chaque élément ne possède qu'un lien vers le suivant. Avec une liste <strong>doublement chaînée</strong>, chaque élément possède un lien avec le suivant et avec le précédent. Cela permet les parcours de liste dans les deux sens. On propose les classes ci-dessous pour implémenter cette structure.   </p>
+<p>Ajouter les méthodes <code>insereDebut</code> et <code>insereFin</code> à la classe <code>ListeDoublementChainee</code>, permettant d'insérer des éléments au début ou à la fin de la liste.</p>
+<pre><code class="language-python">class Maillon():
+    def __init__(self, e):
+        self.element = e
+        self.suivant = None
+        self.precedent = None
+
+
+class ListeDoublementChainee():
+    def __init__(self, m):
+        self.maillon_debut = m
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

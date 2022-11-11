@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://example.com/tle/seq4/files/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>II. Les files - Sciences informatiques</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../../extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/logique/" class="dropdown-item">I. Logique</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">II. Architecture</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/flottants/" class="dropdown-item">III. Les flottants</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
+</li>
+            
+<li>
+    <a href="../../seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
+</li>
+            
+<li>
+    <a href="../../seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq2/piles/" class="dropdown-item">I. Les piles</a>
+</li>
+            
+<li>
+    <a href="../../seq2/r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
+</li>
+            
+<li>
+    <a href="../../seq2/diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
+</li>
+            
+<li>
+    <a href="../../seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">4. Structurer les données</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../listes/" class="dropdown-item">I. Les listes</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">II. Les files</a>
+</li>
+            
+<li>
+    <a href="../dico/" class="dropdown-item">III. Les dictionnaires</a>
+</li>
+            
+<li>
+    <a href="../synthese/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
+</li>
+                                    
+<li>
+    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../ressources/" class="nav-link">Ressources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../listes/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../dico/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sequence-4" class="nav-link">Séquence 4</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ii-les-files" class="nav-link">II. Les files</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tp-implementations" class="nav-link">TP : Implémentations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#td-modelisation" class="nav-link">TD : Modélisation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="sequence-4"><strong>Séquence 4</strong></h1>
+<h1 id="ii-les-files">II. Les files</h1>
+<hr />
+<h2 id="cours">Cours</h2>
+<h3 id="a-definition">A. Définition</h3>
+<p>Une <strong>file</strong> est une structure de données basée sur le principe « premier entré, premier sorti » (en anglais <em>"First In, First Out"</em> (FIFO)), c’est-à-dire que les premiers éléments ajoutés à la file seront les premiers à être enlevés.</p>
+<p><img alt="" src="../img/file.png" /></p>
+<p><strong><em>Exemples</em></strong> de la vie quotidienne :<br />
+- pour représenter le système de queue dans un magasin,<br />
+- pour représenter le flux de véhicules sur une route,<br />
+- pour stocker des dossiers en attente dans une entreprise,...</p>
+<p><strong><em>Exemples</em></strong> en informatique :<br />
+- <strong><em>pour la gestion du temps affecté à chaque tâche par un système d'exploitation,</em></strong><br />
+- <strong><em>pour la gestion de la file d'attente de documents à imprimer,</em></strong><br />
+- <strong><em>pour matérialiser une file d'attente d'un logiciel de visioconférence, d'un jeu en ligne,...</em></strong></p>
+<h3 id="b-type-abstrait">B. Type abstrait</h3>
+<p>Les opérations primitives que l'on peut faire sur une file sont les suivantes :<br />
+- <em>construire</em> une file <em>vide</em> (<code>fileCree()</code>),<br />
+- <em>ajouter</em> un élément à la file (il se retrouve après les autres) (<code>fileAjouterFin(file, element)</code>),<br />
+- <em>enlever</em> un élément de la file (le premier ajouté : celui en tête) et le renvoie (<code>fileRetirerTete(file)</code>),<br />
+- <em>estimer</em> si la file est <em>vide</em> (<code>True</code>) ou non (<code>False</code>) (<code>fileEstVide(file)</code>),<br />
+- obtenir le <em>nombre d'éléments</em> contenus dans la file (<code>fileTaille(file)</code>),<br />
+- obtenir la <em>tête</em> de la file, aussi appelé <em>sommet</em> (sans la retirer) (<code>fileTete(file)</code>).</p>
+<p><strong><em>Exercice :</em></strong> En utilisant les noms des fonctions donnés ci-dessus,  créer une file, lui ajouter les éléments 2 et 9, puis lui enlever le dernier élément récupéré dans une variable, avant d'estimer si elle est vide. </p>
+<p><strong><em>Correction :</em></strong></p>
+<pre><code class="language-python">f = fileCree()
+f = enfiler(f, 2)
+f = enfiler(f, 9)
+x = enfiler(f)
+print(fileVide(f))
+</code></pre>
+<h3 id="c-les-structures-lineaires-de-donnees">C. Les structures linéaires de données</h3>
+<p>Les <strong>listes</strong>, <strong>piles</strong> et <strong>files</strong> sont des structures linéaires de données : c'est-à-dire que les différents éléments sont ordonnés et adjacents les uns aux autres.</p>
+<p>Les <strong>piles</strong> et les <strong>files</strong> contrastent par leur ordre d'accès aux données est opposé : LIFO vs FIFO.</p>
+<p><br><br></p>
+<hr />
+<h2 id="tp-implementations">TP : Implémentations</h2>
+<p>Dans ce TD, nous allons implémenter la <strong>structure de file</strong>, de plusieurs manières différentes.</p>
+<h3 id="a-une-premiere-implementation">A. Une première implémentation</h3>
+<p>Une première implémentation est donnée ci-dessous.
+A partir de ce code, créer une file et enfiler successivement les entiers de 0 à 4.</p>
+<pre><code class="language-python">def file():
+    ''' Renvoie une file vide '''
+    return []
+
+def vide(f):
+    ''' Renvoie True si la file est vide, False sinon '''
+    return f == []
+
+def enfiler(f,x):
+    ''' Ajoute x à la file f '''
+    return f.append(x)
+
+def defiler(f):
+    ''' Enlève et renvoie le premier élément de la file '''
+    assert not vide(f), &quot;file vide !&quot;
+    return f.pop(0)
+</code></pre>
+<pre><code>
+</code></pre>
+<p>Créer les fonctions suivantes :
+- <code>taille</code> : renvoie la taille d'une file <code>f</code>,
+- <code>sommet</code> : renvoie le sommet d'une file <code>f</code>, sans l'enlever de la file.
+Les tester sur la file <code>f</code> créée précédemment.</p>
+<pre><code>
+</code></pre>
+<h3 id="b-implementation-avec-deux-piles">B. Implémentation avec deux piles</h3>
+<p>Pour la deuxième implantation, nous allons utiliser deux structures de piles et la programmation orientée objet.
+Le procédé est le suivant :<br />
+- La file est, au départ, composée de <strong>deux piles</strong> vides : une <strong>pile d'entrée</strong> et une <strong>pile de sortie</strong>.<br />
+- Quand on <strong>ajoute</strong> un élément dans la file, on le place dans la <strong>pile d'entrée</strong>.<br />
+- Quand on <strong>supprime</strong> un élément de la file, deux cas se présentent :<br />
+    1. Si la pile de sortie est vide : on dépile alors chaque élément de la pile d'entrée pour les empiler dans la pile de sortie.<br />
+    2. S'il y a au moins un élément dans la pile de sortie : on ne fait rien.<br />
+    3. On supprime ensuite le sommet de la pile de sortie.</p>
+<p>On utilise donc une classe <code>Pile</code>, et on propose la code de la classe <code>File</code> ci-dessous.<br />
+- Compléter les méthodes proposées pour implémenter la structure de file.<br />
+- Ajouter à la classe File les méthodes suivantes :<br />
+    1. <code>sommet</code> : retourne le sommet de la file, sans l'en enlever.<br />
+    2. <code>taille</code> : retourne le nombre d'éléments de la file.</p>
+<pre><code class="language-python">class Pile:
+    ''' Définition d'une classe Pile
+    une instance Pile est créée avec une liste Python '''
+
+    def __init__(self):
+        &quot;Création d'une pile vide&quot;
+        self.L = []
+
+    def vide(self):
+        &quot;Teste si la pile est vide&quot;
+        return self.L == []
+
+    def depiler(self):
+        &quot;Dépile : enlève le dernier élément&quot;
+        assert( not(self.vide()) ), &quot;Pile vide !&quot;
+        return self.L.pop()
+
+    def empiler(self,x):
+        &quot;Empile : ajoute un élément x en haut de la pile&quot;
+        self.L.append(x)
+
+    def taille(self):
+        &quot;Retourne la taille (le nombre d'éléments) de la pile&quot;
+        return len(self.L)
+
+    def sommet(self):
+        &quot;Retourne le premier élément à sortir de la pile sans le dépiler&quot;
+        return self.L[self.taille()-1]
+
+
+
+class File:
+
+    def __init__(self):
+        ''' Crée une file vide.
+        Attribut pile_entree : objet Pile stockant les nouvelles valeurs ajoutées à la file.
+        Attribut pile_sortie : objet Pile stockant les valeurs qui vont sortir de la file. Son sommet est le premier élément de la file.
+        '''
+        self.pile_entree = Pile()
+        self.pile_sortie = Pile()
+
+    def vide(self):
+        ''' Teste si la file est vide ou non. '''
+        return ???
+
+    def enfiler(self, x):
+        ''' Ajoute l'élément x à la file.'''
+        self.pile_entree.empiler(x)
+
+    def organiser(self):
+        ''' Fonction auxiliaire actualisant l'état de la pile de sortie lorsque l'on veut supprimer un élément de la file. 
+        Si la pile de sortie est vide, on lui ajoute successivement les éléments que l'on dépile à la pile d'entrée. '''
+        if self.pile_sortie.vide():
+            ???
+
+    def defiler(self):
+        ''' Supprime le premier élément entré dans la file. '''
+        self.organiser()
+        ???
+
+
+</code></pre>
+<p>Tester le bon fonctionnement du code suivant :</p>
+<pre><code class="language-python">f = File()
+for i in range(5):
+    f.enfiler(2*i)
+print(f.taille())
+a = f.defiler()
+print(a)
+print(f.taille())
+print(f.sommet())
+</code></pre>
+<h3 id="c-implementation-avec-une-liste-python">C. Implémentation avec une liste Python</h3>
+<p>En vous inspirant de l'implémentation d'une pile en POO que nous avions faite, proposer une implémentation similaire pour une structure de file : en utilisant une liste Python. On devra retrouver les mêmes primitives que pour les autres implémentations. Faire un test en créant un nouvel objet File, et en lui appliquant les différentes méthodes.</p>
+<pre><code class="language-python">class File:
+
+    # à compléter
+</code></pre>
+<h3 id="d-limplementation-python">D. L'implémentation Python</h3>
+<p>Python possède sa propre implémentation de file, utilisable aussi pour modéliser une pile. Il s'agit de la structure <strong>deque</strong> ("double-ended queue").</p>
+<p>Utiliser sa documentation : https://docs.python.org/fr/3/library/collections.html#collections.deque pour choisir les méthodes qui permettent de simuler le fonctionnement d'une file. On y retrouve des méthodes similaires à celles définies pour les listes Python, mais avec la possibilité d'ajouter et de supprimer des éléments soit à droite, soit à gauche.</p>
+<p>Rajouter, à la suite du code ci-dessous, des instructions qui permettent de créer un objet <code>deque</code>, de lui enfiler plusieurs éléments, d'estimer si la file est vide, et de défiler un élément. Il y a plusieurs solutions.</p>
+<pre><code class="language-python">from collections import deque
+
+</code></pre>
+<p><br><br></p>
+<hr />
+<h2 id="td-modelisation">TD : Modélisation</h2>
+<h3 id="a-presentation">A. Présentation</h3>
+<p>On souhaite écrire un algorithme qui simule l'arrivée de voitures sur la route R3, modélisée par la file <code>f3</code>.<br />
+- Dans la file <code>f1</code>, on représente la présence d’une voiture par le nombre <code>1</code> et l’absence de voiture par <code>0</code>.<br />
+- Dans la file <code>f2</code>, on représentera la présence d’une voiture par le nombre <code>2</code> et l’absence de voiture par <code>0</code>.</p>
+<p><img alt="" src="../img/file_exemple.png" /></p>
+<p>Donner la file <code>f1</code> correspondant à la situation suivante : une voiture, pas de voiture, pas de voiture, une voiture, une voiture, pas de voiture.
+<br><br>
+Donner la file <code>f2</code> correspondant à la situation suivante : pas de voiture, pas de voiture, une voiture, une voiture, pas de voiture, une voiture.
+<br><br><br></p>
+<h3 id="b-les-differents-cas">B.  Les différents cas</h3>
+<p>Que doit faire l’algorithme si :
+- les deux sommets des files sont à <code>0</code> ?
+<br><br>
+- le sommet de <code>f1</code> est à <code>1</code> et celui de <code>f2</code> à <code>2</code> ?
+<br><br>
+- le sommet de <code>f1</code> est à <code>1</code> et celui de <code>f2</code> à <code>0</code> ?
+<br><br>
+- le sommet de <code>f1</code> est à <code>0</code> et celui de <code>f2</code> à <code>2</code> ?
+<br><br>
+- l’une des deux files est vide ?
+<br><br>
+<br></p>
+<p>Donner la file <code>f3</code> correspondant aux files entrantes suivantes :<br />
+<code>f1</code> : tête &lt;– [0, 1, 1, 0, 1] &lt;– queue<br />
+<code>f2</code> : tête &lt;– [0, 2, 2, 2, 0, 2, 0] &lt;– queue
+<br><br><br><br><br></p>
+<h3 id="c-construction-de-lalgorithme">C. Construction de l’algorithme</h3>
+<p>Ecrire sous la forme d’un pseudo-code la fonction <code>croisement</code> prenant en entrées les deux files <code>f1</code> et <code>f2</code>, et retournant la file <code>f3</code>. Tous les cas identifiés dans la partie précédente devront être traités. On n’utilisera que les primitives utilisables sur les files.</p>
+<pre><code class="language-python">
+
+
+
+
+
+
+
+
+
+</code></pre>
+<h3 id="d-implementation-de-lalgorithme">D. Implémentation de l’algorithme</h3>
+<p>Implémenter le pseudo-code précédent et le tester sur l’exemple donné dans la partie 2. On utilisera une implémentation de file avec la POO, utilisant les méthodes <code>enfiler</code>, <code>defiler</code>, <code>sommet</code> et <code>estVide</code>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://example.com/tle/seq2/diviser_regner/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>III. Diviser pour régner - Sciences informatiques</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../../extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/logique/" class="dropdown-item">I. Logique</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">II. Architecture</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/flottants/" class="dropdown-item">III. Les flottants</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
+</li>
+            
+<li>
+    <a href="../../seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
+</li>
+            
+<li>
+    <a href="../../seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../piles/" class="dropdown-item">I. Les piles</a>
+</li>
+            
+<li>
+    <a href="../r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">III. Diviser pour régner</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
+</li>
+            
+<li>
+    <a href="../../seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">4. Structurer les données</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq4/listes/" class="dropdown-item">I. Les listes</a>
+</li>
+            
+<li>
+    <a href="../../seq4/files/" class="dropdown-item">II. Les files</a>
+</li>
+            
+<li>
+    <a href="../../seq4/dico/" class="dropdown-item">III. Les dictionnaires</a>
+</li>
+            
+<li>
+    <a href="../../seq4/synthese/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
+</li>
+                                    
+<li>
+    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../ressources/" class="nav-link">Ressources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../r%C3%A9cursivit%C3%A9/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../../1ere/seq1/archi/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sequence-2" class="nav-link">Séquence 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#iii-diviser-pour-regner" class="nav-link">III. Diviser pour régner</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tp-le-tri-fusion" class="nav-link">TP : Le tri fusion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tp-la-recherche-dichotomique" class="nav-link">TP : La recherche dichotomique</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="sequence-2"><strong>Séquence 2</strong></h1>
+<h1 id="iii-diviser-pour-regner">III. Diviser pour régner</h1>
+<hr />
+<h2 id="cours">Cours</h2>
+<h3 id="a-notions-dalgorithmique">A. Notions d'algorithmique</h3>
+<ul>
+<li>
+<p>Qu'est-ce qu'un <strong>algorithme</strong> ?<br />
+<strong><em>Un algorithme est une suite d'instructions permettant de résoudre un problème.</em></strong>  </p>
+</li>
+<li>
+<p>Qu'est-ce que la <strong>complexité</strong> d'un algorithme ?<br />
+<strong><em>La complexité d'un algorithme évalue la quantité de ressources (en temps, en mémoire), nécessaire à son exécution.</em></strong></p>
+</li>
+<li>
+<p>A quoi sert l'évaluation de cette complexité ?<br />
+<strong><em>Evaluer la complexité d'un algorithme sert à le comparer à d'autres algorithmes résolvant le même problème.</em></strong></p>
+</li>
+<li>
+<p>Dans le programme de NSI, on s'intéresse à la complexité <strong>en temps dans le pire des cas</strong>. Qu'évalue-t-on alors ?<br />
+<strong><em>On estime le nombre d'opérations élémentaires exécutées, en fonction de la taille des données d'entrée notée n.</em></strong></p>
+</li>
+</ul>
+<p>Tracer les différent types de complexités que vous connaissez sur un graphique. En donner des exemples types d'algorithmes associés.</p>
+<p><img alt="" src="../img/graphe_fonction.png" /></p>
+<p><strong><em>- constant : retour d'une valeur (la moitié d'un nombre, test,...)</em></strong><br />
+<strong><em>- linéaire : parcours d'un tableau, 1 boucle</em></strong><br />
+<strong><em>- quadratique : parcours d'un tableau à deux dimensions, 2 boucles imbriquées</em></strong></p>
+<h3 id="b-les-algorithmes-du-type-diviser-pour-regner">B. Les algorithmes du type "diviser pour régner"</h3>
+<p><strong>"Diviser pour régner"</strong> est une <em>méthode algorithmique</em> : une manière de résoudre des problèmes algorithmiquement.</p>
+<p>Son principe est, lorsque l'on considère un problème, de le découper en plusieurs sous-problèmes équivalents, mais de taille plus réduite. Ces "petits problèmes" seront plus simples à résoudre que le problème initial. Une fois les "petits problèmes" résolus, il faut les recombiner pour obtenir une solution au problème initial.  </p>
+<p>Les trois principes à la base de cette méthode de "diviser pour régner" sont :<br />
+- <strong>Diviser :</strong> <strong><em>on divise le problème initial en sous-problèmes</em></strong><br />
+- <strong>Régner :</strong> <strong><em>on résoud les sous-problèmes</em></strong><br />
+- <strong>Combiner :</strong> <strong><em>on combine les solutions des sous-problèmes, pour avoir la solution du problème initial</em></strong></p>
+<p>Le principe de la récursivité étant similaire à celui de cette approche, on utilise souvent des <strong>algorithmes récursifs</strong>. Cela n'est pas obligatoire ! Une approche "diviser pour régner" peut aussi être <strong>itérative</strong> (avec des boucles).</p>
+<h3 id="c-le-tri-fusion">c. Le tri fusion</h3>
+<h4 id="c1-principe-et-exemple">C.1. Principe et exemple</h4>
+<p>Le <strong>tri fusion</strong> est une manière de trier une liste en la divisant successivement, puis en fusionnant petit à petit les sous-listes triées pour finalement en obtenir une seule : la liste initiale triée.</p>
+<p>Les trois étapes de cet algorithme sont :<br />
+- <strong>Diviser :</strong> <strong><em>on divise le tableau successivement en deux, jusqu'à obtenir des tableaux de taille 1.</em></strong><br />
+- <strong>Régner :</strong> <strong><em>on obtient un tableau de taille 1 qui est trié. A chaque nouvelle fusion, on s'assure que le résultat est trié.</em></strong><br />
+- <strong>Combiner :</strong> <strong><em>on fusionne les tableaux triés deux à deux, jusqu'à en obtenir une seule.</em></strong></p>
+<p><img alt="" src="../img/tri_fusion.png" /></p>
+<h4 id="c2-comparaison-avec-les-autres-algorithmes-de-tri">C.2. Comparaison avec les autres algorithmes de tri</h4>
+<p>Rappeler les principe des deux algorithmes de tri du programme de 1ère :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Tri par sélection</th>
+<th align="center">Tri par insertion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><em>On sélectionne le minimum du tableau, et on l'échange avec l'élément en première position.</em></strong></td>
+<td align="center"><strong><em>On prend le 2ème élément, on le compare avec le premier, et on échange les deux s'ils ne sont pas rangés dans l'ordre croissant.</em></strong></td>
+</tr>
+<tr>
+<td align="center"><strong><em>On sélectionne le minimum de l'ensemble des éléments du tableau sauf le premier, et on l'échange avec celui en 2ème position.</em></strong></td>
+<td align="center"><strong><em>On prend le 3ème élément, on le compare avec les précédents jusqu'à trouver un élément plus petit que lui. On l'échange avec le dernier élément plus grand.</em></strong></td>
+</tr>
+<tr>
+<td align="center"><strong><em>On répète ces opérations, en réduisant de un en un la partie du tableau considérée, jusqu'à l'avant-dernier élément.</em></strong></td>
+<td align="center"><strong><em>On répète ces opérations en parcourant de un en un les éléments du tableau, jusqu'au dernier.</em></strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Quel est le type de complexité de ces deux algorithmes ?<br />
+<strong><em>Ces algorithmes ont une complexité quadratique (en <span class="arithmatex">\(n^2\)</span>).</em></strong></p>
+</li>
+<li>
+<p>La complexité du <strong>tri fusion</strong> est en <span class="arithmatex">\(nlog(n)\)</span>. Est-il donc judicieux de l'utiliser à la place d'un tri par sélection ou par insertion ? <br />
+<strong><em>Il est pertinent d'utiliser le tri fusion, car sa complexité est meilleure : la courbe la représentant se trouve en-dessous de la courbe de la fonction quadratique, pour une valeur de n donnée.</em></strong>
+<img alt="" src="../img/compl_nlogn.png" /></p>
+</li>
+</ul>
+<p><br><br></p>
+<hr />
+<h2 id="tp-le-tri-fusion">TP : Le tri fusion</h2>
+<h3 id="a-application">A. Application</h3>
+<p>Appliquer l'algorithme du tri fusion sur l'exemple ci-contre, en complétant le schéma avec les divisions et recombinaisons successives.</p>
+<p>Dans le cas d'un tableau ayant un nombre impair d'éléments, on peut considérer que le tableau le plus petit va se retrouver à gauche, le plus grand à droite.</p>
+<p><img alt="" src="../img/tri_fusion_exemple.png" /></p>
+<h3 id="b-implementation">B. Implémentation</h3>
+<p>L'implémentation du tri fusion se fait classiquement avec deux fonctions :<br />
+- une <strong>fonction principale</strong> qui <strong>divise</strong> le tableau passé en paramètre par deux,<br />
+- une <strong>fonction</strong> qui fait la <strong>fusion</strong> entre deux tableaux triés.</p>
+<h4 id="b1-la-fusion">B.1. La fusion</h4>
+<p>Elle peut être écrite de manière <em>récursive</em> ou bien <em>itérative</em>. Tester les deux versions sur les listes <code>[1,4,7,9]</code> et <code>[-2,0,3,8]</code>.</p>
+<p><strong><em>Version itérative :</em></strong><br />
+Compléter le code suivant :</p>
+<pre><code class="language-python">def fusion_it(T1, T2):
+    taille_1 = len(T1)
+    taille_2 = len(T2)
+    T_trie = []
+    i1 = 0
+    i2 = 0
+    while (i1 &lt; taille_1) and (...):
+        if T1[i1] &lt; T2[i2]:
+            T_trie.append(...[i1])
+            i1 = ...
+        else:
+            T_trie.append(T2[...])
+            i2 = ...
+    while i1 &lt; taille_1:
+        T_trie.append(...)
+        i1 = ...
+    while i2 &lt; taille_2:
+        T_trie.append(...)
+        ...
+    return T_trie
+</code></pre>
+<p><strong><em>Version récursive :</em></strong><br />
+On donne le squelette de la fonction, à compléter :</p>
+<pre><code class="language-python">def fusion_rec(T1,T2):
+    if ............  # premier cas de base, pour une valeur triviale de T1
+        return T2
+    elif ...........  # deuxième cas de base, pour une valeur triviale de T2
+        return T1
+    elif T1[0] &lt; T2[0]:
+        return [.....] + fusion(........, .........)    # on place le bon élément en premier
+    else:
+        return [.....] + fusion(........, .........)
+</code></pre>
+<h4 id="b2-le-tri-complet">B.2. Le tri complet</h4>
+<p>La fonction permettant de trier complètement le tableau divise d'abord en deux le tableau initial, avant de fusionner les résultats des tris sur la première, et la deuxième partie du tableau.</p>
+<p>Compléter le code suivant :</p>
+<pre><code class="language-python">def tri_fusion(tab):
+
+    if ....................     # cas de base
+        return tab
+    else:
+        # on coupe le tableau en deux sous-tableaux
+        t1 = [tab[i] for i in range(.......)]
+        t2 = [tab[i] for i in range(.......)]
+
+    return fusion(tri_fusion(.....), tri_fusion(.....))
+</code></pre>
+<p>Pour prendre les deux moitiés du tableau, on aurait pu faire du <em>slicing</em>. Cette méthode a aussi des désavantages, il est utile de connaître plusieurs méthodes pour sélectionner une partie d'un tableau.</p>
+<p><br><br></p>
+<hr />
+<h2 id="tp-la-recherche-dichotomique">TP : La recherche dichotomique</h2>
+<p>La recherche dichotomique d'un élément <code>e</code> dans un tableau trié consiste :<br />
+1. A comparer <code>e</code> avec celui au milieu du tableau :<br />
+    - si <code>e</code> est plus grand, on continue la recherche dans la partie droite du tableau.<br />
+    - sinon, on continue la recherche dans la partie gauche du tableau.<br />
+2. On recommence en comparant <code>e</code> avec le milieu de la partie du tableau considérée, et ainsi de suite.<br />
+3. L'algorithme termine lorsque <code>e</code> est trouvé, ou bien si l'on arrive sur le tableau vide.</p>
+<ol>
+<li>
+<p>Appliquer l'algorithme pour rechercher <code>10</code> dans <code>[1,6,10,15,17,20]</code>. Rechercher <code>5</code> dans ce même tableau.</p>
+</li>
+<li>
+<p>Compléter la version récursive suivante :</p>
+</li>
+</ol>
+<pre><code class="language-python">def recherche_dichotomique_rec(t, elt, inf, sup):
+    &quot;&quot;&quot;Version récursive de la recherche dichotomique d'un élément dans un tableau trié'
+
+    Entrées :
+        t : liste Python (tableau) d'entiers ou de flottants triée
+        elt : entier ou flottant recherché
+        inf, sup : entiers correspondant respectivement à l'indice inférieur et supérieur de la partie de t considérée
+
+    Sortie :
+        entier, valant -1 si l'élement n'est pas trouvé, l'indice de l'élément trouvé dans le tableau sinon
+    &quot;&quot;&quot;
+
+    mil = (sup+inf)//2
+    if sup&lt;inf:
+        return ...
+    elif ...
+        return mil
+    elif elt &gt; t[mil]:
+        return recherche_dichotomique_rec(t, elt, ..., ...)
+    else:
+        return recherche_dichotomique_rec(t, elt, ..., ...)
+</code></pre>
+<ol>
+<li>Écrire une fonction <code>recherche</code> itérative qui prend en paramètres un tableau <code>tab</code> de nombres entiers triés par ordre croissant et un nombre entier <code>n</code>, et qui effectue une recherche dichotomique du nombre entier <code>n</code> dans le tableau non vide <code>tab</code>. Cette fonction doit renvoyer un indice correspondant au nombre cherché s’il est dans le tableau, -1 sinon. </li>
+</ol>
+<blockquote>
+<p><strong>N.B. :</strong> <em>Cette version, du programme de 1ère, utilise une boucle </em><strong>while</strong><em> à la place de l'appel récursif de la version précédente.</em></p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

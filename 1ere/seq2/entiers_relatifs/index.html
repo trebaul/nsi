@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://example.com/1ere/seq2/entiers_relatifs/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>II. Les entiers relatifs - Sciences informatiques</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../../extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq1/logique/" class="dropdown-item">I. Logique</a>
+</li>
+            
+<li>
+    <a href="../../seq1/archi/" class="dropdown-item">II. Architecture</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">II. Les entiers relatifs</a>
+</li>
+            
+<li>
+    <a href="../flottants/" class="dropdown-item">III. Les flottants</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq2/piles/" class="dropdown-item">I. Les piles</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq2/r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq2/diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq1/archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">4. Structurer les données</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../tle/seq4/listes/" class="dropdown-item">I. Les listes</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/files/" class="dropdown-item">II. Les files</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/dico/" class="dropdown-item">III. Les dictionnaires</a>
+</li>
+            
+<li>
+    <a href="../../../tle/seq4/synthese/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
+</li>
+                                    
+<li>
+    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../ressources/" class="nav-link">Ressources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../entiers_positifs/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../flottants/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sequence-2" class="nav-link">Séquence 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ii-les-entiers-relatifs" class="nav-link">II. Les entiers relatifs</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#td" class="nav-link">TD</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="sequence-2"><strong>Séquence 2</strong></h1>
+<h1 id="ii-les-entiers-relatifs">II. Les entiers relatifs</h1>
+<hr />
+<h2 id="td">TD</h2>
+<h3 id="a-une-premiere-approche">A. Une première approche...</h3>
+<p>Pour représenter des entiers relatifs en machine, on peut tout d'abord penser qu'un bit peut être réservé au signe : par exemple le premier bit d'un entier codé sur 4 bits sera à 1 si c'est un entier négatif, à 0 si c'est un entier positif.</p>
+<p><span class="arithmatex">\(0010_2\)</span> représenterait alors <span class="arithmatex">\(2_{10}\)</span>, et <span class="arithmatex">\(1010_2\)</span> représenterait <span class="arithmatex">\(-2_{10}\)</span>.</p>
+<ol>
+<li>
+<p>Quels seraient les nombres minimal et maximal qui pourraient être représentés ?<br />
+<br></p>
+</li>
+<li>
+<p>Quel nombre aurait 2 représentations ?<br />
+<br></p>
+</li>
+<li>
+<p>Que ferait l'addition de <span class="arithmatex">\(0101_2\)</span> (<span class="arithmatex">\(5_{10}\)</span>) et <span class="arithmatex">\(1011_2\)</span> (<span class="arithmatex">\(-3_{10}\)</span>) ?
+<br><br><br></p>
+</li>
+</ol>
+<h3 id="b-le-complement-a-2-puissance-n">B. Le complément à 2 puissance n</h3>
+<p><img alt="" src="../img/compl2.jpg" /></p>
+<p>On propose de coder les entiers sur 4 bits avec la méthode décrite sur le schéma ci-contre.</p>
+<ol>
+<li>Les calculs suivants sont-ils corrects ? Compléter le calcul avec les résultats et les conversions <em>(ne pas compter l'overflow pour l'addition binaire !)</em>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="right">Binaire</th>
+<th align="right">Décimal</th>
+<th align="right">Binaire</th>
+<th align="right">Décimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><span class="arithmatex">\(0101_2\)</span></td>
+<td align="right"><span class="arithmatex">\(5_{10}\)</span></td>
+<td align="right"><span class="arithmatex">\(0011_2\)</span></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right"><span class="arithmatex">\(+1101_2\)</span></td>
+<td align="right"><span class="arithmatex">\(-3_{10}\)</span></td>
+<td align="right"><span class="arithmatex">\(+1001_2\)</span></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="right"><br></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Ce codage ne sort pas de nulle part : il s'agit de ce que l'on appelle de la méthode du <strong>complément à <span class="arithmatex">\(2^n\)</span></strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Méthode du complément à <span class="arithmatex">\(2^n\)</span> (complément à 2)</strong>
+- Pour représenter un entier positif sur <span class="arithmatex">\(n\)</span> bits, on prend sa représentation binaire en ajoutant autant de 0 que nécessaire devant pour avoir au total <span class="arithmatex">\(n\)</span> bits.
+- Pour représenter un entier négatif <span class="arithmatex">\(-m\)</span> sur <span class="arithmatex">\(n\)</span> bits :</p>
+<blockquote>
+<ol>
+<li>On code en binaire l'entier positif <span class="arithmatex">\(m\)</span>,</li>
+<li>On inverse tous les bits (on prend le <strong>complément à 1</strong>),</li>
+<li>On additionne l'entier 1 au nombre obtenu. Si l'addition dépasse <span class="arithmatex">\(n\)</span> bits, on ne conserve pas le bit supplémentaire (<em>"overflow"</em>).</li>
+</ol>
+</blockquote>
+</blockquote>
+<p><strong><em>Exemple :</em></strong> Représenter -6 sur 4 bits.</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Entier 6 en binaire</td>
+<td align="left">0110</td>
+</tr>
+<tr>
+<td align="left">Complément à 1</td>
+<td align="left">1001</td>
+</tr>
+<tr>
+<td align="left">Addition de 1</td>
+<td align="left">+ 0001</td>
+</tr>
+<tr>
+<td align="left">Complément à <span class="arithmatex">\(2^4\)</span></td>
+<td align="left">1010</td>
+</tr>
+</tbody>
+</table>
+<p>Vérifier avec le schéma à quoi correspond la solution trouvée.</p>
+<ol>
+<li>Utiliser la méthode du complément à 2 pour représenter :<ul>
+<li><span class="arithmatex">\(-6_{10}\)</span> sur 8 bits,</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Entier 6 en binaire</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Complément à 1</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Addition de 1</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Complément à <span class="arithmatex">\(2^8\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="arithmatex">\(-68_{10}\)</span> sur 8 bits.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Entier 68 en binaire</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Complément à 1</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Addition de 1</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Complément à <span class="arithmatex">\(2^8\)</span></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Faire l'addition de <span class="arithmatex">\(-5_{10}\)</span> et <span class="arithmatex">\(5_{10}\)</span> en binaire sur 4 bits <em>(ne pas oublier de ne pas conserver l'"overflow")</em>.</li>
+</ol>
+<p><br> <br> <br> <br></p>
+<ol>
+<li>Calculer le complément à <span class="arithmatex">\(2^4\)</span> de <span class="arithmatex">\(-5_{10}\)</span>. En déduire comment obtenir la valeur décimale d'un entier négatif codé avec le complément à 2.</li>
+</ol>
+<p><br> <br> <br> </p>
+<ol>
+<li>En déduire la valeur décimale de l'entier représenté sur 4 bits par <span class="arithmatex">\(1110_2\)</span>.</li>
+</ol>
+<p><br><br></p>
+<hr />
+<h2 id="cours">Cours</h2>
+<p>Plusieurs méthodes existent pour représenter les <strong>entiers relatifs</strong>, dit aussi <strong>signés</strong> (<strong>non-signés</strong> pour les entiers positifs). La méthode du <strong>complément à <span class="arithmatex">\(2^n\)</span></strong> permet de faire des opérations directement.</p>
+<h3 id="a-la-methode">A. La méthode</h3>
+<p><strong><em>La méthode du complément à <span class="arithmatex">\(2^n\)</span> du TD est à connaître.</em></strong></p>
+<ul>
+<li>
+<p>Le <strong>nombre de bits</strong> utilisés pour cette représentation doit toujours être précisé : 8, 16, 32, 64 bits sont des tailles couramment utilisées.</p>
+</li>
+<li>
+<p>Le bit le plus à gauche représente le signe : il vaut <strong>1 si l'entier est négatif, 0 s'il est positif</strong>. Par rapport aux entiers non-signés, il faut donc compter un bit supplémentaire pour le signe lorsque l'on évalue le nombre de bits nécessaire à la représentation du nombre.</p>
+</li>
+</ul>
+<h3 id="b-les-entiers-representables">B. Les entiers représentables</h3>
+<ul>
+<li>
+<p>Le nombre maximal représentable sur 4 bits avec cette méthode est <span class="arithmatex">\(0111\)</span>. Quelle est sa valeur en décimal ? L'exprimer en fonction du nombre de bits utilisé <span class="arithmatex">\(n\)</span>.<br />
+<strong><em>Sa valeur est de 7, soit <span class="arithmatex">\(2^{n-1}-1\)</span>.</em></strong></p>
+</li>
+<li>
+<p>De la même manière, donner le nombre maximal représentable sur 8 bits, en écriture binaire et décimale. <br />
+<strong><em>Ce nombre est 01111111, soit 127.</em></strong></p>
+</li>
+<li>
+<p>Le nombre minimal représentable sur 4 bits est <span class="arithmatex">\(1000\)</span>. Quelle est sa valeur en décimal ? L'exprimer en fonction de <span class="arithmatex">\(n\)</span>.<br />
+<strong><em>Ce nombre est -8, soit <span class="arithmatex">\(2^{n-1}\)</span>.</em></strong></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Conclusion :</strong> Les valeurs pouvant être représentées avec cette méthode vont donc de <span class="arithmatex">\(-2^{n-1}\)</span> à <span class="arithmatex">\(2^{n-1}-1\)</span>.</p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

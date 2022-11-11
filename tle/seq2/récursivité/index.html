@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://example.com/tle/seq2/r%C3%A9cursivit%C3%A9/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>II. La récursivité - Sciences informatiques</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../../extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/logique/" class="dropdown-item">I. Logique</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">II. Architecture</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
+</li>
+            
+<li>
+    <a href="../../../1ere/seq2/flottants/" class="dropdown-item">III. Les flottants</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
+</li>
+            
+<li>
+    <a href="../../seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
+</li>
+            
+<li>
+    <a href="../../seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../piles/" class="dropdown-item">I. Les piles</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">II. La récursivité</a>
+</li>
+            
+<li>
+    <a href="../diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../1ere/seq1/archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
+</li>
+            
+<li>
+    <a href="../../seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">4. Structurer les données</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../seq4/listes/" class="dropdown-item">I. Les listes</a>
+</li>
+            
+<li>
+    <a href="../../seq4/files/" class="dropdown-item">II. Les files</a>
+</li>
+            
+<li>
+    <a href="../../seq4/dico/" class="dropdown-item">III. Les dictionnaires</a>
+</li>
+            
+<li>
+    <a href="../../seq4/synthese/" class="dropdown-item">Synthèse</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
+</li>
+                                    
+<li>
+    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../ressources/" class="nav-link">Ressources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../piles/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../diviser_regner/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sequence-2" class="nav-link">Séquence 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ii-la-recursivite" class="nav-link">II. La récursivité</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#exercices" class="nav-link">Exercices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#td-les-tours-de-hanoi" class="nav-link">TD : Les tours de Hanoï</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tp-dessiner-des-fractales" class="nav-link">TP : Dessiner des fractales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="sequence-2"><strong>Séquence 2</strong></h1>
+<h1 id="ii-la-recursivite">II. La récursivité</h1>
+<hr />
+<h2 id="cours">Cours</h2>
+<h3 id="introduction">Introduction</h3>
+<p><img alt="" src="../img/poupees_russes.jpg" /></p>
+<p>Les <em>poupées russes</em> ou <em>matriochkas</em> sont des séries de poupées de tailles décroissantes placées les unes à l'intérieur des autres. Elles sont toutes identiques, ne différant que par leur taille. La dernière est différente, dans le sens où elle ne contient pas d'autre poupée à l'intérieur.  </p>
+<p>Une matriochka est une <strong>structure récursive</strong> : c'est une matriochka pleine, OU bien une matriochka contenant une autre matriochka plus petite.</p>
+<h3 id="a-definition">A. Définition</h3>
+<p>Une <strong>fonction récursive</strong> est une fonction qui s’appelle elle-même.</p>
+<p>Pour éviter que cette fonction s’appelle à l’infini, il faut :<br />
+- <strong><em>qu’elle ait un cas de base (c'est le cas le plus simple à résoudre), aussi appelé condition d'arrêt (dans laquelle il n'y a plus d'appel récursif donc la fonction s'arrête),</em></strong><br />
+- <strong><em>qu’elle se ramène vers ce cas de base, donc qu'il y ait un appel à elle-même sur un plus petit problème que le problème initial (un entier plus petit, une chaîne de caractère plus courte, etc).</em></strong>  </p>
+<h3 id="b-fonctionnement-dune-pile-dexecution">B. Fonctionnement d'une pile d'exécution</h3>
+<h4 id="b1-cas-general">B.1. Cas général</h4>
+<p>Lors de l’appel d’une fonction, le système sauvegarde différents paramètres comme ses arguments et les variables utilisées à l’intérieur de celle-ci. C’est son <strong>contexte d’exécution</strong>. Cela permet d’interrompre l’exécution d’une fonction lorsque celle-ci en appelle d’autre, et de reprendre son exécution ensuite.</p>
+<p><strong>Exemple :</strong></p>
+<p><img alt="" src="../img/pile_execution.png" /></p>
+<pre><code class="language-python">def h(x):
+    return x + 1
+
+def g(x):
+    return h(x) * 2
+
+def f(x):
+    return g(x) + 1
+</code></pre>
+<h4 id="b2-cas-recursif">B.2. Cas récursif</h4>
+<p>Une fonction récursive est une fonction dans laquelle il y a des appels de fonctions, avec la particularité qu'il s'agit de la même fonction. La même chose se produit donc : une <strong>pile d’exécution</strong> est utilisée pour stocker le contexte d’exécution de ses différents appels.</p>
+<p>Prenons l'exemple classique du calcul de <span class="arithmatex">\(2^n\)</span> :</p>
+<pre><code class="language-python">def puissance(n) :
+    if n == 0 :
+        return 1
+    else :
+        return 2*puissance(n-1)
+</code></pre>
+<p>Ecrire le calcul de <code>puissance(3)</code> :<br />
+<strong><em>puissance(3) = 2 * puissance(2)<br />
+        puissance(2) = 2 * puissance(1)<br />
+                puissance(1) = 2 * puissance(0)<br />
+                        puissance(0) = 1<br />
+puissance(3) = 2 * 2 * 2 * 1 = 8</em></strong></p>
+<p>Le schéma suivant explique le processus en terme de pile d’exécution :
+<img alt="" src="../img/pile_puissance.png" /></p>
+<h4 id="b3-cas-limite">B.3. Cas limite</h4>
+<p>La pile d’exécution a une taille maximale. Lorsque la pile déborde - "stack overflow" - (par défaut au bout de 1000 appels), Python renvoie le message suivant :</p>
+<pre><code class="language-python">RecursionError: maximum recursion depth exceeded while calling a Python object
+</code></pre>
+<h3 id="c-recursivite-et-paradigmes">C. Récursivité et paradigmes</h3>
+<p>Le paradigme <strong>récursif</strong> s’oppose généralement au paradigme <strong>itératif</strong>. Ce dernier est une sous-catégorie du <strong>paradigme impératif</strong> et fait référence à l’utilisation de boucles.</p>
+<p>Avec la récursivité, on peut se passer de boucles. C’est cette méthode de programmation qui les remplace lorsque l’on programme en utilisant le <strong>paradigme fonctionnel</strong>.</p>
+<p><br></p>
+<hr />
+<h2 id="exercices">Exercices</h2>
+<p>Les exercices traitent d'abord d'algorithmes qui manipulent des <em>entiers</em>, puis des <em>chaînes de caractères</em> (et des <em>listes</em> en bonus).</p>
+<h3 id="exercice-1-factorielle">Exercice 1 : factorielle</h3>
+<p>La fonction factorielle, appliquée à un entier <span class="arithmatex">\(n\)</span> est notée <span class="arithmatex">\(!n\)</span> et est définie de la manière suivante :<br />
+- <span class="arithmatex">\(!0 = 1\)</span><br />
+- <span class="arithmatex">\(!n = 1*2*...*(n-1)*n\)</span>  </p>
+<ol>
+<li>Exprimer <span class="arithmatex">\(!n\)</span> en fonction de <span class="arithmatex">\(!(n-1)\)</span>.</li>
+<li>En déduire une fonction <code>factorielle(n)</code> calculant la valeur de <code>!n</code> pour tout entier <code>n</code>.</li>
+<li>Vérifier que <code>factorielle(5)</code> renvoie bien la valeur <code>120</code> et <code>factorielle(7)</code> la valeur <code>5040</code>.</li>
+<li>Dessiner la pile d'exécution pour l'appel de <code>factorielle(4)</code>.</li>
+<li>Vérifier votre travail en visualisant l'exécution de votre code avec https://pythontutor.com/visualize.html</li>
+</ol>
+<h3 id="exercice-2-la-suite-de-fibonacci">Exercice 2 : la suite de Fibonacci</h3>
+<p>La suite de Fibonacci est définie comme suit :<br />
+- <span class="arithmatex">\(u_0 = 0\)</span> et <span class="arithmatex">\(u_1 = 1\)</span><br />
+- <span class="arithmatex">\(u_n=u_{n-1}+u_{n-2}\)</span><br />
+1. Écrire une fonction récursive <code>fib_rec(n)</code> qui donne le <code>n</code>ième terme de la suite de Fibonacci.
+2. Représenter les appels récursifs de <code>fib_rec(5)</code> sous la forme d’une structure hiérarchique, puis sous la forme d’une pile.</p>
+<h3 id="exercice-3-palindromes">Exercice 3 : palindromes</h3>
+<p>Un palindrome est un mot pouvant se lire à l'endroit comme à l'envers, comme "été" ou "radar".</p>
+<p>On veut écrire une fonction <code>palindrome</code> prenant en entrée une chaîne de caractère <code>mot</code> et renvoyant un booléen indiquant si ce mot est un palindrome ou non.</p>
+<ol>
+<li>Les cas de base sont les cas où <code>mot</code> est de longueur 0 ou 1. Que doit renvoyer la fonction dans ces cas ?</li>
+<li>Dans tous les autres cas, <code>mot</code> est un palindrome si :<ul>
+<li>la première et la dernière lettre du mot sont identiques,</li>
+<li>le reste du mot (sans la première et la dernière lettre) est un palindrome.
+Sur quelle valeur l'appel récursif se fait-il ?</li>
+</ul>
+</li>
+<li>Ecrire la fonction <code>palindrome</code> incluant ces différents cas.
+<br><br></li>
+</ol>
+<p><img alt="" src="../img/meme.bmp" /></p>
+<hr />
+<h3 id="pour-aller-plus-loin">Pour aller plus loin...</h3>
+<h3 id="exercice-4-somme-dune-liste">Exercice 4 : somme d'une liste</h3>
+<p>Une fonction récursive appliquant un traitement sur une liste fonctionne de la même manière qu'avec un entier : il faut, à chaque nouvel appel, réduire le problème. C'est-à-dire ici, réduire la liste initiale (par exemple considérer la même liste à laquelle on a enlevé le premier élément).</p>
+<ol>
+<li>Ecrire une fonction itérative (utilisant une boucle) permettant de calculer la somme des éléments d'une liste de nombres <code>somme_it(liste)</code>.</li>
+<li>Pour quelle valeur de la liste est-il le plus facile de faire ce calcul, et que vaut-il dans ce cas ? <em>(état trivial)</em></li>
+<li>Pour prendre une partie d'une liste Python, on peut faire ce qu'on appelle du <em>slicing</em>, c'est-à-dire un découpage de la liste entre deux indices : pour une liste <code>l</code>, on peut choisir de considérer <code>l[i:j]</code> qui prendra les éléments de <code>i</code> à <code>j-1</code> de <code>l</code>.<ul>
+<li>En déduire comment prendre tous les éléments d'une liste sauf le premier.</li>
+<li>En déduire l'appel récursif de la fonction <code>somme_rec</code> qui sera fait pour faire le calcul de la somme d'une liste de manière récursive.</li>
+</ul>
+</li>
+<li>Ecrire la fonction récursive <code>somme_rec(liste)</code>.</li>
+</ol>
+<p><br></p>
+<hr />
+<h2 id="td-les-tours-de-hanoi">TD : Les tours de Hanoï</h2>
+<h3 id="introduction_1">Introduction</h3>
+<p>Le jeu des tours de Hanoï consiste à déplacer une pile de disques, de taille différente, d'une tige de départ <em>(à gauche)</em> à une tige d'arrivée <em>(tout à droite)</em> en respectant la règle suivante : un disque ne peut être placé sur un autre disque <em>de plus petite taille</em>.</p>
+<p><img alt="" src="../img/tours_hanoi_depart.png" /></p>
+<h3 id="a-du-cas-particulier-au-cas-general">A. Du cas particulier au cas général</h3>
+<ul>
+<li>
+<p>Comment résoudre le problème pour 2 disques ? <em>(le représenter sur le schéma ci-dessous)</em>
+<img alt="" src="../img/tours_hanoi_2disques.png" /> <img alt="" src="../img/tours_hanoi_vide.png" />  <img alt="" src="../img/tours_hanoi_vide.png" />
+<img alt="" src="../img/tours_hanoi_vide.png" /></p>
+</li>
+<li>
+<p>Résoudre le problème pour 3, 4 et 5 disques grâce à cette simulation : http://championmath.free.fr/tourhanoi.htm</p>
+</li>
+<li>
+<p>On considère une pile de <code>n</code> disques, et <strong><em>on suppose que l'on sait résoudre le problème pour <code>n-1</code> diques</em></strong>. Représenter les étapes permettant de déplacer le <code>n</code>ème disque et la pile de <code>n-1</code> disques <em>(qui se déplace en entier, on suppose qu'on sait le faire)</em>, de manière à résoudre le problème :
+<img alt="" src="../img/tours_hanoi_general.png" /> <img alt="" src="../img/tours_hanoi_vide.png" /> <img alt="" src="../img/tours_hanoi_vide.png" /> <img alt="" src="../img/tours_hanoi_vide.png" /></p>
+</li>
+<li>
+<p>Récapituler les trois étapes de résolution du problème :</p>
+<ul>
+<li><strong>Etape 1 :</strong> </li>
+<li><strong>Etape 2 :</strong></li>
+<li><strong>Etape 3 :</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="b-algorithme">B. Algorithme</h3>
+<p>Pour résoudre le problème pour <code>n</code> disques, on fait appel, 2 fois, à la résolution du problème pour <code>n-1</code> disques. Nous allons donc utiliser un algorithme récursif.</p>
+<p>On propose le <em>pseudo-code</em> suivant :</p>
+<pre><code class="language-python">fonction Hanoi(n, dep, inter, arr)
+    ''' Affiche les déplacements pour résoudre le problème de Hanoï pour n disques
+
+    Entrées : 
+        n : entier représentant le nombre de disques à déplacer
+        dep, inter, arr : caractères indiquant les sommets de départ, 
+        intermédiaire et d'arrivée
+    ''' 
+    Si n est égal à 0
+        retourner Rien
+    Sinon
+        Hanoi(.........................)
+        afficher le déplacement depuis dep jusqu’à arr
+        Hanoi(.........................)
+</code></pre>
+<p>Compléter le pseudo-code avec les bons paramètres pour les appels récursifs à la fonction <code>Hanoi</code>.</p>
+<h3 id="c-implementation">C. Implémentation</h3>
+<ul>
+<li>Ecrire l'implémentation en Python de cet algorithme ci-dessous :</li>
+</ul>
+<pre><code class="language-python">
+
+
+
+
+</code></pre>
+<p><strong>N.B.:</strong> Pour l'affichage, on peut utiliser une instruction du type :</p>
+<pre><code class="language-python">print(&quot;Déplacer le disque &quot;, str(n), &quot;de la tige &quot;, dep, &quot; vers la tige &quot;, arr)
+</code></pre>
+<ul>
+<li>Pour visualiser ce qu'il se passe, compléter le fichier Python fourni <em>(sur l'ENT)</em>.</li>
+</ul>
+<h2 id="_1"><br><br></h2>
+<h2 id="tp-dessiner-des-fractales">TP : Dessiner des fractales</h2>
+<p>Une <strong>fractale</strong> est un objet qui apparaît identique à différentes échelles : en "zoomant" sur une partie de la figure, on retrouve la figure initiale. On peut représenter une version approchée des fractales avec des programmes récursifs, dont on défini le niveau de récursion (donc le niveau de détails de la figure).</p>
+<h3 id="1-des-bulles">1. Des bulles</h3>
+<p>Le code suivant <em>(accessible sur l'ENT)</em> permet de dessiner une figure avec des bulles. Il utilise la bibliothèque <code>turtle</code> dont des éléments de documentation sont donnés dans le fichier.</p>
+<p><img alt="" src="../img/bulles.png" /></p>
+<pre><code class="language-python">from turtle import *
+
+def dessine_cercle(x, y, r):
+    up()
+    goto(x,y-r)
+    down()
+    circle(r)
+    return None
+
+def bubble(n, x, y, r):
+    if n == 0:
+        return None
+    else:
+        dessine_cercle(x,y,r)
+        bubble(n-1, x+3/2*r, y, r/2)
+        bubble(n-1, x, y-3/2*r, r/2)
+    return None
+
+bubble(4,-100,100,50)
+done()
+</code></pre>
+<ol>
+<li>
+<p>Exécuter le code. Faire varier la valeur de <code>n</code> pour augmenter le niveau de détails de la figure.</p>
+</li>
+<li>
+<p>Identifier les appels récursifs de la fonction <code>bubble</code>. </p>
+<ul>
+<li>Quel paramètre permet de réduire la taille des bulles au fur et à mesure ?</li>
+<li>Quels paramètres changent la position de la tortue ?</li>
+<li>La variation de quel paramètre nous assure que l'algorithme va se terminer ?</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-le-flocon-de-von-koch">2. Le flocon de von Koch</h3>
+<p>Le <strong>flocon de Von Koch</strong> est une des premières courbes fractales à avoir été décrite. Elle a été inventée en 1904 par le mathématicien suédois Helge von Koch. Voici une partie de ce flocon :
+<img alt="" src="../img/fragment_flocon.png" /></p>
+<h4 id="2a-principe">2.A. Principe</h4>
+<ul>
+<li>On commence par un segment de longueur <code>a</code>.  </li>
+<li>On coupe ce segment en 3 parties égales.  </li>
+<li>On remplace le segment central par un triangle équilatéral de côté <code>a/3</code>.</li>
+<li>Chaque segment de longueur <code>a/3</code> est lui-même découpé en 3 parties égales (chacune de longueur <code>a/9</code>).</li>
+<li>On remplace chaque partie centrale par un triangle équilatéral de côté <code>a/9</code>.</li>
+<li>etc.</li>
+</ul>
+<p><img alt="" src="../img/base_flocon.png" /></p>
+<h4 id="2b-algorithme">2.B. Algorithme</h4>
+<p>Nous allons utiliser un algorithme similaire à celui qui permet de tracer le motif avec les bulles pour dessiner ce flocon. Compléter l'algorithme proposé :</p>
+<pre><code class="language-python">fonction fragment_flocon(n, cote): 
+
+    ENTREES : 
+    n : entier indiquant le nombre d’itération à faire 
+    cote : la longueur du segment initial 
+
+    Si n est égal à 0 alors 
+        On trace le segment de longueur cote 
+    Sinon 
+        On appelle la fonction fragment_flocon avec les paramètres __________
+        On tourne de _____ degrés sur la _______________
+        ___________________________________________________
+        __________________________________________
+        ___________________________________________________
+        __________________________________________
+        ___________________________________________________
+</code></pre>
+<h4 id="2c-implementation">2.C. Implémentation</h4>
+<ol>
+<li>
+<p>Implémenter l'algorithme en Python permettant de dessiner une partie du flocon.</p>
+</li>
+<li>
+<p>Ecrire la fonction <code>flocon</code> dessinant le flocon en entier.
+<img alt="" src="../img/flocon.png" /></p>
+</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
