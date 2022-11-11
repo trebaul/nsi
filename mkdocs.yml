@@ -1,0 +1,50 @@
+site_name: Sciences informatiques
+site_url: https://example.com/
+
+nav:
+    - Première:
+      - 1. De la logique à la machine: 
+        - I. Logique: ./1ere/seq1/logique.md
+        - II. Architecture: ./1ere/seq1/archi.md
+      - 2. Représenter les nombres en machine:
+        - I. Les entiers positifs: ./1ere/seq2/entiers_positifs.md
+        - II. Les entiers relatifs: ./1ere/seq2/entiers_relatifs.md
+        - III. Les flottants: ./1ere/seq2/flottants.md
+    - Terminale:
+      - 1. Différentes manières de programmer:
+        - I. Paradigme impératif et fonctionnel: ./tle/seq1/Impératif_Fonctionnel.md
+        - II. Paradigme objet: ./tle/seq1/POO.md
+        - Synthèse: ./tle/seq1/Synthèse_Elève.md
+      - 2. Autour de la récursivité: 
+        - I. Les piles: ./tle/seq2/piles.md
+        - II. La récursivité: ./tle/seq2/récursivité.md
+        - III. Diviser pour régner: ./tle/seq2/diviser_regner.md
+      - 3. Architecture matérielle:
+        - I. Architecture des ordinateurs: ./1ere/seq1/archi.md
+        - II. Les systèmes sur puce: ./tle/seq3/Cours_SoC.md
+      - 4. Structurer les données:
+        - I. Les listes: ./tle/seq4/listes.md
+        - II. Les files: ./tle/seq4/files.md
+        - III. Les dictionnaires: ./tle/seq4/dico.md
+        - Synthèse: ./tle/seq4/synthese.md
+    - Projets:
+      - Tle - POO & Récursivité: ./projets/tle_poo_rec/presentation.md
+      - 1ère - Cybersécurité: ./projets/1ere_cyber/presentation.md
+    - Ressources: ressources.md
+extra_css: [extra.css]
+
+theme: 
+  name: flatly
+  nav_style: dark
+  features:
+    - navigation.tabs
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
