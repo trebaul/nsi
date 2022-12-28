@@ -1,240 +1,1608 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
         <link rel="canonical" href="https://example.com/1ere/seq1/logique/">
-        <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>I. Logique - Sciences informatiques</title>
-        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
-        <link href="../../../extra.css" rel="stylesheet">
-
-        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
-
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="./" class="dropdown-item active">I. Logique</a>
-</li>
-            
-<li>
-    <a href="../archi/" class="dropdown-item">II. Architecture</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
-</li>
-            
-<li>
-    <a href="../../seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
-</li>
-            
-<li>
-    <a href="../../seq2/flottants/" class="dropdown-item">III. Les flottants</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../../tle/seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
-</li>
-            
-<li>
-    <a href="../../../tle/seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
-</li>
-            
-<li>
-    <a href="../../../tle/seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../../tle/seq2/piles/" class="dropdown-item">I. Les piles</a>
-</li>
-            
-<li>
-    <a href="../../../tle/seq2/r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
-</li>
-            
-<li>
-    <a href="../../../tle/seq2/diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
-</li>
-            
-<li>
-    <a href="../../../tle/seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">4. Structurer les données</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../../tle/seq4/listes/" class="dropdown-item">I. Les listes</a>
-</li>
-            
-<li>
-    <a href="../../../tle/seq4/files/" class="dropdown-item">II. Les files</a>
-</li>
-            
-<li>
-    <a href="../../../tle/seq4/dico/" class="dropdown-item">III. Les dictionnaires</a>
-</li>
-            
-<li>
-    <a href="../../../tle/seq4/synthese/" class="dropdown-item">Synthèse</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
-</li>
-                                    
-<li>
-    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="navitem">
-                                <a href="../../../ressources/" class="nav-link">Ressources</a>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../archi/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>I. Logique - Trebaul NSI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+      
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#sequence-1" class="nav-link">Séquence 1</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="1"><a href="#i-la-logique-booleenne" class="nav-link">I. La logique booléenne</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#exercices-les-expressions-booleennes" class="nav-link">Exercices : les expressions booléennes</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#td-qui-faut-il-croire" class="nav-link">TD : Qui faut-il croire ?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../pyodide-mkdocs/interpreter.js"></script> 
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans+serif:300,300i,400,400i,700,700i%7CComputer+New:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"sans serif";--md-code-font:"Computer New"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+<link rel="stylesheet" href="../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../qcm/qcm.css">
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#i-la-logique-booleenne" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Trebaul NSI" class="md-header__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Trebaul NSI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              I. Logique
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../2nde/prog/fonctions/" class="md-tabs__link">
+        Seconde
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Première
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tle/" class="md-tabs__link">
+        Terminale
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../projets/pr%C3%A9s_projet/" class="md-tabs__link">
+        Projets
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../culture_g%C3%A9/" class="md-tabs__link">
+        Ressources
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Trebaul NSI" class="md-nav__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Trebaul NSI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1">
+          Bases de la programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases de la programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bases de la programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/prog/fonctions/" class="md-nav__link">
+        III. Les fonctions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          1. De la logique à la machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. De la logique à la machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          1. De la logique à la machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          I. Logique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        I. Logique
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices-les-expressions-booleennes" class="md-nav__link">
+    Exercices : les expressions booléennes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-qui-faut-il-croire" class="md-nav__link">
+    TD : Qui faut-il croire ?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/" class="md-nav__link">
+        II. Architecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          2. Représenter les nombres en machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Représenter les nombres en machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          2. Représenter les nombres en machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/entiers_positifs/" class="md-nav__link">
+        I. Les entiers positifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/entiers_relatifs/" class="md-nav__link">
+        II. Les entiers relatifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/flottants/" class="md-nav__link">
+        III. Les flottants
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          3. Les types construits
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Les types construits" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          3. Les types construits
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq3/tableaux/" class="md-nav__link">
+        I. Le type tableau
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq3/tableaux_algo/" class="md-nav__link">
+        II. Algorithmes sur les tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq3/puplet/" class="md-nav__link">
+        III. Le type p-uplet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq3/synthese/" class="md-nav__link">
+        IV. Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          4. Du texte à l'hypertexte
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Du texte à l'hypertexte" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          4. Du texte à l'hypertexte
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/texte_machine/" class="md-nav__link">
+        I. Représentation du texte en machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/bases_web/" class="md-nav__link">
+        II. L'hypertexte et les bases du web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/langages_web/" class="md-nav__link">
+        III. Les langages du Web HTML et CSS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          1. Différentes manières de programmer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Différentes manières de programmer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Différentes manières de programmer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq1/Imp%C3%A9ratif_Fonctionnel/" class="md-nav__link">
+        I. Paradigme impératif et fonctionnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq1/POO/" class="md-nav__link">
+        II. Paradigme objet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq1/Synth%C3%A8se_El%C3%A8ve/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          2. Autour de la récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Autour de la récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Autour de la récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq2/piles/" class="md-nav__link">
+        I. Les piles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq2/r%C3%A9cursivit%C3%A9/" class="md-nav__link">
+        II. La récursivité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq2/diviser_regner/" class="md-nav__link">
+        III. Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          3. Architecture matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Architecture matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          3. Architecture matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/" class="md-nav__link">
+        I. Architecture des ordinateurs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq3/Cours_SoC/" class="md-nav__link">
+        II. Les systèmes sur puce
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          4. Structurer les données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Structurer les données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          4. Structurer les données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/listes/" class="md-nav__link">
+        I. Les listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/files/" class="md-nav__link">
+        II. Les files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/dico/" class="md-nav__link">
+        III. Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/synthese/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          5. Les bases de données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Les bases de données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          5. Les bases de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq5/Mod%C3%A8le_Relationnel/" class="md-nav__link">
+        I. Le modèle relationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq5/BDD_Relationnelles/" class="md-nav__link">
+        II. Les bases de données relationnelles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq5/SQL/" class="md-nav__link">
+        III. Structured Query Language (SQL)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          6. Les structures hiérarchiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6. Les structures hiérarchiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          6. Les structures hiérarchiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq6/arbres/" class="md-nav__link">
+        I. La structure d'arbre
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq6/arbres_algo/" class="md-nav__link">
+        II. Les algorithmes sur les arbres
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/pr%C3%A9s_projet/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/BonnesPratiques_Structure/" class="md-nav__link">
+        Méthodologie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          1ère - Cybersécurité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1ère - Cybersécurité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          1ère - Cybersécurité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/Pr%C3%A9sentation_Sujets/" class="md-nav__link">
+        Sujets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/TP_Pr%C3%A9paration_V2/" class="md-nav__link">
+        Préparation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Tle - POO & Récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tle - POO & Récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tle - POO & Récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Pr%C3%A9sentation/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Gestion_Projet/" class="md-nav__link">
+        Suivi de projet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Rendus/" class="md-nav__link">
+        Rendus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ressources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ressources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../culture_g%C3%A9/" class="md-nav__link">
+        Culture générale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices-les-expressions-booleennes" class="md-nav__link">
+    Exercices : les expressions booléennes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-qui-faut-il-croire" class="md-nav__link">
+    TD : Qui faut-il croire ?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
 
 <style>
 body {
 text-align: justify}
 </style>
 
-<h1 id="sequence-1"><strong>Séquence 1</strong></h1>
-<h1 id="i-la-logique-booleenne">I. La logique booléenne</h1>
-<h2 id="cours">Cours</h2>
-<h3 id="introduction">Introduction</h3>
+<h1 id="i-la-logique-booleenne">I. La logique booléenne<a class="headerlink" href="#i-la-logique-booleenne" title="Permanent link">&para;</a></h1>
+<h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
 <p>L'informatique est basée sur l'utilisation de <code>1</code> et de <code>0</code> : ils représentent le vrai et le faux, <code>True</code> et <code>False</code> en Python, et correspondent au type <strong>booléen</strong>. Nous avons vu que les <strong>expressions booléennes</strong> permettent de différencier différents cas dans un programme.</p>
 <p>Nous avons vu des opérateurs qui permettent de comparer des nombres (<code>int</code> ou <code>float</code>), et renvoient des booléens (<code>bool</code>). Pour combiner ces expressions booléennes, on utilise des <strong>opérateurs booléens</strong>. </p>
 <p>Passons en revue ces opérateurs, en considérant le <strong><em>problème</em></strong> suivant :</p>
@@ -243,7 +1611,7 @@ text-align: justify}
 <p>Au milieu du désert, deux sphinx gardent chacun une porte. Une des deux portes continue dans le désert, l'autre mène vers une oasis. L'un des deux sphinx dit toujours la vérité, l'autre ment toujours. On veut savoir par où aller pour accéder à l'oasis.</p>
 </blockquote>
 <hr />
-<h3 id="ia-le-non-not">I.A. Le NON (NOT)</h3>
+<h3 id="ia-le-non-not">I.A. Le NON (NOT)<a class="headerlink" href="#ia-le-non-not" title="Permanent link">&para;</a></h3>
 <p>L'opérateur NON (NOT en anglais) inverse la valeur d'une <strong>variable booléenne</strong>. Si <code>A</code> vaut <code>False</code>, non(<code>A</code>) vaut <code>True</code> et réciproquement. On résume cela avec une table, dite <strong>table de vérité</strong> de l'opérateur NON :</p>
 <table>
 <thead>
@@ -264,13 +1632,14 @@ text-align: justify}
 </tbody>
 </table>
 <p>La table de vérité d'une <strong>expression booléenne</strong> indique la valeur de l'expression pour chaque valeur possible de ses variables.</p>
-<blockquote>
-<p>Application au <strong><em>problème</em></strong> : On veut demander l'information, si l'on s'adresse à celui qui dit la vérité - donc à celui qui ne ment pas. On utilise une variable booléenne <code>menteur</code> qui vaut <code>True</code> si le sphinx auquel on s'adresse ment, <code>False</code> s'il dit la vérité :</p>
-</blockquote>
-<pre><code class="language-python">if not(menteur):
-    print(&quot;Pouvez-vous m'indiquer l'oasis ?&quot;)
-</code></pre>
-<h3 id="ib-le-et-and">I.B. Le ET (AND)</h3>
+<div class="admonition example">
+<p class="admonition-title">Application au <strong><em>problème</em></strong> :</p>
+<p>On veut demander l'information, si l'on s'adresse à celui qui dit la vérité - donc à celui qui ne ment pas. On utilise une variable booléenne <code>menteur</code> qui vaut <code>True</code> si le sphinx auquel on s'adresse ment, <code>False</code> s'il dit la vérité :</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">menteur</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pouvez-vous m&#39;indiquer l&#39;oasis ?&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h3 id="ib-le-et-and">I.B. Le ET (AND)<a class="headerlink" href="#ib-le-et-and" title="Permanent link">&para;</a></h3>
 <p>L'opérateur ET (AND en anglais) permet d'associer deux expressions booléennes de la manière suivante : A ET B est vrai si A est vraie et B est vraie. Cela donne la table de vérité suivante :</p>
 <table>
 <thead>
@@ -303,13 +1672,14 @@ text-align: justify}
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>Application au <strong><em>problème</em></strong> : Si le sphinx auquel on s'adresse n'est pas un menteur <em>et</em> s'il nous dit qu'il se trouve devant la porte menant à l'oasis, on veut prendre ce chemin. On utilise une variable <code>porte</code> valant <code>True</code> si le sphinx dit qu'elle mène à l'oasis, <code>False</code> sinon :</p>
-</blockquote>
-<pre><code class="language-python">if not(menteur) and porte:
-    print(&quot;Je prends ce chemin.&quot;)
-</code></pre>
-<h3 id="ic-le-ou-or">I.C. Le OU (OR)</h3>
+<div class="admonition example">
+<p class="admonition-title">Application au <strong><em>problème</em></strong> :</p>
+<p>Si le sphinx auquel on s'adresse n'est pas un menteur <em>et</em> s'il nous dit qu'il se trouve devant la porte menant à l'oasis, on veut prendre ce chemin. On utilise une variable <code>porte</code> valant <code>True</code> si le sphinx dit qu'elle mène à l'oasis, <code>False</code> sinon :</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">menteur</span><span class="p">)</span> <span class="ow">and</span> <span class="n">porte</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je prends ce chemin.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h3 id="ic-le-ou-or">I.C. Le OU (OR)<a class="headerlink" href="#ic-le-ou-or" title="Permanent link">&para;</a></h3>
 <p>L'opérateur OU (OR en anglais) permet d'associer deux expressions booléennes de la manière suivante : A OU B est vrai si A est vraie, B est vraie, ou bien les deux le sont. Cela donne la table de vérité suivante :</p>
 <table>
 <thead>
@@ -342,17 +1712,14 @@ text-align: justify}
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>Application au <strong><em>problème</em></strong> : Si le sphinx auquel on s'adresse n'est pas un menteur et s'il nous dit qu'il se trouve devant la porte menant à l'oasis <em>ou</em> s'il est un menteur et qu'il nous dit que la porte continue dans le désert, on veut prendre ce chemin.</p>
-</blockquote>
-<pre><code class="language-python">if (not(menteur) and porte) or (menteur and not(porte)):
-    print(&quot;Je prends ce chemin.&quot;)
-</code></pre>
-<div style="page-break-after: always; visibility: hidden"> 
-\pagebreak 
+<div class="admonition example">
+<p class="admonition-title">Application au <strong><em>problème</em></strong> :</p>
+<p>Si le sphinx auquel on s'adresse n'est pas un menteur et s'il nous dit qu'il se trouve devant la porte menant à l'oasis <em>ou</em> s'il est un menteur et qu'il nous dit que la porte continue dans le désert, on veut prendre ce chemin.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="ow">not</span><span class="p">(</span><span class="n">menteur</span><span class="p">)</span> <span class="ow">and</span> <span class="n">porte</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">menteur</span> <span class="ow">and</span> <span class="ow">not</span><span class="p">(</span><span class="n">porte</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je prends ce chemin.&quot;</span><span class="p">)</span>
+</code></pre></div>
 </div>
-
-<h3 id="id-le-ou-exclusif-xor">I.D. Le OU exclusif (XOR)</h3>
+<h3 id="id-le-ou-exclusif-xor">I.D. Le OU exclusif (XOR)<a class="headerlink" href="#id-le-ou-exclusif-xor" title="Permanent link">&para;</a></h3>
 <p>L'opérateur OU EXCLUSIF (XOR en anglais) permet d'associer deux expressions booléennes de la manière suivante : A OU B est vrai si A est vraie ou bien B est vraie. Cela donne la table de vérité suivante :</p>
 <table>
 <thead>
@@ -385,16 +1752,17 @@ text-align: justify}
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>Application au <strong><em>problème</em></strong> : Si le sphinx auquel on s'adresse est un menteur <em>ou (exclusif)</em> s'il nous dit qu'il ne se trouve pas devant la porte menant à l'oasis (et donc qu'il ne ment pas), on ne veut pas prendre ce chemin.</p>
-</blockquote>
-<pre><code class="language-python">from operator import xor
+<div class="admonition example">
+<p class="admonition-title">Application au <strong><em>problème</em></strong> :</p>
+<p>Si le sphinx auquel on s'adresse est un menteur <em>ou (exclusif)</em> s'il nous dit qu'il ne se trouve pas devant la porte menant à l'oasis (et donc qu'il ne ment pas), on ne veut pas prendre ce chemin.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">xor</span>
 
-if xor(menteur,not(porte)):
-    print(&quot;Je ne prends pas ce chemin.&quot;)
-</code></pre>
+<span class="k">if</span> <span class="n">xor</span><span class="p">(</span><span class="n">menteur</span><span class="p">,</span><span class="ow">not</span><span class="p">(</span><span class="n">porte</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je ne prends pas ce chemin.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
 <p><strong>N.B.</strong> : L'utilisation de cette fonction n'est pas à apprendre par coeur. </p>
-<h3 id="conclusion">Conclusion</h3>
+<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
 <p>Une bonne utilisation des opérateurs booléens permet notamment de mieux gérer les différentes conditions traitées dans les programmes. La logique booléenne trouve aussi des applications dans la conception de circuits électroniques.</p>
 <blockquote>
 <p>Nous ne savons en fait pas quel sphinx ment et lequel dit la vérité. Nous n'avons le droit de ne poser qu'une question à un des deux sphinx pour savoir où aller. Laquelle devons-nous choisir pour aller à coup sûr vers l'oasis ?</p>
@@ -402,48 +1770,44 @@ if xor(menteur,not(porte)):
 <p><img alt="sphinx" src="../img/sphinx_statue.jpg" /></p>
 <p><br></p>
 <hr />
-<h2 id="exercices-les-expressions-booleennes">Exercices : les expressions booléennes</h2>
-<h3 id="exercice-0-amelioration-du-tp-sur-les-fonctions">Exercice 0 <em>(amélioration du TP sur les fonctions)</em> :</h3>
-<p>On dispose d'une fonction <code>pair(n)</code>, renvoyant si un entier <code>n</code> est pair ou non :</p>
-<pre><code class="language-python">def pair(n):
-    return n%2 == 0
-</code></pre>
-<p>On considère une variable <code>m</code> représentant un mois de l'année.</p>
+<h2 id="exercices-les-expressions-booleennes">Exercices : les expressions booléennes<a class="headerlink" href="#exercices-les-expressions-booleennes" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-0-amelioration-du-tp-sur-les-fonctions">Exercice 0 <em>(amélioration du TP sur les fonctions)</em> :<a class="headerlink" href="#exercice-0-amelioration-du-tp-sur-les-fonctions" title="Permanent link">&para;</a></h3>
+<p>On dispose d'une fonction <code>pair(n)</code>, renvoyant si un entier <code>n</code> est pair ou non :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+</code></pre></div>
+On considère une variable <code>m</code> représentant un mois de l'année.</p>
 <ol>
 <li>
 <p>Quelle instruction écrire pour tester "m est-t-il impair" ?</p>
 </li>
 <li>
-<p>Ecrire le programme Python traduisant l'algorithme suivant :</p>
+<p>Ecrire le programme Python traduisant l'algorithme suivant :
+<div class="highlight"><pre><span></span><code><span class="n">Si</span> <span class="n">n</span> <span class="n">est</span> <span class="n">impair</span> <span class="n">et</span> <span class="n">qu</span> <span class="n">il</span> <span class="n">est</span> <span class="n">un</span> <span class="n">mois</span> <span class="n">de</span> <span class="n">la</span> <span class="n">fin</span> <span class="n">de</span> <span class="n">l</span> <span class="n">année</span>
+    <span class="n">nb_jours</span> <span class="n">vaut</span> <span class="mi">30</span>
+</code></pre></div></p>
 </li>
-</ol>
-<pre><code class="language-python">Si n est impair et qu il est un mois de la fin de l année
-    nb_jours vaut 30
-</code></pre>
-<ol>
-<li>Faire la même chose avec l'algorithme suivant :</li>
-</ol>
-<pre><code class="language-python">Si n est pair et qu il est un mois du début de l année
-    nb_jours vaut 30
-</code></pre>
-<ol>
+<li>Faire la même chose avec l'algorithme suivant :
+<div class="highlight"><pre><span></span><code><span class="n">Si</span> <span class="n">n</span> <span class="n">est</span> <span class="n">pair</span> <span class="n">et</span> <span class="n">qu</span> <span class="n">il</span> <span class="n">est</span> <span class="n">un</span> <span class="n">mois</span> <span class="n">du</span> <span class="n">début</span> <span class="n">de</span> <span class="n">l</span> <span class="n">année</span>
+    <span class="n">nb_jours</span> <span class="n">vaut</span> <span class="mi">30</span>
+</code></pre></div></li>
 <li>
 <p>Comment combiner les conditions des questions 2 et 3 ?</p>
 </li>
 <li>
-<p>Compléter la fonction suivante, permettant de tester tous les mois de l'année :</p>
+<p>Compléter la fonction suivante, permettant de tester tous les mois de l'année :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nombre_jours</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">nb</span> <span class="o">=</span> <span class="mi">28</span>
+    <span class="k">elif</span> <span class="o">...</span>
+        <span class="n">nb</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="o">...</span>
+
+    <span class="k">return</span> <span class="n">nb</span>
+</code></pre></div></p>
 </li>
 </ol>
-<pre><code class="language-python">def nombre_jours(m):
-    if m == 2:
-        nb = 28
-    elif ...
-        nb = 30
-    ...
-
-    return nb
-</code></pre>
-<h3 id="exercice-1-vrai-ou-faux">Exercice 1 : Vrai ou Faux</h3>
+<h3 id="exercice-1-vrai-ou-faux">Exercice 1 : Vrai ou Faux<a class="headerlink" href="#exercice-1-vrai-ou-faux" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Si <code>a</code> vaut <code>True</code> et <code>b</code> vaut <code>False</code>, <code>not(a or b)</code> s'évalue à <code>True</code>.</p>
@@ -458,7 +1822,7 @@ if xor(menteur,not(porte)):
 <p>L'expression <code>not(a and b)</code> a la même valeur que l'expression <code>not(a) or not(b)</code>.</p>
 </li>
 </ol>
-<h3 id="exercice-2">Exercice 2 :</h3>
+<h3 id="exercice-2">Exercice 2 :<a class="headerlink" href="#exercice-2" title="Permanent link">&para;</a></h3>
 <p>Sélectionner la(les) bonne(s) réponse(s) parmi les différentes propositions.</p>
 <ol>
 <li>
@@ -480,7 +1844,7 @@ if xor(menteur,not(porte)):
 </ul>
 </li>
 </ol>
-<h3 id="exercice-3">Exercice 3 :</h3>
+<h3 id="exercice-3">Exercice 3 :<a class="headerlink" href="#exercice-3" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>On considère l'expression <code>a and b</code> où <code>a</code> et <code>b</code> sont deux expressions booléennes. Si <code>a</code> vaut <code>False</code>, quelle sera la valeur de l'expression, en fonction de la valeur de <code>b</code> ? Que pouvez-vous en déduire ?
@@ -494,8 +1858,8 @@ if xor(menteur,not(porte)):
 <p><strong>Conclusion</strong> <strong><em>(à retenir)</em></strong> : </p>
 <p><br></p>
 <hr />
-<h2 id="td-qui-faut-il-croire">TD : Qui faut-il croire ?</h2>
-<h3 id="a-un-village-perdu">A. Un village perdu</h3>
+<h2 id="td-qui-faut-il-croire">TD : Qui faut-il croire ?<a class="headerlink" href="#td-qui-faut-il-croire" title="Permanent link">&para;</a></h2>
+<h3 id="a-un-village-perdu">A. Un village perdu<a class="headerlink" href="#a-un-village-perdu" title="Permanent link">&para;</a></h3>
 <p>Vous voyagez dans un endroit que vous ne connaissez pas, et demandez votre chemin à deux locaux que vous croisez. Vous souhaitez savoir où se trouve le village qui est votre objectif. Ils décident de jouer à un jeu avec vous : ils vont vous donner des informations, et soit toutes ces informations seront vraies, soit elles seront toutes fausses. </p>
 <p><img alt="village" src="../img/village.jpg" /></p>
 <p>En appliquant la logique booléenne, vous devez être capable d'obtenir l'information que vous recherchez.</p>
@@ -544,7 +1908,7 @@ X : "Ou alors dans les collines."</p>
 \pagebreak 
 </div>
 
-<h3 id="b-au-tribunal">B. Au tribunal</h3>
+<h3 id="b-au-tribunal">B. Au tribunal<a class="headerlink" href="#b-au-tribunal" title="Permanent link">&para;</a></h3>
 <p>Vous êtes dans le jury d'un tribunal et écoutez les témoins d'une enquête. On sait que chacun des témoins soit toujours dit la vérité, soit ment toujours. Notre but est d'identifier ceux qui mentent et ceux qui ne mentent pas pour prononcer le verdict le plus juste possible.</p>
 <p><img alt="juge.jpg" src="../img/juge.jpg" /></p>
 <p>Les trois témoins s'expriment :  </p>
@@ -638,84 +2002,94 @@ Cp : "B dit la vérité."</p>
 </table>
 <ol>
 <li>Comment pouvez-vous en déduire qui dit la vérité et qui ment ? </li>
-</ol></div>
-            </div>
-        </div>
+</ol>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "../../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../../js/base.js" defer></script>
-        <script src="../../../mathjax.js" defer></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
-        <script src="../../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+
+
+                
+<script src="../../../pyodide-mkdocs/ide.js"></script> 
+
+              </article>
             </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+          
+          
         </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../../2nde/prog/fonctions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: III. Les fonctions" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              III. Les fonctions
             </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../archi/" class="md-footer__link md-footer__link--next" aria-label="Next: II. Architecture" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              II. Architecture
             </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-
-    </body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "toc.follow"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
 </html>

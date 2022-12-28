@@ -1,10 +1,12 @@
 h1 {
-    font-size: 2.5em;
+    font-size: 3.2em;
     text-align: center;
+    color: black;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2.2em;
+    font-style: bold;
 }
 
 h3 {
@@ -12,11 +14,22 @@ h3 {
 }
 
 h4 {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 img {
     display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+:root > * {
+    --md-code-fg-color: #000000;
+    --md-code-hl-constant-color: ##87CEFA;
+  }
+
+.md-grid {
+max-width: 1300px; 
+
+
 }

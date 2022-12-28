@@ -1,300 +1,1693 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
         <link rel="canonical" href="https://example.com/tle/seq2/r%C3%A9cursivit%C3%A9/">
-        <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>II. La récursivité - Sciences informatiques</title>
-        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
-        <link href="../../../extra.css" rel="stylesheet">
-
-        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
-
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../../1ere/seq1/logique/" class="dropdown-item">I. Logique</a>
-</li>
-            
-<li>
-    <a href="../../../1ere/seq1/archi/" class="dropdown-item">II. Architecture</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../../1ere/seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
-</li>
-            
-<li>
-    <a href="../../../1ere/seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
-</li>
-            
-<li>
-    <a href="../../../1ere/seq2/flottants/" class="dropdown-item">III. Les flottants</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
-</li>
-            
-<li>
-    <a href="../../seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
-</li>
-            
-<li>
-    <a href="../../seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../piles/" class="dropdown-item">I. Les piles</a>
-</li>
-            
-<li>
-    <a href="./" class="dropdown-item active">II. La récursivité</a>
-</li>
-            
-<li>
-    <a href="../diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../../1ere/seq1/archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
-</li>
-            
-<li>
-    <a href="../../seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">4. Structurer les données</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../seq4/listes/" class="dropdown-item">I. Les listes</a>
-</li>
-            
-<li>
-    <a href="../../seq4/files/" class="dropdown-item">II. Les files</a>
-</li>
-            
-<li>
-    <a href="../../seq4/dico/" class="dropdown-item">III. Les dictionnaires</a>
-</li>
-            
-<li>
-    <a href="../../seq4/synthese/" class="dropdown-item">Synthèse</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
-</li>
-                                    
-<li>
-    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="navitem">
-                                <a href="../../../ressources/" class="nav-link">Ressources</a>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../piles/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../diviser_regner/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>II. La récursivité - Trebaul NSI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+      
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#sequence-2" class="nav-link">Séquence 2</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="1"><a href="#ii-la-recursivite" class="nav-link">II. La récursivité</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#exercices" class="nav-link">Exercices</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#td-les-tours-de-hanoi" class="nav-link">TD : Les tours de Hanoï</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link"></a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#tp-dessiner-des-fractales" class="nav-link">TP : Dessiner des fractales</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../pyodide-mkdocs/interpreter.js"></script> 
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans+serif:300,300i,400,400i,700,700i%7CComputer+New:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"sans serif";--md-code-font:"Computer New"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+<link rel="stylesheet" href="../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../qcm/qcm.css">
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ii-la-recursivite" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Trebaul NSI" class="md-header__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Trebaul NSI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              II. La récursivité
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../2nde/prog/fonctions/" class="md-tabs__link">
+        Seconde
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../1ere/seq1/logique/" class="md-tabs__link">
+        Première
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Terminale
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../projets/pr%C3%A9s_projet/" class="md-tabs__link">
+        Projets
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../culture_g%C3%A9/" class="md-tabs__link">
+        Ressources
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Trebaul NSI" class="md-nav__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Trebaul NSI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1">
+          Bases de la programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases de la programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bases de la programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/prog/fonctions/" class="md-nav__link">
+        III. Les fonctions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          1. De la logique à la machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. De la logique à la machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          1. De la logique à la machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/logique/" class="md-nav__link">
+        I. Logique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/archi/" class="md-nav__link">
+        II. Architecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          2. Représenter les nombres en machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Représenter les nombres en machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          2. Représenter les nombres en machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/entiers_positifs/" class="md-nav__link">
+        I. Les entiers positifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/entiers_relatifs/" class="md-nav__link">
+        II. Les entiers relatifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/flottants/" class="md-nav__link">
+        III. Les flottants
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          3. Les types construits
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Les types construits" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          3. Les types construits
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/tableaux/" class="md-nav__link">
+        I. Le type tableau
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/tableaux_algo/" class="md-nav__link">
+        II. Algorithmes sur les tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/puplet/" class="md-nav__link">
+        III. Le type p-uplet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/synthese/" class="md-nav__link">
+        IV. Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          4. Du texte à l'hypertexte
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Du texte à l'hypertexte" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          4. Du texte à l'hypertexte
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/texte_machine/" class="md-nav__link">
+        I. Représentation du texte en machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/bases_web/" class="md-nav__link">
+        II. L'hypertexte et les bases du web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/langages_web/" class="md-nav__link">
+        III. Les langages du Web HTML et CSS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          1. Différentes manières de programmer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Différentes manières de programmer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Différentes manières de programmer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/Imp%C3%A9ratif_Fonctionnel/" class="md-nav__link">
+        I. Paradigme impératif et fonctionnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/POO/" class="md-nav__link">
+        II. Paradigme objet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/Synth%C3%A8se_El%C3%A8ve/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          2. Autour de la récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Autour de la récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Autour de la récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../piles/" class="md-nav__link">
+        I. Les piles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          II. La récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        II. La récursivité
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-les-tours-de-hanoi" class="md-nav__link">
+    TD : Les tours de Hanoï
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-dessiner-des-fractales" class="md-nav__link">
+    TP : Dessiner des fractales
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diviser_regner/" class="md-nav__link">
+        III. Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          3. Architecture matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Architecture matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          3. Architecture matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/archi/" class="md-nav__link">
+        I. Architecture des ordinateurs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq3/Cours_SoC/" class="md-nav__link">
+        II. Les systèmes sur puce
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          4. Structurer les données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Structurer les données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          4. Structurer les données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/listes/" class="md-nav__link">
+        I. Les listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/files/" class="md-nav__link">
+        II. Les files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/dico/" class="md-nav__link">
+        III. Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/synthese/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          5. Les bases de données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Les bases de données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          5. Les bases de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/Mod%C3%A8le_Relationnel/" class="md-nav__link">
+        I. Le modèle relationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/BDD_Relationnelles/" class="md-nav__link">
+        II. Les bases de données relationnelles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/SQL/" class="md-nav__link">
+        III. Structured Query Language (SQL)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          6. Les structures hiérarchiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6. Les structures hiérarchiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          6. Les structures hiérarchiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq6/arbres/" class="md-nav__link">
+        I. La structure d'arbre
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq6/arbres_algo/" class="md-nav__link">
+        II. Les algorithmes sur les arbres
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/pr%C3%A9s_projet/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/BonnesPratiques_Structure/" class="md-nav__link">
+        Méthodologie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          1ère - Cybersécurité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1ère - Cybersécurité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          1ère - Cybersécurité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/Pr%C3%A9sentation_Sujets/" class="md-nav__link">
+        Sujets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/TP_Pr%C3%A9paration_V2/" class="md-nav__link">
+        Préparation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Tle - POO & Récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tle - POO & Récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tle - POO & Récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Pr%C3%A9sentation/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Gestion_Projet/" class="md-nav__link">
+        Suivi de projet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Rendus/" class="md-nav__link">
+        Rendus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ressources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ressources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../culture_g%C3%A9/" class="md-nav__link">
+        Culture générale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-les-tours-de-hanoi" class="md-nav__link">
+    TD : Les tours de Hanoï
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-dessiner-des-fractales" class="md-nav__link">
+    TP : Dessiner des fractales
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
 
 <style>
 body {
 text-align: justify}
 </style>
 
-<h1 id="sequence-2"><strong>Séquence 2</strong></h1>
-<h1 id="ii-la-recursivite">II. La récursivité</h1>
+<h1 id="ii-la-recursivite">II. La récursivité<a class="headerlink" href="#ii-la-recursivite" title="Permanent link">&para;</a></h1>
 <hr />
-<h2 id="cours">Cours</h2>
-<h3 id="introduction">Introduction</h3>
+<h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../img/poupees_russes.jpg" /></p>
 <p>Les <em>poupées russes</em> ou <em>matriochkas</em> sont des séries de poupées de tailles décroissantes placées les unes à l'intérieur des autres. Elles sont toutes identiques, ne différant que par leur taille. La dernière est différente, dans le sens où elle ne contient pas d'autre poupée à l'intérieur.  </p>
 <p>Une matriochka est une <strong>structure récursive</strong> : c'est une matriochka pleine, OU bien une matriochka contenant une autre matriochka plus petite.</p>
-<h3 id="a-definition">A. Définition</h3>
+<h3 id="a-definition">A. Définition<a class="headerlink" href="#a-definition" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
 <p>Une <strong>fonction récursive</strong> est une fonction qui s’appelle elle-même.</p>
-<p>Pour éviter que cette fonction s’appelle à l’infini, il faut :<br />
+</div>
+<p>Pour éviter que cette fonction ne s’appelle à l’infini, il faut :<br />
 - <strong><em>qu’elle ait un cas de base (c'est le cas le plus simple à résoudre), aussi appelé condition d'arrêt (dans laquelle il n'y a plus d'appel récursif donc la fonction s'arrête),</em></strong><br />
 - <strong><em>qu’elle se ramène vers ce cas de base, donc qu'il y ait un appel à elle-même sur un plus petit problème que le problème initial (un entier plus petit, une chaîne de caractère plus courte, etc).</em></strong>  </p>
-<h3 id="b-fonctionnement-dune-pile-dexecution">B. Fonctionnement d'une pile d'exécution</h3>
-<h4 id="b1-cas-general">B.1. Cas général</h4>
+<h3 id="b-fonctionnement-dune-pile-dexecution">B. Fonctionnement d'une pile d'exécution<a class="headerlink" href="#b-fonctionnement-dune-pile-dexecution" title="Permanent link">&para;</a></h3>
+<h4 id="b1-cas-general">B.1. Cas général<a class="headerlink" href="#b1-cas-general" title="Permanent link">&para;</a></h4>
 <p>Lors de l’appel d’une fonction, le système sauvegarde différents paramètres comme ses arguments et les variables utilisées à l’intérieur de celle-ci. C’est son <strong>contexte d’exécution</strong>. Cela permet d’interrompre l’exécution d’une fonction lorsque celle-ci en appelle d’autre, et de reprendre son exécution ensuite.</p>
 <p><strong>Exemple :</strong></p>
 <p><img alt="" src="../img/pile_execution.png" /></p>
-<pre><code class="language-python">def h(x):
-    return x + 1
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
 
-def g(x):
-    return h(x) * 2
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">h</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
 
-def f(x):
-    return g(x) + 1
-</code></pre>
-<h4 id="b2-cas-recursif">B.2. Cas récursif</h4>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+<h4 id="b2-cas-recursif">B.2. Cas récursif<a class="headerlink" href="#b2-cas-recursif" title="Permanent link">&para;</a></h4>
 <p>Une fonction récursive est une fonction dans laquelle il y a des appels de fonctions, avec la particularité qu'il s'agit de la même fonction. La même chose se produit donc : une <strong>pile d’exécution</strong> est utilisée pour stocker le contexte d’exécution de ses différents appels.</p>
-<p>Prenons l'exemple classique du calcul de <span class="arithmatex">\(2^n\)</span> :</p>
-<pre><code class="language-python">def puissance(n) :
-    if n == 0 :
-        return 1
-    else :
-        return 2*puissance(n-1)
-</code></pre>
-<p>Ecrire le calcul de <code>puissance(3)</code> :<br />
-<strong><em>puissance(3) = 2 * puissance(2)<br />
+<p>Prenons l'exemple classique du calcul de <span class="arithmatex">\(2^n\)</span> :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">puissance</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Ecrire le calcul de <code>puissance(3)</code> :  </p>
+<details class="success">
+<summary>Solution</summary>
+<p><strong><em>puissance(3) = 2 * puissance(2)<br />
         puissance(2) = 2 * puissance(1)<br />
                 puissance(1) = 2 * puissance(0)<br />
                         puissance(0) = 1<br />
 puissance(3) = 2 * 2 * 2 * 1 = 8</em></strong></p>
+</details>
 <p>Le schéma suivant explique le processus en terme de pile d’exécution :
 <img alt="" src="../img/pile_puissance.png" /></p>
-<h4 id="b3-cas-limite">B.3. Cas limite</h4>
-<p>La pile d’exécution a une taille maximale. Lorsque la pile déborde - "stack overflow" - (par défaut au bout de 1000 appels), Python renvoie le message suivant :</p>
-<pre><code class="language-python">RecursionError: maximum recursion depth exceeded while calling a Python object
-</code></pre>
-<h3 id="c-recursivite-et-paradigmes">C. Récursivité et paradigmes</h3>
+<h4 id="b3-cas-limite">B.3. Cas limite<a class="headerlink" href="#b3-cas-limite" title="Permanent link">&para;</a></h4>
+<p>La pile d’exécution a une taille maximale. Lorsque la pile déborde - "stack overflow" - (par défaut au bout de 1000 appels), Python renvoie le message suivant :
+<div class="highlight"><pre><span></span><code><span class="ne">RecursionError</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">recursion</span> <span class="n">depth</span> <span class="n">exceeded</span> <span class="k">while</span> <span class="n">calling</span> <span class="n">a</span> <span class="n">Python</span> <span class="nb">object</span>
+</code></pre></div></p>
+<h3 id="c-recursivite-et-paradigmes">C. Récursivité et paradigmes<a class="headerlink" href="#c-recursivite-et-paradigmes" title="Permanent link">&para;</a></h3>
 <p>Le paradigme <strong>récursif</strong> s’oppose généralement au paradigme <strong>itératif</strong>. Ce dernier est une sous-catégorie du <strong>paradigme impératif</strong> et fait référence à l’utilisation de boucles.</p>
 <p>Avec la récursivité, on peut se passer de boucles. C’est cette méthode de programmation qui les remplace lorsque l’on programme en utilisant le <strong>paradigme fonctionnel</strong>.</p>
 <p><br></p>
 <hr />
-<h2 id="exercices">Exercices</h2>
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&para;</a></h2>
 <p>Les exercices traitent d'abord d'algorithmes qui manipulent des <em>entiers</em>, puis des <em>chaînes de caractères</em> (et des <em>listes</em> en bonus).</p>
-<h3 id="exercice-1-factorielle">Exercice 1 : factorielle</h3>
+<h3 id="exercice-1-factorielle">Exercice 1 : factorielle<a class="headerlink" href="#exercice-1-factorielle" title="Permanent link">&para;</a></h3>
 <p>La fonction factorielle, appliquée à un entier <span class="arithmatex">\(n\)</span> est notée <span class="arithmatex">\(!n\)</span> et est définie de la manière suivante :<br />
 - <span class="arithmatex">\(!0 = 1\)</span><br />
 - <span class="arithmatex">\(!n = 1*2*...*(n-1)*n\)</span>  </p>
@@ -305,13 +1698,13 @@ puissance(3) = 2 * 2 * 2 * 1 = 8</em></strong></p>
 <li>Dessiner la pile d'exécution pour l'appel de <code>factorielle(4)</code>.</li>
 <li>Vérifier votre travail en visualisant l'exécution de votre code avec https://pythontutor.com/visualize.html</li>
 </ol>
-<h3 id="exercice-2-la-suite-de-fibonacci">Exercice 2 : la suite de Fibonacci</h3>
+<h3 id="exercice-2-la-suite-de-fibonacci">Exercice 2 : la suite de Fibonacci<a class="headerlink" href="#exercice-2-la-suite-de-fibonacci" title="Permanent link">&para;</a></h3>
 <p>La suite de Fibonacci est définie comme suit :<br />
 - <span class="arithmatex">\(u_0 = 0\)</span> et <span class="arithmatex">\(u_1 = 1\)</span><br />
 - <span class="arithmatex">\(u_n=u_{n-1}+u_{n-2}\)</span><br />
 1. Écrire une fonction récursive <code>fib_rec(n)</code> qui donne le <code>n</code>ième terme de la suite de Fibonacci.
 2. Représenter les appels récursifs de <code>fib_rec(5)</code> sous la forme d’une structure hiérarchique, puis sous la forme d’une pile.</p>
-<h3 id="exercice-3-palindromes">Exercice 3 : palindromes</h3>
+<h3 id="exercice-3-palindromes">Exercice 3 : palindromes<a class="headerlink" href="#exercice-3-palindromes" title="Permanent link">&para;</a></h3>
 <p>Un palindrome est un mot pouvant se lire à l'endroit comme à l'envers, comme "été" ou "radar".</p>
 <p>On veut écrire une fonction <code>palindrome</code> prenant en entrée une chaîne de caractère <code>mot</code> et renvoyant un booléen indiquant si ce mot est un palindrome ou non.</p>
 <ol>
@@ -327,8 +1720,8 @@ Sur quelle valeur l'appel récursif se fait-il ?</li>
 </ol>
 <p><img alt="" src="../img/meme.bmp" /></p>
 <hr />
-<h3 id="pour-aller-plus-loin">Pour aller plus loin...</h3>
-<h3 id="exercice-4-somme-dune-liste">Exercice 4 : somme d'une liste</h3>
+<h3 id="pour-aller-plus-loin">Pour aller plus loin...<a class="headerlink" href="#pour-aller-plus-loin" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-4-somme-dune-liste">Exercice 4 : somme d'une liste<a class="headerlink" href="#exercice-4-somme-dune-liste" title="Permanent link">&para;</a></h3>
 <p>Une fonction récursive appliquant un traitement sur une liste fonctionne de la même manière qu'avec un entier : il faut, à chaque nouvel appel, réduire le problème. C'est-à-dire ici, réduire la liste initiale (par exemple considérer la même liste à laquelle on a enlevé le premier élément).</p>
 <ol>
 <li>Ecrire une fonction itérative (utilisant une boucle) permettant de calculer la somme des éléments d'une liste de nombres <code>somme_it(liste)</code>.</li>
@@ -342,11 +1735,11 @@ Sur quelle valeur l'appel récursif se fait-il ?</li>
 </ol>
 <p><br></p>
 <hr />
-<h2 id="td-les-tours-de-hanoi">TD : Les tours de Hanoï</h2>
-<h3 id="introduction_1">Introduction</h3>
+<h2 id="td-les-tours-de-hanoi">TD : Les tours de Hanoï<a class="headerlink" href="#td-les-tours-de-hanoi" title="Permanent link">&para;</a></h2>
+<h3 id="introduction_1">Introduction<a class="headerlink" href="#introduction_1" title="Permanent link">&para;</a></h3>
 <p>Le jeu des tours de Hanoï consiste à déplacer une pile de disques, de taille différente, d'une tige de départ <em>(à gauche)</em> à une tige d'arrivée <em>(tout à droite)</em> en respectant la règle suivante : un disque ne peut être placé sur un autre disque <em>de plus petite taille</em>.</p>
 <p><img alt="" src="../img/tours_hanoi_depart.png" /></p>
-<h3 id="a-du-cas-particulier-au-cas-general">A. Du cas particulier au cas général</h3>
+<h3 id="a-du-cas-particulier-au-cas-general">A. Du cas particulier au cas général<a class="headerlink" href="#a-du-cas-particulier-au-cas-general" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Comment résoudre le problème pour 2 disques ? <em>(le représenter sur le schéma ci-dessous)</em>
@@ -369,68 +1762,62 @@ Sur quelle valeur l'appel récursif se fait-il ?</li>
 </ul>
 </li>
 </ul>
-<h3 id="b-algorithme">B. Algorithme</h3>
+<h3 id="b-algorithme">B. Algorithme<a class="headerlink" href="#b-algorithme" title="Permanent link">&para;</a></h3>
 <p>Pour résoudre le problème pour <code>n</code> disques, on fait appel, 2 fois, à la résolution du problème pour <code>n-1</code> disques. Nous allons donc utiliser un algorithme récursif.</p>
 <p>On propose le <em>pseudo-code</em> suivant :</p>
-<pre><code class="language-python">fonction Hanoi(n, dep, inter, arr)
-    ''' Affiche les déplacements pour résoudre le problème de Hanoï pour n disques
+<p><div class="highlight"><pre><span></span><code><span class="n">fonction</span> <span class="n">Hanoi</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dep</span><span class="p">,</span> <span class="n">inter</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+    <span class="sd">&#39;&#39;&#39; Affiche les déplacements pour résoudre le problème de Hanoï pour n disques</span>
 
-    Entrées : 
-        n : entier représentant le nombre de disques à déplacer
-        dep, inter, arr : caractères indiquant les sommets de départ, 
-        intermédiaire et d'arrivée
-    ''' 
-    Si n est égal à 0
-        retourner Rien
-    Sinon
-        Hanoi(.........................)
-        afficher le déplacement depuis dep jusqu’à arr
-        Hanoi(.........................)
-</code></pre>
-<p>Compléter le pseudo-code avec les bons paramètres pour les appels récursifs à la fonction <code>Hanoi</code>.</p>
-<h3 id="c-implementation">C. Implémentation</h3>
+<span class="sd">    Entrées : </span>
+<span class="sd">        n : entier représentant le nombre de disques à déplacer</span>
+<span class="sd">        dep, inter, arr : caractères indiquant les sommets de départ, </span>
+<span class="sd">        intermédiaire et d&#39;arrivée</span>
+<span class="sd">    &#39;&#39;&#39;</span> 
+    <span class="n">Si</span> <span class="n">n</span> <span class="n">est</span> <span class="n">égal</span> <span class="n">à</span> <span class="mi">0</span>
+        <span class="n">retourner</span> <span class="n">Rien</span>
+    <span class="n">Sinon</span>
+        <span class="n">Hanoi</span><span class="p">(</span><span class="o">.........................</span><span class="p">)</span>
+        <span class="n">afficher</span> <span class="n">le</span> <span class="n">déplacement</span> <span class="n">depuis</span> <span class="n">dep</span> <span class="n">jusqu</span><span class="err">’</span><span class="n">à</span> <span class="n">arr</span>
+        <span class="n">Hanoi</span><span class="p">(</span><span class="o">.........................</span><span class="p">)</span>
+</code></pre></div>
+Compléter le pseudo-code avec les bons paramètres pour les appels récursifs à la fonction <code>Hanoi</code>.</p>
+<h3 id="c-implementation">C. Implémentation<a class="headerlink" href="#c-implementation" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Ecrire l'implémentation en Python de cet algorithme ci-dessous :</li>
-</ul>
-<pre><code class="language-python">
-
-
-
-
-</code></pre>
-<p><strong>N.B.:</strong> Pour l'affichage, on peut utiliser une instruction du type :</p>
-<pre><code class="language-python">print(&quot;Déplacer le disque &quot;, str(n), &quot;de la tige &quot;, dep, &quot; vers la tige &quot;, arr)
-</code></pre>
-<ul>
+<li>Ecrire l'implémentation en Python de cet algorithme ci-dessous :
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<strong>N.B.:</strong> Pour l'affichage, on peut utiliser une instruction du type :
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Déplacer le disque &quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="s2">&quot;de la tige &quot;</span><span class="p">,</span> <span class="n">dep</span><span class="p">,</span> <span class="s2">&quot; vers la tige &quot;</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+</code></pre></div></li>
 <li>Pour visualiser ce qu'il se passe, compléter le fichier Python fourni <em>(sur l'ENT)</em>.</li>
 </ul>
-<h2 id="_1"><br><br></h2>
-<h2 id="tp-dessiner-des-fractales">TP : Dessiner des fractales</h2>
+<h2 id="_1"><br><br><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="tp-dessiner-des-fractales">TP : Dessiner des fractales<a class="headerlink" href="#tp-dessiner-des-fractales" title="Permanent link">&para;</a></h2>
 <p>Une <strong>fractale</strong> est un objet qui apparaît identique à différentes échelles : en "zoomant" sur une partie de la figure, on retrouve la figure initiale. On peut représenter une version approchée des fractales avec des programmes récursifs, dont on défini le niveau de récursion (donc le niveau de détails de la figure).</p>
-<h3 id="1-des-bulles">1. Des bulles</h3>
+<h3 id="1-des-bulles">1. Des bulles<a class="headerlink" href="#1-des-bulles" title="Permanent link">&para;</a></h3>
 <p>Le code suivant <em>(accessible sur l'ENT)</em> permet de dessiner une figure avec des bulles. Il utilise la bibliothèque <code>turtle</code> dont des éléments de documentation sont donnés dans le fichier.</p>
 <p><img alt="" src="../img/bulles.png" /></p>
-<pre><code class="language-python">from turtle import *
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
 
-def dessine_cercle(x, y, r):
-    up()
-    goto(x,y-r)
-    down()
-    circle(r)
-    return None
+<span class="k">def</span> <span class="nf">dessine_cercle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="n">up</span><span class="p">()</span>
+    <span class="n">goto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">-</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">down</span><span class="p">()</span>
+    <span class="n">circle</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">None</span>
 
-def bubble(n, x, y, r):
-    if n == 0:
-        return None
-    else:
-        dessine_cercle(x,y,r)
-        bubble(n-1, x+3/2*r, y, r/2)
-        bubble(n-1, x, y-3/2*r, r/2)
-    return None
+<span class="k">def</span> <span class="nf">bubble</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dessine_cercle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+        <span class="n">bubble</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">bubble</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="n">r</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">None</span>
 
-bubble(4,-100,100,50)
-done()
-</code></pre>
+<span class="n">bubble</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">done</span><span class="p">()</span>
+</code></pre></div>
 <ol>
 <li>
 <p>Exécuter le code. Faire varier la valeur de <code>n</code> pour augmenter le niveau de détails de la figure.</p>
@@ -444,10 +1831,10 @@ done()
 </ul>
 </li>
 </ol>
-<h3 id="2-le-flocon-de-von-koch">2. Le flocon de von Koch</h3>
+<h3 id="2-le-flocon-de-von-koch">2. Le flocon de von Koch<a class="headerlink" href="#2-le-flocon-de-von-koch" title="Permanent link">&para;</a></h3>
 <p>Le <strong>flocon de Von Koch</strong> est une des premières courbes fractales à avoir été décrite. Elle a été inventée en 1904 par le mathématicien suédois Helge von Koch. Voici une partie de ce flocon :
 <img alt="" src="../img/fragment_flocon.png" /></p>
-<h4 id="2a-principe">2.A. Principe</h4>
+<h4 id="2a-principe">2.A. Principe<a class="headerlink" href="#2a-principe" title="Permanent link">&para;</a></h4>
 <ul>
 <li>On commence par un segment de longueur <code>a</code>.  </li>
 <li>On coupe ce segment en 3 parties égales.  </li>
@@ -457,26 +1844,26 @@ done()
 <li>etc.</li>
 </ul>
 <p><img alt="" src="../img/base_flocon.png" /></p>
-<h4 id="2b-algorithme">2.B. Algorithme</h4>
+<h4 id="2b-algorithme">2.B. Algorithme<a class="headerlink" href="#2b-algorithme" title="Permanent link">&para;</a></h4>
 <p>Nous allons utiliser un algorithme similaire à celui qui permet de tracer le motif avec les bulles pour dessiner ce flocon. Compléter l'algorithme proposé :</p>
-<pre><code class="language-python">fonction fragment_flocon(n, cote): 
+<div class="highlight"><pre><span></span><code><span class="n">fonction</span> <span class="n">fragment_flocon</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">cote</span><span class="p">):</span> 
 
-    ENTREES : 
-    n : entier indiquant le nombre d’itération à faire 
-    cote : la longueur du segment initial 
+    <span class="n">ENTREES</span> <span class="p">:</span> 
+    <span class="n">n</span> <span class="p">:</span> <span class="n">entier</span> <span class="n">indiquant</span> <span class="n">le</span> <span class="n">nombre</span> <span class="n">d</span><span class="err">’</span><span class="n">itération</span> <span class="n">à</span> <span class="n">faire</span> 
+    <span class="n">cote</span> <span class="p">:</span> <span class="n">la</span> <span class="n">longueur</span> <span class="n">du</span> <span class="n">segment</span> <span class="n">initial</span> 
 
-    Si n est égal à 0 alors 
-        On trace le segment de longueur cote 
-    Sinon 
-        On appelle la fonction fragment_flocon avec les paramètres __________
-        On tourne de _____ degrés sur la _______________
-        ___________________________________________________
-        __________________________________________
-        ___________________________________________________
-        __________________________________________
-        ___________________________________________________
-</code></pre>
-<h4 id="2c-implementation">2.C. Implémentation</h4>
+    <span class="n">Si</span> <span class="n">n</span> <span class="n">est</span> <span class="n">égal</span> <span class="n">à</span> <span class="mi">0</span> <span class="n">alors</span> 
+        <span class="n">On</span> <span class="n">trace</span> <span class="n">le</span> <span class="n">segment</span> <span class="n">de</span> <span class="n">longueur</span> <span class="n">cote</span> 
+    <span class="n">Sinon</span> 
+        <span class="n">On</span> <span class="n">appelle</span> <span class="n">la</span> <span class="n">fonction</span> <span class="n">fragment_flocon</span> <span class="n">avec</span> <span class="n">les</span> <span class="n">paramètres</span> <span class="n">__________</span>
+        <span class="n">On</span> <span class="n">tourne</span> <span class="n">de</span> <span class="n">_____</span> <span class="n">degrés</span> <span class="n">sur</span> <span class="n">la</span> <span class="n">_______________</span>
+        <span class="n">___________________________________________________</span>
+        <span class="n">__________________________________________</span>
+        <span class="n">___________________________________________________</span>
+        <span class="n">__________________________________________</span>
+        <span class="n">___________________________________________________</span>
+</code></pre></div>
+<h4 id="2c-implementation">2.C. Implémentation<a class="headerlink" href="#2c-implementation" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p>Implémenter l'algorithme en Python permettant de dessiner une partie du flocon.</p>
@@ -485,84 +1872,94 @@ done()
 <p>Ecrire la fonction <code>flocon</code> dessinant le flocon en entier.
 <img alt="" src="../img/flocon.png" /></p>
 </li>
-</ol></div>
-            </div>
-        </div>
+</ol>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "../../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../../js/base.js" defer></script>
-        <script src="../../../mathjax.js" defer></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
-        <script src="../../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+
+
+                
+<script src="../../../pyodide-mkdocs/ide.js"></script> 
+
+              </article>
             </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+          
+          
         </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../piles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: I. Les piles" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              I. Les piles
             </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../diviser_regner/" class="md-footer__link md-footer__link--next" aria-label="Next: III. Diviser pour régner" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              III. Diviser pour régner
             </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-
-    </body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "toc.follow"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
 </html>

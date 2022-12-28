@@ -1,0 +1,2080 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lena TREBAUL">
+      
+      
+        <link rel="canonical" href="https://example.com/tle/seq6/arbres/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Les arbres - Trebaul NSI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+      
+
+    
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../pyodide-mkdocs/interpreter.js"></script> 
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans+serif:300,300i,400,400i,700,700i%7CComputer+New:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"sans serif";--md-code-font:"Computer New"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+<link rel="stylesheet" href="../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../qcm/qcm.css">
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#i-la-structure-darbre" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Trebaul NSI" class="md-header__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Trebaul NSI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les arbres
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../2nde/prog/fonctions/" class="md-tabs__link">
+        Seconde
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../1ere/seq1/logique/" class="md-tabs__link">
+        Première
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Terminale
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../projets/pr%C3%A9s_projet/" class="md-tabs__link">
+        Projets
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../culture_g%C3%A9/" class="md-tabs__link">
+        Ressources
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Trebaul NSI" class="md-nav__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Trebaul NSI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1">
+          Bases de la programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases de la programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bases de la programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/prog/fonctions/" class="md-nav__link">
+        III. Les fonctions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          1. De la logique à la machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. De la logique à la machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          1. De la logique à la machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/logique/" class="md-nav__link">
+        I. Logique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/archi/" class="md-nav__link">
+        II. Architecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          2. Représenter les nombres en machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Représenter les nombres en machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          2. Représenter les nombres en machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/entiers_positifs/" class="md-nav__link">
+        I. Les entiers positifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/entiers_relatifs/" class="md-nav__link">
+        II. Les entiers relatifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/flottants/" class="md-nav__link">
+        III. Les flottants
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          3. Les types construits
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Les types construits" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          3. Les types construits
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/tableaux/" class="md-nav__link">
+        I. Le type tableau
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/tableaux_algo/" class="md-nav__link">
+        II. Algorithmes sur les tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/puplet/" class="md-nav__link">
+        III. Le type p-uplet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/synthese/" class="md-nav__link">
+        IV. Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          4. Du texte à l'hypertexte
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Du texte à l'hypertexte" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          4. Du texte à l'hypertexte
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/texte_machine/" class="md-nav__link">
+        I. Représentation du texte en machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/bases_web/" class="md-nav__link">
+        II. L'hypertexte et les bases du web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/langages_web/" class="md-nav__link">
+        III. Les langages du Web HTML et CSS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          1. Différentes manières de programmer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Différentes manières de programmer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Différentes manières de programmer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/Imp%C3%A9ratif_Fonctionnel/" class="md-nav__link">
+        I. Paradigme impératif et fonctionnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/POO/" class="md-nav__link">
+        II. Paradigme objet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/Synth%C3%A8se_El%C3%A8ve/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          2. Autour de la récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Autour de la récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Autour de la récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/piles/" class="md-nav__link">
+        I. Les piles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/r%C3%A9cursivit%C3%A9/" class="md-nav__link">
+        II. La récursivité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/diviser_regner/" class="md-nav__link">
+        III. Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          3. Architecture matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Architecture matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          3. Architecture matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/archi/" class="md-nav__link">
+        I. Architecture des ordinateurs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq3/Cours_SoC/" class="md-nav__link">
+        II. Les systèmes sur puce
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          4. Structurer les données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Structurer les données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          4. Structurer les données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/listes/" class="md-nav__link">
+        I. Les listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/files/" class="md-nav__link">
+        II. Les files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/dico/" class="md-nav__link">
+        III. Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/synthese/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          5. Les bases de données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Les bases de données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          5. Les bases de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/Mod%C3%A8le_Relationnel/" class="md-nav__link">
+        I. Le modèle relationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/BDD_Relationnelles/" class="md-nav__link">
+        II. Les bases de données relationnelles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/SQL/" class="md-nav__link">
+        III. Structured Query Language (SQL)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          6. Les structures hiérarchiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6. Les structures hiérarchiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          6. Les structures hiérarchiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          I. La structure d'arbre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        I. La structure d'arbre
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-exercices-sur-les-arbres" class="md-nav__link">
+    TD : Exercices sur les arbres
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-implementation-des-arbres-binaires" class="md-nav__link">
+    TD : Implémentation des arbres binaires
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arbres_algo/" class="md-nav__link">
+        II. Les algorithmes sur les arbres
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/pr%C3%A9s_projet/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/BonnesPratiques_Structure/" class="md-nav__link">
+        Méthodologie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          1ère - Cybersécurité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1ère - Cybersécurité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          1ère - Cybersécurité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/Pr%C3%A9sentation_Sujets/" class="md-nav__link">
+        Sujets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/TP_Pr%C3%A9paration_V2/" class="md-nav__link">
+        Préparation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Tle - POO & Récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tle - POO & Récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tle - POO & Récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Pr%C3%A9sentation/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Gestion_Projet/" class="md-nav__link">
+        Suivi de projet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Rendus/" class="md-nav__link">
+        Rendus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ressources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ressources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../culture_g%C3%A9/" class="md-nav__link">
+        Culture générale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-exercices-sur-les-arbres" class="md-nav__link">
+    TD : Exercices sur les arbres
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-implementation-des-arbres-binaires" class="md-nav__link">
+    TD : Implémentation des arbres binaires
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="i-la-structure-darbre">I. La structure d'arbre<a class="headerlink" href="#i-la-structure-darbre" title="Permanent link">&para;</a></h1>
+<h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
+<p>Les structures linéaires sont peu pratiques pour faire des recherches, des ajouts ou des suppressions de données ordonnées. Les <strong>structures arborescentes</strong> ou <strong>arbres</strong>, dont les utilisations en informatique sont multiples, sont plus adaptées à cela.</p>
+<h3 id="a-des-exemples">A. Des exemples<a class="headerlink" href="#a-des-exemples" title="Permanent link">&para;</a></h3>
+<h4 id="ai-geographie-de-la-france">A.I. Géographie de la France<a class="headerlink" href="#ai-geographie-de-la-france" title="Permanent link">&para;</a></h4>
+<p>Identifier, sur la représentation ci-dessous, à quoi correspondent les différentes lignes de l'arbre. </p>
+<pre class="mermaid"><code>graph TB
+  A[France] --&gt; B[Auvergne Rhône-Alpes]
+  B --&gt; F[Ain]
+  B --&gt; G[Ardêche]
+  B --&gt; I[...]
+  B --&gt; H[Haute-Savoie]
+  A --&gt; C[Bourgogne FC]
+  A --&gt; D[...]
+  A --&gt; E[PACA]
+  C --&gt; J[Côtes d'Or]
+  C --&gt; K[...]
+  E --&gt; L[...]
+  E --&gt; M[Vaucluse]</code></pre>
+<details class="note">
+<summary>Solution</summary>
+<p>La première ligne correspond au pays, la deuxième aux régions, la troisième au département. Il y a une relation hiérarchique entre ces 3 éléments : du plus grand au plus petit.</p>
+</details>
+<h4 id="aii-une-arborescence-de-fichiers">A.II. Une arborescence de fichiers<a class="headerlink" href="#aii-une-arborescence-de-fichiers" title="Permanent link">&para;</a></h4>
+<p>Ci-dessous un exemple de stockage de fichiers et dossier sur un ordinateur. Représentez-le de manière similaire à l'arbre du premier exemple :</p>
+<p><img src="../img/arborescence_fichiers_windows.png" height=190></p>
+<details class="note">
+<summary>Solution</summary>
+<pre class="mermaid"><code>graph TB
+  A[Dossier personnel] --&gt; B[Bureau]
+  A --&gt; C[Documents]
+  A --&gt; D[Images]
+  A --&gt; E[Musique]
+  A --&gt; G[Téléchargements]
+  A --&gt; H[Vidéos]
+  B --&gt; I[Document]
+  C --&gt; J[Factures]
+  C --&gt; K[Budget 2016]
+  C --&gt; L[Projets]
+  D --&gt; M[Vacances]
+  D --&gt; N[Anniversaire]
+  D --&gt; O[Rando]
+  E --&gt; P[Pop]
+  E --&gt; Q[Electro]
+  E --&gt; R[Classique]
+  G --&gt; S[Logiciel]
+  G --&gt; T[Document]
+  H --&gt; U[Montage]
+  H --&gt; V[Films]
+  H --&gt; W[Séries]</code></pre>
+</details>
+<h4 id="aiii-un-tournoi">A.III. Un tournoi<a class="headerlink" href="#aiii-un-tournoi" title="Permanent link">&para;</a></h4>
+<p>Représenter un <strong>tournoi</strong> à partir des quarts de finales jusqu’à la représentation du vainqueur en utilisant un arbre. Les quarts de finales opposent les équipes suivantes : France-Angleterre (vainqueur France), Maroc-Portugal (vainqueur Maroc), Pays-Bas-Argentine (vainqueur Argentine) et Croatie-Brésil (vainqueur Croatie). En demi-finale, la France bat le Maroc et l'Argentine la Croatie. Je crois que vous connaissez le résultat de la finale...</p>
+<details class="note">
+<summary>Solution</summary>
+<pre class="mermaid"><code>graph TB
+  A[Argentine] --&gt; B[Argentine]
+  A --&gt; C[France]
+  B --&gt; D[Croatie]
+  B --&gt; E[Argentine]
+  D --&gt; F[Croatie]
+  D --&gt; G[Brésil]
+  E --&gt; H[Pays-Bas]
+  E --&gt; I[Argentine]
+  C --&gt; K[France]
+  C --&gt; L[Maroc]
+  K --&gt; M[France]
+  K --&gt; N[Angleterre]
+  L --&gt; O[Maroc]
+  L --&gt; P[Portugal]</code></pre>
+</details>
+<h3 id="b-definitions">B. Définitions<a class="headerlink" href="#b-definitions" title="Permanent link">&para;</a></h3>
+<h4 id="bi-vocabulaire">B.I. Vocabulaire<a class="headerlink" href="#bi-vocabulaire" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p>Un <strong>arbre</strong> est un ensemble organisé de <strong>nœuds</strong> reliés par des <strong>branches</strong> ou <strong>arêtes</strong>. Les nœuds ont une relation hiérarchique les uns par rapport aux autres.</p>
+</div>
+<p>Le vocabulaire utilisé est emprunté, entre autres, à la généalogie et à la nature : </p>
+<div class="admonition info">
+<ul>
+<li>Chaque nœud à un <strong>père</strong>, dont il est le <strong>fils</strong>, sauf la <strong>racine</strong>.</li>
+<li>Un nœud qui n'a pas de fils est appelé une <strong>feuille</strong>.</li>
+<li>Un nœud avec une valeur (texte, nombre, etc) est dit <strong>étiqueté</strong>. Si tous les nœuds de l'arbre ont une <strong>étiquette</strong>, l'arbre est aussi dit étiqueté.</li>
+</ul>
+</div>
+<p><strong><em>Représentation :</em></strong>  L'arbre informatique est un arbre... renversé. La <strong>racine</strong> est généralement représentée tout en haut.  </p>
+<div class="admonition example">
+<p class="admonition-title">Sur l'arbre ci-dessous :</p>
+<ul>
+<li>identifier sa racine et distinguer les nœuds des feuilles.</li>
+</ul>
+<details class="note">
+<summary>Solution</summary>
+<p>La racine est A. Des feuilles sont par exemple D ou H, alors que B, C et F sont des noeuds.</p>
+</details>
+<ul>
+<li>identifier le père du nœud étiqueté "H" et donner le(s) fils du nœud étiqueté "B".</li>
+</ul>
+<details class="note">
+<summary>Solution</summary>
+<p>Le père de H est C et les fils de B sont D, E et F.</p>
+</details>
+</div>
+<pre class="mermaid"><code>graph TB
+  A --&gt; B
+  A --&gt; C
+  B --&gt; D
+  B --&gt; E
+  B --&gt; F
+  C --&gt; G
+  C --&gt; H</code></pre>
+<h4 id="bii-mesures">B.II. Mesures<a class="headerlink" href="#bii-mesures" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<ul>
+<li>la <strong>taille</strong> d'un arbre correspond à son nombre de nœuds.</li>
+<li>la <strong>profondeur d'un nœud</strong> correspond au nombre d'arêtes/de nœuds de la racine jusqu'à ce nœud <em>(la convention utilisée doit vous être précisée !)</em>. Nous utiliserons le nombre de noeuds, donc que la racine est à la profondeur 1.</li>
+<li>la <strong>hauteur d'un arbre</strong> correspond à la profondeur de son nœud le plus profond.</li>
+</ul>
+</div>
+<details class="example">
+<summary>Exemple : Donner la taille et la hauteur de l'arbre de la partie précédente. Quelle est la profondeur du nœud étiqueté "E" ? "I" ?</summary>
+<p>Sa taille est de 10. La profondeur de E est 3, celle de I est 4.</p>
+</details>
+<details class="abstract">
+<summary>Exercice : Dessiner un arbre de taille 9, étiqueté par des nombres de 0 à 8, de racine 0 et de hauteur 3.</summary>
+<pre class="mermaid"><code>graph TB
+  A((0)) --&gt; B((1))
+  A --&gt; E((4))
+  A --&gt; C((2))
+  B --&gt; D((3))
+  B --&gt; F((7))
+  C --&gt; G((9))
+  E --&gt; H((6))
+  E --&gt; J((8))</code></pre>
+</details>
+<h3 id="c-les-arbres-binaires">C. Les arbres binaires<a class="headerlink" href="#c-les-arbres-binaires" title="Permanent link">&para;</a></h3>
+<h4 id="ci-definition">C.I. Définition<a class="headerlink" href="#ci-definition" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p>Un arbre est dit <strong>binaire</strong> si chacun de ses nœuds admet au plus deux fils, appelés fils gauche et fils droit.</p>
+</div>
+<div class="admonition info">
+<p>On appelle <strong>sous-arbre gauche</strong>, et respectivement <strong>sous-arbre droit</strong>, d’un nœud l’arbre issu du fils gauche, respectivement fils droit, de ce nœud.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple : entourer les sous-arbres gauche et droit de la racine de l'arbre binaire ci-dessous.</p>
+</div>
+<pre class="mermaid"><code>graph TB
+  A --&gt; B
+  A --&gt; C
+  B --&gt; D
+  B --&gt; E
+  C --&gt; G</code></pre>
+<details class="abstract">
+<summary>Exercice : Parmi les exemples 1, 2, et 3 du cours, le(s)quel(s) est/sont des arbres binaires ?</summary>
+<p>Seul l'arbre de l'exemple 3 est un arbre binaire. Dans les autres, un noeud peut avoir plus de deux fils.</p>
+</details>
+<h4 id="cii-mesures">C.II. Mesures<a class="headerlink" href="#cii-mesures" title="Permanent link">&para;</a></h4>
+<h5 id="ciia-vocabulaire">C.II.a. Vocabulaire<a class="headerlink" href="#ciia-vocabulaire" title="Permanent link">&para;</a></h5>
+<p><em>Ces définitions sont données à titre indicatif, pour les besoins des démonstrations suivantes.</em>
+- un arbre binaire <strong>complet</strong> est un arbre dont toutes les feuilles sont à la même profondeur.
+- un arbre binaire <strong>filiforme</strong> est un arbre dont tous les nœuds ont au plus 1 fils.</p>
+<h5 id="ciib-encadrement-de-la-hauteur">C.II.b. Encadrement de la hauteur<a class="headerlink" href="#ciib-encadrement-de-la-hauteur" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Dessiner un arbre complet de taille <span class="arithmatex">\(n=7\)</span>. Quelle est sa hauteur <span class="arithmatex">\(h\)</span> ? L'exprimer en fonction de <span class="arithmatex">\(n\)</span>.</li>
+</ul>
+<details class="note">
+<summary>Solution</summary>
+<p><pre class="mermaid"><code>graph TB
+  A(( )) --&gt; B(( ))
+  A --&gt; C(( ))
+  B --&gt; D(( ))
+  B --&gt; E(( ))
+  C --&gt; G(( ))
+  C --&gt; H(( ))</code></pre>
+Sa hauteur est de 3, soit <span class="arithmatex">\(h=\lfloor log2(n) \rfloor\)</span>. En effet, <span class="arithmatex">\(log2(7)=2,8\)</span>. Sa partie entière vaut donc 2. Donc <span class="arithmatex">\(h=\lfloor log2(n) \rfloor +1\)</span>.</p>
+</details>
+<ul>
+<li>Dessiner un arbre filiforme de taille <span class="arithmatex">\(n=7\)</span>. Quelle est sa hauteur ? L'exprimer en fonction de <span class="arithmatex">\(n\)</span>.</li>
+</ul>
+<details class="note">
+<summary>Solution</summary>
+<p><pre class="mermaid"><code>graph TB
+  A(( )) --&gt; B(( ))
+  B --&gt; C(( ))
+  C --&gt; D(( ))
+  D --&gt; E(( ))
+  E --&gt; F(( ))
+  F --&gt; G(( ))</code></pre>
+<span class="arithmatex">\(h = n\)</span>.</p>
+</details>
+<ul>
+<li>En déduire l'encadrement de la hauteur <span class="arithmatex">\(h\)</span> d'un arbre binaire en fonction de sa taille <span class="arithmatex">\(n\)</span>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Solution</p>
+<p>On en déduit que <span class="arithmatex">\(\lfloor log2(n) \rfloor + 1 &lt;h&lt; n\)</span>.</p>
+</div>
+<h5 id="ciic-encadrement-de-la-taille">C.II.c. Encadrement de la taille<a class="headerlink" href="#ciic-encadrement-de-la-taille" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Dessiner l'arbre binaire de hauteur <span class="arithmatex">\(h=3\)</span> comportant le plus de nœuds possibles. De quel type d'arbre s'agit-il ? Exprimer sa taille <span class="arithmatex">\(n\)</span> en fonction de <span class="arithmatex">\(h\)</span>.</li>
+</ul>
+<details class="note">
+<summary>Solution</summary>
+<p><pre class="mermaid"><code>graph TB
+  A(( )) --&gt; B(( ))
+  A --&gt; C(( ))
+  B --&gt; D(( ))
+  B --&gt; E(( ))
+  C --&gt; G(( ))
+  C --&gt; H(( ))</code></pre>
+Il s'agit d'un arbre complet.<br />
+<span class="arithmatex">\(n=2^0+2^1+2^2=7=2^3-1\)</span>.
+Soit <span class="arithmatex">\(n = 2^{h}-1\)</span>.</p>
+</details>
+<ul>
+<li>Dessiner l'arbre binaire de hauteur <span class="arithmatex">\(h=3\)</span> comportant le moins de nœuds possibles. De quel type d'arbre s'agit-il ? Exprimer sa taille <span class="arithmatex">\(n\)</span> en fonction de <span class="arithmatex">\(h\)</span>.</li>
+</ul>
+<details class="note">
+<summary>Solution</summary>
+<pre class="mermaid"><code>graph TB
+  A(( )) --&gt; B(( ))
+  B --&gt; D(( ))</code></pre>
+<p>Il s'agit d'un arbre filiforme. 
+<span class="arithmatex">\(n=3=h\)</span>.</p>
+</details>
+<ul>
+<li>En déduire l'encadrement de la taille <span class="arithmatex">\(n\)</span>&gt; d'un arbre binaire en fonction de sa hauteur <span class="arithmatex">\(h\)</span>. </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Solution</p>
+<p>On en conclut, en généralisant, que <span class="arithmatex">\(h&lt;n &lt;2^{h}-1\)</span>.</p>
+</div>
+<h4 id="ciii-les-arbres-binaires-de-recherche">C.III. Les arbres binaires de recherche<a class="headerlink" href="#ciii-les-arbres-binaires-de-recherche" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p>Un <strong>arbre binaire de recherche (ABR)</strong> est un arbre vide ou un arbre binaire ayant les propriétés suivantes :<br />
+- tous les nœuds sont étiquetés par des nombres,<br />
+- la racine est <strong><em>supérieure ou égale</em></strong> à tout nœud du sous-arbre gauche,<br />
+- la racine est <strong><em>inférieure</em></strong> à tout nœud du sous-arbre droit, les deux sous-arbres de la racine sont eux-mêmes des ABR. </p>
+</div>
+<details class="example">
+<summary>Exemple : donner un arbre binaire satisfaisant les conditions ci-dessus pour être un ABR.</summary>
+<pre class="mermaid"><code>graph TB
+  A((10 )) --&gt; B((6)) 
+  A --&gt; C((17))
+  B --&gt; D((1))
+  B --&gt; E((8))
+  C --&gt; G((14))
+  C --&gt; H((22))</code></pre>
+</details>
+<details class="abstract">
+<summary>Exercice : construire un ABR à partir des nombres suivants, en les insérant les uns à la suite des autres : 25, 11, 31, 4, 9, 42, 30, 28, 18.</summary>
+<pre class="mermaid"><code>graph TB
+  A((25)) --&gt; B((11))
+  A --&gt; C((31))
+  B --&gt; D((4))
+  D --&gt; F((9))
+  B --&gt; E((8))
+  C --&gt; G((30))
+  C --&gt; H((42))
+  G --&gt; I((28))
+  E --&gt; J((18))</code></pre>
+</details>
+<hr />
+<h2 id="td-exercices-sur-les-arbres">TD : Exercices sur les arbres<a class="headerlink" href="#td-exercices-sur-les-arbres" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1-un-arbre-genealogique">Exercice 1 : un arbre généalogique<a class="headerlink" href="#exercice-1-un-arbre-genealogique" title="Permanent link">&para;</a></h3>
+<p><center>
+<img src="../img/arbre_gen.png" height=320></center></p>
+<ul>
+<li>
+<p>Expliquez les choix faits dans la construction de cet arbre généalogique. </p>
+</li>
+<li>
+<p>Peut-on parler d’arbre binaire ?</p>
+</li>
+<li>Quelle est la racine de l’arbre ?</li>
+<li>
+<p>Donner le père de Marie-Thérèse, les fils de Louis le grand dauphin.</p>
+</li>
+<li>
+<p>Donner deux exemples de nœud, de feuille.</p>
+</li>
+<li>
+<p>Donner la profondeur du nœud étiqueté "Marie-Anne" et la profondeur de l’arbre.</p>
+</li>
+</ul>
+<h3 id="exercice-2-representer-une-expression-arithmetique">Exercice 2 : représenter une expression arithmétique<a class="headerlink" href="#exercice-2-representer-une-expression-arithmetique" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TB
+  A((*)) --&gt; B;
+  B(('-')) --&gt; C((/));
+  B--&gt;D((t))
+  C --&gt; E((y))
+  C --&gt; F((2))
+  A--&gt;G((+))
+  G--&gt;H((75))
+  G--&gt;I((z))</code></pre>
+<ul>
+<li>Quelle expression l’arbre ci-dessus peut-t-il représenter ?</li>
+<li>Donner l’arbre permettant de représenter <span class="arithmatex">\(3 + (7/3-1)^3\)</span>.</li>
+</ul>
+<h3 id="exercice-3">Exercice 3 :<a class="headerlink" href="#exercice-3" title="Permanent link">&para;</a></h3>
+<p>Les langages informatiques sont formés à partir d’une grammaire, définissant une utilisation correcte du langage.
+Pour interpréter le langage Python, un arbre syntaxique du code est utilisé. Pour le code présenté ci-dessous, on
+propose une version simplifiée de cet arbre :</p>
+<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="mi">2</span>
+</code></pre></div>
+<pre class="mermaid"><code>graph TB
+  A(body) --&gt; B;
+  B(assign) --&gt; C((k));
+  B--&gt;D((3))
+
+  A--&gt;G(for)
+  G--&gt;H((i))
+  G--&gt;I(range)
+  G--&gt;J(body)
+  I--&gt;K((4))
+  J--&gt;L(assign)
+  L--&gt;M((k))
+  L--&gt;N((*))
+  N--&gt;O((k))
+  N--&gt;P((2))</code></pre>
+<p>Proposer une adaptation de cet arbre pour représenter le code suivant :
+<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div></p>
+<hr />
+<h2 id="td-implementation-des-arbres-binaires">TD : Implémentation des arbres binaires<a class="headerlink" href="#td-implementation-des-arbres-binaires" title="Permanent link">&para;</a></h2>
+<p>Pour manipuler des arbres binaires, il faut en utiliser une implémentation Python. Comme pour les listes, les piles et les files, nous allons proposer plusieurs implémentations de cette structure.</p>
+<h3 id="a-representation-imbriquee-avec-un-p-uplet">A. Représentation imbriquée avec un p-uplet<a class="headerlink" href="#a-representation-imbriquee-avec-un-p-uplet" title="Permanent link">&para;</a></h3>
+<p>On peut représenter les arbres binaires de manière imbriquée avec des p-uplets (type Python : <code>tuple</code>). L’arbre vide est représenté par un p-uplet vide, et, dans tous les autres cas, un nœud est un p-uplet de 3 valeurs contenant :  </p>
+<ul>
+<li>l’étiquette du nœud,  </li>
+<li>le sous-arbre gauche <em>(éventuellement vide)</em>,  </li>
+<li>le sous-arbre droit <em>(´eventuellement vide)</em>.</li>
+</ul>
+<h4 id="ai-exemple">A.I. Exemple<a class="headerlink" href="#ai-exemple" title="Permanent link">&para;</a></h4>
+<p><pre class="mermaid"><code>graph TB
+  A((E)) --&gt; B(X)
+  A --&gt; C(L)
+  B --&gt; D(E)
+  B --&gt; E(M)
+  E --&gt; G(P)
+  C --&gt; H(E)</code></pre>
+L'arbre ici-dessus se représente de la manière suivante :
+<div class="highlight"><pre><span></span><code><span class="n">exemple</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> 
+                <span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> 
+                    <span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="p">(),</span> <span class="p">()),</span> 
+                    <span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="p">(),</span> <span class="p">()),</span> <span class="p">())</span>
+                <span class="p">),</span>
+                <span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> 
+                    <span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="p">(),</span> <span class="p">()),</span> 
+                    <span class="p">()</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+</code></pre></div></p>
+<h4 id="aii-application">A.II. Application<a class="headerlink" href="#aii-application" title="Permanent link">&para;</a></h4>
+<p>Représenter l'arbre suivant avec cette méthode.
+<pre class="mermaid"><code>graph TB
+  A(( )) --&gt; B(2)
+  A --&gt; C(0)
+  B --&gt; D(2)
+  B --&gt; E(3)</code></pre></p>
+<h3 id="b-avec-une-classe">B. Avec une classe<a class="headerlink" href="#b-avec-une-classe" title="Permanent link">&para;</a></h3>
+<p>On se propose dans un deuxième temps d’utiliser la classe <code>ArbreBinaire</code> suivante :</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ArbreBinaire</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">racine</span> <span class="o">=</span> <span class="n">r</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">g</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">d</span>
+</code></pre></div>
+<code>gauche</code> et <code>droite</code> sont des arbres binaires, et l’arbre vide est représenté par None.
+Instancier un objet de cette classe pour représenter notre arbre.</p>
+<h4 id="bi-exemple">B.I. Exemple<a class="headerlink" href="#bi-exemple" title="Permanent link">&para;</a></h4>
+<p>L'arbre de l'exemple donné en A.I. se représente avec cette classe de la manière suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="n">exemple</span> <span class="o">=</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> 
+                <span class="n">ArbreBinaire</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> 
+                    <span class="n">ArbreBinaire</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> 
+                    <span class="n">ArbreBinaire</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">ArbreBinaire</span><span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>    <span class="kc">None</span><span class="p">)</span> <span class="p">),</span>
+                <span class="n">ArbreBinaire</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> 
+                    <span class="n">ArbreBinaire</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> 
+                    <span class="kc">None</span><span class="p">,)</span>
+            <span class="p">)</span>
+</code></pre></div>
+<h4 id="bii-application">B.II. Application<a class="headerlink" href="#bii-application" title="Permanent link">&para;</a></h4>
+<p>Représenter l'arbre de la partie A.II. avec cette classe.</p>
+
+
+
+
+
+                
+<script src="../../../pyodide-mkdocs/ide.js"></script> 
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../seq5/SQL/" class="md-footer__link md-footer__link--prev" aria-label="Previous: III. Structured Query Language (SQL)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              III. Structured Query Language (SQL)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../arbres_algo/" class="md-footer__link md-footer__link--next" aria-label="Next: II. Les algorithmes sur les arbres" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              II. Les algorithmes sur les arbres
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "toc.follow"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>

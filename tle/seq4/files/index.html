@@ -1,241 +1,1609 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
         <link rel="canonical" href="https://example.com/tle/seq4/files/">
-        <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>II. Les files - Sciences informatiques</title>
-        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
-        <link href="../../../extra.css" rel="stylesheet">
-
-        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
-
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="../../..">Sciences informatiques</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Première <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">1. De la logique à la machine</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../../1ere/seq1/logique/" class="dropdown-item">I. Logique</a>
-</li>
-            
-<li>
-    <a href="../../../1ere/seq1/archi/" class="dropdown-item">II. Architecture</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">2. Représenter les nombres en machine</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../../1ere/seq2/entiers_positifs/" class="dropdown-item">I. Les entiers positifs</a>
-</li>
-            
-<li>
-    <a href="../../../1ere/seq2/entiers_relatifs/" class="dropdown-item">II. Les entiers relatifs</a>
-</li>
-            
-<li>
-    <a href="../../../1ere/seq2/flottants/" class="dropdown-item">III. Les flottants</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Terminale <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">1. Différentes manières de programmer</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../seq1/Imp%C3%A9ratif_Fonctionnel/" class="dropdown-item">I. Paradigme impératif et fonctionnel</a>
-</li>
-            
-<li>
-    <a href="../../seq1/POO/" class="dropdown-item">II. Paradigme objet</a>
-</li>
-            
-<li>
-    <a href="../../seq1/Synth%C3%A8se_El%C3%A8ve/" class="dropdown-item">Synthèse</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">2. Autour de la récursivité</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../seq2/piles/" class="dropdown-item">I. Les piles</a>
-</li>
-            
-<li>
-    <a href="../../seq2/r%C3%A9cursivit%C3%A9/" class="dropdown-item">II. La récursivité</a>
-</li>
-            
-<li>
-    <a href="../../seq2/diviser_regner/" class="dropdown-item">III. Diviser pour régner</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">3. Architecture matérielle</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../../../1ere/seq1/archi/" class="dropdown-item">I. Architecture des ordinateurs</a>
-</li>
-            
-<li>
-    <a href="../../seq3/Cours_SoC/" class="dropdown-item">II. Les systèmes sur puce</a>
-</li>
-    </ul>
-  </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">4. Structurer les données</a>
-    <ul class="dropdown-menu">
-            
-<li>
-    <a href="../listes/" class="dropdown-item">I. Les listes</a>
-</li>
-            
-<li>
-    <a href="./" class="dropdown-item active">II. Les files</a>
-</li>
-            
-<li>
-    <a href="../dico/" class="dropdown-item">III. Les dictionnaires</a>
-</li>
-            
-<li>
-    <a href="../synthese/" class="dropdown-item">Synthèse</a>
-</li>
-    </ul>
-  </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../../projets/tle_poo_rec/presentation/" class="dropdown-item">Tle - POO & Récursivité</a>
-</li>
-                                    
-<li>
-    <a href="../../../projets/1ere_cyber/presentation/" class="dropdown-item">1ère - Cybersécurité</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="navitem">
-                                <a href="../../../ressources/" class="nav-link">Ressources</a>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../listes/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../dico/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>II. Les files - Trebaul NSI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+      
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#sequence-4" class="nav-link">Séquence 4</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="1"><a href="#ii-les-files" class="nav-link">II. Les files</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#cours" class="nav-link">Cours</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#tp-implementations" class="nav-link">TP : Implémentations</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#td-modelisation" class="nav-link">TD : Modélisation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../pyodide-mkdocs/interpreter.js"></script> 
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans+serif:300,300i,400,400i,700,700i%7CComputer+New:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"sans serif";--md-code-font:"Computer New"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+<link rel="stylesheet" href="../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../qcm/qcm.css">
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ii-les-files" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Trebaul NSI" class="md-header__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Trebaul NSI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              II. Les files
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../2nde/prog/fonctions/" class="md-tabs__link">
+        Seconde
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../1ere/seq1/logique/" class="md-tabs__link">
+        Première
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Terminale
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../projets/pr%C3%A9s_projet/" class="md-tabs__link">
+        Projets
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../culture_g%C3%A9/" class="md-tabs__link">
+        Ressources
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Trebaul NSI" class="md-nav__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Trebaul NSI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1">
+          Bases de la programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bases de la programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bases de la programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/prog/fonctions/" class="md-nav__link">
+        III. Les fonctions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          1. De la logique à la machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. De la logique à la machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          1. De la logique à la machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/logique/" class="md-nav__link">
+        I. Logique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/archi/" class="md-nav__link">
+        II. Architecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          2. Représenter les nombres en machine
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Représenter les nombres en machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          2. Représenter les nombres en machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/entiers_positifs/" class="md-nav__link">
+        I. Les entiers positifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/entiers_relatifs/" class="md-nav__link">
+        II. Les entiers relatifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/flottants/" class="md-nav__link">
+        III. Les flottants
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          3. Les types construits
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Les types construits" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          3. Les types construits
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/tableaux/" class="md-nav__link">
+        I. Le type tableau
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/tableaux_algo/" class="md-nav__link">
+        II. Algorithmes sur les tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/puplet/" class="md-nav__link">
+        III. Le type p-uplet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/synthese/" class="md-nav__link">
+        IV. Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          4. Du texte à l'hypertexte
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Du texte à l'hypertexte" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          4. Du texte à l'hypertexte
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/texte_machine/" class="md-nav__link">
+        I. Représentation du texte en machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/bases_web/" class="md-nav__link">
+        II. L'hypertexte et les bases du web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/langages_web/" class="md-nav__link">
+        III. Les langages du Web HTML et CSS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          1. Différentes manières de programmer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Différentes manières de programmer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Différentes manières de programmer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/Imp%C3%A9ratif_Fonctionnel/" class="md-nav__link">
+        I. Paradigme impératif et fonctionnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/POO/" class="md-nav__link">
+        II. Paradigme objet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/Synth%C3%A8se_El%C3%A8ve/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          2. Autour de la récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Autour de la récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Autour de la récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/piles/" class="md-nav__link">
+        I. Les piles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/r%C3%A9cursivit%C3%A9/" class="md-nav__link">
+        II. La récursivité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/diviser_regner/" class="md-nav__link">
+        III. Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          3. Architecture matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Architecture matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          3. Architecture matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/archi/" class="md-nav__link">
+        I. Architecture des ordinateurs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq3/Cours_SoC/" class="md-nav__link">
+        II. Les systèmes sur puce
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          4. Structurer les données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Structurer les données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          4. Structurer les données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../listes/" class="md-nav__link">
+        I. Les listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          II. Les files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        II. Les files
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-implementations" class="md-nav__link">
+    TP : Implémentations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-modelisation" class="md-nav__link">
+    TD : Modélisation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dico/" class="md-nav__link">
+        III. Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synthese/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          5. Les bases de données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Les bases de données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          5. Les bases de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/Mod%C3%A8le_Relationnel/" class="md-nav__link">
+        I. Le modèle relationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/BDD_Relationnelles/" class="md-nav__link">
+        II. Les bases de données relationnelles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/SQL/" class="md-nav__link">
+        III. Structured Query Language (SQL)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          6. Les structures hiérarchiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6. Les structures hiérarchiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          6. Les structures hiérarchiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq6/arbres/" class="md-nav__link">
+        I. La structure d'arbre
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq6/arbres_algo/" class="md-nav__link">
+        II. Les algorithmes sur les arbres
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/pr%C3%A9s_projet/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/BonnesPratiques_Structure/" class="md-nav__link">
+        Méthodologie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          1ère - Cybersécurité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1ère - Cybersécurité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          1ère - Cybersécurité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/Pr%C3%A9sentation_Sujets/" class="md-nav__link">
+        Sujets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/TP_Pr%C3%A9paration_V2/" class="md-nav__link">
+        Préparation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Tle - POO & Récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tle - POO & Récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tle - POO & Récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Pr%C3%A9sentation/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Gestion_Projet/" class="md-nav__link">
+        Suivi de projet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Rendus/" class="md-nav__link">
+        Rendus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ressources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ressources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../culture_g%C3%A9/" class="md-nav__link">
+        Culture générale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-implementations" class="md-nav__link">
+    TP : Implémentations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-modelisation" class="md-nav__link">
+    TD : Modélisation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
 
 <style>
 body {
 text-align: justify}
 </style>
 
-<h1 id="sequence-4"><strong>Séquence 4</strong></h1>
-<h1 id="ii-les-files">II. Les files</h1>
+<h1 id="ii-les-files">II. Les files<a class="headerlink" href="#ii-les-files" title="Permanent link">&para;</a></h1>
 <hr />
-<h2 id="cours">Cours</h2>
-<h3 id="a-definition">A. Définition</h3>
+<h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
+<h3 id="a-definition">A. Définition<a class="headerlink" href="#a-definition" title="Permanent link">&para;</a></h3>
 <p>Une <strong>file</strong> est une structure de données basée sur le principe « premier entré, premier sorti » (en anglais <em>"First In, First Out"</em> (FIFO)), c’est-à-dire que les premiers éléments ajoutés à la file seront les premiers à être enlevés.</p>
 <p><img alt="" src="../img/file.png" /></p>
 <p><strong><em>Exemples</em></strong> de la vie quotidienne :<br />
@@ -246,7 +1614,7 @@ text-align: justify}
 - <strong><em>pour la gestion du temps affecté à chaque tâche par un système d'exploitation,</em></strong><br />
 - <strong><em>pour la gestion de la file d'attente de documents à imprimer,</em></strong><br />
 - <strong><em>pour matérialiser une file d'attente d'un logiciel de visioconférence, d'un jeu en ligne,...</em></strong></p>
-<h3 id="b-type-abstrait">B. Type abstrait</h3>
+<h3 id="b-type-abstrait">B. Type abstrait<a class="headerlink" href="#b-type-abstrait" title="Permanent link">&para;</a></h3>
 <p>Les opérations primitives que l'on peut faire sur une file sont les suivantes :<br />
 - <em>construire</em> une file <em>vide</em> (<code>fileCree()</code>),<br />
 - <em>ajouter</em> un élément à la file (il se retrouve après les autres) (<code>fileAjouterFin(file, element)</code>),<br />
@@ -255,49 +1623,49 @@ text-align: justify}
 - obtenir le <em>nombre d'éléments</em> contenus dans la file (<code>fileTaille(file)</code>),<br />
 - obtenir la <em>tête</em> de la file, aussi appelé <em>sommet</em> (sans la retirer) (<code>fileTete(file)</code>).</p>
 <p><strong><em>Exercice :</em></strong> En utilisant les noms des fonctions donnés ci-dessus,  créer une file, lui ajouter les éléments 2 et 9, puis lui enlever le dernier élément récupéré dans une variable, avant d'estimer si elle est vide. </p>
-<p><strong><em>Correction :</em></strong></p>
-<pre><code class="language-python">f = fileCree()
-f = enfiler(f, 2)
-f = enfiler(f, 9)
-x = enfiler(f)
-print(fileVide(f))
-</code></pre>
-<h3 id="c-les-structures-lineaires-de-donnees">C. Les structures linéaires de données</h3>
+<p><strong><em>Correction :</em></strong>
+<div class="highlight"><pre><span></span><code><span class="n">f</span> <span class="o">=</span> <span class="n">fileCree</span><span class="p">()</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">enfiler</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fileVide</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</code></pre></div></p>
+<h3 id="c-les-structures-lineaires-de-donnees">C. Les structures linéaires de données<a class="headerlink" href="#c-les-structures-lineaires-de-donnees" title="Permanent link">&para;</a></h3>
 <p>Les <strong>listes</strong>, <strong>piles</strong> et <strong>files</strong> sont des structures linéaires de données : c'est-à-dire que les différents éléments sont ordonnés et adjacents les uns aux autres.</p>
 <p>Les <strong>piles</strong> et les <strong>files</strong> contrastent par leur ordre d'accès aux données est opposé : LIFO vs FIFO.</p>
 <p><br><br></p>
 <hr />
-<h2 id="tp-implementations">TP : Implémentations</h2>
+<h2 id="tp-implementations">TP : Implémentations<a class="headerlink" href="#tp-implementations" title="Permanent link">&para;</a></h2>
 <p>Dans ce TD, nous allons implémenter la <strong>structure de file</strong>, de plusieurs manières différentes.</p>
-<h3 id="a-une-premiere-implementation">A. Une première implémentation</h3>
+<h3 id="a-une-premiere-implementation">A. Une première implémentation<a class="headerlink" href="#a-une-premiere-implementation" title="Permanent link">&para;</a></h3>
 <p>Une première implémentation est donnée ci-dessous.
 A partir de ce code, créer une file et enfiler successivement les entiers de 0 à 4.</p>
-<pre><code class="language-python">def file():
-    ''' Renvoie une file vide '''
-    return []
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">file</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39; Renvoie une file vide &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="p">[]</span>
 
-def vide(f):
-    ''' Renvoie True si la file est vide, False sinon '''
-    return f == []
+<span class="k">def</span> <span class="nf">vide</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39; Renvoie True si la file est vide, False sinon &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">f</span> <span class="o">==</span> <span class="p">[]</span>
 
-def enfiler(f,x):
-    ''' Ajoute x à la file f '''
-    return f.append(x)
+<span class="k">def</span> <span class="nf">enfiler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39; Ajoute x à la file f &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">f</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-def defiler(f):
-    ''' Enlève et renvoie le premier élément de la file '''
-    assert not vide(f), &quot;file vide !&quot;
-    return f.pop(0)
-</code></pre>
-<pre><code>
-</code></pre>
+<span class="k">def</span> <span class="nf">defiler</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39; Enlève et renvoie le premier élément de la file &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">vide</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="s2">&quot;file vide !&quot;</span>
+    <span class="k">return</span> <span class="n">f</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
 <p>Créer les fonctions suivantes :
 - <code>taille</code> : renvoie la taille d'une file <code>f</code>,
 - <code>sommet</code> : renvoie le sommet d'une file <code>f</code>, sans l'enlever de la file.
 Les tester sur la file <code>f</code> créée précédemment.</p>
-<pre><code>
-</code></pre>
-<h3 id="b-implementation-avec-deux-piles">B. Implémentation avec deux piles</h3>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<h3 id="b-implementation-avec-deux-piles">B. Implémentation avec deux piles<a class="headerlink" href="#b-implementation-avec-deux-piles" title="Permanent link">&para;</a></h3>
 <p>Pour la deuxième implantation, nous allons utiliser deux structures de piles et la programmation orientée objet.
 Le procédé est le suivant :<br />
 - La file est, au départ, composée de <strong>deux piles</strong> vides : une <strong>pile d'entrée</strong> et une <strong>pile de sortie</strong>.<br />
@@ -311,95 +1679,92 @@ Le procédé est le suivant :<br />
 - Ajouter à la classe File les méthodes suivantes :<br />
     1. <code>sommet</code> : retourne le sommet de la file, sans l'en enlever.<br />
     2. <code>taille</code> : retourne le nombre d'éléments de la file.</p>
-<pre><code class="language-python">class Pile:
-    ''' Définition d'une classe Pile
-    une instance Pile est créée avec une liste Python '''
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39; Définition d&#39;une classe Pile</span>
+<span class="sd">    une instance Pile est créée avec une liste Python &#39;&#39;&#39;</span>
 
-    def __init__(self):
-        &quot;Création d'une pile vide&quot;
-        self.L = []
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Création d&#39;une pile vide&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
 
-    def vide(self):
-        &quot;Teste si la pile est vide&quot;
-        return self.L == []
+    <span class="k">def</span> <span class="nf">vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Teste si la pile est vide&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">==</span> <span class="p">[]</span>
 
-    def depiler(self):
-        &quot;Dépile : enlève le dernier élément&quot;
-        assert( not(self.vide()) ), &quot;Pile vide !&quot;
-        return self.L.pop()
+    <span class="k">def</span> <span class="nf">depiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Dépile : enlève le dernier élément&quot;</span>
+        <span class="k">assert</span><span class="p">(</span> <span class="ow">not</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vide</span><span class="p">())</span> <span class="p">),</span> <span class="s2">&quot;Pile vide !&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 
-    def empiler(self,x):
-        &quot;Empile : ajoute un élément x en haut de la pile&quot;
-        self.L.append(x)
+    <span class="k">def</span> <span class="nf">empiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+        <span class="s2">&quot;Empile : ajoute un élément x en haut de la pile&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-    def taille(self):
-        &quot;Retourne la taille (le nombre d'éléments) de la pile&quot;
-        return len(self.L)
+    <span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Retourne la taille (le nombre d&#39;éléments) de la pile&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
 
-    def sommet(self):
-        &quot;Retourne le premier élément à sortir de la pile sans le dépiler&quot;
-        return self.L[self.taille()-1]
-
-
-
-class File:
-
-    def __init__(self):
-        ''' Crée une file vide.
-        Attribut pile_entree : objet Pile stockant les nouvelles valeurs ajoutées à la file.
-        Attribut pile_sortie : objet Pile stockant les valeurs qui vont sortir de la file. Son sommet est le premier élément de la file.
-        '''
-        self.pile_entree = Pile()
-        self.pile_sortie = Pile()
-
-    def vide(self):
-        ''' Teste si la file est vide ou non. '''
-        return ???
-
-    def enfiler(self, x):
-        ''' Ajoute l'élément x à la file.'''
-        self.pile_entree.empiler(x)
-
-    def organiser(self):
-        ''' Fonction auxiliaire actualisant l'état de la pile de sortie lorsque l'on veut supprimer un élément de la file. 
-        Si la pile de sortie est vide, on lui ajoute successivement les éléments que l'on dépile à la pile d'entrée. '''
-        if self.pile_sortie.vide():
-            ???
-
-    def defiler(self):
-        ''' Supprime le premier élément entré dans la file. '''
-        self.organiser()
-        ???
+    <span class="k">def</span> <span class="nf">sommet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Retourne le premier élément à sortir de la pile sans le dépiler&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
 
-</code></pre>
+
+<span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; Crée une file vide.</span>
+<span class="sd">        Attribut pile_entree : objet Pile stockant les nouvelles valeurs ajoutées à la file.</span>
+<span class="sd">        Attribut pile_sortie : objet Pile stockant les valeurs qui vont sortir de la file. Son sommet est le premier élément de la file.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pile_entree</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pile_sortie</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; Teste si la file est vide ou non. &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="err">???</span>
+
+    <span class="k">def</span> <span class="nf">enfiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; Ajoute l&#39;élément x à la file.&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pile_entree</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">organiser</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; Fonction auxiliaire actualisant l&#39;état de la pile de sortie lorsque l&#39;on veut supprimer un élément de la file. </span>
+<span class="sd">        Si la pile de sortie est vide, on lui ajoute successivement les éléments que l&#39;on dépile à la pile d&#39;entrée. &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pile_sortie</span><span class="o">.</span><span class="n">vide</span><span class="p">():</span>
+            <span class="err">???</span>
+
+    <span class="k">def</span> <span class="nf">defiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; Supprime le premier élément entré dans la file. &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">organiser</span><span class="p">()</span>
+        <span class="err">???</span>
+</code></pre></div>
 <p>Tester le bon fonctionnement du code suivant :</p>
-<pre><code class="language-python">f = File()
-for i in range(5):
-    f.enfiler(2*i)
-print(f.taille())
-a = f.defiler()
-print(a)
-print(f.taille())
-print(f.sommet())
-</code></pre>
-<h3 id="c-implementation-avec-une-liste-python">C. Implémentation avec une liste Python</h3>
+<div class="highlight"><pre><span></span><code><span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">taille</span><span class="p">())</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">taille</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">sommet</span><span class="p">())</span>
+</code></pre></div>
+<h3 id="c-implementation-avec-une-liste-python">C. Implémentation avec une liste Python<a class="headerlink" href="#c-implementation-avec-une-liste-python" title="Permanent link">&para;</a></h3>
 <p>En vous inspirant de l'implémentation d'une pile en POO que nous avions faite, proposer une implémentation similaire pour une structure de file : en utilisant une liste Python. On devra retrouver les mêmes primitives que pour les autres implémentations. Faire un test en créant un nouvel objet File, et en lui appliquant les différentes méthodes.</p>
-<pre><code class="language-python">class File:
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
 
-    # à compléter
-</code></pre>
-<h3 id="d-limplementation-python">D. L'implémentation Python</h3>
+    <span class="c1"># à compléter</span>
+</code></pre></div>
+<h3 id="d-limplementation-python">D. L'implémentation Python<a class="headerlink" href="#d-limplementation-python" title="Permanent link">&para;</a></h3>
 <p>Python possède sa propre implémentation de file, utilisable aussi pour modéliser une pile. Il s'agit de la structure <strong>deque</strong> ("double-ended queue").</p>
 <p>Utiliser sa documentation : https://docs.python.org/fr/3/library/collections.html#collections.deque pour choisir les méthodes qui permettent de simuler le fonctionnement d'une file. On y retrouve des méthodes similaires à celles définies pour les listes Python, mais avec la possibilité d'ajouter et de supprimer des éléments soit à droite, soit à gauche.</p>
 <p>Rajouter, à la suite du code ci-dessous, des instructions qui permettent de créer un objet <code>deque</code>, de lui enfiler plusieurs éléments, d'estimer si la file est vide, et de défiler un élément. Il y a plusieurs solutions.</p>
-<pre><code class="language-python">from collections import deque
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+</code></pre></div>
 <p><br><br></p>
 <hr />
-<h2 id="td-modelisation">TD : Modélisation</h2>
-<h3 id="a-presentation">A. Présentation</h3>
+<h2 id="td-modelisation">TD : Modélisation<a class="headerlink" href="#td-modelisation" title="Permanent link">&para;</a></h2>
+<h3 id="a-presentation">A. Présentation<a class="headerlink" href="#a-presentation" title="Permanent link">&para;</a></h3>
 <p>On souhaite écrire un algorithme qui simule l'arrivée de voitures sur la route R3, modélisée par la file <code>f3</code>.<br />
 - Dans la file <code>f1</code>, on représente la présence d’une voiture par le nombre <code>1</code> et l’absence de voiture par <code>0</code>.<br />
 - Dans la file <code>f2</code>, on représentera la présence d’une voiture par le nombre <code>2</code> et l’absence de voiture par <code>0</code>.</p>
@@ -408,7 +1773,7 @@ print(f.sommet())
 <br><br>
 Donner la file <code>f2</code> correspondant à la situation suivante : pas de voiture, pas de voiture, une voiture, une voiture, pas de voiture, une voiture.
 <br><br><br></p>
-<h3 id="b-les-differents-cas">B.  Les différents cas</h3>
+<h3 id="b-les-differents-cas">B.  Les différents cas<a class="headerlink" href="#b-les-differents-cas" title="Permanent link">&para;</a></h3>
 <p>Que doit faire l’algorithme si :
 - les deux sommets des files sont à <code>0</code> ?
 <br><br>
@@ -425,98 +1790,99 @@ Donner la file <code>f2</code> correspondant à la situation suivante : pas de v
 <code>f1</code> : tête &lt;– [0, 1, 1, 0, 1] &lt;– queue<br />
 <code>f2</code> : tête &lt;– [0, 2, 2, 2, 0, 2, 0] &lt;– queue
 <br><br><br><br><br></p>
-<h3 id="c-construction-de-lalgorithme">C. Construction de l’algorithme</h3>
+<h3 id="c-construction-de-lalgorithme">C. Construction de l’algorithme<a class="headerlink" href="#c-construction-de-lalgorithme" title="Permanent link">&para;</a></h3>
 <p>Ecrire sous la forme d’un pseudo-code la fonction <code>croisement</code> prenant en entrées les deux files <code>f1</code> et <code>f2</code>, et retournant la file <code>f3</code>. Tous les cas identifiés dans la partie précédente devront être traités. On n’utilisera que les primitives utilisables sur les files.</p>
-<pre><code class="language-python">
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<h3 id="d-implementation-de-lalgorithme">D. Implémentation de l’algorithme<a class="headerlink" href="#d-implementation-de-lalgorithme" title="Permanent link">&para;</a></h3>
+<p>Implémenter le pseudo-code précédent et le tester sur l’exemple donné dans la partie 2. On utilisera une implémentation de file avec la POO, utilisant les méthodes <code>enfiler</code>, <code>defiler</code>, <code>sommet</code> et <code>estVide</code>.</p>
 
 
 
 
 
+                
+<script src="../../../pyodide-mkdocs/ide.js"></script> 
 
-
-
-
-</code></pre>
-<h3 id="d-implementation-de-lalgorithme">D. Implémentation de l’algorithme</h3>
-<p>Implémenter le pseudo-code précédent et le tester sur l’exemple donné dans la partie 2. On utilisera une implémentation de file avec la POO, utilisant les méthodes <code>enfiler</code>, <code>defiler</code>, <code>sommet</code> et <code>estVide</code>.</p></div>
+              </article>
             </div>
+          
+          
         </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "../../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../../js/base.js" defer></script>
-        <script src="../../../mathjax.js" defer></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
-        <script src="../../../search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../listes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: I. Les listes" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              I. Les listes
             </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../dico/" class="md-footer__link md-footer__link--next" aria-label="Next: III. Les dictionnaires" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              III. Les dictionnaires
             </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-
-    </body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "toc.follow"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
 </html>
