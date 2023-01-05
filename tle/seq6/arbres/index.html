@@ -1258,8 +1258,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#td-implementation-des-arbres-binaires" class="md-nav__link">
-    TD : Implémentation des arbres binaires
+  <a href="#tp-implementation-des-arbres-binaires" class="md-nav__link">
+    TP : Implémentation des arbres binaires
   </a>
   
 </li>
@@ -1692,8 +1692,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#td-implementation-des-arbres-binaires" class="md-nav__link">
-    TD : Implémentation des arbres binaires
+  <a href="#tp-implementation-des-arbres-binaires" class="md-nav__link">
+    TP : Implémentation des arbres binaires
   </a>
   
 </li>
@@ -1811,7 +1811,7 @@ text-align: justify}
 </ul>
 <details class="note">
 <summary>Solution</summary>
-<p>La racine est A. Des feuilles sont par exemple D ou H, alors que B, C et F sont des noeuds.</p>
+<p>La racine est A. Des feuilles sont par exemple D ou H, alors que B ou C sont des noeuds.</p>
 </details>
 <ul>
 <li>identifier le père du nœud étiqueté "H" et donner le(s) fils du nœud étiqueté "B".</li>
@@ -1838,8 +1838,8 @@ text-align: justify}
 </ul>
 </div>
 <details class="example">
-<summary>Exemple : Donner la taille et la hauteur de l'arbre de la partie précédente. Quelle est la profondeur du nœud étiqueté "E" ? "I" ?</summary>
-<p>Sa taille est de 10. La profondeur de E est 3, celle de I est 4.</p>
+<summary>Exemple : Donner la taille et la hauteur de l'arbre de la partie précédente. Quelle est la profondeur du nœud étiqueté "E" ? "C" ?</summary>
+<p>Sa taille est de 8. La profondeur de E est 3, celle de C est 2.</p>
 </details>
 <details class="abstract">
 <summary>Exercice : Dessiner un arbre de taille 9, étiqueté par des nombres de 0 à 8, de racine 0 et de hauteur 3.</summary>
@@ -1849,14 +1849,14 @@ text-align: justify}
   A --&gt; C((2))
   B --&gt; D((3))
   B --&gt; F((7))
-  C --&gt; G((9))
+  C --&gt; G((5))
   E --&gt; H((6))
   E --&gt; J((8))</code></pre>
 </details>
 <h3 id="c-les-arbres-binaires">C. Les arbres binaires<a class="headerlink" href="#c-les-arbres-binaires" title="Permanent link">&para;</a></h3>
 <h4 id="ci-definition">C.I. Définition<a class="headerlink" href="#ci-definition" title="Permanent link">&para;</a></h4>
 <div class="admonition info">
-<p>Un arbre est dit <strong>binaire</strong> si chacun de ses nœuds admet au plus deux fils, appelés fils gauche et fils droit.</p>
+<p>Un arbre est dit <strong>binaire</strong> si chacun de ses nœuds admet au plus deux fils, appelés <strong>fils gauche</strong> et <strong>fils droit</strong>.</p>
 </div>
 <div class="admonition info">
 <p>On appelle <strong>sous-arbre gauche</strong>, et respectivement <strong>sous-arbre droit</strong>, d’un nœud l’arbre issu du fils gauche, respectivement fils droit, de ce nœud.</p>
@@ -1876,8 +1876,8 @@ text-align: justify}
 </details>
 <h4 id="cii-mesures">C.II. Mesures<a class="headerlink" href="#cii-mesures" title="Permanent link">&para;</a></h4>
 <h5 id="ciia-vocabulaire">C.II.a. Vocabulaire<a class="headerlink" href="#ciia-vocabulaire" title="Permanent link">&para;</a></h5>
-<p><em>Ces définitions sont données à titre indicatif, pour les besoins des démonstrations suivantes.</em>
-- un arbre binaire <strong>complet</strong> est un arbre dont toutes les feuilles sont à la même profondeur.
+<p><em>Ces définitions sont données à titre indicatif, pour les besoins des démonstrations suivantes.</em><br />
+- un arbre binaire <strong>complet</strong> est un arbre dont toutes les feuilles sont à la même profondeur.<br />
 - un arbre binaire <strong>filiforme</strong> est un arbre dont tous les nœuds ont au plus 1 fils.</p>
 <h5 id="ciib-encadrement-de-la-hauteur">C.II.b. Encadrement de la hauteur<a class="headerlink" href="#ciib-encadrement-de-la-hauteur" title="Permanent link">&para;</a></h5>
 <ul>
@@ -1892,7 +1892,10 @@ text-align: justify}
   B --&gt; E(( ))
   C --&gt; G(( ))
   C --&gt; H(( ))</code></pre>
-Sa hauteur est de 3, soit <span class="arithmatex">\(h=\lfloor log2(n) \rfloor\)</span>. En effet, <span class="arithmatex">\(log2(7)=2,8\)</span>. Sa partie entière vaut donc 2. Donc <span class="arithmatex">\(h=\lfloor log2(n) \rfloor +1\)</span>.</p>
+Sa hauteur est de 3, et <span class="arithmatex">\(n\)</span> vaut <span class="arithmatex">\(7=2^3-1\)</span>.<br />
+Donc <span class="arithmatex">\(7+1 = 2^3\)</span>, soit en généralisant, <span class="arithmatex">\(n+1=2^h\)</span>.<br />
+La fonction inverse de la fonction qui transforme <span class="arithmatex">\(x\)</span> en <span class="arithmatex">\(2^x\)</span> et la fonction <span class="arithmatex">\(log_2\)</span>, donc :<br />
+<span class="arithmatex">\(log_2(n+1) = log_2(2^h) = h\)</span>    </p>
 </details>
 <ul>
 <li>Dessiner un arbre filiforme de taille <span class="arithmatex">\(n=7\)</span>. Quelle est sa hauteur ? L'exprimer en fonction de <span class="arithmatex">\(n\)</span>.</li>
@@ -1913,7 +1916,9 @@ Sa hauteur est de 3, soit <span class="arithmatex">\(h=\lfloor log2(n) \rfloor\)
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Solution</p>
-<p>On en déduit que <span class="arithmatex">\(\lfloor log2(n) \rfloor + 1 &lt;h&lt; n\)</span>.</p>
+<p>La valeur renvoyée par le logarithme n'est pas toujours entière. Pour qu'elle le soit dans tous les cas, on l'arrondit à l'entier supérieur :<br />
+<span class="arithmatex">\(\lceil log_2(n+1) \rceil &lt; h\)</span><br />
+On en déduit que <span class="arithmatex">\(\lceil log2(n+1) \rceil \leq h \leq n\)</span>.</p>
 </div>
 <h5 id="ciic-encadrement-de-la-taille">C.II.c. Encadrement de la taille<a class="headerlink" href="#ciic-encadrement-de-la-taille" title="Permanent link">&para;</a></h5>
 <ul>
@@ -1955,7 +1960,8 @@ Soit <span class="arithmatex">\(n = 2^{h}-1\)</span>.</p>
 <p>Un <strong>arbre binaire de recherche (ABR)</strong> est un arbre vide ou un arbre binaire ayant les propriétés suivantes :<br />
 - tous les nœuds sont étiquetés par des nombres,<br />
 - la racine est <strong><em>supérieure ou égale</em></strong> à tout nœud du sous-arbre gauche,<br />
-- la racine est <strong><em>inférieure</em></strong> à tout nœud du sous-arbre droit, les deux sous-arbres de la racine sont eux-mêmes des ABR. </p>
+- la racine est <strong><em>inférieure</em></strong> à tout nœud du sous-arbre droit, 
+- les deux sous-arbres de la racine sont eux-mêmes des ABR. </p>
 </div>
 <details class="example">
 <summary>Exemple : donner un arbre binaire satisfaisant les conditions ci-dessus pour être un ABR.</summary>
@@ -2046,7 +2052,7 @@ propose une version simplifiée de cet arbre :</p>
     <span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
 </code></pre></div></p>
 <hr />
-<h2 id="td-implementation-des-arbres-binaires">TD : Implémentation des arbres binaires<a class="headerlink" href="#td-implementation-des-arbres-binaires" title="Permanent link">&para;</a></h2>
+<h2 id="tp-implementation-des-arbres-binaires">TP : Implémentation des arbres binaires<a class="headerlink" href="#tp-implementation-des-arbres-binaires" title="Permanent link">&para;</a></h2>
 <p>Pour manipuler des arbres binaires, il faut en utiliser une implémentation Python. Comme pour les listes, les piles et les files, nous allons proposer plusieurs implémentations de cette structure.</p>
 <h3 id="a-representation-imbriquee-avec-un-p-uplet">A. Représentation imbriquée avec un p-uplet<a class="headerlink" href="#a-representation-imbriquee-avec-un-p-uplet" title="Permanent link">&para;</a></h3>
 <p>On peut représenter les arbres binaires de manière imbriquée avec des p-uplets (type Python : <code>tuple</code>). L’arbre vide est représenté par un p-uplet vide, et, dans tous les autres cas, un nœud est un p-uplet de 3 valeurs contenant :  </p>
@@ -2105,6 +2111,18 @@ Instancier un objet de cette classe pour représenter notre arbre.</p>
 </code></pre></div>
 <h4 id="bii-application">B.II. Application<a class="headerlink" href="#bii-application" title="Permanent link">&para;</a></h4>
 <p>Représenter l'arbre de la partie A.II. avec cette classe.</p>
+<p>Pour visualiser le résultat, utiliser la méthode récursive <code>affiche</code> qui permet de visualiser l’arbre.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">space</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">spaces</span> <span class="o">=</span> <span class="s2">&quot;  &quot;</span><span class="o">*</span><span class="n">space</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">spaces</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">racine</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">space</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">space</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="biii-amelioration-de-la-classe-arbrebinaire">B.III. Amélioration de la classe ArbreBinaire<a class="headerlink" href="#biii-amelioration-de-la-classe-arbrebinaire" title="Permanent link">&para;</a></h3>
+<p>Rajouter les accesseurs et les mutateurs des attributs de cette classe (notés <code>getRacine</code>, <code>getABGauche</code>, <code>getABDroit</code>, <code>setRacine</code>, <code>setABGauche</code>, <code>setABDroit</code>).</p>
+<p>Nous allons utiliser cette classe et ces méthodes dans un prochain TP.</p>
 
 
 
