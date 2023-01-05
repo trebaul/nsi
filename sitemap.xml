@@ -21,7 +21,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/tle/</loc>
+         <loc>https://example.com/1ere/1ere/</loc>
          <lastmod>2023-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -172,6 +172,11 @@
     </url>
     <url>
          <loc>https://example.com/projets/tle_poo_rec/presentation/</loc>
+         <lastmod>2023-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/tle/tle/</loc>
          <lastmod>2023-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
