@@ -1952,7 +1952,7 @@ L’algorithme s’arrête lorsque l’appel récursif se fait sur un arbre vide
 </code></pre></div>
 <p>2) A quel parcours ce code-correspond-il ? Justifier.</p>
 <p>3) Combien de fois accède-t-on à chaque nœud de l’arbre ? En déduire la complexité de cet algorithme en fonction
-de la taille de l’arbre <!-- <span class="arithmatex">\(n\)</span> --> <img style="transform: translateY(0.1em); background: white;" src="..\..\..\..\..\Documents\Cours\web\nsi\svg\tkv8uiMiFW.svg">.</p>
+de la taille de l’arbre <span class="arithmatex">\(n\)</span>.</p>
 <p>4) Modifier le code pour obtenir les deux autres parcours en profondeur.</p>
 <p>5) Tester ces parcours sur l’arbre d'exemple et vérifier leur bon fonctionnement grâce aux résultats obtenus ”à la main”.</p>
 <p>6) Proposer une autre version de chacun de ces parcours, qui ne renvoie pas une liste Python mais <em>affiche</em> au
@@ -1965,8 +1965,8 @@ fur et à mesure les nœuds de l’arbre rencontrés.</p>
     <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
 
     <span class="k">while</span> <span class="ow">not</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">vide</span><span class="p">()):</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
-        <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
+        <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">getRacine</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">getABGauche</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">getABGauche</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">getABDroit</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
@@ -1975,7 +1975,7 @@ fur et à mesure les nœuds de l’arbre rencontrés.</p>
     <span class="k">return</span> <span class="n">parcours</span>
 </code></pre></div>
 1) Identifier les types des entrées et sorties, ainsi que celui de la variable temporaire.</p>
-<p>1) Indiquer le contenu des variables <code>r</code>, <code>f</code> et <code>parcours</code> à l’initialisation (code exécuté jusqu’à la ligne 4) et à la fin de chaque passage de boucle lorsque la fonction est appliquée à l’arbre d'exemple utilisé dans les parties précédentes. On représentera l’arbre schématiquement.</p>
+<p>1) Indiquer le contenu des variables <code>e</code>, <code>f</code> et <code>parcours</code> à l’initialisation (code exécuté jusqu’à la ligne 4) et à la fin de chaque passage de boucle lorsque la fonction est appliquée à l’arbre d'exemple utilisé dans les parties précédentes. On représentera l’arbre schématiquement.</p>
 <p>2) Quelle est l’utilité de <code>f</code> ?</p>
 <p>3) Recopier cette fonction sur ordinateur en ajoutant sa spécification <em>(les types des variables d’entrée
 et sortie)</em>. On n’oubliera pas d’importer une implémentation de structure de file.</p>
