@@ -1297,6 +1297,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-algorithmes-sur-les-arbres-binaires" class="md-nav__link">
+    TP : Algorithmes sur les arbres binaires
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1710,6 +1717,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-algorithmes-sur-les-arbres-binaires" class="md-nav__link">
+    TP : Algorithmes sur les arbres binaires
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1792,8 +1806,8 @@ text-align: justify}
 <details class="note">
 <summary>Quel algorithme appliquer pour faire une recherche dans un ABR ?</summary>
 <p>On parcourt l'arbre en commençant par la racine :
-- si elle est égale à la valeur recherchée, la valeur est trouvée,
-- sinon si celle-ci est plus petite que la valeur recherchée, on continue le parcours dans le <strong>sous-arbre droit</strong>,
+- si elle est égale à la valeur recherchée, la valeur est trouvée,<br />
+- sinon si celle-ci est plus petite que la valeur recherchée, on continue le parcours dans le <strong>sous-arbre droit</strong>,<br />
 - sinon, on continue dans le <strong>sous-arbre gauche</strong>.
 Dans les deux derniers cas, on réapplique l'algorithme en partant de la racine du sous-arbre en question, jusqu'à tomber sur un <strong>sous-arbre vide</strong>.</p>
 </details>
@@ -1895,6 +1909,77 @@ Dans les deux derniers cas, on réapplique l'algorithme en partant de la racine 
 <p>Donner le <strong>parcours en largeur</strong> de cet arbre.</p>
 </li>
 </ol>
+<hr />
+<h2 id="tp-algorithmes-sur-les-arbres-binaires">TP : Algorithmes sur les arbres binaires<a class="headerlink" href="#tp-algorithmes-sur-les-arbres-binaires" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Dans ce TP, nous utilisons la classe <code>ArbreBinaire</code> définie dans le TP sur l'implémentation des arbres binaires, et l'arbre d'exemple du même TP.</p>
+</div>
+<h3 id="a-calcul-de-mesures">A. Calcul de mesures<a class="headerlink" href="#a-calcul-de-mesures" title="Permanent link">&para;</a></h3>
+<h4 id="bi-la-taille">B.I. La taille<a class="headerlink" href="#bi-la-taille" title="Permanent link">&para;</a></h4>
+<p>1) On propose une description d’un algorithme <strong>récursif</strong> permettant de calculer la taille d’un arbre binaire. A
+partir de celle-ci, proposer un pseudo-code de l’algorithme.</p>
+<div class="admonition note">
+<p class="admonition-title">Description</p>
+<p>La taille de l’arbre correspond à la <strong>somme de la taille de ses sous-arbres</strong>. On parcourt donc les sous-arbres gauche et droit récursivement, et on incrémente la taille à chaque fois que l’on rencontre un nouveau nœud.<br />
+L’algorithme s’arrête lorsque l’appel récursif se fait sur un arbre vide.</p>
+</div>
+<p>2) Tester cet algorithme en l’implémentant en Python et en utilisant l’arbre d'exemple implémenté précédemment avec la classe <code>ArbreBinaire</code>. N'oubliez pas que vous pouvez afficher le résultat avec la méthode <code>affiche</code>.</p>
+<h4 id="bii-la-hauteur">B.II. La hauteur<a class="headerlink" href="#bii-la-hauteur" title="Permanent link">&para;</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Description</p>
+<p>L’algorithme qui permet de calculer la <strong>hauteur</strong> d’un arbre binaire est similaire à celui utilisé pour la taille. La différence est qu’à chaque niveau de profondeur atteint (chaque nouvel appel récursif), on incrémente de 1 la hauteur, et on sélectionne le maximum des hauteurs entre celle du sous-arbre gauche et celle du sous-arbre droit.</p>
+</div>
+<p>1) Proposer un pseudo-code de cet algorithme.
+2) L’implémenter sur le même arbre qu’en I.A.</p>
+<p><strong>N.B.:</strong> on pourra utiliser la fonction <code>max</code> de Python pour sélectionner la plus grande des deux hauteurs.</p>
+<h3 id="b-ii-les-parcours">B. II. Les parcours<a class="headerlink" href="#b-ii-les-parcours" title="Permanent link">&para;</a></h3>
+<h4 id="iia-parcours-en-profondeur">II.A. Parcours en profondeur<a class="headerlink" href="#iia-parcours-en-profondeur" title="Permanent link">&para;</a></h4>
+<p>1) Donner les parcours préfixe, infixe et postfixe de l’arbre d'exemple du TP précédent : </p>
+<pre class="mermaid"><code>graph TB
+  A(( )) --&gt; B(2)
+  A --&gt; C(0)
+  B --&gt; D(2)
+  B --&gt; E(3)</code></pre>
+<p>On propose une fonction qui effectue un de ces parcours en profondeur d’un arbre binaire et stocke le résultat dans une liste Python.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parcours</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">getRacine</span><span class="p">()</span>
+        <span class="n">ag</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">getABGauche</span><span class="p">()</span>
+        <span class="n">ad</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">getABDroit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">parcours</span><span class="p">(</span><span class="n">ag</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">+</span> <span class="n">parcours</span><span class="p">(</span><span class="n">ad</span><span class="p">)</span>
+</code></pre></div>
+<p>2) A quel parcours ce code-correspond-il ? Justifier.</p>
+<p>3) Combien de fois accède-t-on à chaque nœud de l’arbre ? En déduire la complexité de cet algorithme en fonction
+de la taille de l’arbre <!-- <span class="arithmatex">\(n\)</span> --> <img style="transform: translateY(0.1em); background: white;" src="..\..\..\..\..\Documents\Cours\web\nsi\svg\tkv8uiMiFW.svg">.</p>
+<p>4) Modifier le code pour obtenir les deux autres parcours en profondeur.</p>
+<p>5) Tester ces parcours sur l’arbre d'exemple et vérifier leur bon fonctionnement grâce aux résultats obtenus ”à la main”.</p>
+<p>6) Proposer une autre version de chacun de ces parcours, qui ne renvoie pas une liste Python mais <em>affiche</em> au
+fur et à mesure les nœuds de l’arbre rencontrés.</p>
+<h4 id="iib-parcours-en-largeur">II.B. Parcours en largeur<a class="headerlink" href="#iib-parcours-en-largeur" title="Permanent link">&para;</a></h4>
+<p>On fournit un code du parcours en largeur d’un arbre binaire.
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parcoursLargeur</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+    <span class="n">parcours</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="ow">not</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">vide</span><span class="p">()):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
+        <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">getABGauche</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">getABGauche</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">getABDroit</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">getABDroit</span><span class="p">())</span>
+
+    <span class="k">return</span> <span class="n">parcours</span>
+</code></pre></div>
+1) Identifier les types des entrées et sorties, ainsi que celui de la variable temporaire.</p>
+<p>1) Indiquer le contenu des variables <code>r</code>, <code>f</code> et <code>parcours</code> à l’initialisation (code exécuté jusqu’à la ligne 4) et à la fin de chaque passage de boucle lorsque la fonction est appliquée à l’arbre d'exemple utilisé dans les parties précédentes. On représentera l’arbre schématiquement.</p>
+<p>2) Quelle est l’utilité de <code>f</code> ?</p>
+<p>3) Recopier cette fonction sur ordinateur en ajoutant sa spécification <em>(les types des variables d’entrée
+et sortie)</em>. On n’oubliera pas d’importer une implémentation de structure de file.</p>
+<p>4) Tester le programme sur l’arbre d'exemple.</p>
 
 
   
