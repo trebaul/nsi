@@ -1304,6 +1304,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-algorithmes-sur-les-arbres-binaires-de-recherche" class="md-nav__link">
+    TP : Algorithmes sur les arbres binaires de recherche
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1724,6 +1731,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-algorithmes-sur-les-arbres-binaires-de-recherche" class="md-nav__link">
+    TP : Algorithmes sur les arbres binaires de recherche
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1980,6 +1994,83 @@ fur et à mesure les nœuds de l’arbre rencontrés.</p>
 <p>3) Recopier cette fonction sur ordinateur en ajoutant sa spécification <em>(les types des variables d’entrée
 et sortie)</em>. On n’oubliera pas d’importer une implémentation de structure de file.</p>
 <p>4) Tester le programme sur l’arbre d'exemple.</p>
+<h2 id="tp-algorithmes-sur-les-arbres-binaires-de-recherche">TP : Algorithmes sur les arbres binaires de recherche<a class="headerlink" href="#tp-algorithmes-sur-les-arbres-binaires-de-recherche" title="Permanent link">&para;</a></h2>
+<h3 id="a-representation">A. Représentation<a class="headerlink" href="#a-representation" title="Permanent link">&para;</a></h3>
+<p>On propose d’utiliser une autre représentation pour manipuler des arbres binaires de recherche. On utilise deux classes : <code>Noeud</code> et <code>ABR</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ABR</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">racine</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">racine</span> <span class="o">=</span> <span class="n">racine</span>
+
+    <span class="k">def</span> <span class="nf">affiche_abr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">representation</span> <span class="o">=</span> <span class="s2">&quot;L&#39;arbre est vide !&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">representation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">racine</span><span class="o">.</span><span class="n">affiche</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">representation</span>
+
+<span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">,</span> <span class="n">fils_gauche</span><span class="p">,</span> <span class="n">fils_droit</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fils_gauche</span> <span class="o">=</span> <span class="n">fils_gauche</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fils_droit</span> <span class="o">=</span> <span class="n">fils_droit</span>
+
+    <span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">space</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">spaces</span> <span class="o">=</span> <span class="s2">&quot;  &quot;</span><span class="o">*</span><span class="n">space</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">spaces</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils_gauche</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fils_gauche</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">space</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils_droit</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fils_droit</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">space</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<p><strong><em>Exemple d'utilisation des classes :</em></strong>
+Le code suivant représente l'arbre ci-dessous :
+<div class="highlight"><pre><span></span><code><span class="n">n7</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">n6</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n7</span><span class="p">)</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">n4</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span> <span class="mi">4</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n6</span><span class="p">)</span>
+<span class="n">n20</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">n15</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n20</span><span class="p">)</span>
+<span class="n">n9</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">n12</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">n9</span><span class="p">,</span> <span class="n">n15</span><span class="p">)</span>
+<span class="n">n8</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">n4</span><span class="p">,</span> <span class="n">n12</span> <span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">ABR</span><span class="p">(</span><span class="n">n8</span><span class="p">)</span>
+</code></pre></div>
+<pre class="mermaid"><code>graph TB
+  A((8)) --&gt; B((4))
+  A --&gt; C((12))
+  B --&gt; D((2))
+  B --&gt; E((6))
+  E --&gt; G((7))
+  C --&gt; H((9))
+  C --&gt; I((15))
+  I --&gt; J((20))</code></pre></p>
+<div class="admonition tip">
+<p class="admonition-title">Récupérer le fichier suivant sur l'ENT.</p>
+</div>
+<ol>
+<li>Utiliser ces classes pour représenter l’ABR du TD précédent (ci-dessous), en vous aidant de l’exemple.</li>
+</ol>
+<pre class="mermaid"><code>graph TB
+  A((9)) --&gt; B(3)
+  A --&gt; C(13)
+  B --&gt; D(2)
+  B --&gt; E(5)
+
+  C --&gt; I(11)
+  C --&gt; J(17)
+
+  J --&gt; L(19)</code></pre>
+<p>2) Afficher l’arbre obtenu en utilisant la méthode <code>affiche_abr</code>.</p>
+<h3 id="b-algorithme-de-recherche">B. Algorithme de recherche<a class="headerlink" href="#b-algorithme-de-recherche" title="Permanent link">&para;</a></h3>
+<p>Nous allons cette fois-ci écrire des méthodes pour les deux classes, <em>en nous inspirant de ce qui a été fait pour la
+fonction d’affichage (implémentée dans les deux classes)</em>.</p>
+<p>Le principe est d’effectuer la recherche dans la classe <code>Noeud</code> (en considérant qu’on peut la faire en partant de
+n’importe quel noeud de l’ABR) et donc de créer une méthode <code>rechercher</code> dans celle-ci, puis de créer une méthode
+<code>rechercher_abr</code> dans la classe <code>ABR</code>, en appelant la méthode <code>rechercher</code> de la classe <code>Noeud</code> sur la racine de l’ABR.</p>
+<p>1) Implémenter ces méthodes pour rechercher une clé dans un ABR, à partir de l’algorithme décrit dans le cours.</p>
+<p>2) Les tester sur l’ABR d'exemple utilisé dans les TP précédents.</p>
+<h3 id="c-algorithme-dinsertion">C. Algorithme d'insertion<a class="headerlink" href="#c-algorithme-dinsertion" title="Permanent link">&para;</a></h3>
+<p>De la même manière que pour la recherche, implémenter une méthode <code>inserer</code> dans la classe <code>Noeud</code> et une dans la classe <code>ABR</code>, <code>inserer_abr</code>, qui permettent d’insérer une clé. Les tester sur le même ABR que l'algorithme de recherche.</p>
 
 
   
