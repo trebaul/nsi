@@ -775,6 +775,67 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          5. Interagir sur le Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Interagir sur le Web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          5. Interagir sur le Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq5/programme/" class="md-nav__link">
+        Programme
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq5/interactions_js/" class="md-nav__link">
+        I. Interagir avec l'utilisateur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1981,10 +2042,10 @@ fur et à mesure les nœuds de l’arbre rencontrés.</p>
     <span class="k">while</span> <span class="ow">not</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">vide</span><span class="p">()):</span>
         <span class="n">e</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
         <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">getRacine</span><span class="p">())</span>
-        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">getABGauche</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">getABGauche</span><span class="p">())</span>
-        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">getABDroit</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">getABDroit</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">getABGauche</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">getABGauche</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">getABDroit</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">getABDroit</span><span class="p">())</span>
 
     <span class="k">return</span> <span class="n">parcours</span>
 </code></pre></div>
