@@ -895,6 +895,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client_serveur/" class="md-nav__link">
+        II. Le modèle client-serveur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http_https/" class="md-nav__link">
+        III. Les requêtes HTTP et HTTPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synthese/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1926,7 +1968,7 @@ text-align: justify}
 </details>
 <details class="note">
 <summary>Où se trouve la balise ?</summary>
-<p>Elle se trouve ici après la balise <code>body</code>. On aurait aussi pu la mettre dans l'entête.</p>
+<p>Elle se trouve ici après la balise <code>body</code> (après la balise fermante).</p>
 </details>
 <h3 id="b-repondre-a-des-evenements-avec-du-javascript">B. Répondre à des évènements avec du Javascript<a class="headerlink" href="#b-repondre-a-des-evenements-avec-du-javascript" title="Permanent link">&para;</a></h3>
 <h4 id="bi-les-evenements">B.I. Les évènements<a class="headerlink" href="#bi-les-evenements" title="Permanent link">&para;</a></h4>
@@ -1994,6 +2036,29 @@ text-align: justify}
 <span class="w">    </span><span class="nx">maBalise</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;special&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"> </span>
 </code></pre></div>
+<p>Elle est associée au code <strong>HTML</strong> suivant <em>(seul le body est représenté)</em> :</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> HTML, CSS, et maintenant Javascript <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> Voici le contenu de ma page sur le Javascript.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;para1&quot;</span><span class="p">&gt;</span> Je veux changer l&#39;apparence de ce paragraphe.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;maFonction()&quot;</span><span class="p">&gt;</span>Cliquer ici<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Le code HTML est associé au <strong>CSS</strong> suivant : 
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Verdana</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="p">.</span><span class="nc">special</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">italic</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
 <details class="note">
 <summary>On a utilisé la fonction <code>getElementById</code> pour sélectionner un composant de la page HTML. Comment celui-ci est-il identifié ?</summary>
 <p>Il est identifiée par la valeur <code>para1</code>, qui correspond à l'identifiant d'un composant de notre page HTML.</p>
@@ -2007,7 +2072,7 @@ text-align: justify}
 <p>La classe <code>special</code> étant associée à un style différent, le contenu de <code>para1</code> va alors s'afficher en bleu, italique, et en plus gros.</p>
 </details>
 <h3 id="c-le-document-object-model-dom">C. Le Document Object Model (DOM)<a class="headerlink" href="#c-le-document-object-model-dom" title="Permanent link">&para;</a></h3>
-<p>Si l'on peut accéder aux différents éléments d'une page HTML avec du Javascript, c'est grâce au <strong>Document Object Model (DOM)</strong>.  </p>
+<p>Si l'on peut accéder aux différents éléments d'une page HTML avec du Javascript, c'est grâce à sa représentation sous la forme d'une structure appelée <strong>Document Object Model (DOM)</strong>.  </p>
 <p>Il représente <em>hiérarchiquement</em> les différentes balises d'une page HTML, qui deviennent, non plus juste du texte, mais <em>un ensemble d'objets</em> qui peuvent être manipulés. Ceux au-dessus des autres sont les "parents" des éléments "enfants".</p>
 <p><pre class="mermaid"><code>graph TB
   A(html) --&gt; B(head)
@@ -2018,7 +2083,7 @@ text-align: justify}
   C --&gt; K(p)</code></pre>
 Grâce à cette représentation, on peut accéder aux différents éléments et les modifier grâce à la <strong>bibliothèque JQuery</strong> (Javascript pour le Web). </p>
 <p><strong>Remarque :</strong><br />
-Nous avons vu la fonction <code>getElementById</code>, permettant d'accéder à un élément par son ID, mais il existe aussi :<br />
+Nous avons vu la fonction <code>getElementById</code>, permettant d'accéder à un élément par son <code>id</code>, mais il existe aussi :<br />
 - <code>getElementByClassName</code> permettant d'accéder aux éléménts <strong><em>d'une classe</em></strong>,<br />
 - <code>getElementByTagName</code> permettant d'accéder à tous les éléments <strong><em>d'un même type (<code>p</code>, <code>h1</code>,...)</em></strong>,<br />
 - et encore d'autres.</p>
@@ -2197,13 +2262,13 @@ Décomposer la première instruction de la fonction <code>Calcul</code> :<br />
       
       
         
-        <a href="../../../tle/tle/" class="md-footer__link md-footer__link--next" aria-label="Next: Présentation" rel="next">
+        <a href="../client_serveur/" class="md-footer__link md-footer__link--next" aria-label="Next: II. Le modèle client-serveur" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Présentation
+              II. Le modèle client-serveur
             </div>
           </div>
           <div class="md-footer__button md-icon">
