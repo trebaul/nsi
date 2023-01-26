@@ -1930,12 +1930,12 @@ https://pixees.fr/informatiquelycee/prem/index3.html  </p>
 <pre><code>est le nom de domaine, permettant d'identifier le serveur web qui stocke le site.
 </code></pre>
 <details class="note">
-<summary>A quoi sert une adresse IP ?</summary>
-<p>Elle sert à identifier une machine de manière unique sur un réseau.</p>
+<summary>Quel est le lien entre nom de domaine et adresse IP ?</summary>
+<p>Un nom de domaine est associé à une adresse IP via l'annuaire DNS. </p>
 </details>
 <details class="note">
-<summary>Comment fait-on le lien entre adresse IP et nom de domaine ?</summary>
-<p>Le lien est fait grâce à l'annuaire DNS</p>
+<summary>Comment est structurée une adresse IP ?</summary>
+<p>L'adresse IP, qui identifie de manière unique une machine sur le réseau, est constituée au format IPv4 de 4 nombres codés sur 1 octet (de 0 à 255).</p>
 </details>
 </details>
 <details class="note">
@@ -1975,10 +1975,9 @@ E --&gt; F(index3.html)</code></pre>
 <p><center><img src="../img/client_serveur.png" height=190 style="floating-right"></center></p>
 <p>La page est localisée, on sait où elle se trouve et sur quel serveur. Notre <strong>navigateur</strong> va entrer en connexion avec le serveur, selon le <strong>modèle client-serveur</strong> :  </p>
 <div class="admonition note">
-<p>Le <strong>client</strong> demande l'accès aux pages par une requête.</p>
-</div>
-<div class="admonition note">
-<p>Le <strong>serveur</strong> répond à cette requête : si tout se passe bien il envoie le contenu des pages, sinon un message d'erreur.</p>
+<p class="admonition-title">Définitions</p>
+<p>Le <strong>client</strong> demande l'accès aux pages par une requête.
+Le <strong>serveur</strong> répond à cette requête : si tout se passe bien il envoie le contenu des pages, sinon un message d'erreur.</p>
 </div>
 <p>C'est une relation asymétrique, qui est la plus courante sur le Web.</p>
 <h4 id="bi-exemples-dinteractions-entre-client-et-serveur">B.I. Exemples d'interactions entre client et serveur<a class="headerlink" href="#bi-exemples-dinteractions-entre-client-et-serveur" title="Permanent link">&para;</a></h4>
@@ -1994,13 +1993,13 @@ E --&gt; F(index3.html)</code></pre>
 Ces échanges peuvent être visualisés grâce à l'<strong>inspecteur de propriétés</strong> du navigateur (F12 sous Windows).</p>
 <h4 id="bii-scripts-cote-client-et-cote-serveur">B.II. Scripts côté client et côté serveur<a class="headerlink" href="#bii-scripts-cote-client-et-cote-serveur" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Un <strong>script côté client</strong> sert à rendre la page dynamique. Elle est exécutée par le navigateur, pour ne pas surcharger de calculs le serveur. Le <strong>Javascript</strong> est le langage couramment utilisé.</p>
-</li>
-<li>
-<p>Un <strong>script côté serveur</strong> est généralement utilisé pour collecter ou modifier des données qu'ils stocke dans une base. Le langage de programmation <strong>PHP</strong> est couramment utilisé.</p>
-</li>
+<li>Un <strong>script côté client</strong> sert à rendre la page dynamique. Elle est exécutée par le navigateur, pour ne pas surcharger de calculs le serveur. Le <strong>Javascript</strong> est le langage couramment utilisé.</li>
 </ul>
+<p><center><img src="../img/js.png" height=65></center></p>
+<ul>
+<li>Un <strong>script côté serveur</strong> est généralement utilisé pour collecter ou modifier des données qu'ils stocke dans une base. Le langage de programmation <strong>PHP</strong> est couramment utilisé.</li>
+</ul>
+<p><center><img src="../img/php.png" height=40></center></p>
 <p>Les données peuvent être récupérées par un formulaire, qui se déclare en HTML avec la balise <code>form</code>, et contient des composants graphiques, comme par exemple :
 <center><img src="../img/formulaire.png" height=120></center></p>
 <p>Voici un exemple de code PHP qui affiche les données récoltées avec ce formulaire :
