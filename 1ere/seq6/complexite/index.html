@@ -2041,16 +2041,13 @@ A[Valeurs d'entrée] --&gt; F[Suite ordonnée d'opérations élémentaires];
 </table>
 </details>
 <details class="note">
-<summary>Quelle est l'instruction qui est exécutée le plus de fois ?</summary>
-<p>L'incrémentation de i est l'opération effectuée le plus de fois.</p>
+<summary>Quelles sont les instructions qui sont exécutées le plus de fois ?</summary>
+<p>Les lignes 2 et 3 sont exécutées le plus de fois (incrémentation de <code>i</code> et comparaison de <code>tab[i]</code> à <code>v</code>).</p>
 </details>
 <div class="admonition note">
-<p>C'est celle-ci que nous allons utiliser pour estimer la <strong>complexité en temps</strong> de l'algorithme. Dans notre cas, le coût en temps de l'algorithme est proportionnel à <span class="arithmatex">\(n\)</span> : la longueur du tableau.</p>
+<p>La complexité en temps exacte de cet algorithme serait de <span class="arithmatex">\(2n+compteur+1\)</span>, mais nous allons nous contenter d'un ordre de grandeur. Le coût en temps de cet algorithme est proportionnel à <span class="arithmatex">\(n\)</span> : la longueur du tableau.</p>
+<p>Pour exécuter l'algorithme sur un tableau de taille 50, il faudra de l'ordre de 10 fois plus de temps que pour l'exécuter sur un tableau de taille 5.</p>
 </div>
-<details class="note">
-<summary>En déduire combien de temps il faudra pour exécuter l'algorithme sur un tableau de taille 50, comparé à son exécution sur un tableau de taille 5.</summary>
-<p>Il faudra 10 fois plus de temps dans le premier cas par rapport au premier.</p>
-</details>
 </li>
 </ul>
 </div>
@@ -2161,16 +2158,15 @@ A[Valeurs d'entrée] --&gt; F[Suite ordonnée d'opérations élémentaires];
 </ul>
 <details class="note">
 <summary>Que peut-on en déduire ?</summary>
-<p>On peut en déduire que le nombre d'opérations élémentaires dépend des données (ici <code>tab</code>). Dans le pire des cas, l'instruction que l'on exécutera le plus de fois sera exécutée <span class="arithmatex">\(n\)</span> fois : on parle de complexité dans le pire des cas.</p>
+<p>On peut en déduire que le nombre d'opérations élémentaires dépend des données. <span class="arithmatex">\(j&lt;=n\)</span>, donc on aura généralement beaucoup moins d'instructions exécutée quand <code>v</code> est présente dans <code>tab</code>. Pour connaître les limites d'un algorithme, on s'intéresse à la complexité dans le pire des cas (ici, le 2ème).</p>
 </details>
+<p>??? Quel est l'ordre de grandeur de cette complexité dans le pire des cas ?
+    Elle vaut 3n+3, elle est donc linéaire par rapport à <span class="arithmatex">\(n\)</span>.</p>
 </div>
 <details class="note">
-<summary>Que peut-on conclure sur ces deux exemples ?</summary>
-<p>On peut en conclure que les deux algorithmes ont une complexité en temps similaire dans le pire des cas : elle est linéaire par rapport à la taille <span class="arithmatex">\(n\)</span> des données d'entrée.</p>
+<summary>Que peut-on conclure sur ces deux exemples (recherche et comptage d'occurrences) ?</summary>
+<p>On peut en conclure que les deux algorithmes ont une complexité en temps similaire dans le pire des cas.</p>
 </details>
-<blockquote>
-<p>Dans notre cours, nous nous intéressons à la <strong>complexité dans le pire des cas</strong>.</p>
-</blockquote>
 <h4 id="biii-les-types-de-complexite">B.III. Les types de complexité<a class="headerlink" href="#biii-les-types-de-complexite" title="Permanent link">&para;</a></h4>
 <ul>
 <li>La complexité de l'algorithme implémenté dans le programme suivant dépend-elle de la taille des données d'entrée ? </li>
