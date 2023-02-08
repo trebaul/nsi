@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ii-les-tris" class="md-skip">
+        <a href="#ii-les-algorithmes-de-tri" class="md-skip">
           Skip to content
         </a>
       
@@ -970,6 +970,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1545,6 +1552,67 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_9" type="checkbox" id="__nav_3_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_9">
+          8. Les systèmes d'exploitation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="8. Les systèmes d'exploitation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          8. Les systèmes d'exploitation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq8/os/" class="md-nav__link">
+        I. Systèmes d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq8/processus/" class="md-nav__link">
+        II. Processus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1935,6 +2003,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1956,7 +2031,7 @@ body {
 text-align: justify}
 </style>
 
-<h1 id="ii-les-tris">II. Les tris<a class="headerlink" href="#ii-les-tris" title="Permanent link">&para;</a></h1>
+<h1 id="ii-les-algorithmes-de-tri">II. Les algorithmes de tri<a class="headerlink" href="#ii-les-algorithmes-de-tri" title="Permanent link">&para;</a></h1>
 <h2 id="td-trier-un-jeu-de-cartes">TD : Trier un jeu de cartes<a class="headerlink" href="#td-trier-un-jeu-de-cartes" title="Permanent link">&para;</a></h2>
 <p>La plupart des jeux de cartes nécessitent de trier les cartes que chaque joueur a en main pour mieux préparer son prochain coup. On considère que l'ordre des cartes est le suivant : <br />
 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - V - D - R - As  </p>
@@ -2060,6 +2135,190 @@ text-align: justify}
 <li>Pour chaque étape, souligner la partie du tableau déjà triée. </li>
 </ul>
 <hr />
+<h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
+<p>Comment <strong>trier</strong> un ensemble de données est un problème classique en informatique, cette opération étant nécessaire dans de nombreux cas pour pré-traiter des données (et leur appliquer d'autres traitement plus facilement ensuite). Il existe une multitude d'<strong>algorithmes de tris</strong> résolvant ce problème. Nous allons voir les exemples du <strong>tri par sélection</strong> et du <strong>tri par insertion</strong> et comparer leurs complexités. Nous allons trier des <strong><em>tableaux de nombres</em></strong> dans l'<strong><em>ordre croissant</em></strong>.</p>
+<h3 id="a-le-tri-par-selection">A. Le tri par sélection<a class="headerlink" href="#a-le-tri-par-selection" title="Permanent link">&para;</a></h3>
+<h4 id="ai-principe">A.I. Principe<a class="headerlink" href="#ai-principe" title="Permanent link">&para;</a></h4>
+<p>Le <strong>tri par sélection</strong> consiste à <em>sélectionner</em> le maximum d'une partie du tableau de plus en plus petite à chaque étape, et à l'<em>échanger</em> avec un élément de référence.</p>
+<div class="admonition note">
+<ul>
+<li>Au début, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 0</em>. On recherche le <strong><em>minimum de l'ensemble du tableau</em></strong>, et on l'échange avec l'élément de référence.</li>
+<li>Ensuite, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 1</em>. On recherche le <strong><em>minimum de l'ensemble du tableau moins celui d'indice 0</em></strong>, et on l'échange avec l'élément de référence.</li>
+<li>Ainsi de suite jusqu'à l'avant-dernier élément du tableau.</li>
+</ul>
+</div>
+<h4 id="aii-pseudo-code">A.II. Pseudo-code<a class="headerlink" href="#aii-pseudo-code" title="Permanent link">&para;</a></h4>
+<p><strong><em>Des remarques suivantes, identifier les éléments de programmation qu'il faudra utiliser.</em></strong></p>
+<details class="note">
+<summary>L'indice de l'élément de référence varie de 1 en 1 à chaque étape. On sait d'avance combien d'étapes il va y avoir.</summary>
+<p>Il faut utiliser une boucle bornée, avec une variable <code>i</code> contenant l'indice de l'élément de référence.</p>
+</details>
+<details class="note">
+<summary>On fait une recherche de minimum à chaque étape sur une sous-partie du tableau.</summary>
+<p>Il faut utiliser une autre boucle bornée, commençant juste après l'indice de l'élément de référence, et stocker l'indice du minimum trouvé dans une variable. </p>
+</details>
+<p>On formule le <strong>pseudo-code</strong> suivant :</p>
+<pre><code>fonction tri_selection(tab)  
+1    pour i allant de 0 à longueur(tab)-2
+2        indice_minimum &lt;- i
+3        pour j allant de i+1 à longueur(tab)-1
+4            si tab[j] &lt; tab[indice_minimum]
+5                indice_minimum &lt;- j
+6        si indice_minimum est différent de i
+7            on échange tab[i] et tab[indice_minimum]
+    renvoyer tab
+</code></pre>
+<p>Entourer d'une couleur la partie qui permet de trouver, à chaque itération, le minimum du sous-tableau, et d'une autre couleur celle qui fait l'échange entre l'élément de référence et le minimum trouvé.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Appliquer l'algorithme pour trier le tableau <code>[5, 8, 10, 1, 2]</code>.  </p>
+<details class="note">
+<summary>Etat 0</summary>
+<p><code>[5, 8, 10, 1, 2]</code>  </p>
+</details>
+<details class="note">
+<summary>Etat 1</summary>
+<p><code>[1, 8, 10, 5, 2]</code>    </p>
+</details>
+<details class="note">
+<summary>Etat 2</summary>
+<p><code>[1, 2, 10, 5, 8]</code> </p>
+</details>
+<details class="note">
+<summary>Etat 3</summary>
+<p><code>[1, 2, 5, 10, 8]</code>  </p>
+</details>
+<details class="note">
+<summary>Etat 4</summary>
+<p><code>[1, 2, 5, 8, 10]</code></p>
+</details>
+</div>
+<h3 id="aiii-complexite">A.III. Complexité<a class="headerlink" href="#aiii-complexite" title="Permanent link">&para;</a></h3>
+<p>Pour donner un ordre de grandeur de la complexité, nous avons jusqu'à présent utilisé l'instruction qui été exécutée le plus de fois. On compte traditionnellement l'<strong><em>opération qui est la plus effectuée</em></strong>. Ici, il s'agit de l'<strong>opération de comparaison</strong> de la ligne 4.</p>
+<div class="admonition example">
+<p class="admonition-title">Sur notre exemple</p>
+<details class="note">
+<summary>Etape 0 à 1 <em>(i vaut 0)</em></summary>
+<p>Il y a 4 comparaisons (5-8, 5-10, 5-1, 1-2).</p>
+</details>
+<details class="note">
+<summary>Etape 1 à 2 <em>(i vaut 1)</em></summary>
+<p>Il y a 3 comparaisons (8-10, 8-5, 5-2).</p>
+</details>
+<details class="note">
+<summary>Etape 2 à 3 <em>(i vaut 2)</em></summary>
+<p>Il y a 2 comparaisons (10-5, 5-8).</p>
+</details>
+<details class="note">
+<summary>Etape 3 à 4 <em>(i vaut 3)</em></summary>
+<p>Il y a 1 comparaison (10-8).</p>
+</details>
+<p>En tout, il y a 1+2+3+4 <strong>comparaisons</strong>. En généralisant en fonction de <span class="arithmatex">\(n\)</span> la taille du tableau, on a <span class="arithmatex">\(1+2+...+n-2+n-1\)</span> comparaisons <em>(vous pouvez faire le test pour un tableau de taille 6)</em>.</p>
+</div>
+<p>Une formule mathématique permet d'exprimer ce résultat plus simplement, retrouvons-la. <br />
+Notons <span class="arithmatex">\(S = 1+2+...+n-2+n-1\)</span><br />
+et notons <span class="arithmatex">\(S' = n-1+n-2+...+2+1\)</span><br />
+Que vaut <span class="arithmatex">\(S+S'\)</span> ? <span class="arithmatex">\(n+n+...+n+n = n*(n-1)\)</span><br />
+Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(2S = n*(n-1)\)</span> et <span class="arithmatex">\(S=n(n-1)/2\)</span></p>
+<p>On peut donc dire que la <strong>complexité</strong> de ce tri est en <span class="arithmatex">\((1/2)n^2+(1/2)n\)</span>. On obtient l'<strong>ordre de grandeur</strong> en ne retenant que <em>la plus grande puissance de <span class="arithmatex">\(n\)</span></em>. </p>
+<blockquote>
+<p>Le <strong>tri par sélection</strong> a donc une complexité en <span class="arithmatex">\(O(n^2)\)</span>, autrement dit <strong>quadratique</strong>.</p>
+</blockquote>
+<details class="note">
+<summary>Nous avions dit que nous allions estimer la <strong>complexité dans le pire des cas</strong>, mais avons pris un cas quelconque pour <code>tab</code> dans notre exemple. Pourquoi ?</summary>
+<p>Ici, on n'utilise que des boucles bornées. Il y a donc toujours autant de comparaisons, peu importe comment les valeurs sont placées dans le tableau.</p>
+</details>
+<h3 id="b-tri-par-insertion">B. Tri par insertion<a class="headerlink" href="#b-tri-par-insertion" title="Permanent link">&para;</a></h3>
+<h4 id="bi-principe">B.I. Principe<a class="headerlink" href="#bi-principe" title="Permanent link">&para;</a></h4>
+<p>Le <strong>tri par insertion</strong> consiste à insérer chaque élément à la bonne place dans une sous-partie du tableau déjà triée.</p>
+<div class="admonition note">
+<ul>
+<li>Au début, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 1</em>. On le compare à celui d'indice 0 et on les échange s'ils ne sont pas dans le bon ordre.</li>
+<li>Ensuite, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 2</em>. On le compare aux précédents, situés à sa gauche, tant que l'on ne trouve pas d'<strong>élément plus petit</strong> ou que l'on attend pas l'indice 0. Les <strong>éléments plus grands</strong> sont décalés sur la droite, et on insère notre référence à la bonne place dans le sous-tableau trié.</li>
+<li>Ainsi de suite jusqu'au dernier élément du tableau.</li>
+</ul>
+</div>
+<h4 id="bii-pseudo-code">B.II. Pseudo-code<a class="headerlink" href="#bii-pseudo-code" title="Permanent link">&para;</a></h4>
+<p><strong><em>Des remarques suivantes, identifier les éléments de programmation qu'il faudra utiliser.</em></strong> </p>
+<details class="note">
+<summary>L'indice de l'élément de référence varie de 1 en 1 à chaque étape. On sait d'avance combien d'étapes il va y avoir.</summary>
+<p>Il faut utiliser une boucle bornée, avec une variable <code>i</code> contenant l'indice de l'élément de référence.</p>
+</details>
+<details class="note">
+<summary>On compare la référence aux éléments à sa gauche, tant que l'on n'a pas trouvé sa bonne place.</summary>
+<p>On utilise une boucle non-bornée qui s'arrête quand une des deux conditions n'est plus remplie. A ce moment, on a l'indice de la bonne place pour l'élément de référence.</p>
+</details>
+<p>On formule le pseudo-code suivant :</p>
+<pre><code>fonction tri_insertion(tab)
+1    pour i allant de 1 à longueur(tab)-1  
+2        val_i &lt;- tab[i]  
+3        j &lt;- i  
+4        tant que j&gt;0 et tab[j-1] &gt; val_i  
+5            tab[j] &lt;- tab[j-1]  
+6            j &lt;- j-1  
+7        tab[j] &lt;- val_i  
+    renvoyer tab
+</code></pre>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Appliquer l'algorithme pour trier le tableau <code>[5, 8, 10, 1, 2]</code>. </p>
+<details class="note">
+<summary>Etat 0 :</summary>
+<p><code>[5, 8, 10, 1, 2]</code></p>
+</details>
+<details class="note">
+<summary>Etat 1</summary>
+<p><code>[5, 8, 10, 1, 2]</code>  </p>
+</details>
+<details class="note">
+<summary>Etat 2</summary>
+<p><code>[5, 8, 10, 1, 2]</code></p>
+</details>
+<details class="note">
+<summary>Etat 3</summary>
+<p><code>[1, 5, 8, 10, 2]</code></p>
+</details>
+<details class="note">
+<summary>Etat 4</summary>
+<p><code>[1, 2, 5, 8, 10]</code></p>
+</details>
+</div>
+<h4 id="biii-complexite">B.III. Complexité<a class="headerlink" href="#biii-complexite" title="Permanent link">&para;</a></h4>
+<p>Pour estimer la <strong>complexité</strong> de ce tri, nous allons compter le <strong>nombre de décalages</strong> faits "sur la droite" <em>(on ne compte pas le placement de la référence)</em>.</p>
+<details class="note">
+<summary>Le nombre est-il le même, pour n'importe quel tableau que l'on trie ?</summary>
+<p>Non, mieux le tableau d'entrée est déjà trié, moins il y aura de décalage à faire.</p>
+</details>
+<details class="note">
+<summary>Quel tableau correspond alors au <strong>pire des cas</strong>, celui qui nécessite le plus d'opérations ?</summary>
+<p>Le tableau trié "à l'envers" correspond au pire des cas.</p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Prenons l'exemple du tri du tableau <code>[5, 4, 3, 2, 1]</code></p>
+<details class="note">
+<summary>Etape 0 à 1 <em>(i vaut 1)</em> -&gt; <code>[4, 5, 3, 2, 1]</code></summary>
+<p>Il y a 1 décalage (5-&gt;4).</p>
+</details>
+<details class="note">
+<summary>Etape 1 à 2 <em>(i vaut 2)</em> -&gt; <code>[3, 4, 5, 2, 1]</code></summary>
+<p>Il y a 2 décalages (5-&gt;3, 4-&gt;5).  </p>
+</details>
+<details class="note">
+<summary>Etape 2 à 3 <em>(i vaut 3)</em> -&gt; <code>[2, 3, 4, 5, 1]</code></summary>
+<p>Il y a 3 décalages (5-&gt;2, 4-&gt;5, 3-&gt;4).</p>
+</details>
+<details class="note">
+<summary>Etape 3 à 4 <em>(i vaut 4)</em> -&gt; <code>[1, 2, 3, 4, 5]</code></summary>
+<p>Il y a 4 décalages (5-&gt;1, 4-&gt;5, 3-&gt;4, 2-&gt;3).</p>
+</details>
+</div>
+<p>En tout, il y a <span class="arithmatex">\(1+2+3+4\)</span> <strong>décalages</strong>. En généralisant en fonction de <span class="arithmatex">\(n\)</span> la taille du tableau, on a <span class="arithmatex">\(1+2+...+n-2+n-1\)</span> décalages, donc le même résultat que pour le premier tri.</p>
+<blockquote>
+<p>La <strong>complexité dans le pire des cas</strong> du tri par insertion est en <span class="arithmatex">\(O(n)\)</span>, soit <strong>quadratique</strong>.</p>
+</blockquote>
+<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
+<p>Ces deux algorithmes de tri sont donc comparables dans le pire des cas. Le <strong>tri par insertion</strong> sera tout de même plus efficace pour des données déjà partiellement triées, alors que ce paramètre ne change rien au coût du tri par sélection.</p>
+<p>La taille des tableaux en entrée a donc un plus grand impact sur l'exécution de ces algorithmes que lorsque l'on veut simplement y rechercher une valeur (algorithme de complexité linéaire). Si on multiple la taille d'un tableau par <strong>2</strong>, le trier prendra <strong>4 fois</strong> plus de temps.</p>
 
 
   
