@@ -2177,22 +2177,22 @@ text-align: justify}
 </li>
 <li>
 <p>Compléter les commandes suivantes, permettant de créer les tables Clients et Achats, avec les domaines des attributs et les clés :
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Clients</span><span class="p">(</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Clients</span><span class="p">(</span>
 <span class="w">    </span><span class="n">Identifiant</span><span class="w"> </span><span class="p">...</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Nom</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
-<span class="w">    </span><span class="n">Prénom</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<span class="w">    </span><span class="n">Nom</span><span class="w"> </span><span class="p">...</span>
+<span class="w">    </span><span class="n">Prénom</span><span class="w"> </span><span class="p">...</span>
 
 
-<span class="p">);</span><span class="w"></span>
+<span class="p">);</span>
 
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Achats</span><span class="p">(</span><span class="w"></span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Achats</span><span class="p">(</span>
 <span class="w">    </span><span class="n">ID</span><span class="w"> </span><span class="p">...</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
-<span class="w">    </span><span class="n">Produit</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
-<span class="w">    </span><span class="nb">Date</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="p">...</span>
+<span class="w">    </span><span class="n">Produit</span><span class="w"> </span><span class="p">...</span>
+<span class="w">    </span><span class="nb">Date</span><span class="w"> </span><span class="p">...</span>
 
 
-<span class="p">);</span><span class="w"></span>
+<span class="p">);</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -2206,7 +2206,7 @@ text-align: justify}
 </li>
 <li>
 <p>Donner le résultat de cette commande :
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Client</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Achats</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Client</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Achats</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -2249,8 +2249,8 @@ text-align: justify}
 <ol>
 <li>
 <p>Ecrire une requête d'<strong>insertion</strong>, pour insérer les n-uplets suivants :
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">Hopper</span><span class="p">,</span><span class="w"> </span><span class="n">Grace</span><span class="p">,</span><span class="w"> </span><span class="mi">1906</span><span class="p">,</span><span class="w"> </span><span class="n">américaine</span><span class="p">)</span><span class="w"></span>
-<span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">Von</span><span class="w"> </span><span class="n">Neumann</span><span class="p">,</span><span class="w"> </span><span class="n">John</span><span class="p">,</span><span class="w"> </span><span class="mi">1903</span><span class="p">,</span><span class="w"> </span><span class="n">hongroise</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">Hopper</span><span class="p">,</span><span class="w"> </span><span class="n">Grace</span><span class="p">,</span><span class="w"> </span><span class="mi">1906</span><span class="p">,</span><span class="w"> </span><span class="n">américaine</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">Von</span><span class="w"> </span><span class="n">Neumann</span><span class="p">,</span><span class="w"> </span><span class="n">John</span><span class="p">,</span><span class="w"> </span><span class="mi">1903</span><span class="p">,</span><span class="w"> </span><span class="n">hongroise</span><span class="p">)</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -2428,8 +2428,8 @@ Grâce à l'instruction sqlite <code>.schema</code>, identifier :<br />
 6) Faire une sélection permettant de compter le nombre de livres écrits après 1950.</p>
 <h4 id="ii3-les-jointures">II.3. Les jointures<a class="headerlink" href="#ii3-les-jointures" title="Permanent link">&para;</a></h4>
 <p>7) Que va faire la jointure suivante ? 
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">Livres</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Livres</span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Livres</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Auteurs</span><span class="p">.</span><span class="n">id</span><span class="w"> </span>
 </code></pre></div></p>
 <p>8) Écrire une jointure permettant d’afficher le titre des livres ainsi que le nom et prénom de leur auteur.</p>
@@ -2530,12 +2530,12 @@ Grâce à l'instruction sqlite <code>.schema</code>, identifier :<br />
 <p>2) Vérifier le contenu des tables, avec une sélection sur l'ensemble des enregistrements.</p>
 <p>3) Ajouter les enregistrements suivants :
 - A <code>Avancées</code> :
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">Le</span><span class="w"> </span><span class="n">Web</span><span class="p">,</span><span class="w"> </span><span class="mi">1989</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">Modèle</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">architecture</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">ordinateurs</span><span class="p">,</span><span class="w"> </span><span class="mi">1945</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">Le</span><span class="w"> </span><span class="n">Web</span><span class="p">,</span><span class="w"> </span><span class="mi">1989</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span>
+<span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">Modèle</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">architecture</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">ordinateurs</span><span class="p">,</span><span class="w"> </span><span class="mi">1945</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 - A <code>Programme</code> :
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Modèle</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">architecture</span><span class="w"> </span><span class="n">séquentielle</span><span class="w"> </span><span class="p">(</span><span class="n">von</span><span class="w"> </span><span class="n">Neumann</span><span class="p">),</span><span class="w"> </span><span class="n">Distinguer</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">rôles</span><span class="w"> </span><span class="n">et</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">caractéristiques</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">différents</span><span class="w"> </span><span class="n">constituants</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">une</span><span class="w"> </span><span class="n">machine</span><span class="p">,</span><span class="w"> </span><span class="n">Architectures</span><span class="w"> </span><span class="n">matérielles</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
-<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">Constructions</span><span class="w"> </span><span class="err">é</span><span class="n">lémentaires</span><span class="p">,</span><span class="w"> </span><span class="n">Mettre</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="err">é</span><span class="n">vidence</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="n">corpus</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">constructions</span><span class="w"> </span><span class="err">é</span><span class="n">lémentaires</span><span class="p">,</span><span class="w"> </span><span class="n">Langages</span><span class="w"> </span><span class="n">et</span><span class="w"> </span><span class="n">programmation</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Modèle</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">architecture</span><span class="w"> </span><span class="n">séquentielle</span><span class="w"> </span><span class="p">(</span><span class="n">von</span><span class="w"> </span><span class="n">Neumann</span><span class="p">),</span><span class="w"> </span><span class="n">Distinguer</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">rôles</span><span class="w"> </span><span class="n">et</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">caractéristiques</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">différents</span><span class="w"> </span><span class="n">constituants</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">une</span><span class="w"> </span><span class="n">machine</span><span class="p">,</span><span class="w"> </span><span class="n">Architectures</span><span class="w"> </span><span class="n">matérielles</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">Constructions</span><span class="w"> </span><span class="err">é</span><span class="n">lémentaires</span><span class="p">,</span><span class="w"> </span><span class="n">Mettre</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="err">é</span><span class="n">vidence</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="n">corpus</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">constructions</span><span class="w"> </span><span class="err">é</span><span class="n">lémentaires</span><span class="p">,</span><span class="w"> </span><span class="n">Langages</span><span class="w"> </span><span class="n">et</span><span class="w"> </span><span class="n">programmation</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div></p>
 <p>Nous allons faire des jointures sur ces tables. Pensez à utiliser des alias pour rendre les requêtes plus lisibles.</p>
 <p>3) Écrire une jointure affichant les noms et prénoms des figures avec les dates de leurs avancées.</p>

@@ -2099,19 +2099,19 @@ text-align: justify}
 <p>Une première implémentation est donnée ci-dessous.
 A partir de ce code, créer une file et enfiler successivement les entiers de 0 à 4.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">file</span><span class="p">():</span>
-    <span class="sd">&#39;&#39;&#39; Renvoie une file vide &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; Renvoie une file vide &#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="p">[]</span>
 
 <span class="k">def</span> <span class="nf">vide</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; Renvoie True si la file est vide, False sinon &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; Renvoie True si la file est vide, False sinon &#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="n">f</span> <span class="o">==</span> <span class="p">[]</span>
 
 <span class="k">def</span> <span class="nf">enfiler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; Ajoute x à la file f &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; Ajoute x à la file f &#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="n">f</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">defiler</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; Enlève et renvoie le premier élément de la file &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; Enlève et renvoie le premier élément de la file &#39;&#39;&#39;</span>
     <span class="k">assert</span> <span class="ow">not</span> <span class="n">vide</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="s2">&quot;file vide !&quot;</span>
     <span class="k">return</span> <span class="n">f</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
@@ -2138,7 +2138,7 @@ Le procédé est le suivant :<br />
     1. <code>sommet</code> : retourne le sommet de la file, sans l'en enlever.<br />
     2. <code>taille</code> : retourne le nombre d'éléments de la file.</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39; Définition d&#39;une classe Pile</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; Définition d&#39;une classe Pile</span>
 <span class="sd">    une instance Pile est créée avec une liste Python &#39;&#39;&#39;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -2171,7 +2171,7 @@ Le procédé est le suivant :<br />
 <span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39; Crée une file vide.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; Crée une file vide.</span>
 <span class="sd">        Attribut pile_entree : objet Pile stockant les nouvelles valeurs ajoutées à la file.</span>
 <span class="sd">        Attribut pile_sortie : objet Pile stockant les valeurs qui vont sortir de la file. Son sommet est le premier élément de la file.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
@@ -2179,21 +2179,21 @@ Le procédé est le suivant :<br />
         <span class="bp">self</span><span class="o">.</span><span class="n">pile_sortie</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39; Teste si la file est vide ou non. &#39;&#39;&#39;</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; Teste si la file est vide ou non. &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="err">???</span>
 
     <span class="k">def</span> <span class="nf">enfiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39; Ajoute l&#39;élément x à la file.&#39;&#39;&#39;</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; Ajoute l&#39;élément x à la file.&#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pile_entree</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">organiser</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39; Fonction auxiliaire actualisant l&#39;état de la pile de sortie lorsque l&#39;on veut supprimer un élément de la file. </span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; Fonction auxiliaire actualisant l&#39;état de la pile de sortie lorsque l&#39;on veut supprimer un élément de la file. </span>
 <span class="sd">        Si la pile de sortie est vide, on lui ajoute successivement les éléments que l&#39;on dépile à la pile d&#39;entrée. &#39;&#39;&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pile_sortie</span><span class="o">.</span><span class="n">vide</span><span class="p">():</span>
             <span class="err">???</span>
 
     <span class="k">def</span> <span class="nf">defiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39; Supprime le premier élément entré dans la file. &#39;&#39;&#39;</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; Supprime le premier élément entré dans la file. &#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">organiser</span><span class="p">()</span>
         <span class="err">???</span>
 </code></pre></div>

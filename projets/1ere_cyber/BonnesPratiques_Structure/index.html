@@ -1978,22 +1978,22 @@ text-align: justify}
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 
 <span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; additionne deux nombres (int ou float) a et b &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; additionne deux nombres (int ou float) a et b &#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
 
 <span class="k">def</span> <span class="nf">soustraction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; soustrait a (int ou float) par b (int ou float) &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; soustrait a (int ou float) par b (int ou float) &#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="n">a</span><span class="o">-</span><span class="n">b</span>
 
 <span class="k">def</span> <span class="nf">multiplication</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; multiple deux nombres (int ou float) a et b &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; multiple deux nombres (int ou float) a et b &#39;&#39;&#39;</span>
     <span class="n">produit</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
         <span class="n">produit</span> <span class="o">=</span> <span class="n">addition</span><span class="p">(</span><span class="n">produit</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">produit</span>
 
 <span class="k">def</span> <span class="nf">division</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39; renvoie le quotient et reste dans la division euclidienne de a (int) par b (int) &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie le quotient et reste dans la division euclidienne de a (int) par b (int) &#39;&#39;&#39;</span>
     <span class="k">assert</span> <span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;La division par 0 est interdite !&quot;</span>
     <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">a</span><span class="o">&gt;=</span><span class="n">b</span><span class="p">:</span>
@@ -2002,7 +2002,7 @@ text-align: justify}
     <span class="k">return</span> <span class="n">count</span><span class="p">,</span> <span class="n">a</span>
 
 <span class="k">def</span> <span class="nf">entier_aleatoire</span><span class="p">():</span>
-    <span class="sd">&#39;&#39;&#39; renvoie un entier aléatoire compris entre 0 et 100 &#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie un entier aléatoire compris entre 0 et 100 &#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 
 

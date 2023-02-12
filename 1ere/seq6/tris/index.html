@@ -2139,7 +2139,7 @@ text-align: justify}
 <p>Comment <strong>trier</strong> un ensemble de données est un problème classique en informatique, cette opération étant nécessaire dans de nombreux cas pour pré-traiter des données (et leur appliquer d'autres traitement plus facilement ensuite). Il existe une multitude d'<strong>algorithmes de tris</strong> résolvant ce problème. Nous allons voir les exemples du <strong>tri par sélection</strong> et du <strong>tri par insertion</strong> et comparer leurs complexités. Nous allons trier des <strong><em>tableaux de nombres</em></strong> dans l'<strong><em>ordre croissant</em></strong>.</p>
 <h3 id="a-le-tri-par-selection">A. Le tri par sélection<a class="headerlink" href="#a-le-tri-par-selection" title="Permanent link">&para;</a></h3>
 <h4 id="ai-principe">A.I. Principe<a class="headerlink" href="#ai-principe" title="Permanent link">&para;</a></h4>
-<p>Le <strong>tri par sélection</strong> consiste à <em>sélectionner</em> le maximum d'une partie du tableau de plus en plus petite à chaque étape, et à l'<em>échanger</em> avec un élément de référence.</p>
+<p>Le <strong>tri par sélection</strong> consiste à <em>sélectionner</em> le minimum d'une partie du tableau de plus en plus petite à chaque étape, et à l'<em>échanger</em> avec un élément de référence.</p>
 <div class="admonition note">
 <ul>
 <li>Au début, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 0</em>. On recherche le <strong><em>minimum de l'ensemble du tableau</em></strong>, et on l'échange avec l'élément de référence.</li>
@@ -2173,24 +2173,12 @@ text-align: justify}
 <p class="admonition-title">Exemple</p>
 <p>Appliquer l'algorithme pour trier le tableau <code>[5, 8, 10, 1, 2]</code>.  </p>
 <details class="note">
-<summary>Etat 0</summary>
-<p><code>[5, 8, 10, 1, 2]</code>  </p>
-</details>
-<details class="note">
-<summary>Etat 1</summary>
-<p><code>[1, 8, 10, 5, 2]</code>    </p>
-</details>
-<details class="note">
-<summary>Etat 2</summary>
-<p><code>[1, 2, 10, 5, 8]</code> </p>
-</details>
-<details class="note">
-<summary>Etat 3</summary>
-<p><code>[1, 2, 5, 10, 8]</code>  </p>
-</details>
-<details class="note">
-<summary>Etat 4</summary>
-<p><code>[1, 2, 5, 8, 10]</code></p>
+<summary>Solution</summary>
+<p><strong>Etape 0</strong> : <code>[5, 8, 10, 1, 2]</code> <br />
+<strong>Etape 1</strong> : <code>[1, 8, 10, 5, 2]</code>  <br />
+<strong>Etape 2</strong> : <code>[1, 2, 10, 5, 8]</code><br />
+<strong>Etape 3</strong> : <code>[1, 2, 5, 10, 8]</code><br />
+<strong>Etape 4</strong> : <code>[1, 2, 5, 8, 10]</code>  </p>
 </details>
 </div>
 <h3 id="aiii-complexite">A.III. Complexité<a class="headerlink" href="#aiii-complexite" title="Permanent link">&para;</a></h3>
@@ -2263,24 +2251,12 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 <p class="admonition-title">Exemple</p>
 <p>Appliquer l'algorithme pour trier le tableau <code>[5, 8, 10, 1, 2]</code>. </p>
 <details class="note">
-<summary>Etat 0 :</summary>
-<p><code>[5, 8, 10, 1, 2]</code></p>
-</details>
-<details class="note">
-<summary>Etat 1</summary>
-<p><code>[5, 8, 10, 1, 2]</code>  </p>
-</details>
-<details class="note">
-<summary>Etat 2</summary>
-<p><code>[5, 8, 10, 1, 2]</code></p>
-</details>
-<details class="note">
-<summary>Etat 3</summary>
-<p><code>[1, 5, 8, 10, 2]</code></p>
-</details>
-<details class="note">
-<summary>Etat 4</summary>
-<p><code>[1, 2, 5, 8, 10]</code></p>
+<summary>Solution</summary>
+<p><strong>Etape 0</strong> : <code>[5, 8, 10, 1, 2]</code><br />
+<strong>Etape 1</strong> :<code>[5, 8, 10, 1, 2]</code><br />
+<strong>Etape 2</strong> : <code>[5, 8, 10, 1, 2]</code><br />
+<strong>Etape 3</strong> : <code>[1, 5, 8, 10, 2]</code><br />
+<strong>Etape 4</strong> : <code>[1, 2, 5, 8, 10]</code>  </p>
 </details>
 </div>
 <h4 id="biii-complexite">B.III. Complexité<a class="headerlink" href="#biii-complexite" title="Permanent link">&para;</a></h4>
@@ -2319,6 +2295,7 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 <h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
 <p>Ces deux algorithmes de tri sont donc comparables dans le pire des cas. Le <strong>tri par insertion</strong> sera tout de même plus efficace pour des données déjà partiellement triées, alors que ce paramètre ne change rien au coût du tri par sélection.</p>
 <p>La taille des tableaux en entrée a donc un plus grand impact sur l'exécution de ces algorithmes que lorsque l'on veut simplement y rechercher une valeur (algorithme de complexité linéaire). Si on multiple la taille d'un tableau par <strong>2</strong>, le trier prendra <strong>4 fois</strong> plus de temps.</p>
+<hr />
 
 
   
