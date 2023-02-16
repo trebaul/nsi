@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cours-n3-correction-et-terminaison-dun-algorithme" class="md-skip">
+        <a href="#iii-correction-dun-algorithme" class="md-skip">
           Skip to content
         </a>
       
@@ -978,29 +978,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-correction" class="md-nav__link">
-    A. Correction
+  <a href="#cours" class="md-nav__link">
+    Cours
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#b-terminaison" class="md-nav__link">
-    B. Terminaison
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#synthese" class="md-nav__link">
-    Synthèse
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#td-correction" class="md-nav__link">
-    TD : Correction
+  <a href="#td" class="md-nav__link">
+    TD
   </a>
   
 </li>
@@ -2025,29 +2011,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-correction" class="md-nav__link">
-    A. Correction
+  <a href="#cours" class="md-nav__link">
+    Cours
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#b-terminaison" class="md-nav__link">
-    B. Terminaison
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#synthese" class="md-nav__link">
-    Synthèse
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#td-correction" class="md-nav__link">
-    TD : Correction
+  <a href="#td" class="md-nav__link">
+    TD
   </a>
   
 </li>
@@ -2073,10 +2045,11 @@ body {
 text-align: justify}
 </style>
 
-<h1 id="cours-n3-correction-et-terminaison-dun-algorithme">Cours n°3 : Correction et terminaison d'un algorithme<a class="headerlink" href="#cours-n3-correction-et-terminaison-dun-algorithme" title="Permanent link">&para;</a></h1>
+<h1 id="iii-correction-dun-algorithme">III. Correction d'un algorithme<a class="headerlink" href="#iii-correction-dun-algorithme" title="Permanent link">&para;</a></h1>
+<h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <p>Nous avons étudié le coût de deux algorithmes de tri, mais... font-ils bien ce qu'ils sont sensés faire, c'est-à-dire trier ? A tous les coups ? </p>
 <p>L'étude des algorithmes passe parce qu'on appelle la preuve de leur correction : qu'ils font le travail voulu (<strong>preuve de correction</strong>) et montrer qu'ils se terminent (<strong>preuve de terminaison</strong>) - sinon... aucune chance qu'ils fassent ce que l'on veut qu'ils fassent ! -.</p>
-<h2 id="a-correction">A. Correction<a class="headerlink" href="#a-correction" title="Permanent link">&para;</a></h2>
+<h3 id="a-correction">A. Correction<a class="headerlink" href="#a-correction" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p>Pour montrer qu'un algorithme est correct, on montre qu'une propriété :
 - est vraie <strong><em>avant</em></strong> de rentrer dans la boucle,
@@ -2085,7 +2058,7 @@ Si elle est vraie à chaque fois, elle sera vraie... à la fin. <br />
 On parle d'<strong>invariant de boucle</strong>. </p>
 </div>
 <p>La preuve de ces invariants se fait <strong><em>par récurrence</em></strong> qui est une notion mathématique que vous n'avez pas encore vue <em>(nous n'allons donc pas faire les démonstrations)</em>.</p>
-<h3 id="ai-algorithme-de-calcul-de-moyenne">A.I. Algorithme de calcul de moyenne<a class="headerlink" href="#ai-algorithme-de-calcul-de-moyenne" title="Permanent link">&para;</a></h3>
+<h4 id="ai-algorithme-de-calcul-de-moyenne">A.I. Algorithme de calcul de moyenne<a class="headerlink" href="#ai-algorithme-de-calcul-de-moyenne" title="Permanent link">&para;</a></h4>
 <p>On considère la fonction suivante, qui doit calculer la moyenne des éléments de <code>liste</code> :
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
@@ -2106,7 +2079,7 @@ On parle d'<strong>invariant de boucle</strong>. </p>
 <div class="admonition note">
 <p>L'invariant est qu'après chaque itération de boucle <code>i</code>, <code>t</code> contient la somme des <code>i+1</code> premiers éléments de <code>liste</code>.</p>
 </div>
-<h3 id="aii-les-algorithmes-de-tri">A.II. Les algorithmes de tri<a class="headerlink" href="#aii-les-algorithmes-de-tri" title="Permanent link">&para;</a></h3>
+<h4 id="aii-les-algorithmes-de-tri">A.II. Les algorithmes de tri<a class="headerlink" href="#aii-les-algorithmes-de-tri" title="Permanent link">&para;</a></h4>
 <div class="admonition example">
 <p class="admonition-title">Exemple 1 : Le tri par sélection</p>
 <p>On donne le code suivant, devant trier <code>t</code> avec l'algorithme du tri par sélection :
@@ -2171,9 +2144,9 @@ On parle d'<strong>invariant de boucle</strong>. </p>
 <p>Dans le cas particulier où <code>i</code> vaut <code>n-1</code>, le sous-tableau des éléments d'indice <code>0</code> à <code>n-1</code> est trié, donc <strong><em>tout le tableau est trié</em></strong>.</p>
 </div>
 </div>
-<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
+<h4 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h4>
 <p>Pour les deux algorithmes de tri, l'<strong>invariant</strong> est : à la fin de chaque étape <code>i</code>, le tableau est trié des indices <code>0</code> à <code>i</code>.</p>
-<h2 id="b-terminaison">B. Terminaison<a class="headerlink" href="#b-terminaison" title="Permanent link">&para;</a></h2>
+<h3 id="b-terminaison">B. Terminaison<a class="headerlink" href="#b-terminaison" title="Permanent link">&para;</a></h3>
 <p>Un algorithme ne peut pas être correct, si on n'a pas l'assurance qu'il se <strong>termine</strong>.</p>
 <details class="note">
 <summary>Pourquoi est-ce qu'on est sûr qu'un algorithme se termine lorsqu'il contient une boucle bornée ?</summary>
@@ -2187,9 +2160,9 @@ On parle d'<strong>invariant de boucle</strong>. </p>
 <summary>Que faut-il faire alors pour montrer que l'algorithme se termine bien ?</summary>
 <p>Il faut montrer que l'on va sortir de la boucle non-bornée car, à un moment donné, sa condition ou une de ses conditions deviendra fausse.</p>
 </details>
-<h3 id="bi-tri-par-selection">B.I. Tri par sélection<a class="headerlink" href="#bi-tri-par-selection" title="Permanent link">&para;</a></h3>
+<h4 id="bi-tri-par-selection">B.I. Tri par sélection<a class="headerlink" href="#bi-tri-par-selection" title="Permanent link">&para;</a></h4>
 <p>Nous avons vu que le <strong>tri par sélection</strong> contenait 2 boucles bornées, donc il a toujours une complexité qui est du même ordre de grandeur. Il se termine donc.</p>
-<h3 id="bii-tri-par-insertion">B.II. Tri par insertion<a class="headerlink" href="#bii-tri-par-insertion" title="Permanent link">&para;</a></h3>
+<h4 id="bii-tri-par-insertion">B.II. Tri par insertion<a class="headerlink" href="#bii-tri-par-insertion" title="Permanent link">&para;</a></h4>
 <p>Le <strong>tri par insertion</strong> contient une boucle non-bornée, montrons qu'il se termine tout de même.</p>
 <p><strong><em>Extrait de son implémentation :</em></strong>
 <div class="highlight"><pre><span></span><code><span class="n">ref</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -2208,7 +2181,7 @@ On parle d'<strong>invariant de boucle</strong>. </p>
 </details>
 <p><code>j</code> est une valeur entière qui varie strictement à chaque itération, c'est ce qu'on appelle un <strong>variant de boucle</strong>, qui permet de prouver la terminaison de l'algorithme. </p>
 <p>Ici, la première condition deviendra forcément fausse si la deuxième condition n'est pas fausse avant : l'algorithme se termine.</p>
-<h2 id="synthese">Synthèse<a class="headerlink" href="#synthese" title="Permanent link">&para;</a></h2>
+<h4 id="synthese">Synthèse<a class="headerlink" href="#synthese" title="Permanent link">&para;</a></h4>
 <p>Faire la <strong>preuve complète de la correction</strong> d'un algorithme sert à prouver qu'il fait bien ce qu'on attend de lui <strong><em>dans tous les cas</em></strong>.</p>
 <div class="admonition note">
 <p>Pour prouver :<br />
@@ -2216,7 +2189,7 @@ On parle d'<strong>invariant de boucle</strong>. </p>
 - sa <strong>terminaison</strong>, on cherche un <strong><em>variant de boucle</em></strong>.</p>
 </div>
 <hr />
-<h2 id="td-correction">TD : Correction<a class="headerlink" href="#td-correction" title="Permanent link">&para;</a></h2>
+<h2 id="td">TD<a class="headerlink" href="#td" title="Permanent link">&para;</a></h2>
 <ol>
 <li>La fonction suivante prend en arguments deux entiers positifs et renvoie leur produit.
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">produit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
