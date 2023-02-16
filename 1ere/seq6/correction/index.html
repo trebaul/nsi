@@ -10,14 +10,14 @@
         <meta name="author" content="Lena TREBAUL">
       
       
-        <link rel="canonical" href="https://example.com/1ere/seq6/tris/">
+        <link rel="canonical" href="https://example.com/1ere/seq6/correction/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
     
     
       
-        <title>Introduction à l'algorithmique et tris - TD Les tris - Trebaul NSI</title>
+        <title>Cours - Correction et terminaison algorithmique - Trebaul NSI</title>
       
     
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ii-les-algorithmes-de-tri" class="md-skip">
+        <a href="#cours-n3-correction-et-terminaison-dun-algorithme" class="md-skip">
           Skip to content
         </a>
       
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction à l'algorithmique et tris - TD Les tris
+              Cours - Correction et terminaison algorithmique
             
           </span>
         </div>
@@ -222,15 +222,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../1ere/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../1ere/" class="md-tabs__link">
         Première
       </a>
     </li>
@@ -439,14 +437,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -884,14 +880,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
       
       
       
@@ -926,61 +920,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          II. Les tris
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tris/" class="md-nav__link">
         II. Les tris
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#td-trier-un-jeu-de-cartes" class="md-nav__link">
-    TD : Trier un jeu de cartes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cours" class="md-nav__link">
-    Cours
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1997,15 +1941,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#td-trier-un-jeu-de-cartes" class="md-nav__link">
-    TD : Trier un jeu de cartes
+  <a href="#a-correction" class="md-nav__link">
+    A. Correction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cours" class="md-nav__link">
-    Cours
+  <a href="#b-terminaison" class="md-nav__link">
+    B. Terminaison
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synthese" class="md-nav__link">
+    Synthèse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-correction" class="md-nav__link">
+    TD : Correction
   </a>
   
 </li>
@@ -2031,271 +1989,229 @@ body {
 text-align: justify}
 </style>
 
-<h1 id="ii-les-algorithmes-de-tri">II. Les algorithmes de tri<a class="headerlink" href="#ii-les-algorithmes-de-tri" title="Permanent link">&para;</a></h1>
-<h2 id="td-trier-un-jeu-de-cartes">TD : Trier un jeu de cartes<a class="headerlink" href="#td-trier-un-jeu-de-cartes" title="Permanent link">&para;</a></h2>
-<p>La plupart des jeux de cartes nécessitent de trier les cartes que chaque joueur a en main pour mieux préparer son prochain coup. On considère que l'ordre des cartes est le suivant : <br />
-2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - V - D - R - As  </p>
-<p><center>
-<img src="../img/cartes.jpg" height=200> </center></p>
-<ol>
-<li>On distribue les cartes et vous avez dans votre main les cartes suivantes :  7 - D - 4 - As - R - 5</li>
-</ol>
-<p>Quelle méthode appliquez-vous pour les trier ? La formuler sous la forme d'une suite d'instructions pouvant se répéter jusqu'à obtenir un jeu trié.</p>
-<p><br><br><br><br></p>
-<ol>
-<li></li>
-</ol>
+<h1 id="cours-n3-correction-et-terminaison-dun-algorithme">Cours n°3 : Correction et terminaison d'un algorithme<a class="headerlink" href="#cours-n3-correction-et-terminaison-dun-algorithme" title="Permanent link">&para;</a></h1>
+<p>Nous avons étudié le coût de deux algorithmes de tri, mais... font-ils bien ce qu'ils sont sensés faire, c'est-à-dire trier ? A tous les coups ? </p>
+<p>L'étude des algorithmes passe parce qu'on appelle la preuve de leur correction : qu'ils font le travail voulu (<strong>preuve de correction</strong>) et montrer qu'ils se terminent (<strong>preuve de terminaison</strong>) - sinon... aucune chance qu'ils fassent ce que l'on veut qu'ils fassent ! -.</p>
+<h2 id="a-correction">A. Correction<a class="headerlink" href="#a-correction" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
-<p>Le principe du <strong>tri par sélection</strong> est le suivant :<br />
-- On sélectionne <strong>la carte de valeur la plus faible</strong> <strong><em>de l'ensemble de la main</em></strong> et on l'échange avec la <strong>première</strong> qui est la carte de référence.<br />
-- On sélectionne <strong>la carte de valeur la plus faible</strong> <strong><em>de l'ensemble de la main sauf la première</em></strong> (qui est déjà triée), et on l'échange avec la <strong>deuxième</strong> qui est la nouvelle carte de référence.<br />
-- Ainsi de suite jusqu'à ce que l'ensemble de la main soit trié. </p>
+<p>Pour montrer qu'un algorithme est correct, on montre qu'une propriété :
+- est vraie <strong><em>avant</em></strong> de rentrer dans la boucle,
+- reste vraie à <strong><em>chaque itération</em></strong> de boucle. 
+Si elle est vraie à chaque fois, elle sera vraie... à la fin. <br />
+On parle d'<strong>invariant de boucle</strong>. </p>
 </div>
-<p>Une démonstration de cet algorithme est disponible ici : http://lwh.free.fr/pages/algo/tri/tri_selection.html</p>
-<ul>
-<li>Appliquer cet algorithme à la main tirée en 1. :</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">Tableau</th>
-<th align="center">Carte de référence</th>
-<th align="center">Carte à échanger</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">7 - D - 4 - As - R - 5</td>
-<td align="center">7, indice 0</td>
-<td align="center">4, indice 2</td>
-</tr>
-<tr>
-<td align="center">4 - D - 7 - As - R - 5</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<p><br><br><br><br></p>
-<ul>
-<li>Pour chaque étape, souligner la partie du tableau déjà triée. </li>
-</ul>
-<p><br></p>
-<ol>
-<li></li>
-</ol>
+<p>La preuve de ces invariants se fait <strong><em>par récurrence</em></strong> qui est une notion mathématique que vous n'avez pas encore vue <em>(nous n'allons donc pas faire les démonstrations)</em>.</p>
+<h3 id="ai-algorithme-de-calcul-de-moyenne">A.I. Algorithme de calcul de moyenne<a class="headerlink" href="#ai-algorithme-de-calcul-de-moyenne" title="Permanent link">&para;</a></h3>
+<p>On considère la fonction suivante, qui doit calculer la moyenne des éléments de <code>liste</code> :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)):</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="c1"># assertion vraie à cet endroit</span>
+    <span class="k">return</span> <span class="n">t</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+</code></pre></div>
+??? note "Que contient <code>t</code> après chaque passage de boucle ?'<br />
+<code>t</code> contient les <code>i+1</code> premiers éléments de <code>liste</code>.</p>
+<details class="note">
+<summary>Que peut-on en conclure sur ce que contient <code>t</code> à la fin de l'exécution de la boucle ?</summary>
+<p>On peut en conclure qu'à la fin de l'exécution de la boucle, <code>t</code> contient la somme des <code>len(liste)-1+1</code> premiers éléments : donc tous les éléments de <code>liste</code>.</p>
+</details>
+<p><code>t</code> contient bien la valeur attendue, et on sait ce que renvoie <code>len(liste)</code>. Le résultat renvoyé par la fonction est donc correct.</p>
+<div class="admonition tip">
+<p>L'invariant est qu'après chaque itération de boucle <code>i</code>, <code>t</code> contient la somme des <code>i+1</code> premiers éléments de <code>liste</code>.</p>
+</div>
+<h3 id="aii-les-algorithmes-de-tri">A.II. Les algorithmes de tri<a class="headerlink" href="#aii-les-algorithmes-de-tri" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exemple 1 : Le tri par sélection</p>
+<p>On donne le code suivant, devant trier <code>t</code> avec l'algorithme du tri par sélection :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">ind</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;</span><span class="n">t</span><span class="p">[</span><span class="n">ind</span><span class="p">]:</span>
+                <span class="n">ind</span> <span class="o">=</span> <span class="n">j</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">ind</span><span class="p">:</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+            <span class="n">t</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span><span class="o">=</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">tmp</span>
+    <span class="k">return</span> <span class="n">t</span>
+</code></pre></div></p>
+<p>Les propriétés suivantes sont-elles vraies ou fausse ?</p>
+<details class="note">
+<summary>A la fin de l'étape <code>i</code>, le sous-tableau des éléments d'indice <code>0</code> à <code>j</code> est trié.</summary>
+<p>C'est faux, <code>j</code> sert à trouver le minimum sur le sous-tableau <code>i+1:n</code>.</p>
+</details>
+<details class="note">
+<summary>A la fin de l'étape <code>i</code>, le sous-tableau des éléments d'indice <code>0</code> à <code>i</code> est trié.</summary>
+<p>C'est vrai, à la fin de l'étape <code>i</code>, on aura placé le minimum du sous-tableau <code>i+1:n</code> en position <code>i</code>, et les éléments d'avant seront triés.</p>
+</details>
+<details class="note">
+<summary>A la fin de l'étape <code>i</code>, le sous-tableau des éléments d'indice <code>i+1</code> à <code>n</code> est trié.</summary>
+<p>C'est faux, ces indices sont parcourus dans la boucle en <code>j</code>, mais seul un élément est sélectionné : le minimum.</p>
+</details>
+<div class="admonition tip">
+<p>Dans le cas particulier où <code>i</code> vaut <code>n-1</code>, le sous-tableau des éléments d'indice <code>0</code> à <code>n-1</code> est trié, donc <strong><em>tout le tableau est trié</em></strong>.</p>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 2 : Le tri par insertion</p>
+<p>On donne le code suivant, devant trier <code>t</code> avec l'algorithme du tri par insertion :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">ref</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">while</span> <span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">ref</span><span class="o">&lt;</span><span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span>
+        <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">ref</span>
+    <span class="k">return</span> <span class="n">t</span>
+</code></pre></div>
+<p>Les propriétés suivantes sont-elles vraies ou fausse ?</p>
+<details class="note">
+<summary>A la fin de l'étape <code>i</code>, le sous-tableau des éléments d'indice <code>0</code> à <code>i-1</code> est trié.</summary>
+<p>C'est vrai, les éléments d'indice inférieur à <code>i</code> ont été triés dans les étapes précédentes.</p>
+</details>
+<details class="note">
+<summary>A la fin de l'étape <code>i</code>, le sous-tableau des éléments d'indice <code>0</code> à <code>i</code> est trié.</summary>
+<p>C'est vrai, l'étape <code>i</code> sert à placer l'éléments d'indice <code>i</code>.</p>
+</details>
+<details class="note">
+<summary>A la fin de l'étape <code>i</code>, le sous-tableau des éléments d'indice <code>0</code> à <code>n-1</code> est trié.</summary>
+<p>C'est faux, ce n'est pas valable pour chaque valeur de <code>i</code> mais uniquement lorsque <code>i</code> vaut <code>n-1</code>.</p>
+</details>
 <div class="admonition note">
-<p>Le principe du <strong>tri par insertion</strong> est le suivant :<br />
-- On prend la <strong><em>deuxième carte</em></strong> ("de référence") :  <br />
-<em>si</em> elle est de valeur inférieure à la première, <em>alors</em> on décale la deuxième à la place de la première <em>(sur la gauche)</em>  et on décale la première sur la droite,
-    <em>sinon</em> on ne fait rien.<br />
-- On prend la <strong><em>troisième carte</em></strong> :<br />
-    on la compare avec les précédentes : tant qu'elle sont plus grandes, on les décale sur la droite. Lorsque l'on trouve une carte plus petite ou bien que l'on arrive au bout du paquet, on s'arrête et on place la <strong><em>troisième carte</em></strong> à cet endroit.<br />
-- Ainsi de suite jusqu'à ce que l'ensemble soit trié.</p>
+<p>Dans le cas particulier où <code>i</code> vaut <code>n-1</code>, le sous-tableau des éléments d'indice <code>0</code> à <code>n-1</code> est trié, donc <strong><em>tout le tableau est trié</em></strong>.</p>
 </div>
-<p>Une démonstration de cet algorithme est disponible ici : http://lwh.free.fr/pages/algo/tri/tri_insertion.html </p>
-<p>Appliquer cet algorithme à la main tirée en 1. :</p>
-<table>
-<thead>
-<tr>
-<th align="center">Tableau</th>
-<th align="center">Carte de référence</th>
-<th align="center">Carte(s) à décaler sur la droite</th>
-<th align="center">Carte à insérer</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">7 - D - 4 - As - R - 5</td>
-<td align="center">D</td>
-<td align="center">Aucune</td>
-<td align="center">x</td>
-</tr>
-<tr>
-<td align="center">7 - D - 4 - As - R - 5</td>
-<td align="center">4</td>
-<td align="center">D</td>
-<td align="center">4, indice 1</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<p><br><br><br><br></p>
-<ul>
-<li>Pour chaque étape, souligner la partie du tableau déjà triée. </li>
-</ul>
-<hr />
-<h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
-<p>Comment <strong>trier</strong> un ensemble de données est un problème classique en informatique, cette opération étant nécessaire dans de nombreux cas pour pré-traiter des données (et leur appliquer d'autres traitement plus facilement ensuite). Il existe une multitude d'<strong>algorithmes de tris</strong> résolvant ce problème. Nous allons voir les exemples du <strong>tri par sélection</strong> et du <strong>tri par insertion</strong> et comparer leurs complexités. Nous allons trier des <strong><em>tableaux de nombres</em></strong> dans l'<strong><em>ordre croissant</em></strong>.</p>
-<h3 id="a-le-tri-par-selection">A. Le tri par sélection<a class="headerlink" href="#a-le-tri-par-selection" title="Permanent link">&para;</a></h3>
-<h4 id="ai-principe">A.I. Principe<a class="headerlink" href="#ai-principe" title="Permanent link">&para;</a></h4>
-<p>Le <strong>tri par sélection</strong> consiste à <em>sélectionner</em> le minimum d'une partie du tableau de plus en plus petite à chaque étape, et à l'<em>échanger</em> avec un élément de référence.</p>
-<div class="admonition note">
-<ul>
-<li>Au début, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 0</em>. On recherche le <strong><em>minimum de l'ensemble du tableau</em></strong>, et on l'échange avec l'élément de référence.</li>
-<li>Ensuite, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 1</em>. On recherche le <strong><em>minimum de l'ensemble du tableau moins celui d'indice 0</em></strong>, et on l'échange avec l'élément de référence.</li>
-<li>Ainsi de suite jusqu'à l'avant-dernier élément du tableau.</li>
-</ul>
 </div>
-<h4 id="aii-pseudo-code">A.II. Pseudo-code<a class="headerlink" href="#aii-pseudo-code" title="Permanent link">&para;</a></h4>
-<p><strong><em>Des remarques suivantes, identifier les éléments de programmation qu'il faudra utiliser.</em></strong></p>
-<details class="note">
-<summary>L'indice de l'élément de référence varie de 1 en 1 à chaque étape. On sait d'avance combien d'étapes il va y avoir.</summary>
-<p>Il faut utiliser une boucle bornée, avec une variable <code>i</code> contenant l'indice de l'élément de référence.</p>
-</details>
-<details class="note">
-<summary>On fait une recherche de minimum à chaque étape sur une sous-partie du tableau.</summary>
-<p>Il faut utiliser une autre boucle bornée, commençant juste après l'indice de l'élément de référence, et stocker l'indice du minimum trouvé dans une variable. </p>
-</details>
-<p>On formule le <strong>pseudo-code</strong> suivant :</p>
-<pre><code>fonction tri_selection(tab)  
-1    pour i allant de 0 à longueur(tab)-2
-2        indice_minimum &lt;- i
-3        pour j allant de i+1 à longueur(tab)-1
-4            si tab[j] &lt; tab[indice_minimum]
-5                indice_minimum &lt;- j
-6        si indice_minimum est différent de i
-7            on échange tab[i] et tab[indice_minimum]
-    renvoyer tab
-</code></pre>
-<p>Entourer d'une couleur la partie qui permet de trouver, à chaque itération, le minimum du sous-tableau, et d'une autre couleur celle qui fait l'échange entre l'élément de référence et le minimum trouvé.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple</p>
-<p>Appliquer l'algorithme pour trier le tableau <code>[5, 8, 10, 1, 2]</code>.  </p>
-<details class="note">
-<summary>Solution</summary>
-<p><strong>Etape 0</strong> : <code>[5, 8, 10, 1, 2]</code> <br />
-<strong>Etape 1</strong> : <code>[1, 8, 10, 5, 2]</code>  <br />
-<strong>Etape 2</strong> : <code>[1, 2, 10, 5, 8]</code><br />
-<strong>Etape 3</strong> : <code>[1, 2, 5, 10, 8]</code><br />
-<strong>Etape 4</strong> : <code>[1, 2, 5, 8, 10]</code>  </p>
-</details>
-</div>
-<h3 id="aiii-complexite">A.III. Complexité<a class="headerlink" href="#aiii-complexite" title="Permanent link">&para;</a></h3>
-<p>Pour donner un ordre de grandeur de la complexité, nous avons jusqu'à présent utilisé l'instruction qui été exécutée le plus de fois. On compte traditionnellement l'<strong><em>opération qui est la plus effectuée</em></strong>. Ici, il s'agit de l'<strong>opération de comparaison</strong> de la ligne 4.</p>
-<div class="admonition example">
-<p class="admonition-title">Sur notre exemple</p>
-<details class="note">
-<summary>Etape 0 à 1 <em>(i vaut 0)</em></summary>
-<p>Il y a 4 comparaisons (5-8, 5-10, 5-1, 1-2).</p>
-</details>
-<details class="note">
-<summary>Etape 1 à 2 <em>(i vaut 1)</em></summary>
-<p>Il y a 3 comparaisons (8-10, 8-5, 5-2).</p>
-</details>
-<details class="note">
-<summary>Etape 2 à 3 <em>(i vaut 2)</em></summary>
-<p>Il y a 2 comparaisons (10-5, 5-8).</p>
-</details>
-<details class="note">
-<summary>Etape 3 à 4 <em>(i vaut 3)</em></summary>
-<p>Il y a 1 comparaison (10-8).</p>
-</details>
-<p>En tout, il y a 1+2+3+4 <strong>comparaisons</strong>. En généralisant en fonction de <span class="arithmatex">\(n\)</span> la taille du tableau, on a <span class="arithmatex">\(1+2+...+n-2+n-1\)</span> comparaisons <em>(vous pouvez faire le test pour un tableau de taille 6)</em>.</p>
-</div>
-<p>Une formule mathématique permet d'exprimer ce résultat plus simplement, retrouvons-la. <br />
-Notons <span class="arithmatex">\(S = 1+2+...+n-2+n-1\)</span><br />
-et notons <span class="arithmatex">\(S' = n-1+n-2+...+2+1\)</span><br />
-Que vaut <span class="arithmatex">\(S+S'\)</span> ? <span class="arithmatex">\(n+n+...+n+n = n*(n-1)\)</span><br />
-Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(2S = n*(n-1)\)</span> et <span class="arithmatex">\(S=n(n-1)/2\)</span></p>
-<p>On peut donc dire que la <strong>complexité</strong> de ce tri est en <span class="arithmatex">\((1/2)n^2-(1/2)n\)</span>. On obtient l'<strong>ordre de grandeur</strong> en ne retenant que <em>la plus grande puissance de <span class="arithmatex">\(n\)</span></em>. </p>
-<blockquote>
-<p>Le <strong>tri par sélection</strong> a donc une complexité en <span class="arithmatex">\(O(n^2)\)</span>, autrement dit <strong>quadratique</strong>.</p>
-</blockquote>
-<details class="note">
-<summary>Nous avions dit que nous allions estimer la <strong>complexité dans le pire des cas</strong>, mais avons pris un cas quelconque pour <code>tab</code> dans notre exemple. Pourquoi ?</summary>
-<p>Ici, on n'utilise que des boucles bornées. Il y a donc toujours autant de comparaisons, peu importe comment les valeurs sont placées dans le tableau.</p>
-</details>
-<h3 id="b-tri-par-insertion">B. Tri par insertion<a class="headerlink" href="#b-tri-par-insertion" title="Permanent link">&para;</a></h3>
-<h4 id="bi-principe">B.I. Principe<a class="headerlink" href="#bi-principe" title="Permanent link">&para;</a></h4>
-<p>Le <strong>tri par insertion</strong> consiste à insérer chaque élément à la bonne place dans une sous-partie du tableau déjà triée.</p>
-<div class="admonition note">
-<ul>
-<li>Au début, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 1</em>. On le compare à celui d'indice 0 et on les échange s'ils ne sont pas dans le bon ordre.</li>
-<li>Ensuite, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 2</em>. On le compare aux précédents, situés à sa gauche, tant que l'on ne trouve pas d'<strong>élément plus petit</strong> ou que l'on attend pas l'indice 0. Les <strong>éléments plus grands</strong> sont décalés sur la droite, et on insère notre référence à la bonne place dans le sous-tableau trié.</li>
-<li>Ainsi de suite jusqu'au dernier élément du tableau.</li>
-</ul>
-</div>
-<h4 id="bii-pseudo-code">B.II. Pseudo-code<a class="headerlink" href="#bii-pseudo-code" title="Permanent link">&para;</a></h4>
-<p><strong><em>Des remarques suivantes, identifier les éléments de programmation qu'il faudra utiliser.</em></strong> </p>
-<details class="note">
-<summary>L'indice de l'élément de référence varie de 1 en 1 à chaque étape. On sait d'avance combien d'étapes il va y avoir.</summary>
-<p>Il faut utiliser une boucle bornée, avec une variable <code>i</code> contenant l'indice de l'élément de référence.</p>
-</details>
-<details class="note">
-<summary>On compare la référence aux éléments à sa gauche, tant que l'on n'a pas trouvé sa bonne place.</summary>
-<p>On utilise une boucle non-bornée qui s'arrête quand une des deux conditions n'est plus remplie. A ce moment, on a l'indice de la bonne place pour l'élément de référence.</p>
-</details>
-<p>On formule le pseudo-code suivant :</p>
-<pre><code>fonction tri_insertion(tab)
-1    pour i allant de 1 à longueur(tab)-1  
-2        val_i &lt;- tab[i]  
-3        j &lt;- i  
-4        tant que j&gt;0 et tab[j-1] &gt; val_i  
-5            tab[j] &lt;- tab[j-1]  
-6            j &lt;- j-1  
-7        tab[j] &lt;- val_i  
-    renvoyer tab
-</code></pre>
-<div class="admonition example">
-<p class="admonition-title">Exemple</p>
-<p>Appliquer l'algorithme pour trier le tableau <code>[5, 8, 10, 1, 2]</code>. </p>
-<details class="note">
-<summary>Solution</summary>
-<p><strong>Etape 0</strong> : <code>[5, 8, 10, 1, 2]</code><br />
-<strong>Etape 1</strong> :<code>[5, 8, 10, 1, 2]</code><br />
-<strong>Etape 2</strong> : <code>[5, 8, 10, 1, 2]</code><br />
-<strong>Etape 3</strong> : <code>[1, 5, 8, 10, 2]</code><br />
-<strong>Etape 4</strong> : <code>[1, 2, 5, 8, 10]</code>  </p>
-</details>
-</div>
-<h4 id="biii-complexite">B.III. Complexité<a class="headerlink" href="#biii-complexite" title="Permanent link">&para;</a></h4>
-<p>Pour estimer la <strong>complexité</strong> de ce tri, nous allons compter le <strong>nombre de décalages</strong> faits "sur la droite" <em>(on ne compte pas le placement de la référence)</em>.</p>
-<details class="note">
-<summary>Le nombre est-il le même, pour n'importe quel tableau que l'on trie ?</summary>
-<p>Non, mieux le tableau d'entrée est déjà trié, moins il y aura de décalage à faire.</p>
-</details>
-<details class="note">
-<summary>Quel tableau correspond alors au <strong>pire des cas</strong>, celui qui nécessite le plus d'opérations ?</summary>
-<p>Le tableau trié "à l'envers" correspond au pire des cas.</p>
-</details>
-<div class="admonition example">
-<p class="admonition-title">Prenons l'exemple du tri du tableau <code>[5, 4, 3, 2, 1]</code></p>
-<details class="note">
-<summary>Etape 0 à 1 <em>(i vaut 1)</em> -&gt; <code>[4, 5, 3, 2, 1]</code></summary>
-<p>Il y a 1 décalage (5-&gt;4).</p>
-</details>
-<details class="note">
-<summary>Etape 1 à 2 <em>(i vaut 2)</em> -&gt; <code>[3, 4, 5, 2, 1]</code></summary>
-<p>Il y a 2 décalages (5-&gt;3, 4-&gt;5).  </p>
-</details>
-<details class="note">
-<summary>Etape 2 à 3 <em>(i vaut 3)</em> -&gt; <code>[2, 3, 4, 5, 1]</code></summary>
-<p>Il y a 3 décalages (5-&gt;2, 4-&gt;5, 3-&gt;4).</p>
-</details>
-<details class="note">
-<summary>Etape 3 à 4 <em>(i vaut 4)</em> -&gt; <code>[1, 2, 3, 4, 5]</code></summary>
-<p>Il y a 4 décalages (5-&gt;1, 4-&gt;5, 3-&gt;4, 2-&gt;3).</p>
-</details>
-</div>
-<p>En tout, il y a <span class="arithmatex">\(1+2+3+4\)</span> <strong>décalages</strong>. En généralisant en fonction de <span class="arithmatex">\(n\)</span> la taille du tableau, on a <span class="arithmatex">\(1+2+...+n-2+n-1\)</span> décalages, donc le même résultat que pour le premier tri.</p>
-<blockquote>
-<p>La <strong>complexité dans le pire des cas</strong> du tri par insertion est en <span class="arithmatex">\(O(n^2)\)</span>, soit <strong>quadratique</strong>.</p>
-</blockquote>
 <h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
-<p>Ces deux algorithmes de tri sont donc comparables dans le pire des cas. Le <strong>tri par insertion</strong> sera tout de même plus efficace pour des données déjà partiellement triées, alors que ce paramètre ne change rien au coût du tri par sélection.</p>
-<p>La taille des tableaux en entrée a donc un plus grand impact sur l'exécution de ces algorithmes que lorsque l'on veut simplement y rechercher une valeur (algorithme de complexité linéaire). Si on multiple la taille d'un tableau par <strong>2</strong>, le trier prendra <strong>4 fois</strong> plus de temps.</p>
+<p>Pour les deux algorithmes de tri, l'<strong>invariant</strong> est : à la fin de chaque étape <code>i</code>, le tableau est trié des indices <code>0</code> à <code>i</code>.</p>
+<h2 id="b-terminaison">B. Terminaison<a class="headerlink" href="#b-terminaison" title="Permanent link">&para;</a></h2>
+<p>Un algorithme ne peut pas être correct, si on n'a pas l'assurance qu'il se <strong>termine</strong>.</p>
+<details class="note">
+<summary>Pourquoi est-ce qu'on est sûr qu'un algorithme se termine lorsqu'il contient une boucle bornée ?</summary>
+<p>Avec une boucle bornée, on exécute forcément la boucle un nombre fini de fois, connu à l'avance. On sait que l'on va sortir de la boucle.</p>
+</details>
+<details class="note">
+<summary>Dans quel cas est-ce qu'on peut ne pas être sûr de si un algorithme va se terminer ou non ?</summary>
+<p>Lorsque l'on a une boucle non-bornée, on peut créer une boucle infinie.</p>
+</details>
+<details class="note">
+<summary>Que faut-il faire alors pour montrer que l'algorithme se termine bien ?</summary>
+<p>Il faut montrer que l'on va sortir de la boucle non-bornée car, à un moment donné, sa condition ou une de ses conditions deviendra fausse.</p>
+</details>
+<h3 id="bi-tri-par-selection">B.I. Tri par sélection<a class="headerlink" href="#bi-tri-par-selection" title="Permanent link">&para;</a></h3>
+<p>Nous avons vu que le <strong>tri par sélection</strong> contenait 2 boucles bornées, donc il a toujours une complexité qui est du même ordre de grandeur. Il se termine donc.</p>
+<h3 id="bii-tri-par-insertion">B.II. Tri par insertion<a class="headerlink" href="#bii-tri-par-insertion" title="Permanent link">&para;</a></h3>
+<p>Le <strong>tri par insertion</strong> contient une boucle non-bornée, montrons qu'il se termine tout de même.</p>
+<p><strong><em>Extrait de son implémentation :</em></strong>
+<div class="highlight"><pre><span></span><code><span class="n">ref</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
+<span class="k">while</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">ref</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">j</span><span class="o">=</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span>
+</code></pre></div></p>
+<details class="note">
+<summary>Quand est-ce que la condition <code>j &gt; 0</code> devient fausse ?</summary>
+<p>Elle devient fausse lorsqu'on a parcouru tous les éléments de <code>t</code> jusqu'au premier : on arrive au bout du tableau. La valeur de <code>j</code> est décrémentée à chaque itération de boucle, cette situation se produira donc si l'autre condition ne devient pas fausse avant.</p>
+</details>
+<details class="note">
+<summary>Quand est-ce que la condition <code>ref &lt; t[j-1]</code> devient fausse ?</summary>
+<p>Elle devient fausse lorsque l'on a trouvé un élément de <code>t</code> de valeur inférieure à la référence <code>t[i]</code>. La valeur de <code>t[j-1]</code> est actualisée à chaque itération de boucle, car <code>j</code> est actualisée.</p>
+</details>
+<p><code>j</code> est une valeur entière qui varie strictement à chaque itération, c'est ce qu'on appelle un <strong>variant de boucle</strong>, qui permet de prouver la terminaison de l'algorithme. </p>
+<p>Ici, la première condition deviendra forcément fausse si la deuxième condition n'est pas fausse avant : l'algorithme se termine.</p>
+<h2 id="synthese">Synthèse<a class="headerlink" href="#synthese" title="Permanent link">&para;</a></h2>
+<p>Faire la <strong>preuve complète de la correction</strong> d'un algorithme sert à prouver qu'il fait bien ce qu'on attend de lui <strong><em>dans tous les cas</em></strong>.</p>
+<div class="admonition note">
+<p>Pour prouver :
+- sa <strong>correction</strong>, on cherche un <strong><em>invariant de boucle</em></strong>,
+- sa <strong>terminaison</strong>, on cherche un <strong><em>variant de boucle</em></strong>.</p>
+</div>
 <hr />
+<h2 id="td-correction">TD : Correction<a class="headerlink" href="#td-correction" title="Permanent link">&para;</a></h2>
+<ol>
+<li>La fonction suivante prend en arguments deux entiers positifs et renvoie leur produit.
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">produit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">a</span>
+    <span class="k">return</span> <span class="n">c</span>
+</code></pre></div>
+Quelle propriété reste vraie à chaque passage par la ligne marquée d'un # ?  </li>
+</ol>
+<p>A 𝑐 = 𝑎 × (𝑖 + 1)<br />
+B 𝑐 = 𝑎 × (𝑖 − 1)<br />
+C 𝑐 = 𝑎 × 𝑖<br />
+D 𝑐 = 𝑎 × 𝑏  </p>
+<ol>
+<li>On suppose qu'au début de l'exécution la variable <code>K</code> contient un entier positif non nul.<br />
+Lequel des scripts suivants va boucler indéfiniment ?</li>
+</ol>
+<p><strong>A</strong>
+<div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="n">K</span><span class="o">+</span><span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">K</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+<strong>B</strong>
+<div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="n">K</span><span class="o">-</span><span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">K</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+</code></pre></div>
+<strong>C</strong>
+<div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="n">K</span><span class="o">-</span><span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">K</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+<strong>D</strong>
+<div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="n">K</span><span class="o">+</span><span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">K</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+</code></pre></div></p>
+<ol>
+<li>𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">m</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1">#</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">*</span> <span class="n">q</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">q</span> <span class="o">*</span> <span class="n">p</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">p</span>
+</code></pre></div>
+Quelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?  </li>
+</ol>
+<p><strong>A</strong> 𝑝 × 𝑞𝑛−1 = 𝑎𝑚<br />
+<strong>B</strong> 𝑝 × 𝑞𝑛 = 𝑎𝑚<br />
+<strong>C</strong> 𝑝 × 𝑞𝑛+1 = 𝑎𝑚<br />
+<strong>D</strong> 𝑝 × 𝑞𝑚 = 𝑎𝑛</p>
+<ol>
+<li>Un algorithme de tri d’une liste d’entiers est implémenté de la façon suivante :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">trier</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="p">:</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+    <span class="n">indice_min</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]</span> <span class="p">:</span>
+            <span class="n">indice_min</span> <span class="o">=</span> <span class="n">j</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">indice_min</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="c1"># assertion vraie à cet endroit</span>
+    <span class="k">return</span> <span class="n">L</span>
+</code></pre></div>
+Parmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?</li>
+</ol>
+<p><strong>A</strong> la sous-liste <code>L[0:i+1]</code> contient les <code>i</code> plus grandes valeurs de <code>L</code> triées par ordre décroissant<br />
+<strong>B</strong> la sous-liste <code>L[0:i+1]</code> contient les <code>i</code> plus grandes valeurs de <code>L</code> triées par ordre croissant<br />
+<strong>C</strong> la sous-liste <code>L[0:i+1]</code> contient les <code>i</code> plus petites valeurs de <code>L</code> triées par ordre décroissant<br />
+<strong>D</strong> la sous-liste <code>L[0:i+1]</code> contient les <code>i</code> plus petites valeurs de <code>L</code> triées par ordre croissant</p>
 
 
   
@@ -2315,42 +2231,6 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../complexite/" class="md-footer__link md-footer__link--prev" aria-label="Previous: I. Complexité" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              I. Complexité
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../../tle/tle/" class="md-footer__link md-footer__link--next" aria-label="Next: Présentation" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Présentation
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
