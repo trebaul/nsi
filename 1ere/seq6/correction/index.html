@@ -2093,15 +2093,17 @@ On parle d'<strong>invariant de boucle</strong>. </p>
         <span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="c1"># assertion vraie à cet endroit</span>
     <span class="k">return</span> <span class="n">t</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
-</code></pre></div>
-??? note "Que contient <code>t</code> après chaque passage de boucle ?'<br />
-<code>t</code> contient les <code>i+1</code> premiers éléments de <code>liste</code>.</p>
+</code></pre></div></p>
+<details class="note">
+<summary>Que contient <code>t</code> après chaque passage de boucle ?</summary>
+<p><code>t</code> contient les <code>i+1</code> premiers éléments de <code>liste</code>.</p>
+</details>
 <details class="note">
 <summary>Que peut-on en conclure sur ce que contient <code>t</code> à la fin de l'exécution de la boucle ?</summary>
 <p>On peut en conclure qu'à la fin de l'exécution de la boucle, <code>t</code> contient la somme des <code>len(liste)-1+1</code> premiers éléments : donc tous les éléments de <code>liste</code>.</p>
 </details>
 <p><code>t</code> contient bien la valeur attendue, et on sait ce que renvoie <code>len(liste)</code>. Le résultat renvoyé par la fonction est donc correct.</p>
-<div class="admonition tip">
+<div class="admonition note">
 <p>L'invariant est qu'après chaque itération de boucle <code>i</code>, <code>t</code> contient la somme des <code>i+1</code> premiers éléments de <code>liste</code>.</p>
 </div>
 <h3 id="aii-les-algorithmes-de-tri">A.II. Les algorithmes de tri<a class="headerlink" href="#aii-les-algorithmes-de-tri" title="Permanent link">&para;</a></h3>
@@ -2134,7 +2136,7 @@ On parle d'<strong>invariant de boucle</strong>. </p>
 <summary>A la fin de l'étape <code>i</code>, le sous-tableau des éléments d'indice <code>i+1</code> à <code>n</code> est trié.</summary>
 <p>C'est faux, ces indices sont parcourus dans la boucle en <code>j</code>, mais seul un élément est sélectionné : le minimum.</p>
 </details>
-<div class="admonition tip">
+<div class="admonition note">
 <p>Dans le cas particulier où <code>i</code> vaut <code>n-1</code>, le sous-tableau des éléments d'indice <code>0</code> à <code>n-1</code> est trié, donc <strong><em>tout le tableau est trié</em></strong>.</p>
 </div>
 </div>
@@ -2209,8 +2211,8 @@ On parle d'<strong>invariant de boucle</strong>. </p>
 <h2 id="synthese">Synthèse<a class="headerlink" href="#synthese" title="Permanent link">&para;</a></h2>
 <p>Faire la <strong>preuve complète de la correction</strong> d'un algorithme sert à prouver qu'il fait bien ce qu'on attend de lui <strong><em>dans tous les cas</em></strong>.</p>
 <div class="admonition note">
-<p>Pour prouver :
-- sa <strong>correction</strong>, on cherche un <strong><em>invariant de boucle</em></strong>,
+<p>Pour prouver :<br />
+- sa <strong>correction</strong>, on cherche un <strong><em>invariant de boucle</em></strong>,<br />
 - sa <strong>terminaison</strong>, on cherche un <strong><em>variant de boucle</em></strong>.</p>
 </div>
 <hr />
