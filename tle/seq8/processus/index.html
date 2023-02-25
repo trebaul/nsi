@@ -953,6 +953,53 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_8">
+          7. Dictionnaires et algorithme d'apprentissage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="7. Dictionnaires et algorithme d'apprentissage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          7. Dictionnaires et algorithme d'apprentissage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq7/dico/" class="md-nav__link">
+        I. Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1604,10 +1651,99 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#td-commandes-linux-et-processus" class="md-nav__link">
+    TD : Commandes Linux et processus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-ordonnancement-des-processus" class="md-nav__link">
+    TD : Ordonnancement des processus
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq9/securisation/" class="md-nav__link">
+        9. Sécuriser les communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" type="checkbox" id="__nav_3_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_11">
+          10. Algorithmes sur les graphes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="10. Algorithmes sur les graphes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_11">
+          <span class="md-nav__icon md-icon"></span>
+          10. Algorithmes sur les graphes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq10/representation/" class="md-nav__link">
+        I. Représentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq10/algo/" class="md-nav__link">
+        II. Algorithmique
+      </a>
     </li>
   
 
@@ -2010,6 +2146,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#td-commandes-linux-et-processus" class="md-nav__link">
+    TD : Commandes Linux et processus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-ordonnancement-des-processus" class="md-nav__link">
+    TD : Ordonnancement des processus
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2069,6 +2219,187 @@ C’est donc une situation que l’on veut éviter !</p>
 <p>Un processus P1 utilise une ressource R1 et a besoin d’une ressource R2 pour continuer de s’exécuter.
 Or, R2 est utilisée par un processus P2, qui a besoin de la ressource R1 pour terminer son exécution et libérer R2.</p>
 </div>
+<hr />
+<h2 id="td-commandes-linux-et-processus">TD : Commandes Linux et processus<a class="headerlink" href="#td-commandes-linux-et-processus" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">&para;</a></h3>
+<p>Avec une ligne de commande dans un terminal sous Linux, on obtient l'affichage suivant :
+<center>
+<img src="../img/commandes_exo1.png" height=300> </center></p>
+<p>La documentation Linux donne la signification des différents champs :<br />
+    - UID : identifiant utilisateur effectif ;<br />
+    - PID : identifiant de processus ;<br />
+    - PPID : PID du processus parent ; <br />
+    - C : partie entière du pourcentage d'utilisation du processeur par rapport au temps de vie des processus ;<br />
+    - STIME : l'heure de lancement du processus ;<br />
+    - TTY : terminal de contrôle ;<br />
+    - TIME : temps d'exécution ;<br />
+    - CMD :  nom de la commande du processus.</p>
+<ol>
+<li>
+<p>Parmi les quatre commandes suivantes, laquelle a permis cet affichage ?<br />
+    a. <code>ls -l</code><br />
+    b. <code>ps –ef</code><br />
+    c. <code>cd ..</code><br />
+    d. <code>chmod 741 processus.txt</code></p>
+</li>
+<li>
+<p>Quel est l'identifiant du processus parent à l'origine de tous les processus concernant le navigateur Web (chromium-browser) ?</p>
+</li>
+<li>
+<p>Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?</p>
+</li>
+</ol>
+<h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">&para;</a></h3>
+<p>La commande UNIX <code>ps</code> présente un cliché instantané des processus en cours d'exécution.<br />
+Avec l’option <code>−eo pid,ppid,stat,command</code>, cette commande affiche dans l’ordre l’identifiant du processus PID (process identifier), le PPID (parent process identifier), l’état STAT et le nom de la commande à l’origine du processus.   </p>
+<p>Les valeurs du champ STAT indique l’état des processus :<br />
+R : processus en cours d’exécution<br />
+S : processus endormi   </p>
+<p>Sur un ordinateur, on exécute la commande <code>ps −eo pid,ppid,stat,command</code> et on obtient un affichage dont on donne ci-dessous un extrait. 
+<center>
+<img src="../img/commandes_exo2.png" height=200> </center></p>
+<p>À l'aide de cet affichage, répondre aux questions ci-dessous. </p>
+<ol>
+<li>
+<p>Quel est le nom de la première commande exécutée par le système d'exploitation lors du démarrage ?</p>
+</li>
+<li>
+<p>Quels sont les identifiants des processus actifs sur cet ordinateur au moment de l’appel de la commande <code>ps</code> ? Justifier la réponse.</p>
+</li>
+<li>
+<p>Depuis quelle application a-t-on exécuté la commande ps ? Donner les autres commandes qui ont été exécutées à partir de cette application.</p>
+</li>
+<li>
+<p>Expliquer l'ordre dans lequel les deux commandes <code>python programme1.py</code> et <code>python programme2.py</code> ont été exécutées.</p>
+</li>
+<li>
+<p>Peut-on prédire que l'une des deux commandes <code>python programme1.py</code> et <code>python programme2.py</code> finira avant l’autre ? </p>
+</li>
+</ol>
+<hr />
+<h2 id="td-ordonnancement-des-processus">TD : Ordonnancement des processus<a class="headerlink" href="#td-ordonnancement-des-processus" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1_1">Exercice 1<a class="headerlink" href="#exercice-1_1" title="Permanent link">&para;</a></h3>
+<p>Dans un bureau d’architectes, on dispose de certaines ressources qui ne peuvent être utilisées simultanément par plus d’un processus, comme l’imprimante, la table traçante, le modem.
+Chaque programme, lorsqu’il s’exécute, demande l’allocation des ressources qui lui sont nécessaires. Lorsqu’il a fini de s’exécuter, il libère ses ressources.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Programme 1</th>
+<th align="center">Programme 2</th>
+<th align="center">Programme 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">demander (table traçante)</td>
+<td align="center">demander (modem)</td>
+<td align="center">demander (imprimante)</td>
+</tr>
+<tr>
+<td align="center">demander (modem)</td>
+<td align="center">demander (imprimante)</td>
+<td align="center">demander (table traçante)</td>
+</tr>
+<tr>
+<td align="center">exécution</td>
+<td align="center">exécution</td>
+<td align="center">exécution</td>
+</tr>
+<tr>
+<td align="center">libérer (modem)</td>
+<td align="center">libérer (imprimante)</td>
+<td align="center">libérer (table traçante)</td>
+</tr>
+<tr>
+<td align="center">libérer (table traçante)</td>
+<td align="center">libérer (modem)</td>
+<td align="center">libérer (imprimante)</td>
+</tr>
+</tbody>
+</table>
+<p>On appelle p1, p2 et p3 les processus associés respectivement aux programmes 1, 2 et 3.</p>
+<ol>
+<li>
+<p>Les processus s'exécutent de manière concurrente.
+Justifier qu'une situation d'interblocage peut se produire. </p>
+</li>
+<li>
+<p>Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.</p>
+</li>
+<li>
+<p>Supposons que le processus p1 demande la table traçante alors qu'elle est en cours d'utilisation par le processus p3. Parmi les états suivants, quel sera l'état du processus p1 tant que la table traçante n'est pas disponible :   a) élu        b) bloqué       c) prêt     d) terminé</p>
+</li>
+</ol>
+<h3 id="exercice-2_1">Exercice 2<a class="headerlink" href="#exercice-2_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Les états possibles d’un processus sont : prêt, élu, terminé et bloqué.
+    a.   Expliquer à quoi correspond l’état élu.<br />
+    b.   Proposer un schéma illustrant les passages entre les différents états. </p>
+</li>
+<li>
+<p>On suppose que quatre processus C₁, C₂, C₃ et C₄ sont créés sur un ordinateur, et qu’aucun autre processus n’est lancé sur celui-ci, ni préalablement ni pendant l’exécution des quatre processus. L’ordonnanceur, pour exécuter les différents processus prêts, les place dans une structure de données de type file. Un processus prêt est enfilé et un processus élu est défilé.</p>
+<p>a.   Parmi les propositions suivantes, recopier celle qui décrit le fonctionnement des entrées/sorties dans<br />
+une file : <br />
+    i.   Premier entré, dernier sorti  |   ii.   Premier entré, premier sorti |    iii.   Dernier entré, premier sorti  </p>
+<p>b.   On suppose que les quatre processus arrivent dans la file et y sont placés dans l’ordre C₁, C₂, C₃ et C₄. </p>
+<ul>
+<li>Les temps d’exécution totaux de C₁, C₂, C₃ et C₄ sont respectivement 100 ms, 150 ms, 80 ms et 60 ms.</li>
+<li>Après 40 ms d’exécution, le processus C₁ demande une opération d’écriture disque, opération qui dure 200 ms. Pendant cette opération d’écriture, le processus C₁ passe à l’état bloqué.</li>
+<li>Après 20 ms d’exécution, le processus C₃ demande une opération d’écriture disque, opération qui dure 10 ms. Pendant cette opération d’écriture, le processus C₃ passe à l’état bloqué. </li>
+</ul>
+<p>Sur la frise chronologique donnée ci-dessous, les états du processus C₂ sont donnés. Compléter la frise avec les états des processus C1, C3 et C4.</p>
+<p><center>
+<img src="../img/processus_exo2.png" height=350> </center></p>
+</li>
+<li>
+<p>On trouvera ci- dessous deux programmes rédigés en pseudo-code Verrouiller un fichier signifie que le programme demande un accès exclusif au fichier et l’obtient si le fichier est disponible.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">Programme 1</th>
+<th align="center">Programme 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Verrouiller fichier_1</td>
+<td align="center">Verrouiller fichier_2</td>
+</tr>
+<tr>
+<td align="center">Calculs sur fichier_1</td>
+<td align="center">Verrouiller fichier_1</td>
+</tr>
+<tr>
+<td align="center">Verrouiller fichier_2</td>
+<td align="center">Calculs sur fichier_1</td>
+</tr>
+<tr>
+<td align="center">Calculs sur fichier_1</td>
+<td align="center">Calculs sur fichier_2</td>
+</tr>
+<tr>
+<td align="center">Calculs sur fichier_2</td>
+<td align="center">Déverrouiller fichier_1</td>
+</tr>
+<tr>
+<td align="center">Calculs sur fichier 1</td>
+<td align="center">Déverrouiller fichier_2</td>
+</tr>
+<tr>
+<td align="center">Déverrouiller fichier_2</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Déverrouiller fichier_1</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>a. En supposant que les processus correspondant à ces programmes s'exécutent simultanément (exécution concurrente), expliquer le problème qui peut être rencontré. </p>
+<p>b. Proposer une modification du programme 2 permettant d’éviter ce problème. </p>
 
 
   
@@ -2109,13 +2440,13 @@ Or, R2 est utilisée par un processus P2, qui a besoin de la ressource R1 pour t
       
       
         
-        <a href="../../../projets/pr%C3%A9s_projet/" class="md-footer__link md-footer__link--next" aria-label="Next: I. Présentation" rel="next">
+        <a href="../../seq9/securisation/" class="md-footer__link md-footer__link--next" aria-label="Next: 9. Sécuriser les communications" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              I. Présentation
+              9. Sécuriser les communications
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -953,6 +953,53 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_8">
+          7. Dictionnaires et algorithme d'apprentissage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="7. Dictionnaires et algorithme d'apprentissage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          7. Dictionnaires et algorithme d'apprentissage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq7/dico/" class="md-nav__link">
+        I. Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1620,6 +1667,81 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq9/securisation/" class="md-nav__link">
+        9. Sécuriser les communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" type="checkbox" id="__nav_3_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_11">
+          10. Algorithmes sur les graphes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="10. Algorithmes sur les graphes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_11">
+          <span class="md-nav__icon md-icon"></span>
+          10. Algorithmes sur les graphes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq10/representation/" class="md-nav__link">
+        I. Représentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq10/algo/" class="md-nav__link">
+        II. Algorithmique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2035,7 +2157,7 @@ text-align: justify}
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <h3 id="ai-differents-systemes-dexploitation">A.I. Différents systèmes d’exploitation<a class="headerlink" href="#ai-differents-systemes-dexploitation" title="Permanent link">&para;</a></h3>
 <details class="note">
-<summary>Faire des recherches sur les différents systèmes d’exploitation utilisés aujourd’hui. Comment ont-ils été créés ? Sont-ils libres ou propriétaires ?</summary>
+<summary>Faire des recherches sur les différents systèmes d’exploitation ("Operating System" -OS- en anglais) utilisés aujourd’hui. Quels sont les plus utilisés, et sur quelles machines ? De quel OS sont-ils issus ? Sont-ils libres ou propriétaires ?</summary>
 <p>Le premier système d’exploitation multitâche est <strong>Multics</strong>, né en 1965, mais c’est le système <strong>UNIX</strong>, né quelques
 années plus tard dans les laboratoires Bell, qui servira de base à des OS encore utilisés aujourd’hui.</p>
 <p>UNIX est un système propriétaire, c’est-à-dire dont le code source n’est pas connu de tous et donc non-modifiable.
@@ -2048,13 +2170,58 @@ le cas de macOS, utilisé sur les ordinateurs Apple, qui se base sur UNIX.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YScMI8lsy9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <details class="note">
-<summary>Faire un résumé de la vidéo ci-dessus, pour extraite les fonctions d'un système d'exploitation.</summary>
+<summary>Faire un résumé de la vidéo ci-dessus, pour extraire les fonctions d'un système d'exploitation.</summary>
 <p>Un <strong>système d’exploitation</strong> ou OS pour Operating System est un logiciel qui est une couche d’abstraction entre
 les applications de l’ordinateur et le matériel. Il donne accès aux différentes ressources. Les utilisateurs peuvent
 utiliser les applications ou bien interagir avec l’OS directement.</p>
 <p>Il est composé d’un <strong>noyau</strong> auquel nous n’avons pas accès directement. Celui-ci gère l’accès aux ressources, gère l’accès aux fichiers,... Il est possible d’interagir avec l’OS via des commandes.</p>
 <p>Le <strong>BIOS</strong> sert à démarrer l’ordinateur : il lance l’OS.</p>
 </details>
+<h3 id="aiii-les-commandes-linux">A.III. Les commandes Linux<a class="headerlink" href="#aiii-les-commandes-linux" title="Permanent link">&para;</a></h3>
+<p>Sous Linux, il est simple d'interagir directement avec le système d'exploitation, grâce à des lignes de commandes tapées sur un <strong>terminal</strong>. </p>
+<p>Ci-dessous un ensemble de commandes qui sont souvent utilisées. Rechercher quelle action elles ont sur l'ordinateur.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Nom de la commande</th>
+<th align="center">Action associée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>ls</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>cp</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>mv</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>rm</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>cd</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>cat</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>echo</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>touch</code></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
 
 
   
