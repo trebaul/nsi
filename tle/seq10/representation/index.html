@@ -1712,6 +1712,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-representer-les-graphes-informatiquement" class="md-nav__link">
+    TP : Représenter les graphes informatiquement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-exercices-sur-la-representation-des-graphes" class="md-nav__link">
+    TD : Exercices sur la représentation des graphes
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2132,6 +2146,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-representer-les-graphes-informatiquement" class="md-nav__link">
+    TP : Représenter les graphes informatiquement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-exercices-sur-la-representation-des-graphes" class="md-nav__link">
+    TD : Exercices sur la représentation des graphes
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2262,6 +2290,182 @@ E --8--- G</code></pre>
 liste des successeurs : 0: 1, 2 / 1: 3, 4 / 2: 4, 5 / 3: aucun / 4: 5 / 5: aucun</p>
 </details>
 </div>
+<hr />
+<h2 id="tp-representer-les-graphes-informatiquement">TP : Représenter les graphes informatiquement<a class="headerlink" href="#tp-representer-les-graphes-informatiquement" title="Permanent link">&para;</a></h2>
+<h3 id="a-implementation-avec-une-matrice-dadjacence">A. Implémentation avec une matrice d’adjacence<a class="headerlink" href="#a-implementation-avec-une-matrice-dadjacence" title="Permanent link">&para;</a></h3>
+<p><center>
+<img src="../img/graphe_rs2.png" height=175 style="float:right;padding-left:10px" /></center></p>
+<p>On considère le graphe représentant le réseau social ci-contre : </p>
+<ol>
+<li>Donner sa matrice d’adjacence.</li>
+</ol>
+<p><em><strong>N.B. :</strong> lorsque les sommets sont étiquetés avec des lettres, on associe généralement le premier sommet dans l’ordre lexicographique (ici A) à la première ligne de la matrice, et ainsi de suite.</em></p>
+<p><br><br></p>
+<ol>
+<li>
+<p>Pour la représenter en Python, nous allons utiliser une liste de liste Python (liste à deux dimensions).<br />
+Si on la stocke dans une variable <code>m</code>, on accède à l’élément de la ligne <code>i</code> et de la colonne <code>j</code> avec l’instruction <code>m[i][j]</code>.</p>
+<p>a. Représenter cette variable <code>m</code> pour notre exemple.</p>
+<p><br></p>
+<p>b. Quelle instruction permet de savoir si B et D sont adjacents ? A et E ?</p>
+<p><br></p>
+</li>
+</ol>
+<p>Nous allons en fait utiliser une classe pour représenter notre graphe, de manière à pouvoir rajouter des méthodes nous donnant des propriétés sur le graphe :</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GrapheM</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">matrice</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">matrice</span>
+
+    <span class="k">def</span> <span class="nf">est_adjacent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+        <span class="k">return</span> <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">est_symetrique</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">m</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+                <span class="k">if</span> <span class="o">...</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div>
+<ol>
+<li>
+<p>La méthode <code>est_adjacent</code> détermine si deux sommets <code>i</code> et <code>j</code> du graphe sont adjacents ou non.<br />
+    a. Comment faut-il la compléter pour qu’elle fonctionne pour un graphe non-pondéré ?</p>
+<p><br></p>
+<p>b. Comment faut-il la compléter pour qu’elle fonctionne pour un graphe pondéré ? <em>Utiliser cette deuxième version.</em></p>
+<p><br></p>
+</li>
+<li>
+<p>La méthode <code>est_symetrique</code> renvoie si, oui ou non, le graphe représenté par la matrice <code>m</code> est symétrique. Compléter-la.</p>
+</li>
+<li>
+<p>Utiliser la matrice crée dans la question 2 pour créer un objet de la classe <code>GrapheM</code> représentant le graphe de l’exemple.</p>
+</li>
+</ol>
+<p><br></p>
+<p>6.
+    a. Quelle instruction permet de savoir si B et G sont adjacents ? A et H ?</p>
+<pre><code>&lt;br&gt;
+
+b. Quelle instruction permet de savoir si le graphe de notre exemple est symétrique ?
+
+&lt;br&gt;&lt;br&gt;
+</code></pre>
+<h3 id="b-implementation-avec-une-liste-dadjacence">B. Implémentation avec une liste d’adjacence<a class="headerlink" href="#b-implementation-avec-une-liste-dadjacence" title="Permanent link">&para;</a></h3>
+<p><center>
+<img src="../img/graphe_web.png" height=175 style="float:right;padding-left:10px" /></center>
+On considère un ensemble de site Web reliés par des liens hypertextes.</p>
+<ol>
+<li>Donner sa représentation sous forme de matrice d’adjacence.</li>
+</ol>
+<p><br><br><br></p>
+<ol>
+<li>
+<p>Donner sa représentation sous la forme de :<br />
+    a. liste des prédécesseurs :</p>
+<p><br></p>
+<p>b. liste des successeurs :</p>
+<p><br></p>
+</li>
+<li>
+<p>Nous allons également utiliser une liste de liste Python pour représenter ce graphe sous forme de liste d’adjacence. Donner l’implémentation de la liste des successeurs de cet exemple :</p>
+</li>
+</ol>
+<p><br></p>
+<p>Pour, cette fois aussi, associer des méthodes à notre représentation, nous utilisons une classe <code>GrapheL</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">GrapheL</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lst</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lst</span> <span class="o">=</span> <span class="n">lst</span>
+
+    <span class="k">def</span> <span class="nf">est_adjacent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+        <span class="k">return</span> <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">graphe_vers_matrice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">)</span>
+        <span class="n">mat</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="n">lst</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">mat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mat</span>
+</code></pre></div>
+<ol>
+<li>
+<p>On utilise la liste des successeurs. Compléter la fonction <code>est_adjacent</code>.</p>
+</li>
+<li>
+<p>Représenter le graphe de l’exemple des sites Web avec un objet de la classe <code>GrapheL</code> en utilisant sa liste des successeurs.</p>
+</li>
+</ol>
+<p><br></p>
+<p>6.
+    a. Quelle instruction permet de savoir si les pages 3 et 4 sont adjacentes ?</p>
+<pre><code>&lt;br&gt;
+
+b. Lire et analyser la fonction `graphe_vers_matrice`. Vérifier, à l’aide d’un appel de cette fonction, que l’on    obtient bien la matrice trouvée dans la question 1.
+</code></pre>
+<ol>
+<li>Si le nom de nos pages avait été, par exemple :
+    Page 1 : NSI<br />
+    2 : POO<br />
+    3 : Récursivité<br />
+    4 : Diviser_pour_régner 
+    5 : Programmation_dynamique<br />
+    6 : Calculabilité<br />
+quelle autre structure qu’une liste Python aurait-il été plus pertinent d’utiliser pour représenter le graphe ? Utiliser cette structure pour représenter l’ensemble des pages Web.</li>
+</ol>
+<hr />
+<h2 id="td-exercices-sur-la-representation-des-graphes">TD : Exercices sur la représentation des graphes<a class="headerlink" href="#td-exercices-sur-la-representation-des-graphes" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1">Exercice 1 :<a class="headerlink" href="#exercice-1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Établir la <strong>matrice d’adjacence</strong> du graphe ci-dessous.
+<pre class="mermaid"><code>    graph LR
+    A --- C
+    D --- B
+    A --- B
+    A --- D</code></pre></p>
+</li>
+<li>
+<p>Établir sa <strong>liste d’adjacence</strong> (liste des voisins).</p>
+</li>
+</ol>
+<p><br></p>
+<h3 id="exercice-2">Exercice 2 :<a class="headerlink" href="#exercice-2" title="Permanent link">&para;</a></h3>
+<p>On donne la matrice d’adjacence suivante :</p>
+<p><span class="arithmatex">\(\begin{matrix}
+0 &amp; 1 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 0 \\
+1 &amp; 1 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+\end{matrix}\)</span></p>
+<ol>
+<li>Que peut-on dire sur les propriétés de ce graphe ?</li>
+</ol>
+<p><br></p>
+<ol>
+<li>Représenter le graphe correspondant.</li>
+</ol>
+<p><br></p>
+<h3 id="exercice-3-connexite">Exercice 3 : connexité<a class="headerlink" href="#exercice-3-connexite" title="Permanent link">&para;</a></h3>
+<p>Un graphe non-orienté est dit <em>connexe</em> si tous ses sommets peuvent être reliés deux à deux par une chaîne.</p>
+<ol>
+<li>Donner un exemple de graphe non-connexe.</li>
+</ol>
+<p>Un graphe orienté est dit <em>fortement connexe</em> si tous ses sommets peuvent être reliés deux à deux par un chemin.  </p>
+<ol>
+<li>Le graphe des pages Web utilisé en cours/TP est-il fortement connexe ?</li>
+<li>Donner un (autre ?) exemple de graphe orienté fortement connexe.</li>
+</ol>
+<h3 id="exercice-4-passer-dune-representation-a-lautre">Exercice 4 : passer d’une représentation à l’autre<a class="headerlink" href="#exercice-4-passer-dune-representation-a-lautre" title="Permanent link">&para;</a></h3>
+<p>On utilise la classe <code>GrapheM</code> définie en TP.</p>
+<ol>
+<li>Écrire une méthode de la classe <code>matrice_vers_liste</code> qui permet de passer de la représentation par matrice d’adjacence à la représentation par liste d’adjacence : elle prend en entrée un objet de la classe <code>GrapheM</code> et renvoie cette liste d’adjacence représentée par une liste Python à deux dimensions.</li>
+</ol>
+<p><em><strong>N.B. :</strong> pour initialiser une liste Python vide à deux dimensions, penser à utiliser la compréhension.</em></p>
+<ol>
+<li>On veut effectuer la même opération, mais stocker la liste d’adjacence dans un dictionnaire dont les clés sont les numéros des sommets et les valeurs contiennent la liste des sommets adjacents. Écrire la fonction matrice_vers_dictionnaire correspondante, prenant en entrée un objet de la classe GrapheM et renvoyant sa liste d’adjacence représentée avec un dictionnaire.</li>
+</ol>
 
 
   
