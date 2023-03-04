@@ -7,17 +7,15 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <meta name="author" content="Lena TREBAUL">
       
-      
-        <link rel="canonical" href="https://example.com/tle/seq9/securisation/">
+        <link rel="canonical" href="https://example.com/tle/seq9/programme/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
     
     
       
-        <title>Sécurisation des communications - Cours - Trebaul NSI</title>
+        <title>Programme - Trebaul NSI</title>
       
     
     
@@ -106,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#securiser-les-communications" class="md-skip">
+        <a href="#programme" class="md-skip">
           Skip to content
         </a>
       
@@ -139,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sécurisation des communications - Cours
+              Programme
             
           </span>
         </div>
@@ -238,15 +236,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../tle/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../tle/" class="md-tabs__link">
         Terminale
       </a>
     </li>
@@ -1012,14 +1008,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -1626,61 +1620,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          9. Sécuriser les communications
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../securisation/" class="md-nav__link">
         9. Sécuriser les communications
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cours" class="md-nav__link">
-    Cours
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#td-exemples-de-chiffrements" class="md-nav__link">
-    TD : Exemples de chiffrements
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2124,28 +2068,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cours" class="md-nav__link">
-    Cours
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#td-exemples-de-chiffrements" class="md-nav__link">
-    TD : Exemples de chiffrements
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2160,401 +2082,8 @@
                   
 
 
-<style>
-body {
-text-align: justify}
-</style>
-
-<h1 id="securiser-les-communications">Sécuriser les communications<a class="headerlink" href="#securiser-les-communications" title="Permanent link">&para;</a></h1>
-<h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
-<h3 id="a-methodes-de-chiffrement">A. Méthodes de chiffrement<a class="headerlink" href="#a-methodes-de-chiffrement" title="Permanent link">&para;</a></h3>
-<h4 id="ai-problematique">A.I. Problématique<a class="headerlink" href="#ai-problematique" title="Permanent link">&para;</a></h4>
-<p>Que veut dire "communiquer de manière sécurisée" ? Cela veut dire pouvoir envoyer des messages de manière à préserver :<br />
-- la <strong>confidentialité</strong> : ces messages ne doivent pas pouvoir être lus par quelqu’un d’autre que l’émetteur et le destinataire.<br />
-- leur <strong>intégrité</strong> : ils ne doivent pas pouvoir être modifiés,<br />
-- l’<strong>authentification</strong> de l’émetteur et du destinataire.</p>
-<p>Les méthodes décrites dans ce cours permettent d’assurer la <strong>confidentialité</strong> des messages principalement, et généralement leur <strong>intégrité</strong> et l’<strong>authentification</strong> des acteurs impliqués.</p>
-<h4 id="aii-chiffrement-symetrique-et-asymetrique">A.II. Chiffrement symétrique et asymétrique<a class="headerlink" href="#aii-chiffrement-symetrique-et-asymetrique" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Définition</p>
-<p>Une <strong>clé de chiffrement</strong> est une information (de n'importe quel type : entier, caractères,...) nécessaire pour chiffrer et déchiffrer un message.</p>
-</div>
-<h5 id="aiia-le-chiffrement-symetrique">A.II.a. Le chiffrement symétrique<a class="headerlink" href="#aiia-le-chiffrement-symetrique" title="Permanent link">&para;</a></h5>
-<div class="admonition note">
-<p class="admonition-title">Définition</p>
-<p>Le <strong>chiffrement symétrique</strong> repose sur l’utilisation d’<strong><em>une clé</em></strong> qui est la même pour chiffrer et pour déchiffrer le message.</p>
-</div>
-<p><center>
-<img src="../img/sym_ab.png" height=200></center></p>
-<hr />
-<p><center> <img src="../img/sym_ba.png" height=200></center></p>
-<details class="note">
-<summary>Cette méthode est-elle sécurisée ?</summary>
-<p>Si deux interlocuteurs possèdent cette clé, il est facile pour eux d’échanger des messages de manière sécurisée (confidentielle, intègre et authentifiant les interlocuteurs).</p>
-</details>
-<details class="note">
-<summary>Quel est son inconvénient ?</summary>
-<p>Le problème est qu’ils faut que chacun ait préalablement récupéré la clé... en utilisant un autre canal que celui sur lequel ils veulent communiquer (sinon tout le monde l’aura).</p>
-</details>
-<h5 id="aiib-le-chiffrement-asymetrique">A.II.b. Le chiffrement asymétrique<a class="headerlink" href="#aiib-le-chiffrement-asymetrique" title="Permanent link">&para;</a></h5>
-<div class="admonition note">
-<p class="admonition-title">Définition</p>
-<p>Le <strong>chiffrement asymétrique</strong> utilise deux clés : une <strong><em>clé publique</em></strong> qui sert à chiffrer le message et une <strong><em>clé privée</em></strong> qui sert à le déchiffrer. La <strong><em>clé publique</em></strong>, comme son nom l’indique, est accessible à tout le monde et tout un chacun peut chiffrer des messages avec. La <strong><em>clé privée</em></strong> n’est connue que du destinataire du message : il est le seul à pouvoir le déchiffrer.</p>
-</div>
-<p><center>
-<img src="../img/asym_ab.png" height=200></center></p>
-<hr />
-<p><center> <img src="../img/asym_ba.png" height=200></center></p>
-<details class="note">
-<summary>Quel est le principal avantage de cette méthode ?</summary>
-<p>Il n’y a ici pas besoin d’utiliser un autre canal pour transférer la clé qui permet de chiffrer, car elle est connue de tous.</p>
-</details>
-<details class="note">
-<summary>La communication est-elle sécurisée ?</summary>
-<p>La confidentialité est assurée, mais pas l'intégrité ni l'authentification : tout le monde ayant la clé publique, un message peut être remplacé par un autre, par quelqu'un d'autre, chiffré avec la même clé.</p>
-</details>
-<h3 id="b-https-secure-hypertext-transfer-protocol">B. HTTPS (Secure Hypertext Transfer Protocol)<a class="headerlink" href="#b-https-secure-hypertext-transfer-protocol" title="Permanent link">&para;</a></h3>
-<p>En pratique, on utilise généralement une combinaison des deux méthodes : tout d’abord un chiffrement asymétrique pour échanger la clé symétrique qui servira au reste des échanges. Cette méthode est celle utilisée lorsqu’on cherche à établir une connexion avec le serveur d’un site Web en HTTPS.</p>
-<p><center>
-<img src="../img/https1_eleve.png" height=825></center></p>
-<details class="note">
-<summary>Solution</summary>
-<p><center>
-<img src="../img/https1.png" height=825></center></p>
-</details>
-<hr />
-<h2 id="td-exemples-de-chiffrements">TD : Exemples de chiffrements<a class="headerlink" href="#td-exemples-de-chiffrements" title="Permanent link">&para;</a></h2>
-<h3 id="a-le-code-de-cesar">A. Le code de César<a class="headerlink" href="#a-le-code-de-cesar" title="Permanent link">&para;</a></h3>
-<h4 id="ai-chiffrement-symetrique">A.I. Chiffrement symétrique<a class="headerlink" href="#ai-chiffrement-symetrique" title="Permanent link">&para;</a></h4>
-<p>Le codage de César avec une <strong><em>clé de 13</em></strong> permet de réaliser un <strong>chiffrement symétrique</strong>. On décale tout simplement chaque lettre de l’alphabet du message initial de 13 pour obtenir le message chiffré :</p>
-<table>
-<thead>
-<tr>
-<th align="center">Lettre initiale</th>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">C</th>
-<th align="center">D</th>
-<th align="center">E</th>
-<th align="center">F</th>
-<th align="center">G</th>
-<th align="center">H</th>
-<th align="center">I</th>
-<th align="center">J</th>
-<th align="center">K</th>
-<th align="center">L</th>
-<th align="center">M</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><strong>Lettre chiffrée</strong></td>
-<td align="center">N</td>
-<td align="center">O</td>
-<td align="center">P</td>
-<td align="center">Q</td>
-<td align="center">R</td>
-<td align="center">S</td>
-<td align="center">T</td>
-<td align="center">U</td>
-<td align="center">V</td>
-<td align="center">W</td>
-<td align="center">X</td>
-<td align="center">Y</td>
-<td align="center">Z</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th align="center">Lettre initiale</th>
-<th align="center">N</th>
-<th align="center">O</th>
-<th align="center">P</th>
-<th align="center">Q</th>
-<th align="center">R</th>
-<th align="center">S</th>
-<th align="center">T</th>
-<th align="center">U</th>
-<th align="center">V</th>
-<th align="center">W</th>
-<th align="center">X</th>
-<th align="center">Y</th>
-<th align="center">Z</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><strong>Lettre chiffrée</strong></td>
-<td align="center">A</td>
-<td align="center">B</td>
-<td align="center">C</td>
-<td align="center">D</td>
-<td align="center">E</td>
-<td align="center">F</td>
-<td align="center">G</td>
-<td align="center">H</td>
-<td align="center">I</td>
-<td align="center">J</td>
-<td align="center">K</td>
-<td align="center">L</td>
-<td align="center">M</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>En utilisant cette méthode, chiffrer "INFORMATIQUE".</li>
-<li>Vérifier qu’en utilisant la même clé, on parvient à déchiffrer le message.</li>
-</ol>
-<h4 id="aii-chiffrement-asymetrique">A.II. Chiffrement asymétrique<a class="headerlink" href="#aii-chiffrement-asymetrique" title="Permanent link">&para;</a></h4>
-<ol>
-<li>
-<p>Comment peut-on obtenir un <strong>chiffrement asymétrique</strong> en utilisant le principe du codage de César ?</p>
-</li>
-<li>
-<p>Le mettre en œuvre sur le même exemple que précédemment, en utilisant une <strong>clé publique</strong> de 5 <em>(remplir le tableau ci-dessous)</em>.</p>
-</li>
-</ol>
-<p>Pour une clé de 5 <em>(chiffrement)</em> :</p>
-<table>
-<thead>
-<tr>
-<th align="center">Lettre initiale</th>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">C</th>
-<th align="center">D</th>
-<th align="center">E</th>
-<th align="center">F</th>
-<th align="center">G</th>
-<th align="center">H</th>
-<th align="center">I</th>
-<th align="center">J</th>
-<th align="center">K</th>
-<th align="center">L</th>
-<th align="center">M</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><strong>Lettre chiffrée</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th align="center">Lettre initiale</th>
-<th align="center">N</th>
-<th align="center">O</th>
-<th align="center">P</th>
-<th align="center">Q</th>
-<th align="center">R</th>
-<th align="center">S</th>
-<th align="center">T</th>
-<th align="center">U</th>
-<th align="center">V</th>
-<th align="center">W</th>
-<th align="center">X</th>
-<th align="center">Y</th>
-<th align="center">Z</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><strong>Lettre chiffrée</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>Quelle est la <strong>clé privée</strong> qu’il faut utiliser pour déchiffrer le message ? Compléter le tableau correspondant pour vérifier que l’on peut bien déchiffrer le message.</li>
-</ol>
-<p>Pour une clé de .......... <em>(déchiffrement)</em> :</p>
-<table>
-<thead>
-<tr>
-<th align="center">Lettre initiale</th>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">C</th>
-<th align="center">D</th>
-<th align="center">E</th>
-<th align="center">F</th>
-<th align="center">G</th>
-<th align="center">H</th>
-<th align="center">I</th>
-<th align="center">J</th>
-<th align="center">K</th>
-<th align="center">L</th>
-<th align="center">M</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><strong>Lettre chiffrée</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th align="center">Lettre initiale</th>
-<th align="center">N</th>
-<th align="center">O</th>
-<th align="center">P</th>
-<th align="center">Q</th>
-<th align="center">R</th>
-<th align="center">S</th>
-<th align="center">T</th>
-<th align="center">U</th>
-<th align="center">V</th>
-<th align="center">W</th>
-<th align="center">X</th>
-<th align="center">Y</th>
-<th align="center">Z</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><strong>Lettre chiffrée</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<p><br><br></p>
-<h3 id="b-le-xor">B. Le XOR<a class="headerlink" href="#b-le-xor" title="Permanent link">&para;</a></h3>
-<p>Rappeler la table de vérité du XOR (<em>ou exclusif</em>) :</p>
-<table>
-<thead>
-<tr>
-<th align="center">a</th>
-<th align="center">b</th>
-<th align="center">a xor b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<p>On considère <code>m</code> le message initial, <code>mc</code> le message chiffré et <code>c</code> la clé.<br />
-1. Montrer que si <code>mc = m XOR c</code>, alors <code>mc XOR c = (m XOR c) XOR c = m</code>.</p>
-<p><em><strong>Aide :</strong> Cela revient à ajouter une colonne dans la table de vérité, correspondant à une expression à exprimer en fonction de a, de b, et de l'opérateur xor.</em></p>
-<ol>
-<li>Que peut-on en déduire sur la méthode pour déchiffrer un message qui a été chiffré avec le XOR ?</li>
-</ol>
-<p><br></p>
-<p><center>
-<img src="../img/code_ascii.png" height=270></center></p>
-<ol>
-<li>A l’aide de la table ASCII fournie ci-dessus, chiffrer le message : "TURING" avec la clé "ENIGMA" en utilisant le XOR sur le code ASCII binaire de chaque lettre. Donner le résultat en binaire.</li>
-</ol>
-<p><br></p>
-<ol>
-<li>Convertir les nombres binaires en décimaux.</li>
-</ol>
-<p><br></p>
-<ol>
-<li>
-<p>Pour les plus curieux, rechercher sur le Web à quels caractères correspondent les lettres chiffrées <em>(ils ne sont pas dans la liste ci-dessus)</em>.</p>
-</li>
-<li>
-<p>A partir des lettres chiffrées en binaire, vérifier que l’on parvient à déchiffrer le message. Quelle opération faut-il faire pour cela ?</p>
-</li>
-</ol>
-<h3 id="c-le-code-rsa">C. Le code RSA<a class="headerlink" href="#c-le-code-rsa" title="Permanent link">&para;</a></h3>
-<p>Le système RSA est basé sur l'utilisation d'entiers qui ne sont pas choisis au hasard : des entiers (très grands en pratique) qui se factorisent en produits de nombres premiers (exemple : 9967 * 9973 = 99400891). C'est un <strong>chiffrement asymétrique</strong>.</p>
-<h4 id="1-chiffrement">1. Chiffrement<a class="headerlink" href="#1-chiffrement" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Choix de la clé publique</p>
-<p>Soit <span class="arithmatex">\(N = 437\)</span>, le produit de deux nombres premiers : <span class="arithmatex">\(437 = 23*19=p*q\)</span>.<br />
-On considère alors l’entier <span class="arithmatex">\(n = (p-1)*(q-1) = 22*18 = 96\)</span> et on choisit <span class="arithmatex">\(c = 41\)</span> un nombre premier strictement inférieur à <span class="arithmatex">\(n\)</span>. <br />
-La clé publique pour notre exemple est le couple <span class="arithmatex">\((c, N) = (41, 437)\)</span>  </p>
-</div>
-<p><strong>Codage sur un exemple</strong><br />
-Prenons la lettre <code>"b"</code>, codée en Unicode par le nombre <code>98</code>.<br />
-Pour coder la lettre <code>"b"</code>, on détermine le reste dans la division euclidienne de <span class="arithmatex">\(98^c\)</span> par <span class="arithmatex">\(N\)</span>. Ce qui donne ici 110, c’est à dire la lettre <code>"n"</code>.</p>
-<p><strong>Question</strong> : Appliquer la même méthode pour coder la lettre <code>"a"</code> (<code>97</code> en code ASCII).</p>
-<h4 id="2-dechiffrement">2. Déchiffrement<a class="headerlink" href="#2-dechiffrement" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Choix de la clé privée</p>
-<p>On cherche la clé privée <span class="arithmatex">\((d,N)\)</span> <em>(donc <span class="arithmatex">\(d\)</span>, <span class="arithmatex">\(N\)</span> faisant partie de la clé publique)</em>.<br />
-<span class="arithmatex">\(d\)</span> est un entier tel que le reste de la division euclidienne de <span class="arithmatex">\(c*d\)</span> par <span class="arithmatex">\(n\)</span> est <span class="arithmatex">\(1\)</span> <em>(des méthodes mathématiques permettent de déterminer <span class="arithmatex">\(d\)</span>)</em>.<br />
- La clé privée pour notre exemple est : <span class="arithmatex">\((d, n) = (29,437)\)</span>.  </p>
-</div>
-<p><strong>Décodage sur un exemple</strong><br />
-Pour décoder la lettre <code>”n”</code> <em>(codage de <code>"b"</code>)</em>, on utilise la clé privée qui est <span class="arithmatex">\((29,437)\)</span> : on calcule le reste de la division euclidienne de <span class="arithmatex">\(110*d\)</span> par <span class="arithmatex">\(N\)</span>.</p>
-<p><strong>Question</strong> : appliquer cette méthode pour déchiffrer le code obtenu dans la partie précédente.</p>
+<h1 id="programme">Programme<a class="headerlink" href="#programme" title="Permanent link">&para;</a></h1>
+<p><a href="../programme.pdf"><img alt="Le programme" src="./progmini.png" /></a></p>
 
 
   
@@ -2574,42 +2103,6 @@ Pour décoder la lettre <code>”n”</code> <em>(codage de <code>"b"</code>)</e
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../../seq8/processus/" class="md-footer__link md-footer__link--prev" aria-label="Previous: II. Processus" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              II. Processus
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../seq10/representation/" class="md-footer__link md-footer__link--next" aria-label="Next: I. Représentation" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              I. Représentation
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

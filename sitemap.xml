@@ -2,362 +2,377 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/about/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/culture_g%C3%A9/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/ressources/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/1ere/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq1/archi/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq1/logique/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq2/entiers_positifs/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq2/entiers_relatifs/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq2/flottants/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq3/puplet/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq3/synthese/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq3/tableaux/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq3/tableaux_algo/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq4/bases_web/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq4/langages_web/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq4/texte_machine/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq5/client_serveur/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq5/http_https/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq5/interactions_js/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq5/programme/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq5/synthese/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq6/complexite/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq6/correction/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq6/tris/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/1ere/seq7/dico/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/1ere/seq7/knn/</loc>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/2nde/prog/conditions/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/2nde/prog/fonctions/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/2nde/prog/variables/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/culture_g%C3%A9/cybersecurite/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/culture_g%C3%A9/gafam/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/culture_g%C3%A9/ia/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/my_theme_customizations/pyodide-mkdocs/end_REM/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/my_theme_customizations/pyodide-mkdocs/start_REM/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/pr%C3%A9s_projet/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/1ere_cyber/BonnesPratiques_Structure/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/1ere_cyber/Fiche_Suivi_Faur%C3%A9/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/1ere_cyber/Pr%C3%A9sentation_Sujets/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/1ere_cyber/Recherche_Informations/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/1ere_cyber/Rendus/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/1ere_cyber/TP_Pr%C3%A9paration_V2/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/1ere_cyber/presentation/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/tle_poo_rec/Gestion_Projet/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/tle_poo_rec/Pr%C3%A9sentation/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/tle_poo_rec/Rendus/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/projets/tle_poo_rec/presentation/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/tle/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq1/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq1/Imp%C3%A9ratif_Fonctionnel/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq1/POO/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq1/Synth%C3%A8se_El%C3%A8ve/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq10/algo/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq10/representation/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq2/diviser_regner/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq2/piles/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq2/r%C3%A9cursivit%C3%A9/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq3/Cours_SoC/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq4/dico/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq4/files/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq4/listes/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq4/synthese/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq5/BDD_Relationnelles/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq5/Mod%C3%A8le_Relationnel/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq5/SQL/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq6/arbres/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq6/arbres_algo/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq7/architecture/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq7/graphes/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq7/routage/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq8/os/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq8/processus/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/tle/seq9/entrainement/</loc>
+         <lastmod>2023-03-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/tle/seq9/programme/</loc>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tle/seq9/securisation/</loc>
-         <lastmod>2023-02-26</lastmod>
+         <lastmod>2023-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
