@@ -2221,7 +2221,7 @@ On parle d'<strong>invariant de boucle</strong>. </p>
 <p>On donne le code suivant, devant trier <code>t</code> avec l'algorithme du tri par sélection :
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">ind</span> <span class="o">=</span> <span class="n">i</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;</span><span class="n">t</span><span class="p">[</span><span class="n">ind</span><span class="p">]:</span>
@@ -2368,7 +2368,7 @@ Lequel des scripts suivants va boucler indéfiniment ?</li>
     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
 </code></pre></div></p>
 <ol>
-<li>𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.
+<li>𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie <span class="arithmatex">\(a^m\)</span>.
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
     <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">m</span>
@@ -2385,10 +2385,10 @@ Lequel des scripts suivants va boucler indéfiniment ?</li>
 </code></pre></div>
 Quelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?  </li>
 </ol>
-<p><strong>A</strong> 𝑝 × 𝑞𝑛−1 = 𝑎𝑚<br />
-<strong>B</strong> 𝑝 × 𝑞𝑛 = 𝑎𝑚<br />
-<strong>C</strong> 𝑝 × 𝑞𝑛+1 = 𝑎𝑚<br />
-<strong>D</strong> 𝑝 × 𝑞𝑚 = 𝑎𝑛</p>
+<p><strong>A</strong> <span class="arithmatex">\(𝑝 × 𝑞^𝑛−1 = 𝑎^𝑚\)</span><br />
+<strong>B</strong> <span class="arithmatex">\(𝑝 × 𝑞^𝑛 = 𝑎^𝑚\)</span><br />
+<strong>C</strong> <span class="arithmatex">\(𝑝 × 𝑞^(𝑛+1) = 𝑎^𝑚\)</span><br />
+<strong>D</strong> <span class="arithmatex">\(𝑝 × 𝑞^𝑚 = 𝑎^𝑛\)</span></p>
 <ol>
 <li>Un algorithme de tri d’une liste d’entiers est implémenté de la façon suivante :
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">trier</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="p">:</span>
