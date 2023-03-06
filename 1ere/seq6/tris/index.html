@@ -977,6 +977,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-les-tris-selection-et-insertion" class="md-nav__link">
+    TP : Les tris sélection et insertion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-cout-en-temps-des-tris-par-selection-et-par-insertion" class="md-nav__link">
+    TP : Coût en temps des tris par sélection et par insertion
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2160,6 +2174,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-les-tris-selection-et-insertion" class="md-nav__link">
+    TP : Les tris sélection et insertion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-cout-en-temps-des-tris-par-selection-et-par-insertion" class="md-nav__link">
+    TP : Coût en temps des tris par sélection et par insertion
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2446,6 +2474,183 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 <p>Ces deux algorithmes de tri sont donc comparables dans le pire des cas. Le <strong>tri par insertion</strong> sera tout de même plus efficace pour des données déjà partiellement triées, alors que ce paramètre ne change rien au coût du tri par sélection.</p>
 <p>La taille des tableaux en entrée a donc un plus grand impact sur l'exécution de ces algorithmes que lorsque l'on veut simplement y rechercher une valeur (algorithme de complexité linéaire). Si on multiple la taille d'un tableau par <strong>2</strong>, le trier prendra <strong>4 fois</strong> plus de temps.</p>
 <hr />
+<h2 id="tp-les-tris-selection-et-insertion">TP : Les tris sélection et insertion<a class="headerlink" href="#tp-les-tris-selection-et-insertion" title="Permanent link">&para;</a></h2>
+<h3 id="echauffement">Echauffement<a class="headerlink" href="#echauffement" title="Permanent link">&para;</a></h3>
+<p>Pour nous aider pour la suite, nous allons commencer par ré-implémenter des algorithmes déjà vus.</p>
+<ol>
+<li>Ecrire une fonction prenant en paramètre un tableau <code>t</code> et renvoyant l'indice de son minimum :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mini</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="n">ind</span> <span class="o">=</span> <span class="o">...</span>
+
+    <span class="c1">#à compléter</span>
+
+    <span class="k">return</span> <span class="n">ind</span>
+
+<span class="k">assert</span> <span class="n">mini</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<ol>
+<li>Ecrire une fonction prenant en paramètres deux variables <code>a</code> et <code>b</code> et échangeant leurs valeurs <em>(<code>a</code> doit contenir la valeur de <code>b</code>, et <code>b</code> la valeur de <code>a</code>)</em> :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">echange_valeurs</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+
+    <span class="c1">#à compléter</span>
+
+    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+
+<span class="k">assert</span> <span class="n">echange_valeurs</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="a-le-tri-selection">A. Le tri sélection<a class="headerlink" href="#a-le-tri-selection" title="Permanent link">&para;</a></h3>
+<p>Le tri sélection permet de trier un tableau de nombres (entiers ou flottants) quelconque, en appliquant l'algorithme suivant :</p>
+<p>On parcourt le tableau par indice de 0 à la longueur du tableau-2<br />
+    - on <strong>recherche le minimum</strong> du tableau entre cette position courante et la fin du tableau<br />
+    - on <strong>échange</strong> alors les 2 valeurs</p>
+<ol>
+<li>Visualiser cet algorithme sur un exemple en cliquant ici : http://lwh.free.fr/pages/algo/tri/tri_selection.html puis sur "Trier".</li>
+</ol>
+<p>Pour implémenter le tri par sélection, nous allons d'abord coder des sous-fonctions qui vont faire une partie du travail, et qu'il faudra mettre ensemble.</p>
+<ol>
+<li>Modifier la fonction <code>mini</code> écrire en question 1 de l'échauffement, pour écrire une fonction renvoyant l'indice du minimum d'un tableau <code>t</code> <strong><em>à partir d'un indice <code>debut</code></em></strong> :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">minimum</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">debut</span><span class="p">):</span>
+    <span class="n">ind</span> <span class="o">=</span> <span class="o">...</span>
+
+    <span class="c1">#à compléter</span>
+
+    <span class="k">return</span> <span class="n">ind</span>
+
+<span class="k">assert</span> <span class="n">minimum</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">minimum</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+</code></pre></div>
+<ol>
+<li>Modifier la fonction <code>echange_valeurs</code> écrite en question 2 de l'échauffement pour obtenir une fonction échangeant les éléments situés aux indices <code>ind1</code> et <code>ind2</code> d'un tableau <code>t</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">echange</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ind1</span><span class="p">,</span> <span class="n">ind2</span><span class="p">):</span>
+
+    <span class="c1">#à compléter</span>
+
+    <span class="k">return</span> <span class="n">t</span>
+
+<span class="k">assert</span> <span class="n">echange</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+<ol>
+<li>Compléter la fonction <code>selection</code> effectuant le <strong>tri sélection</strong>, implémentant l'algorithme énoncé plus haut en utilisant les fonctions <code>minimum</code> et <code>echange</code>. </li>
+</ol>
+<p><em><strong>N.B.:</strong> Après avoir exécuté la définition de ces fonctions dans les cellules plus haut, vous pouvez utiliser les fonctions dans une autre cellule.</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">selection</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="c1">#recherche du minimum à partir de i - appeler la fonction minimum et stocker le résultat dans une variable min_ind</span>
+        <span class="o">...</span>
+        <span class="c1">#échange, si besoin</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">min_ind</span><span class="p">:</span>
+            <span class="o">...</span>    <span class="c1"># appeler la fonction echange</span>
+    <span class="k">return</span> <span class="n">t</span>
+
+<span class="k">assert</span> <span class="n">selection</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="b-le-tri-par-insertion">B. Le tri par insertion<a class="headerlink" href="#b-le-tri-par-insertion" title="Permanent link">&para;</a></h3>
+<p>Le tri par insertion fonctionne selon l'algorithme suivant :</p>
+<p>On parcourt le tableau par indice de 1 à la longueur du tableau-1<br />
+    - on décale sur la droite tous les éléments supérieurs à l'élément à l'indice considéré,<br />
+    - on trouve la position pour cet élément, soit en arrivant au bout du tableau, soit lorsque l'on rencontre un élément inférieur. On place alors notre élément.</p>
+<ol>
+<li>
+<p>Visualiser cet algorithme sur un exemple en cliquant ici : http://lwh.free.fr/pages/algo/tri/tri_insertion.html puis sur "Trier".</p>
+</li>
+<li>
+<p>Implémenter la fonction <code>tri_insertion</code> à partir du pseudo-code ci-dessous :</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">pour</span> <span class="n">i</span> <span class="n">allant</span> <span class="n">de</span> <span class="mi">1</span> <span class="n">à</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">val_i</span> <span class="o">&lt;-</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">j</span> <span class="o">&lt;-</span> <span class="n">i</span>
+    <span class="n">tant</span> <span class="n">que</span> <span class="n">j</span> <span class="n">est</span> <span class="n">supérieur</span> <span class="n">à</span> <span class="mi">0</span> <span class="n">et</span> <span class="n">val_i</span> <span class="n">est</span> <span class="n">inférieur</span> <span class="n">à</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">on</span> <span class="n">déplace</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="n">à</span> <span class="n">la</span> <span class="n">place</span> <span class="n">de</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>   <span class="c1"># décalage sur la droite</span>
+        <span class="n">on</span> <span class="n">décrémente</span> <span class="n">j</span>
+
+    <span class="n">si</span> <span class="n">j</span> <span class="n">est</span> <span class="n">différent</span> <span class="n">de</span> <span class="n">i</span>
+        <span class="n">on</span> <span class="n">déplace</span> <span class="n">val_i</span> <span class="n">à</span> <span class="n">la</span> <span class="n">place</span> <span class="n">de</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+
+    <span class="c1">#à compléter</span>
+
+    <span class="k">return</span> <span class="n">t</span>
+
+<span class="k">assert</span> <span class="n">tri_insertion</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="pour-aller-plus-loin">Pour aller plus loin...<a class="headerlink" href="#pour-aller-plus-loin" title="Permanent link">&para;</a></h3>
+<p>Implémenter le <strong>tri sélection</strong> sans utiliser de sous-fonctions, mais en écrivant tout le code dans le corps de <code>tri_selection</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+
+    <span class="c1">#à compléter</span>
+
+    <span class="k">return</span> <span class="n">t</span>
+
+<span class="k">assert</span> <span class="n">tri_selection</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+</code></pre></div>
+<hr />
+<h2 id="tp-cout-en-temps-des-tris-par-selection-et-par-insertion">TP : Coût en temps des tris par sélection et par insertion<a class="headerlink" href="#tp-cout-en-temps-des-tris-par-selection-et-par-insertion" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Créer un nouveau fichier Python dans votre dossier NSI, et le nommer <code>TP_Complexite_Tris.py</code>. </p>
+</blockquote>
+<h3 id="a-le-pire-des-cas">A. Le pire des cas<a class="headerlink" href="#a-le-pire-des-cas" title="Permanent link">&para;</a></h3>
+<p>Nous allons commencer par étudier la complexité des tris dans le <strong>pire des cas</strong> : lors que le tableau est trié dans l'ordre inverse, ici l'ordre décroissant. L'objectif est de comparer les deux algorithmes.</p>
+<h4 id="ai-le-tri-par-selection">A.I. Le tri par sélection<a class="headerlink" href="#ai-le-tri-par-selection" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Utiliser une fonction implémentant le <strong>tri par sélection</strong>.</p>
+</li>
+<li>
+<p>Créer un tableau <code>t1</code> par compréhension, de la manière suivante : <code>t1 = [200-i for i in range(200)]</code>.</p>
+</li>
+<li>
+<p>Importer la fonction <code>time</code> de la bibliothèque <code>time</code> <strong><em>en haut de votre programme</em></strong> pour pouvoir lancer un compteur, lorsqu'une ligne de votre programme s'exécute :</p>
+</li>
+</ol>
+<p><code>python
+from time import time</code></p>
+<ol>
+<li>Utiliser le code suivant pour obtenir le temps d'exécution de la fonction <code>tri_selection</code> lorsqu'elle prend <code>t1</code> en paramètre, en millisecondes et reporter la valeur de <code>tps</code> sur le graphique ci-dessous :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">debut</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="n">tri_selection</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
+<span class="n">tps</span> <span class="o">=</span> <span class="p">(</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">debut</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span>
+</code></pre></div>
+<p><center>
+<img src="../6_Algorithmique_Tris/img/graphique.png" height=240></center> </p>
+<ol>
+<li>Refaire la même opération, c'est-à-dire le calcul du temps d'exécution, mais avec un tableau <code>t2</code> de longueur 400. Lui donner les mêmes valeurs que précédemment : pour chaque élément d'indice <code>i</code>, affecter <code>400-i</code>. </li>
+</ol>
+<p>Reporter la valeur de temps obtenue sur le graphique.</p>
+<ol>
+<li>Réitérer ces opérations pour un tableau de longueur 600, 800, et 1000 <em>(ils doivent être non-triés comme <code>t1</code> et <code>t2</code>)</em> et tracer la courbe qui relie les différents points sur le graphique. Quel <strong>type de complexité</strong> a le tri par sélection ?
+.........................................................</li>
+</ol>
+<h4 id="aii-le-tri-par-insertion">A.II. Le tri par insertion<a class="headerlink" href="#aii-le-tri-par-insertion" title="Permanent link">&para;</a></h4>
+<p>Refaire exactement la même chose pour le <strong>tri par insertion</strong> et <strong><em>placer les points sur la courbe de la question A.I.4 en ajoutant une légende</em></strong> : 
+- implémenter l'algorithme <em>(et garder la fonction dans votre script pour la suite)</em>,
+- relever son <em>temps d'exécution</em> pour des tableaux non-triés d'une taille variant de 200 à 1000.</p>
+<h3 id="b-le-meilleur-des-cas">B. Le meilleur des cas<a class="headerlink" href="#b-le-meilleur-des-cas" title="Permanent link">&para;</a></h3>
+<p>Faisons à présent les mêmes calculs, mais dans le <strong>meilleur des cas</strong> : lorsque le tableau est déjà trié. A priori, nos algorithmes n'ont rien à faire, mais l'ordinateur ne le sait pas.</p>
+<h4 id="bi-le-tri-par-selection">B.I. Le tri par sélection<a class="headerlink" href="#bi-le-tri-par-selection" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Créer un tableau <code>t1</code> par compréhension, de la manière suivante : <code>t1 = [i for i in range(200)]</code>. Les valeurs de <code>t1</code> seront alors rangées dans l'ordre.</p>
+</li>
+<li>
+<p>Appliquer le même script qu'à la question A.I.4. pour obtenir la nouvelle valeur de <code>tps</code> et indiquer cette valeur sur le graphique suivant :</p>
+</li>
+</ol>
+<p><center>
+<img src="../6_Algorithmique_Tris/img/graphique.png" height=240></center> </p>
+<ol>
+<li>Réitérer les étapes pour avoir les valeurs correspondant à des tableaux de taille <code>400</code>, <code>600</code>, <code>800</code> et <code>1000</code>, comme dans la partie précédente.</li>
+</ol>
+<h4 id="bii-le-tri-par-insertion">B.II. Le tri par insertion<a class="headerlink" href="#bii-le-tri-par-insertion" title="Permanent link">&para;</a></h4>
+<p>Refaire la même chose pour le tri par insertion, et placer les points sur le graphique de la partie B.I..</p>
+<h3 id="conclusion_1">Conclusion<a class="headerlink" href="#conclusion_1" title="Permanent link">&para;</a></h3>
+<p>Que peut-on dire sur la performance de ces deux algorithmes de tri ?</p>
 
 
   
