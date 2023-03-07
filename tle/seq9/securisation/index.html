@@ -2330,10 +2330,45 @@ text-align: justify}
 <p>Le mettre en œuvre pour chiffrer "NSI", en utilisant une <strong>clé publique</strong> de 5 <em>(remplir le tableau ci-dessous)</em>. Cela signifie que l'on fait 5 déplacements sur la droite pour coder chaque lettre.</p>
 </li>
 </ol>
-<p>Pour une clé de 5 <em>(chiffrement)</em> :
-| Lettre initiale | A | B | C | D | E | F | G | H | I | J | K | L | M |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| <strong>Lettre chiffrée</strong> |</p>
+<p>Pour une clé de 5 <em>(chiffrement)</em> :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Lettre initiale</th>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">C</th>
+<th align="center">D</th>
+<th align="center">E</th>
+<th align="center">F</th>
+<th align="center">G</th>
+<th align="center">H</th>
+<th align="center">I</th>
+<th align="center">J</th>
+<th align="center">K</th>
+<th align="center">L</th>
+<th align="center">M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Lettre chiffrée</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -2375,10 +2410,45 @@ text-align: justify}
 <ol>
 <li>Quelle est la <strong>clé privée</strong> qu’il faut utiliser pour déchiffrer le message ? Compléter le tableau correspondant pour vérifier que l’on peut bien déchiffrer le message.</li>
 </ol>
-<p>Pour une clé de .......... <em>(déchiffrement)</em> :
-| Lettre initiale | A | B | C | D | E | F | G | H | I | J | K | L | M |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| <strong>Lettre chiffrée</strong> |</p>
+<p>Pour une clé de .......... <em>(déchiffrement)</em> :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Lettre initiale</th>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">C</th>
+<th align="center">D</th>
+<th align="center">E</th>
+<th align="center">F</th>
+<th align="center">G</th>
+<th align="center">H</th>
+<th align="center">I</th>
+<th align="center">J</th>
+<th align="center">K</th>
+<th align="center">L</th>
+<th align="center">M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Lettre chiffrée</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -2461,7 +2531,7 @@ text-align: justify}
 </ol>
 <p><br></p>
 <p><center>
-<img src="../9_Sécurisation_Communications/img/code_ascii.png" height=270></center></p>
+<img src="../img/code_ascii.png" height=270></center></p>
 <ol>
 <li>A l’aide de la table ASCII fournie ci-dessus, chiffrer le message : "TURING" avec la clé "ENIGMA" en utilisant le XOR sur le code ASCII binaire de chaque lettre. Donner le résultat en binaire.</li>
 </ol>
@@ -2500,11 +2570,11 @@ Pour coder la lettre <code>"b"</code>, on détermine le reste dans la division e
 <p class="admonition-title">Choix de la clé privée</p>
 <p>On cherche la clé privée <span class="arithmatex">\((d,N)\)</span> <em>(donc <span class="arithmatex">\(d\)</span>, <span class="arithmatex">\(N\)</span> faisant partie de la clé publique)</em>.<br />
 <span class="arithmatex">\(d\)</span> est un entier tel que le reste de la division euclidienne de <span class="arithmatex">\(c*d\)</span> par <span class="arithmatex">\(n\)</span> est <span class="arithmatex">\(1\)</span> <em>(des méthodes mathématiques permettent de déterminer <span class="arithmatex">\(d\)</span>)</em>.<br />
- La clé privée pour notre exemple est : <span class="arithmatex">\((d, n) = (29,437)\)</span>.  </p>
+ La clé privée pour notre exemple est : <span class="arithmatex">\((d, N) = (29,437)\)</span>.  </p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<p>Pour décoder la lettre <code>”n”</code> <em>(codage de <code>"b"</code>)</em>, on utilise la clé privée qui est <span class="arithmatex">\((29,437)\)</span> : on calcule le reste de la division euclidienne de <span class="arithmatex">\(110*d\)</span> par <span class="arithmatex">\(N\)</span>.</p>
+<p>Pour décoder la lettre <code>”n”</code> <em>(codage de <code>"b"</code>)</em>, on utilise la clé privée qui est <span class="arithmatex">\((29,437)\)</span> : on calcule le reste de la division euclidienne de <span class="arithmatex">\(110^d\)</span> par <span class="arithmatex">\(N\)</span>. Ici <span class="arithmatex">\(110^29 % 437\)</span> donne bien <span class="arithmatex">\(98\)</span>.</p>
 </div>
 <p><strong>Question</strong> : appliquer cette méthode pour déchiffrer le code obtenu dans la partie précédente.</p>
 
