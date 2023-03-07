@@ -2223,7 +2223,7 @@ On voit que le type des valeurs, comme celui des clés, peut varier <em>(caract�
 <p>Consulter le contenu de <code>dico</code> et vérifier qu'il s'affiche sous la forme suivante : <code>{'nom': 'Lennon', 'prénom': 'John', 'année de naissance': 1940}</code></p>
 </li>
 <li>
-<p>Que renvoie l'instruction <code>dico[0]</code> ? .......................................</p>
+<p>Que renvoie l'instruction <code>dico[0]</code> ? Expliquer. ................................................................................</p>
 </li>
 <li>Que renvoie l'instruction <code>dico["prénom"]</code> ? ......................................<br />
 C'est ainsi que l'on accède à une valeur associée à une clé.</li>
@@ -2231,7 +2231,7 @@ C'est ainsi que l'on accède à une valeur associée à une clé.</li>
 <p>Que renvoie l'instruction <code>len(dico)</code> ? .................</p>
 </li>
 <li>
-<p>Quelles valeurs renvoient les instructions suivantes ? Indiquer pour chacune à quelle(s) caractéristique(s) du dictionnaire elles correspondent.</p>
+<p>Quelles valeurs renvoient les instructions suivantes ?</p>
 <ul>
 <li><code>dico.keys()</code> : ..................................................................</li>
 <li><code>dico.values()</code> : ................................................................</li>
@@ -2239,48 +2239,34 @@ C'est ainsi que l'on accède à une valeur associée à une clé.</li>
 </ul>
 </li>
 <li>
-<p>Créer un deuxième dictionnaire <code>dico_2</code> dans lequel on stocke les informations suivantes :</p>
+<p>On utilise ces fonctions pour faire des parcours de dictionnaire. Tester le code suivant :
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dico</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dico</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+</code></pre></div>
+Modifier ensuite le code pour afficher les <strong>clés</strong> du dictionnaire.</p>
+</li>
+<li>
+<p>On peut aussi créer un dictionnaire en utilisant la syntaxe suivante : <code>dictionnaire = {clé1: valeur1, clé2: valeur2}</code>.<br />
+Créer un deuxième dictionnaire <code>dico_2</code> avec cette méthode, dans lequel on stocke les informations suivantes : le nom <code>"McCartney"</code>, le prénom <code>"Paul"</code>, et la date de naissance <code>1942</code>.</p>
 </li>
 </ol>
-<table>
-<thead>
-<tr>
-<th align="center">Clé</th>
-<th align="center">Valeur</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><code>"nom"</code></td>
-<td align="center"><code>"McCartney"</code></td>
-</tr>
-<tr>
-<td align="center"><code>"prénom"</code></td>
-<td align="center"><code>"Paul"</code></td>
-</tr>
-<tr>
-<td align="center"><code>"année de naissance"</code></td>
-<td align="center"><code>1942</code></td>
-</tr>
-</tbody>
-</table>
 <h3 id="ii-exercices">II. Exercices<a class="headerlink" href="#ii-exercices" title="Permanent link">&para;</a></h3>
-<div class="admonition tip">
+<blockquote>
 <p>Pour chacun des exercices, vérifier la solution sur ordinateur, puis <strong>la noter</strong> sur votre feuille.</p>
-</div>
+</blockquote>
 <h4 id="exercice-1-les-donnees-exif-dune-image">Exercice 1 : les données EXIF d'une image<a class="headerlink" href="#exercice-1-les-donnees-exif-dune-image" title="Permanent link">&para;</a></h4>
 <p>Les photos numériques sont accompagnées de métadonnées, consultables dans leurs propriétés. </p>
-<p><img src="../img/exif.png" style="float:right;padding-left:10px" width=225/></p>
+<p><img src="../7_Dico_KNN/img/exif.png" style="float:right;padding-left:10px" width=225/></p>
 <ol>
-<li>
-<p>Représenter les données EXIF présentées ci-contre sous la forme d'un dictionnaire nommé <code>exif</code>.</p>
-</li>
-<li>
-<p>Quelle instruction permet d'afficher la hauteur de l'image ? </p>
-</li>
+<li>Représenter les données EXIF présentées ci-contre sous la forme d'un dictionnaire nommé <code>exif</code>.</li>
 </ol>
+<p><br></p>
+<ol>
+<li>Quelle instruction permet d'afficher la hauteur de l'image ? </li>
+</ol>
+<hr />
 <h4 id="exercice-2-un-groupe-de-rock">Exercice 2 : un groupe de rock<a class="headerlink" href="#exercice-2-un-groupe-de-rock" title="Permanent link">&para;</a></h4>
-<p>On veut stocker la liste des membres d'un groupe de rock dans un dictionnaire nommé <code>rockband</code>. Voici les informations à stocker : </p>
+<p>On veut stocker la liste des membres d'un groupe de rock dans un dictionnaire <code>rockband</code>, c'est-à-dire : </p>
 <table>
 <thead>
 <tr>
@@ -2319,13 +2305,9 @@ C'est ainsi que l'on accède à une valeur associée à une clé.</li>
 <p>Ecrire l'instruction renvoyant les noms de tous les membres du groupe.</p>
 </li>
 <li>
-<p>Ecrire une fonction <code>est_membre(rockband, nom)</code> renvoyant <code>True</code> si <code>nom</code> est présent dans le groupe, <code>False</code> sinon.</p>
+<p>Ecrire une fonction <code>est_membre(rockband, nom)</code> renvoyant <code>True</code> si <code>nom</code> est présent dans le groupe, <code>False</code> sinon. On fera un parcours de dictionnaire.</p>
 </li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>L'instruction <code>nom in rockband</code> renvoie le résultat demandé <em>(comme pour les tableaux)</em>, mais il est demandé ici d'écrire la recherche avec un parcours du dictionnaire.</p>
-</div>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">est_membre</span><span class="p">(</span><span class="n">rockband</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
 </code></pre></div>
 <ul>

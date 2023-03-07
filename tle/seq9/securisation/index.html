@@ -2327,48 +2327,13 @@ text-align: justify}
 <p>Comment peut-on obtenir un <strong>chiffrement asymétrique</strong> en utilisant le principe du codage de César ?</p>
 </li>
 <li>
-<p>Le mettre en œuvre sur le même exemple que précédemment, en utilisant une <strong>clé publique</strong> de 5 <em>(remplir le tableau ci-dessous)</em>.</p>
+<p>Le mettre en œuvre pour chiffrer "NSI", en utilisant une <strong>clé publique</strong> de 5 <em>(remplir le tableau ci-dessous)</em>. Cela signifie que l'on fait 5 déplacements sur la droite pour coder chaque lettre.</p>
 </li>
 </ol>
-<p>Pour une clé de 5 <em>(chiffrement)</em> :</p>
-<table>
-<thead>
-<tr>
-<th align="center">Lettre initiale</th>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">C</th>
-<th align="center">D</th>
-<th align="center">E</th>
-<th align="center">F</th>
-<th align="center">G</th>
-<th align="center">H</th>
-<th align="center">I</th>
-<th align="center">J</th>
-<th align="center">K</th>
-<th align="center">L</th>
-<th align="center">M</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><strong>Lettre chiffrée</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
+<p>Pour une clé de 5 <em>(chiffrement)</em> :
+| Lettre initiale | A | B | C | D | E | F | G | H | I | J | K | L | M |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| <strong>Lettre chiffrée</strong> |</p>
 <table>
 <thead>
 <tr>
@@ -2410,45 +2375,10 @@ text-align: justify}
 <ol>
 <li>Quelle est la <strong>clé privée</strong> qu’il faut utiliser pour déchiffrer le message ? Compléter le tableau correspondant pour vérifier que l’on peut bien déchiffrer le message.</li>
 </ol>
-<p>Pour une clé de .......... <em>(déchiffrement)</em> :</p>
-<table>
-<thead>
-<tr>
-<th align="center">Lettre initiale</th>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">C</th>
-<th align="center">D</th>
-<th align="center">E</th>
-<th align="center">F</th>
-<th align="center">G</th>
-<th align="center">H</th>
-<th align="center">I</th>
-<th align="center">J</th>
-<th align="center">K</th>
-<th align="center">L</th>
-<th align="center">M</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><strong>Lettre chiffrée</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
+<p>Pour une clé de .......... <em>(déchiffrement)</em> :
+| Lettre initiale | A | B | C | D | E | F | G | H | I | J | K | L | M |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| <strong>Lettre chiffrée</strong> |</p>
 <table>
 <thead>
 <tr>
@@ -2487,7 +2417,9 @@ text-align: justify}
 </tr>
 </tbody>
 </table>
-<p><br><br></p>
+<ol>
+<li>Déchiffrer le message chiffré à la question 2.</li>
+</ol>
 <h3 id="b-le-xor">B. Le XOR<a class="headerlink" href="#b-le-xor" title="Permanent link">&para;</a></h3>
 <p>Rappeler la table de vérité du XOR (<em>ou exclusif</em>) :</p>
 <table>
@@ -2529,23 +2461,25 @@ text-align: justify}
 </ol>
 <p><br></p>
 <p><center>
-<img src="../img/code_ascii.png" height=270></center></p>
+<img src="../9_Sécurisation_Communications/img/code_ascii.png" height=270></center></p>
 <ol>
 <li>A l’aide de la table ASCII fournie ci-dessus, chiffrer le message : "TURING" avec la clé "ENIGMA" en utilisant le XOR sur le code ASCII binaire de chaque lettre. Donner le résultat en binaire.</li>
 </ol>
-<p><br></p>
+<p><br> <br><br></p>
 <ol>
-<li>Convertir les nombres binaires en décimaux.</li>
+<li>Convertir le résultat en décimal.</li>
 </ol>
 <p><br></p>
+<p><em>Pour les plus curieux, vous pouvez rechercher sur le Web à quels caractères correspondent les lettres chiffrées </em>(ils ne sont pas dans la liste ci-dessus)<em>.</em></p>
 <ol>
 <li>
-<p>Pour les plus curieux, rechercher sur le Web à quels caractères correspondent les lettres chiffrées <em>(ils ne sont pas dans la liste ci-dessus)</em>.</p>
+<p>A partir des lettres chiffrées en binaire, vérifier que l’on parvient à déchiffrer le message.</p>
 </li>
 <li>
-<p>A partir des lettres chiffrées en binaire, vérifier que l’on parvient à déchiffrer le message. Quelle opération faut-il faire pour cela ?</p>
+<p>Que faut-il faire si la clé est, par exemple, "NSI" ? <em>(il n'est pas demandé de faire le chiffrement)</em></p>
 </li>
 </ol>
+<p><br></p>
 <h3 id="c-le-code-rsa">C. Le code RSA<a class="headerlink" href="#c-le-code-rsa" title="Permanent link">&para;</a></h3>
 <p>Le système RSA est basé sur l'utilisation d'entiers qui ne sont pas choisis au hasard : des entiers (très grands en pratique) qui se factorisent en produits de nombres premiers (exemple : 9967 * 9973 = 99400891). C'est un <strong>chiffrement asymétrique</strong>.</p>
 <h4 id="1-chiffrement">1. Chiffrement<a class="headerlink" href="#1-chiffrement" title="Permanent link">&para;</a></h4>
@@ -2555,9 +2489,11 @@ text-align: justify}
 On considère alors l’entier <span class="arithmatex">\(n = (p-1)*(q-1) = 22*18 = 96\)</span> et on choisit <span class="arithmatex">\(c = 41\)</span> un nombre premier strictement inférieur à <span class="arithmatex">\(n\)</span>. <br />
 La clé publique pour notre exemple est le couple <span class="arithmatex">\((c, N) = (41, 437)\)</span>  </p>
 </div>
-<p><strong>Codage sur un exemple</strong><br />
-Prenons la lettre <code>"b"</code>, codée en Unicode par le nombre <code>98</code>.<br />
+<div class="admonition example">
+<p class="admonition-title">exemple</p>
+<p>Prenons la lettre <code>"b"</code>, codée en Unicode par le nombre <code>98</code>.<br />
 Pour coder la lettre <code>"b"</code>, on détermine le reste dans la division euclidienne de <span class="arithmatex">\(98^c\)</span> par <span class="arithmatex">\(N\)</span>. Ce qui donne ici 110, c’est à dire la lettre <code>"n"</code>.</p>
+</div>
 <p><strong>Question</strong> : Appliquer la même méthode pour coder la lettre <code>"a"</code> (<code>97</code> en code ASCII).</p>
 <h4 id="2-dechiffrement">2. Déchiffrement<a class="headerlink" href="#2-dechiffrement" title="Permanent link">&para;</a></h4>
 <div class="admonition note">
@@ -2566,8 +2502,10 @@ Pour coder la lettre <code>"b"</code>, on détermine le reste dans la division e
 <span class="arithmatex">\(d\)</span> est un entier tel que le reste de la division euclidienne de <span class="arithmatex">\(c*d\)</span> par <span class="arithmatex">\(n\)</span> est <span class="arithmatex">\(1\)</span> <em>(des méthodes mathématiques permettent de déterminer <span class="arithmatex">\(d\)</span>)</em>.<br />
  La clé privée pour notre exemple est : <span class="arithmatex">\((d, n) = (29,437)\)</span>.  </p>
 </div>
-<p><strong>Décodage sur un exemple</strong><br />
-Pour décoder la lettre <code>”n”</code> <em>(codage de <code>"b"</code>)</em>, on utilise la clé privée qui est <span class="arithmatex">\((29,437)\)</span> : on calcule le reste de la division euclidienne de <span class="arithmatex">\(110*d\)</span> par <span class="arithmatex">\(N\)</span>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Pour décoder la lettre <code>”n”</code> <em>(codage de <code>"b"</code>)</em>, on utilise la clé privée qui est <span class="arithmatex">\((29,437)\)</span> : on calcule le reste de la division euclidienne de <span class="arithmatex">\(110*d\)</span> par <span class="arithmatex">\(N\)</span>.</p>
+</div>
 <p><strong>Question</strong> : appliquer cette méthode pour déchiffrer le code obtenu dans la partie précédente.</p>
 
 
