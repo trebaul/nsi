@@ -1691,6 +1691,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-implementation-de-chiffrements" class="md-nav__link">
+    TP : Implémentation de chiffrements
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2158,6 +2165,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-implementation-de-chiffrements" class="md-nav__link">
+    TP : Implémentation de chiffrements
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2577,6 +2591,200 @@ Pour coder la lettre <code>"b"</code>, on détermine le reste dans la division e
 <p>Pour décoder la lettre <code>”n”</code> <em>(codage de <code>"b"</code>)</em>, on utilise la clé privée qui est <span class="arithmatex">\((29,437)\)</span> : on calcule le reste de la division euclidienne de <span class="arithmatex">\(110^d\)</span> par <span class="arithmatex">\(N\)</span>. Ici, le reste dans la division de <span class="arithmatex">\(110^{29}\)</span> par <span class="arithmatex">\(437\)</span> donne bien <span class="arithmatex">\(98\)</span>.</p>
 </div>
 <p><strong>Question</strong> : appliquer cette méthode pour déchiffrer le code obtenu dans la partie précédente.</p>
+<hr />
+<h2 id="tp-implementation-de-chiffrements">TP : Implémentation de chiffrements<a class="headerlink" href="#tp-implementation-de-chiffrements" title="Permanent link">&para;</a></h2>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
+<p>Beaucoup de chiffrements nécessitent de passer par la représentation des caractères sous la forme d'entiers, en utilisant Unicode. Pour avoir la représentation d'un caractère sous forme de nombre, ou réciproquement le caractère correspondant à un nombre donné, on utilise les fonctions Python suivantes :
+- La fonction <code>ord</code> qui prend en paramètre un caractère et renvoie sa transcription avec <strong>Unicode</strong> <em>(intégrant le code </em><em>ASCII</em><em>, qui est celui utilisé pour coder des caractères non-spéciaux)</em>.
+- Sa fonction réciproque <code>chr</code> qui renvoie le caractère correspondant à un nombre <strong>Unicode</strong>.</p>
+<ol>
+<li>Tester la fonction <code>ord</code> sur des lettres majuscules pour obtenir leur code ASCII. Quel est le nombre codant le 'A' ?
+code ASCII du 'A' : </li>
+<li>Tester la fonction <code>chr</code> avec des entiers divers, puis vérifier que l'on retrouve bien le caractère <code>A</code> lors qu'on met son code ASCII en paramètre.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<h3 id="a-le-xor">A. Le XOR<a class="headerlink" href="#a-le-xor" title="Permanent link">&para;</a></h3>
+<p>Nous allons écrire une fonction <code>chiffrement_xor</code> qui prend en entrée un message sous la forme d'une chaîne de caractères et une clé du même type, et retourne le message chiffré avec le XOR, sous la forme d'une chaîne de caractères également.</p>
+<p>Nous allons utiliser :</p>
+<ul>
+<li>L'opérateur <code>^</code> qui effectue le XOR entre deux <strong>nombres</strong> <code>x</code> et <code>y</code> avec la syntaxe <code>x^y</code></li>
+<li>
+<p>Une clé (symétrique) qui fera la même taille que le message (vous pouvez utiliser l'exemple pris en TD).</p>
+</li>
+<li>
+<p>Identifier les différentes étapes de l'algorithme, à écrire ci-dessous.</p>
+</li>
+</ul>
+<details>
+<summary style="border:1pt solid black; border-radius:5pt; width:15%; color:black; padding:3px; background-color: lightcyan"> Solution possible </summary>  
+
+<div style="border:1pt solid black; border-radius:5pt; color:black; padding:3px;"> 
+
+On pourra appliquer les étapes suivantes, pour chaque caractère du message :
+    - récupérer le code ascii du caractère dans une variable,
+    - récupérer le code ascii du caractère de la clé associé au caractère dans une autre variable,
+    - calculer le xor entre ces deux nombres,
+    - ajouter la conversion en caractère de ce résultat au reste du message chiffré.
+</div>
+</details>
+
+<ol>
+<li>Implémenter cette fonction <code>xor</code> et afficher le message chiffré.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">xor</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="o">...</span>
+
+
+<span class="n">message</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">cle</span> <span class="o">=</span> <span class="o">...</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">xor</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">cle</span><span class="p">))</span>
+</code></pre></div>
+<details>
+<summary style="border:1pt solid black; border-radius:5pt; width:15%; color:black; padding:3px; background-color: lightcyan"> Aide </summary>  
+
+<div style="border:1pt solid black; border-radius:5pt; color:black; padding:3px;"> 
+Pour chaque caractère à chiffrer, il faut lui associer un caractère de la clé, qui ne fait pas forcément la même taille. Ils n'ont donc pas le même indice ! 
+Utiliser le modulo % et une caractéristique de la clé pour la "répéter"comme fait en TD.
+</div>
+</details>
+
+<ol>
+<li>Le XOR permettant de faire un chiffrement symétrique, comment trouve-t-on le message initial ? Faire le test ci-dessous.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<details>
+<summary style="border:1pt solid black; border-radius:5pt; width:15%; color:black; padding:3px; background-color: lightcyan"> Aide </summary>  
+
+<div style="border:1pt solid black; border-radius:5pt; color:black; padding:3px;"> 
+
+Le XOR étant un chiffrement symétrique, appliquer la même fonction avec la même clé au message chiffré permet d'obtenir à nouveau le message initial.
+</div>
+</details>
+
+<h3 id="b-le-code-de-cesar">B. Le code de César<a class="headerlink" href="#b-le-code-de-cesar" title="Permanent link">&para;</a></h3>
+<p>Écrire une fonction <code>cesar</code> permettant de chiffrer et (avec une clé privée potentiellement différente) de déchiffrer un message. </p>
+<ul>
+<li>On pourra pour cela utiliser n’importe quelle clé publique <code>cle</code> comprise entre 1 et 25.</li>
+<li>Le message à chiffrer <code>message</code> sera écrit en majuscules.</li>
+<li>
+<p>On ne chiffre pas les caractères qui ne sont pas des lettres majuscules (on garde le caractère initial).</p>
+</li>
+<li>
+<p>Ecrire une première version de la fonction, utilisant une variable <code>alphabet</code> contenant toutes les lettres majuscules, pour obtenir l'indice de la lettre chiffrée à partir de l'indice de la lettre non-chiffrée.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cesar</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="n">alphabet</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+    <span class="o">...</span>
+</code></pre></div>
+<details>
+<summary style="border:1pt solid black; border-radius:5pt; width:15%; color:black; padding:3px; background-color: lightcyan"> Aide 1 </summary>  
+
+<div style="border:1pt solid black; border-radius:5pt; color:black; padding:3px;"> 
+Si l'on dépasse la taille de l'alphabet, il faut revenir au début. Pensez donc au modulo : % !
+</div>
+</details>
+
+<details>
+<summary style="border:1pt solid black; border-radius:5pt; width:15%; color:black; padding:3px; background-color: lightcyan"> Aide 2 </summary>  
+
+<div style="border:1pt solid black; border-radius:5pt; color:black; padding:3px;"> 
+Pour obtenir l'indice de la lettre chiffrée, il faut avoir l'indice de la lettre non-chiffrée. On peut l'obtenir en calculant sa position par rapport au A et avec la fonction ord, ou bien avec une fonction auxiliaire qui recherche l'indice d'une occurrence dans une chaîne de caractères.
+</div>
+</details>
+
+<ol>
+<li>Tester votre fonction sur le message <code>"CLEOPATRE EST EN DANGER !"</code> :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">cle</span> <span class="o">=</span> <span class="o">...</span>
+</code></pre></div>
+<ol>
+<li>Ecrire une deuxième version de la fonction, utilisant cette fois-ci un dictionnaire <code>correspondance</code> donnant la correspondance entre chaque lettre majuscule et sa version chiffrée. Ce dictionnaire est généré par compréhension, grâce à la fonction <code>chr</code> et au code ASCII du <code>A</code>.<br />
+Tester la fonction sur le message.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cesar_dico</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="n">correspondance</span> <span class="o">=</span> <span class="p">{</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="o">+...</span><span class="p">):</span> <span class="nb">chr</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">cle</span><span class="p">)</span><span class="o">...+...</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">)}</span>
+    <span class="o">...</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">cesar_dico</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+</code></pre></div>
+<ol>
+<li>Déchiffrer le message.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<h3 id="c-le-systeme-rsa">C. Le système RSA<a class="headerlink" href="#c-le-systeme-rsa" title="Permanent link">&para;</a></h3>
+<p>Écrire un programme qui chiﬀre et déchiﬀre un message en utilisant le système RSA avec les clés utilisées en TD :
+- clé publique : (41, 437)
+- clé privée : (29, 437)</p>
+<p>On créera une fonction <code>chiffrement_RSA(message, cle_publique)</code> et une fonction <code>dechiffrement_RSA(message_chiffre)</code> qui retournent respectivement le message chiffré (en caractères) et le message déchiffré (en caractères). </p>
+<p>On part du principe que la clé publique est connue de tous, et peut donc être utilisée en paramètre de la fonction de chiffrement, alors que la clé privée n'est connue que du destinataire : lui seul a la fonction permettant de déchiffrer le message dans laquelle la clé privée est écrite "en dur".</p>
+<p><strong>N.B. :</strong> Voici un autre exemple de clés qui peuvent être utilisés : 
+clé publique (103, 697); 
+clé privée (87, 697).</p>
+<p><strong>N.B.bis :</strong> L'utilisation de <code>ord</code> et <code>chr</code> est de mise car on convertit les caractères en nombres avant de leur appliquer une formule mathématique.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">chiffrement_RSA</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">cle_publique</span><span class="p">):</span>
+    <span class="o">...</span>
+
+
+<span class="k">def</span> <span class="nf">dechiffrement_RSA</span><span class="p">(</span><span class="n">message_chiffre</span><span class="p">):</span>
+    <span class="o">...</span>
+
+
+<span class="n">message</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">cle_publique</span> <span class="o">=</span> <span class="o">...</span>
+<span class="c1">#tester le chiffement</span>
+<span class="c1">#tester le déchiffrement</span>
+</code></pre></div>
+<p><strong><em>Pour aller plus loin...</em></strong></p>
+<p>Le calcul du reste dans la division euclidienne d'un grand nombre à une puissance donnée peut être très coûteux en temps. Pour éviter ce problème, on décompose le nombre en puissances de 2, en utilisant l'algorithme d'exponentiation modulaire. </p>
+<ol>
+<li>Calculons d'abord efficacement <span class="arithmatex">\(x^n\)</span>, avec l'algorithme d'<strong>exponentiation rapide</strong>.
+Son principe est expliqué ici : https://fr.wikipedia.org/wiki/Exponentiation_rapide</li>
+</ol>
+<p>On en propose une version itérative. Vérifier qu'elle fonctionne bien en rajoutant des tests.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">exponentiation_rapide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">*</span><span class="n">x</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">p</span>
+
+<span class="c1"># tests</span>
+<span class="o">...</span>
+</code></pre></div>
+<p>Proposer une version récursive de cet algorithme <em>(correspondant à la description de Wikipédia)</em> :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">exponentiation_rec</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div>
+<ol>
+<li>Cet algorithme n'est pas exactement celui qu'on recherche : l'adapter pour obtenir ce résultat modulo une valeur <span class="arithmatex">\(m\)</span> :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">exponentiation_mod_rec</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div>
+<ol>
+<li>Adapter les fonctions de chiffrement pour utiliser cette fonction calculant l'exponentiation modulaire :</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">chiffrement_rsa_rapide</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">cle_publique</span><span class="p">):</span>
+    <span class="o">...</span>
+
+
+<span class="k">def</span> <span class="nf">dechiffrement_rsa_rapide</span><span class="p">(</span><span class="n">message_chiffre</span><span class="p">):</span>
+    <span class="o">...</span>
+
+
+<span class="n">message</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">cle_publique</span> <span class="o">=</span> <span class="o">...</span>
+<span class="c1">#tester le chiffement</span>
+<span class="c1">#tester le déchiffrement</span>
+</code></pre></div>
 
 
   
