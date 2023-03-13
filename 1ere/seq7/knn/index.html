@@ -1045,6 +1045,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-implementation-de-lalgorithme-des-k-plus-proches-voisins" class="md-nav__link">
+    TP : Implémentation de l'algorithme des k plus proches voisins
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2146,6 +2153,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-implementation-de-lalgorithme-des-k-plus-proches-voisins" class="md-nav__link">
+    TP : Implémentation de l'algorithme des k plus proches voisins
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2230,6 +2244,84 @@ text-align: justify}
 <h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
 <p>On peut utiliser cet algorithme pour <strong>classifier</strong> n'importe quelles données, en fonctions de caractéristiques disponibles (au nombre de 2, ou bien plus !). </p>
 <p>Plus le jeu de test contient de données, meilleure sera la prédiction. Ce type d'algorithme est largement utilisé par les GAFAM et autres entreprises du numérique, qui disposent de très grandes bases de données pour construire des modèles plus précis.</p>
+<hr />
+<h2 id="tp-implementation-de-lalgorithme-des-k-plus-proches-voisins">TP : Implémentation de l'algorithme des k plus proches voisins<a class="headerlink" href="#tp-implementation-de-lalgorithme-des-k-plus-proches-voisins" title="Permanent link">&para;</a></h2>
+<p>Nous allons implémenter un algorithme d'apprentissage, permettant de faire des prédictions sur des données. On veut identifier l'espèce d'un animal à partir de sa <strong>masse</strong> et de sa <strong>taille</strong>, en se basant sur un jeu de données disponibles : les données d'autres animaux, pour lesquels on connaît la masse, la taille, et l'espèce.</p>
+<div class="admonition tip">
+<p>Télécharger le fichier <code>TP_KVoisins.py</code>. Il contient du code à compléter, correspondant aux différentes parties du TP.</p>
+</div>
+<h3 id="a-representation-des-donnees">A. Représentation des données<a class="headerlink" href="#a-representation-des-donnees" title="Permanent link">&para;</a></h3>
+<p>Les données sont stockées dans une variable <code>donnees_animaux</code>. </p>
+<ol>
+<li>
+<p>Quel est son type ? <em>(soyez précis)</em>
+<br></p>
+</li>
+<li>
+<p>Quelle instruction permet d'accéder à la taille de l'animal d'indice <code>1</code> ?<br />
+<br></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>donnees_animaux` est une variable dite <strong>globale</strong>, c'est-à-dire que nous allons l'utiliser dans les différentes fonctions du programme, sans avoir à la mettre en paramètre des fonctions.</p>
+</div>
+<h3 id="b-distance-entre-les-donnees">B. Distance entre les données<a class="headerlink" href="#b-distance-entre-les-donnees" title="Permanent link">&para;</a></h3>
+<p>On veut trouver l'espèce d'un animal mystère, connaissant sa masse et sa taille. Pour cela, nous allons estimer de quels autres animaux du jeu de données est-ce qu'il est le plus <strong>proche</strong>. On calcule pour cela la <strong>distance</strong> entre les animaux à partir de leurs caractéristiques, en utilisant la mesure de distance euclidienne.</p>
+<ol>
+<li>Compléter la fonction <code>distance(donnee1, donnee2)</code>, calculant la distance euclidienne entre <code>donnee1</code> et <code>donnee2</code>. Il faut stocker dans les variables <code>x1</code> et <code>y1</code> les caractéristiques de <code>donnee1</code>, et dans <code>x2</code> et <code>y2</code> celles de <code>donnee2</code>.  </li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note 1</p>
+<p>La formule de la distance euclidienne <span class="arithmatex">\(d\)</span> entre deux points <span class="arithmatex">\((x_1, y_1)\)</span> et <span class="arithmatex">\((x_2, y_2)\)</span> est  <span class="arithmatex">\(d = \sqrt{ (x_{1}-x_{2})^2 + (y_{1}-y_{2})^2 }\)</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note 2</p>
+<p><code>sqrt</code> calcule la racine carrée <em>("root mean square")</em>. La fonction est importée de la bibliothèque <code>math</code> tout en haut du programme.</p>
+</div>
+<ol>
+<li>
+<p>On ajoute ensuite une <strong>clé</strong> <code>distance</code> à chaque dictionnaire de <code>donnees_animaux</code>, à laquelle on associe la <strong>valeur</strong> renvoyée par la fonction <code>distance</code> écrite dans la question 1, calculée avec la nouvelle donnée. Ceci est fait dans la fonction <code>calcule_distance(donnee)</code> : la compléter.</p>
+</li>
+<li>
+<p>Ecrire l'appel de la fonction <code>calcule_distance</code> permettant d'actualiser les valeurs de <code>donnees_animaux</code>.</p>
+</li>
+</ol>
+<h3 id="c-tri">C. Tri<a class="headerlink" href="#c-tri" title="Permanent link">&para;</a></h3>
+<p>Pour déduire l'espèce de l'animal mystère, on regarde l'espèce de ses <span class="arithmatex">\(k\)</span> voisins les plus proches. Il faut donc trier les voisins, en fonction de leur distance par rapport à l'animal mystère, et en retenir les <span class="arithmatex">\(k\)</span> premiers.</p>
+<p>La fonction <code>tri</code> trie les animaux de <code>donnees_animaux</code> par valeur croissante de la valeur associée à la clé <code>distance</code>. </p>
+<ol>
+<li>Quel est l'algorithme de tri utilisé dans cette fonction ?</li>
+</ol>
+<p><br></p>
+<ol>
+<li>
+<p>Compléter la fonction (les <code>...</code>), pour comparer les bonnes valeurs.<br />
+<strong><em>Attention, <code>donnees_animaux</code> a été modifiée dans la partie B !</em></strong> </p>
+</li>
+<li>
+<p>Appeler la fonction et vérifier que l'ordre de <code>donnees_animaux</code> a bien été modifié.</p>
+</li>
+</ol>
+<h3 id="d-k-plus-proches-voisins">D. K plus proches voisins<a class="headerlink" href="#d-k-plus-proches-voisins" title="Permanent link">&para;</a></h3>
+<p>Il reste à analyser les espèces les plus présentes dans les <span class="arithmatex">\(k\)</span> plus proches voisins. Il faut :<br />
+- compter le nombre d'occurrences des différentes espèces,<br />
+- sélectionner le maximum parmi ces nombres d'occurrences.</p>
+<ol>
+<li>Ecrire la fonction <code>compte_occurrences(k)</code>, qui compte le nombre de fois que chaque espèce apparaît dans les <span class="arithmatex">\(k\)</span> premiers éléments de <code>donnees_animaux</code>. Cela revient à faire un calcul d'occurrences sur une liste Python, sauf que ses éléments sont des dictionnaires plutôt que des types de base <strong>et</strong> que l'on ne va que jusqu'à <span class="arithmatex">\(k\)</span>ème élément de la liste.</li>
+</ol>
+<div class="admonition tip">
+<p>Vous avez écrit une fonction qui y ressemble dans le TP "Les résultats d'une élection" pour le dépouillement des votes.</p>
+</div>
+<ol>
+<li>Ecrire la fonction <code>maxi_occurrence(occurrences)</code> prenant en paramètre un dictionnaire <code>occurrences</code>, comme celui obtenu en sortie de <code>compte_occurrences</code> et renvoyant la clé de la valeur maximale d'<code>occurrences</code>.</li>
+</ol>
+<div class="admonition tip">
+<p>Vous avez écrit une fonction qui y ressemble dans le TP "Les résultats d'une élection" pour trouver le vainqueur.</p>
+</div>
+<ol>
+<li>Appeler ces deux fonctions de manière à obtenir le résultat. Quel est-il ? ...........................................</li>
+</ol>
 
 
   
