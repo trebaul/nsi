@@ -1039,6 +1039,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#td-dictionnaires-et-algorithmes" class="md-nav__link">
+    TD : Dictionnaires et algorithmes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tp-les-resultats-dune-election" class="md-nav__link">
     TP : Les résultats d'une élection
   </a>
@@ -2168,6 +2175,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#td-dictionnaires-et-algorithmes" class="md-nav__link">
+    TD : Dictionnaires et algorithmes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tp-les-resultats-dune-election" class="md-nav__link">
     TP : Les résultats d'une élection
   </a>
@@ -2401,6 +2415,76 @@ Créer un deuxième dictionnaire <code>dico_2</code> avec cette méthode, dans l
 </details>
 <h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
 <p>Les dictionnaires complètent les tableaux et p-uplets en permettant de "ranger" différemment des éléments. Comme dans un dictionnaire au sens classique, on associe des valeurs (comme une définition) à une information (comme un mot). Ces structures sont ensuite utilisées par des algorithmes.</p>
+<hr />
+<h2 id="td-dictionnaires-et-algorithmes">TD : Dictionnaires et algorithmes<a class="headerlink" href="#td-dictionnaires-et-algorithmes" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1-manipulation-de-dictionnaires">Exercice 1 : manipulation de dictionnaires<a class="headerlink" href="#exercice-1-manipulation-de-dictionnaires" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><div class="highlight"><pre><span></span><code><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;alexandre&quot;</span> <span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;mehdi&quot;</span> <span class="p">:</span> <span class="mi">18</span><span class="p">,</span>  <span class="s2">&quot;jeanne&quot;</span> <span class="p">:</span> <span class="mi">16</span><span class="p">,</span><span class="s2">&quot;charlotte&quot;</span> <span class="p">:</span> <span class="mi">19</span><span class="p">,</span> <span class="s2">&quot;celina&quot;</span> <span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;noé&quot;</span> <span class="p">:</span> <span class="mi">19</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">dic</span><span class="p">):</span>
+  <span class="k">for</span> <span class="n">cle</span><span class="p">,</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">valeur</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">:</span>
+      <span class="k">return</span> <span class="n">cle</span>
+</code></pre></div>
+Que renvoie l'appel de <code>f(dico)</code> ?</p>
+</li>
+<li>
+<p>Quelle est la valeur affichée à l'exécution du programme Python suivant ?</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">ports</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;imap&#39;</span><span class="p">:</span> <span class="mi">142</span><span class="p">,</span> <span class="s1">&#39;smtp&#39;</span><span class="p">:</span> <span class="mi">25</span> <span class="p">}</span>
+<span class="n">ports</span><span class="p">[</span><span class="s1">&#39;ftp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ports</span><span class="p">[</span><span class="s1">&#39;ftp&#39;</span><span class="p">])</span>
+</code></pre></div>
+<ol>
+<li>
+<p><div class="highlight"><pre><span></span><code><span class="n">T</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;banane&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">124</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">75</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;kiwi&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">51</span><span class="p">}]</span>
+</code></pre></div>
+Quelle expression utiliser pour afficher le nombre de pommes ?
+<br></p>
+</li>
+<li>
+<p>Par quelle expression remplacer les pointillés dans le programme Python suivant, pour que son exécution affiche le numéro de Dupond ?</p>
+</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><span class="n">repertoire</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Dupont&#39;</span><span class="p">,</span> <span class="s1">&#39;tel&#39;</span><span class="p">:</span><span class="s1">&#39;5234&#39;</span><span class="p">},{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Tournesol&#39;</span><span class="p">,</span> <span class="s1">&#39;tel&#39;</span><span class="p">:</span><span class="s1">&#39;5248&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Dupond&#39;</span><span class="p">,</span> <span class="s1">&#39;tel&#39;</span><span class="p">:</span><span class="s1">&#39;3452&#39;</span><span class="p">}]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">repertoire</span><span class="p">)):</span>
+
+  <span class="k">if</span> <span class="o">...............................</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">repertoire</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;tel&#39;</span><span class="p">])</span>
+</code></pre></div>
+<br></p>
+<hr />
+<h3 id="exercice-2-recherche-de-maximum">Exercice 2 : recherche de maximum<a class="headerlink" href="#exercice-2-recherche-de-maximum" title="Permanent link">&para;</a></h3>
+<p>Que faut-il changer dans le programme ci-dessous, implémentant la recherche de l'indice du maximum dans un tableau, pour rechercher la <strong>clé</strong> associée à la <strong>valeur maximale</strong> d'un dictionnaire <strong><em>non-vide</em></strong> d'<strong>entiers positifs</strong> ?
+Vérifier que le dictionnaire est bien non-vide.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum_tab</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">tab</span> <span class="o">!=</span> <span class="p">[]</span>
+    <span class="n">ind</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">tab</span><span class="p">[</span><span class="n">ind</span><span class="p">]:</span>
+            <span class="n">ind</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">ind</span>
+</code></pre></div>
+<hr />
+<h3 id="exercice-3-comptage-doccurrences">Exercice 3 : comptage d'occurrences<a class="headerlink" href="#exercice-3-comptage-doccurrences" title="Permanent link">&para;</a></h3>
+<p>On veut écrire une fonction <code>compte_occurrences(chaine)</code> qui compte les occurrences de toutes les lettres présentes dans une chaîne de caractères <code>chaine</code>, et stocke le résultat dans un dictionnaire dont les clés sont ces lettres, et les valeurs leur nombre d'occurrences. Ce dictionnaire est renvoyé par la fonction. Par exemple :
+<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">compte_occurrences</span><span class="p">(</span><span class="s1">&#39;bonjour&#39;</span><span class="p">)</span>
+<span class="go">{&#39;b&#39;: 1, &#39;o&#39;: 2, &#39;n&#39;: 1, &#39;j&#39;: 1, &#39;u&#39;: 1, &#39;r&#39;: 1}</span>
+</code></pre></div></p>
+<ol>
+<li>Ecrire l'algorithme <em>(pseudo-code)</em> permettant de résoudre ce problème.</li>
+</ol>
+<p><strong>Note :</strong> on parcourt une chaîne de caractère comme on parcourt un tableau : chaque caractère à un indice indiquant sa position dans la chaîne, on peut donc faire un parcours <strong><em>par indice</em></strong> ou <strong><em>par valeur</em></strong>.</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ol>
+<li>Traduire cet algorithme en programme.</li>
+</ol>
+<p><strong>Note :</strong> Pour tester si une clé <code>cle</code> est présente dans un dictionnaire <code>dico</code>, on peut utiliser la syntaxe <code>cle in dico</code> qui vaut <code>True</code> <em>(est présente)</em> ou <code>False</code> <em>(n'est pas présente)</em> (c'est une recherche d'occurrence).</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
 <hr />
 <h2 id="tp-les-resultats-dune-election">TP : Les résultats d'une élection<a class="headerlink" href="#tp-les-resultats-dune-election" title="Permanent link">&para;</a></h2>
 <p>Une élection est organisée, pour laquelle les votes sont enregistrés par une machine électronique. L'objectif de ce TP est d'écrire les fonctions qui vont permettre de comptabiliser automatiquement les votes et déterminer le vainqueur de l'élection.</p>
