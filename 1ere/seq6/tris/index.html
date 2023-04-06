@@ -2216,13 +2216,11 @@ text-align: justify}
 <p><center>
 <img src="../img/cartes.jpg" height=200> </center></p>
 <ol>
-<li>On distribue les cartes et vous avez dans votre main les cartes suivantes :  7 - D - 4 - As - R - 5</li>
-</ol>
+<li>
+<p>On distribue les cartes et vous avez dans votre main les cartes suivantes :  7 - D - 4 - As - R - 5</p>
 <p>Quelle méthode appliquez-vous pour les trier ? La formuler sous la forme d'une suite d'instructions pouvant se répéter jusqu'à obtenir un jeu trié.</p>
-<p><br><br><br><br></p>
-<ol>
-<li></li>
-</ol>
+</li>
+<li>
 <div class="admonition note">
 <p>Le principe du <strong>tri par sélection</strong> est le suivant :<br />
 - On sélectionne <strong>la carte de valeur la plus faible</strong> <strong><em>de l'ensemble de la main</em></strong> et on l'échange avec la <strong>première</strong> qui est la carte de référence.<br />
@@ -2263,10 +2261,8 @@ text-align: justify}
 <ul>
 <li>Pour chaque étape, souligner la partie du tableau déjà triée. </li>
 </ul>
-<p><br></p>
-<ol>
-<li></li>
-</ol>
+</li>
+<li>
 <div class="admonition note">
 <p>Le principe du <strong>tri par insertion</strong> est le suivant :<br />
 - On prend la <strong><em>deuxième carte</em></strong> ("de référence") :  <br />
@@ -2312,6 +2308,8 @@ text-align: justify}
 <ul>
 <li>Pour chaque étape, souligner la partie du tableau déjà triée. </li>
 </ul>
+</li>
+</ol>
 <hr />
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <p>Comment <strong>trier</strong> un ensemble de données est un problème classique en informatique, cette opération étant nécessaire dans de nombreux cas pour pré-traiter des données (et leur appliquer d'autres traitement plus facilement ensuite). Il existe une multitude d'<strong>algorithmes de tris</strong> résolvant ce problème. Nous allons voir les exemples du <strong>tri par sélection</strong> et du <strong>tri par insertion</strong> et comparer leurs complexités. Nous allons trier des <strong><em>tableaux de nombres</em></strong> dans l'<strong><em>ordre croissant</em></strong>.</p>
@@ -2478,8 +2476,8 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 <h3 id="echauffement">Echauffement<a class="headerlink" href="#echauffement" title="Permanent link">&para;</a></h3>
 <p>Pour nous aider pour la suite, nous allons commencer par ré-implémenter des algorithmes déjà vus.</p>
 <ol>
-<li>Ecrire une fonction prenant en paramètre un tableau <code>t</code> et renvoyant l'indice de son minimum :</li>
-</ol>
+<li>
+<p>Ecrire une fonction prenant en paramètre un tableau <code>t</code> et renvoyant l'indice de son minimum :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mini</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
     <span class="n">ind</span> <span class="o">=</span> <span class="o">...</span>
 
@@ -2489,9 +2487,9 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 
 <span class="k">assert</span> <span class="n">mini</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span>
 </code></pre></div>
-<ol>
-<li>Ecrire une fonction prenant en paramètres deux variables <code>a</code> et <code>b</code> et échangeant leurs valeurs <em>(<code>a</code> doit contenir la valeur de <code>b</code>, et <code>b</code> la valeur de <code>a</code>)</em> :</li>
-</ol>
+</li>
+<li>
+<p>Ecrire une fonction prenant en paramètres deux variables <code>a</code> et <code>b</code> et échangeant leurs valeurs <em>(<code>a</code> doit contenir la valeur de <code>b</code>, et <code>b</code> la valeur de <code>a</code>)</em> :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">echange_valeurs</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
 
     <span class="c1">#à compléter</span>
@@ -2500,18 +2498,20 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 
 <span class="k">assert</span> <span class="n">echange_valeurs</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
+</li>
+</ol>
 <h3 id="a-le-tri-selection">A. Le tri sélection<a class="headerlink" href="#a-le-tri-selection" title="Permanent link">&para;</a></h3>
 <p>Le tri sélection permet de trier un tableau de nombres (entiers ou flottants) quelconque, en appliquant l'algorithme suivant :</p>
 <p>On parcourt le tableau par indice de 0 à la longueur du tableau-2<br />
     - on <strong>recherche le minimum</strong> du tableau entre cette position courante et la fin du tableau<br />
     - on <strong>échange</strong> alors les 2 valeurs</p>
 <ol>
-<li>Visualiser cet algorithme sur un exemple en cliquant ici : http://lwh.free.fr/pages/algo/tri/tri_selection.html puis sur "Trier".</li>
-</ol>
+<li>
+<p>Visualiser cet algorithme sur un exemple en cliquant ici : http://lwh.free.fr/pages/algo/tri/tri_selection.html puis sur "Trier".</p>
 <p>Pour implémenter le tri par sélection, nous allons d'abord coder des sous-fonctions qui vont faire une partie du travail, et qu'il faudra mettre ensemble.</p>
-<ol>
-<li>Modifier la fonction <code>mini</code> écrire en question 1 de l'échauffement, pour écrire une fonction renvoyant l'indice du minimum d'un tableau <code>t</code> <strong><em>à partir d'un indice <code>debut</code></em></strong> :</li>
-</ol>
+</li>
+<li>
+<p>Modifier la fonction <code>mini</code> écrire en question 1 de l'échauffement, pour écrire une fonction renvoyant l'indice du minimum d'un tableau <code>t</code> <strong><em>à partir d'un indice <code>debut</code></em></strong> :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">minimum</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">debut</span><span class="p">):</span>
     <span class="n">ind</span> <span class="o">=</span> <span class="o">...</span>
 
@@ -2522,9 +2522,9 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 <span class="k">assert</span> <span class="n">minimum</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
 <span class="k">assert</span> <span class="n">minimum</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 </code></pre></div>
-<ol>
-<li>Modifier la fonction <code>echange_valeurs</code> écrite en question 2 de l'échauffement pour obtenir une fonction échangeant les éléments situés aux indices <code>ind1</code> et <code>ind2</code> d'un tableau <code>t</code>.</li>
-</ol>
+</li>
+<li>
+<p>Modifier la fonction <code>echange_valeurs</code> écrite en question 2 de l'échauffement pour obtenir une fonction échangeant les éléments situés aux indices <code>ind1</code> et <code>ind2</code> d'un tableau <code>t</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">echange</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">ind1</span><span class="p">,</span> <span class="n">ind2</span><span class="p">):</span>
 
     <span class="c1">#à compléter</span>
@@ -2533,9 +2533,9 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 
 <span class="k">assert</span> <span class="n">echange</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
-<ol>
-<li>Compléter la fonction <code>selection</code> effectuant le <strong>tri sélection</strong>, implémentant l'algorithme énoncé plus haut en utilisant les fonctions <code>minimum</code> et <code>echange</code>. </li>
-</ol>
+</li>
+<li>
+<p>Compléter la fonction <code>selection</code> effectuant le <strong>tri sélection</strong>, implémentant l'algorithme énoncé plus haut en utilisant les fonctions <code>minimum</code> et <code>echange</code>. </p>
 <p><em><strong>N.B.:</strong> Après avoir exécuté la définition de ces fonctions dans les cellules plus haut, vous pouvez utiliser les fonctions dans une autre cellule.</em></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">selection</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
@@ -2548,6 +2548,8 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 
 <span class="k">assert</span> <span class="n">selection</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
 </code></pre></div>
+</li>
+</ol>
 <h3 id="b-le-tri-par-insertion">B. Le tri par insertion<a class="headerlink" href="#b-le-tri-par-insertion" title="Permanent link">&para;</a></h3>
 <p>Le tri par insertion fonctionne selon l'algorithme suivant :</p>
 <p>On parcourt le tableau par indice de 1 à la longueur du tableau-1<br />
@@ -2559,8 +2561,6 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 </li>
 <li>
 <p>Implémenter la fonction <code>tri_insertion</code> à partir du pseudo-code ci-dessous :</p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><span class="n">pour</span> <span class="n">i</span> <span class="n">allant</span> <span class="n">de</span> <span class="mi">1</span> <span class="n">à</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
     <span class="n">val_i</span> <span class="o">&lt;-</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
     <span class="n">j</span> <span class="o">&lt;-</span> <span class="n">i</span>
@@ -2579,6 +2579,8 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 
 <span class="k">assert</span> <span class="n">tri_insertion</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
 </code></pre></div>
+</li>
+</ol>
 <h3 id="pour-aller-plus-loin">Pour aller plus loin...<a class="headerlink" href="#pour-aller-plus-loin" title="Permanent link">&para;</a></h3>
 <p>Implémenter le <strong>tri sélection</strong> sans utiliser de sous-fonctions, mais en écrivant tout le code dans le corps de <code>tri_selection</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
@@ -2591,9 +2593,9 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 </code></pre></div>
 <hr />
 <h2 id="tp-cout-en-temps-des-tris-par-selection-et-par-insertion">TP : Coût en temps des tris par sélection et par insertion<a class="headerlink" href="#tp-cout-en-temps-des-tris-par-selection-et-par-insertion" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Créer un nouveau fichier Python dans votre dossier NSI, et le nommer <code>TP_Complexite_Tris.py</code>. </p>
-</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Créer un nouveau fichier Python dans votre dossier NSI, et le nommer <code>TP_Complexite_Tris.py</code>.</p>
+</div>
 <h3 id="a-le-pire-des-cas">A. Le pire des cas<a class="headerlink" href="#a-le-pire-des-cas" title="Permanent link">&para;</a></h3>
 <p>Nous allons commencer par étudier la complexité des tris dans le <strong>pire des cas</strong> : lors que le tableau est trié dans l'ordre inverse, ici l'ordre décroissant. L'objectif est de comparer les deux algorithmes.</p>
 <h4 id="ai-le-tri-par-selection">A.I. Le tri par sélection<a class="headerlink" href="#ai-le-tri-par-selection" title="Permanent link">&para;</a></h4>
@@ -2606,30 +2608,30 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 </li>
 <li>
 <p>Importer la fonction <code>time</code> de la bibliothèque <code>time</code> <strong><em>en haut de votre programme</em></strong> pour pouvoir lancer un compteur, lorsqu'une ligne de votre programme s'exécute :</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+</code></pre></div>
 </li>
-</ol>
-<p><code>python
-from time import time</code></p>
-<ol>
-<li>Utiliser le code suivant pour obtenir le temps d'exécution de la fonction <code>tri_selection</code> lorsqu'elle prend <code>t1</code> en paramètre, en millisecondes et reporter la valeur de <code>tps</code> sur le graphique ci-dessous :</li>
-</ol>
+<li>
+<p>Utiliser le code suivant pour obtenir le temps d'exécution de la fonction <code>tri_selection</code> lorsqu'elle prend <code>t1</code> en paramètre, en millisecondes et reporter la valeur de <code>tps</code> sur le graphique ci-dessous :</p>
 <div class="highlight"><pre><span></span><code><span class="n">debut</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
 <span class="n">r1</span> <span class="o">=</span> <span class="n">tri_selection</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
 <span class="n">tps</span> <span class="o">=</span> <span class="p">(</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">debut</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span>
 </code></pre></div>
 <p><center>
 <img src="../6_Algorithmique_Tris/img/graphique.png" height=240></center> </p>
-<ol>
-<li>Refaire la même opération, c'est-à-dire le calcul du temps d'exécution, mais avec un tableau <code>t2</code> de longueur 400. Lui donner les mêmes valeurs que précédemment : pour chaque élément d'indice <code>i</code>, affecter <code>400-i</code>. </li>
-</ol>
+</li>
+<li>
+<p>Refaire la même opération, c'est-à-dire le calcul du temps d'exécution, mais avec un tableau <code>t2</code> de longueur 400. Lui donner les mêmes valeurs que précédemment : pour chaque élément d'indice <code>i</code>, affecter <code>400-i</code>. </p>
 <p>Reporter la valeur de temps obtenue sur le graphique.</p>
-<ol>
-<li>Réitérer ces opérations pour un tableau de longueur 600, 800, et 1000 <em>(ils doivent être non-triés comme <code>t1</code> et <code>t2</code>)</em> et tracer la courbe qui relie les différents points sur le graphique. Quel <strong>type de complexité</strong> a le tri par sélection ?
-.........................................................</li>
+</li>
+<li>
+<p>Réitérer ces opérations pour un tableau de longueur 600, 800, et 1000 <em>(ils doivent être non-triés comme <code>t1</code> et <code>t2</code>)</em> et tracer la courbe qui relie les différents points sur le graphique. Quel <strong>type de complexité</strong> a le tri par sélection ?
+.........................................................</p>
+</li>
 </ol>
 <h4 id="aii-le-tri-par-insertion">A.II. Le tri par insertion<a class="headerlink" href="#aii-le-tri-par-insertion" title="Permanent link">&para;</a></h4>
-<p>Refaire exactement la même chose pour le <strong>tri par insertion</strong> et <strong><em>placer les points sur la courbe de la question A.I.4 en ajoutant une légende</em></strong> : 
-- implémenter l'algorithme <em>(et garder la fonction dans votre script pour la suite)</em>,
+<p>Refaire exactement la même chose pour le <strong>tri par insertion</strong> et <strong><em>placer les points sur la courbe de la question A.I.4 en ajoutant une légende</em></strong> :<br />
+- implémenter l'algorithme <em>(et garder la fonction dans votre script pour la suite)</em>,<br />
 - relever son <em>temps d'exécution</em> pour des tableaux non-triés d'une taille variant de 200 à 1000.</p>
 <h3 id="b-le-meilleur-des-cas">B. Le meilleur des cas<a class="headerlink" href="#b-le-meilleur-des-cas" title="Permanent link">&para;</a></h3>
 <p>Faisons à présent les mêmes calculs, mais dans le <strong>meilleur des cas</strong> : lorsque le tableau est déjà trié. A priori, nos algorithmes n'ont rien à faire, mais l'ordinateur ne le sait pas.</p>
@@ -2640,12 +2642,12 @@ from time import time</code></p>
 </li>
 <li>
 <p>Appliquer le même script qu'à la question A.I.4. pour obtenir la nouvelle valeur de <code>tps</code> et indiquer cette valeur sur le graphique suivant :</p>
-</li>
-</ol>
 <p><center>
 <img src="../6_Algorithmique_Tris/img/graphique.png" height=240></center> </p>
-<ol>
-<li>Réitérer les étapes pour avoir les valeurs correspondant à des tableaux de taille <code>400</code>, <code>600</code>, <code>800</code> et <code>1000</code>, comme dans la partie précédente.</li>
+</li>
+<li>
+<p>Réitérer les étapes pour avoir les valeurs correspondant à des tableaux de taille <code>400</code>, <code>600</code>, <code>800</code> et <code>1000</code>, comme dans la partie précédente.</p>
+</li>
 </ol>
 <h4 id="bii-le-tri-par-insertion">B.II. Le tri par insertion<a class="headerlink" href="#bii-le-tri-par-insertion" title="Permanent link">&para;</a></h4>
 <p>Refaire la même chose pour le tri par insertion, et placer les points sur le graphique de la partie B.I..</p>

@@ -2222,16 +2222,14 @@ text-align: justify}
 </li>
 <li>
 <p>Ajouter un élément au dictionnaire avec la syntaxe suivante : <code>dico["nom"] = "Lennon"</code>, puis visualiser le contenu de la variable avec la console.</p>
-</li>
-</ol>
 <p><code>"nom"</code> est une <strong>clé</strong> du dictionnaire, et <code>"Lennon"</code> une <strong>valeur</strong>.</p>
-<ol>
+</li>
 <li>
 <p>Rajouter d'autres éléments au dictionnaire :
-<div class="highlight"><pre><span></span><code><span class="n">dico</span><span class="p">[</span><span class="s2">&quot;prénom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;John&quot;</span>
+    <div class="highlight"><pre><span></span><code><span class="n">dico</span><span class="p">[</span><span class="s2">&quot;prénom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;John&quot;</span>
 <span class="n">dico</span><span class="p">[</span><span class="s2">&quot;année de naissance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1940</span>
 </code></pre></div>
-On voit que le type des valeurs, comme celui des clés, peut varier <em>(caractères, entiers, ou d'autres)</em>.</p>
+    On voit que le type des valeurs, comme celui des clés, peut varier <em>(caractères, entiers, ou d'autres)</em>.</p>
 </li>
 <li>
 <p>Consulter le contenu de <code>dico</code> et vérifier qu'il s'affiche sous la forme suivante : <code>{'nom': 'Lennon', 'prénom': 'John', 'année de naissance': 1940}</code></p>
@@ -2240,7 +2238,7 @@ On voit que le type des valeurs, comme celui des clés, peut varier <em>(caract�
 <p>Que renvoie l'instruction <code>dico[0]</code> ? Expliquer. ................................................................................</p>
 </li>
 <li>Que renvoie l'instruction <code>dico["prénom"]</code> ? ......................................<br />
-C'est ainsi que l'on accède à une valeur associée à une clé.</li>
+    C'est ainsi que l'on accède à une valeur associée à une clé.</li>
 <li>
 <p>Que renvoie l'instruction <code>len(dico)</code> ? .................</p>
 </li>
@@ -2249,8 +2247,8 @@ C'est ainsi que l'on accède à une valeur associée à une clé.</li>
 <ul>
 <li><code>dico.keys()</code> : ..................................................................</li>
 <li><code>dico.values()</code> : ................................................................</li>
-<li><code>dico.items()</code> : .................................................................</li>
-</ul>
+<li>
+<p><code>dico.items()</code> : .................................................................</p>
 </li>
 <li>
 <p>On utilise ces fonctions pour faire des parcours de dictionnaire. Tester le code suivant :
@@ -2259,9 +2257,11 @@ C'est ainsi que l'on accède à une valeur associée à une clé.</li>
 </code></pre></div>
 Modifier ensuite le code pour afficher les <strong>clés</strong> du dictionnaire.</p>
 </li>
+</ul>
+</li>
 <li>
 <p>On peut aussi créer un dictionnaire en utilisant la syntaxe suivante : <code>dictionnaire = {clé1: valeur1, clé2: valeur2}</code>.<br />
-Créer un deuxième dictionnaire <code>dico_2</code> avec cette méthode, dans lequel on stocke les informations suivantes : le nom <code>"McCartney"</code>, le prénom <code>"Paul"</code>, et la date de naissance <code>1942</code>.</p>
+    Créer un deuxième dictionnaire <code>dico_2</code> avec cette méthode, dans lequel on stocke les informations suivantes : le nom <code>"McCartney"</code>, le prénom <code>"Paul"</code>, et la date de naissance <code>1942</code>.</p>
 </li>
 </ol>
 <h3 id="ii-exercices">II. Exercices<a class="headerlink" href="#ii-exercices" title="Permanent link">&para;</a></h3>
@@ -2272,11 +2272,12 @@ Créer un deuxième dictionnaire <code>dico_2</code> avec cette méthode, dans l
 <p>Les photos numériques sont accompagnées de métadonnées, consultables dans leurs propriétés. </p>
 <p><img src="../img/exif.png" style="float:right;padding-left:10px" width=225/></p>
 <ol>
-<li>Représenter les données EXIF présentées ci-contre sous la forme d'un dictionnaire nommé <code>exif</code>.</li>
-</ol>
-<p><br></p>
-<ol>
-<li>Quelle instruction permet d'afficher la hauteur de l'image ? </li>
+<li>
+<p>Représenter les données EXIF présentées ci-contre sous la forme d'un dictionnaire nommé <code>exif</code>.</p>
+</li>
+<li>
+<p>Quelle instruction permet d'afficher la hauteur de l'image ? </p>
+</li>
 </ol>
 <hr />
 <h4 id="exercice-2-un-groupe-de-rock">Exercice 2 : un groupe de rock<a class="headerlink" href="#exercice-2-un-groupe-de-rock" title="Permanent link">&para;</a></h4>
@@ -2320,12 +2321,12 @@ Créer un deuxième dictionnaire <code>dico_2</code> avec cette méthode, dans l
 </li>
 <li>
 <p>Ecrire une fonction <code>est_membre(rockband, nom)</code> renvoyant <code>True</code> si <code>nom</code> est présent dans le groupe, <code>False</code> sinon. On fera un parcours de dictionnaire.</p>
-</li>
-</ul>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">est_membre</span><span class="p">(</span><span class="n">rockband</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
 </code></pre></div>
-<ul>
-<li>Tester si <code>"Nick Valensi"</code> et <code>"Bjork"</code> appartiennent au groupe ou non.</li>
+</li>
+<li>
+<p>Tester si <code>"Nick Valensi"</code> et <code>"Bjork"</code> appartiennent au groupe ou non.</p>
+</li>
 </ul>
 <hr />
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
@@ -2423,38 +2424,35 @@ Créer un deuxième dictionnaire <code>dico_2</code> avec cette méthode, dans l
 <p><div class="highlight"><pre><span></span><code><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;alexandre&quot;</span> <span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;mehdi&quot;</span> <span class="p">:</span> <span class="mi">18</span><span class="p">,</span>  <span class="s2">&quot;jeanne&quot;</span> <span class="p">:</span> <span class="mi">16</span><span class="p">,</span><span class="s2">&quot;charlotte&quot;</span> <span class="p">:</span> <span class="mi">19</span><span class="p">,</span> <span class="s2">&quot;celina&quot;</span> <span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;noé&quot;</span> <span class="p">:</span> <span class="mi">19</span><span class="p">}</span>
 
 <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">dic</span><span class="p">):</span>
-  <span class="k">for</span> <span class="n">cle</span><span class="p">,</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
+<span class="k">for</span> <span class="n">cle</span><span class="p">,</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
     <span class="k">if</span> <span class="n">valeur</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">:</span>
-      <span class="k">return</span> <span class="n">cle</span>
+    <span class="k">return</span> <span class="n">cle</span>
 </code></pre></div>
 Que renvoie l'appel de <code>f(dico)</code> ?</p>
 </li>
 <li>
 <p>Quelle est la valeur affichée à l'exécution du programme Python suivant ?</p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><span class="n">ports</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;imap&#39;</span><span class="p">:</span> <span class="mi">142</span><span class="p">,</span> <span class="s1">&#39;smtp&#39;</span><span class="p">:</span> <span class="mi">25</span> <span class="p">}</span>
 <span class="n">ports</span><span class="p">[</span><span class="s1">&#39;ftp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">21</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ports</span><span class="p">[</span><span class="s1">&#39;ftp&#39;</span><span class="p">])</span>
 </code></pre></div>
-<ol>
+</li>
 <li>
-<p><div class="highlight"><pre><span></span><code><span class="n">T</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;banane&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">124</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">75</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;kiwi&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">51</span><span class="p">}]</span>
+<div class="highlight"><pre><span></span><code><span class="n">T</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;banane&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">124</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">75</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;kiwi&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">51</span><span class="p">}]</span>
 </code></pre></div>
-Quelle expression utiliser pour afficher le nombre de pommes ?
-<br></p>
+<p>Quelle expression utiliser pour afficher le nombre de pommes ?</p>
 </li>
 <li>
 <p>Par quelle expression remplacer les pointillés dans le programme Python suivant, pour que son exécution affiche le numéro de Dupond ?</p>
-</li>
-</ol>
 <p><div class="highlight"><pre><span></span><code><span class="n">repertoire</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Dupont&#39;</span><span class="p">,</span> <span class="s1">&#39;tel&#39;</span><span class="p">:</span><span class="s1">&#39;5234&#39;</span><span class="p">},{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Tournesol&#39;</span><span class="p">,</span> <span class="s1">&#39;tel&#39;</span><span class="p">:</span><span class="s1">&#39;5248&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Dupond&#39;</span><span class="p">,</span> <span class="s1">&#39;tel&#39;</span><span class="p">:</span><span class="s1">&#39;3452&#39;</span><span class="p">}]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">repertoire</span><span class="p">)):</span>
 
-  <span class="k">if</span> <span class="o">...............................</span> <span class="p">:</span>
+<span class="k">if</span> <span class="o">...............................</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">repertoire</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;tel&#39;</span><span class="p">])</span>
 </code></pre></div>
 <br></p>
+</li>
+</ol>
 <hr />
 <h3 id="exercice-2-recherche-de-maximum">Exercice 2 : recherche de maximum<a class="headerlink" href="#exercice-2-recherche-de-maximum" title="Permanent link">&para;</a></h3>
 <p>Que faut-il changer dans le programme ci-dessous, implémentant la recherche de l'indice du maximum dans un tableau, pour rechercher la <strong>clé</strong> associée à la <strong>valeur maximale</strong> d'un dictionnaire <strong><em>non-vide</em></strong> d'<strong>entiers positifs</strong> ?
@@ -2474,17 +2472,19 @@ Vérifier que le dictionnaire est bien non-vide.</p>
 <span class="go">{&#39;b&#39;: 1, &#39;o&#39;: 2, &#39;n&#39;: 1, &#39;j&#39;: 1, &#39;u&#39;: 1, &#39;r&#39;: 1}</span>
 </code></pre></div></p>
 <ol>
-<li>Ecrire l'algorithme <em>(pseudo-code)</em> permettant de résoudre ce problème.</li>
-</ol>
+<li>
+<p>Ecrire l'algorithme <em>(pseudo-code)</em> permettant de résoudre ce problème.</p>
 <p><strong>Note :</strong> on parcourt une chaîne de caractère comme on parcourt un tableau : chaque caractère à un indice indiquant sa position dans la chaîne, on peut donc faire un parcours <strong><em>par indice</em></strong> ou <strong><em>par valeur</em></strong>.</p>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
-<ol>
-<li>Traduire cet algorithme en programme.</li>
-</ol>
+</li>
+<li>
+<p>Traduire cet algorithme en programme.</p>
 <p><strong>Note :</strong> Pour tester si une clé <code>cle</code> est présente dans un dictionnaire <code>dico</code>, on peut utiliser la syntaxe <code>cle in dico</code> qui vaut <code>True</code> <em>(est présente)</em> ou <code>False</code> <em>(n'est pas présente)</em> (c'est une recherche d'occurrence).</p>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
+</li>
+</ol>
 <hr />
 <h2 id="tp-les-resultats-dune-election">TP : Les résultats d'une élection<a class="headerlink" href="#tp-les-resultats-dune-election" title="Permanent link">&para;</a></h2>
 <p>Une élection est organisée, pour laquelle les votes sont enregistrés par une machine électronique. L'objectif de ce TP est d'écrire les fonctions qui vont permettre de comptabiliser automatiquement les votes et déterminer le vainqueur de l'élection.</p>
@@ -2503,19 +2503,17 @@ Les candidats étant Alan Turing, Ada Lovelace et George Boole, quel est le vain
 - un tableau de chaînes de caractères <code>votes</code>,<br />
 et qui renvoie un dictionnaire dont les <strong><em>clés</em></strong> sont les noms des candidats <em>(stockés dans <code>candidats</code>)</em> et les chaînes de caractères <code>"Nul"</code> et <code>"Blanc"</code>, et les <strong><em>valeurs</em></strong> le nombre de bulletins associé <em>(stockés dans <code>votes</code>)</em>. </p>
 <ol>
-<li>Il faut commencer par créer un dictionnaire nommé <code>occurrences</code>, dont les clés sont les noms des candidats, ainsi que <code>"Nul"</code> et <code>"Blanc"</code>, et les valeurs sont initialisées à <code>0</code>. Ecrire le code correspondant à cette initialisation.</li>
-</ol>
+<li>
+<p>Il faut commencer par créer un dictionnaire nommé <code>occurrences</code>, dont les clés sont les noms des candidats, ainsi que <code>"Nul"</code> et <code>"Blanc"</code>, et les valeurs sont initialisées à <code>0</code>. Ecrire le code correspondant à cette initialisation.</p>
 <div class="admonition tip">
 <p>On peut aussi utiliser la compréhension sur les dictionnaires, avec la syntaxe suivante : <code>d = {cle:valeur for cle in tableau}</code> </p>
 </div>
-<ol>
+</li>
 <li>
 <p>Ecrire une fonction <code>est_present(tab, v)</code> prenant en paramètres un tableau <code>tab</code> de type liste Python et une valeur <code>v</code>, et renvoyant <code>True</code> si <code>v</code> est présente dans <code>tab</code>, <code>False</code> sinon.</p>
 </li>
 <li>
 <p>Ecrire la fonction <code>depouillement</code>, en se basant sur les questions précédentes et sur l'algorithme écrit ci-dessous :</p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">depouillement</span><span class="p">(</span><span class="n">candidats</span><span class="p">,</span> <span class="n">votes</span><span class="p">):</span>
 <span class="mi">1</span>    <span class="c1"># initialisation du dictionnaire occurrences - question 1</span>
 <span class="mi">2</span>    <span class="n">pour</span> <span class="n">chaque</span> <span class="n">element</span> <span class="n">v</span> <span class="n">de</span> <span class="n">votes</span>
@@ -2531,17 +2529,19 @@ et qui renvoie un dictionnaire dont les <strong><em>clés</em></strong> sont les
 <p class="admonition-title">Note</p>
 <p>La syntaxe <code>if v in tab</code> pourrait être utilisée ligne 3. Cela revient à écrire une fonction de recherche d'occurrence dans un tableau renvoyant un booléen. Vous pourrez l'utiliser par la suite, mais <strong><em>il faut savoir écrire la fonction de recherche d'occurrence</em></strong>.</p>
 </div>
-<ol>
-<li>Tester cette fonction avec les variables <code>candidats</code> et <code>votes</code> définies dans l'introduction. Vérifier que l'on obtient bien le dictionnaire suivant : 
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">&#39;Alan Turing&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Ada Lovelace&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;George Boole&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Blanc&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Nul&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
-</code></pre></div></li>
+</li>
+<li>
+<p>Tester cette fonction avec les variables <code>candidats</code> et <code>votes</code> définies dans l'introduction. Vérifier que l'on obtient bien le dictionnaire suivant : 
+    <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">&#39;Alan Turing&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Ada Lovelace&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;George Boole&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Blanc&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Nul&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</code></pre></div></p>
+</li>
 </ol>
 <h3 id="b-trouver-le-vainqueur">B. Trouver le vainqueur<a class="headerlink" href="#b-trouver-le-vainqueur" title="Permanent link">&para;</a></h3>
 <p>On considère qu'il n'y a qu'un seul vainqueur à l'élection. C'est-à-dire qu'un candidat a obtenu plus de votes que tous les autres. </p>
 <ol>
 <li>
 <p>Réécrire ci-dessous un programme permettant de trouver le maximum d'un tableau de nombres <code>t</code> <em>(vous n'avez pas besoin de l'écrire sur l'ordinateur)</em>:
-<div class="highlight"><pre><span></span><code>
+    <div class="highlight"><pre><span></span><code>
 </code></pre></div></p>
 </li>
 <li>

@@ -1046,15 +1046,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tp-implementation-de-lalgorithme-des-k-plus-proches-voisins" class="md-nav__link">
-    TP : Implémentation de l'algorithme des k plus proches voisins
+  <a href="#tp-implementation" class="md-nav__link">
+    TP : Implémentation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#td-lalgorithme-des-k-plus-proches-voisins" class="md-nav__link">
-    TD : L'algorithme des \(k\) plus proches voisins
+  <a href="#td-application-de-lalgorithme" class="md-nav__link">
+    TD : Application de l'algorithme
   </a>
   
 </li>
@@ -2161,15 +2161,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tp-implementation-de-lalgorithme-des-k-plus-proches-voisins" class="md-nav__link">
-    TP : Implémentation de l'algorithme des k plus proches voisins
+  <a href="#tp-implementation" class="md-nav__link">
+    TP : Implémentation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#td-lalgorithme-des-k-plus-proches-voisins" class="md-nav__link">
-    TD : L'algorithme des \(k\) plus proches voisins
+  <a href="#td-application-de-lalgorithme" class="md-nav__link">
+    TD : Application de l'algorithme
   </a>
   
 </li>
@@ -2259,7 +2259,7 @@ text-align: justify}
 <p>On peut utiliser cet algorithme pour <strong>classifier</strong> n'importe quelles données, en fonctions de caractéristiques disponibles (au nombre de 2, ou bien plus !). </p>
 <p>Plus le jeu de test contient de données, meilleure sera la prédiction. Ce type d'algorithme est largement utilisé par les GAFAM et autres entreprises du numérique, qui disposent de très grandes bases de données pour construire des modèles plus précis.</p>
 <hr />
-<h2 id="tp-implementation-de-lalgorithme-des-k-plus-proches-voisins">TP : Implémentation de l'algorithme des k plus proches voisins<a class="headerlink" href="#tp-implementation-de-lalgorithme-des-k-plus-proches-voisins" title="Permanent link">&para;</a></h2>
+<h2 id="tp-implementation">TP : Implémentation<a class="headerlink" href="#tp-implementation" title="Permanent link">&para;</a></h2>
 <p>Nous allons implémenter un algorithme d'apprentissage, permettant de faire des prédictions sur des données. On veut identifier l'espèce d'un animal à partir de sa <strong>masse</strong> et de sa <strong>taille</strong>, en se basant sur un jeu de données disponibles : les données d'autres animaux, pour lesquels on connaît la masse, la taille, et l'espèce.</p>
 <div class="admonition tip">
 <p>Télécharger le fichier <code>TP_KVoisins.py</code>. Il contient du code à compléter, correspondant aux différentes parties du TP.</p>
@@ -2283,8 +2283,8 @@ text-align: justify}
 <h3 id="b-distance-entre-les-donnees">B. Distance entre les données<a class="headerlink" href="#b-distance-entre-les-donnees" title="Permanent link">&para;</a></h3>
 <p>On veut trouver l'espèce d'un animal mystère, connaissant sa masse et sa taille. Pour cela, nous allons estimer de quels autres animaux du jeu de données est-ce qu'il est le plus <strong>proche</strong>. On calcule pour cela la <strong>distance</strong> entre les animaux à partir de leurs caractéristiques, en utilisant la mesure de distance euclidienne.</p>
 <ol>
-<li>Compléter la fonction <code>distance(donnee1, donnee2)</code>, calculant la distance euclidienne entre <code>donnee1</code> et <code>donnee2</code>. Il faut stocker dans les variables <code>x1</code> et <code>y1</code> les caractéristiques de <code>donnee1</code>, et dans <code>x2</code> et <code>y2</code> celles de <code>donnee2</code>.  </li>
-</ol>
+<li>
+<p>Compléter la fonction <code>distance(donnee1, donnee2)</code>, calculant la distance euclidienne entre <code>donnee1</code> et <code>donnee2</code>. Il faut stocker dans les variables <code>x1</code> et <code>y1</code> les caractéristiques de <code>donnee1</code>, et dans <code>x2</code> et <code>y2</code> celles de <code>donnee2</code>.  </p>
 <div class="admonition note">
 <p class="admonition-title">Note 1</p>
 <p>La formule de la distance euclidienne <span class="arithmatex">\(d\)</span> entre deux points <span class="arithmatex">\((x_1, y_1)\)</span> et <span class="arithmatex">\((x_2, y_2)\)</span> est  <span class="arithmatex">\(d = \sqrt{ (x_{1}-x_{2})^2 + (y_{1}-y_{2})^2 }\)</span></p>
@@ -2293,7 +2293,7 @@ text-align: justify}
 <p class="admonition-title">Note 2</p>
 <p><code>sqrt</code> calcule la racine carrée <em>("root mean square")</em>. La fonction est importée de la bibliothèque <code>math</code> tout en haut du programme.</p>
 </div>
-<ol>
+</li>
 <li>
 <p>On ajoute ensuite une <strong>clé</strong> <code>distance</code> à chaque dictionnaire de <code>donnees_animaux</code>, à laquelle on associe la <strong>valeur</strong> renvoyée par la fonction <code>distance</code> écrite dans la question 1, calculée avec la nouvelle donnée. Ceci est fait dans la fonction <code>calcule_distance(donnee)</code> : la compléter.</p>
 </li>
@@ -2322,39 +2322,58 @@ text-align: justify}
 - compter le nombre d'occurrences des différentes espèces,<br />
 - sélectionner le maximum parmi ces nombres d'occurrences.</p>
 <ol>
-<li>Ecrire la fonction <code>compte_occurrences(k)</code>, qui compte le nombre de fois que chaque espèce apparaît dans les <span class="arithmatex">\(k\)</span> premiers éléments de <code>donnees_animaux</code>. Cela revient à faire un calcul d'occurrences sur une liste Python, sauf que ses éléments sont des dictionnaires plutôt que des types de base <strong>et</strong> que l'on ne va que jusqu'à <span class="arithmatex">\(k\)</span>ème élément de la liste.</li>
-</ol>
+<li>
+<p>Ecrire la fonction <code>compte_occurrences(k)</code>, qui compte le nombre de fois que chaque espèce apparaît dans les <span class="arithmatex">\(k\)</span> premiers éléments de <code>donnees_animaux</code>. Cela revient à faire un calcul d'occurrences sur une liste Python, sauf que ses éléments sont des dictionnaires plutôt que des types de base <strong>et</strong> que l'on ne va que jusqu'à <span class="arithmatex">\(k\)</span>ème élément de la liste.</p>
 <div class="admonition tip">
 <p>Vous avez écrit une fonction qui y ressemble dans le TP "Les résultats d'une élection" pour le dépouillement des votes.</p>
 </div>
-<ol>
-<li>Ecrire la fonction <code>maxi_occurrence(occurrences)</code> prenant en paramètre un dictionnaire <code>occurrences</code>, comme celui obtenu en sortie de <code>compte_occurrences</code> et renvoyant la clé de la valeur maximale d'<code>occurrences</code>.</li>
-</ol>
+<details class="tip">
+<summary>Aide</summary>
+<p>On peut utiliser le pseudo-code suivant <em>(sans oublier de définir la fonction et de renvoyer le résultat)</em>:
+<div class="highlight"><pre><span></span><code><span class="n">Entrée</span> <span class="p">:</span> <span class="n">l</span> <span class="n">entier</span> <span class="n">k</span>
+<span class="n">Sortie</span> <span class="p">:</span> <span class="n">le</span> <span class="n">dictionnaire</span> <span class="n">occurrences</span>
+
+<span class="n">occurrences</span> <span class="o">&lt;-</span> <span class="n">dictionnaire</span> <span class="n">vide</span>
+<span class="n">pour</span> <span class="n">un</span> <span class="n">indice</span> <span class="n">i</span> <span class="n">variant</span> <span class="n">de</span> <span class="mi">0</span> <span class="n">à</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">espece</span> <span class="o">&lt;-</span> <span class="n">espèce</span> <span class="n">du</span> <span class="n">ième</span> <span class="n">élément</span> <span class="n">de</span> <span class="n">donnees_animaux</span>
+    <span class="n">si</span> <span class="n">espece</span> <span class="n">est</span> <span class="n">dans</span> <span class="n">occurrences</span>
+        <span class="n">on</span> <span class="n">incrémente</span> <span class="n">occurrences</span><span class="p">[</span><span class="n">espece</span><span class="p">]</span>
+    <span class="n">sinon</span>
+        <span class="n">on</span> <span class="n">affecte</span> <span class="mi">1</span> <span class="n">à</span> <span class="n">occurrences</span><span class="p">[</span><span class="n">espece</span><span class="p">]</span>
+</code></pre></div></p>
+</details>
+</li>
+<li>
+<p>Ecrire la fonction <code>maxi_occurrence(occurrences)</code> prenant en paramètre un dictionnaire <code>occurrences</code>, comme celui obtenu en sortie de <code>compte_occurrences</code> et renvoyant la clé de la valeur maximale d'<code>occurrences</code>.</p>
 <div class="admonition tip">
 <p>Vous avez écrit une fonction qui y ressemble dans le TP "Les résultats d'une élection" pour trouver le vainqueur.</p>
 </div>
-<ol>
-<li>Appeler ces deux fonctions de manière à obtenir le résultat. Quel est-il ? ...........................................</li>
+</li>
+<li>
+<p>Appeler ces deux fonctions pour obtenir le résultat. Quel est-il ? ...........................................</p>
+</li>
 </ol>
 <hr />
-<h2 id="td-lalgorithme-des-k-plus-proches-voisins">TD : L'algorithme des <span class="arithmatex">\(k\)</span> plus proches voisins<a class="headerlink" href="#td-lalgorithme-des-k-plus-proches-voisins" title="Permanent link">&para;</a></h2>
+<h2 id="td-application-de-lalgorithme">TD : Application de l'algorithme<a class="headerlink" href="#td-application-de-lalgorithme" title="Permanent link">&para;</a></h2>
 <h3 id="exercice-1-application-de-lalgorithme">Exercice 1 : application de l'algorithme<a class="headerlink" href="#exercice-1-application-de-lalgorithme" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Quelle affirmation, parmi A, B, C ou D, est vraie ? <em>(une seule est vraie)</em></li>
-</ol>
+<li>
+<p>Quelle affirmation, parmi A, B, C ou D, est vraie ? <em>(une seule est vraie)</em></p>
 <p><strong>A-</strong> L'algorithme des k plus proches voisins a pour but de déterminer les k plus proches voisins d'une observation dans un ensemble de données.</p>
 <p><strong>B-</strong> L'algorithme des k plus proches voisins a pour but de déterminer la classe d'une observation à partir des classes de ses k plus proches voisins.</p>
 <p><strong>C-</strong> L'algorithme des k plus proches voisins a pour but de déterminer dans un ensemble de données le sous-ensemble à k éléments qui sont les plus proches les uns des autres.</p>
 <p><strong>D-</strong> L'algorithme des k plus proches voisins a pour but de déterminer les éléments d'un ensemble de données appartenant à une même classe. </p>
-<ol>
-<li>Remettre dans l'ordre les étapes, notées de a à d, de cet algorithme :</li>
-</ol>
+</li>
+<li>
+<p>Remettre dans l'ordre les étapes, notées de a à d, de cet algorithme :</p>
 <p>a. Trier les données par distance croissante avec l'observation<br />
 b. Sélectionner les k données les plus proches<br />
 c. Calculer la distance entre l'observation et le reste des données<br />
 d. Déduire de la classe majoritaire des k voisins la classe de l'observation</p>
-<ol>
-<li>On a représenté sur un quadrillage les éléments de quatre classes (chaque classe est représentée par un carré, un triangle, un losange ou un disque) ainsi qu’un nouvel élément X.</li>
+</li>
+<li>
+<p>On a représenté sur un quadrillage les éléments de quatre classes (chaque classe est représentée par un carré, un triangle, un losange ou un disque) ainsi qu’un nouvel élément X.</p>
+</li>
 </ol>
 <p><center>
 <img src="../img/bns_knn.png" height=180>
@@ -2371,7 +2390,7 @@ d. Déduire de la classe majoritaire des k voisins la classe de l'observation</p
 <p>L'algorithme des k plus proches voisins utilise une mesure de distance entre données. (Re)voyons comment calculer cette distance.</p>
 <ol>
 <li>On utilise une fonction <code>distance</code> pour calculer la distance entre deux points. Compléter sa spécification.
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>   <span class="c1"># import de la fonction racine carree</span>
+    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>   <span class="c1"># import de la fonction racine carree</span>
 
 <span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
@@ -2382,8 +2401,8 @@ d. Déduire de la classe majoritaire des k voisins la classe de l'observation</p
 
 <span class="k">assert</span> <span class="n">distance</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="o">==</span> <span class="mf">5.0</span>
 </code></pre></div></li>
-<li>On définit une fonction <code>plus_courte_distance</code>, trouvant le point le plus proche d'un point de départ, parmi un ensemble de points stockés dans un tableau. Compléter cette fonction, ainsi que l'assertion permettant de la tester :</li>
-</ol>
+<li>
+<p>On définit une fonction <code>plus_courte_distance</code>, trouvant le point le plus proche d'un point de départ, parmi un ensemble de points stockés dans un tableau. Compléter cette fonction, ainsi que l'assertion permettant de la tester :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">plus_courte_distance</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Entrées : un tableau de points tab de type liste de tuples et depart un point de type tuple</span>
 <span class="sd">    Sortie : un point de type tuple</span>
@@ -2400,6 +2419,8 @@ d. Déduire de la classe majoritaire des k voisins la classe de l'observation</p
 
 <span class="k">assert</span> <span class="n">plus_courte_distance</span><span class="p">([(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)],</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="o">==</span> <span class="o">................</span>
 </code></pre></div>
+</li>
+</ol>
 
 
   

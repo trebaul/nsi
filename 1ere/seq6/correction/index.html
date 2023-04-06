@@ -2327,8 +2327,9 @@ On parle d'<strong>invariant de boucle</strong>. </p>
 <hr />
 <h2 id="td">TD<a class="headerlink" href="#td" title="Permanent link">&para;</a></h2>
 <ol>
-<li>La fonction suivante prend en arguments deux entiers positifs et renvoie leur produit.
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">produit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<li>
+<p>La fonction suivante prend en arguments deux entiers positifs et renvoie leur produit.
+    <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">produit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
@@ -2337,16 +2338,15 @@ On parle d'<strong>invariant de boucle</strong>. </p>
         <span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">a</span>
     <span class="k">return</span> <span class="n">c</span>
 </code></pre></div>
-Quelle propriété reste vraie à chaque passage par la ligne marquée d'un # ?  </li>
-</ol>
+    Quelle propriété reste vraie à chaque passage par la ligne marquée d'un # ?  </p>
 <p>A 𝑐 = 𝑎 × (𝑖 + 1)<br />
 B 𝑐 = 𝑎 × (𝑖 − 1)<br />
 C 𝑐 = 𝑎 × 𝑖<br />
 D 𝑐 = 𝑎 × 𝑏  </p>
-<ol>
-<li>On suppose qu'au début de l'exécution la variable <code>K</code> contient un entier positif non nul.<br />
-Lequel des scripts suivants va boucler indéfiniment ?</li>
-</ol>
+</li>
+<li>
+<p>On suppose qu'au début de l'exécution la variable <code>K</code> contient un entier positif non nul.<br />
+    Lequel des scripts suivants va boucler indéfiniment ?</p>
 <p><strong>A</strong>
 <div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="n">K</span><span class="o">+</span><span class="mi">1</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">K</span><span class="p">:</span>
@@ -2367,9 +2367,10 @@ Lequel des scripts suivants va boucler indéfiniment ?</li>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">K</span><span class="p">:</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
 </code></pre></div></p>
-<ol>
-<li>𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie <span class="arithmatex">\(a^m\)</span>.
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+</li>
+<li>
+<p>𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie <span class="arithmatex">\(a^m\)</span>.
+    <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
     <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">m</span>
     <span class="n">q</span> <span class="o">=</span> <span class="n">a</span>
@@ -2383,30 +2384,31 @@ Lequel des scripts suivants va boucler indéfiniment ?</li>
             <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">p</span>
 </code></pre></div>
-Quelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?  </li>
-</ol>
+    Quelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?  </p>
 <p><strong>A</strong> <span class="arithmatex">\(𝑝 × 𝑞^𝑛−1 = 𝑎^𝑚\)</span><br />
 <strong>B</strong> <span class="arithmatex">\(𝑝 × 𝑞^𝑛 = 𝑎^𝑚\)</span><br />
-<strong>C</strong> <span class="arithmatex">\(𝑝 × 𝑞^(𝑛+1) = 𝑎^𝑚\)</span><br />
+<strong>C</strong> <span class="arithmatex">\(𝑝 × 𝑞^{𝑛+1} = 𝑎^𝑚\)</span><br />
 <strong>D</strong> <span class="arithmatex">\(𝑝 × 𝑞^𝑚 = 𝑎^𝑛\)</span></p>
-<ol>
-<li>Un algorithme de tri d’une liste d’entiers est implémenté de la façon suivante :
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">trier</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="p">:</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
-    <span class="n">indice_min</span> <span class="o">=</span> <span class="n">i</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]</span> <span class="p">:</span>
-            <span class="n">indice_min</span> <span class="o">=</span> <span class="n">j</span>
-            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">indice_min</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-            <span class="c1"># assertion vraie à cet endroit</span>
+</li>
+<li>
+<p>Un algorithme de tri d’une liste d’entiers est implémenté de la façon suivante :
+    <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">trier</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+        <span class="n">indice_min</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]</span> <span class="p">:</span>
+                <span class="n">indice_min</span> <span class="o">=</span> <span class="n">j</span>
+    <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">indice_min</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="c1"># assertion vraie à cet endroit</span>
     <span class="k">return</span> <span class="n">L</span>
 </code></pre></div>
-Parmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?</li>
-</ol>
+    Parmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?</p>
 <p><strong>A</strong> la sous-liste <code>L[0:i+1]</code> contient les <code>i</code> plus grandes valeurs de <code>L</code> triées par ordre décroissant<br />
 <strong>B</strong> la sous-liste <code>L[0:i+1]</code> contient les <code>i</code> plus grandes valeurs de <code>L</code> triées par ordre croissant<br />
 <strong>C</strong> la sous-liste <code>L[0:i+1]</code> contient les <code>i</code> plus petites valeurs de <code>L</code> triées par ordre décroissant<br />
 <strong>D</strong> la sous-liste <code>L[0:i+1]</code> contient les <code>i</code> plus petites valeurs de <code>L</code> triées par ordre croissant</p>
+</li>
+</ol>
 
 
   
