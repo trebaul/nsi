@@ -1740,6 +1740,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#td" class="md-nav__link">
+    TD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-les-parcours-de-graphes" class="md-nav__link">
+    TP : Les parcours de graphes
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2146,6 +2160,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#td" class="md-nav__link">
+    TD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-les-parcours-de-graphes" class="md-nav__link">
+    TP : Les parcours de graphes
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2265,6 +2293,251 @@ text-align: justify}
 <summary>Que faut-il modifier dans celui-ci ?</summary>
 <p>On parcourt tous les sommets, et le sommet source et le sommet destination du chemin doivent être les mêmes.</p>
 </details>
+<hr />
+<h2 id="td">TD<a class="headerlink" href="#td" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1-les-parcours">Exercice 1 : les parcours<a class="headerlink" href="#exercice-1-les-parcours" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Appliquer l’algorithme de <strong>parcours en largeur</strong> au graphe ci-dessous. Choisir un sommet duquel partir.</p>
+<pre class="mermaid"><code>    graph LR
+    A --- B
+    A --- D
+    B --- C
+    C --- D
+    B --- E
+    E --- C</code></pre>
+</li>
+<li>
+<p>Appliquer l’algorithme de <strong>parcours en profondeur</strong> au même graphe, en partant du même sommet.</p>
+</li>
+<li>
+<p>Lui appliquer l’algorithme de recherche de chaîne entre A et E.</p>
+</li>
+</ol>
+<h3 id="exercice-2-les-recherches">Exercice 2 : les recherches<a class="headerlink" href="#exercice-2-les-recherches" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Appliquer l’algorithme de <strong>détection de cycle</strong> au graphe ci-dessous.
+    <pre class="mermaid"><code>    graph LR
+    A --- B
+    B --- F
+    A --- C
+    C --- E
+    C --- D</code></pre></p>
+</li>
+<li>
+<p>Appliquer le même algorithme à un deuxième graphe :</p>
+<pre class="mermaid"><code>    graph LR
+    A --- B
+    B --- F
+    A --- C
+    C --- E
+    C --- D
+    F --- D</code></pre>
+</li>
+</ol>
+<h3 id="exercice-3-algorithme-de-dijkstra">Exercice 3 : algorithme de Dijkstra<a class="headerlink" href="#exercice-3-algorithme-de-dijkstra" title="Permanent link">&para;</a></h3>
+<p>Un politicien se trouve à sa permanence (en P) et doit se rendre à l’hôpital (en H) le plus rapidement possible. Le graphe ci-dessous représente le temps de trajet pour aller d’un point à un autre.</p>
+<pre class="mermaid"><code>    graph LR
+    A --3--- B
+    A --7--- C
+    A --4--- P
+    P --6--- B
+    B --4--- D
+    P --12--- D
+    P --11--- C
+    C --10--- G
+    D --9--- G
+    D --5--- F
+    G --10--- H
+    C --11--- E
+    E --9--- H</code></pre>
+<ol>
+<li>Quel chemin doit-il emprunter pour y arriver au plus vite ?</li>
+<li>Vérifier votre réponse avec l’implémentation de l’algorithme de Dijkstra fournie, en complétant la structure représentant le graphe et en faisant le bon appel de fonction (à modifier).</li>
+</ol>
+<hr />
+<h2 id="tp-les-parcours-de-graphes">TP : Les parcours de graphes<a class="headerlink" href="#tp-les-parcours-de-graphes" title="Permanent link">&para;</a></h2>
+<h3 id="a-le-parcours-en-largeur">A. Le parcours en largeur<a class="headerlink" href="#a-le-parcours-en-largeur" title="Permanent link">&para;</a></h3>
+<p>Nous allons implémenter le <strong>parcours en largeur</strong> d'un graphe de manière itérative.
+Nous allons pour cela utiliser la représentation d'un graphe sous forme de <em>liste d'adjacence</em>, en utilisant un dictionnaire.</p>
+<p>Le graphe <code>g</code> ci-dessous représente le réseau social du cours :</p>
+<p><center>
+<img src="../img/graphe_rs.png">
+</center></p>
+<div class="highlight"><pre><span></span><code><span class="n">g</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;E&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span> \
+     <span class="s1">&#39;F&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">],</span> <span class="s1">&#39;G&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">],</span> <span class="s1">&#39;H&#39;</span><span class="p">:[</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">],</span> <span class="s1">&#39;I&#39;</span><span class="p">:[</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">]}</span>
+</code></pre></div>
+<p>Nous allons distinguer les sommets <em>visités</em> des sommets <em>parcourus</em> : un sommet est considéré <em>visité</em> à partir du moment où ils ont été placé dans la file. Un sommet est <em>parcouru</em> quand ses voisins ont été visités. Il va falloir utiliser deux variables différentes pour identifier ces sommets.</p>
+<p>Les étapes du parcours en largeur peuvent être résumées de la manière suivante :<br />
+- On considère un sommet <code>S</code> que l'on enfile dans une file <code>F</code>.<br />
+- On enfile les voisins de <code>S</code> dans <code>F</code> s’ils n'ont pas été visités, et on les considère visités.<br />
+- <code>S</code> est ajouté au parcours (il est considéré parcouru).<br />
+- On défile <code>F</code> et on considère le nouveau sommet de la file.<br />
+- On recommence ces 3 dernières étapes tant que <code>F</code> n’est pas vide.</p>
+<h4 id="1-etapes-preliminaires">1. Etapes préliminaires<a class="headerlink" href="#1-etapes-preliminaires" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Identifier toutes les structures de données nécessaires à l'implémentation de l'algorithme.</p>
+</li>
+<li>
+<p>Identifier les opérations qui se répètent et en déduire la boucle à utiliser et sa condition de sortie.</p>
+</li>
+</ol>
+<h4 id="2-pseudo-code">2. Pseudo-code<a class="headerlink" href="#2-pseudo-code" title="Permanent link">&para;</a></h4>
+<p>Produire un pseudo-code de l'algorithme, avec toutes les structures à utiliser, mais sans le détails de toutes les instructions.</p>
+<p>Par exemple, on peut dire "on considère S visité " sans expliciter comment est-ce qu'on le fait.</p>
+<details class="tip">
+<summary>Proposition</summary>
+<p>Ci-dessous une proposition de pseudo-code :
+<div class="highlight"><pre><span></span><code>Entrées:
+la structure de graphe G
+le sommet source S
+Sortie:
+la liste des sommets parcours
+
+F est une file vide
+On enfile S dans F
+On initialise une liste parcours à la liste vide
+On initialise une liste visites avec le sommet S
+
+Tant que F non vide:
+    S &lt;- le sommet défilé de F
+    On enfile dans F les voisins de S non visités, et on les considère visités
+    On ajoute S à parcours
+    On défile F
+Fin tant que
+</code></pre></div></p>
+</details>
+<h4 id="3-implementation">3. Implémentation<a class="headerlink" href="#3-implementation" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Implémenter cet algorithme en utilisant la structure de file données ci-dessous.</p>
+</li>
+<li>
+<p>Le tester sur le graphe <code>g</code> donné précédemment.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; Définition d&#39;une classe File</span>
+<span class="sd">    une instance File est crée avec une liste Python &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Initialisation d&#39;une pile vide&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Teste si la file est vide&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">==</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">defiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Défile : enlève le premier élément&quot;</span>
+        <span class="k">assert</span><span class="p">(</span> <span class="ow">not</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vide</span><span class="p">())</span> <span class="p">),</span> <span class="s2">&quot;File vide !&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">enfiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+        <span class="s2">&quot;Enfile : ajoute un élément à la fin&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">sommet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parcours_largeur</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">S</span><span class="p">):</span>
+
+
+    <span class="c1">#à compléter</span>
+</code></pre></div>
+<h3 id="b-le-parcours-en-profondeur">B. Le parcours en profondeur<a class="headerlink" href="#b-le-parcours-en-profondeur" title="Permanent link">&para;</a></h3>
+<p>Nous allons implémenter le <strong>parcours en profondeur</strong> d'un graphe de manière itérative.
+Nous allons utiliser la même représentation d'un graphe que pour le parcours en largeur, mais nous n'avons pas besoin ici de la distinction entre sommet visité et sommet parcouru.</p>
+<p>Les étapes du parcours en profondeur peuvent être résumées de la manière suivante :<br />
+- On part d’un sommet que l’on empile dans <code>P</code>.<br />
+- Si le sommet de la pile a des voisins qui n'ont pas été parcourus :<br />
+        - on considère le premier de ceux-ci<br />
+        - on l’empile dans <code>P</code><br />
+        - on l'ajoute au parcours<br />
+- Sinon, on dépile <code>P</code> et on considère son sommet.<br />
+- On applique cette instruction conditionnelle tant que <code>P</code> n’est pas vide.</p>
+<p>L'objectif est d'aboutir à l'implémentation de cet algorithme, en utilisant les mêmes étapes que précédemment.</p>
+<h4 id="1-etapes-preliminaires_1">1. Etapes préliminaires<a class="headerlink" href="#1-etapes-preliminaires_1" title="Permanent link">&para;</a></h4>
+<p>Identifier les différentes variables à utiliser, et leur type.<br />
+Identifier les opérations qui vont se trouver dans la boucle, et sa condition de sortie.</p>
+<h4 id="2-pseudo-code_1">2. Pseudo-code<a class="headerlink" href="#2-pseudo-code_1" title="Permanent link">&para;</a></h4>
+<p>Formuler un pseudo-code de l'algorithme, en vous basant sur sa description et sur les étapes préliminaires.</p>
+<details class="tip">
+<summary>Proposition</summary>
+<p>Ci-dessous une proposition de pseudo-code :
+<div class="highlight"><pre><span></span><code>Entrées :
+la structure de graphe G
+le sommet source S
+Sortie :
+la liste des sommets parcours
+
+P est une pile vide
+On empile un sommet dans P
+On initialise une liste parcours avec le sommet S
+
+Tant que P n’est pas vide:
+    S ← sommet de P
+    On initialise liste_voisins à une liste vide
+    s’ils ne sont pas dans parcours, on ajoute les voisins de S dans liste_voisins
+    Si liste_voisins n’est pas vide:
+        on sélectionne le premier de ses éléments
+        on empile cet élément dans P
+        on ajoute cet élément à sommets_parcourus
+    Sinon :
+        on dépile P
+    Fin si
+Fin tant que
+</code></pre></div></p>
+</details>
+<h4 id="3-implementation_1">3. Implémentation<a class="headerlink" href="#3-implementation_1" title="Permanent link">&para;</a></h4>
+<p>Implémenter l'algorithme obtenu.<br />
+On utilisera la structure de pile donnée ci-dessous :</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; Définition d&#39;une classe Pile</span>
+<span class="sd">    une instance Pile est créée avec une liste Python &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Initialisation d&#39;une pile vide&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Teste si la pile est vide&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">==</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">depiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Dépile : enlève le dernier élément&quot;</span>
+        <span class="k">assert</span><span class="p">(</span> <span class="ow">not</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vide</span><span class="p">())</span> <span class="p">),</span> <span class="s2">&quot;Pile vide !&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">empiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+        <span class="s2">&quot;Empile : ajoute un élément à la fin&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Retourne la taille (le nombre d&#39;éléments) de la pile&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">sommet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Retourne le premier élément à sortir de la pile sans le dépiler&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">taille</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;Affiche le contenu de la pile&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;Le contenu de la pile est : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parcours_profondeur</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">S</span><span class="p">):</span>
+
+
+    <span class="c1">#à compléter</span>
+</code></pre></div>
+<p>Modifier l'algorithme précédent pour que le sommet choisi à chaque nouvelle étape soit choisi au hasard parmi la liste des voisins non-visités, et ne soit pas forcément le premier.</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
 
 
   
