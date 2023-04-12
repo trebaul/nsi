@@ -17,7 +17,7 @@
     
     
       
-        <title>Introduction à l'algorithmique et tris - TD Les tris - Trebaul NSI</title>
+        <title>Algorithmique et tris - Trebaul NSI</title>
       
     
     
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction à l'algorithmique et tris - TD Les tris
+              Algorithmique et tris
             
           </span>
         </div>
@@ -2391,7 +2391,8 @@ text-align: justify}
 <h3 id="a-le-tri-par-selection">A. Le tri par sélection<a class="headerlink" href="#a-le-tri-par-selection" title="Permanent link">&para;</a></h3>
 <h4 id="ai-principe">A.I. Principe<a class="headerlink" href="#ai-principe" title="Permanent link">&para;</a></h4>
 <p>Le <strong>tri par sélection</strong> consiste à <em>sélectionner</em> le minimum d'une partie du tableau de plus en plus petite à chaque étape, et à l'<em>échanger</em> avec un élément de référence.</p>
-<div class="admonition note">
+<div class="admonition info">
+<p class="admonition-title">Principe</p>
 <ul>
 <li>Au début, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 0</em>. On recherche le <strong><em>minimum de l'ensemble du tableau</em></strong>, et on l'échange avec l'élément de référence.</li>
 <li>Ensuite, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 1</em>. On recherche le <strong><em>minimum de l'ensemble du tableau moins celui d'indice 0</em></strong>, et on l'échange avec l'élément de référence.</li>
@@ -2460,9 +2461,10 @@ et notons <span class="arithmatex">\(S' = n-1+n-2+...+2+1\)</span><br />
 Que vaut <span class="arithmatex">\(S+S'\)</span> ? <span class="arithmatex">\(n+n+...+n+n = n*(n-1)\)</span><br />
 Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(2S = n*(n-1)\)</span> et <span class="arithmatex">\(S=n(n-1)/2\)</span></p>
 <p>On peut donc dire que la <strong>complexité</strong> de ce tri est en <span class="arithmatex">\((1/2)n^2-(1/2)n\)</span>. On obtient l'<strong>ordre de grandeur</strong> en ne retenant que <em>la plus grande puissance de <span class="arithmatex">\(n\)</span></em>. </p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Complexité</p>
 <p>Le <strong>tri par sélection</strong> a donc une complexité en <span class="arithmatex">\(O(n^2)\)</span>, autrement dit <strong>quadratique</strong>.</p>
-</blockquote>
+</div>
 <details class="note">
 <summary>Nous avions dit que nous allions estimer la <strong>complexité dans le pire des cas</strong>, mais avons pris un cas quelconque pour <code>tab</code> dans notre exemple. Pourquoi ?</summary>
 <p>Ici, on n'utilise que des boucles bornées. Il y a donc toujours autant de comparaisons, peu importe comment les valeurs sont placées dans le tableau.</p>
@@ -2470,7 +2472,8 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 <h3 id="b-tri-par-insertion">B. Tri par insertion<a class="headerlink" href="#b-tri-par-insertion" title="Permanent link">&para;</a></h3>
 <h4 id="bi-principe">B.I. Principe<a class="headerlink" href="#bi-principe" title="Permanent link">&para;</a></h4>
 <p>Le <strong>tri par insertion</strong> consiste à insérer chaque élément à la bonne place dans une sous-partie du tableau déjà triée.</p>
-<div class="admonition note">
+<div class="admonition info">
+<p class="admonition-title">Principe</p>
 <ul>
 <li>Au début, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 1</em>. On le compare à celui d'indice 0 et on les échange s'ils ne sont pas dans le bon ordre.</li>
 <li>Ensuite, l'<strong><em>élément de référence</em></strong> est celui d'<em>indice 2</em>. On le compare aux précédents, situés à sa gauche, tant que l'on ne trouve pas d'<strong>élément plus petit</strong> ou que l'on attend pas l'indice 0. Les <strong>éléments plus grands</strong> sont décalés sur la droite, et on insère notre référence à la bonne place dans le sous-tableau trié.</li>
@@ -2540,9 +2543,10 @@ Or <span class="arithmatex">\(S+S'=2S\)</span>, donc <span class="arithmatex">\(
 </details>
 </div>
 <p>En tout, il y a <span class="arithmatex">\(1+2+3+4\)</span> <strong>décalages</strong>. En généralisant en fonction de <span class="arithmatex">\(n\)</span> la taille du tableau, on a <span class="arithmatex">\(1+2+...+n-2+n-1\)</span> décalages, donc le même résultat que pour le premier tri.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Complexité</p>
 <p>La <strong>complexité dans le pire des cas</strong> du tri par insertion est en <span class="arithmatex">\(O(n^2)\)</span>, soit <strong>quadratique</strong>.</p>
-</blockquote>
+</div>
 <h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
 <p>Ces deux algorithmes de tri sont donc comparables dans le pire des cas. Le <strong>tri par insertion</strong> sera tout de même plus efficace pour des données déjà partiellement triées, alors que ce paramètre ne change rien au coût du tri par sélection.</p>
 <p>La taille des tableaux en entrée a donc un plus grand impact sur l'exécution de ces algorithmes que lorsque l'on veut simplement y rechercher une valeur (algorithme de complexité linéaire). Si on multiple la taille d'un tableau par <strong>2</strong>, le trier prendra <strong>4 fois</strong> plus de temps.</p>

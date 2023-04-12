@@ -2272,44 +2272,51 @@ text-align: justify}
 <hr />
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <h3 id="a-notions-dalgorithmique">A. Notions d'algorithmique<a class="headerlink" href="#a-notions-dalgorithmique" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Qu'est-ce qu'un <strong>algorithme</strong> ?<br />
-<strong><em>Un algorithme est une suite d'instructions permettant de résoudre un problème.</em></strong>  </p>
-</li>
-<li>
-<p>Qu'est-ce que la <strong>complexité</strong> d'un algorithme ?<br />
-<strong><em>La complexité d'un algorithme évalue la quantité de ressources (en temps, en mémoire), nécessaire à son exécution.</em></strong></p>
-</li>
-<li>
-<p>A quoi sert l'évaluation de cette complexité ?<br />
-<strong><em>Evaluer la complexité d'un algorithme sert à le comparer à d'autres algorithmes résolvant le même problème.</em></strong></p>
-</li>
-<li>
-<p>Dans le programme de NSI, on s'intéresse à la complexité <strong>en temps dans le pire des cas</strong>. Qu'évalue-t-on alors ?<br />
-<strong><em>On estime le nombre d'opérations élémentaires exécutées, en fonction de la taille des données d'entrée notée n.</em></strong></p>
-</li>
-</ul>
+<details class="note">
+<summary>Qu'est-ce qu'un <strong>algorithme</strong> ?</summary>
+<p>Un algorithme est une suite d'instructions permettant de résoudre un problème.  </p>
+</details>
+<details class="note">
+<summary>Qu'est-ce que la <strong>complexité</strong> d'un algorithme ?</summary>
+<p>La complexité d'un algorithme évalue la quantité de ressources (en temps, en mémoire), nécessaire à son exécution.</p>
+</details>
+<details class="note">
+<summary>A quoi sert l'évaluation de cette complexité ?</summary>
+<p>Evaluer la complexité d'un algorithme sert à le comparer à d'autres algorithmes résolvant le même problème.</p>
+</details>
+<details class="note">
+<summary>Dans le programme de NSI, on s'intéresse à la complexité <strong>en temps dans le pire des cas</strong>. Qu'évalue-t-on alors ?</summary>
+<p>On estime le nombre d'opérations élémentaires exécutées, en fonction de la taille des données d'entrée notée n.</p>
+</details>
 <p>Tracer les différent types de complexités que vous connaissez sur un graphique. En donner des exemples types d'algorithmes associés.</p>
 <p><img alt="" src="../img/graphe_fonction.png" /></p>
-<p><strong><em>- constant : retour d'une valeur (la moitié d'un nombre, test,...)</em></strong><br />
-<strong><em>- linéaire : parcours d'un tableau, 1 boucle</em></strong><br />
-<strong><em>- quadratique : parcours d'un tableau à deux dimensions, 2 boucles imbriquées</em></strong></p>
+<details class="example">
+<summary>Exemples</summary>
+<ul>
+<li>constant : calcul d'une ou plusieurs valeurs, sans boucle  </li>
+<li>linéaire : parcours d'un tableau, 1 boucle***  </li>
+<li>quadratique : parcours d'un tableau à deux dimensions, 2 boucles imbriquées</li>
+</ul>
+</details>
 <h3 id="b-les-algorithmes-du-type-diviser-pour-regner">B. Les algorithmes du type "diviser pour régner"<a class="headerlink" href="#b-les-algorithmes-du-type-diviser-pour-regner" title="Permanent link">&para;</a></h3>
 <p><strong>"Diviser pour régner"</strong> est une <em>méthode algorithmique</em> : une manière de résoudre des problèmes algorithmiquement.</p>
 <p>Son principe est, lorsque l'on considère un problème, de le découper en plusieurs sous-problèmes équivalents, mais de taille plus réduite. Ces "petits problèmes" seront plus simples à résoudre que le problème initial. Une fois les "petits problèmes" résolus, il faut les recombiner pour obtenir une solution au problème initial.  </p>
-<p>Les trois principes à la base de cette méthode de "diviser pour régner" sont :<br />
-- <strong>Diviser :</strong> <strong><em>on divise le problème initial en sous-problèmes</em></strong><br />
-- <strong>Régner :</strong> <strong><em>on résoud les sous-problèmes</em></strong><br />
-- <strong>Combiner :</strong> <strong><em>on combine les solutions des sous-problèmes, pour avoir la solution du problème initial</em></strong></p>
+<div class="admonition info">
+<p class="admonition-title">Les trois principes à la base de cette méthode de "diviser pour régner" sont :</p>
+<p><strong>Diviser :</strong> on divise le problème initial en sous-problèmes<br />
+<strong>Régner :</strong> on résoud les sous-problèmes<br />
+<strong>Combiner :</strong> on combine les solutions des sous-problèmes, pour avoir la solution du problème initial</p>
+</div>
 <p>Le principe de la récursivité étant similaire à celui de cette approche, on utilise souvent des <strong>algorithmes récursifs</strong>. Cela n'est pas obligatoire ! Une approche "diviser pour régner" peut aussi être <strong>itérative</strong> (avec des boucles).</p>
 <h3 id="c-le-tri-fusion">c. Le tri fusion<a class="headerlink" href="#c-le-tri-fusion" title="Permanent link">&para;</a></h3>
 <h4 id="c1-principe-et-exemple">C.1. Principe et exemple<a class="headerlink" href="#c1-principe-et-exemple" title="Permanent link">&para;</a></h4>
 <p>Le <strong>tri fusion</strong> est une manière de trier une liste en la divisant successivement, puis en fusionnant petit à petit les sous-listes triées pour finalement en obtenir une seule : la liste initiale triée.</p>
-<p>Les trois étapes de cet algorithme sont :<br />
-- <strong>Diviser :</strong> <strong><em>on divise le tableau successivement en deux, jusqu'à obtenir des tableaux de taille 1.</em></strong><br />
-- <strong>Régner :</strong> <strong><em>on obtient un tableau de taille 1 qui est trié. A chaque nouvelle fusion, on s'assure que le résultat est trié.</em></strong><br />
-- <strong>Combiner :</strong> <strong><em>on fusionne les tableaux triés deux à deux, jusqu'à en obtenir une seule.</em></strong></p>
+<div class="admonition info">
+<p class="admonition-title">Les trois étapes de cet algorithme sont :</p>
+<p><strong>Diviser :</strong> on divise le tableau successivement en deux, jusqu'à obtenir des tableaux de taille 1.<br />
+<strong>Régner :</strong> on obtient un tableau de taille 1 qui est trié. A chaque nouvelle fusion, on s'assure que le résultat est trié.<br />
+<strong>Combiner :</strong> on fusionne les tableaux triés deux à deux, jusqu'à en obtenir une seule.</p>
+</div>
 <p><img alt="" src="../img/tri_fusion.png" /></p>
 <h4 id="c2-comparaison-avec-les-autres-algorithmes-de-tri">C.2. Comparaison avec les autres algorithmes de tri<a class="headerlink" href="#c2-comparaison-avec-les-autres-algorithmes-de-tri" title="Permanent link">&para;</a></h4>
 <p>Rappeler les principe des deux algorithmes de tri du programme de 1ère :</p>
@@ -2327,7 +2334,7 @@ text-align: justify}
 </tr>
 <tr>
 <td align="center"><strong><em>On sélectionne le minimum de l'ensemble des éléments du tableau sauf le premier, et on l'échange avec celui en 2ème position.</em></strong></td>
-<td align="center"><strong><em>On prend le 3ème élément, on le compare avec les précédents jusqu'à trouver un élément plus petit que lui. On l'échange avec le dernier élément plus grand.</em></strong></td>
+<td align="center"><strong><em>On prend le 3ème élément, on le compare avec les précédents jusqu'à trouver un élément plus petit que lui ou arriver au début du tableau. On décale sur la droite les éléments plus grands, et on place l'élément 3 à la position trouvée.</em></strong></td>
 </tr>
 <tr>
 <td align="center"><strong><em>On répète ces opérations, en réduisant de un en un la partie du tableau considérée, jusqu'à l'avant-dernier élément.</em></strong></td>
@@ -2335,17 +2342,15 @@ text-align: justify}
 </tr>
 </tbody>
 </table>
-<ul>
-<li>
-<p>Quel est le type de complexité de ces deux algorithmes ?<br />
-<strong><em>Ces algorithmes ont une complexité quadratique (en <span class="arithmatex">\(n^2\)</span>).</em></strong></p>
-</li>
-<li>
-<p>La complexité du <strong>tri fusion</strong> est en <span class="arithmatex">\(nlog(n)\)</span>. Est-il donc judicieux de l'utiliser à la place d'un tri par sélection ou par insertion ? <br />
-<strong><em>Il est pertinent d'utiliser le tri fusion, car sa complexité est meilleure : la courbe la représentant se trouve en-dessous de la courbe de la fonction quadratique, pour une valeur de n donnée.</em></strong>
-<img alt="" src="../img/compl_nlogn.png" /></p>
-</li>
-</ul>
+<details class="note">
+<summary>Quel est le type de complexité de ces deux algorithmes ?</summary>
+<p>Ces algorithmes ont une complexité quadratique (en <span class="arithmatex">\(n^2\)</span>).</p>
+</details>
+<details class="note">
+<summary>La complexité du <strong>tri fusion</strong> est en <span class="arithmatex">\(nlog(n)\)</span>. Est-il donc judicieux de l'utiliser à la place d'un tri par sélection ou par insertion ?</summary>
+<p>Il est pertinent d'utiliser le tri fusion, car sa complexité est meilleure : la courbe la représentant se trouve en-dessous de la courbe de la fonction quadratique, pour une valeur de n donnée.</p>
+</details>
+<p><img alt="" src="../img/compl_nlogn.png" /></p>
 <p><br><br></p>
 <hr />
 <h2 id="tp-le-tri-fusion">TP : Le tri fusion<a class="headerlink" href="#tp-le-tri-fusion" title="Permanent link">&para;</a></h2>
@@ -2451,9 +2456,10 @@ Pour prendre les deux moitiés du tableau, on aurait pu faire du <em>slicing</em
 <p>Écrire une fonction <code>recherche</code> itérative qui prend en paramètres un tableau <code>tab</code> de nombres entiers triés par ordre croissant et un nombre entier <code>n</code>, et qui effectue une recherche dichotomique du nombre entier <code>n</code> dans le tableau non vide <code>tab</code>. Cette fonction doit renvoyer un indice correspondant au nombre cherché s’il est dans le tableau, -1 sinon. </p>
 </li>
 </ol>
-<blockquote>
-<p><strong>N.B. :</strong> <em>Cette version, du programme de 1ère, utilise une boucle </em><strong>while</strong><em> à la place de l'appel récursif de la version précédente.</em></p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cette version, du programme de 1ère, utilise une boucle <strong><em>while</em></strong> à la place de l'appel récursif de la version précédente.</p>
+</div>
 
 
   

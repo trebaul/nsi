@@ -2344,15 +2344,12 @@ text-align: justify}
 <h3 id="b-definitions">B. Définitions<a class="headerlink" href="#b-definitions" title="Permanent link">&para;</a></h3>
 <h4 id="bi-vocabulaire">B.I. Vocabulaire<a class="headerlink" href="#bi-vocabulaire" title="Permanent link">&para;</a></h4>
 <div class="admonition info">
+<p class="admonition-title">Définition</p>
 <p>Un <strong>arbre</strong> est un ensemble organisé de <strong>nœuds</strong> reliés par des <strong>branches</strong> ou <strong>arêtes</strong>. Les nœuds ont une relation hiérarchique les uns par rapport aux autres.</p>
-</div>
-<p>Le vocabulaire utilisé est emprunté, entre autres, à la généalogie et à la nature : </p>
-<div class="admonition info">
-<ul>
-<li>Chaque nœud à un <strong>père</strong>, dont il est le <strong>fils</strong>, sauf la <strong>racine</strong>.</li>
-<li>Un nœud qui n'a pas de fils est appelé une <strong>feuille</strong>.</li>
-<li>Un nœud avec une valeur (texte, nombre, etc) est dit <strong>étiqueté</strong>. Si tous les nœuds de l'arbre ont une <strong>étiquette</strong>, l'arbre est aussi dit étiqueté.</li>
-</ul>
+<p>Le vocabulaire utilisé est emprunté, entre autres, à la généalogie et à la nature :<br />
+- Chaque nœud à un <strong>père</strong>, dont il est le <strong>fils</strong>, sauf la <strong>racine</strong>.<br />
+- Un nœud qui n'a pas de fils est appelé une <strong>feuille</strong>.<br />
+- Un nœud avec une valeur (texte, nombre, etc) est dit <strong>étiqueté</strong>. Si tous les nœuds de l'arbre ont une <strong>étiquette</strong>, l'arbre est aussi dit étiqueté.</p>
 </div>
 <p><strong><em>Représentation :</em></strong>  L'arbre informatique est un arbre... renversé. La <strong>racine</strong> est généralement représentée tout en haut.  </p>
 <div class="admonition example">
@@ -2371,7 +2368,6 @@ text-align: justify}
 <summary>Solution</summary>
 <p>Le père de H est C et les fils de B sont D, E et F.</p>
 </details>
-</div>
 <pre class="mermaid"><code>graph TB
   A --&gt; B
   A --&gt; C
@@ -2380,8 +2376,10 @@ text-align: justify}
   B --&gt; F
   C --&gt; G
   C --&gt; H</code></pre>
+</div>
 <h4 id="bii-mesures">B.II. Mesures<a class="headerlink" href="#bii-mesures" title="Permanent link">&para;</a></h4>
 <div class="admonition info">
+<p class="admonition-title">Définitions</p>
 <ul>
 <li>la <strong>taille</strong> d'un arbre correspond à son nombre de nœuds.</li>
 <li>la <strong>profondeur d'un nœud</strong> correspond au nombre d'arêtes/de nœuds de la racine jusqu'à ce nœud <em>(la convention utilisée doit vous être précisée !)</em>. Nous utiliserons le nombre de noeuds, donc que la racine est à la profondeur 1.</li>
@@ -2407,20 +2405,19 @@ text-align: justify}
 <h3 id="c-les-arbres-binaires">C. Les arbres binaires<a class="headerlink" href="#c-les-arbres-binaires" title="Permanent link">&para;</a></h3>
 <h4 id="ci-definition">C.I. Définition<a class="headerlink" href="#ci-definition" title="Permanent link">&para;</a></h4>
 <div class="admonition info">
+<p class="admonition-title">Définitions</p>
 <p>Un arbre est dit <strong>binaire</strong> si chacun de ses nœuds admet au plus deux fils, appelés <strong>fils gauche</strong> et <strong>fils droit</strong>.</p>
-</div>
-<div class="admonition info">
 <p>On appelle <strong>sous-arbre gauche</strong>, et respectivement <strong>sous-arbre droit</strong>, d’un nœud l’arbre issu du fils gauche, respectivement fils droit, de ce nœud.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple : entourer les sous-arbres gauche et droit de la racine de l'arbre binaire ci-dessous.</p>
-</div>
 <pre class="mermaid"><code>graph TB
   A --&gt; B
   A --&gt; C
   B --&gt; D
   B --&gt; E
   C --&gt; G</code></pre>
+</div>
 <details class="abstract">
 <summary>Exercice : Parmi les exemples 1, 2, et 3 du cours, le(s)quel(s) est/sont des arbres binaires ?</summary>
 <p>Seul l'arbre de l'exemple 3 est un arbre binaire. Dans les autres, un noeud peut avoir plus de deux fils.</p>

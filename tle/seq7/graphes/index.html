@@ -2272,62 +2272,102 @@ text-align: justify}
 
 <h1 id="ii-vocabulaire-sur-les-graphes">II. Vocabulaire sur les graphes<a class="headerlink" href="#ii-vocabulaire-sur-les-graphes" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p><strong><em>Exemple 1 :</em></strong></p>
-<p><img src="../img/graphes2.png" height=75>
-<img src="../img/graphes1.png" height=200></p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 1</p>
+<p><img src="../img/graphes1.png" height=75 style="float:left">
+<img src="../img/graphes2.png" height=200 ></p>
 <p>On peut modéliser des réseaux informatiques par une structure appelée <strong>graphe</strong>. Dans cet exemple, les lettres A, B et C représentent des routeurs et les lignes entre eux représentent leurs connexions.</p>
-<p><strong><em>Exemple 2 :</em></strong>
-On peut également utiliser des graphes pour représenter les relations entre utilisateurs de réseaux sociaux. Considérons un réseau social sur lequel :<br />
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 2</p>
+<p>On peut également utiliser des graphes pour représenter les relations entre utilisateurs de réseaux sociaux. Considérons un réseau social sur lequel :<br />
 - A est ami avec B, C et D <br />
 - B est ami avec A et D<br />
 - C est ami avec A, E et D<br />
 - D est ami avec tous les autres abonnés <br />
 - E est ami avec C, D et F<br />
 - F est ami avec E et D  </p>
-<p><strong>Exercice :</strong> Représenter ce réseau social sous la forme d’un graphe.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Représenter ce réseau social sous la forme d’un graphe.</p>
+</div>
+</div>
 <h2 id="a-definitions-et-vocabulaire">A. Définitions et vocabulaire<a class="headerlink" href="#a-definitions-et-vocabulaire" title="Permanent link">&para;</a></h2>
-<p><strong>Définition :</strong>
-Un <strong>graphe G</strong> est un couple G = (V,E) avec V un ensemble de <strong>sommets</strong>, représentés par des points, et E un ensemble d’<strong>arêtes</strong>, représentées par des lignes <em>(V pour Vertex, soit sommet en anglais, E pour Edge, soit arête)</em>.</p>
-<p><strong>Vocabulaire :</strong><br />
-- l’<strong>ordre</strong> d’un graphe est le nombre de ses sommets,<br />
-- 2 sommets sont dit <strong>adjacents</strong> s’ils sont reliés par une arête,<br />
-- le <strong>degré</strong> d’un sommet est le nombre d’arêtes issues de ce sommet.</p>
-<p><strong><em>Exemples :</em></strong>
-1) Le graphe de l’exemple 1 est d’ordre 3, et chacun de ses sommets est adjacent aux deux autres et donc de degré 2.</p>
-<p>2) Quel est l’ordre du graphe représentant le réseau social d’introduction (exemple 2) ? Quels sommets sont adjacents et quel est le degré de chacun d’entre eux ?</p>
-<p><strong>Vocabulaire  :</strong><br />
-- On appelle <strong>chaîne</strong> toute suite d’arêtes dont l’extrémité de l’une (sauf la dernière) est l’origine de la suivante. Sa longueur correspond au nombre d’arêtes.<br />
-- On appelle <strong>cycle</strong> une chaîne fermée dont toutes les arêtes sont distinctes.</p>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>Un <strong>graphe G</strong> est un couple G = (V,E) avec V un ensemble de <strong>sommets</strong>, représentés par des points, et E un ensemble d’<strong>arêtes</strong>, représentées par des lignes <em>(V pour Vertex, soit sommet en anglais, E pour Edge, soit arête)</em>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Vocabulaire :</p>
+<ul>
+<li>l’<strong>ordre</strong> d’un graphe est le nombre de ses sommets,  </li>
+<li>2 sommets sont dit <strong>adjacents</strong> s’ils sont reliés par une arête,  </li>
+<li>le <strong>degré</strong> d’un sommet est le nombre d’arêtes issues de ce sommet.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemples</p>
+<ol>
+<li>
+<p>Le graphe de l’exemple 1 est d’ordre 3, et chacun de ses sommets est adjacent aux deux autres et donc de degré 2.</p>
+</li>
+<li>
+<p>Quel est l’ordre du graphe représentant le réseau social d’introduction (exemple 2) ? Quels sommets sont adjacents et quel est le degré de chacun d’entre eux ?</p>
+</li>
+</ol>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Vocabulaire</p>
+<ul>
+<li>On appelle <strong>chaîne</strong> toute suite d’arêtes dont l’extrémité de l’une (sauf la dernière) est l’origine de la suivante. Sa longueur correspond au nombre d’arêtes.  </li>
+<li>On appelle <strong>cycle</strong> une chaîne fermée dont toutes les arêtes sont distinctes.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 3</p>
 <p><center><img src="../img/graphes3.png" height=125 style="float:right"></center></p>
-<p><strong><em>Exemple 3 :</em></strong></p>
 <p>Identifier une <strong>chaîne</strong> de longueur 3 :<br />
 Identifier un <strong>cycle</strong> :</p>
+</div>
 <h2 id="b-les-differents-types-de-graphes">B. Les différents types de graphes<a class="headerlink" href="#b-les-differents-types-de-graphes" title="Permanent link">&para;</a></h2>
 <h3 id="bi-graphes-non-orientes">B.I. Graphes non-orientés<a class="headerlink" href="#bi-graphes-non-orientes" title="Permanent link">&para;</a></h3>
-<p><strong>Définition :</strong><br />
-Un graphe <strong>non-orienté</strong> est un graphe dont les arêtes n’ont pas de sens.</p>
-<p><center><img src="../img/graphes2.png" height=85  style="float:right"></center></p>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>Un graphe <strong>non-orienté</strong> est un graphe dont les arêtes n’ont pas de sens.</p>
+</div>
+<p><center><img src="../img/graphes2.png" height=85  style="float:right;padding-left:20px"></center></p>
 <p>Cela signifie que, pour un graphe G = (V,E) avec V = {A,B,C}, les éléments (A,B) et (B,A) sont identiques. C'est le cas de l'<strong><em>exemple 1</em></strong>.</p>
 <h3 id="bii-graphes-orientes">B.II. Graphes orientés<a class="headerlink" href="#bii-graphes-orientes" title="Permanent link">&para;</a></h3>
-<p><strong>Définition :</strong>
-Un graphe <strong>orienté</strong> est un graphe dont les liens, les arcs, ont un sens.</p>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>Un graphe <strong>orienté</strong> est un graphe dont les liens, les arcs, ont un sens.</p>
+</div>
 <p>Cela signifie que, pour un graphe G = (V,E) avec V = {A,B,C}, les éléments (A,B) et (B,A) sont distincts.</p>
-<p><center><img src="../img/graphes4.png" height=85 style="float:right"></center></p>
-<p><strong><em>Exemple 6 :</em></strong> imaginons un site web composé de 3 pages nommées A, B et C et représenté ci-contre :<br />
+<div class="admonition example">
+<p class="admonition-title">Exemple 6</p>
+<p><center><img src="../img/graphes4.png" height=85 style="float:right"></center>
+Imaginons un site web composé de 3 pages nommées A, B et C et représenté ci-contre :<br />
 - sur A sont présents des liens vers B et C,<br />
 - sur B est présent un lien vers C.</p>
-<p><strong>Vocabulaire :</strong>  Soit (A,B) un arc de G :<br />
+</div>
+<div class="admonition info">
+<p class="admonition-title">Vocabulaire</p>
+<p>Soit (A,B) un arc de G :<br />
 - A est appelé le <strong>prédécesseur</strong> de B,<br />
 - B est appelé le <strong>successeur</strong> de A.<br />
 - Un chemin est une suite d’arcs dont l’extrémité de l’un (sauf la dernière) est l’origine du suivant.</p>
+</div>
 <h3 id="biii-graphes-ponderes">B.III. Graphes pondérés<a class="headerlink" href="#biii-graphes-ponderes" title="Permanent link">&para;</a></h3>
-<p><strong>Définition :</strong>
-On dit qu’un graphe est pondéré quand ses arêtes ou ses arcs sont couplés avec des nombres. Ceux-ci sont appelés des poids.</p>
-<p><center><img src="../img/routage2.png" height=125 style="float:right"></center></p>
-<p><strong><em>Exemple 7 :</em></strong> un réseau routier représentant les connexions entre villes, avec comme poids le nombre de km les séparant.</p>
-<p><strong>Définition :</strong><br />
-On associe un chemin dans un graphe pondéré à un poids en effectuant la somme des poids de ses différentes arêtes.</p>
-<p><strong><em>Exercice :</em></strong> Donner différents chemins possibles pour aller de G à E et leur poids associé.</p>
+<div class="admonition info">
+<p class="admonition-title">Définitions</p>
+<p>On dit qu’un graphe est pondéré quand ses arêtes ou ses arcs sont couplés avec des nombres. Ceux-ci sont appelés des poids.</p>
+<p>On associe un <strong>chemin</strong> dans un graphe pondéré à un poids en effectuant la <strong>somme des poids</strong> de ses différentes arêtes.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 7 :</p>
+<p><center><img src="../img/routage2.png" height=125 style="float:right;padding-left:20px"></center>
+Un réseau routier représentant les connexions entre villes, avec comme poids le nombre de km les séparant. </p>
+<p>Donner différents chemins possibles pour aller de G à E et leur poids associé.</p>
+</div>
 
 
   

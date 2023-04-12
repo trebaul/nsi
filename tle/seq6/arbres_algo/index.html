@@ -2289,43 +2289,51 @@ text-align: justify}
 <h3 id="a-les-parcours">A. Les parcours<a class="headerlink" href="#a-les-parcours" title="Permanent link">&para;</a></h3>
 <p>Parcourir un arbre binaire consiste à accéder à l'information contenue dans ses nœuds : à leur étiquette.</p>
 <h4 id="ai-parcours-en-profondeur">A.I. Parcours en profondeur<a class="headerlink" href="#ai-parcours-en-profondeur" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
 <p>Un <strong>parcours en profondeur</strong> consiste à parcourir les nœuds en suivant les branches.</p>
+</div>
 <p>On considère que chaque nœud d'un arbre binaire est visité 3 fois, dans l'ordre suivant :<br />
 - une fois par la gauche,<br />
 - une fois par en-dessous,<br />
 - une fois par la droite.</p>
-<p>Illustrons-le sur l'arbre suivant :
+<div class="admonition example">
+<p class="admonition-title">Illustrons-le sur l'arbre suivant :</p>
 <pre class="mermaid"><code>graph TB
-  A --&gt; B
-  A --&gt; C
-  B --&gt; D
-  B --&gt; E
-  C --&gt; G
-  C --&gt; H</code></pre></p>
+A --&gt; B
+A --&gt; C
+B --&gt; D
+B --&gt; E
+C --&gt; G
+C --&gt; H</code></pre>
+</div>
 <ul>
 <li><strong>Parcours préfixe :</strong> on liste chaque nœud la première fois qu'il est rencontré.</li>
 </ul>
-<details class="abstract">
-<summary>Exercice : quel est le parcours préfixe de l'arbre précédent ?</summary>
+<details class="example">
+<summary>Quel est le parcours préfixe de l'arbre précédent ?</summary>
 <p>A, B, D, E, C, G, H.</p>
 </details>
 <ul>
 <li><strong>Parcours infixe :</strong> on liste chaque nœud la deuxième fois qu'il est rencontré.</li>
 </ul>
-<details class="abstract">
-<summary>Exercice : quel est le parcours infixe de l'arbre précédent ?</summary>
+<details class="example">
+<summary>Quel est le parcours infixe de l'arbre précédent ?</summary>
 <p>D, B, E, A, G, C, H</p>
 </details>
 <ul>
 <li><strong>Parcours suffixe ou postfixe :</strong> on liste chaque nœud la dernière fois qu'il est rencontré.</li>
 </ul>
-<details class="abstract">
-<summary>Exercice : quel est le parcours sufixe de l'arbre précédent ?</summary>
+<details class="example">
+<summary>quel est le parcours sufixe de l'arbre précédent ?</summary>
 <p>D, E, B, G, H, C, A</p>
 </details>
 <h3 id="aii-parcours-en-largeur">A.II. Parcours en largeur<a class="headerlink" href="#aii-parcours-en-largeur" title="Permanent link">&para;</a></h3>
-<p>Dans un <strong>parcours en largeur</strong>, on liste chaque nœud niveau par niveau (un niveau correspondant à une profondeur égale).</p>
-<div class="admonition abstract">
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>Dans un <strong>parcours en largeur</strong>, on liste dans les noeuds par ordre de profondeur croissante.</p>
+</div>
+<div class="admonition example">
 <p class="admonition-title">Représenter ce parcours sur l'arbre ci-dessous :</p>
 <pre class="mermaid"><code>graph TB
   A --&gt; B

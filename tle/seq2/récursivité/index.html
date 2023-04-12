@@ -2303,18 +2303,19 @@ text-align: justify}
 <p><img alt="" src="../img/poupees_russes.jpg" /></p>
 <p>Les <em>poupées russes</em> ou <em>matriochkas</em> sont des séries de poupées de tailles décroissantes placées les unes à l'intérieur des autres. Elles sont toutes identiques, ne différant que par leur taille. La dernière est différente, dans le sens où elle ne contient pas d'autre poupée à l'intérieur.  </p>
 <p>Une matriochka est une <strong>structure récursive</strong> : c'est une matriochka pleine, OU bien une matriochka contenant une autre matriochka plus petite.</p>
-<h3 id="a-definition">A. Définition<a class="headerlink" href="#a-definition" title="Permanent link">&para;</a></h3>
+<h3 id="a-la-recursivite">A. La récursivité<a class="headerlink" href="#a-la-recursivite" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p>Une <strong>fonction récursive</strong> est une fonction qui s’appelle elle-même.</p>
+<p class="admonition-title">Définition</p>
+<p>Une <strong>fonction récursive</strong> est une fonction qui s’appelle elle-même dans sa définition.</p>
+<p>Pour ne pas que cette fonction s’appelle à l’infini, il faut :<br />
+- qu’elle ait un <strong>cas de base</strong> (c'est le cas le plus simple à résoudre), aussi appelé condition d'arrêt (dans laquelle il n'y a plus d'appel récursif donc la fonction s'arrête),<br />
+- qu’elle <strong>se ramène vers</strong> ce cas de base, donc qu'il y ait un appel à elle-même sur un plus petit problème que le problème initial <em>(un entier plus petit, une chaîne de caractère plus courte, etc)</em>.  </p>
 </div>
-<p>Pour éviter que cette fonction ne s’appelle à l’infini, il faut :<br />
-- <strong><em>qu’elle ait un cas de base (c'est le cas le plus simple à résoudre), aussi appelé condition d'arrêt (dans laquelle il n'y a plus d'appel récursif donc la fonction s'arrête),</em></strong><br />
-- <strong><em>qu’elle se ramène vers ce cas de base, donc qu'il y ait un appel à elle-même sur un plus petit problème que le problème initial (un entier plus petit, une chaîne de caractère plus courte, etc).</em></strong>  </p>
 <h3 id="b-fonctionnement-dune-pile-dexecution">B. Fonctionnement d'une pile d'exécution<a class="headerlink" href="#b-fonctionnement-dune-pile-dexecution" title="Permanent link">&para;</a></h3>
 <h4 id="b1-cas-general">B.1. Cas général<a class="headerlink" href="#b1-cas-general" title="Permanent link">&para;</a></h4>
 <p>Lors de l’appel d’une fonction, le système sauvegarde différents paramètres comme ses arguments et les variables utilisées à l’intérieur de celle-ci. C’est son <strong>contexte d’exécution</strong>. Cela permet d’interrompre l’exécution d’une fonction lorsque celle-ci en appelle d’autre, et de reprendre son exécution ensuite.</p>
-<p><strong>Exemple :</strong></p>
-<p><img alt="" src="../img/pile_execution.png" /></p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
 
@@ -2324,17 +2325,20 @@ text-align: justify}
 <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
 </code></pre></div>
+<p><img alt="" src="../img/pile_execution.png" /></p>
+</div>
 <h4 id="b2-cas-recursif">B.2. Cas récursif<a class="headerlink" href="#b2-cas-recursif" title="Permanent link">&para;</a></h4>
 <p>Une fonction récursive est une fonction dans laquelle il y a des appels de fonctions, avec la particularité qu'il s'agit de la même fonction. La même chose se produit donc : une <strong>pile d’exécution</strong> est utilisée pour stocker le contexte d’exécution de ses différents appels.</p>
-<p>Prenons l'exemple classique du calcul de <span class="arithmatex">\(2^n\)</span> :
+<div class="admonition example">
+<p class="admonition-title">Prenons l'exemple du calcul de <span class="arithmatex">\(2^n\)</span>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
     <span class="k">else</span> <span class="p">:</span>
         <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">puissance</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Ecrire le calcul de <code>puissance(3)</code> :  </p>
-<details class="success">
+<details class="note">
 <summary>Solution</summary>
 <p><strong><em>puissance(3) = 2 * puissance(2)<br />
         puissance(2) = 2 * puissance(1)<br />
@@ -2344,6 +2348,7 @@ puissance(3) = 2 * 2 * 2 * 1 = 8</em></strong></p>
 </details>
 <p>Le schéma suivant explique le processus en terme de pile d’exécution :
 <img alt="" src="../img/pile_puissance.png" /></p>
+</div>
 <h4 id="b3-cas-limite">B.3. Cas limite<a class="headerlink" href="#b3-cas-limite" title="Permanent link">&para;</a></h4>
 <p>La pile d’exécution a une taille maximale. Lorsque la pile déborde - "stack overflow" - (par défaut au bout de 1000 appels), Python renvoie le message suivant :
 <div class="highlight"><pre><span></span><code><span class="ne">RecursionError</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">recursion</span> <span class="n">depth</span> <span class="n">exceeded</span> <span class="k">while</span> <span class="n">calling</span> <span class="n">a</span> <span class="n">Python</span> <span class="nb">object</span>
