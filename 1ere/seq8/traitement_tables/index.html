@@ -1157,6 +1157,53 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_10">
+          9. Les réseaux informatiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="9. Les réseaux informatiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          9. Les réseaux informatiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq9/architecture/" class="md-nav__link">
+        I. Architecture des réseaux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2526,10 +2573,10 @@ Le fichier est ouvert en mode <strong><em>lecture</em></strong>. La fonction <co
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="admonition note">
-<p class="admonition-title">Que faut-il tester pour notre table ?</p>
+<details class="note">
+<summary>Que faut-il tester pour notre table ?</summary>
 <p>Les valeurs des descripteurs <code>Titre</code> et <code>Artiste</code> sont des caractères, et celles du descripteur <code>Année</code> est un entier inférieur à l'année actuelle.</p>
-</div>
+</details>
 <details class="note">
 <summary>Quel algorithme peut-on utiliser ?</summary>
 <div class="highlight"><pre><span></span><code>Entrée : table
@@ -2710,14 +2757,14 @@ Pour faire le test <code>'mot' &lt; 'tri'</code> par exemple, <code>m</code> ser
 <ol>
 <li>
 <p>Analyser la fonction <code>lecture_fichier</code> : </p>
+<ul>
+<li>
+<p>elle ouvre le fichier avec <code>open()</code> : quels sont les paramètres utilisés ? <em>(faire une recherche Web si besoin)</em></p>
 </li>
 <li>
-<p>elle ouvre le fichier avec <code>open()</code> : quels sont les paramètres utilisés ? <em>(faire une recherche Web si besoin)</em>
-<br></p>
+<p>elle le convertit sous la forme de liste Python avec <code>csv.reader</code> : quels sont les paramètres de cette fonction ? </p>
 </li>
-<li>
-<p>elle le convertit sous la forme de liste Python avec <code>csv.reader</code> : quels sont les paramètres de cette fonction ? 
-<br></p>
+</ul>
 </li>
 <li>
 <p>Appeler cette fonction <code>lecture_fichier</code> pour charger les données de <code>capitales.csv</code>, et stocker le résultat dans une variable <code>capitales</code>.</p>

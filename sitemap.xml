@@ -151,6 +151,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/1ere/seq9/architecture/</loc>
+         <lastmod>2023-04-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/2nde/prog/conditions/</loc>
          <lastmod>2023-04-13</lastmod>
          <changefreq>daily</changefreq>
