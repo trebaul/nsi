@@ -2524,12 +2524,12 @@ Le fichier est ouvert en mode <strong><em>lecture</em></strong>. La fonction <co
 <p class="admonition-title">Valeurs cohérentes</p>
 <p>Chacune des valeurs a un <strong>type</strong> et une <strong>étendue de valeurs</strong>. </p>
 </div>
-<details class="example">
-<summary>Exemple</summary>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
 <div class="admonition note">
 <p class="admonition-title">Que faut-il tester pour notre table ?</p>
-</div>
 <p>Les valeurs des descripteurs <code>Titre</code> et <code>Artiste</code> sont des caractères, et celles du descripteur <code>Année</code> est un entier inférieur à l'année actuelle.</p>
+</div>
 <details class="note">
 <summary>Quel algorithme peut-on utiliser ?</summary>
 <div class="highlight"><pre><span></span><code>Entrée : table
@@ -2541,7 +2541,7 @@ on parcourt les lignes de la table avec l&#39;indice i
         on ajoute table[i] à la liste des erreurs
 </code></pre></div>
 </details>
-</details>
+</div>
 <p>Il faut aussi vérifier que l'on a pas enregistré plusieurs fois les mêmes informations, c'est-à-dire rechercher les <strong>doublons</strong>.</p>
 <details class="note">
 <summary>Quel algorithme peut-on utiliser ?</summary>
@@ -2564,11 +2564,11 @@ on parcourt les lignes de la table avec l&#39;indice i
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <details class="note">
-<summary>Ecrire en Python la condition permettant de sélectionner les titres des Beatles parus avant 1970 :</summary>
+<summary>Ecrire en Python la condition permettant de sélectionner les titres des Beatles parus avant 1970.</summary>
 <p><code>titres[i][1] == 'Beatles' and titres[i][2]&lt;1970</code></p>
 </details>
 <details class="note">
-<summary>Ecrire en Python la condition permettant de sélectionner les titres parus avant 1950 ou bien après 1990 :</summary>
+<summary>Ecrire en Python la condition permettant de sélectionner les titres parus avant 1950 ou bien après 1990.</summary>
 <p><code>titres[i][2] &lt; 1950 or titres[i][2] &gt; 1990</code></p>
 </details>
 </div>
@@ -2638,11 +2638,12 @@ on parcourt les lignes de la table avec l&#39;indice i
 </div>
 <details class="note">
 <summary>Comment peut-on trier des caractères ?</summary>
-<p>On peut les trier en utilisant leur code ASCII (Unicode). Pour faire le test <code>'mot' &lt; 'tri'</code> par exemple, <code>m</code> sera comparé avec <code>t</code>, et cette expression renverra <code>True</code>. </p>
+<p>On peut les trier en utilisant leur code ASCII (Unicode). <a href="https://www.france-ioi.org/algo/course.php?idChapter=590&amp;idCourse=2299">Table</a><br />
+Pour faire le test <code>'mot' &lt; 'tri'</code> par exemple, <code>m</code> sera comparé avec <code>t</code>, et cette expression renverra <code>True</code>. </p>
 </details>
 <details class="note">
 <summary>En déduire ce que renvoient <code>'123'&lt;'234'</code> et <code>'123'&lt;'23'</code>.</summary>
-<p>Les deux tests renvoient <code>True</code>.</p>
+<p>Les deux tests renvoient <code>True</code>. Il faut donc bien faire la conversion si on veut comparer des nombres (entiers ou flottant), car le résultat des tests sera différent avec des caractères.</p>
 </details>
 <h3 id="d-fusion-de-tables_1">D. Fusion de tables<a class="headerlink" href="#d-fusion-de-tables_1" title="Permanent link">&para;</a></h3>
 <p>On ne peut fusionner que deux tables qui ont <strong>les mêmes descripteurs</strong>, et que les valeurs sont <strong>compatibles entre elles</strong>.</p>
@@ -2677,7 +2678,7 @@ on parcourt les lignes de la table avec l&#39;indice i
 </table>
 </div>
 <details class="note">
-<summary>Quel opérateur peut-on utiliser en Python sur les tableaux ou sur les tuples pour faire cette fusion ?</summary>
+<summary>Quel opérateur peut-on utiliser en Python sur les tableaux pour faire cette fusion ?</summary>
 <p>L'opérateur de concaténation <code>+</code> permet de fusionner des tableaux ou des p-uplets.</p>
 </details>
 <hr />
