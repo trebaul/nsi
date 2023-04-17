@@ -1167,10 +1167,31 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#td" class="md-nav__link">
+    TD
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tcpip/" class="md-nav__link">
+        II. Le modèle TCP/IP
+      </a>
     </li>
   
 
@@ -2268,6 +2289,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#td" class="md-nav__link">
+    TD
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2389,6 +2417,81 @@ text-align: justify}
 <p class="admonition-title">Exemple</p>
 <p>5C:FA:CE:D2:CF:36 est une adresse MAC valide.</p>
 </div>
+<hr />
+<h2 id="td">TD<a class="headerlink" href="#td" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1-adresses-valides">Exercice 1 : adresses valides<a class="headerlink" href="#exercice-1-adresses-valides" title="Permanent link">&para;</a></h3>
+<p>Pour chacune des adresses suivantes, identiquer si elle correspond à une <strong>adresse IP</strong>, une <strong>adresse MAC</strong>, ou bien si c'est une adresse non-valide. Dans ce cas, identifier quel est le problème.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Adresse</th>
+<th align="center">Adresse IPv4 valide</th>
+<th align="center">Adresse MAC</th>
+<th align="center">Adresse non-valide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>a.</strong> 20.1.13.10</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>b.</strong> 7D:A9:C5:67:E6:F3</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>c.</strong> 128.252.2.257</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>d.</strong> 200.200.200.200.200</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>e.</strong> 6A:A9:G4:10:EF:67</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>f.</strong> 4.5.6.7</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="exercice-2-adressage-ip">Exercice 2 : adressage IP<a class="headerlink" href="#exercice-2-adressage-ip" title="Permanent link">&para;</a></h3>
+<p>On considère le réseau suivant :</p>
+<p><center><img src="../img/réseau_schema.png" height=250></center></p>
+<ol>
+<li>
+<p>L'adresse IP 172.128.1.1 est attribuée à M1, et son masque de sous-réseau est 255.255.255.0. </p>
+<p>1.a. En faisant un ET logique entre l'adresse IP et le masque, obtenir l'adresse du sous-réseau. </p>
+<p>1.b. On donne à M2 l'adresse IP 172.128.2.2. Les machines pourront-elles communiquer ? Justifier. </p>
+<p>1.b. On donne à M3 l'adresse IP 172.128.1.10. Les machines pourront-elles communiquer ? Justifier.</p>
+</li>
+<li>
+<p>On attribue à M4 l'adresse IP 16.0.0.1/16.<br />
+    2.a. Quel est le masque du sous-réseau ?<br />
+    2.b. Quelle est l'adresse du sous-réseau ?<br />
+    2.c. Quelle adresse IP peut-on attribuer à M5 ?</p>
+</li>
+<li>
+<p>L'adresse IP du dernier sous-réseau (avec M7, M8, R3 et RB) est 172.128.3.0/24. Cette adresse n'est pas attribuable à une machine <em>(c'est celle du réseau)</em>, ce qui est aussi le cas de l'adresse dans laquelle tous les bits de la machine (hôte) sont à 1 <em>(c'est l'adresse de diffusion, permettant d'atteindre toutes les machines d'un sous-réseau)</em>.</p>
+<p>3.a. Quelle est cette adresse de diffusion ?<br />
+3.b. En déduire le nombre de machines qu'il est possible de connecter à ce réseau.</p>
+</li>
+</ol>
 
 
   
@@ -2429,13 +2532,13 @@ text-align: justify}
       
       
         
-        <a href="../../../tle/tle/" class="md-footer__link md-footer__link--next" aria-label="Next: Présentation" rel="next">
+        <a href="../tcpip/" class="md-footer__link md-footer__link--next" aria-label="Next: II. Le modèle TCP/IP" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Présentation
+              II. Le modèle TCP/IP
             </div>
           </div>
           <div class="md-footer__button md-icon">
