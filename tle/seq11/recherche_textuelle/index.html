@@ -1150,6 +1150,53 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_11">
+          10. Algorithmique avancée
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="10. Algorithmique avancée" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          10. Algorithmique avancée
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq10/gloutons/" class="md-nav__link">
+        I. Les algorithmes gloutons
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2416,19 +2463,19 @@ text-align: justify}
 </div>
 <details class="note">
 <summary>Pourquoi fait-on une boucle bornée parcourant <code>n-m</code> caractères ?</summary>
-<p>La séquence s’arrête à l’indice <code>n</code>, mais puisque l’on cherche la correspondance du motif en entier, on ne peut le décaler au maximum que jusqu’à <code>n-m</code>. </p>
+<p>La séquence s’arrête à l’indice <code>n-1</code>, mais puisque l’on cherche la correspondance du motif en entier, on peut s'arrêter à l'indice <code>n-m-1</code>. </p>
 </details>
 <details class="note">
 <summary>Que stocke la variable <code>j</code> ?</summary>
-<p><code>j</code> stocke le nombre de caractères qui coïncident entre <code>S</code> et <code>M</code>, à une position <code>i</code> donnée.</p>
+<p><code>j</code> stocke le nombre de caractères qui coïncident entre <code>S</code> et <code>M</code>, à une position <code>i</code> donnée, en commençant par la gauche de <code>M</code>.</p>
 </details>
 <details class="note">
 <summary>Comment décide-t-on quand s’arrêter ?</summary>
-<p>Deux cas sont possibles : à la fin de la boucle bornée, c’est-à-dire lorsqu’on a parcouru toute la séquence sans trouver le motif, ou bien lorsqu’on le trouve : lorsque <code>j</code> vaut <code>m</code>, on est dans ce cas.</p>
+<p>Deux cas sont possibles : à la fin de la boucle bornée, c’est-à-dire lorsqu’on a parcouru toute la séquence sans trouver le motif, ou bien lorsqu’on le trouve : on est dans ce cas lorsque <code>j</code> vaut <code>m</code>.</p>
 </details>
 <p>Estimons la <strong>complexité</strong> de cette approche. L’opération élémentaire comptabilisée est la comparaison entre 2 cases des chaînes <code>S</code> et <code>M</code>.
 Dans <strong>le pire des cas</strong>, les deux boucles (bornée et non-bornée) sont parcourues en entier. C’est-à-dire la boucle bornée est itérée <strong><span class="arithmatex">\(n-m\)</span></strong> fois et la boucle non-bornée <strong><span class="arithmatex">\(m\)</span></strong> fois. La complexité est donc en <span class="arithmatex">\(O((n-m)m)\)</span>.</p>
-<h3 id="b-lalgorithme-de-boyer-moore-horspool">B. L’algorithme de Boyer-Moore-Horspool<a class="headerlink" href="#b-lalgorithme-de-boyer-moore-horspool" title="Permanent link">&para;</a></h3>
+<h3 id="b-lalgorithme-de-boyer-moore">B. L’algorithme de Boyer-Moore<a class="headerlink" href="#b-lalgorithme-de-boyer-moore" title="Permanent link">&para;</a></h3>
 <h3 id="b1-exemple">B.1. Exemple<a class="headerlink" href="#b1-exemple" title="Permanent link">&para;</a></h3>
 <p>Pour améliorer cette méthode <em>(c'est-à-dire avoir une meilleure complexité)</em>, nous allons utiliser l’<strong>algorithme de Boyer-Moore</strong> dans sa version simplifiée par Horspool. </p>
 <p>Expliquons cet algorithme par un exemple, celui présenté en introduction. On commence par placer le motif <code>M</code> le plus à gauche possible de la séquence <code>S</code> :</p>
@@ -2594,7 +2641,7 @@ Dans <strong>le pire des cas</strong>, les deux boucles (bornée et non-bornée)
 <details class="note">
 <summary>Comment détermine-t-on alors de combien d’éléments décaler le motif, c’est-à-dire le <strong>nombre de sauts</strong> à effectuer ? Distinguer le cas dans lequel l'élément de la séquence n'est pas dans le motif, du cas dans lequel il est dans le motif.</summary>
 <p>Si l’élément de la séquence considéré n’est pas dans le motif, on décale le motif à la position de l’élément + 1.
-Si l’élément de la séquence considéré est à une autre place dans le motif, on décale le motif de manière à le faire coïncider avec ce caractère de la séquence, en prenant le caractère du motif le plus à droite possible.</p>
+Si l’élément de la séquence considéré est à une autre place dans le motif, on décale le motif de manière à le faire coïncider avec ce caractère de la séquence, en prenant le caractère du motif le plus à droite possible, mais sans le faire revenir "en arrière".</p>
 </details>
 <p><strong>Note :</strong> Nous avons pris l'exemple de la recherche d'un motif dans une séquence d'ADN, mais plus généralement on peut parler de la <strong>recherche de sous-chaîne dans une chaîne</strong> de caractères.</p>
 <hr />
@@ -2624,10 +2671,10 @@ A T A A C A G A G A A T A A G G C T A G G A A A T A C</li>
 <p>Tester la fonction pour <code>M</code> valant <code>"BRA"</code> et <code>S</code> valant <code>'ABRACADABRA'</code>.</p>
 </li>
 <li>
-<p>Modifier cette fonction pour que le programma ne s’arrête pas la première fois le motif recherché, mais pour qu’il compte le nombre d’occurrence de ce motif dans l’ensemble de la séquence. La fonction <code>compte</code> ainsi créée ne retournera donc pas la position de la première occurrence du motif mais le nombre d’occurrences de celui-ci.</p>
+<p>Modifier cette fonction pour que le programme ne s’arrête pas la première fois le motif recherché, mais pour qu’il compte le nombre d’occurrence de ce motif dans l’ensemble de la séquence. La fonction <code>compte</code> ainsi créée ne retournera donc pas la position de la première occurrence du motif mais le nombre d’occurrences de celui-ci.</p>
 </li>
 </ol>
-<h3 id="b-lalgorithme-de-boyer-moore-horspool_1">B. L’algorithme de Boyer-Moore-Horspool<a class="headerlink" href="#b-lalgorithme-de-boyer-moore-horspool_1" title="Permanent link">&para;</a></h3>
+<h3 id="b-lalgorithme-de-boyer-moore-horspool">B. L’algorithme de Boyer-Moore-Horspool<a class="headerlink" href="#b-lalgorithme-de-boyer-moore-horspool" title="Permanent link">&para;</a></h3>
 <h4 id="b0-programme-global">B.0. Programme global<a class="headerlink" href="#b0-programme-global" title="Permanent link">&para;</a></h4>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
