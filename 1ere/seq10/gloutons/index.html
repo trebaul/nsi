@@ -2579,7 +2579,7 @@ Détailler l'évolution des valeurs indiquées dans le tableau suivant, lorsqu'o
 <td align="center">7</td>
 </tr>
 <tr>
-<td align="center">...................................</td>
+<td align="center">................................... <em>(partie B)</em></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -2590,45 +2590,46 @@ Détailler l'évolution des valeurs indiquées dans le tableau suivant, lorsqu'o
 </table>
 <h3 id="a-un-premier-algorithme">A. Un premier algorithme<a class="headerlink" href="#a-un-premier-algorithme" title="Permanent link">&para;</a></h3>
 <ol>
-<li>
-<p>Une première méthode pour remplir le sac serait de tester toutes les possibilités et de sélectionner la meilleure. Expliquer comment faire, en appliquant cette méthode, pour trouver la solution optimale. </p>
-</li>
-<li>
-<p>Le choix de chaque objet est binaire : il est choisi ou il ne l'est pas. Combien de possibilités y a-t-il <em>(sans considérer pour l'instant la contrainte de la masse totale)</em> avec 5 objets ? Combien y en aurait-il avec 100 objets ? Que peut-on en conclure sur la durée d'exécution d'un tel algorithme ?</p>
-</li>
-<li>
-<p>Appliquer cette algorithme dans notre cas, en ne donnant que les possibilités permettant de rester en-dessous de la masse maximale de 10 kg. </p>
-</li>
+<li>Une première méthode pour remplir le sac serait de tester toutes les possibilités et de sélectionner la meilleure. Expliquer comment faire, en appliquant cette méthode, pour trouver la solution optimale. </li>
 </ol>
+<p><br></p>
+<ol>
+<li>Le choix de chaque objet est binaire : il est choisi ou il ne l'est pas. Combien de possibilités y a-t-il <em>(sans considérer pour l'instant la contrainte de la masse totale)</em> avec 5 objets ? Combien y en aurait-il avec 100 objets ? Que peut-on en conclure sur la durée d'exécution d'un tel algorithme ?</li>
+</ol>
+<p><br><br></p>
+<ol>
+<li>Appliquer cet algorithme dans notre cas, en ne donnant que les possibilités permettant de rester en-dessous de la masse maximale de 10 kg. </li>
+</ol>
+<p><br></p>
 <h3 id="b-un-algorithme-glouton">B. Un algorithme glouton<a class="headerlink" href="#b-un-algorithme-glouton" title="Permanent link">&para;</a></h3>
 <ol>
-<li>
-<p>Utiliser un <strong>algorithme glouton</strong> permet de limiter le nombre d'opérations. Pourquoi peut-on dire cela ?  </p>
-</li>
-<li>
-<p>Entre l'ordinateur et la guitare, quel choix conseilleriez-vous au voleur ? Pourquoi ? Même question pour choisir entre la guitare et la chaîne hi-fi.</p>
-</li>
+<li>Utiliser un <strong>algorithme glouton</strong> permet de limiter le nombre d'opérations. Pourquoi peut-on dire cela ?  </li>
+</ol>
+<p><br></p>
+<ol>
+<li>Entre l'ordinateur et la guitare, quel choix conseilleriez-vous au voleur ? Pourquoi ? Même question pour choisir entre la guitare et la chaîne hi-fi.</li>
+</ol>
+<p><br></p>
+<ol>
 <li>
 <p>Pour appliquer un algorithme glouton, il faut optimiser (maximiser ou minimiser) un critère. Plusieurs critères sont possibles ici, sélectionner celui qui vous semble le plus pertinent dans la liste ci-dessous :  </p>
 <ul>
-<li>Choisir en premier l'objet ayant <em>la plus grande / la plus petite valeur</em>.</li>
-<li>Choisir en premier l'objet <em>le plus lourd / le plus léger</em>.</li>
-<li>Choisir en premier l'objet ayant <em>la valeur massique, c'est-à-dire le rapport <span class="arithmatex">\(valeur / masse\)</span> le plus grand / le plus petit</em>.</li>
+<li>Choisir d'abord l'objet ayant <em>la plus grande / la plus petite valeur</em>.</li>
+<li>Choisir d'abord l'objet <em>le plus lourd / le plus léger</em>.</li>
+<li>Choisir d'abord l'objet ayant <em>la valeur massique, c'est-à-dire le rapport <!-- <span class="arithmatex">\(valeur / masse\)</span> --> <img style="transform: translateY(0.1em); background: white;" src="..\..\..\..\..\AppData\Local\Programs\Microsoft VS Code\svg\PWXRYBvm5d.svg"> le plus grand / le plus petit</em>.</li>
 <li>Prendre le plus d'objets possible.</li>
 </ul>
-</li>
-<li>
-<p>Le principe d'un algorithme glouton est de se baser sur le même critère à chaque étape, donc ici à chaque fois que l'on choisit un nouvel objet. Reformuler le critère choisi dans la question 3, pour qu'il soit valable à chaque étape de l'algorithme.</p>
 </li>
 <li>
 <p>Rajouter, dans le tableau de l'introduction, sur la dernière ligne, la valeur massique.  </p>
 </li>
 <li>
-<p>Comment serait-il judicieux de ranger les objets ?  </p>
+<p>Comment serait-il judicieux de classer les objets ? Associer chaque objet à leur nouveau numéro, après avoir fait ce classement. </p>
 </li>
-<li>
-<p>Appliquer l'algorithme glouton ajoutant les objets un à un, en maximisant le rapport <span class="arithmatex">\(valeur/masse\)</span> de l'objet. </p>
-</li>
+</ol>
+<p><br></p>
+<ol>
+<li>Appliquer l'algorithme glouton ajoutant les objets un à un, en maximisant le rapport <!-- <span class="arithmatex">\(valeur/masse\)</span> --> <img style="transform: translateY(0.1em); background: white;" src="..\..\..\..\..\AppData\Local\Programs\Microsoft VS Code\svg\JUdjmPuwKx.svg"> de l'objet. </li>
 </ol>
 <table>
 <thead>
@@ -2653,16 +2654,20 @@ Détailler l'évolution des valeurs indiquées dans le tableau suivant, lorsqu'o
 <br><br> </p>
 </li>
 <li>
-<p>En déduire un pseudo-code de l'algorithme. </p>
+<p>Quel est le résultat qu'il faut renvoyer en sortie ? Comment stocker cette information ? 
+<br><br></p>
+</li>
+<li>
+<p>En déduire un pseudo-code de l'algorithme. <em>On suppose les objets triés par valeur massique décroissante.</em></p>
+</li>
+</ol>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 <blockquote>
 <p>Se connecter à Capytale et entrer le code <strong>a716-1682862</strong>.</p>
 </blockquote>
-</li>
-<li>
-<p>Compléter la fonction <code>sac_a_dos</code> en traduisant ce pseudo-code en Python. Dans le test donné, les valeurs et les masses de notre problème ont été triées à la main par valeur massique décroissante. Vérifier que la fonction est correcte grâce à l'assertion.</p>
-</li>
+<ol>
+<li>Compléter la fonction <code>sac_a_dos</code> en traduisant ce pseudo-code en Python. Dans le test donné, les valeurs et les masses de notre problème ont été triées à la main par valeur massique décroissante. Vérifier que la fonction est correcte grâce à l'assertion.</li>
 </ol>
 <hr />
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
@@ -2742,6 +2747,7 @@ masse_sac &lt;- 0
 pour chaque objet d&#39;indice i
     si masses[i] + masse_sac inférieure à masse_maximale
         on ajoute i au tableau objets
+        on ajoute masse[i] à masse_sac
 </code></pre></div>
 </div>
 <details class="note">
