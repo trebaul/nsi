@@ -1,0 +1,3744 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lena TREBAUL">
+      
+      
+        <link rel="canonical" href="https://example.com/1ere_22/seq8/traitement_tables/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Traitement des données en tables - Trebaul NSI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
+        
+      
+      
+
+    
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../pyodide-mkdocs/interpreter.js"></script> 
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sans+Serif:300,300i,400,400i,700,700i%7CFire+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Sans Serif";--md-code-font:"Fire Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+
+<link rel="stylesheet" href="../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../qcm/qcm.css">
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#traiter-les-donnees-en-tables" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Trebaul NSI" class="md-header__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Trebaul NSI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Traitement des données en tables
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../2nde/web/moteurs_recherche/" class="md-tabs__link">
+        Seconde
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../1ere/" class="md-tabs__link">
+        Première
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tle/" class="md-tabs__link">
+        Terminale
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../projets/" class="md-tabs__link">
+        Projets
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../culture_g%C3%A9/" class="md-tabs__link">
+        Ressources
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Trebaul NSI" class="md-nav__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Trebaul NSI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_1">
+          Le Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Le Web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Le Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/web/moteurs_recherche/" class="md-nav__link">
+        Les moteurs de recherche
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Les Réseaux Sociaux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Les Réseaux Sociaux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Les Réseaux Sociaux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/reseaux_sociaux/graphes/" class="md-nav__link">
+        Les graphes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/reseaux_sociaux/milgram/" class="md-nav__link">
+        Milgram et les petits mondes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/">Première</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq0/">0. Les bases du web</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="0. Les bases du web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          0. Les bases du web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq0/bases_web/" class="md-nav__link">
+        I. Hypertexte et URL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq0/langages_web/" class="md-nav__link">
+        II. Les langages HTML et CSS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq1/">1. Les bases de la programmation</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="1. Les bases de la programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          1. Les bases de la programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/variables/" class="md-nav__link">
+        I. Les variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/fonctions/" class="md-nav__link">
+        II. Les fonctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/conditions/" class="md-nav__link">
+        III. Les conditions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/boucles_non_bornees/" class="md-nav__link">
+        IV. Les boucles non-bornées
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq1/boucles_bornees/" class="md-nav__link">
+        V. Les boucles bornées
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq2/">2. Représenter les nombres</a>
+          
+            <label for="__nav_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="2. Représenter les nombres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          2. Représenter les nombres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/entiers_positifs/" class="md-nav__link">
+        I. Les entiers positifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/entiers_relatifs/" class="md-nav__link">
+        II. Les entiers relatifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq2/flottants/" class="md-nav__link">
+        III. Les flottants
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq3/">3. De la logique à la machine</a>
+          
+            <label for="__nav_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="3. De la logique à la machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          3. De la logique à la machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/logique/" class="md-nav__link">
+        I. Logique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq3/architecture/" class="md-nav__link">
+        II. Architecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq4/">4. Représenter le texte</a>
+          
+            <label for="__nav_2_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="4. Représenter le texte" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          4. Représenter le texte
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/texte_machine/" class="md-nav__link">
+        I. Représentation du texte en machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq4/caracteres/" class="md-nav__link">
+        II. Les chaînes de caractères
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq5/">5. Tableaux et p-uplets</a>
+          
+            <label for="__nav_2_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="5. Tableaux et p-uplets" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          5. Tableaux et p-uplets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq5/tableaux/" class="md-nav__link">
+        I. Le type tableau
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq5/tableaux_algo/" class="md-nav__link">
+        II. Algorithmes sur les tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq5/puplet/" class="md-nav__link">
+        III. Le type p-uplet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq5/synthese/" class="md-nav__link">
+        Pour s'entraîner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq6/">6. Les réseaux informatiques</a>
+          
+            <label for="__nav_2_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="6. Les réseaux informatiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          6. Les réseaux informatiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq6/architecture/" class="md-nav__link">
+        I. Architecture des réseaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq6/tcpip/" class="md-nav__link">
+        II. Le modèle TCP/IP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq7/">7. Algorithmique et tris</a>
+          
+            <label for="__nav_2_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="7. Algorithmique et tris" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          7. Algorithmique et tris
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq7/complexite/" class="md-nav__link">
+        I. Complexité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq7/tris/" class="md-nav__link">
+        II. Les tris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq7/correction/" class="md-nav__link">
+        III. Correction algorithmique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq8/">8. Algorithmes gloutons et dichotomie</a>
+          
+            <label for="__nav_2_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="8. Algorithmes gloutons et dichotomie" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          8. Algorithmes gloutons et dichotomie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq8/gloutons/" class="md-nav__link">
+        I. Les algorithmes gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq8/recherche_dichotomique/" class="md-nav__link">
+        II. La recherche dichotomique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq9/">9. Le Web dynamique</a>
+          
+            <label for="__nav_2_11">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="9. Le Web dynamique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          9. Le Web dynamique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq9/interactions_js/" class="md-nav__link">
+        I. Interagir avec l'utilisateur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq9/client_serveur/" class="md-nav__link">
+        II. Le modèle client-serveur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq9/http_https/" class="md-nav__link">
+        III. Les requêtes HTTP et HTTPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq9/synthese/" class="md-nav__link">
+        Pour s'entraîner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_12" type="checkbox" id="__nav_2_12" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq10/">10. Dictionnaires et traitement de données</a>
+          
+            <label for="__nav_2_12">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="10. Dictionnaires et traitement de données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          10. Dictionnaires et traitement de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq10/dico/" class="md-nav__link">
+        I. Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq10/traitement_tables/" class="md-nav__link">
+        II. Traiter les données en tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq10/synthese/" class="md-nav__link">
+        Pour s'entraîner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_13" type="checkbox" id="__nav_2_13" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq11/">11. Algorithme d'apprentissage</a>
+          
+            <label for="__nav_2_13">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="11. Algorithme d'apprentissage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_13">
+          <span class="md-nav__icon md-icon"></span>
+          11. Algorithme d'apprentissage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq11/knn/" class="md-nav__link">
+        L'algorithme des k plus proches voisins
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_14" type="checkbox" id="__nav_2_14" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../1ere/seq12/">12. Systèmes d'exploitation</a>
+          
+            <label for="__nav_2_14">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="12. Systèmes d'exploitation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_14">
+          <span class="md-nav__icon md-icon"></span>
+          12. Systèmes d'exploitation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1ere/seq12/os/" class="md-nav__link">
+        Le rôle des systèmes d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tle/">Terminale</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tle/seq1/">1. Différentes manières de programmer</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="1. Différentes manières de programmer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Différentes manières de programmer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq1/Imp%C3%A9ratif_Fonctionnel/" class="md-nav__link">
+        I. Paradigme impératif et fonctionnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq1/POO/" class="md-nav__link">
+        II. Paradigme objet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq1/Synth%C3%A8se_El%C3%A8ve/" class="md-nav__link">
+        III. Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tle/seq2/">2. Autour de la récursivité</a>
+          
+            <label for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="2. Autour de la récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Autour de la récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq2/piles/" class="md-nav__link">
+        I. Les piles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq2/r%C3%A9cursivit%C3%A9/" class="md-nav__link">
+        II. La récursivité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq2/diviser_regner/" class="md-nav__link">
+        III. Diviser pour régner et tris
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          3. Structurer les données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Structurer les données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          3. Structurer les données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/listes/" class="md-nav__link">
+        I. Les listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/files/" class="md-nav__link">
+        II. Les files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/dico/" class="md-nav__link">
+        III. Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/synthese/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          4. Les bases de données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Les bases de données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          4. Les bases de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq5/Mod%C3%A8le_Relationnel/" class="md-nav__link">
+        I. Le modèle relationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq5/BDD_Relationnelles/" class="md-nav__link">
+        II. Les bases de données relationnelles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq5/SQL/" class="md-nav__link">
+        III. Structured Query Language (SQL)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          5. Architectures matérielles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Architectures matérielles" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          5. Architectures matérielles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq3/Cours_SoC/" class="md-nav__link">
+        I. Les systèmes sur puce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq8/processus/" class="md-nav__link">
+        II. Les processus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          6. Les structures hiérarchiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6. Les structures hiérarchiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          6. Les structures hiérarchiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq6/arbres/" class="md-nav__link">
+        I. La structure d'arbre
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq6/arbres_algo/" class="md-nav__link">
+        II. Les algorithmes sur les arbres
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          7. Les réseaux informatiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="7. Les réseaux informatiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          7. Les réseaux informatiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq7/architecture/" class="md-nav__link">
+        I. Architecture des réseaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq7/graphes/" class="md-nav__link">
+        II. Les graphes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq7/routage/" class="md-nav__link">
+        III. Le routage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq9/securisation/" class="md-nav__link">
+        8. Sécuriser les communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_10" type="checkbox" id="__nav_3_10" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_10">
+          9. Algorithmes sur les graphes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="9. Algorithmes sur les graphes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_10">
+          <span class="md-nav__icon md-icon"></span>
+          9. Algorithmes sur les graphes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq10/representation/" class="md-nav__link">
+        I. Représentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq10/algo/" class="md-nav__link">
+        II. Algorithmique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" type="checkbox" id="__nav_3_11" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_11">
+          10. Algorithmique avancée
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="10. Algorithmique avancée" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_11">
+          <span class="md-nav__icon md-icon"></span>
+          10. Algorithmique avancée
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq11/prog_dynamique/" class="md-nav__link">
+        I. Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq11/recherche_textuelle/" class="md-nav__link">
+        II. Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" type="checkbox" id="__nav_3_12" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_12">
+          Conclusion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Conclusion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_12">
+          <span class="md-nav__icon md-icon"></span>
+          Conclusion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/concl/calculabilite/" class="md-nav__link">
+        Calculabilité et décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../projets/">Projets</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Projets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../projets/trophees/">Les Trophées NSI</a>
+          
+            <label for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Les Trophées NSI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Les Trophées NSI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/trophees/2022/" class="md-nav__link">
+        Edition 2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Notions essentielles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Notions essentielles" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Notions essentielles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/TP_Pr%C3%A9paration_V2/" class="md-nav__link">
+        Les fichiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/BonnesPratiques_Structure/" class="md-nav__link">
+        Structurer un programme
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/Recherche_Informations/" class="md-nav__link">
+        Rechercher des informations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Méthodologie de projet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Méthodologie de projet" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Méthodologie de projet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/general/recherche/" class="md-nav__link">
+        I. Recherche de sujet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Gestion_Projet/" class="md-nav__link">
+        II. Suivi de projet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Rendus/" class="md-nav__link">
+        III. Les rendus de projet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Sujets passés
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sujets passés" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Sujets passés
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/Pr%C3%A9sentation_Sujets/" class="md-nav__link">
+        1ère - Cybersécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Pr%C3%A9sentation/" class="md-nav__link">
+        Terminale - POO&Récursivité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ressources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ressources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../culture_g%C3%A9/" class="md-nav__link">
+        Culture générale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        A propos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#td-gerer-ses-series" class="md-nav__link">
+    TD : Gérer ses séries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-traitement-de-donnees-geographiques" class="md-nav__link">
+    TP: Traitement de données géographiques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-traitement-de-donnees-de-series" class="md-nav__link">
+    TP : Traitement de données de séries
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="traiter-les-donnees-en-tables">Traiter les données en tables<a class="headerlink" href="#traiter-les-donnees-en-tables" title="Permanent link">&para;</a></h1>
+<h2 id="td-gerer-ses-series">TD : Gérer ses séries<a class="headerlink" href="#td-gerer-ses-series" title="Permanent link">&para;</a></h2>
+<p>Mme NSI veut créer un répertoire pour stocker les séries qu'elle a visionnées et jusqu'à où est-ce qu'elle les a regardées. </p>
+<h3 id="a-representation-des-donnees">A. Représentation des données<a class="headerlink" href="#a-representation-des-donnees" title="Permanent link">&para;</a></h3>
+<p>Voici les informations enregistrées dans une table <code>SERIES</code>, stockée dans un fichier CSV :</p>
+<table>
+<thead>
+<tr>
+<th align="center">nom</th>
+<th align="center">annee_debut</th>
+<th align="center">pays</th>
+<th align="center">dernier_diffuse</th>
+<th align="center">dernier_vu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Game of Thrones</td>
+<td align="center">2011</td>
+<td align="center">Etats-Unis</td>
+<td align="center">(8, 7)</td>
+<td align="center">(8, 7)</td>
+</tr>
+<tr>
+<td align="center">Kaamelott</td>
+<td align="center">2005</td>
+<td align="center">France</td>
+<td align="center">(6, 10)</td>
+<td align="center">(5, 3)</td>
+</tr>
+<tr>
+<td align="center">Sherlock</td>
+<td align="center">2010</td>
+<td align="center">Angleterre</td>
+<td align="center">(4, 3)</td>
+<td align="center">(4, 3)</td>
+</tr>
+<tr>
+<td align="center">Peaky Blinders</td>
+<td align="center">2013</td>
+<td align="center">Angleterre</td>
+<td align="center">(6, 6)</td>
+<td align="center">(5, 6)</td>
+</tr>
+<tr>
+<td align="center">Borgen</td>
+<td align="center">2010</td>
+<td align="center">Danemark</td>
+<td align="center">(4, 8)</td>
+<td align="center">(4, 7)</td>
+</tr>
+<tr>
+<td align="center">Breaking Bad</td>
+<td align="center">2008</td>
+<td align="center">Etats-Unis</td>
+<td align="center">(5, 16)</td>
+<td align="center">(5, 16)</td>
+</tr>
+<tr>
+<td align="center">Mad Men</td>
+<td align="center">2006</td>
+<td align="center">Etats-Unis</td>
+<td align="center">(7, 14)</td>
+<td align="center">(4, 3)</td>
+</tr>
+<tr>
+<td align="center">La Casa de Papel</td>
+<td align="center">2017</td>
+<td align="center">Espagne</td>
+<td align="center">(3, 10)</td>
+<td align="center">(2, 16)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note :</strong> Pour <code>dernier_diffuse</code> et <code>dernier_vu</code>, on indique le numéro de la saison, suivi de celui de l'épisode.</p>
+<ol>
+<li>
+<p>Quels sont les <strong>descripteurs</strong> <em>(la liste des informations dont on dispose)</em> de cette table ? </p>
+</li>
+<li>
+<p>Pour chacun d'entre eux, identifier quel type de valeur est-ce que l'on peut utiliser pour les stocker informatiquement.</p>
+</li>
+</ol>
+<h3 id="b-recherches-dans-la-table">B. Recherches dans la table<a class="headerlink" href="#b-recherches-dans-la-table" title="Permanent link">&para;</a></h3>
+<p>On veut pouvoir faire des recherches dans cette table, pour obtenir des informations plus précises.</p>
+<ol>
+<li>
+<p>Quels sont les noms des séries produites en Angleterre ?</p>
+</li>
+<li>
+<p>Quels sont les noms des séries produites aux Etats-Unis avant l'année 2010 ?</p>
+</li>
+<li>
+<p>Comment obtenir les séries pour lesquelles il reste des épisodes à regarder ? Combien y-en a-t-il ?</p>
+</li>
+</ol>
+<p>Informatiquement, on formule ces recherches sous la forme de <strong>requêtes</strong>.<br />
+Par exemple :<br />
+<div class="highlight"><pre><span></span><code>sélectionner nom dans la table SERIES où pays = France  
+</code></pre></div>
+renvoie les noms des séries produites en France.</p>
+<ol>
+<li>
+<p>Formuler la recherche de la question 2 sous la forme d'une requête. </p>
+</li>
+<li>
+<p>Formuler la recherche de la question 3 sous la forme d'une requête.</p>
+</li>
+</ol>
+<h3 id="c-coherence-des-donnees">C. Cohérence des données<a class="headerlink" href="#c-coherence-des-donnees" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>On veut rajouter à la table l'enregistrement suivant : 
+<code>Succession, 2018, Etats-Unis, (3, 9), 4</code>. Quel problème cela pose-t-il ?</p>
+</li>
+<li>
+<p>On veut rajouter à la table l'enregistrement suivant : 
+<code>Succession, 2018, Etats-Unis, (3, 9), (4, 9)</code>. Quel problème cela pose-t-il ?</p>
+</li>
+<li>
+<p>De quoi faut-il donc s'assurer lorsque l'on ajoute de nouvelles données ?</p>
+</li>
+</ol>
+<h3 id="d-fusion-de-tables">D. Fusion de tables<a class="headerlink" href="#d-fusion-de-tables" title="Permanent link">&para;</a></h3>
+<p>Elle veut fusionner sa base de données avec celle d'une amie, qui est la suivante : </p>
+<table>
+<thead>
+<tr>
+<th align="center">nom</th>
+<th align="center">annee</th>
+<th align="center">dernier_diffuse</th>
+<th align="center">dernier_vu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Community</td>
+<td align="center">2009</td>
+<td align="center">(6, 13)</td>
+<td align="center">(1, 23)</td>
+</tr>
+<tr>
+<td align="center">House of the dragon</td>
+<td align="center">2022</td>
+<td align="center">(1, 10)</td>
+<td align="center">(1, 10)</td>
+</tr>
+<tr>
+<td align="center">Emily in Paris</td>
+<td align="center">2020</td>
+<td align="center">(3, 10)</td>
+<td align="center">(3, 10)</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Quelle est la liste des descripteurs de cette table ? </p>
+</li>
+<li>
+<p>Quelle(s) modification(s) faut-il faire dans cette liste pour pouvoir la fusionner avec celle de Mme NSI ?</p>
+</li>
+</ol>
+<hr />
+<h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
+<p>Pour traiter des données en grande quantité, il faut qu'elles aient une structure : c'est-à-dire que l'on ait les mêmes informations, sous la même forme, pour différents objets. Que l'on regroupe des données sur des animaux, des villes, des gens,... Cela permet de faire différents types de traitements de manière automatique.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Un ensemble de morceaux de musique est stocké dans une table que l'on peut représenter comme ci-dessous.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Titre</th>
+<th align="center">Artiste</th>
+<th align="center">Année</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Enjoy the silence</td>
+<td align="center">Depeche Mode</td>
+<td align="center">1990</td>
+</tr>
+<tr>
+<td align="center">Blackbird</td>
+<td align="center">The Beatles</td>
+<td align="center">1968</td>
+</tr>
+<tr>
+<td align="center">Smells like teen spirits</td>
+<td align="center">Nirvana</td>
+<td align="center">1991</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="a-structurer-les-donnees-et-les-indexer-dans-une-table">A. Structurer les données et les indexer dans une table<a class="headerlink" href="#a-structurer-les-donnees-et-les-indexer-dans-une-table" title="Permanent link">&para;</a></h3>
+<h4 id="a1-des-donnees-en-tables">A.1. Des données en tables<a class="headerlink" href="#a1-des-donnees-en-tables" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Les fichiers CSV</p>
+<p>Les données peuvent être structurées dans des <strong>fichiers CSV</strong>, pour <strong>"Comma-Separated Values"</strong> : les données <em>(valeurs)</em> ont un <strong>séparateur</strong>, qui est souvent une <strong>virgule</strong> (mais peut être autre chose, comme un point-virgule). </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Vocabulaire</p>
+<p>Les caractéristiques qui décrivent ces données sont les <strong>descripteurs</strong>. Un élément d'une table est un ensemble de <strong>valeurs</strong>, chacune associée à à un descripteur et ayant un type (entier, booléen, caractères, flottant,...).</p>
+</div>
+<h4 id="a2-importer-et-indexer-les-donnees">A.2. Importer et indexer les données<a class="headerlink" href="#a2-importer-et-indexer-les-donnees" title="Permanent link">&para;</a></h4>
+<p>Les données d'un fichier CSV peuvent être importées pour être traitées automatiquement en Python :
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">nom_fichier</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fichier</span><span class="p">:</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">fichier</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</code></pre></div>
+Le fichier est ouvert en mode <strong><em>lecture</em></strong>. La fonction <code>reader</code> de la bibliothèque <code>csv</code> sépare les données qui sont entre des <code>,</code>.</p>
+<p>Une table peut être représentée en Python sous la forme d'un <strong>tableau de tableau</strong>, ou bien d'un <strong>tableau de p-uplets</strong> :</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># tableau à deux dimensions</span>
+<span class="n">titres</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;Enjoy the silence&#39;</span><span class="p">,</span> <span class="s1">&#39;Depeche Mode&#39;</span><span class="p">,</span> <span class="s1">&#39;1990&#39;</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;Blackbird&#39;</span><span class="p">,</span> <span class="s1">&#39;The Beatles&#39;</span><span class="p">,</span> <span class="s1">&#39;1968&#39;</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;Smells like teen spirits&#39;</span><span class="p">,</span> <span class="s1">&#39;Nirvana&#39;</span><span class="p">,</span> <span class="s1">&#39;1991&#39;</span><span class="p">]]</span>
+<span class="c1"># p-uplets</span>
+<span class="n">titres</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Enjoy the silence&#39;</span><span class="p">,</span> <span class="s1">&#39;Depeche Mode&#39;</span><span class="p">,</span> <span class="mi">1990</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;Blackbird&#39;</span><span class="p">,</span> <span class="s1">&#39;The Beatles&#39;</span><span class="p">,</span> <span class="mi">1968</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;Smells like teen spirits&#39;</span><span class="p">,</span> <span class="s1">&#39;Nirvana&#39;</span><span class="p">,</span> <span class="mi">1991</span><span class="p">)]</span>
+</code></pre></div>
+<details class="note">
+<summary>Quel est l'intérêt de chacun des types utilisé ?</summary>
+<p>Un tableau de tableaux permet de modifier ses éléments après les avoir déclarés, alors qu'un tableau de p-uplets permet de stocker différents types de variables.</p>
+</details>
+<details class="note">
+<summary>Quelle instruction renvoie la valeur <code>'Nirvana'</code> ?</summary>
+<p><code>titres[2][1]</code> renvoie <code>'Nirvana'</code>.</p>
+</details>
+</div>
+<h3 id="b-recherche-dans-une-table">B. Recherche dans une table<a class="headerlink" href="#b-recherche-dans-une-table" title="Permanent link">&para;</a></h3>
+<h4 id="b1-coherence">B.1. Cohérence<a class="headerlink" href="#b1-coherence" title="Permanent link">&para;</a></h4>
+<p>Avant de commencer les recherches dans une (ou des) table(s), il faut vérifier que les données sont de bonne qualité, et repérer les problèmes s'il y en a.</p>
+<div class="admonition info">
+<p class="admonition-title">Valeurs cohérentes</p>
+<p>Chacune des valeurs a un <strong>type</strong> et une <strong>étendue de valeurs</strong>. </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<details class="note">
+<summary>Que faut-il tester pour notre table ?</summary>
+<p>Les valeurs des descripteurs <code>Titre</code> et <code>Artiste</code> sont des caractères, et celles du descripteur <code>Année</code> est un entier inférieur à l'année actuelle.</p>
+</details>
+<details class="note">
+<summary>Quel algorithme peut-on utiliser ?</summary>
+<div class="highlight"><pre><span></span><code>Entrée : table
+Sortie : liste des erreurs
+
+erreurs &lt;- liste vide
+on parcourt les lignes de la table avec l&#39;indice i
+    si l&#39;élément de la colonne testée de table[i] ne respecte pas le critere
+        on ajoute table[i] à la liste des erreurs
+</code></pre></div>
+</details>
+</div>
+<p>Il faut aussi vérifier que l'on a pas enregistré plusieurs fois les mêmes informations, c'est-à-dire rechercher les <strong>doublons</strong>.</p>
+<details class="note">
+<summary>Quel algorithme peut-on utiliser ?</summary>
+<div class="highlight"><pre><span></span><code>    Entrée : table
+    Sortie : liste des doublons
+
+    doublons &lt;- liste vide  
+    on parcourt les lignes de la table avec l&#39;indice i  
+        on parcourt à nouveau les lignes de la table avec l&#39;indice j, à partir de i  
+            si table[j] est égal à table[i]  
+                on ajoute table[j] dans la liste des doublons
+</code></pre></div>
+</details>
+<h4 id="b2-selection">B.2. Sélection<a class="headerlink" href="#b2-selection" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Sélection de données</p>
+<p>Filtrer des lignes des tables correspond à une opération de <strong>sélection</strong>.</p>
+</div>
+<p>Pour sélectionner ces lignes, on teste une <strong>condition</strong> exprimée dans la <strong>logique booléenne</strong>, c'est-à-dire avec les opérateurs booléens <strong>et</strong> et <strong>ou</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<details class="note">
+<summary>Ecrire en Python la condition permettant de sélectionner les titres des Beatles parus avant 1970.</summary>
+<p><code>titres[i][1] == 'Beatles' and titres[i][2]&lt;1970</code></p>
+</details>
+<details class="note">
+<summary>Ecrire en Python la condition permettant de sélectionner les titres parus avant 1950 ou bien après 1990.</summary>
+<p><code>titres[i][2] &lt; 1950 or titres[i][2] &gt; 1990</code></p>
+</details>
+</div>
+<h3 id="c-tri-dune-table">C. Tri d'une table<a class="headerlink" href="#c-tri-dune-table" title="Permanent link">&para;</a></h3>
+<p>Pour faire apparaître les informations selon un ordre voulu, on peut trier les données <strong>selon une colonne</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Dans notre cas, on peut vouloir faire apparaître les titres :</p>
+<ul>
+<li>par <strong>ordre chronologique</strong> :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Titre</th>
+<th align="center">Artiste</th>
+<th align="center">Année</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Blackbird</td>
+<td align="center">The Beatles</td>
+<td align="center">1968</td>
+</tr>
+<tr>
+<td align="center">Enjoy the silence</td>
+<td align="center">Depeche Mode</td>
+<td align="center">1990</td>
+</tr>
+<tr>
+<td align="center">Smells like teen spirits</td>
+<td align="center">Nirvana</td>
+<td align="center">1991</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>par <strong>ordre alphabétique du nom de l'artiste</strong> :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Titre</th>
+<th align="center">Artiste</th>
+<th align="center">Année</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Enjoy the silence</td>
+<td align="center">Depeche Mode</td>
+<td align="center">1990</td>
+</tr>
+<tr>
+<td align="center">Smells like teen spirits</td>
+<td align="center">Nirvana</td>
+<td align="center">1991</td>
+</tr>
+<tr>
+<td align="center">Blackbird</td>
+<td align="center">The Beatles</td>
+<td align="center">1968</td>
+</tr>
+</tbody>
+</table>
+</div>
+<details class="note">
+<summary>Comment peut-on trier des caractères ?</summary>
+<p>On peut les trier en utilisant leur code ASCII (Unicode). <a href="https://www.france-ioi.org/algo/course.php?idChapter=590&amp;idCourse=2299">Table</a><br />
+Pour faire le test <code>'mot' &lt; 'tri'</code> par exemple, <code>m</code> sera comparé avec <code>t</code>, et cette expression renverra <code>True</code>. </p>
+</details>
+<details class="note">
+<summary>En déduire ce que renvoient <code>'123'&lt;'234'</code> et <code>'123'&lt;'23'</code>.</summary>
+<p>Les deux tests renvoient <code>True</code>. Il faut donc bien faire la conversion si on veut comparer des nombres (entiers ou flottant), car le résultat des tests sera différent avec des caractères.</p>
+</details>
+<h3 id="d-fusion-de-tables_1">D. Fusion de tables<a class="headerlink" href="#d-fusion-de-tables_1" title="Permanent link">&para;</a></h3>
+<p>On ne peut fusionner que deux tables qui ont <strong>les mêmes descripteurs</strong>, et que les valeurs sont <strong>compatibles entre elles</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Est-ce le cas pour la table suivante ?</p>
+<table>
+<thead>
+<tr>
+<th align="center">Titre</th>
+<th align="center">Artiste</th>
+<th align="center">Année</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Karma Police</td>
+<td align="center">Radiohead</td>
+<td align="center">1997</td>
+</tr>
+<tr>
+<td align="center">Where is my mind</td>
+<td align="center">Pixies</td>
+<td align="center">1988</td>
+</tr>
+<tr>
+<td align="center">This is love</td>
+<td align="center">PJ Harvey</td>
+<td align="center">2000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<details class="note">
+<summary>Quel opérateur peut-on utiliser en Python sur les tableaux pour faire cette fusion ?</summary>
+<p>L'opérateur de concaténation <code>+</code> permet de fusionner des tableaux ou des p-uplets.</p>
+</details>
+<hr />
+<h2 id="tp-traitement-de-donnees-geographiques">TP: Traitement de données géographiques<a class="headerlink" href="#tp-traitement-de-donnees-geographiques" title="Permanent link">&para;</a></h2>
+<p><img src="../img/carte.png" style="float:right;padding-left:10px" width=200></p>
+<div class="admonition tip">
+<p class="admonition-title">Télécharger le fichier <code>capitales.csv</code> stockant les données, et le fichier Python <code>TP_Donnees_Geographiques.py</code> qui servira de base à votre code. Stocker les deux fichiers dans votre dossier NSI.</p>
+</div>
+<p>Dans ce TP, nous allons traiter des données sur les capitales des pays du monde.</p>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ouvrir le fichier avec un <strong>tableur</strong>. L'ouvrir en parallèle avec un <strong>éditeur de texte</strong>. Quel symbole apparaît dans le 2ème cas mais pas dans le 1er ?
+<br></p>
+</li>
+<li>
+<p>Relever les caractéristiques qui se trouvent sur la première ligne : ce sont les <strong>descripteurs</strong> des données.<br />
+<br></p>
+</li>
+<li>
+<p>Il est possible de visualiser ces données sur une carte, avec le lien suivant : https://www.cahier-nsi.fr/livecsvmap2/?template=Seq4_exo1</p>
+</li>
+</ol>
+<h3 id="a-indexation-des-donnees">A. Indexation des données<a class="headerlink" href="#a-indexation-des-donnees" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ouvrir le fichier <code>TP_Donnees_Geographiques.py</code> dans votre IDE Python.</li>
+</ol>
+<p>L'instruction <code>import csv</code> sert à importer des fonctions de la bibliothèque <code>csv</code>, permettant de lire et d'écrire dans des fichiers de ce format.</p>
+<ol>
+<li>
+<p>Analyser la fonction <code>lecture_fichier</code> : </p>
+<ul>
+<li>
+<p>elle ouvre le fichier avec <code>open()</code> : quels sont les paramètres utilisés ? <em>(faire une recherche Web si besoin)</em></p>
+</li>
+<li>
+<p>elle le convertit sous la forme de liste Python avec <code>csv.reader</code> : quels sont les paramètres de cette fonction ? </p>
+</li>
+</ul>
+</li>
+<li>
+<p>Appeler cette fonction <code>lecture_fichier</code> pour charger les données de <code>capitales.csv</code>, et stocker le résultat dans une variable <code>capitales</code>.</p>
+</li>
+<li>
+<p>Visualiser le contenu de <code>capitales</code> dans la console : quel est son type ? ..........................................</p>
+</li>
+<li>
+<p>Quelle information récupère-t-on avec l'instruction <code>capitales[0]</code> ? ...................................................................</p>
+</li>
+<li>
+<p>Quelle instruction permet d'obtenir le nombre de capitales présentes dans ces données ? ...............................................</p>
+</li>
+</ol>
+<h3 id="b-tests-de-coherence">B. Tests de cohérence<a class="headerlink" href="#b-tests-de-coherence" title="Permanent link">&para;</a></h3>
+<p>Avant de pouvoir faire des recherches dans ces données, il faut vérifier qu'elles sont de bonne qualité, qu'elles sont <strong>cohérentes</strong>.</p>
+<p>S'assurer que les données sont cohérentes, c'est s'assurer que les valeurs entrées ne sont pas aberrantes. Par exemple, si on stocke la taille d'une personne en centimètres, on ne veut pas avoir une valeur comme <code>1000</code>. </p>
+<p>La longitude varie entre -180 et +180, et la latitude entre -90 et 90 (ce sont des degrés). Vérifions que les valeurs stockées dans le vérifier sont cohérentes avec cela, en écrivant les fonctions <code>test_latitude(table)</code> et <code>test_longitude(table)</code> parcourant les lignes de <code>table</code> et vérifiant que la colonne correspondant à la latitude/la longitude contient une valeur dans les intervalles précisés.</p>
+<p>On se base sur l'algorithme suivant :
+<div class="highlight"><pre><span></span><code>Entrée : la table
+Sortie : les enregistrement avec erreur sous la forme de liste
+
+erreur &lt;- liste vide
+pour chaque indice i de 1 à la longueur de la table
+    si l&#39;élement d&#39;indice i de la table ne respecte pas l&#39;intervalle donné
+        on l&#39;ajoute à erreur
+</code></pre></div></p>
+<p><strong>Note :</strong> Il faut convertir la latitude/longitude en <code>float</code> avec la syntaxe <code>float(table[...])</code>.</p>
+<p>Tester la fonction. Trouvez-vous des erreurs ? .......................</p>
+<h3 id="c-selection">C. Sélection<a class="headerlink" href="#c-selection" title="Permanent link">&para;</a></h3>
+<p>Nous pouvons maintenant faire des recherches sur ces données, et définir des fonctions différentes pour chacune de ces recherches, en fonction du <strong>critère</strong> utilisé. L'algorithme général qui sera utilisé à chaque fois est le suivant :
+<div class="highlight"><pre><span></span><code>Entrée : la table
+Sortie : la sélection sous la forme de liste
+
+selection &lt;- liste vide
+pour chaque indice i de 1 à la longueur de la table
+    si l&#39;élement d&#39;indice i de la table respecte le critère
+        on l&#39;ajoute à selection
+</code></pre></div></p>
+<ol>
+<li>
+<p>Ecrire la fonction <code>recherche_1</code> sélectionnant les capitales situées sur le continent nord-américain.</p>
+</li>
+<li>
+<p>Ecrire la fonction <code>recherche_2</code> sélectionnant les capitales dont la latitude est inférieure à 0.</p>
+</li>
+</ol>
+<p><strong>Note :</strong> N'oubliez pas la conversion de la latitude en <code>float</code> avec la syntaxe <code>float(table[...])</code>.</p>
+<ol>
+<li>
+<p>Ecrire la fonction <code>recherche_3</code> sélectionnant les capitales dont la latitude est inférieure à 0 et la longitude est supérieure à 0. </p>
+</li>
+<li>
+<p>On peut aller plus vite que d'écrire des fonctions, en utilisant la compréhension. Ecrire les mêmes recherches que dans les questions 1, 2 et 3, mais avec une seule instruction, de la forme :<br />
+<code>recherche1 = [ capitales[i] for i in range(.........) if .........................]</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="tp-traitement-de-donnees-de-series">TP : Traitement de données de séries<a class="headerlink" href="#tp-traitement-de-donnees-de-series" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Télécharger les fichiers <code>series_1.csv</code> et <code>series_2.csv</code> stockant les données, et le fichier Python <code>TP_Series.py</code> qui servira de base à votre code. Stocker les deux fichiers dans votre dossier NSI.</p>
+</div>
+<p>On veut gérer un répertoire de série, permettant de stocker les séries visionnées et jusqu'à quel épisode est-ce qu'elles ont été regardées. Voici un extrait de la table que nous allons traiter : </p>
+<table>
+<thead>
+<tr>
+<th align="center">nom</th>
+<th align="center">annee_debut</th>
+<th align="center">pays</th>
+<th align="center">dernier_diffuse</th>
+<th align="center">dernier_vu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Game of Thrones</td>
+<td align="center">2011</td>
+<td align="center">Etats-Unis</td>
+<td align="center">8, 7</td>
+<td align="center">8, 7</td>
+</tr>
+<tr>
+<td align="center">Kaamelott</td>
+<td align="center">2005</td>
+<td align="center">France</td>
+<td align="center">6, 10</td>
+<td align="center">5, 3</td>
+</tr>
+<tr>
+<td align="center">Sherlock</td>
+<td align="center">2010</td>
+<td align="center">Angleterre</td>
+<td align="center">4, 3</td>
+<td align="center">4, 3</td>
+</tr>
+</tbody>
+</table>
+<p>Pour <code>dernier_diffuse</code> et <code>dernier_vu</code>, on indique le numéro de la saison, suivi de celui de l'épisode.</p>
+<h3 id="a-fusion-de-tables">A. Fusion de tables<a class="headerlink" href="#a-fusion-de-tables" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Importer les données du fichier <code>series_1.csv</code> en appelant la fonction <code>lecture_fichier</code> et stocker le résultat dans une variable <code>serie_1</code>.</p>
+</li>
+<li>
+<p>Visualiser le contenu de <code>serie_1</code> avec la console.</p>
+</li>
+<li>
+<p>Avec quelle instruction accède-t-on aux descripteurs de la table ? Les lister ci-dessous.
+<br></p>
+</li>
+<li>
+<p>Importer les données du fichier <code>series_2.csv</code> et les stocker dans une variable <code>serie_2</code>. Visualiser son contenu avec la console.</p>
+</li>
+<li>
+<p>Ses descripteurs sont-ils les mêmes que ceux du premier fichier ? </p>
+</li>
+<li>
+<p>Si deux tables ont <strong><em>les mêmes descripteurs</em></strong>, et des <strong><em>valeurs cohérentes</em></strong>, on peut les fusionner. On utilise pour cela l'opérateur <code>+</code> qui permet de concatener des listes Python. Compléter la fonction <code>fusionne(table1, table2)</code> fusionnant deux tables <code>table1</code> et <code>table2</code>, sans recopier deux fois les descripteurs. Pour cela, ils faut enlever la première ligne de <code>table2</code> : on peut utiliser la syntaxe <code>tab[ind:]</code> ne prenant les lignes d'un tableau <code>tab</code> qu'à partir de l'indice <code>ind</code>.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fusionne</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">tab</span> <span class="o">+</span> <span class="o">...</span>
+</code></pre></div>
+<ol>
+<li>Appeler la fonction <code>fusionne</code> pour obtenir la fusion de <code>serie_1</code> et <code>serie_2</code>, stockée dans une variable <code>series</code>.</li>
+</ol>
+<h3 id="b-les-doublons">B. Les doublons<a class="headerlink" href="#b-les-doublons" title="Permanent link">&para;</a></h3>
+<p>Qu'il y ait plusieurs fois les mêmes informations, entrées par erreur, pose des problèmes en terme de stockage et peut biaiser les statistiques faites sur les données.</p>
+<ol>
+<li>
+<p>Compléter la fonction <code>trouve_doublons(table)</code> prenant en paramètre une table sous la forme d'un tableau à 2 dimensions et renvoyant les lignes qui sont présentes plusieurs fois :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">trouve_doublons</span><span class="p">(</span><span class="n">table</span><span class="p">):</span>
+    <span class="n">doublons</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">......</span><span class="p">,</span> <span class="o">............</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">table</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="o">................................</span><span class="p">:</span>
+                <span class="n">doublons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">....................</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">doublons</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Appeler cette fonction sur la variable <code>series</code> pour obtenir les doublons de la table. Y en a-t-il ?</p>
+</li>
+<li>
+<p>L'instruction <code>del table[i]</code> permet de supprimer la ligne <code>i</code> de <code>table</code>. Utiliser cette instruction pour écrire une fonction <code>supprime_doublons(table)</code> <strong><em>parcourant les lignes de la dernière à la première</em></strong> (sinon les valeurs prises par <code>i</code> dans la boucle ne correspondraient plus) et supprimant un doublon à chaque fois qu'il est rencontré.</p>
+</li>
+<li>
+<p>Appeler cette fonction pour supprimer le(s) doublon(s) trouvés à la question 2. Stocker le résultat dans une variable <code>series_final</code>.</p>
+</li>
+<li>
+<p>Nos données sont maintenant plus cohérentes, sauvegardons-les. Appeler la fonction <code>exporte</code> prenant en paramètre la table <code>series_final</code> qui sera stockée dans un fichier dont le nom est <code>series.csv</code>.</p>
+</li>
+</ol>
+<h3 id="c-tri-des-donnees">C. Tri des données<a class="headerlink" href="#c-tri-des-donnees" title="Permanent link">&para;</a></h3>
+<p>Pour visualiser les différentes lignes de la table dans l'ordre que l'on veut, on peut appliquer un <strong>algorithme de tri</strong>, pour les trier <strong>en fonction d'une des colonnes</strong>.</p>
+<ol>
+<li>
+<p>On peut vouloir ranger les séries en fonction de l'ordre alphabétique de son nom, ou bien de son pays d'origine. On compare alors les caractères, qui seront triés en utilisant le <strong>code ASCII</strong> de chacun.<br />
+Appeler la fonction <code>trie_caracteres</code> prenant en paramètre la table et la colonne par rapport à laquelle on souhaite faire le tri, pour trier la table par rapport au nom de la série.</p>
+</li>
+<li>
+<p>Lorsque l'on veut trier par rapport à un nombre (entier ou flottant), il faut convertir la valeur d'abord, qui est une <strong>chaîne de caractères</strong>. Nous allons le faire avec la fonction <code>float</code> (cela fonctionnera sur les entiers, et les flottants). Faire ce changement sur la condition du <code>while</code> pour obtenir la fonction <code>trie_nombres</code>.  </p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="o">...</span>
+<span class="k">while</span> <span class="n">j</span><span class="o">&gt;</span><span class="mi">1</span> <span class="ow">and</span> <span class="o">...</span> <span class="p">:</span>
+    <span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div>
+<p>Appeler la fonction pour trier les séries par rapport à leur année de création.</p>
+<p><strong><em>Pour aller plus loin...</em></strong> <br />
+Pour trier, on peut utiliser une fonction de fonction, <code>sorted</code>. Il faut lui préciser en paramètre ce qu'il faut trier, et comment (en fonction de quoi). Dans l'exemple suivant, on l'utilise pour trier en fonction de l'année de début, dans l'ordre croissant :<br />
+<code>sorted(table[1:], key = lambda item: int(item[1]))</code><br />
+Quelle instruction utiliser pour trier en fonction du nom de la série ?</p>
+
+
+  
+
+
+
+
+                
+<script src="../../../pyodide-mkdocs/ide.js"></script> 
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>

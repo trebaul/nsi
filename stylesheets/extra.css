@@ -1,0 +1,55 @@
+h1 {
+    font-size: 4em;
+    font-family: Arial;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font-size: 2.2em;
+    font-style: bold;
+    color: black;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:root {
+    --md-primary-fg-color:        #000000;
+    --md-primary-fg-color--dark:  #000000;
+    --md-primary-bg-color: #FFFFFF;
+    --md-accent-bg-color: #555555;
+    --md-accent-fg-color: #555555;
+    --md-footer-fg-color: #555555;
+  }
+
+.md-grid {
+max-width: 1450px; 
+}
+
+.md-nav--primary {
+    background-color: #EEEEEE;
+  }
+.md-nav--secondary {
+background-color: #EEEEEE;
+}
+
+.md-nav-sub {
+  background-color: #ffe474;
+}
+
+  .md-typeset h1 {
+    color: #111111;
+    font-family: Verdana;
+  }

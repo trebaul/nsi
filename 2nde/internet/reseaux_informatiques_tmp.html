@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>reseaux_informatiques.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<style>
+body {
+text-align: justify}
+</style>
+<h1 id="internet-et-les-r%C3%A9seaux-informatiques">Internet et les réseaux informatiques</h1>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>Qu'est-ce qu'Internet ?</li>
+</ul>
+<br>
+<ul>
+<li>Que peut-on faire sur Internet ?</li>
+</ul>
+<br>
+<h2 id="activit%C3%A9-1--le-codage-de-linformation">Activité 1 : Le codage de l'information</h2>
+<p>Internet permet de transmettre des informations, qui sont codées dans l'ordinateur en binaire : avec des 0 et des 1 (des bits).</p>
+<p>On utilise les <strong>puissances de 2</strong> pour représenter les nombres, mais aussi le texte, etc. Par exemple, pour représenter 3, on dit que $3 = 2<em>2 + 2</em>1$. 3 se note alors en binaire $11_2$ <em>(le petit 2 indique que l'on est en <strong>base 2</strong>)</em>.</p>
+<blockquote>
+<p>Pour trouver comment représenter un <strong>nombre entier positif</strong> en binaire, on peut utiliser la <strong>méthode</strong> suivante et le <strong>tableau ci-dessous</strong> :</p>
+<ol>
+<li>On trouve la puissance de 2 la plus grande possible, mais inférieure au nombre et on met un 1 sous cette valeur dans le tableau,</li>
+<li>On soustrait cette valeur à notre nombre,</li>
+<li>On réapplique les étapes 1 et 2 tant que le nombre qu'il reste à représenter est différent de 0.</li>
+<li>On ajoute des 0 sous les valeurs sous lesquelles il n'y a pas de 1, et on obtient le nombre en binaire écrit sur <strong>8 bits</strong>, soit <strong>1 octet</strong>.</li>
+</ol>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Nombre</th>
+<th style="text-align:center">128</th>
+<th style="text-align:center">64</th>
+<th style="text-align:center">32</th>
+<th style="text-align:center">16</th>
+<th style="text-align:center">8</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">41</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p>Les ordres de grandeur</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">1 Ko (kilooctet)</th>
+<th style="text-align:center">1 Mo (Megaoctet)</th>
+<th style="text-align:center">1 G (Gigaoctet)</th>
+<th style="text-align:center">1 T (Téraoctet)</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<h2 id="activit%C3%A9-2--diff%C3%A9rents-r%C3%A9seaux-physiques">Activité 2 : Différents réseaux physiques</h2>
+<ol>
+<li>
+<ul>
+<li>
+<p>Quel type de réseau utilisez-vous pour vous connecter à Internet chez vous ?</p>
+</li>
+<li>
+<p>Quel type de réseau utilisez-vous pour vous connecter à Internet depuis les machines du lycée ?</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dans le tableau suivant sont indiqués les différents réseaux physiques majoritairement utilisés.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Réseaux physiques</th>
+<th style="text-align:center">Pour quel périphérique</th>
+<th style="text-align:center">Filaire ou sans fil</th>
+<th style="text-align:center">Ordre de grandeur du débit en bits/s</th>
+<th style="text-align:center">Ordre de grandeur du débit en octets/s</th>
+<th style="text-align:center">Lent ou rapide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">4G</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">sans fil</td>
+<td style="text-align:center">100 Mbits/s</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">5G</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1 Gbits/s</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">ADSL</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">25 Mbits/s</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Bluetooth</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">2 Mbits/s</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Ethernet (RJ45)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1 Gbit/s</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Fibre optique</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1 Gbit/s</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Wi-Fi</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">0,1 Gbits/s</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Remplir la 2ème colonne en indiquant quel type de périphérique, entre les smartphones, les ordinateurs et les objets connectés, utilise principalement ce type de réseau.</p>
+</li>
+<li>
+<p>Remplir la 3ème colonne en distinguant les réseaux sans fil des réseaux filaires.</p>
+</li>
+<li>
+<p>Un octet est composé de 8 bits. Compléter la 5ème colonne pour avoir le débit de chaque réseau en octets/s.</p>
+</li>
+<li>
+<p>Un réseau est aujourd'hui considéré lent s'il met plus d'1 seconde à transférer une vidéo de 100 Mo. Compléter la 6ème colonne en indiquant si le réseau est lent ou rapide.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="activit%C3%A9-3--internet-dans-le-monde">Activité 3 : Internet dans le monde</h2>
+<p>Visualisez la vidéo suivante, et répondre aux questions : https://youtu.be/dm4RiFJADGg</p>
+<ul>
+<li>
+<p>Quelle technologie permet de connecter les différents continents ?</p>
+</li>
+<li>
+<p>Quel pourcentage du trafic total de données transporte-t-elle ?</p>
+</li>
+<li>
+<p>De quoi est-elle faite et que transmet-elle ?</p>
+</li>
+<li>
+<p>Quelle est l’évolution de la quantité de données transférées chaque année ?</p>
+</li>
+</ul>
+
+</body>
+</html>

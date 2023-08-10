@@ -1,0 +1,3585 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lena TREBAUL">
+      
+      
+        <link rel="canonical" href="https://example.com/1ere/seq10/dico/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Les dictionnaires - Trebaul NSI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
+        
+      
+      
+
+    
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../pyodide-mkdocs/interpreter.js"></script> 
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sans+Serif:300,300i,400,400i,700,700i%7CFire+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Sans Serif";--md-code-font:"Fire Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+
+<link rel="stylesheet" href="../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../qcm/qcm.css">
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#i-les-dictionnaires" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Trebaul NSI" class="md-header__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Trebaul NSI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les dictionnaires
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../2nde/web/moteurs_recherche/" class="md-tabs__link">
+        Seconde
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Première
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tle/" class="md-tabs__link">
+        Terminale
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../projets/" class="md-tabs__link">
+        Projets
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../culture_g%C3%A9/" class="md-tabs__link">
+        Ressources
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Trebaul NSI" class="md-nav__button md-logo" aria-label="Trebaul NSI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Trebaul NSI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_1">
+          Le Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Le Web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Le Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/web/moteurs_recherche/" class="md-nav__link">
+        Les moteurs de recherche
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Les Réseaux Sociaux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Les Réseaux Sociaux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Les Réseaux Sociaux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/reseaux_sociaux/graphes/" class="md-nav__link">
+        Les graphes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/reseaux_sociaux/milgram/" class="md-nav__link">
+        Milgram et les petits mondes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Première</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq0/">0. Les bases du web</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="0. Les bases du web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          0. Les bases du web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq0/bases_web/" class="md-nav__link">
+        I. Hypertexte et URL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq0/langages_web/" class="md-nav__link">
+        II. Les langages HTML et CSS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq1/">1. Les bases de la programmation</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="1. Les bases de la programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          1. Les bases de la programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/variables/" class="md-nav__link">
+        I. Les variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/fonctions/" class="md-nav__link">
+        II. Les fonctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/conditions/" class="md-nav__link">
+        III. Les conditions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/boucles_non_bornees/" class="md-nav__link">
+        IV. Les boucles non-bornées
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq1/boucles_bornees/" class="md-nav__link">
+        V. Les boucles bornées
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq2/">2. Représenter les nombres</a>
+          
+            <label for="__nav_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="2. Représenter les nombres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          2. Représenter les nombres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/entiers_positifs/" class="md-nav__link">
+        I. Les entiers positifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/entiers_relatifs/" class="md-nav__link">
+        II. Les entiers relatifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq2/flottants/" class="md-nav__link">
+        III. Les flottants
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq3/">3. De la logique à la machine</a>
+          
+            <label for="__nav_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="3. De la logique à la machine" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          3. De la logique à la machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq3/logique/" class="md-nav__link">
+        I. Logique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq3/architecture/" class="md-nav__link">
+        II. Architecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq4/">4. Représenter le texte</a>
+          
+            <label for="__nav_2_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="4. Représenter le texte" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          4. Représenter le texte
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/texte_machine/" class="md-nav__link">
+        I. Représentation du texte en machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq4/caracteres/" class="md-nav__link">
+        II. Les chaînes de caractères
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq5/">5. Tableaux et p-uplets</a>
+          
+            <label for="__nav_2_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="5. Tableaux et p-uplets" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          5. Tableaux et p-uplets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/tableaux/" class="md-nav__link">
+        I. Le type tableau
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/tableaux_algo/" class="md-nav__link">
+        II. Algorithmes sur les tableaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/puplet/" class="md-nav__link">
+        III. Le type p-uplet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq5/synthese/" class="md-nav__link">
+        Pour s'entraîner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq6/">6. Les réseaux informatiques</a>
+          
+            <label for="__nav_2_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="6. Les réseaux informatiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          6. Les réseaux informatiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq6/architecture/" class="md-nav__link">
+        I. Architecture des réseaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq6/tcpip/" class="md-nav__link">
+        II. Le modèle TCP/IP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq7/">7. Algorithmique et tris</a>
+          
+            <label for="__nav_2_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="7. Algorithmique et tris" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          7. Algorithmique et tris
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq7/complexite/" class="md-nav__link">
+        I. Complexité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq7/tris/" class="md-nav__link">
+        II. Les tris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq7/correction/" class="md-nav__link">
+        III. Correction algorithmique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq8/">8. Algorithmes gloutons et dichotomie</a>
+          
+            <label for="__nav_2_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="8. Algorithmes gloutons et dichotomie" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          8. Algorithmes gloutons et dichotomie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq8/gloutons/" class="md-nav__link">
+        I. Les algorithmes gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq8/recherche_dichotomique/" class="md-nav__link">
+        II. La recherche dichotomique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq9/">9. Le Web dynamique</a>
+          
+            <label for="__nav_2_11">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="9. Le Web dynamique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          9. Le Web dynamique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq9/interactions_js/" class="md-nav__link">
+        I. Interagir avec l'utilisateur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq9/client_serveur/" class="md-nav__link">
+        II. Le modèle client-serveur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq9/http_https/" class="md-nav__link">
+        III. Les requêtes HTTP et HTTPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq9/synthese/" class="md-nav__link">
+        Pour s'entraîner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_12" type="checkbox" id="__nav_2_12" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">10. Dictionnaires et traitement de données</a>
+          
+            <label for="__nav_2_12">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="10. Dictionnaires et traitement de données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_12">
+          <span class="md-nav__icon md-icon"></span>
+          10. Dictionnaires et traitement de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          I. Les dictionnaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        I. Les dictionnaires
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tp-le-type-dictionnaire" class="md-nav__link">
+    TP : Le type dictionnaire
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-dictionnaires-et-algorithmes" class="md-nav__link">
+    TD : Dictionnaires et algorithmes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-les-resultats-dune-election" class="md-nav__link">
+    TP : Les résultats d'une élection
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../traitement_tables/" class="md-nav__link">
+        II. Traiter les données en tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synthese/" class="md-nav__link">
+        Pour s'entraîner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_13" type="checkbox" id="__nav_2_13" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq11/">11. Algorithme d'apprentissage</a>
+          
+            <label for="__nav_2_13">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="11. Algorithme d'apprentissage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_13">
+          <span class="md-nav__icon md-icon"></span>
+          11. Algorithme d'apprentissage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq11/knn/" class="md-nav__link">
+        L'algorithme des k plus proches voisins
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_14" type="checkbox" id="__nav_2_14" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq12/">12. Systèmes d'exploitation</a>
+          
+            <label for="__nav_2_14">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="12. Systèmes d'exploitation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_14">
+          <span class="md-nav__icon md-icon"></span>
+          12. Systèmes d'exploitation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq12/os/" class="md-nav__link">
+        Le rôle des systèmes d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tle/">Terminale</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tle/seq1/">1. Différentes manières de programmer</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="1. Différentes manières de programmer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Différentes manières de programmer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq1/Imp%C3%A9ratif_Fonctionnel/" class="md-nav__link">
+        I. Paradigme impératif et fonctionnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq1/POO/" class="md-nav__link">
+        II. Paradigme objet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq1/Synth%C3%A8se_El%C3%A8ve/" class="md-nav__link">
+        III. Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../tle/seq2/">2. Autour de la récursivité</a>
+          
+            <label for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="2. Autour de la récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Autour de la récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq2/piles/" class="md-nav__link">
+        I. Les piles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq2/r%C3%A9cursivit%C3%A9/" class="md-nav__link">
+        II. La récursivité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq2/diviser_regner/" class="md-nav__link">
+        III. Diviser pour régner et tris
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          3. Structurer les données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Structurer les données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          3. Structurer les données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/listes/" class="md-nav__link">
+        I. Les listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/files/" class="md-nav__link">
+        II. Les files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/dico/" class="md-nav__link">
+        III. Les dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq4/synthese/" class="md-nav__link">
+        Synthèse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          4. Les bases de données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Les bases de données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          4. Les bases de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq5/Mod%C3%A8le_Relationnel/" class="md-nav__link">
+        I. Le modèle relationnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq5/BDD_Relationnelles/" class="md-nav__link">
+        II. Les bases de données relationnelles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq5/SQL/" class="md-nav__link">
+        III. Structured Query Language (SQL)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          5. Architectures matérielles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Architectures matérielles" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          5. Architectures matérielles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq3/Cours_SoC/" class="md-nav__link">
+        I. Les systèmes sur puce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq8/processus/" class="md-nav__link">
+        II. Les processus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          6. Les structures hiérarchiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6. Les structures hiérarchiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          6. Les structures hiérarchiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq6/arbres/" class="md-nav__link">
+        I. La structure d'arbre
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq6/arbres_algo/" class="md-nav__link">
+        II. Les algorithmes sur les arbres
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          7. Les réseaux informatiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="7. Les réseaux informatiques" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          7. Les réseaux informatiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq7/architecture/" class="md-nav__link">
+        I. Architecture des réseaux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq7/graphes/" class="md-nav__link">
+        II. Les graphes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq7/routage/" class="md-nav__link">
+        III. Le routage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq9/securisation/" class="md-nav__link">
+        8. Sécuriser les communications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_10" type="checkbox" id="__nav_3_10" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_10">
+          9. Algorithmes sur les graphes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="9. Algorithmes sur les graphes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_10">
+          <span class="md-nav__icon md-icon"></span>
+          9. Algorithmes sur les graphes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq10/representation/" class="md-nav__link">
+        I. Représentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq10/algo/" class="md-nav__link">
+        II. Algorithmique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" type="checkbox" id="__nav_3_11" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_11">
+          10. Algorithmique avancée
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="10. Algorithmique avancée" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_11">
+          <span class="md-nav__icon md-icon"></span>
+          10. Algorithmique avancée
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq11/prog_dynamique/" class="md-nav__link">
+        I. Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq11/recherche_textuelle/" class="md-nav__link">
+        II. Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" type="checkbox" id="__nav_3_12" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_12">
+          Conclusion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Conclusion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_12">
+          <span class="md-nav__icon md-icon"></span>
+          Conclusion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/concl/calculabilite/" class="md-nav__link">
+        Calculabilité et décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../projets/">Projets</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Projets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../projets/trophees/">Les Trophées NSI</a>
+          
+            <label for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Les Trophées NSI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Les Trophées NSI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/trophees/2022/" class="md-nav__link">
+        Edition 2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Notions essentielles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Notions essentielles" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Notions essentielles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/TP_Pr%C3%A9paration_V2/" class="md-nav__link">
+        Les fichiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/BonnesPratiques_Structure/" class="md-nav__link">
+        Structurer un programme
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/Recherche_Informations/" class="md-nav__link">
+        Rechercher des informations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Méthodologie de projet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Méthodologie de projet" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Méthodologie de projet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/general/recherche/" class="md-nav__link">
+        I. Recherche de sujet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Gestion_Projet/" class="md-nav__link">
+        II. Suivi de projet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Rendus/" class="md-nav__link">
+        III. Les rendus de projet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Sujets passés
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sujets passés" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Sujets passés
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_cyber/Pr%C3%A9sentation_Sujets/" class="md-nav__link">
+        1ère - Cybersécurité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/tle_poo_rec/Pr%C3%A9sentation/" class="md-nav__link">
+        Terminale - POO&Récursivité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Ressources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ressources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../culture_g%C3%A9/" class="md-nav__link">
+        Culture générale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ressources/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        A propos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tp-le-type-dictionnaire" class="md-nav__link">
+    TP : Le type dictionnaire
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-dictionnaires-et-algorithmes" class="md-nav__link">
+    TD : Dictionnaires et algorithmes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-les-resultats-dune-election" class="md-nav__link">
+    TP : Les résultats d'une élection
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+<style>
+body {
+text-align: justify}
+</style>
+
+<h1 id="i-les-dictionnaires">I. Les dictionnaires<a class="headerlink" href="#i-les-dictionnaires" title="Permanent link">&para;</a></h1>
+<h2 id="tp-le-type-dictionnaire">TP : Le type dictionnaire<a class="headerlink" href="#tp-le-type-dictionnaire" title="Permanent link">&para;</a></h2>
+<h3 id="i-decouverte-de-la-structure">I. Découverte de la structure<a class="headerlink" href="#i-decouverte-de-la-structure" title="Permanent link">&para;</a></h3>
+<p>Nous allons voir un nouveau type, le <strong>dictionnaire</strong> qui permet de regrouper des données, mais auxquelles on accède grâce à une <strong>clé</strong> plutôt que grâce à un <strong>indice</strong>, comme pour les tableaux et p-uplets.</p>
+<ol>
+<li>
+<p>Créer une variable <code>dico</code>, initialement vide, avec l'instruction : <code>dico = {}</code>.</p>
+</li>
+<li>
+<p>Vérifier son type, en tapant <code>type(dico)</code> dans la console.</p>
+</li>
+<li>
+<p>Ajouter un élément au dictionnaire avec la syntaxe suivante : <code>dico["nom"] = "Lennon"</code>, puis visualiser le contenu de la variable avec la console.</p>
+<p><code>"nom"</code> est une <strong>clé</strong> du dictionnaire, et <code>"Lennon"</code> une <strong>valeur</strong>.</p>
+</li>
+<li>
+<p>Rajouter d'autres éléments au dictionnaire :
+    <div class="highlight"><pre><span></span><code><span class="n">dico</span><span class="p">[</span><span class="s2">&quot;prénom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;John&quot;</span>
+<span class="n">dico</span><span class="p">[</span><span class="s2">&quot;année de naissance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1940</span>
+</code></pre></div>
+    On voit que le type des valeurs, comme celui des clés, peut varier <em>(caractères, entiers, ou d'autres)</em>.</p>
+</li>
+<li>
+<p>Consulter le contenu de <code>dico</code> et vérifier qu'il s'affiche sous la forme suivante : <code>{'nom': 'Lennon', 'prénom': 'John', 'année de naissance': 1940}</code></p>
+</li>
+<li>
+<p>Que renvoie l'instruction <code>dico[0]</code> ? Expliquer. ................................................................................</p>
+</li>
+<li>Que renvoie l'instruction <code>dico["prénom"]</code> ? ......................................<br />
+    C'est ainsi que l'on accède à une valeur associée à une clé.</li>
+<li>
+<p>Que renvoie l'instruction <code>len(dico)</code> ? .................</p>
+</li>
+<li>
+<p>Quelles valeurs renvoient les instructions suivantes ?</p>
+<ul>
+<li><code>dico.keys()</code> : ..................................................................</li>
+<li><code>dico.values()</code> : ................................................................</li>
+<li>
+<p><code>dico.items()</code> : .................................................................</p>
+</li>
+<li>
+<p>On utilise ces fonctions pour faire des parcours de dictionnaire. Tester le code suivant :
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dico</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dico</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+</code></pre></div>
+Modifier ensuite le code pour afficher les <strong>clés</strong> du dictionnaire.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>On peut aussi créer un dictionnaire en utilisant la syntaxe suivante : <code>dictionnaire = {clé1: valeur1, clé2: valeur2}</code>.<br />
+    Créer un deuxième dictionnaire <code>dico_2</code> avec cette méthode, dans lequel on stocke les informations suivantes : le nom <code>"McCartney"</code>, le prénom <code>"Paul"</code>, et la date de naissance <code>1942</code>.</p>
+</li>
+</ol>
+<h3 id="ii-exercices">II. Exercices<a class="headerlink" href="#ii-exercices" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p>Pour chacun des exercices, vérifier la solution sur ordinateur, puis <strong>la noter</strong> sur votre feuille.</p>
+</div>
+<h4 id="exercice-1-les-donnees-exif-dune-image">Exercice 1 : les données EXIF d'une image<a class="headerlink" href="#exercice-1-les-donnees-exif-dune-image" title="Permanent link">&para;</a></h4>
+<p>Les photos numériques sont accompagnées de métadonnées, consultables dans leurs propriétés. </p>
+<p><img src="../img/exif.png" style="float:right;padding-left:10px" width=225/></p>
+<ol>
+<li>
+<p>Représenter les données EXIF présentées ci-contre sous la forme d'un dictionnaire nommé <code>exif</code>.</p>
+</li>
+<li>
+<p>Quelle instruction permet d'afficher la hauteur de l'image ? </p>
+</li>
+</ol>
+<hr />
+<h4 id="exercice-2-un-groupe-de-rock">Exercice 2 : un groupe de rock<a class="headerlink" href="#exercice-2-un-groupe-de-rock" title="Permanent link">&para;</a></h4>
+<p>On veut stocker la liste des membres d'un groupe de rock dans un dictionnaire <code>rockband</code>, c'est-à-dire : </p>
+<table>
+<thead>
+<tr>
+<th align="center">Clé</th>
+<th align="center">Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>"chanteur"</code></td>
+<td align="center"><code>Julian Casablancas</code></td>
+</tr>
+<tr>
+<td align="center"><code>"guitariste rythmique"</code></td>
+<td align="center"><code>Albert Hammond Jr</code></td>
+</tr>
+<tr>
+<td align="center"><code>"lead guitariste"</code></td>
+<td align="center"><code>"Nick Valensi"</code></td>
+</tr>
+<tr>
+<td align="center"><code>"bassiste"</code></td>
+<td align="center"><code>"Nikolai Fraiture"</code></td>
+</tr>
+<tr>
+<td align="center"><code>"batteur"</code></td>
+<td align="center"><code>"Fabrizio Moretti"</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Ecrire l'instruction permettant de créer le dictionnaire correspondant.</p>
+</li>
+<li>
+<p>Ecrire l'instruction renvoyant les noms de tous les membres du groupe.</p>
+</li>
+<li>
+<p>Ecrire une fonction <code>est_membre(rockband, nom)</code> renvoyant <code>True</code> si <code>nom</code> est présent dans le groupe, <code>False</code> sinon. On fera un parcours de dictionnaire.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">est_membre</span><span class="p">(</span><span class="n">rockband</span><span class="p">,</span> <span class="n">nom</span><span class="p">):</span>
+</code></pre></div>
+</li>
+<li>
+<p>Tester si <code>"Nick Valensi"</code> et <code>"Bjork"</code> appartiennent au groupe ou non.</p>
+</li>
+</ul>
+<hr />
+<h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
+<p><img src="../img/dico_extrait.jpg" style="float:right;padding-left:10px;padding-bottom:10px" width=275/></p>
+<p>Dans certains cas, on peut ne pas vouloir accéder à des données par leur indice comme avec un tableau ou un p-uplet, car une autre information (souvent de type <strong>caractères</strong>, mais les autres types sont possibles) aurait plus de sens. On utilise alors un <strong>dictionnaire</strong>. </p>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>Un dictionnaire est une collection <strong><em>non-ordonnée</em></strong> d'éléments. Ces éléments sont constitués d'une <strong>clé</strong> associée à une <strong>valeur</strong>.</p>
+</div>
+<h3 id="a-creation">A. Création<a class="headerlink" href="#a-creation" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<ul>
+<li>Pour créer un <strong>dictionnaire vide</strong>, on utilise les <strong>accolades</strong> <code>{}</code> ou bien le mot-clé <code>dict</code>.  </li>
+<li>Pour créer un <strong>dictionnaire non-vide</strong>, on utilise les <strong>accolades</strong> suivies de couples <code>cle: valeur</code> séparés par des virgules.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemples</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">d1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>    <span class="c1">#d1 est un dictionnaire vide</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="p">{}</span>        <span class="c1">#d2 aussi</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;algorithme&quot;</span> <span class="p">:</span> <span class="s2">&quot;suite d&#39;instructions&quot;</span><span class="p">,</span> <span class="s2">&quot;mémoire&quot;</span> <span class="p">:</span> <span class="s2">&quot;espace de stockage des données&quot;</span><span class="p">,</span> <span class="s2">&quot;processeur&quot;</span> <span class="p">:</span> <span class="s2">&quot;unité de calcul&quot;</span><span class="p">}</span>   <span class="c1">#dico a 3 couples clé-valeur </span>
+</code></pre></div></p>
+</div>
+<h3 id="b-modification">B. Modification<a class="headerlink" href="#b-modification" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<ul>
+<li>On ajoute un élément à un dictionnaire avec la syntaxe : <code>d[cle] = valeur</code> où <code>cle</code> et <code>valeur</code> sont des éléments de n'importe quel type de base <em>(entier, flottant, caractères, booléen)</em>.</li>
+<li>On peut modifier la valeur associée à une clé déjà existante en utilisant la même syntaxe.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemples</p>
+<div class="highlight"><pre><span></span><code><span class="n">dico</span><span class="p">[</span><span class="s2">&quot;programme&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;algorithme écrit dans un langage de programmation&quot;</span> <span class="c1">#ajoute un nouveau couple à dico</span>
+<span class="n">dico</span><span class="p">[</span><span class="s2">&quot;processeur&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;constitué d&#39;une unité de calcul et une unité de commande&quot;</span>    <span class="c1">#modifie la valeur associée à la clé processeur</span>
+</code></pre></div>
+</div>
+<h3 id="c-parcours">C. Parcours<a class="headerlink" href="#c-parcours" title="Permanent link">&para;</a></h3>
+<p>On peut itérer sur les éléments d'un dictionnaire, de la même manière que l'on peut itérer sur les éléments d'un tableau ou d'un p-uplet <em>(les types construits)</em>. Cela permet d'appliquer des algorithmes comme ceux vus sur ces autres types construits : recherche d'occurrences, calcul de statistiques, etc. </p>
+<p>On peut utiliser différentes syntaxes :</p>
+<h4 id="ci-parcourir-les-cles">C.I. Parcourir les clés<a class="headerlink" href="#ci-parcourir-les-cles" title="Permanent link">&para;</a></h4>
+<ul>
+<li>La méthode <em>(fonction qui s'applique sur les dictionnaires)</em> <code>keys()</code> permet d'accéder à la liste des clés.</li>
+</ul>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000002" class="comment">###</span><div class="line_v"><div id="editor_00000002"></div></div><div id="term_editor_00000002"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000002","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000002","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000002').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000002" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000002")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000002")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000002" class="py_mk_hide"></span><span id="corr_content_editor_00000002" class="py_mk_hide" data-strudel=""></span></p>
+<details class="quote">
+<summary>Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">dico</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cle</span><span class="p">,</span> <span class="n">dico</span><span class="p">[</span><span class="n">cle</span><span class="p">])</span>
+</code></pre></div>
+</details>
+<ul>
+<li>Si la méthode n'est pas précisée, <strong><em>par défaut</em></strong> le parcours se fera sur les clés :</li>
+</ul>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000003" class="comment">###</span><div class="line_v"><div id="editor_00000003"></div></div><div id="term_editor_00000003"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000003","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000003","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000003').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000003" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000003")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000003")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000003" class="py_mk_hide"></span><span id="corr_content_editor_00000003" class="py_mk_hide" data-strudel=""></span></p>
+<details class="quote">
+<summary>Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">dico</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cle</span><span class="p">,</span> <span class="n">dico</span><span class="p">[</span><span class="n">cle</span><span class="p">])</span>
+</code></pre></div>
+</details>
+<h4 id="cii-parcourir-les-valeurs">C.II. Parcourir les valeurs<a class="headerlink" href="#cii-parcourir-les-valeurs" title="Permanent link">&para;</a></h4>
+<p>La méthode <em>(fonction qui s'applique sur les dictionnaires)</em> <code>values()</code> permet d'accéder à la liste des valeurs.</p>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000004" class="comment">###</span><div class="line_v"><div id="editor_00000004"></div></div><div id="term_editor_00000004"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000004","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000004","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000004').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000004" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000004")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000004")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000004" class="py_mk_hide"></span><span id="corr_content_editor_00000004" class="py_mk_hide" data-strudel=""></span></p>
+<details class="quote">
+<summary>Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dico</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Attention !</p>
+<p>On n'a alors pas accès à la clé associée à chaque valeur.</p>
+</div>
+<h4 id="ciii-parcourir-les-couples-cle-valeur">C.III. Parcourir les couples clé-valeur<a class="headerlink" href="#ciii-parcourir-les-couples-cle-valeur" title="Permanent link">&para;</a></h4>
+<p>La méthode <em>(fonction qui s'applique sur les dictionnaires)</em> <code>items()</code> permet d'accéder aux couples clé, valeur.</p>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000005" class="comment">###</span><div class="line_v"><div id="editor_00000005"></div></div><div id="term_editor_00000005"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000005","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000005","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000005').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000005" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000005")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000005")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000005" class="py_mk_hide"></span><span id="corr_content_editor_00000005" class="py_mk_hide" data-strudel=""></span></p>
+<details class="quote">
+<summary>Code</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dico</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
+<p>Les dictionnaires complètent les tableaux et p-uplets en permettant de "ranger" différemment des éléments. Comme dans un dictionnaire au sens classique, on associe des valeurs (comme une définition) à une information (comme un mot). Ces structures sont ensuite utilisées par des algorithmes.</p>
+<hr />
+<h2 id="td-dictionnaires-et-algorithmes">TD : Dictionnaires et algorithmes<a class="headerlink" href="#td-dictionnaires-et-algorithmes" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1-manipulation-de-dictionnaires">Exercice 1 : manipulation de dictionnaires<a class="headerlink" href="#exercice-1-manipulation-de-dictionnaires" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><div class="highlight"><pre><span></span><code><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;alexandre&quot;</span> <span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;mehdi&quot;</span> <span class="p">:</span> <span class="mi">18</span><span class="p">,</span>  <span class="s2">&quot;jeanne&quot;</span> <span class="p">:</span> <span class="mi">16</span><span class="p">,</span><span class="s2">&quot;charlotte&quot;</span> <span class="p">:</span> <span class="mi">19</span><span class="p">,</span> <span class="s2">&quot;celina&quot;</span> <span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;noé&quot;</span> <span class="p">:</span> <span class="mi">19</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">dic</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">cle</span><span class="p">,</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">valeur</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">cle</span>
+</code></pre></div>
+Que renvoie l'appel de <code>f(dico)</code> ?</p>
+</li>
+<li>
+<p>Quelle est la valeur affichée à l'exécution du programme Python suivant ?</p>
+<div class="highlight"><pre><span></span><code><span class="n">ports</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;imap&#39;</span><span class="p">:</span> <span class="mi">142</span><span class="p">,</span> <span class="s1">&#39;smtp&#39;</span><span class="p">:</span> <span class="mi">25</span> <span class="p">}</span>
+<span class="n">ports</span><span class="p">[</span><span class="s1">&#39;ftp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ports</span><span class="p">[</span><span class="s1">&#39;ftp&#39;</span><span class="p">])</span>
+</code></pre></div>
+</li>
+<li>
+<div class="highlight"><pre><span></span><code><span class="n">T</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;banane&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">124</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">75</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;kiwi&#39;</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="mi">51</span><span class="p">}]</span>
+</code></pre></div>
+<p>Quelle expression utiliser pour afficher le nombre de pommes ?</p>
+</li>
+<li>
+<p>Par quelle expression remplacer les pointillés dans le programme Python suivant, pour que son exécution affiche le numéro de Dupond ?</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">repertoire</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Dupont&#39;</span><span class="p">,</span> <span class="s1">&#39;tel&#39;</span><span class="p">:</span><span class="s1">&#39;5234&#39;</span><span class="p">},{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Tournesol&#39;</span><span class="p">,</span> <span class="s1">&#39;tel&#39;</span><span class="p">:</span><span class="s1">&#39;5248&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;nom&#39;</span><span class="p">:</span><span class="s1">&#39;Dupond&#39;</span><span class="p">,</span> <span class="s1">&#39;tel&#39;</span><span class="p">:</span><span class="s1">&#39;3452&#39;</span><span class="p">}]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">repertoire</span><span class="p">)):</span>
+
+<span class="k">if</span> <span class="o">...............................</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">repertoire</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;tel&#39;</span><span class="p">])</span>
+</code></pre></div>
+<br></p>
+</li>
+</ol>
+<hr />
+<h3 id="exercice-2-recherche-de-maximum">Exercice 2 : recherche de maximum<a class="headerlink" href="#exercice-2-recherche-de-maximum" title="Permanent link">&para;</a></h3>
+<p>Que faut-il changer dans le programme ci-dessous, implémentant la recherche de l'indice du maximum dans un tableau, pour rechercher la <strong>clé</strong> associée à la <strong>valeur maximale</strong> d'un dictionnaire <strong><em>non-vide</em></strong> d'<strong>entiers positifs</strong> ?
+Vérifier que le dictionnaire est bien non-vide.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum_tab</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">tab</span> <span class="o">!=</span> <span class="p">[]</span>
+    <span class="n">ind</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">tab</span><span class="p">[</span><span class="n">ind</span><span class="p">]:</span>
+            <span class="n">ind</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">ind</span>
+</code></pre></div>
+<hr />
+<h3 id="exercice-3-comptage-doccurrences">Exercice 3 : comptage d'occurrences<a class="headerlink" href="#exercice-3-comptage-doccurrences" title="Permanent link">&para;</a></h3>
+<p>On veut écrire une fonction <code>compte_occurrences(chaine)</code> qui compte les occurrences de toutes les lettres présentes dans une chaîne de caractères <code>chaine</code>, et stocke le résultat dans un dictionnaire dont les clés sont ces lettres, et les valeurs leur nombre d'occurrences. Ce dictionnaire est renvoyé par la fonction. Par exemple :
+<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">compte_occurrences</span><span class="p">(</span><span class="s1">&#39;bonjour&#39;</span><span class="p">)</span>
+<span class="go">{&#39;b&#39;: 1, &#39;o&#39;: 2, &#39;n&#39;: 1, &#39;j&#39;: 1, &#39;u&#39;: 1, &#39;r&#39;: 1}</span>
+</code></pre></div></p>
+<ol>
+<li>
+<p>Ecrire l'algorithme <em>(pseudo-code)</em> permettant de résoudre ce problème.</p>
+<p><strong>Note :</strong> on parcourt une chaîne de caractère comme on parcourt un tableau : chaque caractère à un indice indiquant sa position dans la chaîne, on peut donc faire un parcours <strong><em>par indice</em></strong> ou <strong><em>par valeur</em></strong>.</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</li>
+<li>
+<p>Traduire cet algorithme en programme.</p>
+<p><strong>Note :</strong> Pour tester si une clé <code>cle</code> est présente dans un dictionnaire <code>dico</code>, on peut utiliser la syntaxe <code>cle in dico</code> qui vaut <code>True</code> <em>(est présente)</em> ou <code>False</code> <em>(n'est pas présente)</em> (c'est une recherche d'occurrence).</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</li>
+</ol>
+<hr />
+<h2 id="tp-les-resultats-dune-election">TP : Les résultats d'une élection<a class="headerlink" href="#tp-les-resultats-dune-election" title="Permanent link">&para;</a></h2>
+<p>Une élection est organisée, pour laquelle les votes sont enregistrés par une machine électronique. L'objectif de ce TP est d'écrire les fonctions qui vont permettre de comptabiliser automatiquement les votes et déterminer le vainqueur de l'élection.</p>
+<h3 id="introduction-representation-des-donnees">Introduction : représentation des données<a class="headerlink" href="#introduction-representation-des-donnees" title="Permanent link">&para;</a></h3>
+<p>Les votes sont enregistrés dans un <em>tableau de chaînes de caractères</em>. Les électeurs peuvent sélectionner parmi une liste de candidats, voter nul en entrant un nom qui ne fait pas parti des candidats ou bien voter blanc. </p>
+<p>Par exemple, à la fin du vote, la machine a en mémoire le tableau suivant :<br />
+<code>votes = ["Alan Turing", "Ada Lovelace", "Ada Lovelace", "", "George Boole", "Mark Zukerberg", ""]</code> <br />
+Une chaîne de caractère vide correspond à un vote blanc.</p>
+<p><strong>Question</strong><br />
+Les candidats étant Alan Turing, Ada Lovelace et George Boole, quel est le vainqueur ? Combien y a-t-il de votes pour les autres candidats, de votes nuls et de votes blancs ?</p>
+<p><br></p>
+<p>Dans la suite, on stocke cette information dans une variable <code>candidats = ["Alan Turing", "Ada Lovelace", "George Boole"]</code>.</p>
+<h3 id="a-depouillement">A. Dépouillement<a class="headerlink" href="#a-depouillement" title="Permanent link">&para;</a></h3>
+<p>On veut écrire une fonction <code>depouillement</code> qui prend en paramètres :<br />
+- un tableau de chaînes de caractères <code>candidats</code>, <br />
+- un tableau de chaînes de caractères <code>votes</code>,<br />
+et qui renvoie un dictionnaire dont les <strong><em>clés</em></strong> sont les noms des candidats <em>(stockés dans <code>candidats</code>)</em> et les chaînes de caractères <code>"Nul"</code> et <code>"Blanc"</code>, et les <strong><em>valeurs</em></strong> le nombre de bulletins associé <em>(stockés dans <code>votes</code>)</em>. </p>
+<ol>
+<li>
+<p>Il faut commencer par créer un dictionnaire nommé <code>occurrences</code>, dont les clés sont les noms des candidats, ainsi que <code>"Nul"</code> et <code>"Blanc"</code>, et les valeurs sont initialisées à <code>0</code>. Ecrire le code correspondant à cette initialisation.</p>
+<div class="admonition tip">
+<p>On peut aussi utiliser la compréhension sur les dictionnaires, avec la syntaxe suivante : <code>d = {cle:valeur for cle in tableau}</code> </p>
+</div>
+</li>
+<li>
+<p>Ecrire une fonction <code>est_present(tab, v)</code> prenant en paramètres un tableau <code>tab</code> de type liste Python et une valeur <code>v</code>, et renvoyant <code>True</code> si <code>v</code> est présente dans <code>tab</code>, <code>False</code> sinon.</p>
+</li>
+<li>
+<p>Ecrire la fonction <code>depouillement</code>, en se basant sur les questions précédentes et sur l'algorithme écrit ci-dessous :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">depouillement</span><span class="p">(</span><span class="n">candidats</span><span class="p">,</span> <span class="n">votes</span><span class="p">):</span>
+<span class="mi">1</span>    <span class="c1"># initialisation du dictionnaire occurrences - question 1</span>
+<span class="mi">2</span>    <span class="n">pour</span> <span class="n">chaque</span> <span class="n">element</span> <span class="n">v</span> <span class="n">de</span> <span class="n">votes</span>
+<span class="mi">3</span>        <span class="n">si</span> <span class="n">v</span> <span class="n">est</span> <span class="n">présent</span> <span class="n">dans</span> <span class="n">candidats</span>   <span class="c1"># fonction écrite dans la question 2</span>
+<span class="mi">4</span>            <span class="n">incrémenter</span> <span class="n">la</span> <span class="n">valeur</span> <span class="n">associée</span> <span class="n">à</span> <span class="n">la</span> <span class="n">clé</span> <span class="n">v</span> <span class="n">dans</span> <span class="n">occurrences</span>
+<span class="mi">5</span>        <span class="n">sinon</span> <span class="n">si</span> <span class="n">v</span> <span class="n">vaut</span> <span class="s2">&quot;&quot;</span>
+<span class="mi">6</span>            <span class="n">incrémenter</span> <span class="n">la</span> <span class="n">valeur</span> <span class="n">associée</span> <span class="n">à</span> <span class="n">la</span> <span class="n">clé</span> <span class="s2">&quot;Blanc&quot;</span> <span class="n">dans</span> <span class="n">occurrences</span>
+<span class="mi">7</span>        <span class="n">sinon</span>
+<span class="mi">8</span>            <span class="n">incrémenter</span> <span class="n">la</span> <span class="n">valeur</span> <span class="n">associée</span> <span class="n">à</span> <span class="n">la</span> <span class="n">clé</span> <span class="s2">&quot;Nul&quot;</span> <span class="n">dans</span> <span class="n">occurrences</span>
+    <span class="n">renvoyer</span> <span class="n">occurrences</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La syntaxe <code>if v in tab</code> pourrait être utilisée ligne 3. Cela revient à écrire une fonction de recherche d'occurrence dans un tableau renvoyant un booléen. Vous pourrez l'utiliser par la suite, mais <strong><em>il faut savoir écrire la fonction de recherche d'occurrence</em></strong>.</p>
+</div>
+</li>
+<li>
+<p>Tester cette fonction avec les variables <code>candidats</code> et <code>votes</code> définies dans l'introduction. Vérifier que l'on obtient bien le dictionnaire suivant : 
+    <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">&#39;Alan Turing&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Ada Lovelace&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;George Boole&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Blanc&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Nul&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="b-trouver-le-vainqueur">B. Trouver le vainqueur<a class="headerlink" href="#b-trouver-le-vainqueur" title="Permanent link">&para;</a></h3>
+<p>On considère qu'il n'y a qu'un seul vainqueur à l'élection. C'est-à-dire qu'un candidat a obtenu plus de votes que tous les autres. </p>
+<ol>
+<li>
+<p>Réécrire ci-dessous un programme permettant de trouver le maximum d'un tableau de nombres <code>t</code> <em>(vous n'avez pas besoin de l'écrire sur l'ordinateur)</em>:
+    <div class="highlight"><pre><span></span><code>
+</code></pre></div></p>
+</li>
+<li>
+<p>Adapter ce code pour écrire une fonction qui recherche le maximum des valeurs stockées cette fois-ci dans un <em>dictionnaire</em> : ce sera la fonction <code>vainqueur(d)</code>, avec <code>d</code> ayant pour clés les candidats <em>(chaînes de caractères)</em> et pour valeurs le nombre de votes qui leur est associé (obtenu avec la fonction <code>depouillement</code> de la partie A). </p>
+<p>Cette fonction renvoie la clé associée à la plus grande valeur. On prendra soin d'exclure les votes nuls et blancs.</p>
+</li>
+<li>
+<p>Appliquer la fonction <code>vainqueur</code> au dictionnaire obtenu à la question A.4., et stocker le résultat du vote dans une variable <code>resultat</code>. Vérifier qu'<strong>Ada Lovelace</strong> est bien la grande gagnante de ce scrutin.</p>
+</li>
+</ol>
+
+
+  
+
+
+
+
+                
+<script src="../../../pyodide-mkdocs/ide.js"></script> 
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Programme" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Programme
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../traitement_tables/" class="md-footer__link md-footer__link--next" aria-label="Next: II. Traiter les données en tables" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              II. Traiter les données en tables
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>
