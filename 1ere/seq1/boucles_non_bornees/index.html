@@ -3270,7 +3270,9 @@ text-align: justify}
 <p>Dans certains problèmes, on peut vouloir répéter plusieurs fois de suite les mêmes opérations. On peut utiliser pour cela des <strong>boucles non-bornées</strong> pour répéter des instructions un nombre indéterminé de fois.</p>
 <h3 id="a-exemple">A. Exemple<a class="headerlink" href="#a-exemple" title="Permanent link">&para;</a></h3>
 <p>Prenons l'exemple de la conversion d'un nombre <code>n</code> de la base 10 à la base 2. On fait des divisions euclidiennes successives par 2 pour obtenir <code>n</code> écrit en binaire.</p>
-<p><div class="highlight"><pre><span></span><code><span class="mi">1</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="mi">1</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="mi">2</span> <span class="n">r</span> <span class="o">=</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span>   <span class="c1"># on calcule le reste de n dans la division euclidienne par 2</span>
 <span class="mi">3</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span>  <span class="c1"># on remplace n par son quotient dans la division par 2</span>
 <span class="mi">4</span> <span class="n">r</span> <span class="o">=</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span>   <span class="c1"># on calcule le nouveau reste</span>
@@ -3278,7 +3280,8 @@ text-align: justify}
 <span class="mi">6</span> <span class="n">r</span> <span class="o">=</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span>
 <span class="mi">7</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span>
 </code></pre></div>
-Compléter la table de trace correspondant à l'exécution de ce code :</p>
+</div>
+<p>Compléter la table de trace correspondant à l'exécution de ce code :</p>
 <table>
 <thead>
 <tr>
@@ -3322,20 +3325,25 @@ Compléter la table de trace correspondant à l'exécution de ce code :</p>
 </table>
 <p>On répète les mêmes opérations, <strong><em>jusqu'à ce que</em></strong> <code>n</code> vale <code>0</code>. Au lieu de réécrire les mêmes instructions, on peut utiliser <strong>une boucle tant que</strong>. </p>
 <p>En Python, on peut l'écrire de la manière suivante <em>(code à compléter)</em>:</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="k">while</span> <span class="o">................</span>
 </code></pre></div>
+</div>
 <p><br><br></p>
 <h3 id="b-cas-general">B. Cas général<a class="headerlink" href="#b-cas-general" title="Permanent link">&para;</a></h3>
-<p><strong>Algorithme</strong> et traduction <strong>Python</strong> <em>(à compléter)</em> :
+<div class="admonition quote">
+<p class="admonition-title"><strong>Algorithme</strong> et traduction <strong>Python</strong> <em>(à compléter)</em></p>
 <div class="highlight"><pre><span></span><code><span class="n">tant</span> <span class="n">que</span> <span class="n">condition</span>
     <span class="n">instructions</span>
 </code></pre></div>
-La condition est une <strong>expression booléenne</strong> et les instructions une suite d'<strong>opérations</strong>. </p>
+</div>
+<p>La condition est une <strong>expression booléenne</strong> et les instructions une suite d'<strong>opérations</strong>. </p>
 <p>Jusqu'à quand est-ce que les instructions vont être exécutées ?
 <br><br></p>
-<p>La syntaxe Python est similaire à celle utilisée pour les instructions conditionnelles :
-- la condition est suivie de <code>:</code>,
+<p>La syntaxe Python est similaire à celle utilisée pour les instructions conditionnelles :<br />
+- la condition est suivie de <code>:</code>,<br />
 - Comment sont placées les instructions par rapport au <code>while</code> ?</p>
 <p><br></p>
 <div class="admonition warning">
@@ -3345,12 +3353,17 @@ La condition est une <strong>expression booléenne</strong> et les instructions 
 <hr />
 <h2 id="td">TD<a class="headerlink" href="#td" title="Permanent link">&para;</a></h2>
 <h3 id="exercice-1-sur-feuille-verification-sur-ordinateur">Exercice 1 : <em>(sur feuille, vérification sur ordinateur)</em><a class="headerlink" href="#exercice-1-sur-feuille-verification-sur-ordinateur" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><span class="n">compt</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">compt</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">while</span> <span class="n">compt</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">compt</span> <span class="o">=</span> <span class="n">compt</span><span class="o">*</span><span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">compt</span><span class="p">)</span>
 </code></pre></div>
-1. Remplir la table de trace suivante, avec le nombre d'itération de boucle adéquat :</p>
+</div>
+<ol>
+<li>Remplir la table de trace suivante, avec le nombre d'itération de boucle adéquat :</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -3388,7 +3401,9 @@ La condition est une <strong>expression booléenne</strong> et les instructions 
 - la valeur de <code>n</code> à la fin de l'exécution de la boucle doit être de <code>5</code>.se </p>
 <h3 id="exercice-identification-sur-feuille-verification-sur-ordinateur">Exercice : Identification <em>(sur feuille, vérification sur ordinateur)</em><a class="headerlink" href="#exercice-identification-sur-feuille-verification-sur-ordinateur" title="Permanent link">&para;</a></h3>
 <p>L'accès à une page Web reste verrouillé tant que l'on n'entre pas le bon mot de passe. On donne le code suivant <em>(incomplet)</em>, qui gère cet accès :</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">mdp</span> <span class="o">=</span> <span class="s2">&quot;hj51dpM@&quot;</span>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">mdp</span> <span class="o">=</span> <span class="s2">&quot;hj51dpM@&quot;</span>
 <span class="n">rep</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
 <span class="k">while</span> <span class="o">.................</span><span class="p">:</span>
@@ -3396,7 +3411,8 @@ La condition est une <strong>expression booléenne</strong> et les instructions 
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accès autorisé&quot;</span><span class="p">)</span>
 </code></pre></div>
-La fonction <code>input</code> affiche un message et demande à l'utilisateur d'entrer une valeur, qui est récupérée dans une variable, ici <code>rep</code>.</p>
+</div>
+<p>La fonction <code>input</code> affiche un message et demande à l'utilisateur d'entrer une valeur, qui est récupérée dans une variable, ici <code>rep</code>.</p>
 <ol>
 <li>Identifier les différentes variables du code et indiquer leur utilité.</li>
 <li>Compléter le code avec la condition qui convient.</li>

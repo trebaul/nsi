@@ -879,6 +879,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-conditions-multiples" class="md-nav__link">
+    TP : Conditions multiples
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3258,6 +3265,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-conditions-multiples" class="md-nav__link">
+    TP : Conditions multiples
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3458,14 +3472,16 @@ Une <strong>expression booléenne</strong> est une expression renvoyant un bool�
 <h2 id="td">TD<a class="headerlink" href="#td" title="Permanent link">&para;</a></h2>
 <h3 id="exercice-sur-feuille">Exercice : <em>(sur feuille)</em><a class="headerlink" href="#exercice-sur-feuille" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Remplir la table de trace du code suivant :
+<li>
+<p>Remplir la table de trace du code suivant :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">seuil</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">124</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">seuil</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">seuil</span>
 </code></pre></div>
-<center></li>
-</ol>
+</div>
 <table>
 <thead>
 <tr>
@@ -3495,16 +3511,13 @@ Une <strong>expression booléenne</strong> est une expression renvoyant un bool�
 <td align="center"></td>
 <td align="center"></td>
 </tr>
-<tr>
-<td align="center"></center></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
 </tbody>
 </table>
-<ol>
-<li>En déduire ce que fait ce programme.
-<br> <br></li>
+</li>
+<li>
+<p>En déduire ce que fait ce programme.
+<br> <br></p>
+</li>
 </ol>
 <h3 id="exercice-minimum-et-maximum-sur-feuille-a-tester-sur-ordinateur">Exercice : Minimum et maximum <em>(sur feuille, à tester sur ordinateur)</em><a class="headerlink" href="#exercice-minimum-et-maximum-sur-feuille-a-tester-sur-ordinateur" title="Permanent link">&para;</a></h3>
 <ol>
@@ -3519,24 +3532,33 @@ Une <strong>expression booléenne</strong> est une expression renvoyant un bool�
 F --&gt; ......................</code></pre></p>
 </li>
 <li>
-<p>Compléter le programme suivant effectuant l'opération demandée :
+<p>Compléter le programme suivant effectuant l'opération demandée :</p>
+</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">9</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
-</code></pre></div></p>
-</li>
+</code></pre></div>
+</div>
+<ol>
 <li>Quelle valeur contient la variable <code>minimum</code>, après exécution du programme ? </li>
-</ul>
+</ol>
 </li>
 <li>
-<p>Comment modifier le programme pour en avoir un qui retourne le <strong>maximum</strong> entre deux entiers ?
-    <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">101</span>
+<p>Comment modifier le programme pour en avoir un qui retourne le <strong>maximum</strong> entre deux entiers ?</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">101</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">64</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
 </li>
 <li>
 <p>Ecrire une fonction <code>trouve_maximum</code> prenant en paramètres deux nombres <code>a</code> et <code>b</code> et renvoyant le maximum des deux. </p>
 </li>
 </ol>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <h3 id="exercice-reseau-social-et-conditions-multiples-sur-feuille-verification-sur-ordinateur">Exercice : Réseau social et conditions multiples <em>(sur feuille, vérification sur ordinateur)</em><a class="headerlink" href="#exercice-reseau-social-et-conditions-multiples-sur-feuille-verification-sur-ordinateur" title="Permanent link">&para;</a></h3>
 <p>Sur un réseau social, le contenu des publications d'un utilisateur n'est visible que par ses amis. On représente le problème avec les variables suivantes :<br />
 - <code>ami</code> est une variable de type <strong>booléen</strong> indiquant si l'utilisateur qui veut voir les publications est un ami ou non.<br />
@@ -3545,26 +3567,39 @@ F --&gt; ......................</code></pre></p>
 <li>Combien y a-t-il de cas à traiter ? </li>
 <li>
 <p>Proposer un algorithme qui modélise ce problème et le traduire en Python :</p>
+<div class="admonition quote">
+<p class="admonition-title">Algorithme et code</p>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
+</div>
 <p>On rajoute une possibilité de voir la publication : si celle-ci est publique, elle est visible par tout utilisateur, même s'il n'est pas ami avec celui qui poste. On utilise une variable booléenne <code>publique</code> pour représenter cela.</p>
 </li>
 <li>
 <p>Combien y a-t-il à présent de cas à traiter ? </p>
 </li>
-<li>Proposer un nouvel algorithme et le traduire en Python.
+<li>
+<p>Proposer un nouvel algorithme et le traduire en Python.</p>
+<div class="admonition quote">
+<p class="admonition-title">Algorithme et code</p>
 <div class="highlight"><pre><span></span><code>
-</code></pre></div></li>
+</code></pre></div>
+</div>
+</li>
 </ol>
 <h3 id="exercice-publicite-ciblee-sur-feuille-a-tester-sur-ordinateur">Exercice : Publicité ciblée <em>(sur feuille, à tester sur ordinateur)</em><a class="headerlink" href="#exercice-publicite-ciblee-sur-feuille-a-tester-sur-ordinateur" title="Permanent link">&para;</a></h3>
 <p>Un vendeur de téléphones veut afficher de la publicité aux personnes se trouvant à proximité, c'est-à-dire à moins de 10 km. </p>
 <ol>
-<li>Définir une fonction <code>publicite_ciblee(distance)</code> prenant en paramètre la distance entre une personne et le magasin en km, et affichant <code>"Promotions chez monTel, venez rapidement !"</code> si <code>distance</code> est inférieure à 10 km. </li>
-</ol>
+<li>
+<p>Définir une fonction <code>publicite_ciblee(distance)</code> prenant en paramètre la distance entre une personne et le magasin en km, et affichant <code>"Promotions chez monTel, venez rapidement !"</code> si <code>distance</code> est inférieure à 10 km. </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
-<ol>
-<li>Appeler la fonction pour <code>distance</code> valant <code>5</code>, puis pour distance valant <code>19</code>. Que fait la fonction dans chacun des cas ? </li>
+</div>
+</li>
+<li>
+<p>Appeler la fonction pour <code>distance</code> valant <code>5</code>, puis pour distance valant <code>19</code>. Que fait la fonction dans chacun des cas ? </p>
+</li>
 </ol>
 <p><br></p>
 <hr />
@@ -3664,6 +3699,148 @@ F --&gt; ......................</code></pre></p>
 </li>
 <li>Appeler la fonction en lui donnant la valeur <code>25</code> en paramètre.</li>
 </ul>
+<hr />
+<h2 id="tp-conditions-multiples">TP : Conditions multiples<a class="headerlink" href="#tp-conditions-multiples" title="Permanent link">&para;</a></h2>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>L'objectif de ce TP est d'écrire un programme qui renvoie automatiquement le nombre de jours qu'il y a dans un mois de l'année.</p>
+</blockquote>
+<p>On représente les mois de l'année par leur numéro : par exemple janvier est le mois <code>1</code>, février le mois <code>2</code>, et ainsi de suite jusqu'au mois de décembre représenté par l'entier <code>12</code>.</p>
+<p><strong><em>Tableau 1. Mois de début d'année</em></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Janvier</th>
+<th align="center">Février</th>
+<th align="center">Mars</th>
+<th align="center">Avril</th>
+<th align="center">Mai</th>
+<th align="center">Juin</th>
+<th align="center">Juillet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Entier</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Nombre de jours</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Tableau 2. Mois de fin d'année</em></strong></p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Août</th>
+<th align="center">Septembre</th>
+<th align="center">Octobre</th>
+<th align="center">Novembre</th>
+<th align="center">Décembre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Entier</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Nombre de jours</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Compléter le tableau avec l'entier associé à chaque mois. </p>
+</li>
+<li>
+<p>Le nombre de jours contienus dans un mois dépend de s'il fait partie des 7 premiers mois de l'année, ou des 5 derniers. Ecrire une fonction, stockant dans une variable <code>debut</code> un booléen, valant <code>True</code> si mois est un mois du début de l'année, <code>False</code> sinon. </p>
+</li>
+</ol>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">est_debut</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</code></pre></div>
+</div>
+<ol>
+<li>
+<p>a. Au début de l'année, si <code>mois</code> est pair, alors il a 30 jours, sauf s'il s'agit du mois de février qui en a en général 28. Sinon, il a 31 jours. Compléter le tableau des premiers mois de l'année, pour indiquer le nombre de jours des mois de janvier à juillet.  </p>
+<p>b. Traduire l'algorithme suivant en Python permettant de stocker le nombre de jours du mois <code>mois</code> dans une variable <code>nb_jours</code>.</p>
+<ul>
+<li>Si mois vaut ...<em>(à compléter)</em>, on stocke la valeur 28 dans nb_jours,</li>
+<li>sinon si mois est pair, stocke la valeur 30 dans nb_jours,</li>
+<li>sinon, il stocke la valeur 31 dans nb_jours.</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p>a. Si l'on est à la fin de l'année, c'est l'inverse : si le mois est pair, il a 31 jours, sinon il a 30 jours. Compléter le tableau des mois de fin d'année (dans l'introduction) avec leur nombre de jours.</p>
+<p>b. Ecrire un programme <em>(s'inspirant de celui de la question 2)</em> stockant le bon nombre de jours dans <code>nb_jours</code> pour ce cas là.</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p>Ecrire un programme reprenant tous les cas précédents. Il suivra l'algorithme suivant :</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>Si mois est du début de l&#39;année
+    Si c&#39;est le mois de février
+        on stocke le nombre de jours correspondant dans nb_jours
+    Sinon s&#39;il est pair
+        on stocke le nombre de jours correspondant dans nb_jours
+    Sinon
+        on stocke le nombre de jours correspondant dans nb_jours
+Sinon
+    S&#39;il est pair
+        on stocke le nombre de jours correspondant dans nb_jours
+    Sinon
+        on stocke le nombre de jours correspondant dans nb_jours
+</code></pre></div>
+<ol>
+<li>
+<p>Tester ce programme pour <code>mois</code> valant <code>3</code>, <code>6</code>, et <code>10</code>.</p>
+</li>
+<li>
+<p>Ecrire une fonction <code>compte_jours(m)</code> prenant en paramètre un mois <code>m</code> et renvoyant son nombre de jours stocké dans la variable <code>nb_jours</code>.</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</div>
+</li>
+</ol>
 
 
   

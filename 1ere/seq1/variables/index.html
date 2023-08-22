@@ -3271,29 +3271,90 @@ text-align: justify}
 <p>Les données manipulées par les algorithmes sont stockées dans des variables.</p>
 <div class="admonition info">
 <p class="admonition-title">Définition</p>
-<p>Une <strong>variable</strong> correspond à une zone de mémoire. Elle est désignée par un <strong><em>nom</em></strong> et contient une <strong><em>valeur</em></strong>.</p>
+<p>Une <strong>variable</strong> correspond à une zone de mémoire, qui stocke des données. Elle est désignée par un <strong><em>nom</em></strong> et contient une <strong><em>valeur</em></strong>.</p>
 </div>
 <p><center>
 <img src="../img/var.png" height=110 style="float: right"> </center></p>
 <div class="admonition example">
-<p class="admonition-title">Exemple :</p>
+<p class="admonition-title">Exemple</p>
 <p>Pour stocker le nombre de pommes que l'on a pour faire la tarte, on peut utiliser une variable dont le nom est <code>pommes</code>. Avant de commencer la recette, elle contient la valeur <code>4</code>.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Définitions</p>
-<p>Cette valeur peut être de différents <strong>types</strong>. 
-On distingue :<br />
-- les <em>entiers</em> ou <code>int</code> (pour <code>integer</code>): nombre entier relatif (<code>10</code>, <code>-15723</code>,...),<br />
-- les <em>flottants</em> ou <code>float</code> : nombre à virgule (écrit avec des points en Python : <code>5.38</code>, <code>16.0</code>,...),<br />
-- les <em>chaînes de caractères</em> ou <code>str</code> (pour <code>string</code>) : suite de caractères (<code>snt</code>, <code>2nde5</code>,...),<br />
-- les <em>booléens</em> ou <code>bool</code>: vrai ou faux (<code>True</code> ou <code>False</code>).</p>
+<p>Cette valeur peut être de différents <strong>types</strong>. Compléter le tableau suivant avec avec les <em>types de base</em> :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">En Python (en anglais)</th>
+<th align="center">Exemples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>entier</strong></td>
+<td align="center"><code>int</code> ("integer")</td>
+<td align="center">1, 36, -27</td>
+</tr>
+<tr>
+<td align="center"><strong>flottants</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>chaînes de caractères</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>booléens</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<details class="check">
+<summary>Solution</summary>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">En Python (en anglais)</th>
+<th align="center">Exemples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>entier</strong></td>
+<td align="center"><code>int</code> ("integer")</td>
+<td align="center"><code>1</code>, <code>36</code>, <code>-27</code></td>
+</tr>
+<tr>
+<td align="center"><strong>flottants</strong></td>
+<td align="center"><code>float</code> ("floating point number")</td>
+<td align="center"><code>1.0</code>, <code>-3.14</code>, <code>10e15</code></td>
+</tr>
+<tr>
+<td align="center"><strong>chaînes de caractères</strong></td>
+<td align="center"><code>str</code> ("string")</td>
+<td align="center"><code>'abc'</code>, <code>"bonjour"</code>, <code>'12345'</code></td>
+</tr>
+<tr>
+<td align="center"><strong>booléens</strong></td>
+<td align="center"><code>bool</code> ("boolean")</td>
+<td align="center"><code>True</code> ou <code>False</code></td>
+</tr>
+</tbody>
+</table>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<p>Notre variable <code>pommes</code> contenant la valeur <code>4</code> est donc de type entier.</p>
+<p>Notre variable <code>pommes</code> contenant la valeur <code>4</code> est donc de type <strong>entier</strong>. Si on écrit <code>4.0</code>, elle est de type <strong><em>flottant</em></strong>, et si on écrit <code>"4"</code>, elle est de type <strong><em>chaînes de caractères</em></strong>.</p>
 </div>
 <h4 id="b-laffectation-et-les-operateurs">B. L'affectation et les opérateurs<a class="headerlink" href="#b-laffectation-et-les-operateurs" title="Permanent link">&para;</a></h4>
 <div class="admonition info">
+<p class="admonition-title">Définition</p>
 <p><strong>Affecter</strong> une valeur à une variable consiste à associer une valeur (qui a un type) à une variable (qui a un nom), à un endroit donné dans notre programme. On utilise l'opérateur <code>=</code> en Python.</p>
 </div>
 <p>Cette valeur peut être changée dans la suite du programme. Une <em>variable</em>, par définition, n'est pas fixe !</p>
@@ -3310,16 +3371,157 @@ On distingue :<br />
 <img src="../img/affectation.png" height = 140> </center></p>
 </details>
 </div>
-<p>Il est possible d'effectuer toute sorte d'opérations sur ces variables : <code>+</code> (addition), <code>-</code> (soustraction), <code>*</code> (multiplication), <code>/</code> (division), <code>//</code> (division euclidienne) ou encore <code>%</code> (modulo : reste d'une division euclidienne). Cela permet de modifier les valeurs des variables au fur et à mesure d'un programme.</p>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>On peut effectuer toute sorte d'opérations sur ces variables, avec différents <strong>opérateurs</strong>. Compléter le tableau suivant : </p>
+<table>
+<thead>
+<tr>
+<th align="center">Symbole</th>
+<th align="center">Opération</th>
+<th align="center">Types de variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>+</code></td>
+<td align="center">addition</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>-</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>*</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>/</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>//</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>%</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<details class="check">
+<summary>Solution</summary>
+<table>
+<thead>
+<tr>
+<th align="center">Symbole</th>
+<th align="center">Opération</th>
+<th align="center">Types de variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>+</code></td>
+<td align="center">addition</td>
+<td align="center"><code>int</code>, <code>float</code>, <code>str</code>, (<code>bool</code>)</td>
+</tr>
+<tr>
+<td align="center"><code>-</code></td>
+<td align="center">soustraction</td>
+<td align="center"><code>int</code>, <code>float</code>, (<code>bool</code>)</td>
+</tr>
+<tr>
+<td align="center"><code>*</code></td>
+<td align="center">multiplication</td>
+<td align="center"><code>int</code>, <code>float</code>, <code>str</code>, (<code>bool</code>)</td>
+</tr>
+<tr>
+<td align="center"><code>/</code></td>
+<td align="center">division</td>
+<td align="center"><code>int</code>, <code>float</code>, (<code>bool</code>)</td>
+</tr>
+<tr>
+<td align="center"><code>//</code></td>
+<td align="center">quotient de la division euclidienne</td>
+<td align="center">idem</td>
+</tr>
+<tr>
+<td align="center"><code>%</code></td>
+<td align="center">reste de la division euclidienne (modulo)</td>
+<td align="center">idem</td>
+</tr>
+</tbody>
+</table>
+</details>
+</div>
+<p>Les opérateurs permettent de modifier les valeurs des variables au fur et à mesure d'un programme.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <div class="highlight"><pre><span></span><code><span class="n">pommes</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">pommes</span> <span class="o">=</span> <span class="n">pommes</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">pommes</span> <span class="o">=</span> <span class="n">pommes</span><span class="o">*</span><span class="mi">3</span>
 </code></pre></div>
 <details class="note">
-<summary>Que contient la variable pomme après exécution de ces deux instructions ? Quelle est la différence avec la manière utilisée dans l'exemple précédent ?</summary>
-<p>Elle contient la valeur 3. La différence est que l'on n'a pas à savoir la valeur de <code>pommes</code> avant de lui retirer <code>1</code>.</p>
+<summary>Que contient la variable pomme après exécution de ces deux instructions ?</summary>
+<p>Elle contient la valeur 9.</p>
 </details>
+<p>On peut représenter l'évolution des valeurs stockées dans les variables d'un programme avec une <strong>table de trace</strong>. </p>
+<div class="admonition note">
+<p class="admonition-title">Compléter celle correspondant à ce programme :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Ligne</th>
+<th align="center"><code>pommes</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<details class="check">
+<summary>Solution</summary>
+<table>
+<thead>
+<tr>
+<th align="center">Ligne</th>
+<th align="center"><code>pommes</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">9</td>
+</tr>
+</tbody>
+</table>
+</details>
+</div>
 </div>
 <hr />
 <h2 id="td-variables-et-affectation">TD : Variables et affectation<a class="headerlink" href="#td-variables-et-affectation" title="Permanent link">&para;</a></h2>
@@ -3394,33 +3596,33 @@ On distingue :<br />
 </li>
 <li>
 <p>On stocke le nombre d'amis dans une variable <code>nb_amis</code>. Compléter le code pour avoir successivement le nombre d'amis de cet utilisateur dans 1, 2 et 3 ans.
-<div class="highlight"><pre><span></span><code><span class="n">nb_amis</span> <span class="o">=</span> <span class="mi">200</span>
+    <div class="highlight"><pre><span></span><code><span class="n">nb_amis</span> <span class="o">=</span> <span class="mi">200</span>
 </code></pre></div></p>
 </li>
 </ol>
 <h3 id="exercice-valeurs-dune-variable">Exercice : Valeurs d'une variable<a class="headerlink" href="#exercice-valeurs-dune-variable" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Que vaut <code>x</code> après exécution de ce programme ? ...............
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+    <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
 </code></pre></div></li>
 <li>Que vaut <code>x</code> après exécution de ce programme ? ...............<br />
-Que vaut <code>y</code> ? ...............
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+    Que vaut <code>y</code> ? ...............
+    <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
 </code></pre></div></li>
 </ul>
 <h3 id="exercice-manipulation-de-variables-sur-feuille">Exercice : Manipulation de variables <em>(sur feuille)</em><a class="headerlink" href="#exercice-manipulation-de-variables-sur-feuille" title="Permanent link">&para;</a></h3>
 <p>On donne le code suivant :
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">9</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">24</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">a</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">t</span>
+<div class="highlight"><pre><span></span><code><span class="mi">1</span>  <span class="n">a</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="mi">2</span>  <span class="n">b</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="mi">3</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">a</span>
+<span class="mi">4</span>  <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="mi">5</span>  <span class="n">b</span> <span class="o">=</span> <span class="n">t</span>
 </code></pre></div>
-1. Remplir le tableau suivant, appelé <strong>table de trace</strong>, avec la valeur de chaque variable à chaque ligne du programme :</p>
+1. Remplir la <strong>table de trace</strong> suivante avec la valeur de chaque variable à chaque ligne du programme :</p>
 <table>
 <thead>
 <tr>
@@ -3465,7 +3667,7 @@ Que vaut <code>y</code> ? ...............
 </table>
 <ol>
 <li>En déduire ce que fait ce programme.
-<br> <br></li>
+    <br> <br></li>
 </ol>
 
 

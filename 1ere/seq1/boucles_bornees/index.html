@@ -3270,12 +3270,15 @@ text-align: justify}
 <p>Lorsque l'on utilise une boucle non-bornée, on n'a pas à savoir à l'avance combien de fois est-ce que l'on va répéter les opérations. On utilise une <strong>boucle bornée</strong> (qui a des bornes, de départ et d'arrivée) lorsqu'on le sait.</p>
 <h3 id="a-exemple">A. Exemple<a class="headerlink" href="#a-exemple" title="Permanent link">&para;</a></h3>
 <p>Pour afficher tous les entiers de <code>1</code> à <code>10</code> avec une boucle bornée, l'algorithme est le suivant <em>(compléter sa traduction Python)</em> :</p>
+<div class="admonition quote">
+<p class="admonition-title">Algorithme et code</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">Pour</span> <span class="n">i</span> <span class="n">de</span> <span class="mi">1</span> <span class="n">à</span> <span class="mi">10</span>
     <span class="n">afficher</span> <span class="n">i</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div></p>
+</div>
 <p>Le <code>i</code> est une variable créée avec la boucle, dont la valeur change automatiquement à chaque nouveau passage = chaque nouvelle <strong>itération</strong>.</p>
 <p>Comment <code>i</code> varie est déterminé par la <strong>fonction <code>range</code></strong> : elle permet d'obtenir une <strong>séquence de nombres</strong> à partir d'un <strong><em>nombre de départ</em></strong> et <strong><em>d'arrivée</em></strong> (et éventuellement d'un <strong><em>pas</em></strong> : la différence entre deux nombres successifs de la séquence). </p>
 <p>Voici un extrait de sa documentation :</p>
@@ -3289,10 +3292,14 @@ text-align: justify}
 <span class="n">step</span>
     <span class="n">The</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">step</span> <span class="n">parameter</span> <span class="p">(</span><span class="ow">or</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">the</span> <span class="n">parameter</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">supplied</span><span class="p">)</span>
 </code></pre></div>
-<p>Quelle est la valeur de début par défaut ? La valeur du pas par défaut ?<br />
-<strong><em>Par défaut, la valeur de début est 0 et la valeur du pas est 1.</em></strong></p>
+<details class="note">
+<summary>Quelle est la valeur de début par défaut ? La valeur du pas par défaut ?</summary>
+<p>Par défaut, la valeur de début est 0 et la valeur du pas est 1.</p>
+</details>
 <h3 id="b-cas-general">B. Cas général<a class="headerlink" href="#b-cas-general" title="Permanent link">&para;</a></h3>
 <p>De manière générale, la valeur contenue dans la variable de la boucle est prise dans une <strong>séquence</strong> : une suite de valeurs (exemple : une chaîne de caractères).</p>
+<div class="admonition quote">
+<p class="admonition-title">Algorithme</p>
 <div class="highlight"><pre><span></span><code><span class="n">Pour</span> <span class="n">i</span> <span class="n">dans</span> <span class="n">séquence</span>
     <span class="n">instructions</span>
 
@@ -3305,6 +3312,9 @@ text-align: justify}
 <span class="n">Pour</span> <span class="n">l</span> <span class="n">variant</span> <span class="n">de</span> <span class="n">debut</span> <span class="n">à</span> <span class="n">fin</span><span class="o">-</span><span class="mi">1</span> <span class="n">en</span> <span class="n">variant</span> <span class="n">de</span> <span class="n">pas</span>
     <span class="n">instructions</span>
 </code></pre></div>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
     <span class="n">instructions</span>
 
@@ -3317,14 +3327,20 @@ text-align: justify}
 <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">debut</span><span class="p">,</span> <span class="n">fin</span><span class="p">,</span> <span class="n">pas</span><span class="p">):</span>
     <span class="n">instructions</span>
 </code></pre></div>
+</div>
 <hr />
 <h2 id="td-les-boucles-bornees">TD : Les boucles bornées<a class="headerlink" href="#td-les-boucles-bornees" title="Permanent link">&para;</a></h2>
 <h3 id="exercice-boucles-sur-des-entiers-sur-feuille-verification-sur-ordinateur">Exercice : Boucles sur des entiers <em>(sur feuille, vérification sur ordinateur)</em><a class="headerlink" href="#exercice-boucles-sur-des-entiers-sur-feuille-verification-sur-ordinateur" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div>
-1. Combien de fois l'intruction de la boucle <code>for</code> va-t-elle être exécutée ?
-2. Compléter la table de trace suivante (en ajoutant le bon nombre de lignes, correspondant au nombre d'itérations) :</p>
+</div>
+<ol>
+<li>Combien de fois l'intruction de la boucle <code>for</code> va-t-elle être exécutée ?</li>
+<li>Compléter la table de trace suivante (en ajoutant le bon nombre de lignes, correspondant au nombre d'itérations) :</li>
+</ol>
 <p><center></p>
 <table>
 <thead>
@@ -3357,34 +3373,47 @@ text-align: justify}
 <p>Qu'affichent les programmes suivants ? Vous appliquerez au besoin la même méthode que précédemment (attention aux paramètres du <code>range</code> !).</p>
 </li>
 </ol>
-<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+<div class="admonition quote">
+<p class="admonition-title">Code 1</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div>
-<br></p>
-<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Code 2</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
-<br></p>
-<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Code 3</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
-<br><br></p>
+</div>
+<p><br></p>
 <h3 id="exercice-boucles-bornees-et-non-bornees">Exercice : boucles bornées et non-bornées<a class="headerlink" href="#exercice-boucles-bornees-et-non-bornees" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Transformer le code suivant pour utiliser une boucle bornée à la place d'une boucle non-bornée. Quelle valeur contient la variable <code>somme</code>, dans les deux cas, après exécution du code ? </li>
 </ol>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">c</span>
 </code></pre></div>
+</div>
 <ol>
 <li>Transformer le code suivant pour utiliser une boucle non-bornée à la place d'une boucle bornée. Quelle valeur contient la variable <code>total</code>, dans les deux cas, après exécution du code ?</li>
 </ol>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span>
 </code></pre></div>
+</div>
 <h3 id="exercice-boucles-sur-des-chaines-de-caracteres">Exercice : Boucles sur des chaînes de caractères<a class="headerlink" href="#exercice-boucles-sur-des-chaines-de-caracteres" title="Permanent link">&para;</a></h3>
 <p>Une chaîne de caractères stocke plusieurs valeurs, plusieurs caractères. Les différents caractères sont accessibles grâce à leur <strong>position</strong> dans la chaîne, appelée leur <strong>indice</strong>. </p>
 <p>Le tableau suivant donne l'indice des différents caractères de la chaîne <code>NSI</code> :</p>
@@ -3419,11 +3448,14 @@ Avec quelle instruction accéder au caractère <code>S</code> dans la chaîne <c
 <p>Pour parcourir toute la chaîne, on a besoin de sa longueur, que l'on extrait avec la fonction <code>len</code>. Dans notre cas, que vaut <code>len(chaine)</code> ?</p>
 </li>
 <li>
-<p>Le code Python suivant affiche un à un des différents caractères de <code>c</code>. 
-    <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)):</span>
+<p>Le code Python suivant affiche un à un des différents caractères de <code>c</code>. </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </code></pre></div>
-    Adapter ce code pour stocker dans une nouvelle variable <code>chaine_inversee</code> les caractères de <code>chaine</code> mais dans l'ordre inverse : dans notre cas le caractère d'indice <code>0</code> se retrouve à l'indice <code>2</code>, celui d'indice <code>2</code> à l'indice <code>0</code>. </p>
+</div>
+<p>Adapter ce code pour stocker dans une nouvelle variable <code>chaine_inversee</code> les caractères de <code>chaine</code> mais dans l'ordre inverse : dans notre cas le caractère d'indice <code>0</code> se retrouve à l'indice <code>2</code>, celui d'indice <code>2</code> à l'indice <code>0</code>. </p>
 </li>
 </ol>
 <hr />
