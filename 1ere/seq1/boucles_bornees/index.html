@@ -887,6 +887,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tp-introduction-aux-boucles-bornees" class="md-nav__link">
+    TP : Introduction aux boucles bornées
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cours" class="md-nav__link">
     Cours
   </a>
@@ -896,6 +903,20 @@
         <li class="md-nav__item">
   <a href="#td-les-boucles-bornees" class="md-nav__link">
     TD : Les boucles bornées
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-dessiner-des-formes-geometriques-avec-turtle-2" class="md-nav__link">
+    TP : Dessiner des formes géométriques avec Turtle 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-boucles-bornees-et-fonctions" class="md-nav__link">
+    TP : Boucles bornées et fonctions
   </a>
   
 </li>
@@ -3231,6 +3252,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tp-introduction-aux-boucles-bornees" class="md-nav__link">
+    TP : Introduction aux boucles bornées
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cours" class="md-nav__link">
     Cours
   </a>
@@ -3240,6 +3268,20 @@
         <li class="md-nav__item">
   <a href="#td-les-boucles-bornees" class="md-nav__link">
     TD : Les boucles bornées
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-dessiner-des-formes-geometriques-avec-turtle-2" class="md-nav__link">
+    TP : Dessiner des formes géométriques avec Turtle 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-boucles-bornees-et-fonctions" class="md-nav__link">
+    TP : Boucles bornées et fonctions
   </a>
   
 </li>
@@ -3266,6 +3308,59 @@ text-align: justify}
 </style>
 
 <h1 id="iv-les-boucles-bornees">IV. Les boucles bornées<a class="headerlink" href="#iv-les-boucles-bornees" title="Permanent link">&para;</a></h1>
+<h2 id="tp-introduction-aux-boucles-bornees">TP : Introduction aux boucles bornées<a class="headerlink" href="#tp-introduction-aux-boucles-bornees" title="Permanent link">&para;</a></h2>
+<p>Les <strong>boucles</strong>, en programmation, servent à répéter plusieurs les mêmes instructions <em>(ou presque les mêmes instructions)</em>. On s'intéresse dans ce TP aux <strong>boucles bornées</strong> : on sait <strong><em>à l'avance</em></strong> combien de fois elles vont s'exécuter.</p>
+<ol>
+<li>
+<p>On utilise une boucle <code>for</code> pour répéter l'affichage de la chaîne de caractères <code>"NSI"</code>. Le nombre de fois que l'instruction est répétée est définie par les paramètres du <code>range(...)</code>.   </p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>a. Combien de fois cette chaîne apparaît-elle dans la console ? .....................<br />
+b. Modifier le code pour que <code>"SNT"</code> s'affiche 10 fois.</p>
+</li>
+<li>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+<p>a. Qu'est-ce qui a changé dans la syntaxe du <code>for</code> par rapport à la question 1 ? ...................................................<br />
+b. Le paramètre du <code>range</code> est toujours <code>5</code>. Noter la liste des valeurs qui s'affichent, pour ce paramètre : ..................................................   </p>
+</li>
+<li>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+<p>a. Qu'est-ce qui a changé dans la syntaxe du <code>for</code> par rapport à la question 2 ? ..................................................<br />
+b. De combien à combien vont les valeurs qui s'affichent ? ..................................................  </p>
+</li>
+<li>
+<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+a. Qu'est-ce qui a changé dans la syntaxe du <code>for</code> par rapport à la question 3 ? ..................................................<br />
+b. En vous basant sur l'affichage correspondant à ce code, à quoi peut bien correspondre le <code>-1</code> écrit dans le <code>range</code> ? ..................................................  </p>
+</li>
+<li>
+<p>Utiliser ce que vous avez vu dans les questions précédentes pour afficher les entiers de <code>1</code> à <code>10</code> compris.</p>
+</li>
+<li>
+<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+a. Quelles valeurs le programme affiche-t-il ? ......................................<br />
+b. Le modifier pour afficher cette fois-ci les multiples de <code>3</code> de <code>1</code> à <code>10</code> compris.</p>
+</li>
+<li>
+<p>Afficher, à la manière d'un thermomètre très précis, tous les entiers de <code>0</code> à <code>40</code> compris.</p>
+</li>
+<li>
+<p>Afficher tous les entiers de <code>40</code> à <code>0</code> compris.</p>
+</li>
+<li>
+<p>Afficher, à la manière d'un thermomètre moins précis, les multiples de 5 en partant de <code>40</code> et en allant jusqu'à <code>0</code> compris.</p>
+</li>
+</ol>
+<hr />
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <p>Lorsque l'on utilise une boucle non-bornée, on n'a pas à savoir à l'avance combien de fois est-ce que l'on va répéter les opérations. On utilise une <strong>boucle bornée</strong> (qui a des bornes, de départ et d'arrivée) lorsqu'on le sait.</p>
 <h3 id="a-exemple">A. Exemple<a class="headerlink" href="#a-exemple" title="Permanent link">&para;</a></h3>
@@ -3280,7 +3375,7 @@ text-align: justify}
 </code></pre></div></p>
 </div>
 <p>Le <code>i</code> est une variable créée avec la boucle, dont la valeur change automatiquement à chaque nouveau passage = chaque nouvelle <strong>itération</strong>.</p>
-<p>Comment <code>i</code> varie est déterminé par la <strong>fonction <code>range</code></strong> : elle permet d'obtenir une <strong>séquence de nombres</strong> à partir d'un <strong><em>nombre de départ</em></strong> et <strong><em>d'arrivée</em></strong> (et éventuellement d'un <strong><em>pas</em></strong> : la différence entre deux nombres successifs de la séquence). </p>
+<p>Comment <code>i</code> varie est déterminé par la <strong>fonction <code>range</code></strong> : elle permet d'obtenir une <strong>séquence de nombres</strong> à partir d'un <strong><em>nombre de départ</em></strong>, <strong><em>d'arrivée</em></strong> et éventuellement d'un <strong><em>pas</em></strong> : la différence entre deux nombres successifs de la séquence. </p>
 <p>Voici un extrait de sa documentation :</p>
 <div class="highlight"><pre><span></span><code><span class="nb">range</span><span class="p">(</span><span class="n">stop</span><span class="p">)</span>
 <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">[,</span> <span class="n">step</span><span class="p">])</span>
@@ -3293,11 +3388,27 @@ text-align: justify}
     <span class="n">The</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">step</span> <span class="n">parameter</span> <span class="p">(</span><span class="ow">or</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">the</span> <span class="n">parameter</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">supplied</span><span class="p">)</span>
 </code></pre></div>
 <details class="note">
+<summary>S'il n'y a qu'un paramètre, que désigne-t-il ?</summary>
+<p>Il désigne la valeur avant laquelle on s'arrête : la dernière valeur prise par la variable est <code>stop-1</code>.</p>
+</details>
+<details class="note">
+<summary>S'il y a 2 paramètres, que désignent-ils ?</summary>
+<p>Ils désignent la valeur de départ (incluse), et la valeur avant laquelle on s'arrête.</p>
+</details>
+<details class="note">
+<summary>Même question s'il y en a 3.</summary>
+<p>Ils désignent la valeur de départ, la valeur avant laquelle on s'arrête, et le pas.</p>
+</details>
+<details class="note">
 <summary>Quelle est la valeur de début par défaut ? La valeur du pas par défaut ?</summary>
 <p>Par défaut, la valeur de début est 0 et la valeur du pas est 1.</p>
 </details>
 <h3 id="b-cas-general">B. Cas général<a class="headerlink" href="#b-cas-general" title="Permanent link">&para;</a></h3>
-<p>De manière générale, la valeur contenue dans la variable de la boucle est prise dans une <strong>séquence</strong> : une suite de valeurs (exemple : une chaîne de caractères).</p>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>Une <strong>boucle bornée</strong> permet de répéter des instructions un nombre de fois <em>déterminé</em> à l'avance. On utilise souvent une <strong><em>variable</em></strong> stockant une valeur différente à chaque nouvelle itération.</p>
+</div>
+<p>De manière générale, la valeur contenue dans la variable de la boucle est prise dans une <strong>séquence</strong> <em>(une suite de valeurs)</em> qui peut être créée grâce à la fonction <code>range</code>.</p>
 <div class="admonition quote">
 <p class="admonition-title">Algorithme</p>
 <div class="highlight"><pre><span></span><code><span class="n">Pour</span> <span class="n">i</span> <span class="n">dans</span> <span class="n">séquence</span>
@@ -3330,7 +3441,7 @@ text-align: justify}
 </div>
 <hr />
 <h2 id="td-les-boucles-bornees">TD : Les boucles bornées<a class="headerlink" href="#td-les-boucles-bornees" title="Permanent link">&para;</a></h2>
-<h3 id="exercice-boucles-sur-des-entiers-sur-feuille-verification-sur-ordinateur">Exercice : Boucles sur des entiers <em>(sur feuille, vérification sur ordinateur)</em><a class="headerlink" href="#exercice-boucles-sur-des-entiers-sur-feuille-verification-sur-ordinateur" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-1-boucles-sur-des-entiers">Exercice 1 : Boucles sur des entiers<a class="headerlink" href="#exercice-1-boucles-sur-des-entiers" title="Permanent link">&para;</a></h3>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
@@ -3339,8 +3450,8 @@ text-align: justify}
 </div>
 <ol>
 <li>Combien de fois l'intruction de la boucle <code>for</code> va-t-elle être exécutée ?</li>
-<li>Compléter la table de trace suivante (en ajoutant le bon nombre de lignes, correspondant au nombre d'itérations) :</li>
-</ol>
+<li>
+<p>Compléter la table de trace suivante (en ajoutant le bon nombre de lignes, correspondant au nombre d'itérations) :</p>
 <p><center></p>
 <table>
 <thead>
@@ -3365,14 +3476,12 @@ text-align: justify}
 </table>
 <p></center>
 <br><br><br></p>
-<ol>
+</li>
 <li>
 <p>En déduire ce qu'affiche ce programme.</p>
 </li>
 <li>
 <p>Qu'affichent les programmes suivants ? Vous appliquerez au besoin la même méthode que précédemment (attention aux paramètres du <code>range</code> !).</p>
-</li>
-</ol>
 <div class="admonition quote">
 <p class="admonition-title">Code 1</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
@@ -3392,10 +3501,12 @@ text-align: justify}
 </code></pre></div>
 </div>
 <p><br></p>
-<h3 id="exercice-boucles-bornees-et-non-bornees">Exercice : boucles bornées et non-bornées<a class="headerlink" href="#exercice-boucles-bornees-et-non-bornees" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Transformer le code suivant pour utiliser une boucle bornée à la place d'une boucle non-bornée. Quelle valeur contient la variable <code>somme</code>, dans les deux cas, après exécution du code ? </li>
+</li>
 </ol>
+<h3 id="exercice-2-boucles-bornees-et-non-bornees">Exercice 2 : boucles bornées et non-bornées<a class="headerlink" href="#exercice-2-boucles-bornees-et-non-bornees" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Transformer le code suivant pour utiliser une boucle bornée à la place d'une boucle non-bornée. Quelle valeur contient la variable <code>somme</code>, dans les deux cas, après exécution du code ? </p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
@@ -3404,9 +3515,9 @@ text-align: justify}
     <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">c</span>
 </code></pre></div>
 </div>
-<ol>
-<li>Transformer le code suivant pour utiliser une boucle non-bornée à la place d'une boucle bornée. Quelle valeur contient la variable <code>total</code>, dans les deux cas, après exécution du code ?</li>
-</ol>
+</li>
+<li>
+<p>Transformer le code suivant pour utiliser une boucle non-bornée à la place d'une boucle bornée. Quelle valeur contient la variable <code>total</code>, dans les deux cas, après exécution du code ?</p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
@@ -3414,7 +3525,9 @@ text-align: justify}
     <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span>
 </code></pre></div>
 </div>
-<h3 id="exercice-boucles-sur-des-chaines-de-caracteres">Exercice : Boucles sur des chaînes de caractères<a class="headerlink" href="#exercice-boucles-sur-des-chaines-de-caracteres" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<h3 id="exercice-3-boucles-sur-des-chaines-de-caracteres">Exercice 3 : Boucles sur des chaînes de caractères<a class="headerlink" href="#exercice-3-boucles-sur-des-chaines-de-caracteres" title="Permanent link">&para;</a></h3>
 <p>Une chaîne de caractères stocke plusieurs valeurs, plusieurs caractères. Les différents caractères sont accessibles grâce à leur <strong>position</strong> dans la chaîne, appelée leur <strong>indice</strong>. </p>
 <p>Le tableau suivant donne l'indice des différents caractères de la chaîne <code>NSI</code> :</p>
 <table>
@@ -3459,6 +3572,112 @@ Avec quelle instruction accéder au caractère <code>S</code> dans la chaîne <c
 </li>
 </ol>
 <hr />
+<h2 id="tp-dessiner-des-formes-geometriques-avec-turtle-2">TP : Dessiner des formes géométriques avec Turtle 2<a class="headerlink" href="#tp-dessiner-des-formes-geometriques-avec-turtle-2" title="Permanent link">&para;</a></h2>
+<p>Dans ce TP, on améliore ce qui a été fait dans le premier TP Turtle, en utilisant des boucles.</p>
+<ol>
+<li>
+<p>Voici un code qui permettait de tracer un carré. Vérifier qu'il fonctionne bien en l'exécutant : </p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="n">done</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>Réecrire ce code sans répéter les instructions qui permettent d'avancer et de tourner, mais en utilisant une boucle <code>for</code> à la place.<br />
+<strong><em>Ne pas oublier l'appel <code>done()</code> à la fin !</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="o">...</span>
+</code></pre></div>
+</li>
+<li>
+<p>Réutiliser le code de la question 2 <em>(donc avec une boucle)</em> pour améliorer la définition de la fonction <code>carre(cote, couleur)</code>, faite au TP précédent :</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">carre</span><span class="p">(</span><span class="n">cote</span><span class="p">,</span> <span class="n">couleur</span><span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div>
+</li>
+<li>
+<p>En appelant la fonction <code>carre(cote, couleur)</code>, tracer 4 carrés de 100 pixels de côté, rouges, côte à côte (collés) grâce à une boucle bornée.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="o">...</span>
+</code></pre></div>
+</li>
+<li>
+<p>Tracer encore 4 carrés côte à côte, mais espacés de 50 pixels. On pourra utiliser soit la fonction <code>forward</code>, soit la fonction <code>goto</code>. On rappelle que <code>up()</code> et <code>down()</code> permettent de lever <em>(pour ne pas tracer)</em> et de baisser <em>(pour tracer)</em> la tortue.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="o">...</span>
+</code></pre></div>
+</li>
+<li>
+<p>Utiliser une boucle bornée pour créer 4 cercles grâce à la fonction <code>circle(rayon)</code>, de rayon 50px et espacés de 50px.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="o">...</span>
+</code></pre></div>
+</li>
+<li>
+<p>Utiliser une boucle bornée pour créer 4 cercles, respectivement de rayon 50, 40, 30 et 20px et espacés de 10px.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="o">...</span>
+</code></pre></div>
+</li>
+<li>
+<p>On veut maintenant dessiner 4 carrés espacés de 10px sur une ligne, puis 3 autres lignes de carrés dessinées <em>en-dessous</em>, disposés de la même façon.<br />
+Ecrire le programme correspondant, utilisant 2 boucles imbriquées et la fonction <code>carre</code>. </p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="o">...</span>
+</code></pre></div>
+</li>
+</ol>
+<p><strong><em>Pour aller plus loin...</em></strong><br />
+Ecrire une fonction permettant de choisir le nombre de lignes et le nombre de colonnes de carrés que l'on veut dessiner.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="o">...</span>
+</code></pre></div>
+<p>Ne pas oublier d'<strong>enregistrer</strong> votre travail en cliquant sur la disquette en haut à gauche !</p>
+<hr />
+<h2 id="tp-boucles-bornees-et-fonctions">TP : Boucles bornées et fonctions<a class="headerlink" href="#tp-boucles-bornees-et-fonctions" title="Permanent link">&para;</a></h2>
+<p><strong><em>Pour toutes les questions de ce TP, on utilisera une boucle bornée.</em></strong></p>
+<ol>
+<li>
+<p>Ecrire une fonction <code>somme1()</code> ne prenant pas de paramètre, et <strong><em>renvoyant</em></strong> la somme des entiers de 1 à 100 compris. </p>
+</li>
+<li>
+<p>Ecrire une fonction <code>somme2()</code> ne prenant pas de paramètre, et <strong><em>renvoyant</em></strong> la somme des entiers pairs de 2 à 100 compris. </p>
+</li>
+<li>
+<p>Ecrire une fonction <code>somme3(n)</code> prenant un entier <code>n</code> en paramètre, et <strong><em>renvoyant</em></strong> la somme des entiers de 1 à <code>n</code> compris. </p>
+</li>
+<li>
+<p>Ecrire une fonction <code>somme4(n)</code> prenant un entier <code>n</code> en paramètre, et <strong><em>renvoyant</em></strong> la somme des entiers impairs de 1 à <code>n</code> compris.</p>
+</li>
+<li>
+<p>Ecrire une fonction <code>multiplication(a, b)</code> prenant en paramètres deux entiers <code>a</code> et <code>b</code> et renvoyant la multiplication de <code>a</code> par <code>b</code> <strong><em>sans utiliser l'opérateur <code>*</code>, mais uniquement les opérateurs <code>+</code> et <code>-</code></em></strong>. </p>
+<p><strong><em>Aide :</em></strong> distinguer le cas où <code>a</code> et <code>b</code> sont positifs, du cas où un des deux est positif, du cas où les 2 sont négatifs.  </p>
+</li>
+<li>
+<p>Ecrire une fonction <code>table(n)</code> prenant en paramètre un entier <code>n</code> pouvant valoir de <code>2</code> à <code>9</code> et <strong><em>affichant</em></strong> sa table de multiplication. </p>
+</li>
+<li>
+<p>Ecrire une fonction <code>tables_multiplication()</code> <strong><em>affichant</em></strong> toutes les tables de multiplication des chiffres de <code>2</code> à <code>9</code>. On utilisera <strong><em>2 boucles bornées imbriquées</em></strong>.</p>
+</li>
+</ol>
 
 
   

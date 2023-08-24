@@ -3321,18 +3321,86 @@ text-align: justify}
 <td align="center"></td>
 <td align="center"></td>
 </tr>
+<tr>
+<td align="center">7</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
 </tbody>
 </table>
+<details class="check">
+<summary>Solution</summary>
+<table>
+<thead>
+<tr>
+<th align="center">Ligne</th>
+<th align="center"><code>n</code></th>
+<th align="center"><code>r</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">4</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">2</td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">1</td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+</details>
 <p>On répète les mêmes opérations, <strong><em>jusqu'à ce que</em></strong> <code>n</code> vale <code>0</code>. Au lieu de réécrire les mêmes instructions, on peut utiliser <strong>une boucle tant que</strong>. </p>
 <p>En Python, on peut l'écrire de la manière suivante <em>(code à compléter)</em>:</p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
-<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="k">while</span> <span class="o">................</span>
 </code></pre></div>
 </div>
-<p><br><br></p>
+<details class="check">
+<summary>Solution</summary>
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">while</span> <span class="n">n</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>            
+    <span class="n">r</span> <span class="o">=</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000000" class="comment">###</span><div class="line_v"><div id="editor_00000000"></div></div><div id="term_editor_00000000"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000000","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000000","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000000').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000000" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000000")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000000")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000000" class="py_mk_hide"></span><span id="corr_content_editor_00000000" class="py_mk_hide" data-strudel=""></span></p>
 <h3 id="b-cas-general">B. Cas général<a class="headerlink" href="#b-cas-general" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>Une <strong>boucle non-bornée</strong> répète une instruction un nombre <em>indéterminé</em> de fois. Elle s'exécute tant que sa condition vaut <code>True</code>.</p>
+</div>
 <div class="admonition quote">
 <p class="admonition-title"><strong>Algorithme</strong> et traduction <strong>Python</strong> <em>(à compléter)</em></p>
 <div class="highlight"><pre><span></span><code><span class="n">tant</span> <span class="n">que</span> <span class="n">condition</span>
@@ -3340,11 +3408,13 @@ text-align: justify}
 </code></pre></div>
 </div>
 <p>La condition est une <strong>expression booléenne</strong> et les instructions une suite d'<strong>opérations</strong>. </p>
-<p>Jusqu'à quand est-ce que les instructions vont être exécutées ?
-<br><br></p>
+<details class="note">
+<summary>Quand est-ce que la boucle s'arrête ?</summary>
+<p>Elle s'arrête lorsque la condition devient fausse - c'est-à-dire qu'elle vaut <code>False</code>.</p>
+</details>
 <p>La syntaxe Python est similaire à celle utilisée pour les instructions conditionnelles :<br />
 - la condition est suivie de <code>:</code>,<br />
-- Comment sont placées les instructions par rapport au <code>while</code> ?</p>
+- Comment sont placées les instructions par rapport au <code>while</code> ? <em>Elles sont placées à une indentation sur la droite.</em></p>
 <p><br></p>
 <div class="admonition warning">
 <p class="admonition-title"><strong><em>Attention !</em></strong></p>
@@ -3352,7 +3422,7 @@ text-align: justify}
 </div>
 <hr />
 <h2 id="td">TD<a class="headerlink" href="#td" title="Permanent link">&para;</a></h2>
-<h3 id="exercice-1-sur-feuille-verification-sur-ordinateur">Exercice 1 : <em>(sur feuille, vérification sur ordinateur)</em><a class="headerlink" href="#exercice-1-sur-feuille-verification-sur-ordinateur" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">&para;</a></h3>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">compt</span> <span class="o">=</span> <span class="mi">1</span>
@@ -3361,9 +3431,9 @@ text-align: justify}
 <span class="nb">print</span><span class="p">(</span><span class="n">compt</span><span class="p">)</span>
 </code></pre></div>
 </div>
-<ol>
+<ul>
 <li>Remplir la table de trace suivante, avec le nombre d'itération de boucle adéquat :</li>
-</ol>
+</ul>
 <table>
 <thead>
 <tr>
@@ -3391,15 +3461,15 @@ text-align: justify}
 </tbody>
 </table>
 <p><br><br><br></p>
-<ol>
+<ul>
 <li>En déduire la valeur affichée à la fin de l'exécution du programme. </li>
-</ol>
-<h3 id="exercice">Exercice :<a class="headerlink" href="#exercice" title="Permanent link">&para;</a></h3>
+</ul>
+<h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">&para;</a></h3>
 <p>Ecrire un programme remplissant les conditions suivantes :<br />
 - initialisant une variable <code>n</code> à la valeur <code>0</code>,<br />
 - augmentant <em>(incrémentant)</em> la valeur de <code>n</code> de <code>1</code> à chaque passage dans une boucle <code>while</code>,<br />
-- la valeur de <code>n</code> à la fin de l'exécution de la boucle doit être de <code>5</code>.se </p>
-<h3 id="exercice-identification-sur-feuille-verification-sur-ordinateur">Exercice : Identification <em>(sur feuille, vérification sur ordinateur)</em><a class="headerlink" href="#exercice-identification-sur-feuille-verification-sur-ordinateur" title="Permanent link">&para;</a></h3>
+- la valeur de <code>n</code> à la fin de l'exécution de la boucle doit être de <code>5</code>.</p>
+<h3 id="exercice-3-identification">Exercice 3 : Identification<a class="headerlink" href="#exercice-3-identification" title="Permanent link">&para;</a></h3>
 <p>L'accès à une page Web reste verrouillé tant que l'on n'entre pas le bon mot de passe. On donne le code suivant <em>(incomplet)</em>, qui gère cet accès :</p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
@@ -3417,7 +3487,7 @@ text-align: justify}
 <li>Identifier les différentes variables du code et indiquer leur utilité.</li>
 <li>Compléter le code avec la condition qui convient.</li>
 </ol>
-<h3 id="exercice-conversion-en-binaire">Exercice : Conversion en binaire<a class="headerlink" href="#exercice-conversion-en-binaire" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-4-conversion-en-binaire">Exercice 4 : Conversion en binaire<a class="headerlink" href="#exercice-4-conversion-en-binaire" title="Permanent link">&para;</a></h3>
 <p>Ecrire une fonction <code>binaire(n)</code> prenant en paramètre un entier <code>n</code> écrit en base 10, et fait sa conversion en binaire. Elle ne renvoie rien, le résultat est affiché.</p>
 <p>Rappel du programme vu dans le cours : on affiche le reste dans la division euclidienne d'un nombre <code>n</code> par <code>2</code>, puis remplace <code>n</code> par son quotient dans la division par <code>2</code>, et on réitère ces opérations jusqu'à ce que le quotient vale <code>0</code>. </p>
 

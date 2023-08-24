@@ -852,6 +852,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tp-dessiner-des-formes-geometriques-avec-turtle" class="md-nav__link">
+    TP : Dessiner des formes géométriques avec Turtle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#td-operations-simples-avec-des-fonctions" class="md-nav__link">
     TD : Opérations simples avec des fonctions
   </a>
@@ -3238,6 +3245,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tp-dessiner-des-formes-geometriques-avec-turtle" class="md-nav__link">
+    TP : Dessiner des formes géométriques avec Turtle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#td-operations-simples-avec-des-fonctions" class="md-nav__link">
     TD : Opérations simples avec des fonctions
   </a>
@@ -3330,6 +3344,118 @@ param1 --&gt; F[nom_de_la_fonction];
 </code></pre></div>
 </div>
 </div>
+<hr />
+<h2 id="tp-dessiner-des-formes-geometriques-avec-turtle">TP : Dessiner des formes géométriques avec Turtle<a class="headerlink" href="#tp-dessiner-des-formes-geometriques-avec-turtle" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Introduction aux fichiers Notebook</p>
+<p>L'application Capytale permet d'utiliser des Notebooks : des fichiers qui permettent de faire du Python en ligne. Ils se découpent en plusieurs <em>cellules</em> : soit du texte, soit du code en Python. Pour exécuter les codes, il faut cliquer sur la cellule, puis sur "Exécuter". <em>N'essayez pas de modifier les cellules texte !</em></p>
+</div>
+<p>Nous allons tracer des figures avec la bibliothèque (ensemble de fonctions déjà écrites) <strong><em>turtle</em></strong>, qui fait déplacer une tortue pour dessiner avec.</p>
+<ol>
+<li>
+<p>Le code suivant trace un segment de 100 px. La fonction <code>forward(dist)</code> fait avancer la tortue d'une distance <code>dist</code>, exprimée en pixels. La fonction <code>done()</code> indique que l'on a terminé et doit toujours être placée à la fin du programme.
+Cliquer sur le code, puis sur <strong>Exécuter</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>   <span class="c1"># on importe une bibliothèque : un ensemble de fonctions, ici pour pouvoir dessiner</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>   <span class="c1"># avance la tortue de 100 px</span>
+<span class="n">done</span><span class="p">()</span>         <span class="c1"># instruction obligatoire : indique de faire le tracé</span>
+</code></pre></div>
+</li>
+</ol>
+<p>Les fonctions <code>left(angle)</code> et <code>right(angle)</code> permettent de changer l'orientation de la tortue, de la faire tourner d'un angle <code>angle</code> exprimé en pixels, respectivement sur la gauche ou sur la droite.</p>
+<ol>
+<li>
+<p>Compléter les paramètres des fonctions dans le code suivant pour tracer un carré bleu dont la longueur du côté est de 100 px :</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">color</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+
+<span class="n">forward</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+<span class="n">done</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>Ecrire une fonction <code>carre</code>, dessinant un carré de longueur <code>cote</code>, passé en paramètre. Vérifier que votre code trace bien un carré de 100px de côté, grâce à l'appel <code>carre(100)</code>. </p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">carre</span><span class="p">(</span><span class="n">cote</span><span class="p">):</span>
+    <span class="o">...</span> <span class="c1">#à compléter</span>
+
+<span class="n">carre</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>On veut pouvoir aussi modifier la couleur du carré. Réecrire une fonction <code>carre</code> prenant cette fois-ci deux paramètres : <code>cote</code> et <code>couleur</code>.<br />
+Ajouter un appel à la fonction pour dessiner un troisième carré de longueur de côté <code>50</code> et de couleur jaune ("yellow").</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span> 
+
+<span class="k">def</span> <span class="nf">carre</span><span class="p">(</span><span class="n">cote</span><span class="p">,</span> <span class="n">couleur</span><span class="p">):</span>
+    <span class="o">...</span> <span class="c1">#à compléter</span>
+
+<span class="n">carre</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">carre</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="c1"># ajouter un appel ici</span>
+</code></pre></div>
+<p>On a jusqu'à présent déplacé la tortue de manière relative : en avançant par rapport à là où elle était. On peut aussi lui donner directement des coordonnées auxquelles elle doit se déplacer.</p>
+<p><code>goto(x,y)</code> permet de déplacer la tortue à un point de coordonnées (x,y), exprimées en pixels.</p>
+<p>Les fonctions <code>up()</code> et <code>down()</code> permettent respectivement de lever et de baisser le crayon. Quand il est levé, on ne trace pas, et on recommence à tracer quand il est baissé.</p>
+</li>
+<li>
+<p>Pour tracer des cercles, une fonction <code>circle</code> existe déjà, il suffit de l'appeler. Exécuter le code suivant, traçant un cercle rouge de 100px de rayon sur la gauche de l'écran :</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">color</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">up</span><span class="p">()</span>
+<span class="n">goto</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">down</span><span class="p">()</span>
+<span class="n">circle</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>    <span class="c1">#la valeur du rayon est donnée en paramètre</span>
+
+<span class="n">done</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>Compléter le code suivant pour tracer un premier cercle de rayon 50px à partir de la position (-200,0), et un deuxième à partir de la position (-100,0).</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">color</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+
+<span class="n">up</span><span class="p">()</span>
+<span class="n">goto</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">down</span><span class="p">()</span>
+<span class="n">circle</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+<span class="c1">#... à compléter</span>
+
+<span class="n">done</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>On veut pouvoir aussi pouvoir modifier la couleur du cercle avec un seul appel de fonction. Réecrire une fonction <code>circle</code> qui trace un cercle en faisant appel à circle, et définit sa couleur en paramètre. 
+Appeler la fonction pour tracer un cercle de rayon 150 et de couleur orange.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">cercle</span><span class="p">(</span><span class="n">rayon</span><span class="p">,</span> <span class="n">couleur</span><span class="p">):</span>
+    <span class="o">...</span> <span class="c1">#à compléter</span>
+
+<span class="c1"># écrire l&#39;appel de la fonction</span>
+</code></pre></div>
+</li>
+<li>
+<p>Ecrire un programme traçant des cercles de rayon 100 : un rouge, un bleu et un vert, espacés chacuns de 100 px. <strong><em>Vous utiliserez la fonction <code>cercle</code> définie à la question 7 (elle est connue si vous avez exécuté la cellule précédente)</em></strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># c&#39;est parti !</span>
+</code></pre></div>
+</li>
+</ol>
+<p>Ne pas oublier d'<strong>enregistrer</strong> votre travail en cliquant sur la disquette en haut à gauche !</p>
 <hr />
 <h2 id="td-operations-simples-avec-des-fonctions">TD : Opérations simples avec des fonctions<a class="headerlink" href="#td-operations-simples-avec-des-fonctions" title="Permanent link">&para;</a></h2>
 <ol>

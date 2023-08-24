@@ -3281,7 +3281,10 @@ text-align: justify}
 </div>
 <div class="admonition info">
 <p class="admonition-title">Définitions</p>
-<p>Cette valeur peut être de différents <strong>types</strong>. Compléter le tableau suivant avec avec les <em>types de base</em> :</p>
+<ul>
+<li>Le <strong>nom</strong> est composé en Python de <strong><em>caractères alphanumériques</em></strong> : les lettres minuscules, majuscules et les chiffres, et de <strong><em>tirets du bas</em></strong> : <code>_</code> ('underscore"). Il ne peut pas commencer par un chiffre.  </li>
+<li>La <strong>valeur</strong> peut être de différents <strong>types</strong>, correspondant à un stockage différent dans la mémoire de l'ordinateur.   Compléter le tableau suivant avec avec les <em>types de base</em> :</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -3355,16 +3358,19 @@ text-align: justify}
 <h4 id="b-laffectation-et-les-operateurs">B. L'affectation et les opérateurs<a class="headerlink" href="#b-laffectation-et-les-operateurs" title="Permanent link">&para;</a></h4>
 <div class="admonition info">
 <p class="admonition-title">Définition</p>
-<p><strong>Affecter</strong> une valeur à une variable consiste à associer une valeur (qui a un type) à une variable (qui a un nom), à un endroit donné dans notre programme. On utilise l'opérateur <code>=</code> en Python.</p>
+<p><strong>Affecter</strong> une valeur à une variable consiste à stocker une valeur (qui a un type) dans l'espace de mémoire de la variable. On utilise l'opérateur <code>=</code> en Python, et la syntaxe <code>nom_de_la_variable = valeur</code>.   </p>
 </div>
 <p>Cette valeur peut être changée dans la suite du programme. Une <em>variable</em>, par définition, n'est pas fixe !</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple :</p>
-<p>Lire le programme et représenter schématiquement ce qu'il s'est passé.
+<p>Lire le programme et représenter schématiquement ce qu'il s'est passé.</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">pommes</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="c1"># puis on découpe une pomme pour faire la tarte</span>
 <span class="n">pommes</span> <span class="o">=</span> <span class="mi">3</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
 <details class="note">
 <summary>Schema</summary>
 <p><center>
@@ -3379,7 +3385,7 @@ text-align: justify}
 <tr>
 <th align="center">Symbole</th>
 <th align="center">Opération</th>
-<th align="center">Types de variables</th>
+<th align="center">Types</th>
 </tr>
 </thead>
 <tbody>
@@ -3395,6 +3401,11 @@ text-align: justify}
 </tr>
 <tr>
 <td align="center"><code>*</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>**</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
@@ -3422,39 +3433,44 @@ text-align: justify}
 <tr>
 <th align="center">Symbole</th>
 <th align="center">Opération</th>
-<th align="center">Types de variables</th>
+<th align="center">Types</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center"><code>+</code></td>
 <td align="center">addition</td>
-<td align="center"><code>int</code>, <code>float</code>, <code>str</code>, (<code>bool</code>)</td>
+<td align="center"><code>int+float-&gt;float</code>, <code>int(float)+str-&gt;ERREUR</code></td>
 </tr>
 <tr>
 <td align="center"><code>-</code></td>
 <td align="center">soustraction</td>
-<td align="center"><code>int</code>, <code>float</code>, (<code>bool</code>)</td>
+<td align="center"><code>int-float-&gt;float</code>, <code>int(float)-str-&gt;ERREUR</code></td>
 </tr>
 <tr>
 <td align="center"><code>*</code></td>
 <td align="center">multiplication</td>
-<td align="center"><code>int</code>, <code>float</code>, <code>str</code>, (<code>bool</code>)</td>
+<td align="center"><code>int*float-&gt;float</code>, <code>int(float)*str-&gt;ERREUR</code></td>
+</tr>
+<tr>
+<td align="center"><code>**</code></td>
+<td align="center">puissance</td>
+<td align="center">sur <code>int</code> ou <code>float</code></td>
 </tr>
 <tr>
 <td align="center"><code>/</code></td>
 <td align="center">division</td>
-<td align="center"><code>int</code>, <code>float</code>, (<code>bool</code>)</td>
+<td align="center">sur <code>int</code> ou <code>float</code></td>
 </tr>
 <tr>
 <td align="center"><code>//</code></td>
 <td align="center">quotient de la division euclidienne</td>
-<td align="center">idem</td>
+<td align="center">sur <code>int</code> ou <code>float</code></td>
 </tr>
 <tr>
 <td align="center"><code>%</code></td>
 <td align="center">reste de la division euclidienne (modulo)</td>
-<td align="center">idem</td>
+<td align="center">sur <code>int</code> ou <code>float</code></td>
 </tr>
 </tbody>
 </table>
@@ -3463,10 +3479,13 @@ text-align: justify}
 <p>Les opérateurs permettent de modifier les valeurs des variables au fur et à mesure d'un programme.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="n">pommes</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">pommes</span> <span class="o">=</span> <span class="n">pommes</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="n">pommes</span> <span class="o">=</span> <span class="n">pommes</span><span class="o">*</span><span class="mi">3</span>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="mi">1</span>  <span class="n">pommes</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="mi">2</span>  <span class="n">pommes</span> <span class="o">=</span> <span class="n">pommes</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="mi">3</span>  <span class="n">pommes</span> <span class="o">=</span> <span class="n">pommes</span><span class="o">*</span><span class="mi">3</span>
 </code></pre></div>
+</div>
 <details class="note">
 <summary>Que contient la variable pomme après exécution de ces deux instructions ?</summary>
 <p>Elle contient la valeur 9.</p>
@@ -3525,104 +3544,213 @@ text-align: justify}
 </div>
 <hr />
 <h2 id="td-variables-et-affectation">TD : Variables et affectation<a class="headerlink" href="#td-variables-et-affectation" title="Permanent link">&para;</a></h2>
-<h3 id="exercice-operations-sur-les-nombres-sur-feuille">Exercice : Opérations sur les nombres <em>(sur feuille)</em><a class="headerlink" href="#exercice-operations-sur-les-nombres-sur-feuille" title="Permanent link">&para;</a></h3>
-<p>Quelle est la valeur et le type du résultat de chaque expression <em>(vérifier sur ordinateur en cas de doute)</em> ?</p>
+<h3 id="exercice-1-noms-de-variables">Exercice 1 : Noms de variables<a class="headerlink" href="#exercice-1-noms-de-variables" title="Permanent link">&para;</a></h3>
+<p>Le tableau suivant contient des noms de variables. Indiquer, pour chacune d'elle, si elle est valide ou non, et si ce n'est pas le cas indiquer pourquoi. </p>
 <table>
 <thead>
 <tr>
-<th align="center">Expression</th>
-<th align="center">Valeur</th>
-<th align="center">Type</th>
+<th align="center">Nom</th>
+<th align="center">Valide ou non-valide</th>
+<th align="center">Justification</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>1 - 6</code></td>
+<td align="center"><code>age</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>10.1 + 0.9</code></td>
+<td align="center"><code>user_age</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>68 / 2.0</code></td>
+<td align="center"><code>123abc</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>5 * 4</code></td>
+<td align="center"><code>_name</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>5 ** 4</code></td>
+<td align="center"><code>first name</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>7 % 10</code></td>
+<td align="center"><code>favoriteColor</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>10 ** 2</code></td>
+<td align="center"><code>last-name</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>68 // 2</code></td>
+<td align="center"><code>total$</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>13 // 3</code></td>
+<td align="center"><code>3dogs</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>13 % 3</code></td>
+<td align="center"><code>car_model</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 </tbody>
 </table>
-<h3 id="exercice-amis-sur-un-reseau-social-sur-feuille-verification-sur-ordinateur">Exercice : Amis sur un réseau social <em>(sur feuille, vérification sur ordinateur)</em><a class="headerlink" href="#exercice-amis-sur-un-reseau-social-sur-feuille-verification-sur-ordinateur" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-2-types">Exercice 2 : Types<a class="headerlink" href="#exercice-2-types" title="Permanent link">&para;</a></h3>
+<p>Pour chacune des valeurs proposées, indiquer le type de base utilisé et son nom en Python.</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"><code>42</code></th>
+<th align="center"><code>3.14</code></th>
+<th align="center"><code>"Hello, world!"</code></th>
+<th align="center"><code>True</code></th>
+<th align="center"><code>-7</code></th>
+<th align="center"><code>"123"</code></th>
+<th align="center"><code>0.5</code></th>
+<th align="center"><code>False</code></th>
+<th align="center"><code>"True"</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Type</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Nom en Python</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="exercice-3-operations-sur-les-nombres">Exercice 3 : Opérations sur les nombres<a class="headerlink" href="#exercice-3-operations-sur-les-nombres" title="Permanent link">&para;</a></h3>
+<p>Quelle est la valeur et le type du résultat de chaque expression <em>(vérifier sur ordinateur en cas de doute)</em> ?</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"><code>1 - 6</code></th>
+<th align="center"><code>10.1 + 0.9</code></th>
+<th align="center"><code>68 / 2.0</code></th>
+<th align="center"><code>5 * 4</code></th>
+<th align="center"><code>5 ** 4</code></th>
+<th align="center"><code>7 % 10</code></th>
+<th align="center"><code>10 ** 2</code></th>
+<th align="center"><code>13 // 3</code></th>
+<th align="center"><code>13 % 3</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Valeur</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>Type</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="exercice-4-amis-sur-un-reseau-social">Exercice 4 : Amis sur un réseau social<a class="headerlink" href="#exercice-4-amis-sur-un-reseau-social" title="Permanent link">&para;</a></h3>
 <p>Un utilisateur d'un réseau social voit son nombre d'amis, initialement de <code>200</code>, augmenter de 8% par an.</p>
 <ol>
 <li>
 <p>Combien a-t-il d'amis au total au bout d'un an ?</p>
 </li>
 <li>
-<p>On stocke le nombre d'amis dans une variable <code>nb_amis</code>. Compléter le code pour avoir successivement le nombre d'amis de cet utilisateur dans 1, 2 et 3 ans.
-    <div class="highlight"><pre><span></span><code><span class="n">nb_amis</span> <span class="o">=</span> <span class="mi">200</span>
-</code></pre></div></p>
+<p>On stocke le nombre d'amis dans une variable <code>nb_amis</code>. Compléter le code pour avoir successivement le nombre d'amis de cet utilisateur dans 1, 2 et 3 ans.</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">nb_amis</span> <span class="o">=</span> <span class="mi">200</span>
+</code></pre></div>
+</div>
 </li>
 </ol>
-<h3 id="exercice-valeurs-dune-variable">Exercice : Valeurs d'une variable<a class="headerlink" href="#exercice-valeurs-dune-variable" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-5-valeurs-dune-variable">Exercice 5 : Valeurs d'une variable<a class="headerlink" href="#exercice-5-valeurs-dune-variable" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">A faire sur feuille.</p>
+</div>
 <ul>
-<li>Que vaut <code>x</code> après exécution de ce programme ? ...............
-    <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<li>
+<p>Que vaut <code>x</code> après exécution de ce programme ? ...............</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
-</code></pre></div></li>
-<li>Que vaut <code>x</code> après exécution de ce programme ? ...............<br />
-    Que vaut <code>y</code> ? ...............
-    <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div>
+</div>
+<ul>
+<li>Que vaut <code>x</code> après exécution de ce programme ? ...............Que vaut <code>y</code> ? ...............</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
-</code></pre></div></li>
+</code></pre></div>
+</div>
+</li>
 </ul>
-<h3 id="exercice-manipulation-de-variables-sur-feuille">Exercice : Manipulation de variables <em>(sur feuille)</em><a class="headerlink" href="#exercice-manipulation-de-variables-sur-feuille" title="Permanent link">&para;</a></h3>
-<p>On donne le code suivant :
+<h3 id="exercice-6-manipulation-de-variables">Exercice 6 : Manipulation de variables<a class="headerlink" href="#exercice-6-manipulation-de-variables" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">A faire sur feuille.</p>
+</div>
+<p>On donne le code suivant :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="mi">1</span>  <span class="n">a</span> <span class="o">=</span> <span class="mi">9</span>
 <span class="mi">2</span>  <span class="n">b</span> <span class="o">=</span> <span class="mi">24</span>
 <span class="mi">3</span>  <span class="n">t</span> <span class="o">=</span> <span class="n">a</span>
 <span class="mi">4</span>  <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
 <span class="mi">5</span>  <span class="n">b</span> <span class="o">=</span> <span class="n">t</span>
 </code></pre></div>
-1. Remplir la <strong>table de trace</strong> suivante avec la valeur de chaque variable à chaque ligne du programme :</p>
+</div>
+<p>Remplir la <strong>table de trace</strong> suivante avec la valeur de chaque variable à chaque ligne du programme, et en déduire ce que fait ce programme.</p>
 <table>
 <thead>
 <tr>
@@ -3665,10 +3793,6 @@ text-align: justify}
 </tr>
 </tbody>
 </table>
-<ol>
-<li>En déduire ce que fait ce programme.
-    <br> <br></li>
-</ol>
 
 
   

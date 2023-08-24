@@ -965,13 +965,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#tp-les-entiers-positifs-en-machine" class="md-nav__link">
-    TP : Les entiers positifs en machine
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3249,13 +3242,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#tp-les-entiers-positifs-en-machine" class="md-nav__link">
-    TP : Les entiers positifs en machine
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3740,73 +3726,6 @@ Par exemple, <span class="arithmatex">\(1100_2*1010_2=11000+1100000=1111000_2\)<
 </li>
 </ol>
 <p><br><br></p>
-<hr />
-<h2 id="tp-les-entiers-positifs-en-machine">TP : Les entiers positifs en machine<a class="headerlink" href="#tp-les-entiers-positifs-en-machine" title="Permanent link">&para;</a></h2>
-<h3 id="a-les-conversions-en-python">A. Les conversions en Python<a class="headerlink" href="#a-les-conversions-en-python" title="Permanent link">&para;</a></h3>
-<h4 id="a1-vers-le-decimal">A.1. Vers le décimal<a class="headerlink" href="#a1-vers-le-decimal" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Convertir <span class="arithmatex">\(1001_2\)</span> en décimal.</li>
-<li>Vérifier votre solution en tapant dans la console Python :
-<div class="highlight"><pre><span></span><code><span class="go">    &gt;&gt;&gt; 0b1001</span>
-</code></pre></div></li>
-<li>Convertir <span class="arithmatex">\(5D_{16}\)</span> en décimal.</li>
-<li>Vérifier votre solution en tapant dans la console python :
-<div class="highlight"><pre><span></span><code><span class="go">    &gt;&gt;&gt; 0x5d</span>
-</code></pre></div></li>
-</ol>
-<h3 id="a2-vers-le-binaire-et-lhexadecimal">A.2. Vers le binaire et l'hexadécimal<a class="headerlink" href="#a2-vers-le-binaire-et-lhexadecimal" title="Permanent link">&para;</a></h3>
-<p>Les fonctions que vous allez utiliser sont des fonctions <em>natives</em> de Python, c'est-à-dire qu'il n'y a pas besoin d'importer de bibliothèques pour les utiliser.
-1. Convertir <span class="arithmatex">\(11_{10}\)</span> en binaire.
-2. Vérifier votre solution en tapant dans la console python :
-<div class="highlight"><pre><span></span><code><span class="go">    &gt;&gt;&gt; bin(11)</span>
-</code></pre></div>
-3. Quel est le format de la sortie de cette fonction ?
-4. Il est possible de la convertir en <code>int</code> avec la fonction <code>int()</code> dont  un extrait de la documentation est donné ci-dessous. Utiliser cette documentation pour convertir la sortie de la fonction <code>bin()</code> en <code>int</code>.
-<div class="highlight"><pre><span></span><code>int(x, base=10) -&gt; integer
-Convert a number or string to an integer (...) If x is not a number or if base is given, then x must be a string, bytes, or bytearray instance (...)
-</code></pre></div></p>
-<ol>
-<li>Convertir <span class="arithmatex">\(195_{10}\)</span> en hexadécimal.</li>
-<li>Vérifier votre solution en tapant dans la console python :
-<div class="highlight"><pre><span></span><code><span class="go">    &gt;&gt;&gt; hex(195)</span>
-</code></pre></div></li>
-</ol>
-<h3 id="b-le-type-int">B. Le type <code>int</code><a class="headerlink" href="#b-le-type-int" title="Permanent link">&para;</a></h3>
-<p>Dans certains langages informatiques, comme le C, il existe plusieurs types différents d'entiers en fonction du nombre de bits nécessaire pour représenter le nombre.</p>
-<p>En Python, il n'y a qu'un seul type. On peut donc penser que la taille des entiers qui peuvent être manipulés est infinie... mais l'infini n'existe pas en informatique. Si la <em>taille maximale</em> (souvent 32 ou 64 bits) utilisable par le processeur est dépassée, le nombre est découpé en plusieurs parties. Cela a pour conséquence un espace plus grand occupé en mémoire et un ralentissement de l'exécution du programme. </p>
-<p>La bibliothèque <em>time</em> de Python permet de mesurer ce temps d'exécution. Dans le code suivant, on importe pour cela la fonction <code>time</code> :</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
-
-<span class="n">st</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50000</span><span class="p">):</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">st</span><span class="p">)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th align="center"><code>range</code></th>
-<th align="center"><code>0</code> à <code>49 999</code></th>
-<th align="center"><code>50 000</code> à <code>99 999</code></th>
-<th align="center"><code>200 000</code> à <code>249 999</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">temps d'exécution</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>Exécuter ce programme et reporter dans le tableau la valeur qui s'affiche à l'écran.</li>
-<li>Changer les bornes du <code>range</code> pour avoir i variant de <code>50 000</code> à <code>99 999</code>. Reporter la valeur obtenue.</li>
-<li>Faire de même pour faire varier i entre <code>200 000</code> et <code>249 999</code> et reporter le résultat.</li>
-<li>Qu'en concluez-vous ?</li>
-</ol>
 
 
   
