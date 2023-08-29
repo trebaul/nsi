@@ -1010,7 +1010,7 @@
   
     <li class="md-nav__item">
       <a href="../logique/" class="md-nav__link">
-        I. Logique
+        I. Logique booléenne
       </a>
     </li>
   
@@ -1068,13 +1068,6 @@
         <li class="md-nav__item">
   <a href="#questionnaire-sur-le-cours" class="md-nav__link">
     Questionnaire sur le cours
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#td-ladditionneur-binaire" class="md-nav__link">
-    TD : L'additionneur binaire
   </a>
   
 </li>
@@ -3257,13 +3250,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#td-ladditionneur-binaire" class="md-nav__link">
-    TD : L'additionneur binaire
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tp-programmer-au-plus-pres-de-la-machine" class="md-nav__link">
     TP : Programmer au plus près de la machine
   </a>
@@ -3295,11 +3281,15 @@ text-align: justify}
 <hr />
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <h3 id="a-les-circuits">A. Les circuits<a class="headerlink" href="#a-les-circuits" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../img/transistor.jpg" /></p>
-<p>Un ordinateur fonctionne avec des <code>0</code> et des <code>1</code>, qu'il faut représenter de manière physique. Avant d'utiliser des transistors, les ordinateurs étaient équipés de tubes à vide (tous deux sont des composants électroniques). L'apparition des <strong>transistors</strong> a permis de miniaturiser les machines. Dans les différents cas, le passage d'un courant représente le <code>1</code>, alors que l'absence de courant représente le <code>0</code>.</p>
-<p><img alt="" src="../img/circuit_integre.png" /></p>
+<p><center>
+<img src="../img/transistor.jpg" height=100 style="float: left;padding-right:15px;padding-top:8px">
+</center> </p>
+<p>Un ordinateur fonctionne avec des <code>0</code> et des <code>1</code>, qu'il faut représenter physiquement. Les ordinateurs étaient équipés de tubes à vide (tous deux sont des composants électroniques), avant d'être remplacés par des <strong>transistors</strong>. Ce sont de très petits composants électroniques, permettant de faire passer ou de bloquer un courant, qui ont permis de miniaturiser les machines. Le passage d'un courant représente le <code>1</code>, alors que l'absence de courant représente le <code>0</code>.</p>
+<p><center>
+<img src="../img/circuit_integre.png" height=100 style="float: right;padding-left:17px">
+</center></p>
 <p>Les transistors peuvent aujourd'hui être aussi petit que 10 nanomètres, on ne les distingue pas à l'oeil nu. Ils sont agencés les uns à côté des autres et reliés sur des <strong>circuits intégrés</strong>. Les circuits les plus simples sont les <strong>circuits logiques</strong>, faits à partir de <strong>portes logiques</strong> qui permettent de réaliser des opérations booléennes.</p>
-<p>En combinant des circuits logiques, on parvient à fabriquer les circuits essentiels au fonctionnement de l'ordinateur, comme la mémoire et le processeur.</p>
+<p>En combinant des circuits logiques, on parvient à fabriquer les circuits essentiels au fonctionnement de l'ordinateur faisant de plus grands calculs, comme la mémoire et le processeur.</p>
 <h3 id="b-les-principaux-composants-de-lordinateur">B. Les principaux composants de l'ordinateur<a class="headerlink" href="#b-les-principaux-composants-de-lordinateur" title="Permanent link">&para;</a></h3>
 <h4 id="b1-la-memoire">B.1. La mémoire<a class="headerlink" href="#b1-la-memoire" title="Permanent link">&para;</a></h4>
 <p>Il existe différents types de mémoires. Globalement, on regroupe :  </p>
@@ -3317,44 +3307,50 @@ text-align: justify}
 <p><img alt="" src="../img/Hard_disk_platter_reflection.jpg" /></p>
 <p>Plus on s'éloigne du processeur, plus la capacité de la mémoire utilisée augmente et plus le temps d'accès aux données s'allonge.</p>
 <h4 id="b2-le-processeur">B.2. Le processeur<a class="headerlink" href="#b2-le-processeur" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="../img/cpu_intel.jpg" /></p>
+<p><center>
+<img src="../img/cpu_intel.jpg" height=120 style="float: left;padding-right:15px;padding-top:8px">
+</center></p>
 <p>Les instructions des programmes sont exécutées par le <strong>processeur</strong> ou <strong>CPU (Central Processing Unit)</strong> en anglais. Il est qualifié de <strong>microprocesseur</strong> lorsque tous ses composants sont suffisamment petits pour être regroupés dans un même boîtier.</p>
 <p>Il est constitué de 3 parties :<br />
 - les <strong>registres</strong> qui correspondent à une petite quantité de mémoire. Leur nombre et taille varient en fonction du type de CPU. Ils sont typiquement nommés R1, R2, R3,...<br />
 - l’<strong>Unité Arithmétique et Logique</strong> (UAL ou ALU en anglais), qui est chargée de l’exécution des calculs. Elle est composée de circuits comme l’additionneur de la partie précédente.<br />
 - l’<strong>unité de commande/de contrôle</strong> qui coordonne l’exécution de toutes les opérations.</p>
-<p>Le rythme auquel les instructions sont traitées dépend de la fréquence de l'horloge du processeur. Une seule instruction peut être traitée à la fois, donc pour aller plus vite, il faut une grande fréquence.</p>
+<p>Le rythme auquel les instructions sont traitées dépend de la fréquence de l'horloge du processeur. Une seule instruction peut être traitée à chaque cycle, donc pour aller plus vite, il faut une grande fréquence.</p>
 <h3 id="c-les-architectures">C. Les architectures<a class="headerlink" href="#c-les-architectures" title="Permanent link">&para;</a></h3>
 <h4 id="c1-larchitecture-de-von-neumann">C.1. L'architecture de von Neumann<a class="headerlink" href="#c1-larchitecture-de-von-neumann" title="Permanent link">&para;</a></h4>
 <p>La plupart des ordinateurs utilisés aujourd'hui sont basés sur l'<strong>architecture de von Neumann</strong>, élaborée en 1945. Il s'agit de la première architecture stockant au même endroit les données et les programmes : dans la mémoire vive.</p>
-<p><img alt="" src="../img/von_neumann.png" /></p>
-<p>Elle est constituée :
-- d'une <strong>mémoire</strong>, correspondant à de la RAM, contenant programme et données,
-- d'une <strong>UAL</strong> avec des registres comme un <strong>accumulateur</strong>,
-- d'une <strong>unité de commande</strong>,
+<p><center>
+<img src="../img/von_neumann.png" height=220>
+</center></p>
+<p>Elle est constituée :<br />
+- d'une <strong>mémoire</strong>, correspondant à de la RAM, contenant programme et données,<br />
+- d'une <strong>UAL</strong> avec des registres comme un <strong>accumulateur</strong>,<br />
+- d'une <strong>unité de commande</strong>,<br />
 - d'un système d’<strong>entrées-sorties</strong>.</p>
 <p>Les <strong>entrées et sorties</strong> permettent à l’ordinateur d’interagir avec l’extérieur. Chaque périphérique est régi par un contrôleur (un ensemble de composants électroniques) adapté, permettant d’encoder et de décoder les données envoyées et reçues. Un <strong>périphérique d'entrée</strong> (comme une souris) permet d'obtenir des informations, alors qu'un <strong>périphérique de sortie</strong> (comme un écran) permet d'envoyer des informations vers l'extérieur.</p>
 <h4 id="c2-connecter-les-composants">C.2. Connecter les composants<a class="headerlink" href="#c2-connecter-les-composants" title="Permanent link">&para;</a></h4>
-<p>Les données circulent entre les composants de l’ordinateur (principalement entre le processeur et la mémoire) grâce à des bus. Il en existe 3 grands types :
-- les <strong>bus d’adresse</strong>, transportant les adresses des cases mémoires auxquelles on veut accéder,
-- les <strong>bus de données</strong>, transportant les données en elles-mêmes,
+<p>Les données circulent entre les composants de l’ordinateur (principalement entre le processeur et la mémoire) grâce à des bus. Il en existe 3 grands types :<br />
+- les <strong>bus d’adresse</strong>, transportant les adresses des cases mémoires auxquelles on veut accéder,<br />
+- les <strong>bus de données</strong>, transportant les données en elles-mêmes,<br />
 - les <strong>bus de commande/contrôle</strong> synchronisant l’ensemble (en indiquant le type d’actions à exécuter, comme la lecture ou l’écriture d’une donnée en mémoire).</p>
 <p>Les différents composants décrits dans les parties précédentes, ainsi que d’autres qui améliorent les ordinateurs d’aujourd’hui, ont besoin d’être interconnectés de manière fiable : ils sont regroupés sur une <strong>carte mère</strong>. 
 Elle intègre :</p>
 <ul>
-<li>le processeur,</li>
-<li>les barrettes de mémoire RAM,</li>
-<li>le(s) disque(s) dur(s),</li>
-<li>les ports d’entrée-sortie,</li>
-<li>les différents périphériques (lecteurs DVD, carte mémoire,...)</li>
-<li>la carte réseau,</li>
-<li>la carte graphique,</li>
-<li>l’alimentation,</li>
+<li>le processeur,  </li>
+<li>les barrettes de mémoire RAM,  </li>
+<li>le(s) disque(s) dur(s),  </li>
+<li>les ports d’entrée-sortie,  </li>
+<li>les différents périphériques (lecteurs DVD, carte mémoire,...),  </li>
+<li>la carte réseau,  </li>
+<li>la carte graphique,  </li>
+<li>l’alimentation,  </li>
 <li>les systèmes de refroidissement.</li>
 </ul>
 <h4 id="c2-les-architectures-multiprocesseurs">C.2. Les architectures multiprocesseurs<a class="headerlink" href="#c2-les-architectures-multiprocesseurs" title="Permanent link">&para;</a></h4>
-<p>L’architecture d´ecrite précédemment est une <strong>architecture monoprocesseur</strong> : ne comportant qu’un processeur.</p>
-<p><img alt="" src="../img/moore.jpg" /></p>
+<p>L’architecture décrite précédemment est une <strong>architecture monoprocesseur</strong> : ne comportant qu’un processeur.</p>
+<p><center>
+<img src="../img/moore.jpg" height=120 style="float: left;padding-right:15px;padding-top:6px">
+</center></p>
 <p>Pour augmenter la puissance des ordinateurs, on a misé pendant longtemps sur l’augmentation de leur fréquence d’horloge. Celle-ci est cependant devenue de plus en plus difficile, comme illustré sur la figure ci-contre, à cause d’un problème de surchauffe.</p>
 <p>L’idée a depuis été d’utiliser plusieurs processeurs dans un seul ordinateur : on parle d’<strong>ordinateur multiprocesseur</strong>. Cela crée des problèmes de partage de la mémoire, pour lesquels il a fallu établir des statégies. On utilise de la mémoire cache, d’accès très rapide, soit partagée pour les différents processeurs, soit dédiée à chacun. Il faut de plus adapter les programmes à l'architecture.</p>
 <p>Aujourd’hui, on ne se contente en fait pas de multiplier les processeurs, on utilise également des processeurs ayant plusieurs coeurs (<strong>architecture multicoeur</strong>) : plusieurs unités de traitement indépendantes.</p>
@@ -3362,44 +3358,42 @@ Elle intègre :</p>
 <hr />
 <h2 id="questionnaire-sur-le-cours">Questionnaire sur le cours<a class="headerlink" href="#questionnaire-sur-le-cours" title="Permanent link">&para;</a></h2>
 <h3 id="a-les-circuits_1">A. Les circuits<a class="headerlink" href="#a-les-circuits_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Faire un schéma permettant de placer les termes suivants : processeur, porte logique, transistor, additionneur. Votre schéma représentera au centre le plus petit des éléments, et autour les éléments faits à partir des autres.</li>
-</ul>
+<p>Ranger du plus petit au plus grand les éléments suivants : <strong>processeur</strong>, <strong>porte logique</strong>, <strong>transistor</strong>, <strong>additionneur</strong>. 
+<br> <br> <br> <br> <br> <br><br></p>
 <h3 id="b-les-principaux-composants-de-lordinateur_1">B. Les principaux composants de l'ordinateur<a class="headerlink" href="#b-les-principaux-composants-de-lordinateur_1" title="Permanent link">&para;</a></h3>
 <h4 id="b1-la-memoire_1">B.1. La mémoire<a class="headerlink" href="#b1-la-memoire_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Par quelles <em>caractéristiques</em> différencie-t-on les différents types de mémoires ? Faire un schéma avec ces caractéristiques et les types de mémoires associés.</p>
-</li>
-<li>
-<p>Faire un schéma pouvant représenter la <em>mémoire vive</em> de l'ordinateur.</p>
+<li>Par quelles <em>caractéristiques</em> différencie-t-on les différents types de mémoires ? Faire un schéma <em>(de type carte mentale)</em> avec ces caractéristiques et les types de mémoires associés.
+    <br> <br><br><br><br><br><br><br></li>
+<li>Dans quel type de mémoire faut-il stocker :<ul>
+<li>Les données en cours d'utilisation du programme :  </li>
+<li>Des photos de vacances :  </li>
+<li>Le BIOS ou UEFI :  </li>
+</ul>
 </li>
 </ul>
 <h4 id="b2-le-processeur_1">B.2. Le processeur<a class="headerlink" href="#b2-le-processeur_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Relever les différents composants d'un processeur. Lequel pourrait être associé, si on les comparait au corps humain, au cerveau, et lequel serait les mains ?</p>
+<p>Relever les différents composants d'un processeur et leur fonction. 
+    <br><br><br></p>
 </li>
 <li>
-<p>Représenter des cycles d'horloge d'un processeur et indiquer à quel moment de nouvelles opérations sont faites.</p>
+<p>Représenter des cycles d'horloge d'un processeur et indiquer à quel moment de nouvelles opérations sont faites.
+    <br><br><br></p>
 </li>
 <li>
-<p>Rechercher l'ordre de grandeur en Hz de la fréquence des processeurs actuels. </p>
+<p>Rechercher l'ordre de grandeur en Hz de la fréquence des processeurs actuels. <br><br></p>
 </li>
 </ul>
 <h3 id="c-les-architectures_1">C. Les architectures<a class="headerlink" href="#c-les-architectures_1" title="Permanent link">&para;</a></h3>
 <h4 id="c1-larchitecture-de-von-neumann_1">C.1. L'architecture de von Neumann<a class="headerlink" href="#c1-larchitecture-de-von-neumann_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Quelle est l'idée nouvelle de John Von Neumann lorsqu'il propose son architecture ? </p>
-</li>
-<li>
-<p>Que faut-il donc ajouter aux principaux composants de l'ordinateur pour avoir une machine utilisable ?</p>
-</li>
+<li>Quelle est l'idée nouvelle de John Von Neumann lorsqu'il propose son architecture ? <br><br></li>
+<li>Que faut-il donc ajouter aux principaux composants de l'ordinateur pour avoir une machine utilisable ?
+<br><br></li>
 <li>
 <p>Les périphériques suivants sont-ils des entrées, des sorties, ou bien les deux ? </p>
-</li>
-</ul>
 <table>
 <thead>
 <tr>
@@ -3441,186 +3435,23 @@ Elle intègre :</p>
 </tr>
 </tbody>
 </table>
+</li>
+</ul>
 <h4 id="c2-connecter-les-composants_1">C.2. Connecter les composants<a class="headerlink" href="#c2-connecter-les-composants_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Expliquer comment les différents composants d'un ordinateurs sont connectés.</p>
-</li>
-<li>
-<p>Compléter le schéma suivant avec des flèches représentant les différents types de bus, permettant la communication entre les composants.
-<img alt="" src="../img/schema_bus.bmp" /></p>
-</li>
+<li>Expliquer comment les différents composants d'un ordinateurs sont connectés.
+ <br><br><br></li>
+<li>Compléter le schéma suivant avec des flèches représentant les différents types de bus, permettant la communication entre les composants.
+<center>
+<img src="../img/schema_bus.bmp" height=120>
+</center></li>
 </ul>
-<h4 id="c2-les-architectures-multiprocesseurs_1">C.2. Les architectures multiprocesseurs<a class="headerlink" href="#c2-les-architectures-multiprocesseurs_1" title="Permanent link">&para;</a></h4>
+<h4 id="c3-les-architectures-multiprocesseurs">C.3. Les architectures multiprocesseurs<a class="headerlink" href="#c3-les-architectures-multiprocesseurs" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Sur quel paramètre peut-on jouer pour augmenter la puissance des ordinateurs, sans toucher aux processeurs ? </p>
-</li>
-<li>
-<p>Pourquoi alors augmenter le nombre de processeurs ? </p>
-</li>
-<li>
-<p>A quel problème faut-il alors penser ?</p>
-</li>
+<li>Sur quel paramètre peut-on jouer pour augmenter la puissance des ordinateurs, sans toucher aux processeurs ? <br><br><br></li>
+<li>Pourquoi alors augmenter le nombre de processeurs ? <br><br><br></li>
+<li>A quel problème faut-il alors penser ? </li>
 </ul>
-<p><br></p>
-<hr />
-<h2 id="td-ladditionneur-binaire">TD : L'additionneur binaire<a class="headerlink" href="#td-ladditionneur-binaire" title="Permanent link">&para;</a></h2>
-<h3 id="a-representation-electronique-des-operateurs-booleens">A. Représentation électronique des opérateurs booléens<a class="headerlink" href="#a-representation-electronique-des-operateurs-booleens" title="Permanent link">&para;</a></h3>
-<p>On représente physiquement les booléens et leurs opérateurs à partir de transistors, de très petits composants électroniques qui :
-- laissent passer le courant, qui est alors à sa valeur maximale : c'est un <code>1</code>, qui représente le <code>True</code> booléen.
-- ou ne le laissent pas passer : c'est un <code>0</code>, qui représente le <code>False</code> booléen.  </p>
-<p>L'implémentation physique des opérateurs s'appelle des <strong>portes logiques</strong>, que l'on représente classiquement de la manière suivante :</p>
-<table>
-<thead>
-<tr>
-<th align="center">Opérateur booléen</th>
-<th align="center">Porte logique</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">NON(<code>A</code>)</td>
-<td align="center"><img alt="" src="../img/porte_non_bis.png" /></td>
-</tr>
-<tr>
-<td align="center"><code>A</code> ET <code>B</code></td>
-<td align="center"><img alt="" src="../img/porte_et_bis.png" /></td>
-</tr>
-<tr>
-<td align="center"><code>A</code> OU <code>B</code></td>
-<td align="center"><img alt="" src="../img/porte_ou_bis.png" /></td>
-</tr>
-<tr>
-<td align="center"><code>A</code> XOR <code>B</code></td>
-<td align="center"><img alt="" src="../img/porte_xor_bis.png" /></td>
-</tr>
-</tbody>
-</table>
-<p>En combinant ces portes logiques, on construit des circuits électroniques effectuant des opérations. </p>
-<ol>
-<li>
-<p>Réécrire la table de vérité du XOR en utilisant les valeurs <code>0</code> et <code>1</code> à la place de <code>False</code> et <code>True</code>.</p>
-</li>
-<li>
-<p>Vérifier que le circuit ci-dessous fait bien le calcul du XOR, en attribuant toutes les valeurs possibles (entre 0 et 1) aux entrées A et B et en calculant la valeur de la sortie S.</p>
-</li>
-</ol>
-<p><img alt="" src="../img/circuit_xor.png" /></p>
-<ol>
-<li>
-<p>A partir de ce circuit, trouver l'expression booléenne constituée des opérateurs NON, ET et OU qui permet de calculer le XOR.</p>
-</li>
-<li>
-<ul>
-<li>Programmer une fonction <code>xor</code> prenant en paramètres deux booléens <code>a</code> et <code>b</code> et renvoyant un booléen, en utilisant les opérateurs booléens <code>not</code>, <code>and</code> et <code>or</code>. <em>Utiliser l'expression obtenue à la question 3.</em></li>
-<li>On veut programmer la fonction équivalente <code>xor1bit</code> fonctionnant sur des entiers (ne prenant que les valeurs <code>0</code> ou <code>1</code>). Pour cela :<ul>
-<li>Ecrire une fonction <code>non1bit(a)</code> prenant un 0 ou un 1 en entrée, et renvoyant l'opposé.</li>
-<li>Ecrire la fonction <code>xor1bit(a,b)</code>, en utilisant <code>non1bit</code> à la place du <code>not</code>, le <code>&amp;</code> à la place du <code>and</code> et le <code>|</code> à la place du <code>or</code>.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="b-ladditionneur-1-bit">B. L'additionneur 1 bit<a class="headerlink" href="#b-ladditionneur-1-bit" title="Permanent link">&para;</a></h3>
-<p>Un additionneur 1 bit est un circuit permettant d'additionner deux bits entre eux. Il dispose de :<br />
-<img alt="" src="../img/add.png" />
-<em>Trois entrées :</em>
-- <code>a</code> : le premier bit,
-- <code>b</code> : le deuxième bit,
-- <code>re</code> : la <em>retenue</em> entrante (peut exister dans le cas où l'on combine les additionneurs)</p>
-<p><em>Deux sorties :</em>
-- <code>s</code> : la somme des deux bits,
-- <code>rs</code> : la <em>retenue</em> sortante.</p>
-<p>Aller voir le circuit électronique correspondant à l'URL suivante : https://www.cahier-nsi.fr/additionneur1bit/ </p>
-<ol>
-<li>Compléter la table de vérité de l'additionneur en changeant les valeurs d'entrée du circuit :</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="center"><code>a</code></th>
-<th align="center"><code>b</code></th>
-<th align="center"><code>re</code></th>
-<th align="center"><code>s</code></th>
-<th align="center"><code>rs</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><code>0</code></td>
-<td align="center"><code>0</code></td>
-<td align="center"><code>0</code></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><code>0</code></td>
-<td align="center"><code>0</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><code>0</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"><code>0</code></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><code>0</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><code>1</code></td>
-<td align="center"><code>0</code></td>
-<td align="center"><code>0</code></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><code>1</code></td>
-<td align="center"><code>0</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><code>1</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"><code>0</code></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><code>1</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"><code>1</code></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>De cette table, déduire combien fait <code>1 + 1</code> en binaire.</li>
-<li>
-<ul>
-<li>On donne l'expression booléenne de <code>s = (a XOR b) XOR re</code><br />
-Vérifier qu'elle convient en calculant sa valeur pour les 3 premières lignes de la table de vérité.</li>
-<li>Faire de même avec <code>rs = (a ET b) OU ((a XOR b) ET re)</code>.</li>
-</ul>
-</li>
-<li>
-<p>Programmer une fonction <code>add1bit</code>, prenant en paramètres trois entiers <code>a</code>, <code>b</code> et la retenue <code>re</code>, et renvoyant en sortie <code>s</code> et la retenue <code>rs</code>. On utilisera la fonction <code>xor1bit</code> définie dans la partie A.</p>
-</li>
-</ol>
-<blockquote>
-<p><strong>N.B.:</strong> Pour qu'une fonction renvoie 2 valeurs en sortie, il faut les séparer par une <code>,</code>, après le <code>return</code>.</p>
-</blockquote>
 <p><br></p>
 <hr />
 <h2 id="tp-programmer-au-plus-pres-de-la-machine">TP : Programmer au plus près de la machine<a class="headerlink" href="#tp-programmer-au-plus-pres-de-la-machine" title="Permanent link">&para;</a></h2>
@@ -3746,7 +3577,7 @@ endif:
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../logique/" class="md-footer__link md-footer__link--prev" aria-label="Previous: I. Logique" rel="prev">
+        <a href="../logique/" class="md-footer__link md-footer__link--prev" aria-label="Previous: I. Logique booléenne" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3755,7 +3586,7 @@ endif:
               <span class="md-footer__direction">
                 Previous
               </span>
-              I. Logique
+              I. Logique booléenne
             </div>
           </div>
         </a>

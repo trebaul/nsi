@@ -15,7 +15,7 @@
     
     
       
-        <title>I. Logique - Trebaul NSI</title>
+        <title>I. Logique booléenne - Trebaul NSI</title>
       
     
     
@@ -137,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              I. Logique
+              I. Logique booléenne
             
           </span>
         </div>
@@ -1019,12 +1019,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          I. Logique
+          I. Logique booléenne
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        I. Logique
+        I. Logique booléenne
       </a>
       
         
@@ -1052,15 +1052,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercices-les-expressions-booleennes" class="md-nav__link">
-    Exercices : les expressions booléennes
+  <a href="#td-les-expressions-booleennes" class="md-nav__link">
+    TD : Les expressions booléennes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#td-qui-faut-il-croire" class="md-nav__link">
-    TD : Qui faut-il croire ?
+  <a href="#td-probleme-de-logique" class="md-nav__link">
+    TD : Problème de logique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-ladditionneur-binaire" class="md-nav__link">
+    TD : L'additionneur binaire
   </a>
   
 </li>
@@ -3243,15 +3250,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercices-les-expressions-booleennes" class="md-nav__link">
-    Exercices : les expressions booléennes
+  <a href="#td-les-expressions-booleennes" class="md-nav__link">
+    TD : Les expressions booléennes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#td-qui-faut-il-croire" class="md-nav__link">
-    TD : Qui faut-il croire ?
+  <a href="#td-probleme-de-logique" class="md-nav__link">
+    TD : Problème de logique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#td-ladditionneur-binaire" class="md-nav__link">
+    TD : L'additionneur binaire
   </a>
   
 </li>
@@ -3280,90 +3294,123 @@ text-align: justify}
 <h1 id="i-la-logique-booleenne">I. La logique booléenne<a class="headerlink" href="#i-la-logique-booleenne" title="Permanent link">&para;</a></h1>
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
-<p>L'informatique est basée sur l'utilisation de <code>1</code> et de <code>0</code> : ils représentent le vrai et le faux, <code>True</code> et <code>False</code> en Python, et correspondent au type <strong>booléen</strong>. Nous avons vu que les <strong>expressions booléennes</strong> permettent de différencier différents cas dans un programme.</p>
-<p>Nous avons vu des opérateurs qui permettent de comparer des nombres (<code>int</code> ou <code>float</code>), et renvoient des booléens (<code>bool</code>). Pour combiner ces expressions booléennes, on utilise des <strong>opérateurs booléens</strong>. </p>
-<p>Passons en revue ces opérateurs, en considérant le <strong><em>problème</em></strong> suivant :</p>
-<p><img alt="sphinx" src="../img/sphinx_desert.jpg" /></p>
+<p>L'informatique est basée sur l'utilisation de <code>1</code> et de <code>0</code> : ils représentent le vrai et le faux, <code>True</code> et <code>False</code> en Python, et correspondent au type <strong>booléen</strong>. </p>
+<p>Pour combiner des expressions booléennes, on utilise des <strong>opérateurs booléens</strong>. Ils servent :<br />
+- en <strong><em>programmation</em></strong>,<br />
+- dans la conception de <strong><em>circuits électroniques</em></strong>,<br />
+- dans la résolution de <strong><em>problèmes de logique</em></strong>.</p>
+<h3 id="a-le-non">A. Le NON<a class="headerlink" href="#a-le-non" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Définitions</p>
+<p>L'opérateur <span class="arithmatex">\(NON\)</span> (le <span class="arithmatex">\(NOT\)</span> en anglais) inverse la valeur d'une <strong>variable booléenne</strong>. Si l'expression booléenne <span class="arithmatex">\(A\)</span>  est fausse, alors <span class="arithmatex">\(NON(A)\)</span> est vraie et réciproquement. On résume cela avec une table, dite <strong>table de vérité</strong> de l'opérateur <span class="arithmatex">\(not\)</span> :</p>
+<p>Notation <strong>standard</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(NON(A)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Faux</td>
+<td align="center">Vrai</td>
+</tr>
+<tr>
+<td align="center">Vrai</td>
+<td align="center">Faux</td>
+</tr>
+</tbody>
+</table>
+<p>Notation en <strong>Python</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>A</code></th>
+<th align="center"><code>not(A)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+</tr>
+<tr>
+<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<p>La <strong>table de vérité</strong> d'une <strong>expression booléenne</strong> indique la valeur de l'expression pour chaque valeur possible de ses variables. </p>
+</div>
+<p><img src="../img/porte_non_bis.png" style="float:right;padding-left:10px"></p>
+<p>En électronique, on représente cette opération sous la forme d'une <strong>porte logique</strong> dont le symbole est le suivant : </p>
+<p>On symbolise la présence d'un courant par un 1, et son absence par un 0. La table de vérité peut donc aussi s'écrire sous la forme suivante :</p>
+<p><center></p>
 <blockquote>
-<p>Au milieu du désert, deux sphinx gardent chacun une porte. Une des deux portes continue dans le désert, l'autre mène vers une oasis. L'un des deux sphinx dit toujours la vérité, l'autre ment toujours. On veut savoir par où aller pour accéder à l'oasis.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(NON(A)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
 </blockquote>
-<hr />
-<h3 id="ia-le-non-not">I.A. Le NON (NOT)<a class="headerlink" href="#ia-le-non-not" title="Permanent link">&para;</a></h3>
-<p>L'opérateur NON (NOT en anglais) inverse la valeur d'une <strong>variable booléenne</strong>. Si <code>A</code> vaut <code>False</code>, non(<code>A</code>) vaut <code>True</code> et réciproquement. On résume cela avec une table, dite <strong>table de vérité</strong> de l'opérateur NON :</p>
+<p></center></p>
+<h3 id="b-le-et">B. Le ET<a class="headerlink" href="#b-le-et" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>L'opérateur <span class="arithmatex">\(ET\)</span> (le <span class="arithmatex">\(AND\)</span> en anglais) permet d'associer deux expressions booléennes <span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(B\)</span> de la manière suivante : <span class="arithmatex">\(A\)</span> <span class="arithmatex">\(ET\)</span> <span class="arithmatex">\(B\)</span> est vraie si A est vraie et B est vraie. Cela donne la table de vérité suivante :</p>
+<p>Notation <strong>standard</strong></p>
 <table>
 <thead>
 <tr>
-<th align="left"><code>A</code></th>
-<th align="left">NON(<code>A</code>)</th>
+<th align="center"><span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(B\)</span></th>
+<th align="center"><span class="arithmatex">\(A\)</span> <span class="arithmatex">\(ET\)</span> <span class="arithmatex">\(B\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>False</code></td>
-<td align="left"><code>True</code></td>
+<td align="center">Faux</td>
+<td align="center">Faux</td>
+<td align="center">Faux</td>
 </tr>
 <tr>
-<td align="left"><code>True</code></td>
-<td align="left"><code>False</code></td>
+<td align="center">Vrai</td>
+<td align="center">Faux</td>
+<td align="center">Faux</td>
+</tr>
+<tr>
+<td align="center">Faux</td>
+<td align="center">Vrai</td>
+<td align="center">Faux</td>
+</tr>
+<tr>
+<td align="center">Vrai</td>
+<td align="center">Vrai</td>
+<td align="center">Vrai</td>
 </tr>
 </tbody>
 </table>
-<p>La table de vérité d'une <strong>expression booléenne</strong> indique la valeur de l'expression pour chaque valeur possible de ses variables.</p>
-<div class="admonition example">
-<p class="admonition-title">Application au <strong><em>problème</em></strong> :</p>
-<p>On veut demander l'information, si l'on s'adresse à celui qui dit la vérité - donc à celui qui ne ment pas. On utilise une variable booléenne <code>menteur</code> qui vaut <code>True</code> si le sphinx auquel on s'adresse ment, <code>False</code> s'il dit la vérité :</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">menteur</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pouvez-vous m&#39;indiquer l&#39;oasis ?&quot;</span><span class="p">)</span>
-</code></pre></div>
-</div>
-<h3 id="ib-le-et-and">I.B. Le ET (AND)<a class="headerlink" href="#ib-le-et-and" title="Permanent link">&para;</a></h3>
-<p>L'opérateur ET (AND en anglais) permet d'associer deux expressions booléennes de la manière suivante : A ET B est vrai si A est vraie et B est vraie. Cela donne la table de vérité suivante :</p>
-<table>
-<thead>
-<tr>
-<th align="center"><code>A</code></th>
-<th align="center"><code>B</code></th>
-<th align="center"><code>A</code> ET <code>B</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><code>False</code></td>
-<td align="center"><code>False</code></td>
-<td align="center"><code>False</code></td>
-</tr>
-<tr>
-<td align="center"><code>True</code></td>
-<td align="center"><code>False</code></td>
-<td align="center"><code>False</code></td>
-</tr>
-<tr>
-<td align="center"><code>False</code></td>
-<td align="center"><code>True</code></td>
-<td align="center"><code>False</code></td>
-</tr>
-<tr>
-<td align="center"><code>True</code></td>
-<td align="center"><code>True</code></td>
-<td align="center"><code>True</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition example">
-<p class="admonition-title">Application au <strong><em>problème</em></strong> :</p>
-<p>Si le sphinx auquel on s'adresse n'est pas un menteur <em>et</em> s'il nous dit qu'il se trouve devant la porte menant à l'oasis, on veut prendre ce chemin. On utilise une variable <code>porte</code> valant <code>True</code> si le sphinx dit qu'elle mène à l'oasis, <code>False</code> sinon :</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">menteur</span><span class="p">)</span> <span class="ow">and</span> <span class="n">porte</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je prends ce chemin.&quot;</span><span class="p">)</span>
-</code></pre></div>
-</div>
-<h3 id="ic-le-ou-or">I.C. Le OU (OR)<a class="headerlink" href="#ic-le-ou-or" title="Permanent link">&para;</a></h3>
-<p>L'opérateur OU (OR en anglais) permet d'associer deux expressions booléennes de la manière suivante : A OU B est vrai si A est vraie, B est vraie, ou bien les deux le sont. Cela donne la table de vérité suivante :</p>
+<p>Notation en <strong>Python</strong></p>
 <table>
 <thead>
 <tr>
 <th align="center"><code>A</code></th>
 <th align="center"><code>B</code></th>
-<th align="center"><code>A</code> OU <code>B</code></th>
+<th align="center"><code>A and B</code></th>
 </tr>
 </thead>
 <tbody>
@@ -3375,12 +3422,12 @@ text-align: justify}
 <tr>
 <td align="center"><code>True</code></td>
 <td align="center"><code>False</code></td>
-<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
 </tr>
 <tr>
 <td align="center"><code>False</code></td>
 <td align="center"><code>True</code></td>
-<td align="center"><code>True</code></td>
+<td align="center"><code>False</code></td>
 </tr>
 <tr>
 <td align="center"><code>True</code></td>
@@ -3389,15 +3436,14 @@ text-align: justify}
 </tr>
 </tbody>
 </table>
-<div class="admonition example">
-<p class="admonition-title">Application au <strong><em>problème</em></strong> :</p>
-<p>Si le sphinx auquel on s'adresse n'est pas un menteur et s'il nous dit qu'il se trouve devant la porte menant à l'oasis <em>ou</em> s'il est un menteur et qu'il nous dit que la porte continue dans le désert, on veut prendre ce chemin.</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="ow">not</span><span class="p">(</span><span class="n">menteur</span><span class="p">)</span> <span class="ow">and</span> <span class="n">porte</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">menteur</span> <span class="ow">and</span> <span class="ow">not</span><span class="p">(</span><span class="n">porte</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je prends ce chemin.&quot;</span><span class="p">)</span>
-</code></pre></div>
 </div>
-<h3 id="id-le-ou-exclusif-xor">I.D. Le OU exclusif (XOR)<a class="headerlink" href="#id-le-ou-exclusif-xor" title="Permanent link">&para;</a></h3>
-<p>L'opérateur OU EXCLUSIF (XOR en anglais) permet d'associer deux expressions booléennes de la manière suivante : A OU B est vrai si A est vraie ou bien B est vraie. Cela donne la table de vérité suivante :</p>
+<p><img src="../img/porte_et_bis.png" style="float:right;padding-left:10px"></p>
+<p><strong>Porte logique</strong> à 2 entrées A et B : </p>
+<h3 id="c-le-ou">C. Le OU<a class="headerlink" href="#c-le-ou" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>L'opérateur <span class="arithmatex">\(OU\)</span> ( le <span class="arithmatex">\(OR\)</span> en anglais) permet d'associer deux expressions booléennes de la manière suivante : <span class="arithmatex">\(A\)</span> <span class="arithmatex">\(OU\)</span> <span class="arithmatex">\(B\)</span> est vrai si <span class="arithmatex">\(A\)</span> est vraie, <span class="arithmatex">\(B\)</span> est vraie, ou bien si les deux le sont. Cela donne la table de vérité suivante :</p>
+<p><center></p>
 <table>
 <thead>
 <tr>
@@ -3425,65 +3471,22 @@ text-align: justify}
 <tr>
 <td align="center"><code>True</code></td>
 <td align="center"><code>True</code></td>
-<td align="center"><code>False</code></td>
+<td align="center"><code>True</code></td>
+</tr>
+<tr>
+<td align="center"></center></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition example">
-<p class="admonition-title">Application au <strong><em>problème</em></strong> :</p>
-<p>Si le sphinx auquel on s'adresse est un menteur <em>ou (exclusif)</em> s'il nous dit qu'il ne se trouve pas devant la porte menant à l'oasis (et donc qu'il ne ment pas), on ne veut pas prendre ce chemin.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">xor</span>
-
-<span class="k">if</span> <span class="n">xor</span><span class="p">(</span><span class="n">menteur</span><span class="p">,</span><span class="ow">not</span><span class="p">(</span><span class="n">porte</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Je ne prends pas ce chemin.&quot;</span><span class="p">)</span>
-</code></pre></div>
 </div>
-<p><strong>N.B.</strong> : L'utilisation de cette fonction n'est pas à apprendre par coeur. </p>
+<p><img src="../img/porte_ou_bis.png" style="float:right;padding-left:10px"></p>
+<p><strong>Porte logique</strong> à 2 entrées A et B : </p>
 <h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
-<p>Une bonne utilisation des opérateurs booléens permet notamment de mieux gérer les différentes conditions traitées dans les programmes. La logique booléenne trouve aussi des applications dans la conception de circuits électroniques.</p>
-<blockquote>
-<p>Nous ne savons en fait pas quel sphinx ment et lequel dit la vérité. Nous n'avons le droit de ne poser qu'une question à un des deux sphinx pour savoir où aller. Laquelle devons-nous choisir pour aller à coup sûr vers l'oasis ?</p>
-</blockquote>
-<p><img alt="sphinx" src="../img/sphinx_statue.jpg" /></p>
-<p><br></p>
+<p>Les portes logiques sont les éléments de base des circuits électroniques. Leur combinaison  permet de réaliser des circuits beaucoup plus complexes.</p>
 <hr />
-<h2 id="exercices-les-expressions-booleennes">Exercices : les expressions booléennes<a class="headerlink" href="#exercices-les-expressions-booleennes" title="Permanent link">&para;</a></h2>
-<h3 id="exercice-0-amelioration-du-tp-sur-les-fonctions">Exercice 0 <em>(amélioration du TP sur les fonctions)</em> :<a class="headerlink" href="#exercice-0-amelioration-du-tp-sur-les-fonctions" title="Permanent link">&para;</a></h3>
-<p>On dispose d'une fonction <code>pair(n)</code>, renvoyant si un entier <code>n</code> est pair ou non :
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
-</code></pre></div>
-On considère une variable <code>m</code> représentant un mois de l'année.</p>
-<ol>
-<li>
-<p>Quelle instruction écrire pour tester "m est-t-il impair" ?</p>
-</li>
-<li>
-<p>Ecrire le programme Python traduisant l'algorithme suivant :
-<div class="highlight"><pre><span></span><code><span class="n">Si</span> <span class="n">n</span> <span class="n">est</span> <span class="n">impair</span> <span class="n">et</span> <span class="n">qu</span> <span class="n">il</span> <span class="n">est</span> <span class="n">un</span> <span class="n">mois</span> <span class="n">de</span> <span class="n">la</span> <span class="n">fin</span> <span class="n">de</span> <span class="n">l</span> <span class="n">année</span>
-    <span class="n">nb_jours</span> <span class="n">vaut</span> <span class="mi">30</span>
-</code></pre></div></p>
-</li>
-<li>Faire la même chose avec l'algorithme suivant :
-<div class="highlight"><pre><span></span><code><span class="n">Si</span> <span class="n">n</span> <span class="n">est</span> <span class="n">pair</span> <span class="n">et</span> <span class="n">qu</span> <span class="n">il</span> <span class="n">est</span> <span class="n">un</span> <span class="n">mois</span> <span class="n">du</span> <span class="n">début</span> <span class="n">de</span> <span class="n">l</span> <span class="n">année</span>
-    <span class="n">nb_jours</span> <span class="n">vaut</span> <span class="mi">30</span>
-</code></pre></div></li>
-<li>
-<p>Comment combiner les conditions des questions 2 et 3 ?</p>
-</li>
-<li>
-<p>Compléter la fonction suivante, permettant de tester tous les mois de l'année :
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nombre_jours</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">nb</span> <span class="o">=</span> <span class="mi">28</span>
-    <span class="k">elif</span> <span class="o">...</span>
-        <span class="n">nb</span> <span class="o">=</span> <span class="mi">30</span>
-    <span class="o">...</span>
-
-    <span class="k">return</span> <span class="n">nb</span>
-</code></pre></div></p>
-</li>
-</ol>
+<h2 id="td-les-expressions-booleennes">TD : Les expressions booléennes<a class="headerlink" href="#td-les-expressions-booleennes" title="Permanent link">&para;</a></h2>
 <h3 id="exercice-1-vrai-ou-faux">Exercice 1 : Vrai ou Faux<a class="headerlink" href="#exercice-1-vrai-ou-faux" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -3521,7 +3524,7 @@ On considère une variable <code>m</code> représentant un mois de l'année.</p>
 </ul>
 </li>
 </ol>
-<h3 id="exercice-3">Exercice 3 :<a class="headerlink" href="#exercice-3" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>On considère l'expression <code>a and b</code> où <code>a</code> et <code>b</code> sont deux expressions booléennes. Si <code>a</code> vaut <code>False</code>, quelle sera la valeur de l'expression, en fonction de la valeur de <code>b</code> ? Que pouvez-vous en déduire ?
@@ -3532,154 +3535,292 @@ On considère une variable <code>m</code> représentant un mois de l'année.</p>
 <br><br><br></p>
 </li>
 </ol>
-<p><strong>Conclusion</strong> <strong><em>(à retenir)</em></strong> : </p>
-<p><br></p>
-<hr />
-<h2 id="td-qui-faut-il-croire">TD : Qui faut-il croire ?<a class="headerlink" href="#td-qui-faut-il-croire" title="Permanent link">&para;</a></h2>
-<h3 id="a-un-village-perdu">A. Un village perdu<a class="headerlink" href="#a-un-village-perdu" title="Permanent link">&para;</a></h3>
-<p>Vous voyagez dans un endroit que vous ne connaissez pas, et demandez votre chemin à deux locaux que vous croisez. Vous souhaitez savoir où se trouve le village qui est votre objectif. Ils décident de jouer à un jeu avec vous : ils vont vous donner des informations, et soit toutes ces informations seront vraies, soit elles seront toutes fausses. </p>
-<p><img alt="village" src="../img/village.jpg" /></p>
-<p>En appliquant la logique booléenne, vous devez être capable d'obtenir l'information que vous recherchez.</p>
-<p>Voici leurs propos :</p>
-<blockquote>
-<p>X : "Le village se trouve dans la vallée."<br />
-Y : "Non, il ne s’y trouve pas."<br />
-X : "Ou alors dans les collines."</p>
-</blockquote>
-<p>On modélise le problème avec les variables suivantes : 
-- <code>V</code> et <code>C</code> qui valent <code>True</code> si, respectivement, le village se trouve dans la vallée ou dans les collines, et <code>False</code> sinon, 
-- <code>X</code> et <code>Y</code> qui valent <code>True</code> si respectivement les affirmations de X et de Y sont vraies, et <code>False</code> sinon.</p>
+<p><strong>Conclusion</strong> <strong><em>(à retenir)</em></strong> :</p>
+<p><br><br></p>
+<h3 id="exercice-4">Exercice 4<a class="headerlink" href="#exercice-4" title="Permanent link">&para;</a></h3>
+<p>On rappelle qu'un nombre est pair si son reste dans la division euclidienne par 2 vaut 0, et qu'il est impair sinon. Pour écrire une fonction indiquant si un entier <code>n</code> est pair ou non, on peut avoir envie de l'exprimer en Python avec des conditions : </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div>
+</div>
+<p>Cette écriture est abusive, car l'expression <code>n%2 == 0</code> renvoie déjà soit la valeur <code>True</code>, soit la valeur <code>False</code>. On préfère l'écrire simplement avec une expression booléenne :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+</code></pre></div>
+</div>
 <ol>
-<li>Traduire <code>X</code> et <code>Y</code> en fonction de <code>V</code>, <code>C</code>, et des opérateurs booléens qui conviennent.</li>
-<li>Compléter la table de vérité suivante (on part du principe que le village ne peut être que soit dans la vallée, soit dans la colline) :</li>
+<li>
+<p>Se baser sur l'exemple donné pour écrire une fonction <code>centaine(n)</code> qui renvoie <code>True</code> si <code>n</code> est supérieur à <code>100</code>, et <code>False</code> sinon. La fonction n'utilisera pas de conditions, mais une expression booléenne. </p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</li>
+<li>
+<p>Comment peut-on obtenir les nombres impairs à partir de la fonction <code>pair(n)</code> ? Même question pour obtenir les nombres inférieurs à <code>100</code>.</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</li>
+<li>
+<p>Trouver l'expression booléenne pouvant remplacer le code suivant : </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">+</span><span class="mi">10</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+</div>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</li>
 </ol>
+<hr />
+<h2 id="td-probleme-de-logique">TD : Problème de logique<a class="headerlink" href="#td-probleme-de-logique" title="Permanent link">&para;</a></h2>
+<p><center>
+<img src="../img/sphinx_desert.jpg" height=150>
+</center></p>
+<p>Au milieu du désert, vous cherchez une oasis. Vous arrivez à un carrefour où votre chemin se divise en 2 : un chemin va vers la gauche, un autre vers la droite. Deux sphinx sont posés à ce carrefour et savent quel est le chemin à prendre. Ils vont vous donner des indications, mais attention ! Soit ils disent tous les deux la vérité, soit ils mentent tous les deux.</p>
+<p>Voici ce que vous disent les sphinx S1 et S2 :  </p>
+<blockquote>
+<p>S1 : "L'oasis se trouve sur la gauche."<br />
+S2 : "Non elle est à droite."<br />
+S1 : "Ou alors sur la droite."</p>
+</blockquote>
+<ol>
+<li>
+<p>Représenter ce qu'affirme S1 en fonction d'une variable booléenne notée <code>G</code>, valant <code>True</code> si le chemin menant à l'oasis est celui de gauche, <code>False</code> s'il est à droite.</p>
+</li>
+<li>
+<p>Représenter ce qu'affirme S2 en fonction de la même variable <code>G</code>.</p>
+</li>
+<li>
+<p>Remplir la table de vérité suivante :</p>
 <table>
 <thead>
 <tr>
-<th align="center"><code>V</code></th>
-<th align="center"><code>C</code></th>
-<th align="center"><code>X</code></th>
-<th align="center"><code>Y</code></th>
+<th align="center"><code>G</code></th>
+<th align="center"><code>S1</code></th>
+<th align="center"><code>S2</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>False</code></td>
 <td align="center"><code>True</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>True</code></td>
 <td align="center"><code>False</code></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 </tbody>
 </table>
-<ol>
-<li>En déduire où se trouve le village.</li>
+</li>
+<li>
+<p>En déduire quel chemin est-ce qu'il faut prendre pour aller jusqu'à l'oasis.</p>
+</li>
 </ol>
 <hr />
-<div style="page-break-after: always; visibility: hidden"> 
-\pagebreak 
-</div>
-
-<h3 id="b-au-tribunal">B. Au tribunal<a class="headerlink" href="#b-au-tribunal" title="Permanent link">&para;</a></h3>
-<p>Vous êtes dans le jury d'un tribunal et écoutez les témoins d'une enquête. On sait que chacun des témoins soit toujours dit la vérité, soit ment toujours. Notre but est d'identifier ceux qui mentent et ceux qui ne mentent pas pour prononcer le verdict le plus juste possible.</p>
-<p><img alt="juge.jpg" src="../img/juge.jpg" /></p>
-<p>Les trois témoins s'expriment :  </p>
-<blockquote>
-<p>Ap : "Personne ne doit croire C."<br />
-Bp : "A et C disent toujours la vérité."<br />
-Cp : "B dit la vérité."</p>
-</blockquote>
-<p>On modélise le problème avec les variables suivantes : <code>A</code>, <code>B</code> et <code>C</code> qui valent <code>True</code> si, respectivement, les témoins A, B et C disent la vérité, et <code>False</code> sinon.</p>
+<h2 id="td-ladditionneur-binaire">TD : L'additionneur binaire<a class="headerlink" href="#td-ladditionneur-binaire" title="Permanent link">&para;</a></h2>
+<p>On utilise des <strong>portes logiques</strong> <em>(représentation électronique des opérateurs booléens)</em> pour construire des circuits en assemblant ces portes. On rappelle leur représentation classique :</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th align="center">Opérateur booléen</th>
+<th align="center">Porte logique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">NON(<code>A</code>)</td>
+<td align="center"><img src="../img/porte_non_bis.png" height=30></td>
+</tr>
+<tr>
+<td align="center"><code>A</code> ET <code>B</code></td>
+<td align="center"><img src="../img/porte_et_bis.png" height=30></td>
+</tr>
+<tr>
+<td align="center"><code>A</code> OU <code>B</code></td>
+<td align="center"><img src="../img/porte_ou_bis.png" height=30></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h3 id="a-loperateur-xor">A. L'opérateur XOR<a class="headerlink" href="#a-loperateur-xor" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Traduire Ap, Bp et Cp sous la forme d'expressions booléennes en utilisant les opérateurs appropriés.</li>
-<li>Compléter la table de vérité suivante :</li>
-</ol>
+<li>
+<p>Le XOR est un opérateur renvoyant <code>True</code> si, et seulement si, une de ses deux entrées A et B valent <code>True</code>. Il est appelé <strong>OU EXCLUSIF</strong>, par opposition au OU du cours, qui est le <strong>OU INCLUSIF</strong> (il inclue le cas dans lequel les deux entrées sont à <code>True</code>). On raisonne ici au niveau des circuits, on remplace donc les <code>True</code> et <code>False</code> par, respectivement, <code>1</code> et <code>0</code>. </p>
+<p>Compléter la table de vérité du XOR donnée ci-dessous :</p>
 <table>
 <thead>
 <tr>
 <th align="center"><code>A</code></th>
 <th align="center"><code>B</code></th>
-<th align="center"><code>C</code></th>
-<th align="center"><code>Ap</code></th>
-<th align="center"><code>Bp</code></th>
-<th align="center"><code>Cp</code></th>
+<th align="center"><code>A</code> XOR <code>B</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>False</code></td>
-<td align="center"><code>False</code></td>
-<td align="center"><code>False</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>1</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>0</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>1</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>On peut le représenter électroniquement par la porte suivante : <img src="../img/porte_xor_bis.png" height=30></p>
+</li>
+<li>
+<p>Vérifier que le circuit ci-dessous fait bien le calcul du XOR à partir des opérateurs booléens de base, en attribuant toutes les valeurs possibles (entre 0 et 1) aux entrées A et B et en calculant la valeur de la sortie S. La valeur de S doit correspondre aux valeurs A XOR B obtenues dans la table de vérité de la question 1.</p>
+<p><img src="../img/circuit_xor.png" height=100></p>
+</li>
+<li>
+<p>A partir de ce circuit, trouver l'expression booléenne constituée des opérateurs NON, ET et OU qui permet de calculer le XOR. Pour cela, il faut suivre les fils du circuit et faire l'opération correspondant à chaque porte sur les entrées exprimées en fonction de A et B.</p>
+</li>
+<li>
+<p>Utiliser l'expression booléenne obtenue à la question 3 pour programmer une fonction <code>xor</code> prenant en paramètres deux booléens <code>a</code> et <code>b</code> et renvoyant un booléen, en utilisant les opérateurs booléens <code>not</code>, <code>and</code> et <code>or</code>.</p>
+</li>
+</ol>
+<h3 id="b-ladditionneur-1-bit">B. L'additionneur 1 bit<a class="headerlink" href="#b-ladditionneur-1-bit" title="Permanent link">&para;</a></h3>
+<p>Un additionneur 1 bit est un circuit permettant d'additionner deux bits entre eux. Il dispose de :<br />
+<img src="../img/add.png" height=150 style="float:right;padding-left:15px">
+<em>Trois entrées :</em><br />
+- <code>a</code> : le premier bit,<br />
+- <code>b</code> : le deuxième bit,<br />
+- <code>re</code> : la <em>retenue</em> entrante (peut exister dans le cas où l'on combine les additionneurs)</p>
+<p><em>Deux sorties :</em><br />
+- <code>s</code> : la somme des deux bits,<br />
+- <code>rs</code> : la <em>retenue</em> sortante.</p>
+<p>Aller voir le circuit électronique correspondant à l'URL suivante : https://www.cahier-nsi.fr/additionneur1bit/ </p>
+<ol>
+<li>
+<p>Compléter les colonnes de <code>s</code> et de <code>rs</code> dans la table de vérité de l'additionneur en changeant les valeurs d'entrée du circuit :</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>a</code></th>
+<th align="center"><code>b</code></th>
+<th align="center"><code>re</code></th>
+<th align="center"><code>s</code></th>
+<th align="center"><code>rs</code></th>
+<th align="center">(a XOR b) XOR re</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>0</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>0</code></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>False</code></td>
-<td align="center"><code>False</code></td>
-<td align="center"><code>True</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>1</code></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>False</code></td>
-<td align="center"><code>True</code></td>
-<td align="center"><code>False</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>0</code></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>False</code></td>
-<td align="center"><code>True</code></td>
-<td align="center"><code>True</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>1</code></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>True</code></td>
-<td align="center"><code>False</code></td>
-<td align="center"><code>False</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>0</code></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>True</code></td>
-<td align="center"><code>False</code></td>
-<td align="center"><code>True</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>0</code></td>
+<td align="center"><code>1</code></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>True</code></td>
-<td align="center"><code>True</code></td>
-<td align="center"><code>False</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>0</code></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><code>True</code></td>
-<td align="center"><code>True</code></td>
-<td align="center"><code>True</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"><code>1</code></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></center></td>
+<td align="center"></td>
+<td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 </tbody>
 </table>
-<ol>
-<li>Comment pouvez-vous en déduire qui dit la vérité et qui ment ? </li>
+</li>
+<li>
+<p>On donne l'expression booléenne de <code>(a XOR b) XOR re</code><br />
+Compléter la table de vérité de cette expression. A quelle autre colonne correspond-elle ? Retrouver l'expression à partir du circuit électronique. </p>
+</li>
+<li>
+<p>Se baser sur le circuit pour obtenir l'expression booléenne permettant de calculer <code>rs</code>.</p>
+</li>
+<li>
+<p>Programmer une fonction <code>add1bit</code>, prenant en paramètres trois entiers <code>a</code>, <code>b</code> et la retenue <code>re</code>, et renvoyant en sortie <code>s</code> et la retenue <code>rs</code>, dont les expressions booléenne ont été trouvées aux questions 2 et 3. Utiliser la fonction <code>xor</code> définie Partie A, question 4.</p>
+</li>
 </ol>
+<blockquote>
+<p><strong>N.B.:</strong> Pour qu'une fonction renvoie 2 valeurs en sortie, il faut les séparer par une <code>,</code>, après le <code>return</code>.</p>
+</blockquote>
 
 
   
