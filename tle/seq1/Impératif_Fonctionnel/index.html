@@ -3438,7 +3438,7 @@ text-align: justify}
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="k">def</span> <span class="nf">remplace</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">nouvelle_liste</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
     <span class="k">return</span> <span class="n">y</span>
@@ -3456,15 +3456,20 @@ text-align: justify}
 </details>
 <details class="note">
 <summary>Que peut-on en conclure ?</summary>
-<p>Il y a modification d'une variable définie en dehors de <code>remplace</code> : elle crée un effet de bord. La fonction, appelée plusieurs fois avec le même paramètre ne renvoie pas la même valeur : ce n'est pas une fonction pure.</p>
+<p>Il y a modification de la variable <code>l</code> définie en dehors de <code>remplace</code> : elle crée un effet de bord. La fonction, appelée plusieurs fois avec le même paramètre ne renvoie pas la même valeur : ce n'est pas une fonction pure.</p>
 </details>
 <details class="note">
 <summary>Proposer une fonction "pure" effectuant le même traitement que <code>remplace</code>.</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remplace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
-    <span class="k">return</span> <span class="n">y</span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000015" class="comment">###</span><div class="line_v"><div id="editor_00000015"></div></div><div id="term_editor_00000015"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000015","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000015","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000015').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000015" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000015")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000015")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000015" class="py_mk_hide"></span><span id="corr_content_editor_00000015" class="py_mk_hide" data-strudel=""></span></p>
+<details class="check">
+<summary>Solution</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nouvelle_liste</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
+    <span class="n">l2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">l2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">l2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">y</span><span class="p">,</span> <span class="n">l2</span>
 </code></pre></div>
+</details>
 </details>
 </div>
 <p><strong>N.B. :</strong>  une fonction pure renvoie toujours une valeur (sinon, vu qu'elle n'a pas d'effet de bord, elle ne servirait pas à grand chose...).</p>
