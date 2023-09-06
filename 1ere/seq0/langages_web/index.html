@@ -856,20 +856,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#tp-liens-et-images" class="md-nav__link">
-    TP : Liens et images
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tp-html-et-css" class="md-nav__link">
-    TP : HTML et CSS
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3341,20 +3327,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#tp-liens-et-images" class="md-nav__link">
-    TP : Liens et images
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tp-html-et-css" class="md-nav__link">
-    TP : HTML et CSS
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3450,7 +3422,7 @@ text-align: justify}
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Voici mon titre !<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;paragraphe1&quot;</span><span class="p">&gt;</span>J&#39;écris ensuite un <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>paragraphe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;paragraphe1&quot;</span><span class="p">&gt;</span>J&#39;écris ensuite un <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>paragraphe<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>.
 </code></pre></div>
 </div>
 <p>Cela va permettre ici, avec les autres langages du Web, de donner une représentation différente à <strong>ce</strong> paragraphe uniquement.</p>
@@ -3488,7 +3460,7 @@ text-align: justify}
 </tr>
 <tr>
 <td align="center"><code>head</code></td>
-<td align="center">définit l'entête du fichier</td>
+<td align="center">définit l'entête de la page</td>
 </tr>
 <tr>
 <td align="center"><code>meta</code></td>
@@ -3507,12 +3479,15 @@ text-align: justify}
 </details>
 <hr />
 <h2 id="cours-le-css">Cours : Le CSS<a class="headerlink" href="#cours-le-css" title="Permanent link">&para;</a></h2>
-<p>Le HTML permet de jouer un peu sur la forme du contenu affiché, mais c'est le CSS qui permet de faire beaucoup plus.</p>
 <h3 id="a-les-bases-du-css">A. Les bases du CSS<a class="headerlink" href="#a-les-bases-du-css" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>Le <strong>CSS (Cascading Style Sheet)</strong> permet de mettre en forme une page Web.</p>
+</div>
 <p>Le code en CSS peut s'écrire à l'intérieur d'une page en HTML, ou bien dans un fichier séparé. Pour plus de clarté, on préfère cette deuxième solution. </p>
-<p>Dans un fichier en .css, on écrit le code suivant :</p>
+<p>Dans un fichier en <code>.css</code>, on écrit le code suivant :</p>
 <div class="admonition quote">
-<p class="admonition-title">Code</p>
+<p class="admonition-title">Code CSS</p>
 <div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
 <span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
@@ -3532,7 +3507,7 @@ text-align: justify}
 </div>
 <p>Il est associé au HTML suivant :</p>
 <div class="admonition quote">
-<p class="admonition-title">Code</p>
+<p class="admonition-title">Code HTML</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Présentation<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> Voici ma page de présentation.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;special&quot;</span><span class="p">&gt;</span> Elle est très spéciale !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -3578,6 +3553,50 @@ text-align: justify}
 <summary>Quel est le nom de la balise utilisée pour relier le fichier CSS au fichier HTML ? Quels sont ses attributs ?</summary>
 <p>Il s'agit de la balise <code>link</code> dont les attributs sont <code>rel</code> (donne des informations sur le type de la ressource) et <code>href</code> qui indique le chemin vers le fichier .css.</p>
 </details>
+<hr />
+<h1 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&para;</a></h1>
+<h3 id="exercice-1-ressources-et-chemins">Exercice 1 : Ressources et chemins<a class="headerlink" href="#exercice-1-ressources-et-chemins" title="Permanent link">&para;</a></h3>
+<p>J'écris un fichier HTML <code>index.html</code> stocké selon la hiérarchie suivante <em>(on suppose ici que <code>Mon_dossier</code> est la racine)</em>: </p>
+<pre class="mermaid"><code>    graph TB
+    G[Mon_dossier] --&gt; D
+    G --&gt; I[Images]
+    D[Code] --&gt; A(page.html) 
+    D --&gt; C(index.html)
+    D --&gt; E[style]
+    E --&gt; F(moncss.css)
+    I --&gt; H(monimage.jpg)</code></pre>
+<ol>
+<li>Quel(s) code(s) affichera bien l'image <code>monimage.jpg</code> ?  </li>
+<li><code>&lt;img src='monimage.jpg'&gt;</code>  </li>
+<li><code>&lt;img src='Mon_dossier/Images/monimage.jpg'&gt;</code>  </li>
+<li>
+<p><code>&lt;img src='Code/Mon_dossier/Images/monimage.jpg'&gt;</code> </p>
+</li>
+<li>
+<p>Quel(s) code(s) permettra de bien relier ma page à <code>moncss.css</code> ?  </p>
+</li>
+<li><code>&lt;link rel="stylesheet" href="style/style.css"&gt;</code>  </li>
+<li><code>&lt;link rel="stylesheet" href="style/moncss.css"&gt;</code>  </li>
+<li>
+<p><code>&lt;link rel="stylesheet" href="Mon_dossier/Code/style/moncss.css"&gt;</code> </p>
+</li>
+<li>
+<p>Quel code faut-il écrire pour insérer <code>monimage.jpg</code> dans la page <code>page.html</code> et la relier à <code>moncss.css</code> ? </p>
+</li>
+</ol>
+<p><br></p>
+<h3 id="exercice-2-liste-a-puces">Exercice 2 : Liste à puces<a class="headerlink" href="#exercice-2-liste-a-puces" title="Permanent link">&para;</a></h3>
+<p>Pour créer une liste à puce, il faut utiliser deux balises : <code>ul</code> indique le début (balise ouvrante) et la fin (balise fermante) de la liste, alors que <code>li</code> délimite chacun de ses éléments. </p>
+<p>Ecrire le code permettant d'afficher sous forme de liste à puce les premiers vers du poème "Le chat" de C. Baudelaire : </p>
+<ul>
+<li>De sa fourrure blonde et brune  </li>
+<li>Sort un parfum si doux, qu'un soir  </li>
+<li>J'en fus embaumé, pour l'avoir  </li>
+<li>Caressée une fois, rien qu'une.</li>
+</ul>
+<p><br></p>
+<h3 id="exercice-3-differencier-des-paragraphes">Exercice 3 : Différencier des paragraphes<a class="headerlink" href="#exercice-3-differencier-des-paragraphes" title="Permanent link">&para;</a></h3>
+<p>Ecrire les codes HTML et CSS permettant d'afficher un paragraphe "Ce paragraphe est noir" en couleur noire et en police Verdana, alors que le paragraphe "Ce paragraphe est rouge." doit être rouge et en police Arial.</p>
 <hr />
 <h2 id="tp-liens-et-images">TP : Liens et images<a class="headerlink" href="#tp-liens-et-images" title="Permanent link">&para;</a></h2>
 <ol>
