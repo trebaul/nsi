@@ -3368,7 +3368,9 @@ text-align: justify}
 <hr />
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <h3 id="a-les-elements-de-base-de-la-programmation">A. Les éléments de base de la programmation<a class="headerlink" href="#a-les-elements-de-base-de-la-programmation" title="Permanent link">&para;</a></h3>
-<p>Analysons le code Python suivant :
+<p>Analysons le code Python suivant :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">if</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -3377,7 +3379,10 @@ text-align: justify}
     <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="k">if</span> <span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000015" class="comment">###</span><div class="line_v"><div id="editor_00000015"></div></div><div id="term_editor_00000015"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000015","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000015","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000015').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000015" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000015")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000015")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000015" class="py_mk_hide"></span><span id="corr_content_editor_00000015" class="py_mk_hide" data-strudel=""></span></p>
 <details class="note">
 <summary>Dans l'exemple ci-dessus, quels sont les éléments de base de la programmation utilisés ?</summary>
 <p>On identifie des affectations, des instructions conditionnelles. L'ensemble est une séquence d'instructions.</p>
@@ -3387,11 +3392,32 @@ text-align: justify}
 <p>Il calcule la somme des éléments pairs d'une liste Python.</p>
 </details>
 <details class="note">
-<summary>Quel autre élément de programmation serait-il pertinent d'utiliser ici ?</summary>
+<summary>Proposer une autre manière d'écrire ce programme. Quel autre élément de programmation utilisez-vous ?</summary>
 <p>Il est pertinent d'utiliser une boucle bornée.</p>
+<details class="quote">
+<summary>Programme avec boucle</summary>
+<p>```python
+l = [2, 6, 9]
+s = 0
+for i in range(len(l)):
+    if l[i]%2 ==0:
+        s = s+l[i]</p>
+</details>
 </details>
 <details class="note">
 <summary>Ecrire ce programme en utilisant deux fonctions intermédiaires.</summary>
+<p>```python
+    def est_pair(n):
+        return n%2 == 0</p>
+<pre><code>def somme(l):
+    s = 0
+    for i in range(len(l)):
+        if est_pair(l[i]):
+            s = s+l[i]
+
+l = [2, 6, 9]
+s = somme(l)
+</code></pre>
 </details>
 <div class="admonition info">
 <p>Il y a donc plusieurs manières de programmer un même algorithme, en utilisant différemment les éléments de programmation à notre disposition. Un <strong>paradigme de programmation</strong> est une manière de programmer spécifique.</p>
@@ -3438,12 +3464,13 @@ text-align: justify}
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="k">def</span> <span class="nf">nouvelle_liste</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">remplace</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
     <span class="k">return</span> <span class="n">y</span>
 </code></pre></div>
 </div>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000016" class="comment">###</span><div class="line_v"><div id="editor_00000016"></div></div><div id="term_editor_00000016"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000016","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000016","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000016').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000016" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000016")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000016")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000016" class="py_mk_hide"></span><span id="corr_content_editor_00000016" class="py_mk_hide" data-strudel=""></span></p>
 <details class="note">
 <summary>Que fait cette fonction ? En écrire la spécification (description des entrées et sorties).</summary>
 <p>Cette fonction remplace la valeur du premier élement de <code>l</code> par une valeur donnée en entrée.<br />
@@ -3460,10 +3487,10 @@ text-align: justify}
 </details>
 <details class="note">
 <summary>Proposer une fonction "pure" effectuant le même traitement que <code>remplace</code>.</summary>
-<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000015" class="comment">###</span><div class="line_v"><div id="editor_00000015"></div></div><div id="term_editor_00000015"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000015","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000015","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000015').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000015" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000015")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000015")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000015" class="py_mk_hide"></span><span id="corr_content_editor_00000015" class="py_mk_hide" data-strudel=""></span></p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000017" class="comment">###</span><div class="line_v"><div id="editor_00000017"></div></div><div id="term_editor_00000017"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000017","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000017","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000017').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000017" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000017")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000017")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000017" class="py_mk_hide"></span><span id="corr_content_editor_00000017" class="py_mk_hide" data-strudel=""></span></p>
 <details class="check">
 <summary>Solution</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">nouvelle_liste</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remplace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
     <span class="n">l2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">l2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">l2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
@@ -3477,8 +3504,8 @@ text-align: justify}
 <div class="admonition info">
 <p class="admonition-title">Les caractéristiques de ce paradigme sont :</p>
 <ul>
-<li>utilisation de <strong>fonctions imbriquées</strong> (cf partie A),</li>
-<li>utilisation de <strong>fonctions pures</strong> (donc pas d'effet de bord !),</li>
+<li>utilisation de <strong>fonctions imbriquées</strong> (cf partie A),  </li>
+<li>utilisation de <strong>fonctions pures</strong> (donc pas d'effet de bord !),  </li>
 <li>on évite <strong>l'affectation</strong> de valeurs à des variables (utilisation de fonctions à la place).</li>
 </ul>
 </div>
