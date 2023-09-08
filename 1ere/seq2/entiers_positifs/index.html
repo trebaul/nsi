@@ -3351,18 +3351,17 @@ text-align: justify}
 <h1 id="i-les-entiers-positifs">I. Les entiers positifs<a class="headerlink" href="#i-les-entiers-positifs" title="Permanent link">&para;</a></h1>
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../img/bin.jpg" /></p>
-<p>Le type de variables <code>int</code> pour "integer" de Python permet de manipuler des entiers. Ils sont ne sont en fait pas représentés comme nous en avons l'habitude : on utilise une autre <strong>base</strong>.</p>
+<p>Une machine n'utilise que des 0 et des 1. Il faut donc une méthode pour représenter n'importe quel nombre, avec uniquement ces 2 valeurs.</p>
 <h3 id="a-la-base-10-decimale">A. La base 10 (décimale)<a class="headerlink" href="#a-la-base-10-decimale" title="Permanent link">&para;</a></h3>
-<p>La base 10 est celle que nous utilisons naturellement aujourd'hui. </p>
 <div class="admonition info">
 <p class="admonition-title">Définitions</p>
-<p>Elle est constituée de 10 chiffres, de 0 à 9, et chacun des chiffres utilisé a une valeur différente en fonction de sa <strong>position</strong> (on parle de <strong>numération de position</strong>), nommée <strong>rang</strong> du chiffre. A chaque <strong>rang</strong> est associée une <strong>puissance</strong> de 10 différente.</p>
+<p>Elle est constituée de 10 chiffres, de 0 à 9, et chacun des chiffres utilisé a une valeur différente en fonction de sa <em>position</em>, nommée <strong>rang</strong> du chiffre. A chaque <strong>rang</strong> est associée une <strong>puissance</strong> de 10 différente.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemples</p>
 <ul>
-<li>Prenons le nombre <span class="arithmatex">\(2005_{10}\)</span> (la notation <span class="arithmatex">\(nombre_{10}\)</span> indique que l'on considère sa représentation dans la base 10).</li>
-</ul>
+<li>
+<p>Prenons le nombre <span class="arithmatex">\(2005_{10}\)</span> (la notation <span class="arithmatex">\(nombre_{10}\)</span> indique que l'on considère sa représentation dans la base 10).</p>
 <table>
 <thead>
 <tr>
@@ -3391,8 +3390,10 @@ text-align: justify}
 </table>
 <p>On peut décomposer ce nombre de la manière suivante : </p>
 <p><span class="arithmatex">\(2005_{10} = 2\times10^3 + 0\times10^2 + 0\times10^1 + 5\times10^0 = 2000 + 5\)</span></p>
-<ul>
-<li>Faire la même chose avec le nombre <span class="arithmatex">\(1990_{10}\)</span>.</li>
+</li>
+<li>
+<p>Faire la même chose avec le nombre <span class="arithmatex">\(1990_{10}\)</span>.</p>
+</li>
 </ul>
 <details class="note">
 <summary>Solution</summary>
@@ -3410,61 +3411,43 @@ text-align: justify}
 </div>
 <h4 id="b1-du-binaire-au-decimal">B.1. Du binaire au décimal<a class="headerlink" href="#b1-du-binaire-au-decimal" title="Permanent link">&para;</a></h4>
 <p>Pour passer d'un nombre écrit en binaire à sa représentation en base décimale, on multiplie chaque chiffre par la <strong><em>puissance de 2</em></strong> associée à son <strong>rang</strong> (comme pour la base décimale, mais avec 2 au lieu de 10).</p>
-<p><em>Les puissances de 2 usuelles sont à connaître et/ou à savoir retrouver :</em></p>
+<div class="admonition info">
+<p class="admonition-title">Les puissances de 2 usuelles sont à connaître et/ou à savoir retrouver :</p>
 <table>
 <thead>
 <tr>
 <th align="center">Puissance de 2</th>
-<th align="center">Valeur</th>
+<th align="center"><span class="arithmatex">\(2^0\)</span></th>
+<th align="center"><span class="arithmatex">\(2^1\)</span></th>
+<th align="center"><span class="arithmatex">\(2^2\)</span></th>
+<th align="center"><span class="arithmatex">\(2^3\)</span></th>
+<th align="center"><span class="arithmatex">\(2^4\)</span></th>
+<th align="center"><span class="arithmatex">\(2^5\)</span></th>
+<th align="center"><span class="arithmatex">\(2^6\)</span></th>
+<th align="center"><span class="arithmatex">\(2^7\)</span></th>
+<th align="center"><span class="arithmatex">\(2^8\)</span></th>
+<th align="center"><span class="arithmatex">\(2^9\)</span></th>
+<th align="center"><span class="arithmatex">\(2^{10}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><span class="arithmatex">\(2^0\)</span></td>
-<td align="center"><span class="arithmatex">\(1\)</span></td>
-</tr>
-<tr>
-<td align="center"><span class="arithmatex">\(2^1\)</span></td>
-<td align="center"><span class="arithmatex">\(2\)</span></td>
-</tr>
-<tr>
-<td align="center"><span class="arithmatex">\(2^2\)</span></td>
-<td align="center"><span class="arithmatex">\(4\)</span></td>
-</tr>
-<tr>
-<td align="center"><span class="arithmatex">\(2^3\)</span></td>
-<td align="center"><span class="arithmatex">\(8\)</span></td>
-</tr>
-<tr>
-<td align="center"><span class="arithmatex">\(2^4\)</span></td>
-<td align="center"><span class="arithmatex">\(16\)</span></td>
-</tr>
-<tr>
-<td align="center"><span class="arithmatex">\(2^5\)</span></td>
-<td align="center"><span class="arithmatex">\(32\)</span></td>
-</tr>
-<tr>
-<td align="center"><span class="arithmatex">\(2^6\)</span></td>
-<td align="center"><span class="arithmatex">\(64\)</span></td>
-</tr>
-<tr>
-<td align="center"><span class="arithmatex">\(2^7\)</span></td>
-<td align="center"><span class="arithmatex">\(128\)</span></td>
-</tr>
-<tr>
-<td align="center"><span class="arithmatex">\(2^8\)</span></td>
-<td align="center"><span class="arithmatex">\(256\)</span></td>
-</tr>
-<tr>
-<td align="center"><span class="arithmatex">\(2^9\)</span></td>
-<td align="center"><span class="arithmatex">\(512\)</span></td>
-</tr>
-<tr>
-<td align="center"><span class="arithmatex">\(2^10\)</span></td>
-<td align="center"><span class="arithmatex">\(1024\)</span></td>
+<td align="center"><strong>Valeur</strong></td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">8</td>
+<td align="center">16</td>
+<td align="center">32</td>
+<td align="center">64</td>
+<td align="center">128</td>
+<td align="center">256</td>
+<td align="center">512</td>
+<td align="center">1024</td>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Exemples</p>
 <ul>
@@ -3537,16 +3520,26 @@ text-align: justify}
 <h4 id="b2-du-decimal-au-binaire">B.2. Du décimal au binaire<a class="headerlink" href="#b2-du-decimal-au-binaire" title="Permanent link">&para;</a></h4>
 <div class="admonition info">
 <p>Pour passer d'un nombre en écriture décimale à sa représentation en binaire, on utilise l'<em>algorithme</em> suivant :
-- On fait la division euclidienne ce nombre par 2 et on stocke le reste.<br />
-- On remplace ce nombre par le quotient de sa division euclidienne par 2.<br />
-- On s'arrête lorsque ce quotient devient 0.<br />
-- Le nombre en représentation binaire se lit en associant les restes des divisions successives, <strong><em>en commençant par la dernière</em></strong>.</p>
+1. On fait la division euclidienne ce nombre par 2 et on stocke le reste.
+2. On remplace ce nombre par le quotient de sa division euclidienne par 2, et on revient à l'étape 1.
+3. On s'arrête lorsque ce quotient devient 0.
+4. Le nombre en représentation binaire se lit en associant les restes des divisions successives, <strong><em>en commençant par la dernière</em></strong>.</p>
 </div>
 <details class="example">
 <summary>Exemple</summary>
 </details>
+<p>On peut utiliser une autre méthode : </p>
+<p><br><br></p>
 <h4 id="b3-nombre-de-bits-necessaires">B.3. Nombre de bits nécessaires<a class="headerlink" href="#b3-nombre-de-bits-necessaires" title="Permanent link">&para;</a></h4>
-<p>Pour trouver le nombre de bits nécessaires pour représenter un nombre décimal, on cherche la <strong>puissance de 2 supérieure la plus proche</strong> à ce nombre. Le nombre de bits est donné par la puissance.</p>
+<p>Pour trouver le nombre de bits nécessaires pour représenter un nombre décimal, on cherche la <strong>puissance de 2 supérieure ou égale la plus proche</strong> de ce nombre. Le nombre de bits est donné par la puissance.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Combien de bits faut-il pour représenter 9 ? </p>
+<details class="note">
+<summary>Solution</summary>
+<p>La puissance de 2 strictement supérieure est <span class="arithmatex">\(16 = 2^4\)</span>. Il faut donc 4 bits pour représenter 9 en binaire.</p>
+</details>
+</div>
 <h3 id="c-la-base-16-hexadecimale">C. La base 16 (hexadécimale)<a class="headerlink" href="#c-la-base-16-hexadecimale" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../img/hexa.png" /></p>
 <p>La base 2 est à la base du fonctionnement de l'informatique, mais son utilisation peut être laborieuse lorsque l'on veut manipuler des nombres relativement grands. On utilise alors la <strong>base 16</strong>, ou <strong>base hexadécimale</strong>.</p>
@@ -3594,25 +3587,18 @@ text-align: justify}
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemples</p>
-<ul>
-<li>
 <details class="note">
 <summary><span class="arithmatex">\(5_{16}\)</span></summary>
-<span class="arithmatex">\(5_{16} = 5\times16^0 = 5_{16}\)</span></details>
-</li>
-<li>
+<p><span class="arithmatex">\(5_{16} = 5\times16^0 = 5_{16}\)</span></p>
+</details>
 <details class="note">
 <summary><span class="arithmatex">\(2A_{16}\)</span></summary>
 <p><span class="arithmatex">\(2A_{16} = 2\times16^1 + 10\times16^0 = 32 + 10 = 42_{16}\)</span></p>
 </details>
-</li>
-<li>
 <details class="note">
 <summary><span class="arithmatex">\(1BF_{16}\)</span></summary>
 <p><span class="arithmatex">\(1BF_{16} = 1\times16^2 + 11\times16^1 + 15\times16^0 = 256 + 176 + 15 = 447_{16}\)</span></p>
 </details>
-</li>
-</ul>
 </div>
 <h3 id="c2-du-decimal-a-lhexadecimal">C.2. Du décimal à l'hexadécimal<a class="headerlink" href="#c2-du-decimal-a-lhexadecimal" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
@@ -3792,7 +3778,7 @@ Par exemple, <span class="arithmatex">\(1100_2*1010_2=11000+1100000=1111000_2\)<
 </ul>
 </li>
 </ol>
-<h3 id="exercice-9-adresses-ip">Exercice 9 : adresses IP<a class="headerlink" href="#exercice-9-adresses-ip" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-9-adresses-ip-bonus">Exercice 9 : adresses IP (bonus)<a class="headerlink" href="#exercice-9-adresses-ip-bonus" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Le format d'une adresse IPv4 est le suivant : a.b.c.d avec a, b, c et d des entiers allant de 0 à 255.</p>
