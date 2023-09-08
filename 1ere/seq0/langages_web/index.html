@@ -864,13 +864,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tp-liens-et-images" class="md-nav__link">
-    TP : Liens et images
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tp-html-et-css" class="md-nav__link">
     TP : HTML et CSS
   </a>
@@ -3356,13 +3349,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tp-liens-et-images" class="md-nav__link">
-    TP : Liens et images
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tp-html-et-css" class="md-nav__link">
     TP : HTML et CSS
   </a>
@@ -3642,47 +3628,30 @@ text-align: justify}
 <h3 id="exercice-3-differencier-des-paragraphes">Exercice 3 : Différencier des paragraphes<a class="headerlink" href="#exercice-3-differencier-des-paragraphes" title="Permanent link">&para;</a></h3>
 <p>Ecrire les codes HTML et CSS permettant d'afficher un paragraphe "Ce paragraphe est noir" en couleur noire et en police Verdana, alors que le paragraphe "Ce paragraphe est rouge." doit être rouge et en police Arial.</p>
 <hr />
-<h2 id="tp-liens-et-images">TP : Liens et images<a class="headerlink" href="#tp-liens-et-images" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Télécharger les deux fichier HTML suivant : </p>
-</li>
-<li>
-<p>Télécharger le fichier CSS suivant : </p>
-</li>
-<li>
-<p>Faire le lien entre chacun des fichiers HTML et le fichier CSS en rajoutant la ligne vue dans le cours.</p>
-</li>
-<li>
-<p>Utiliser la balise <code>a</code> pour relier vos deux fichiers HTML :  </p>
-<ul>
-<li>on pourra aller de <code>index.html</code> vers <code>critique.html</code> via un lien indiquant <code>Cliquez ici pour voir un avis critique</code>.  </li>
-<li>on pourra aller de <code>critique.html</code> à <code>index.html</code> via un lien indiquant <code>Revenir à la page précédente</code>.</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Aller sur https://www.craiyon.com/ (une IA génératrice d'images) et lui donner l'invite <em>(ce qu'on tape dans "What do you want to generate ?")</em> "artificial intelligence".  </li>
-<li>Sélectionner une image de votre choix, et récupérer son URL en cliquant sur "Share".  </li>
-<li>Ajouter cette image sur la page <code>index.html</code> <em>(à la fin)</em> avec la balise <code>img</code>. </li>
-<li>Ajouter un lien avec la balise <code>a</code> vers le site de Craiyon.</li>
-</ul>
-</li>
-</ol>
-<hr />
 <h2 id="tp-html-et-css">TP : HTML et CSS<a class="headerlink" href="#tp-html-et-css" title="Permanent link">&para;</a></h2>
-<div class="admonition tip">
-<p class="admonition-title">Préparation</p>
+<h3 id="a-preparation-du-repertoire-de-travail">A. Préparation du répertoire de travail<a class="headerlink" href="#a-preparation-du-repertoire-de-travail" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Télécharger le fichier HTML qui servira de base à vos pages : <a href="./base.html">base.html</a></li>
-<li>L'enregistrer dans un dossier <code>site_web</code>, à l'intérieur de votre dossier <code>NSI</code>.  </li>
-<li>Faire une copie du fichier et la renommer en <code>presentation.html</code>.  </li>
-<li>Renommer le fichier initial et l'appeler <code>critique.html</code>,  </li>
-<li>Ouvrir vos deux fichiers avec votre éditeur de texte (Notepad++ ou Bloc-notes).</li>
+<li>Ouvrir l'<strong>explorateur de fichiers</strong> de votre ordinateur, et aller dans votre espace personnel en cliquant sur <code>Ce PC</code>, puis sur <code>Espace Personnel Prénom NOM</code> avec votre prénom et nom. </li>
+<li>
+<p>Aller dans les <code>Documents</code>, puis créer un dossier <code>NSI</code> et un dossier <code>seq0</code> dans <code>NSI</code>. Vous devez obtenir l'arborescence suivante :</p>
+<pre class="mermaid"><code>        graph TB
+        G[Ce PC] --&gt; D
+        D[Espace Personnel *Prénom* *NOM*] --&gt; A
+        A[Documents] --&gt; B[NSI]
+        D --&gt; C[Images]
+        D --&gt; E[Musique]
+        B --&gt; F(seq0)</code></pre>
+</li>
+<li>
+<p>Ouvrir le fichier <code>html</code> qui servira de base à vos pages : <a href="../base.html">base.html</a></p>
+</li>
+<li>Une page blanche s'affiche : faire un clic droit, puis <code>Enregistrer sous</code>.</li>
+<li>Sélectionner le dossier <code>seq0</code>, et l'enregistrer sous <code>presentation.html</code>.  </li>
+<li>Depuis l'<strong>explorateur de fichiers</strong>, faire une copie de <code>presentation.html</code> (dans le même dossier), et le nommer <code>avis.html</code>.</li>
+<li>Ouvrir vos 2 fichiers avec votre éditeur de texte (Notepad++ ou Bloc-notes).</li>
 </ul>
-</div>
-<h3 id="a-les-fichiers-html">A. Les fichiers HTML<a class="headerlink" href="#a-les-fichiers-html" title="Permanent link">&para;</a></h3>
-<p>Sur ces deux pages HTML, vous allez présenter <strong><em>un film de votre choix</em></strong> sur la page <code>presentation.html</code>, et donner un (court) avis sur le film sur la page <code>critique.html</code>. Vous allez remplir le corps de vos deux pages Web avec les éléments suivants :<br />
+<h3 id="b-les-fichiers-html">B. Les fichiers HTML<a class="headerlink" href="#b-les-fichiers-html" title="Permanent link">&para;</a></h3>
+<p>Sur ces deux pages HTML, vous allez présenter <strong><em>un film de votre choix</em></strong> sur la page <code>presentation.html</code>, et donner un (court) avis sur le film sur la page <code>avis.html</code>. Vous allez remplir le corps de vos deux pages Web avec les éléments suivants :<br />
 1. Des titres de différents niveaux (balises <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>,...), du texte sous la forme de paragraphes (<code>&lt;p&gt;</code>) <strong>et</strong> de liste (<code>&lt;ul&gt;</code>) d'éléments.<br />
 2. Des images (balise auto-fermante <code>&lt;img .../&gt;</code>).<br />
 3. Sur chaque page, un lien hypertexte vers l'autre page (balise <code>&lt;a href=...&gt;</code>).<br />
@@ -3691,18 +3660,18 @@ text-align: justify}
 6. Une vidéo embarquée Youtube contenant la bande-annonce du film.</p>
 <div class="admonition tip">
 <p class="admonition-title">Indications</p>
-<p>Pour la vidéo Youtube :
+<p>Pour la vidéo Youtube :<br />
 - Aller sur le site de https://youtube.com et trouver la vidéo de votre choix,<br />
 - cliquer sur "Partager" puis sur "Intégrer",<br />
 - copier/coller le code HTML qui s'affiche (délimité par une balise <code>&lt;iframe&gt;</code>) dans le corps de votre page.</p>
 </div>
 <div class="admonition tip">
-<p>Pour tout le reste, se référer à la <strong>fiche memento</strong> distribuée et, bien sûr, au <strong>cours</strong>.</p>
+<p>Pour tout le reste, se référer à la <strong>fiche mémo</strong> distribuée et, bien sûr, au <strong>cours</strong>.</p>
 </div>
 <p><strong><em>Exemple de rendu :</em></strong>
 <center>
 <img src="../img/rendu.png" height=275></center></p>
-<h3 id="b-la-feuille-de-style">B. La feuille de style<a class="headerlink" href="#b-la-feuille-de-style" title="Permanent link">&para;</a></h3>
+<h3 id="c-la-feuille-de-style">C. La feuille de style<a class="headerlink" href="#c-la-feuille-de-style" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Préparation</p>
 <ul>
@@ -3713,7 +3682,7 @@ text-align: justify}
 <p>Pour rajouter du style à vos pages, il faut définir la feuille de style <code>style.css</code>.</p>
 <ol>
 <li>
-<p>Rajouter la ligne qui permet de lier un fichier .html à un fichier .css dans l'entête de vos deux fichiers <code>presentation.html</code> et <code>critique.html</code>.</p>
+<p>Rajouter la ligne qui permet de lier un fichier <code>.html</code> à un fichier <code>.css</code> dans l'entête de vos deux fichiers <code>presentation.html</code> et <code>avis.html</code>.</p>
 </li>
 <li>
 <p>Définir un style pour vos pages. </p>
@@ -3767,7 +3736,16 @@ text-align: justify}
 </div>
 <p><strong><em>Exemple de rendu :</em></strong>
 <center>
-<img src="../img/rendu_css.png" height=275></center></p>
+<img src="../img/rendu_css.png" height=275></center> </p>
+<h3 id="d-dossier-compresse">D. Dossier compressé<a class="headerlink" href="#d-dossier-compresse" title="Permanent link">&para;</a></h3>
+<p><em>Vous allez me partager les différents fichiers de votre site en créant une archive, et l'application Casier de l'ENT.</em></p>
+<ol>
+<li>Depuis l'explorateur de fichiers aller dans votre dossier <code>NSI</code>.  </li>
+<li>Faire un clic droit sur <code>seq0</code> puis cliquer sur <code>Compresser dans un fichier zip</code>. </li>
+<li>Renommer l'archive en <code>site_web_prénom_NOM.zip</code> en remplaçant <code>prénom</code> et <code>NOM</code> par votre prénom et votre nom.  </li>
+<li>Depuis l'ENT, se connecter à l'application <code>Casier</code>. Elle sert à partager des ressources avec vos enseignants. </li>
+<li>Cliquer sur <code>Déposer dans un casier</code>. Cliquer sur <code>Parcourir</code>, et trouver votre fichier <code>site_web_prénom_NOM.zip</code> sur votre machine. Dans la partie <code>Destinataire</code> rechercher <code>TREBAUL</code> et sélectionner le profil de votre enseignante. Cliquer sur <code>Envoyer</code>.</li>
+</ol>
 
 
   
