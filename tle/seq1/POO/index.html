@@ -3275,12 +3275,12 @@ text-align: justify}
 <span class="n">geralt</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">()</span>    <span class="c1"># création d&#39;un élément de la classe : un objet</span>
 <span class="n">monstre</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">()</span>   <span class="c1"># création d&#39;un deuxième objet</span>
 </code></pre></div>
-Tous les objets de la classe <code>Sorceleur</code> auront les mêmes <em>caractéristiques</em> : des variables nommées <strong>attributs</strong>, et les mêmes <em>comportements</em> définis par des fonctions appelées <strong>méthodes</strong>. Parmi les caractéristiques des sorceleurs, on peut avoir leur nombre de points de vie.  </p>
+Tous les objets de la classe <code>Personnage</code> auront les mêmes <em>caractéristiques</em> : des variables nommées <strong>attributs</strong>, et les mêmes <em>comportements</em> définis par des fonctions appelées <strong>méthodes</strong>. Parmi les caractéristiques des sorceleurs, on peut avoir leur nombre de points de vie.  </p>
 </li>
 <li>
 <p>Implémenter le code suivant :
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Personnage</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># cette fonction est une méthode de la classe Sorceleur nommée &quot;constructeur&quot; : utilisée pour &quot;construire&quot; chaque nouvel objet</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># cette fonction est une méthode de la classe Personnage nommée &quot;constructeur&quot; : utilisée pour &quot;construire&quot; chaque nouvel objet</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vie</span> <span class="o">=</span> <span class="mi">50</span>   <span class="c1"># on attribue 50 points de vie par défaut à tout nouveau sorceleur</span>
 
 <span class="n">geralt</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">()</span>
