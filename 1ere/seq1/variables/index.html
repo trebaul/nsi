@@ -807,6 +807,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-types-et-operateurs" class="md-nav__link">
+    TP : Types et opérateurs
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3207,6 +3214,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-types-et-operateurs" class="md-nav__link">
+    TP : Types et opérateurs
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3756,6 +3770,72 @@ text-align: justify}
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="tp-types-et-operateurs">TP : Types et opérateurs<a class="headerlink" href="#tp-types-et-operateurs" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p>L'application Capytale permet d'utiliser des <strong>Notebooks</strong> : des fichiers qui permettent de faire du Python en ligne. Ils se découpent en plusieurs <strong>cellules</strong> : soit du <strong>texte</strong>, soit du <strong>code</strong> en Python. Pour exécuter les codes, il faut cliquer sur la cellule, puis sur "Exécuter". N'essayez pas de modifier les cellules texte !</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Noter les réponses aux questions sur votre cahier de TP, et tout le code dans les cellules de code du Notebook.</p>
+</div>
+<p>On s'intéresse dans ce TP aux types de variables, et à l'utilisation d'opérateurs usuels permettant de faire des calculs sur ces variables.</p>
+<ol>
+<li>
+<p>Exécuter les scripts suivant. Quelle information donne la fonction <code>type</code> ?</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;bonjour&quot;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">b</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Quel est la valeur et le type de l'expression <code>6+10.0</code> ? S'inspirer de la question 1 pour afficher la réponse dans la cellule suivante. </p>
+<div class="highlight"><pre><span></span><code><span class="mi">6</span><span class="o">+</span><span class="mf">10.0</span>
+</code></pre></div>
+</li>
+<li>
+<p>a. Que se passe-t-il si l'on tape l'expression <code>1+'mot'</code> ?<br />
+    b. Relever l'erreur <em>(la 3ème ligne qui s'affiche)</em> produite en anglais, et en faire une traduction. Si besoin, utiliser un traducteur en ligne comme Google Translate. </p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</li>
+<li>
+<p>a. Le calcul de la question 3 n'avait pas beaucoup de sens, mais il est possible dans un programme de se retrouver avec un calcul du type <code>1+'5'</code>. Que va-t-il se passer ?  </p>
+<p>b. Le vérifier avec le programme suivant : </p>
+<div class="highlight"><pre><span></span><code><span class="n">nb1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">nb2</span> <span class="o">=</span> <span class="s1">&#39;5&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nb1</span><span class="o">+</span><span class="n">nb2</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Note :</strong> L'instruction <code>print(...)</code> permet d'afficher ce qu'il y a entre les parenthèses.</p>
+<p>c. La fonction <code>input</code> permet de demander à l'utilisateur de rentrer lui-même une valeur pour une variable. Il la saisit au clavier, puis appuie sur la touche Entrée. 
+On remplace la ligne 2 du programme précédent par celle-ci :</p>
+<div class="highlight"><pre><span></span><code><span class="n">nb1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">nb2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrer un nombre (entier ou flottant)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nb1</span><span class="o">+</span><span class="n">nb2</span><span class="p">)</span>
+</code></pre></div>
+<p>d. Exécuter le programme. Que se passe-t-il ? </p>
+<p>e. La valeur stockée dans <code>nb2</code> est de type <code>str</code>, pour faire des opérations avec cette variable et des nombres, il faut la convertir. On peut utiliser la fonction <code>int(...)</code> qui prend en paramètre une variable (entre les parenthèses) et la transforme en entier. Ajouter l'instruction suivante et vérifier que cela fonctionne :</p>
+<div class="highlight"><pre><span></span><code><span class="n">nb1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">nb2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrer un nombre (entier ou flottant)&quot;</span><span class="p">)</span>
+<span class="c1"># ajouter l&#39;opération de conversion ici</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nb1</span><span class="o">+</span><span class="n">nb2</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>On veut faire un convertisseur d'euros en dollars. En s'inspirant de la question 4, écrire un programme qui demande à l'utilisateur d'entrer une somme (un entier ou un flottant) en utilisant la fonction <code>input</code>, la multiplie par <code>1.09</code> et affiche le résultat en dollars avec la fonction <code>print</code>. </p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</li>
+<li>
+<p>Un personnage de jeu a un nombre entier de points de vie <code>point_de_vie</code> et on stocke dans une variable <code>degats</code> un entier correspondant aux points perdus. Ecrire un programme qui demande à l'utilisateur d'entrer un nombre de points de vie, stocké dans une variable <code>point_de_vie</code>, puis un entier <code>degats</code>, et qui ensuite calcule et affiche le nombre de points de vie actualisé.</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</li>
+</ol>
 
 
   

@@ -748,6 +748,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-liens-et-images" class="md-nav__link">
+    TP : Liens et images
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3233,6 +3240,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tp-liens-et-images" class="md-nav__link">
+    TP : Liens et images
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3518,7 +3532,7 @@ text-align: justify}
         A[Documents] --&gt; B[NSI]
         D --&gt; C[Images]
         D --&gt; E[Musique]
-        B --&gt; F(seq0)</code></pre>
+        B --&gt; F[seq0]</code></pre>
 </li>
 <li>
 <p>Ouvrir le fichier <code>html</code> qui servira de base à vos pages : <a href="../base.html">base.html</a></p>
@@ -3623,6 +3637,37 @@ text-align: justify}
 <li>Renommer l'archive en <code>site_web_prénom_NOM.zip</code> en remplaçant <code>prénom</code> et <code>NOM</code> par votre prénom et votre nom.  </li>
 <li>Depuis l'ENT, se connecter à l'application <code>Casier</code>. Elle sert à partager des ressources avec vos enseignants. </li>
 <li>Cliquer sur <code>Déposer dans un casier</code>. Cliquer sur <code>Parcourir</code>, et trouver votre fichier <code>site_web_prénom_NOM.zip</code> sur votre machine. Dans la partie <code>Destinataire</code> rechercher <code>TREBAUL</code> et sélectionner le profil de votre enseignante. Cliquer sur <code>Envoyer</code>.</li>
+</ol>
+<hr />
+<h2 id="tp-liens-et-images">TP : Liens et images<a class="headerlink" href="#tp-liens-et-images" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Télécharger l'archive suivante : <a href="../TP_Liens_Images.zip">Archive</a></p>
+</li>
+<li>
+<p>La décompresser dans un dossier que vous nommez <code>site_ia</code>, à placer ainsi dans votre arborescence de fichiers : </p>
+<pre class="mermaid"><code>    graph TB
+    G[Ce PC] --&gt; D
+    D[Espace Personnel *Prénom* *NOM*] --&gt; A
+    A[Documents] --&gt; B[NSI]
+    D --&gt; C[Images]
+    D --&gt; E[Musique]
+    B --&gt; F[seq0]
+    F --&gt; H(site_ia)</code></pre>
+</li>
+<li>
+<p>L'image de la page <code>index.html</code> ne s'affiche pas. Localiser la balise qui permet de l'afficher, et modifier le chemin vers la ressource pour qu'elle s'affiche.</p>
+</li>
+<li>
+<p>La feuille de style n'est pas appliquée aux deux pages HTML. Rajouter la ligne qui permet de faire le lien entre le fichier <code>.css</code> et les deux pages <code>index.html</code> et <code>critique.html</code>. Le style appliqué à la page <code>index.html</code> donne le rendu suivant : </p>
+<p><img src='../img/site_ia.png'></p>
+</li>
+<li>
+<p>On doit pouvoir naviguer de la page <code>index.html</code> à la page <code>critique.html</code> et réciproquement. Corriger le code des balises correspondantes sur chacune des deux pages pour que ce soit possible. </p>
+</li>
+<li>
+<p>Lire le contenu des pages, c'est instructif ! <em>(mais ne tardez pas à passer à la suite)</em></p>
+</li>
 </ol>
 
 
