@@ -3286,6 +3286,7 @@ text-align: justify}
 
 <h1 id="ii-la-recursivite">II. La récursivité<a class="headerlink" href="#ii-la-recursivite" title="Permanent link">&para;</a></h1>
 <hr />
+<p>3, 2, 1... Partez ! <a href="../intro.py">intro.py</a></p>
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
 <p><center>
@@ -3371,14 +3372,17 @@ puissance(3) = 2 * 2 * 2 * 1 = 8</em></strong></p>
 <li>En déduire une fonction <code>factorielle(n)</code> calculant la valeur de <code>!n</code> pour tout entier <code>n</code>.</li>
 <li>Vérifier que <code>factorielle(5)</code> renvoie bien la valeur <code>120</code> et <code>factorielle(7)</code> la valeur <code>5040</code>.</li>
 <li>Dessiner la pile d'exécution pour l'appel de <code>factorielle(4)</code>.</li>
-<li>Vérifier votre travail en visualisant l'exécution de votre code avec https://pythontutor.com/visualize.html</li>
+<li>Vérifier votre travail en visualisant l'exécution de votre code avec <a href="https://pythontutor.com/visualize.html">https://pythontutor.com/visualize.html</a></li>
 </ol>
 <h3 id="exercice-2-la-suite-de-fibonacci">Exercice 2 : la suite de Fibonacci<a class="headerlink" href="#exercice-2-la-suite-de-fibonacci" title="Permanent link">&para;</a></h3>
 <p>La suite de Fibonacci est définie comme suit :<br />
 - <span class="arithmatex">\(u_0 = 0\)</span> et <span class="arithmatex">\(u_1 = 1\)</span><br />
-- <span class="arithmatex">\(u_n=u_{n-1}+u_{n-2}\)</span><br />
-1. Écrire une fonction récursive <code>fib_rec(n)</code> qui donne le <code>n</code>ième terme de la suite de Fibonacci.
-2. Représenter les appels récursifs de <code>fib_rec(5)</code> sous la forme d’une structure hiérarchique, puis sous la forme d’une pile.</p>
+- <span class="arithmatex">\(u_n=u_{n-1}+u_{n-2}\)</span>  </p>
+<ol>
+<li>Écrire une fonction récursive <code>fib_rec(n)</code> qui donne le <code>n</code>ième terme de la suite de Fibonacci.  </li>
+<li>Ecrire une version itérative <code>fib_it(n)</code> en remplaçant les appels récursifs par l'utilisation d'une boucle.  </li>
+<li>Représenter les appels récursifs de <code>fib_rec(4)</code> sous la forme d’une structure hiérarchique, puis sous la forme d’une pile.</li>
+</ol>
 <h3 id="exercice-3-palindromes">Exercice 3 : palindromes<a class="headerlink" href="#exercice-3-palindromes" title="Permanent link">&para;</a></h3>
 <p>Un palindrome est un mot pouvant se lire à l'endroit comme à l'envers, comme "été" ou "radar".</p>
 <p>On veut écrire une fonction <code>palindrome</code> prenant en entrée une chaîne de caractère <code>mot</code> et renvoyant un booléen indiquant si ce mot est un palindrome ou non.</p>
