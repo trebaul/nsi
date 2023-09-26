@@ -3397,22 +3397,37 @@ Sur quelle valeur l'appel récursif se fait-il ?</li>
 <li>Ecrire la fonction <code>palindrome</code> incluant ces différents cas.
 <br><br></li>
 </ol>
-<p><img alt="" src="../img/meme.bmp" /></p>
-<hr />
-<h3 id="pour-aller-plus-loin">Pour aller plus loin...<a class="headerlink" href="#pour-aller-plus-loin" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Pour prendre une partie d'une chaîne de caractères, on peut faire ce qu'on appelle du <strong><em>slicing</em></strong>, c'est-à-dire un découpage de la chaîne entre deux indices : pour une chaine <code>chaine</code>, on peut choisir de considérer <code>chaine[i:j]</code> qui prendra les éléments de <code>i</code> à <code>j-1</code> de <code>chaine</code>.</p>
+</blockquote>
 <h3 id="exercice-4-somme-dune-liste">Exercice 4 : somme d'une liste<a class="headerlink" href="#exercice-4-somme-dune-liste" title="Permanent link">&para;</a></h3>
-<p>Une fonction récursive appliquant un traitement sur une liste fonctionne de la même manière qu'avec un entier : il faut, à chaque nouvel appel, réduire le problème. C'est-à-dire ici, réduire la liste initiale (par exemple considérer la même liste à laquelle on a enlevé le premier élément).</p>
+<p>Une fonction récursive sur un paramètre de type liste Python fonctionne de la même manière qu'avec un entier : il faut, à chaque nouvel appel, réduire le problème. C'est-à-dire ici, réduire la liste initiale.</p>
 <ol>
 <li>Ecrire une fonction itérative (utilisant une boucle) permettant de calculer la somme des éléments d'une liste de nombres <code>somme_it(liste)</code>.</li>
-<li>Pour quelle valeur de la liste est-il le plus facile de faire ce calcul, et que vaut-il dans ce cas ? <em>(état trivial)</em></li>
-<li>Pour prendre une partie d'une liste Python, on peut faire ce qu'on appelle du <em>slicing</em>, c'est-à-dire un découpage de la liste entre deux indices : pour une liste <code>l</code>, on peut choisir de considérer <code>l[i:j]</code> qui prendra les éléments de <code>i</code> à <code>j-1</code> de <code>l</code>.<ul>
-<li>En déduire comment prendre tous les éléments d'une liste sauf le premier.</li>
+<li>Pour quelle valeur de la liste est-il le plus facile de faire ce calcul, et que vaut-il dans ce cas ? <em>(cas de base)</em></li>
+<li>On peut faire du <strong><em>slicing</em></strong> sur les listes Python de la même manière que sur les chaînes de caractères.  <ul>
+<li>En déduire comment prendre tous les éléments d'une liste sauf le premier.  </li>
 <li>En déduire l'appel récursif de la fonction <code>somme_rec</code> qui sera fait pour faire le calcul de la somme d'une liste de manière récursive.</li>
 </ul>
 </li>
 <li>Ecrire la fonction récursive <code>somme_rec(liste)</code>.</li>
 </ol>
-<p><br></p>
+<h3 id="exercice-5-le-rendu-de-monnaie">Exercice 5 : Le rendu de monnaie<a class="headerlink" href="#exercice-5-le-rendu-de-monnaie" title="Permanent link">&para;</a></h3>
+<p>Le code suivant permet de rendre la monnaie avec l'algorithme glouton vu en classe de première (voir le cours <a href="https://trebaul.github.io/nsi/1ere/seq8/gloutons/#cours">ici</a>). L'algorithme est cette fois-ci implémenté de manière récursive. Compléter le code :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">rendu_glouton</span><span class="p">(</span><span class="n">a_rendre</span><span class="p">,</span> <span class="n">rang</span><span class="p">,</span> <span class="n">pieces</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">pieces</span><span class="p">[</span><span class="n">rang</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">a_rendre</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span>
+    <span class="k">elif</span> <span class="n">v</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="o">...</span> <span class="o">+</span> <span class="n">rendu_glouton</span><span class="p">(</span><span class="n">a_rendre</span> <span class="o">-</span> <span class="n">v</span><span class="p">,</span> <span class="n">rang</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rendu_glouton</span><span class="p">(</span><span class="n">a_rendre</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+
+<span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> 
+<span class="k">assert</span> <span class="n">rendu_glouton</span><span class="p">(</span><span class="mi">67</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">valeurs</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">rendu_glouton</span><span class="p">(</span><span class="mi">291</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">valeurs</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">assert</span>  <span class="n">rendu_glouton</span><span class="p">(</span><span class="mi">291</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">valeurs</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">==</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="c1"># si on ne dispose pas de billets de 100</span>
+</code></pre></div>
 <hr />
 <h2 id="td-les-tours-de-hanoi">TD : Les tours de Hanoï<a class="headerlink" href="#td-les-tours-de-hanoi" title="Permanent link">&para;</a></h2>
 <h3 id="introduction_1">Introduction<a class="headerlink" href="#introduction_1" title="Permanent link">&para;</a></h3>
