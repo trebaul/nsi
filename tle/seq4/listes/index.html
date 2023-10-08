@@ -3256,7 +3256,8 @@ text-align: justify}
 <p class="admonition-title">Rappel</p>
 <p>Un tableau est une suite indicée d'éléments de même type.</p>
 </div>
-<p>L'avantage d'un tableau est que l'on peut accéder directement à chacun de ses éléments, grâce à leur indice. Son inconvénient est que sa <strong>taille est définie à l'avance</strong>, et ne peut être modifiée. La liste chaînée se différencie des tableaux par sa manière d'accèder aux différents éléments.</p>
+<p>L'avantage d'un tableau est que l'on peut accéder directement (avec une complexité <strong><em>constante</em></strong>) à chacun de ses éléments, grâce à leur indice. <br />
+Son inconvénient est que sa <strong>taille est définie à l'avance</strong>, et ne peut être modifiée.</p>
 <h3 id="b-la-structure-de-liste-chainee">B. La structure de liste chaînée<a class="headerlink" href="#b-la-structure-de-liste-chainee" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Définition</p>
@@ -3291,7 +3292,7 @@ text-align: justify}
 <h3 id="c-stockage-en-memoire">C. Stockage en mémoire<a class="headerlink" href="#c-stockage-en-memoire" title="Permanent link">&para;</a></h3>
 <p><strong>Tableaux</strong> et <strong>listes chaînées</strong> se distinguent par leur utilisation de la mémoire. Un <strong>tableau</strong> est stocké dans une suite contigüe de cases mémoires. Sa taille est fixe : l'ajout d'un nouvel élément, qui agrandirait la taille du tableau, n'est pas possible.</p>
 <p><img alt="" src="../img/tableau_stockage.png" /></p>
-<p>En Python, la structure de liste correspond à un <strong>tableau dynamique</strong> : un tableau auquel on peut ajouter des éléments. Ceux-ci devant toujours être placés les uns à côté des autres, s'il n'y a pas de place pour ajouter ces données dans les cases mémoires adjacentes... alors il faut réécrire le tableau ailleurs.
+<p>En Python, la structure de liste correspond à un <strong>tableau dynamique</strong> : un tableau auquel on peut ajouter des éléments. Pour insérer un élément au milieu, il faut décaler tous les suivants. Et s'il n'y a pas de place pour ajouter ces données dans les cases mémoires contigües... il faut réécrire le tableau ailleurs.
 <img alt="" src="../img/tableau_dynamique_stockage.png" /></p>
 <p>Les différents éléments d'une liste chaînée ne sont pas stockés de manière contigüe : chaque élément est associé à 2 cases mémoires :<br />
 - une dans laquelle on stocke <strong>la valeur</strong> de l'élément,<br />
