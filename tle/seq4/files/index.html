@@ -3337,19 +3337,39 @@ Les tester sur la file <code>f</code> créée précédemment.</p>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 <h3 id="b-implementation-avec-deux-piles">B. Implémentation avec deux piles<a class="headerlink" href="#b-implementation-avec-deux-piles" title="Permanent link">&para;</a></h3>
-<p>Pour la deuxième implantation, nous allons utiliser deux structures de piles et la programmation orientée objet.
-Le procédé est le suivant :<br />
-- La file est, au départ, composée de <strong>deux piles</strong> vides : une <strong>pile d'entrée</strong> et une <strong>pile de sortie</strong>.<br />
-- Quand on <strong>ajoute</strong> un élément dans la file, on le place dans la <strong>pile d'entrée</strong>.<br />
-- Quand on <strong>supprime</strong> un élément de la file, deux cas se présentent :<br />
-    1. Si la pile de sortie est vide : on dépile alors chaque élément de la pile d'entrée pour les empiler dans la pile de sortie.<br />
-    2. S'il y a au moins un élément dans la pile de sortie : on ne fait rien.<br />
-    3. On supprime ensuite le sommet de la pile de sortie.</p>
-<p>On utilise donc une classe <code>Pile</code>, et on propose la code de la classe <code>File</code> ci-dessous.<br />
-- Compléter les méthodes proposées pour implémenter la structure de file.<br />
-- Ajouter à la classe File les méthodes suivantes :<br />
-    1. <code>sommet</code> : retourne le sommet de la file, sans l'en enlever.<br />
-    2. <code>taille</code> : retourne le nombre d'éléments de la file.</p>
+<p>Pour la deuxième implantation, nous allons utiliser <strong>deux structures de piles</strong> et la programmation orientée objet.</p>
+<div class="admonition info">
+<p class="admonition-title">Le procédé est le suivant :</p>
+<ol>
+<li>
+<p>La file est, au départ, composée de <strong>deux piles</strong> vides : une <strong>pile d'entrée</strong> et une <strong>pile de sortie</strong>.  </p>
+</li>
+<li>
+<p>Quand on <strong>ajoute</strong> un élément dans la file, on le place dans la <strong>pile d'entrée</strong>.  </p>
+</li>
+<li>
+<p>Quand on <strong>supprime</strong> un élément de la file, deux cas se présentent :  </p>
+<ul>
+<li>Si la pile de sortie est vide : on dépile alors chaque élément de la pile d'entrée pour les empiler dans la pile de sortie.  </li>
+<li>S'il y a au moins un élément dans la pile de sortie : on ne fait rien.<br />
+<strong><em>Dans les deux cas</em></strong>, on supprime ensuite le sommet de la pile de sortie.</li>
+</ul>
+</li>
+</ol>
+</div>
+<p>On utilise donc une classe <code>Pile</code>, et on propose la code de la classe <code>File</code> ci-dessous.  </p>
+<ol>
+<li>
+<p>Compléter les méthodes proposées pour implémenter la structure de file.  </p>
+</li>
+<li>
+<p>Ajouter à la classe <code>File</code> les méthodes suivantes :  </p>
+<ul>
+<li><code>sommet</code> : retourne le sommet de la file, sans l'en enlever.  </li>
+<li><code>taille</code> : retourne le nombre d'éléments de la file.</li>
+</ul>
+</li>
+</ol>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Définition d&#39;une classe Pile</span>
 <span class="sd">    une instance Pile est créée avec une liste Python &#39;&#39;&#39;</span>
@@ -3421,7 +3441,7 @@ Le procédé est le suivant :<br />
 <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">sommet</span><span class="p">())</span>
 </code></pre></div>
 <h3 id="c-implementation-avec-une-liste-python">C. Implémentation avec une liste Python<a class="headerlink" href="#c-implementation-avec-une-liste-python" title="Permanent link">&para;</a></h3>
-<p>En vous inspirant de l'implémentation d'une pile en POO que nous avions faite, proposer une implémentation similaire pour une structure de file : en utilisant une liste Python. On devra retrouver les mêmes primitives que pour les autres implémentations. Faire un test en créant un nouvel objet File, et en lui appliquant les différentes méthodes.</p>
+<p>En vous inspirant de l'implémentation d'une pile en POO que nous avions faite, proposer une implémentation similaire pour une structure de file : en utilisant une liste Python. On devra retrouver les mêmes primitives que pour les autres implémentations. Faire un test en créant un nouvel objet de la classe <code>File</code>, et en lui appliquant les différentes méthodes.</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
 
     <span class="c1"># à compléter</span>

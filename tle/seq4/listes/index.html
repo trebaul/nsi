@@ -3338,13 +3338,17 @@ Il faut parcourir tous les éléments précédents avant d'accéder à l'éléme
 
 <span class="k">def</span> <span class="nf">listeQueue</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</code></pre></div>
-1. Exécuter les instructions suivantes :<br />
-    - Créer une liste vide.<br />
-    - Vérifier qu'elle est vide.<br />
-    - Ajouter successivement les entiers de 0 à 4.<br />
-    - Vérifier qu'elle n'est pas vide.</p>
+</code></pre></div></p>
 <ol>
+<li>
+<p>Exécuter les instructions suivantes :  </p>
+<ul>
+<li>Créer une liste vide.  </li>
+<li>Vérifier qu'elle est vide.  </li>
+<li>Ajouter successivement les entiers de 0 à 4.  </li>
+<li>Vérifier qu'elle n'est pas vide.</li>
+</ul>
+</li>
 <li>
 <p>Créer une fonction <code>listeAffiche(l)</code> qui affiche successivement les différents éléments de la liste de manière <strong>récursive</strong>. </p>
 </li>
@@ -3394,16 +3398,24 @@ Il faut parcourir tous les éléments précédents avant d'accéder à l'éléme
 <p>Pour construire une liste, on utilise la méthode <code>cons</code> qui ajoute un élément en tête :
 <div class="highlight"><pre><span></span><code><span class="n">nil</span> <span class="o">=</span> <span class="n">Liste</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
 <span class="n">L</span> <span class="o">=</span> <span class="n">nil</span><span class="o">.</span><span class="n">cons</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">cons</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">cons</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">cons</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">cons</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-1. Représenter les éléments de la liste <code>L</code> en utilisant un schéma comme ceux du cours. 
-2. Identifier le rôle des différentes méthodes et l'ajouter en commentaires.
-2. Tester le code suivant :
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">isnil</span><span class="p">())</span>
+</code></pre></div></p>
+<ol>
+<li>
+<p>Représenter les éléments de la liste <code>L</code> en utilisant un schéma comme ceux du cours. </p>
+</li>
+<li>
+<p>Identifier le rôle des différentes méthodes et l'ajouter en commentaires.</p>
+</li>
+<li>
+<p>Tester le code suivant :
+    <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">isnil</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">car</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">cdr</span><span class="p">()</span><span class="o">.</span><span class="n">car</span><span class="p">())</span>
-</code></pre></div>
-3. Ecrire l'instruction permettant d'afficher le dernier élément de la liste.</p>
-<ol>
+</code></pre></div></p>
+</li>
+<li>
+<p>Ecrire l'instruction permettant d'afficher le dernier élément de la liste.</p>
+</li>
 <li>
 <p>Créer les fonctions <code>lengthList(l)</code> et <code>displayList(l)</code> qui, respectivement, compte le nombre d'éléments dans la liste, et affiche chacun d'entre eux. On implémentera ces fonctions de manière <strong><em>récursive</em></strong>.</p>
 </li>
