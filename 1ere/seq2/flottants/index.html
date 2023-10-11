@@ -3231,8 +3231,8 @@ text-align: justify}
 <h1 id="iii-les-flottants">III. Les flottants<a class="headerlink" href="#iii-les-flottants" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
-<p>En informatique, les nombres réels sont représentés par des <strong>flottants</strong>. Pourquoi ne pas utiliser le même nom, comme pour les entiers ? Nous allons voir que ces deux ensembles ne sont pas tout à fait équivalents... </p>
-<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
+<p>En informatique, les nombres réels sont représentés par des <strong>flottants</strong>. Pourquoi ne pas utiliser le même nom que le nom mathématique, comme pour les entiers ? Ces deux ensembles ne sont en fait pas tout à fait équivalents. </p>
+<h3 id="a-test-degalite-de-flottants">A. Test d'égalité de flottants<a class="headerlink" href="#a-test-degalite-de-flottants" title="Permanent link">&para;</a></h3>
 <details class="note">
 <summary>Que doit, a priori, renvoyer le test <code>0.1 + 0.2 == 0.3</code> ?</summary>
 <p>Il devrait renvoyer <code>True</code>.  </p>
@@ -3245,20 +3245,22 @@ text-align: justify}
 <summary>Quelle est en fait la valeur de <code>0.1 + 0.2</code> ?</summary>
 <p>Sa valeur est <code>3.0000...00004</code></p>
 </details>
-<p>Comprenons ce qu'il s'est passé...</p>
-<h3 id="a-decomposition-et-conversion-de-la-base-2-a-la-base-10">A. Décomposition et conversion de la base 2 à la base 10<a class="headerlink" href="#a-decomposition-et-conversion-de-la-base-2-a-la-base-10" title="Permanent link">&para;</a></h3>
-<p>Prenons le nombre <span class="arithmatex">\(3.375\)</span>. On sait écrire sa partie avant la virgule en binaire (qui vaut <span class="arithmatex">\(11_2\)</span>). Sa partie après la virgule, on peut la décomposer dans la base 10, comme on l'a fait pour la partie entière :</p>
+<p>Cela s'explique par la représentation de ces valeurs en machine.</p>
+<h3 id="b-decomposition-et-conversion-de-la-base-2-a-la-base-10">B. Décomposition et conversion de la base 2 à la base 10<a class="headerlink" href="#b-decomposition-et-conversion-de-la-base-2-a-la-base-10" title="Permanent link">&para;</a></h3>
+<p>Prenons le nombre <span class="arithmatex">\(0.375\)</span>. On peut décomposer la partie après la virgule dans la base 10 en fonction des puissances de 10, comme on l'a fait pour la partie entière :</p>
 <p><span class="arithmatex">\(0.375 = 3*10^{-1} + 7*10^{-2} + 5*10^{-3}\)</span></p>
-<p>Les rangs des puissances de 10 sont ici négatifs (-1, -2 et -3).
-De la même façon, un nombre à virgule écrit en binaire se décompose en fonction de 2 à la puissance son rang :</p>
+<p>Les rangs des puissances de 10 sont numérotés négativement, celui du premier chiffre à gauche étant -1.<br />
+De la même façon, un nombre à virgule écrit en binaire se décompose en fonction de <span class="arithmatex">\(2^{rang}\)</span> :</p>
 <p><span class="arithmatex">\(10.011_2 = 1*2^1+1*2^{-2}+2^{-3} = 2+0.25+0.125 = 2.380\)</span></p>
-<h3 id="b-conversion-de-la-base-10-a-la-base-2">B. Conversion de la base 10 à la base 2<a class="headerlink" href="#b-conversion-de-la-base-10-a-la-base-2" title="Permanent link">&para;</a></h3>
+<h3 id="c-conversion-de-la-base-10-a-la-base-2">C. Conversion de la base 10 à la base 2<a class="headerlink" href="#c-conversion-de-la-base-10-a-la-base-2" title="Permanent link">&para;</a></h3>
+<h4 id="c1-cas-general">C.1. Cas général<a class="headerlink" href="#c1-cas-general" title="Permanent link">&para;</a></h4>
 <div class="admonition info">
-<p class="admonition-title">Conversion de la <strong>partie décimale</strong> d'un nombre réel de la base 10 à la base 2</p>
+<p class="admonition-title"><strong><em>Méthode :</em></strong> Conversion de la <strong>partie après la virgule</strong> d'un nombre réel de la base 10 à la base 2</p>
 <ol>
-<li>On multiplie cette partie par 2. </li>
+<li>On la <strong>multiplie</strong> par 2. </li>
 <li>La partie entière de ce produit donne le premier coefficient après la virgule.</li>
-<li>On garde la partie décimale du produit. On réitère l'algorithme avec cette valeur, jusqu'à ce qu'elle devienne <strong>nulle</strong>.</li>
+<li>On garde la partie décimale du produit. On réitère l'algorithme avec cette valeur, jusqu'à ce qu'elle devienne <strong>nulle</strong>.  </li>
+<li>Le nombre converti se lit <strong>en combinant les parties entières</strong> du produit.</li>
 </ol>
 </div>
 <div class="admonition example">
@@ -3269,9 +3271,9 @@ De la même façon, un nombre à virgule écrit en binaire se décompose en fonc
 <table>
 <thead>
 <tr>
-<th align="center">Multiplication par 2 de la partie décimale</th>
+<th align="center">Multiplication par 2 de la partie après la virgule</th>
 <th align="center">Partie entière du produit</th>
-<th align="center">Partie décimale du produit</th>
+<th align="center">Partie après la virgule du produit</th>
 </tr>
 </thead>
 <tbody>
@@ -3287,9 +3289,9 @@ De la même façon, un nombre à virgule écrit en binaire se décompose en fonc
 <table>
 <thead>
 <tr>
-<th align="center">Multiplication par 2 de la partie décimale</th>
+<th align="center">Multiplication par 2 de la partie après la virgule</th>
 <th align="center">Partie entière du produit</th>
-<th align="center">Partie décimale du produit</th>
+<th align="center">Partie après la virgule du produit</th>
 </tr>
 </thead>
 <tbody>
@@ -3320,9 +3322,9 @@ De la même façon, un nombre à virgule écrit en binaire se décompose en fonc
 <table>
 <thead>
 <tr>
-<th align="center">Multiplication par 2 de la partie décimale</th>
+<th align="center">Multiplication par 2 de la partie après la virgule</th>
 <th align="center">Partie entière du produit</th>
-<th align="center">Partie décimale du produit</th>
+<th align="center">Partie après la virgule du produit</th>
 </tr>
 </thead>
 <tbody>
@@ -3340,17 +3342,33 @@ De la même façon, un nombre à virgule écrit en binaire se décompose en fonc
 </table>
 <p>Donc <span class="arithmatex">\(0.25_{10}=0.01_2\)</span></p>
 </details>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><strong><em>Récapitulatif de la méthode</em></strong></p>
+<p>Pour convertir un réel de la base 10 à la base 2 :<br />
+- On convertit sa <strong>partie entière</strong> en faisant des <strong>divisions euclidiennes</strong> successives par <strong>2</strong>, jusqu'à obtenir un <strong>quotient de 0</strong>,
+- On convertit sa <strong>partie après la virgule</strong> en faisant des <strong>multiplications</strong> successives par <strong>2</strong>, jusqu'à obtenir un <strong>produit qui vale 0</strong>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Comment s'écrit le réel <span class="arithmatex">\(5.25_{10}\)</span> en binaire ? </p>
+<details class="check">
+<summary>Solution</summary>
+<p><span class="arithmatex">\(5.25_{10} = 101.01_2\)</span></p>
+</details>
+</div>
+<h4 id="c2-cas-particuliers">C.2. Cas particuliers<a class="headerlink" href="#c2-cas-particuliers" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Que se passe-t-il lorsque l'on veut convertir la fraction <span class="arithmatex">\(1/3\)</span>, qui a une écriture infinie en décimal ?</li>
+<li>Que se passe-t-il lorsque l'on veut convertir la fraction <span class="arithmatex">\(1/3\)</span>, qui a une écriture infinie quand il est écrit avec une virgule ?</li>
 </ul>
 <details class="note">
 <summary>Solution</summary>
 <table>
 <thead>
 <tr>
-<th align="center">Multiplication par 2 de la partie décimale</th>
+<th align="center">Multiplication par 2 de la partie après la virgule</th>
 <th align="center">Partie entière du produit</th>
-<th align="center">Partie décimale du produit</th>
+<th align="center">Partie après la virgule du produit</th>
 </tr>
 </thead>
 <tbody>
@@ -3376,9 +3394,9 @@ De la même façon, un nombre à virgule écrit en binaire se décompose en fonc
 <table>
 <thead>
 <tr>
-<th align="center">Multiplication par 2 de la partie décimale</th>
+<th align="center">Multiplication par 2 de la partie après la virgule</th>
 <th align="center">Partie entière du produit</th>
-<th align="center">Partie décimale du produit</th>
+<th align="center">Partie après la virgule du produit</th>
 </tr>
 </thead>
 <tbody>
@@ -3409,26 +3427,15 @@ De la même façon, un nombre à virgule écrit en binaire se décompose en fonc
 </tr>
 </tbody>
 </table>
-</details>
 <details class="note">
-<summary>Que se passe-t-il ? Que peut-on en déduire sur la représentation de <span class="arithmatex">\(0.1_{10}\)</span> dans la machine ? Pourquoi le test <code>0.1 + 0.2 == 0.3</code> renvoie-t-il <code>False</code> ?</summary>
-<p>L'algorithme ne s'arrête pas. 0.1 ne peut pas être représenté de manière exacte, donc 0.1+0.2 ne fait pas exactement 0.3 avec la représentation de la machine.</p>
+<summary>Que peut-on en déduire sur la représentation de <span class="arithmatex">\(0.1_{10}\)</span> dans la machine ? Pourquoi le test <code>0.1 + 0.2 == 0.3</code> renvoie-t-il <code>False</code> ?</summary>
+<p>L'algorithme ne s'arrête pas, donc 0.1 ne peut pas être représenté de manière exacte. <span class="arithmatex">\(0.1+0.2\)</span> ne fait pas exactement 0.3 à cause de la représentation approximative de ces nombres dans la machine.</p>
 </details>
-</div>
-<h3 id="d-la-norme-ieee-754-son-detail-nest-pas-a-retenir">D. La norme IEEE 754 <em>(son détail n'est pas à retenir)</em><a class="headerlink" href="#d-la-norme-ieee-754-son-detail-nest-pas-a-retenir" title="Permanent link">&para;</a></h3>
-<p>Le terme <code>flottant</code> vient du fait que l'on représente ces nombres avec une <strong>virgule flottante</strong>. La norme IEEE 754 est la plus employée pour représenter ces nombres. On utilise soit 32 <em>(version utilisée ici pour l'exemple)</em>, soit 64 bits pour stocker ces nombres. Le nombre est mis sous la forme : <span class="arithmatex">\(signe*mantisse*base^{exposant}\)</span>, et on stocke :<br />
-- son <strong>signe</strong> <em>(1 bit)</em>,<br />
-- un <strong>exposant</strong> <em>(8 bits)</em>,<br />
-- une <strong>mantisse</strong> <em>(23 bits)</em>.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple :</p>
-<p><span class="arithmatex">\(4,3125_{10}=100,0101_2\)</span>, qui doit être transformé pour correspondre à cette norme, en <span class="arithmatex">\(1,000101.2^2\)</span>.<br />
-Il est stocké sous la forme : <span class="arithmatex">\(signe = 0\)</span> (nombre positif), <span class="arithmatex">\(exposant = 10000001\)</span> (l'exposant est décalé), <span class="arithmatex">\(mantisse = 0001010000000000000000\)</span></p>
-</div>
+</details>
 <h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
 <details class="note">
 <summary>En programmation, est-il pertinent de tester l'égalité entre deux flottants ? Comment peut-on faire alors ?</summary>
-<p>Ce n'est pas pertinent, car on peut avoir des erreurs dues à l'approximation de la représentation, contrainte par un nombre de bits donné. On peut, à la place, tester si ces nombres sont suffisamment proches.</p>
+<p>Ce n'est pas pertinent, car on peut avoir des erreurs dues à l'approximation de la représentation. On peut, à la place, tester si ces nombres sont suffisamment proches.</p>
 </details>
 
 
