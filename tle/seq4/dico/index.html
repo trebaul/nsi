@@ -2298,14 +2298,14 @@
       
       
         <label class="md-nav__link" for="__nav_3_6">
-          5. Architectures matérielles
+          5. Les structures hiérarchiques
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="5. Architectures matérielles" data-md-level="2">
+      <nav class="md-nav" aria-label="5. Les structures hiérarchiques" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
-          5. Architectures matérielles
+          5. Les structures hiérarchiques
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2315,8 +2315,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../seq3/Cours_SoC/" class="md-nav__link">
-        I. Les systèmes sur puce
+      <a href="../../seq6/arbres/" class="md-nav__link">
+        I. La structure d'arbre
       </a>
     </li>
   
@@ -2329,8 +2329,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../seq8/processus/" class="md-nav__link">
-        II. Les processus
+      <a href="../../seq6/arbres_algo/" class="md-nav__link">
+        II. Les algorithmes sur les arbres
       </a>
     </li>
   
@@ -2365,14 +2365,14 @@
       
       
         <label class="md-nav__link" for="__nav_3_7">
-          6. Les structures hiérarchiques
+          6. Architectures matérielles
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="6. Les structures hiérarchiques" data-md-level="2">
+      <nav class="md-nav" aria-label="6. Architectures matérielles" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
-          6. Les structures hiérarchiques
+          6. Architectures matérielles
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2382,8 +2382,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../seq6/arbres/" class="md-nav__link">
-        I. La structure d'arbre
+      <a href="../../seq3/Cours_SoC/" class="md-nav__link">
+        I. Les systèmes sur puce
       </a>
     </li>
   
@@ -2396,8 +2396,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../seq6/arbres_algo/" class="md-nav__link">
-        II. Les algorithmes sur les arbres
+      <a href="../../seq8/processus/" class="md-nav__link">
+        II. Les processus
       </a>
     </li>
   
@@ -3280,6 +3280,26 @@ text-align: justify}
 <h3 id="c-acces-a-un-element">C. Accès à un élément<a class="headerlink" href="#c-acces-a-un-element" title="Permanent link">&para;</a></h3>
 <p>L'<strong>accès à un élément</strong> dans un tableau associatif s'effectue, comme dans un tableau, en <strong>temps constant</strong>. Il est indépendant de la taille de la structure. </p>
 <p>L'implémentation  d'un dictionnaire est en effet faite grâce à une table de hachage <em>(hors programme)</em> qui associe à chaque couple clé-valeur un indice du tableau.</p>
+<div class="admonition warning">
+<p class="admonition-title">Rappel des algorithmes à connaître</p>
+</div>
+<ul>
+<li>
+<p>Ecrire une fonction <code>occurrence_dico(d, k)</code> recherchant la clé <code>k</code> dans le dictionnaire <code>d</code>. Si elle trouve cette clé, elle renvoie le tuple <code>k</code>, valeur associée à <code>k</code>, sinon elle renvoie <code>None, 0</code>.<br />
+    <div class="highlight"><pre><span></span><code>
+</code></pre></div></p>
+</li>
+<li>
+<p>Ecrire une fonction <code>maxi_dico(d)</code> renvoyant la <strong>valeur maximale</strong> du dictionnaire <code>d</code> non-vide, constitué d'entiers positifs, et la <strong>clé</strong> associée. </p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</li>
+<li>
+<p>Ecrire une fonction <code>moyenne_dico(d)</code> renvoyant la moyenne des valeurs du dictionnaire <code>d</code> non-vide sur l'ensemble de ses clés. On suppose que toutes les valeurs sont des entiers ou des flottants. </p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+</li>
+</ul>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice</p>
 <p>1) Écrire en Python une fonction <code>tabToDict</code> qui prend en paramètre d’entrée une liste Python de la forme [clé1, valeur1, clé2, valeur2,…] et retourne un dictionnaire correspondant de la forme { clé1 : valeur1, clé2 : valeur2,…}.</p>

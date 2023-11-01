@@ -2312,14 +2312,14 @@
       
       
         <label class="md-nav__link" for="__nav_3_6">
-          5. Architectures matérielles
+          5. Les structures hiérarchiques
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="5. Architectures matérielles" data-md-level="2">
+      <nav class="md-nav" aria-label="5. Les structures hiérarchiques" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
-          5. Architectures matérielles
+          5. Les structures hiérarchiques
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2329,8 +2329,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tle/seq3/Cours_SoC/" class="md-nav__link">
-        I. Les systèmes sur puce
+      <a href="../../../tle/seq6/arbres/" class="md-nav__link">
+        I. La structure d'arbre
       </a>
     </li>
   
@@ -2343,8 +2343,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tle/seq8/processus/" class="md-nav__link">
-        II. Les processus
+      <a href="../../../tle/seq6/arbres_algo/" class="md-nav__link">
+        II. Les algorithmes sur les arbres
       </a>
     </li>
   
@@ -2379,14 +2379,14 @@
       
       
         <label class="md-nav__link" for="__nav_3_7">
-          6. Les structures hiérarchiques
+          6. Architectures matérielles
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="6. Les structures hiérarchiques" data-md-level="2">
+      <nav class="md-nav" aria-label="6. Architectures matérielles" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
-          6. Les structures hiérarchiques
+          6. Architectures matérielles
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2396,8 +2396,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tle/seq6/arbres/" class="md-nav__link">
-        I. La structure d'arbre
+      <a href="../../../tle/seq3/Cours_SoC/" class="md-nav__link">
+        I. Les systèmes sur puce
       </a>
     </li>
   
@@ -2410,8 +2410,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tle/seq6/arbres_algo/" class="md-nav__link">
-        II. Les algorithmes sur les arbres
+      <a href="../../../tle/seq8/processus/" class="md-nav__link">
+        II. Les processus
       </a>
     </li>
   
@@ -3261,29 +3261,23 @@ text-align: justify}
 <h3 id="a-le-code-ascii">A. Le code ASCII<a class="headerlink" href="#a-le-code-ascii" title="Permanent link">&para;</a></h3>
 <p><center>
 <img src="../img/ascii.png" height=100></center> </p>
-<p>Le <strong>code ASCII</strong> <strong><em>(American Standard Code for Information Interchange)</em></strong> a été proposé dans les années 60 pour standardiser la représentation des caractères. Les mots sont stockés sur 1 octet, et seul les 128 premières valeurs sont utilisées. </p>
+<p>Le <strong>code ASCII</strong> <strong><em>(American Standard Code for Information Interchange)</em></strong> a été proposé dans les années 60 pour standardiser la représentation des caractères. Les mots sont stockés sur 1 octet, et seules les 128 premières valeurs sont utilisées. </p>
 <details class="note">
 <summary>Combien de bits sont utilisés ?</summary>
 <p>Pour coder 128 valeurs (de 0 à 127), il faut 7 bits car <span class="arithmatex">\(2^7=128\)</span>. Il reste donc 1 bit non-utilisé sur cet octet.</p>
 </details>
-<p>Il ne permet que de représenter les caractères principaux de la langue anglaise, ainsi que des caractères non-imprimables (comme le retour à la ligne). Il pose un problème pour représenter certains caractères du français, qui n'existent pas dans la langue anglaise.</p>
+<p>Il ne permet que de représenter les caractères principaux de la langue anglaise, ainsi que des caractères non-imprimables (comme le retour à la ligne). Il pose un problème pour représenter certains caractères qui sont utilisées dans les langues européennes mais pas en anglais.</p>
 <details class="note">
-<summary>Quels caractères ne sont pas représentables ?</summary>
+<summary>Par exemple quels caractères ne sont pas représentables ?</summary>
 <p>Les caractères accentués, ou bien le "ç" par exemple posent problème.</p>
 </details>
-<p>En programmation, on peut avoir l'équivalence avec les fonctions <code>ord</code> et <code>chr</code> :
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>
-<span class="go">107</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">chr</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>
-<span class="go">&#39;4&#39;</span>
-</code></pre></div></p>
 <h3 id="b-la-norme-iso-8859-1">B. La norme ISO 8859-1<a class="headerlink" href="#b-la-norme-iso-8859-1" title="Permanent link">&para;</a></h3>
 <p>Pour pallier ce problème, la <strong>norme ISO 8859-1</strong>, aussi appelée <strong>Latin-1</strong> a vu le jour pour représenter tous les caractères de l'alphabet latin (au nombre de 191) en utilisant 8 bits.</p>
 <details class="note">
 <summary>Pourquoi est-ce suffisant ?</summary>
 <p>Sur 8 bits, on peut représenter $2^8=256 caractères (de 0 à 255). C'est donc suffisant pour représenter 191 caractères.</p>
 </details>
-<p>Cette norme permet donc de représenter les caractères utilisés dans la plupart des langues européennes. Mais elle laisse de côté d'autres alphabets, comme le cyrillique, ou bien les idéogrammes utilisés en chinois ou en japonais.</p>
+<p>Il y a différentes versions <em>(Latin-2, Latin-3, ... Latin-15)</em> de cette norme, pour les différentes langues européennes. Mais elle laisse de côté d'autres alphabets, comme le cyrillique, ou bien les idéogrammes utilisés en chinois ou en japonais. Des normes spéciales pour ces langues sont dévelopépes en parallèle.</p>
 <h3 id="c-unicode">C. Unicode<a class="headerlink" href="#c-unicode" title="Permanent link">&para;</a></h3>
 <p>En 1991 voit le jour la norme qui est utilisée aujourd'hui par plus de 95% des sites web : <strong>Unicode</strong>. Comme son nom l'indique, elle a pour vocation d'intégrer <strong><em>tous</em></strong> les caractères existants, pour pouvoir lire n'importe quel texte sans avoir à changer la configuration de son traitement de texte.</p>
 <p>C'est une table qui répertorie tous les codages existants : elle ne crée pas un nouveau codage. Elle intègre donc notamment le <strong>code ASCII</strong>. Les systèmes de codage sont UTF-8 (utilisée sur le Web), UTF-16, UTF-32 (des variations, utilisant plus de bits). </p>
@@ -3294,6 +3288,12 @@ text-align: justify}
 <center>
 <img src="../img/carac_speciaux.png" height=300></center> </p>
 <p>Entourer le code Unicode qui apparaît.</p>
+<p>En programmation, on peut avoir l'équivalence avec les fonctions <code>ord</code> et <code>chr</code> :
+<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>
+<span class="go">107</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">chr</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>
+<span class="go">&#39;4&#39;</span>
+</code></pre></div></p>
 <hr />
 <h2 id="td-utiliser-les-normes-de-representation-du-texte">TD : Utiliser les normes de représentation du texte<a class="headerlink" href="#td-utiliser-les-normes-de-representation-du-texte" title="Permanent link">&para;</a></h2>
 <h3 id="a-le-code-ascii_1">A. Le code ASCII<a class="headerlink" href="#a-le-code-ascii_1" title="Permanent link">&para;</a></h3>
