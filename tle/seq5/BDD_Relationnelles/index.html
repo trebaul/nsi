@@ -2241,6 +2241,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cours-les-anomalies" class="md-nav__link">
+    Cours : Les anomalies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#td-contraintes-dintegrite-et-anomalies" class="md-nav__link">
     TD : Contraintes d’intégrité et anomalies
   </a>
@@ -3201,6 +3208,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cours-les-anomalies" class="md-nav__link">
+    Cours : Les anomalies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#td-contraintes-dintegrite-et-anomalies" class="md-nav__link">
     TD : Contraintes d’intégrité et anomalies
   </a>
@@ -3229,6 +3243,10 @@ text-align: justify}
 </style>
 
 <h1 id="ii-les-bases-de-donnees-relationnelles">II : Les bases de données relationnelles<a class="headerlink" href="#ii-les-bases-de-donnees-relationnelles" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="cours-les-anomalies">Cours : Les anomalies<a class="headerlink" href="#cours-les-anomalies" title="Permanent link">&para;</a></h2>
+<p><center>
+<a href="../Cours_BDD_Relationnelle.pdf">Diaporama de cours</a></center></p>
 <hr />
 <h2 id="td-contraintes-dintegrite-et-anomalies">TD : Contraintes d’intégrité et anomalies<a class="headerlink" href="#td-contraintes-dintegrite-et-anomalies" title="Permanent link">&para;</a></h2>
 <h3 id="exercice-1-contraintes-dintegrite">Exercice 1 : contraintes d’intégrité<a class="headerlink" href="#exercice-1-contraintes-dintegrite" title="Permanent link">&para;</a></h3>
@@ -3294,26 +3312,25 @@ text-align: justify}
 </tbody>
 </table>
 <ol>
-<li>Quelle est la clé étrangère identifiable dans la table <em>Citoyens</em> ?  </li>
-</ol>
-<p>Dans chacune des questions suivantes, indiquer quelle contrainte d’intégrité
-n’est pas respectée.</p>
-<ol>
+<li>
+<p>Quelle est la clé étrangère identifiable dans la table <em>Citoyens</em> ?  </p>
+<p>Dans chacune des questions suivantes, indiquer quelle contrainte d’intégrité n’est pas respectée.</p>
+</li>
 <li>
 <p>Que se passe-t-il si l’on souhaite insérer l’enregistrement suivant dans
 <em>Citoyen</em> ?
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Tartempion</span><span class="p">,</span><span class="w"> </span><span class="n">Eva</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">1992</span><span class="p">,</span><span class="w"> </span><span class="n">Paris</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Tartempion</span><span class="p">,</span><span class="w"> </span><span class="n">Eva</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">1992</span><span class="p">,</span><span class="w"> </span><span class="n">Paris</span><span class="p">)</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>Que se passe-t-il si l’on souhaite insérer l’enregistrement suivant dans
 Citoyen ?
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">Tartempion</span><span class="p">,</span><span class="w"> </span><span class="n">Roger</span><span class="p">,</span><span class="w"> </span><span class="mi">01</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">1989</span><span class="p">,</span><span class="w"> </span><span class="n">Brest</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">Tartempion</span><span class="p">,</span><span class="w"> </span><span class="n">Roger</span><span class="p">,</span><span class="w"> </span><span class="mi">01</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">1989</span><span class="p">,</span><span class="w"> </span><span class="n">Brest</span><span class="p">)</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>Que se passe-t-il si l’on supprime l’enregistrement suivant dans Ville ?
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">Marseille</span><span class="p">,</span><span class="w"> </span><span class="n">Benoit</span><span class="w"> </span><span class="n">Payan</span><span class="p">,</span><span class="w"> </span><span class="mi">861</span><span class="w"> </span><span class="mi">635</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">Marseille</span><span class="p">,</span><span class="w"> </span><span class="n">Benoit</span><span class="w"> </span><span class="n">Payan</span><span class="p">,</span><span class="w"> </span><span class="mi">861</span><span class="w"> </span><span class="mi">635</span><span class="p">)</span>
 </code></pre></div></p>
 </li>
 </ol>
@@ -3447,7 +3464,7 @@ est en fait américaine, dans l'enregistrement correspondant au filmID 1 ?</p>
 </li>
 <li>
 <p>Que se passe-t-il lorsque l’on ajoute l'enregistrement suivant :
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">Star</span><span class="w"> </span><span class="n">Wars</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Un</span><span class="w"> </span><span class="n">nouvel</span><span class="w"> </span><span class="n">espoir</span><span class="p">,</span><span class="w"> </span><span class="mi">1977</span><span class="p">,</span><span class="w"> </span><span class="n">Mark</span><span class="w"> </span><span class="n">Hamill</span><span class="p">,</span><span class="w"> </span><span class="n">américaine</span><span class="p">)</span><span class="w"> </span><span class="o">?</span>
+    <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">Star</span><span class="w"> </span><span class="n">Wars</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Un</span><span class="w"> </span><span class="n">nouvel</span><span class="w"> </span><span class="n">espoir</span><span class="p">,</span><span class="w"> </span><span class="mi">1977</span><span class="p">,</span><span class="w"> </span><span class="n">Mark</span><span class="w"> </span><span class="n">Hamill</span><span class="p">,</span><span class="w"> </span><span class="n">américaine</span><span class="p">)</span><span class="w"> </span><span class="o">?</span>
 </code></pre></div></p>
 </li>
 <li>
