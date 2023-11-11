@@ -343,6 +343,8 @@
         
           
         
+          
+        
       
       
         
@@ -496,15 +498,114 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_1_4">
+          2. Le Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Le Web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          2. Le Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/web/fonctionnement/" class="md-nav__link">
+        I. Le fonctionnement du web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/web/html_css/" class="md-nav__link">
+        II. Les langages HTML et CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/web/client_serveur/" class="md-nav__link">
+        III. Le modèle client-serveur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/web/moteurs_recherche/" class="md-nav__link">
+        IV. Les moteurs de recherche
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
           Travaux Pratiques
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Travaux Pratiques" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_4">
+        <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
           Travaux Pratiques
         </label>
@@ -1034,15 +1135,25 @@
       
         
           
+            
+          
+        
+          
         
           
         
       
       
-        <label class="md-nav__link" for="__nav_2_7">
-          4. Dans la peau d'un développeur
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq4_b/">4. Dans la peau d'un développeur</a>
+          
+            <label for="__nav_2_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="4. Dans la peau d'un développeur" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_7">
@@ -1050,6 +1161,8 @@
           4. Dans la peau d'un développeur
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
           
             
               
@@ -1112,14 +1225,12 @@
         
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">5. Tableaux et p-uplets</a>
+          <a href="../">5. Types construits</a>
           
             <label for="__nav_2_8">
               <span class="md-nav__icon md-icon"></span>
@@ -1127,10 +1238,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="5. Tableaux et p-uplets" data-md-level="2">
+      <nav class="md-nav" aria-label="5. Types construits" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_8">
           <span class="md-nav__icon md-icon"></span>
-          5. Tableaux et p-uplets
+          5. Types construits
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1219,6 +1330,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#td-algorithmes-sur-les-tableaux" class="md-nav__link">
+    TD : Algorithmes sur les tableaux
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1236,20 +1354,6 @@
     <li class="md-nav__item">
       <a href="../puplet/" class="md-nav__link">
         III. Le type p-uplet
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../synthese/" class="md-nav__link">
-        Pour s'entraîner
       </a>
     </li>
   
@@ -3336,6 +3440,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#td-algorithmes-sur-les-tableaux" class="md-nav__link">
+    TD : Algorithmes sur les tableaux
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3373,15 +3484,14 @@ text-align: justify}
 </details>
 <details class="note">
 <summary>Proposer un algorithme de recherche du <strong>minimum</strong> d'un tableau, renvoyant cette valeur minimale.</summary>
-<div class="highlight"><pre><span></span><code><span class="n">paramètre</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span>
+<div class="highlight"><pre><span></span><code><span class="n">entrée</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span>
+<span class="n">sortie</span> <span class="p">:</span> <span class="n">mini</span>
 
 <span class="n">on</span> <span class="n">initialise</span> <span class="n">une</span> <span class="n">variable</span> <span class="n">mini</span> <span class="n">avec</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">on</span> <span class="n">parcourt</span> <span class="n">un</span> <span class="n">à</span> <span class="n">un</span> <span class="n">le</span> <span class="n">reste</span> <span class="n">des</span> <span class="n">éléments</span> <span class="n">de</span> <span class="n">t</span> <span class="n">avec</span> <span class="n">leur</span> <span class="n">indice</span> <span class="n">i</span>
     <span class="n">si</span> <span class="n">l</span> <span class="n">élément</span> <span class="n">i</span> <span class="n">de</span> <span class="n">t</span> <span class="n">est</span> <span class="n">inférieur</span> <span class="n">à</span> <span class="n">mini</span>
         <span class="n">on</span> <span class="n">actualise</span> <span class="n">mini</span> <span class="n">avec</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 <span class="n">on</span> <span class="n">renvoie</span> <span class="n">mini</span>
-
-<span class="n">résultat</span> <span class="p">:</span> <span class="n">mini</span>
 </code></pre></div>
 </details>
 <details class="note">
@@ -3422,7 +3532,10 @@ text-align: justify}
 </table>
 </details>
 <h3 id="b-recherche-doccurrence">B. Recherche d'occurrence<a class="headerlink" href="#b-recherche-doccurrence" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
 <p>Compter le nombre de fois qu'apparaît une valeur dans un tableau s'appelle compter les <strong>occurrences</strong> de cette valeur.</p>
+</div>
 <h4 id="b1-compter-les-occurrences">B.1. Compter les occurrences<a class="headerlink" href="#b1-compter-les-occurrences" title="Permanent link">&para;</a></h4>
 <p>On considère <code>t = ['chat', 'chien', 'rat', 'loup', 'chat']</code>, et on veut pouvoir compter le nombre d'occurrences d'une valeur dans <code>t</code>.</p>
 <details class="note">
@@ -3435,14 +3548,13 @@ text-align: justify}
 </details>
 <details class="note">
 <summary>Proposer un algorithme effectuant ce comptage :</summary>
-<div class="highlight"><pre><span></span><code><span class="n">paramètre</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span>
+<div class="highlight"><pre><span></span><code><span class="n">entrée</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span>
+<span class="n">sortie</span> <span class="p">:</span> <span class="n">nb_occ</span>
 
 <span class="n">on</span> <span class="n">initialise</span> <span class="n">nb_occ</span> <span class="n">à</span> <span class="mi">0</span>
 <span class="n">on</span> <span class="n">parcourt</span> <span class="n">un</span> <span class="n">à</span> <span class="n">un</span> <span class="n">tous</span> <span class="n">les</span> <span class="n">éléments</span> <span class="n">de</span> <span class="n">t</span> <span class="n">avec</span> <span class="n">leur</span> <span class="n">indice</span> <span class="n">i</span>
     <span class="n">si</span> <span class="n">l</span> <span class="n">élément</span> <span class="n">i</span> <span class="n">vaut</span> <span class="n">v</span>
         <span class="n">on</span> <span class="n">incrémente</span> <span class="n">nb_occ</span>
-
-<span class="n">résultat</span> <span class="p">:</span> <span class="n">nb_occ</span>
 </code></pre></div>
 </details>
 <details class="note">
@@ -3494,20 +3606,16 @@ text-align: justify}
 </details>
 <details class="note">
 <summary>Comment, alors, écrire l'algorithme ?</summary>
-<div class="highlight"><pre><span></span><code><span class="n">paramètres</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span><span class="p">,</span> <span class="n">valeur</span> <span class="n">v</span>
+<div class="highlight"><pre><span></span><code><span class="n">entrée</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span><span class="p">,</span> <span class="n">valeur</span> <span class="n">v</span>
+<span class="n">sortie</span> <span class="p">:</span> <span class="n">trouve</span>
 
 <span class="n">on</span> <span class="n">initialise</span> <span class="n">trouve</span> <span class="n">à</span> <span class="kc">False</span>
 <span class="n">tant</span> <span class="n">que</span> <span class="n">trouve</span> <span class="n">vaut</span> <span class="kc">False</span> <span class="n">et</span> <span class="n">qu</span> <span class="n">il</span> <span class="n">reste</span> <span class="n">des</span> <span class="n">éléments</span> <span class="n">dans</span> <span class="n">t</span>
     <span class="n">on</span> <span class="n">parcourt</span> <span class="n">l</span> <span class="n">élément</span> <span class="n">suivant</span> <span class="n">de</span> <span class="n">t</span> <span class="n">d</span> <span class="n">indice</span> <span class="n">i</span>
         <span class="n">si</span> <span class="n">l</span> <span class="n">élément</span> <span class="n">i</span> <span class="n">de</span> <span class="n">t</span> <span class="n">vaut</span> <span class="n">v</span>
             <span class="n">on</span> <span class="n">actualise</span> <span class="n">trouve</span> <span class="n">à</span> <span class="kc">True</span>
-
-<span class="n">résultat</span> <span class="p">:</span> <span class="n">trouve</span>
 </code></pre></div>
 </details>
-<h4 id="b3-type-de-parcours">B.3. Type de parcours<a class="headerlink" href="#b3-type-de-parcours" title="Permanent link">&para;</a></h4>
-<p>On dit que l'on fait un <strong>parcours total</strong> lorsque l'algorithme utilisé parcourt l'ensemble d'un tableau dans tous les cas.</p>
-<p>On a un <strong>parcours partiel</strong> quand le résultat peut être trouvé, dans certains cas, on ne parcourant qu'une partie du tableau.</p>
 <h3 id="c-calcul-de-moyenne">C. Calcul de moyenne<a class="headerlink" href="#c-calcul-de-moyenne" title="Permanent link">&para;</a></h3>
 <p>Comment obtenir la <strong>moyenne</strong> d'un tableau de nombres ? </p>
 <details class="note">
@@ -3520,14 +3628,13 @@ text-align: justify}
 </details>
 <details class="note">
 <summary>Proposer un algorithme :</summary>
-<div class="highlight"><pre><span></span><code><span class="n">paramètre</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span>
+<div class="highlight"><pre><span></span><code><span class="n">entrée</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span>
+<span class="n">sortie</span> <span class="p">:</span> <span class="n">moy</span>
 
 <span class="n">on</span> <span class="n">initialise</span> <span class="n">somme</span> <span class="n">à</span> <span class="mi">0</span>
 <span class="n">on</span> <span class="n">parcourt</span> <span class="n">les</span> <span class="n">éléments</span> <span class="n">de</span> <span class="n">t</span>
     <span class="n">on</span> <span class="n">ajoute</span> <span class="n">la</span> <span class="n">valeur</span> <span class="n">de</span> <span class="n">l</span> <span class="n">élément</span> <span class="n">i</span> <span class="n">de</span> <span class="n">t</span> <span class="n">à</span> <span class="n">somme</span>
 <span class="n">moy</span> <span class="n">vaut</span> <span class="n">somme</span><span class="o">/</span><span class="p">(</span><span class="n">longueur</span> <span class="n">de</span> <span class="n">t</span><span class="p">)</span>
-
-<span class="n">résultat</span> <span class="p">:</span> <span class="n">moy</span>
 </code></pre></div>
 </details>
 <details class="note">
@@ -3683,13 +3790,15 @@ on renvoie Faux
 <p class="admonition-title">Créer un nouveau fichier Python "TP_Moyenne.py", sauvegardé dans votre répertoire NSI.</p>
 </div>
 <ol>
-<li>Se baser sur l'algorithme de calcul de moyenne écrit en cours pour implémenter la fonction <code>moyenne</code>, prenant en paramètre un tableau de nombres et renvoyant la valeur de la moyenne de ses éléments.</li>
-</ol>
+<li>
+<p>Se baser sur l'algorithme de calcul de moyenne écrit en cours pour implémenter la fonction <code>moyenne</code>, prenant en paramètre un tableau de nombres et renvoyant la valeur de la moyenne de ses éléments.</p>
 <p>Noter ici l'implémentation trouvée : 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div></p>
-<ol>
-<li>Vérifier que l'appel de <code>moyenne([9,18,31,7,5])</code> renvoie bien le résultat <code>14.0</code>.</li>
+</li>
+<li>
+<p>Vérifier que l'appel de <code>moyenne([9,18,31,7,5])</code> renvoie bien le résultat <code>14.0</code>.</p>
+</li>
 </ol>
 <p>Nous avons pour l'instant utilisé des petits tableaux, mais en pratique on stocke souvent plus de données. On veut évaluer comment le temps d'exécution de notre fonction varie, en fonction de la longueur du tableau.</p>
 <ol>
@@ -3698,17 +3807,21 @@ on renvoie Faux
 </li>
 <li>
 <p>Importer la fonction <code>time</code> de la bibliothèque <code>time</code> pour pouvoir lancer un compteur, lorsqu'une ligne de votre programme s'exécute :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+</code></pre></div>
+</div>
 </li>
-</ol>
-<p><code>python
-from time import time</code></p>
-<ol>
 <li>
-<p>Utiliser le code suivant pour obtenir le temps d'exécution de la fonction <code>moyenne</code> lorsqu'elle prend <code>t1</code> en paramètre, exprimé en millisecondes :
-<code>python
-debut = time()
-m1 = moyenne(t1)
-tps = (time()-debut)*1000</code></p>
+<p>Utiliser le code suivant pour obtenir le temps d'exécution de la fonction <code>moyenne</code> lorsqu'elle prend <code>t1</code> en paramètre, exprimé en millisecondes :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">debut</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">moyenne</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
+<span class="n">tps</span> <span class="o">=</span> <span class="p">(</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">debut</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span>
+</code></pre></div>
+</div>
 </li>
 <li>
 <p>Reporter la valeur de <code>tps</code> sur le graphique suivant :</p>
@@ -3724,7 +3837,156 @@ tps = (time()-debut)*1000</code></p>
 <p>Réitérer ces opérations pour un tableau de longueur 1 000 000, 1 500 000 et 2 000 000. </p>
 </li>
 <li>
-<p>Tracer la courbe qui relie les différents points sur le graphique. Qu'observe-t-on ?</p>
+<p>Tracer la courbe qui relie les différents points sur le graphique. Qu'observe-t-on ? </p>
+</li>
+</ol>
+<hr />
+<h2 id="td-algorithmes-sur-les-tableaux">TD : Algorithmes sur les tableaux<a class="headerlink" href="#td-algorithmes-sur-les-tableaux" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1-recherche-doccurrence">Exercice 1 : Recherche d'occurrence<a class="headerlink" href="#exercice-1-recherche-doccurrence" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ecrire un <strong>programme</strong> recherchant si la valeur <code>13</code> est présente dans le tableau <code>t</code>. Elle renverra <code>True</code> si c'est le cas, et <code>False</code> sinon. On fera un <strong>parcours par valeur</strong> du tableau.</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">30</span>
+</code></pre></div>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000012" class="comment">###</span><div class="line" id="editor_00000012"></div><div id="term_editor_00000012"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000012","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000012","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000012').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000012" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000012")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000012")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000012" class="py_mk_hide"></span><span id="corr_content_editor_00000012" class="py_mk_hide" data-strudel=""></span></p>
+</div>
+</li>
+<li>
+<p>a. Transformer ce programme en une <strong>fonction</strong> <code>recherche_occurrence(t, v)</code> prenant en paramètre un tableau <code>t</code> et une valeur <code>v</code>, renvoyant <code>True</code> si <code>v</code> est présente dans <code>t</code>, <code>False</code> sinon. </p>
+<p>b. Ecrire l'<strong>appel de fonction</strong> à faire dans la console pour tester le programme sur le même exemple que dans la question 1. Que doit-il renvoyer ?</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000013" class="comment">###</span><div class="line" id="editor_00000013"></div><div id="term_editor_00000013"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000013","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000013","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000013').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000013" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000013")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000013")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000013" class="py_mk_hide"></span><span id="corr_content_editor_00000013" class="py_mk_hide" data-strudel=""></span></p>
+</div>
+</li>
+<li>
+<p>a. Ecrire une <strong>fonction</strong> <code>indice_occurrence(t, v)</code> prenant en paramètre un tableau <code>t</code> et une valeur <code>v</code>, renvoyant l'indice de l'occurrence de <code>v</code> dans <code>t</code> si elle est présente, <code>-1</code> sinon. <em>Il faut faire un </em><em>parcours par indice</em>**.</p>
+<p>b. Ecrire l'<strong>assertion</strong> permettant de tester son bon fonctionnement. </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000014" class="comment">###</span><div class="line" id="editor_00000014"></div><div id="term_editor_00000014"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000014","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000014","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000014').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000014" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000014")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000014")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000014" class="py_mk_hide"></span><span id="corr_content_editor_00000014" class="py_mk_hide" data-strudel=""></span></p>
+</div>
+</li>
+<li>
+<p>a. Ecrire une <strong>fonction</strong> <code>compte_occurrence(t, v)</code> prenant en paramètre un tableau <code>t</code> et une valeur <code>v</code>, et renvoyant le nombre d'occurrence de <code>v</code> dans <code>t</code>.  </p>
+<p>b. Ecrire l'<strong>assertion</strong> permettant de tester son bon fonctionnement. </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000015" class="comment">###</span><div class="line" id="editor_00000015"></div><div id="term_editor_00000015"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000015","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000015","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000015').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000015" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000015")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000015")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000015" class="py_mk_hide"></span><span id="corr_content_editor_00000015" class="py_mk_hide" data-strudel=""></span></p>
+</div>
+</li>
+</ol>
+<hr />
+<h3 id="exercice-2-recherche-dextrema">Exercice 2 : Recherche d'extrema<a class="headerlink" href="#exercice-2-recherche-dextrema" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ecrire un <strong>programme</strong> permettant de trouver la valeur du minimum d'un tableau <code>t</code>. On fera un <strong>parcours par valeur</strong> du tableau.</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+</code></pre></div>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000016" class="comment">###</span><div class="line" id="editor_00000016"></div><div id="term_editor_00000016"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000016","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000016","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000016').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000016" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000016")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000016")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000016" class="py_mk_hide"></span><span id="corr_content_editor_00000016" class="py_mk_hide" data-strudel=""></span></p>
+</div>
+</li>
+<li>
+<p>a. Transformer ce programme en une <strong>fonction</strong> <code>valeur_minimum(t)</code> prenant en paramètre un tableau <code>t</code> et renvoyant sa valeur minimale. </p>
+<p>b. Ecrire l'<strong>appel de fonction</strong> à faire dans la console pour tester le programme sur le même exemple que dans la question 1. Que doit-il renvoyer ?</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000017" class="comment">###</span><div class="line" id="editor_00000017"></div><div id="term_editor_00000017"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000017","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000017","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000017').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000017" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000017")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000017")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000017" class="py_mk_hide"></span><span id="corr_content_editor_00000017" class="py_mk_hide" data-strudel=""></span></p>
+</div>
+</li>
+<li>
+<p>a. Ecrire une <strong>fonction</strong> <code>indice_minimum(t)</code> prenant en paramètre un tableau <code>t</code> et renvoyant l'indice du minimum du tableau. S'il apparaît 2 fois, l'indice de la <strong><em>première occurrence</em></strong> du minimum est conservée. <em>Il faut faire un </em><em>parcours par indice</em><em>.</em>  </p>
+<p>b. Ecrire l'<strong>assertion</strong> permettant de tester son bon fonctionnement. </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000018" class="comment">###</span><div class="line" id="editor_00000018"></div><div id="term_editor_00000018"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000018","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000018","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000018').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000018" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000018")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000018")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000018" class="py_mk_hide"></span><span id="corr_content_editor_00000018" class="py_mk_hide" data-strudel=""></span></p>
+</div>
+</li>
+<li>
+<p>Ecrire une <strong>fonction</strong> <code>indice_maximum(t)</code> prenant en paramètre un tableau <code>t</code> et renvoyant l'indice du maximum du tableau. S'il apparaît 2 fois, l'indice de la <strong><em>dernière occurrence</em></strong> du minimum est conservée. <em>Il faut faire un </em><em>parcours par indice</em><em>.</em>  </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000019" class="comment">###</span><div class="line" id="editor_00000019"></div><div id="term_editor_00000019"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000019","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000019","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000019').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000019" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000019")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000019")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000019" class="py_mk_hide"></span><span id="corr_content_editor_00000019" class="py_mk_hide" data-strudel=""></span></p>
+</div>
+</li>
+</ol>
+<hr />
+<h3 id="exercice-3-calcul-de-moyenne">Exercice 3 : Calcul de moyenne<a class="headerlink" href="#exercice-3-calcul-de-moyenne" title="Permanent link">&para;</a></h3>
+<p>Ecrire une <strong>fonction</strong> <code>moyenne(tab)</code> prenant en paramètre un tableau <code>tab</code> d'entiers ou de flottants et renvoyant la moyenne des éléments. On écrira la <strong>signature</strong> de la fonction, ainsi que plusieurs assertions permettant de vérifier son fonctionnement. </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000020" class="comment">###</span><div class="line" id="editor_00000020"></div><div id="term_editor_00000020"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000020","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000020","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000020').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000020" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000020")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000020")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000020" class="py_mk_hide"></span><span id="corr_content_editor_00000020" class="py_mk_hide" data-strudel=""></span></p>
+</div>
+<hr />
+<h3 id="exercice-4-qcm">Exercice 4 : QCM<a class="headerlink" href="#exercice-4-qcm" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>On considère la fonction suivante :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">indice</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">T</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">:</span>
+            <span class="n">indice</span> <span class="o">=</span> <span class="n">k</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">indice</span>
+</code></pre></div>
+</div>
+<p>Quelle est la valeur de <code>f([ 7, 3, 1, 8, 19, 9, 3, 5 ], 0)</code> ?</p>
+<p><strong>A</strong> 1  | <strong>B</strong> 2  |  <strong>C</strong> 3  |  <strong>D</strong> 4  </p>
+</li>
+<li>
+<p>Quelle est la valeur de <code>c</code> à la fin de l'exécution du code suivant :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">+</span><span class="mi">1</span>
+</code></pre></div>
+</div>
+<p><strong>A</strong> 0  | <strong>B</strong> 2 |  <strong>C</strong> 3 |   <strong>D</strong> 10</p>
+</li>
+<li>
+<p>On exécute le script suivant :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">resultat</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Quelle affirmation est fausse parmi les suivantes ?</p>
+<p><strong>A</strong> le corps de la boucle a été exécuté 10 fois<br />
+<strong>B</strong> à la fin de l'exécution la valeur de <code>i</code> est 9<br />
+<strong>C</strong> <code>resultat</code> contient la moyenne des éléments de liste<br />
+<strong>D</strong> <code>len</code> est une fonction</p>
+</li>
+<li>
+<p>On définit la fonction suivante :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">traitement</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">))</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">m</span><span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">m</span>
+</code></pre></div>
+</div>
+<p>Que vaut <code>traitement([-2,5,6,-10,35])</code> ?<br />
+<strong>A</strong> <code>None</code> |  <strong>B</strong> <code>-10</code>  |    <strong>C</strong> <code>-6</code> |    <strong>D</strong> <code>35</code></p>
 </li>
 </ol>
 

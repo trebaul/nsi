@@ -343,6 +343,8 @@
         
           
         
+          
+        
       
       
         
@@ -496,15 +498,114 @@
         
           
         
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_1_4">
+          2. Le Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Le Web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          2. Le Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/web/fonctionnement/" class="md-nav__link">
+        I. Le fonctionnement du web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/web/html_css/" class="md-nav__link">
+        II. Les langages HTML et CSS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/web/client_serveur/" class="md-nav__link">
+        III. Le modèle client-serveur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2nde/web/moteurs_recherche/" class="md-nav__link">
+        IV. Les moteurs de recherche
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
           Travaux Pratiques
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Travaux Pratiques" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_4">
+        <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
           Travaux Pratiques
         </label>
@@ -1034,15 +1135,25 @@
       
         
           
+            
+          
+        
+          
         
           
         
       
       
-        <label class="md-nav__link" for="__nav_2_7">
-          4. Dans la peau d'un développeur
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../seq4_b/">4. Dans la peau d'un développeur</a>
+          
+            <label for="__nav_2_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="4. Dans la peau d'un développeur" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_7">
@@ -1050,6 +1161,8 @@
           4. Dans la peau d'un développeur
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
           
             
               
@@ -1112,14 +1225,12 @@
         
           
         
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">5. Tableaux et p-uplets</a>
+          <a href="../">5. Types construits</a>
           
             <label for="__nav_2_8">
               <span class="md-nav__icon md-icon"></span>
@@ -1127,10 +1238,10 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="5. Tableaux et p-uplets" data-md-level="2">
+      <nav class="md-nav" aria-label="5. Types construits" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_8">
           <span class="md-nav__icon md-icon"></span>
-          5. Tableaux et p-uplets
+          5. Types construits
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1192,6 +1303,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tp-la-bibliotheque-matplotlib" class="md-nav__link">
+    TP : La bibliothèque matplotlib
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#td" class="md-nav__link">
     TD
   </a>
@@ -1229,20 +1347,6 @@
     <li class="md-nav__item">
       <a href="../puplet/" class="md-nav__link">
         III. Le type p-uplet
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../synthese/" class="md-nav__link">
-        Pour s'entraîner
       </a>
     </li>
   
@@ -3316,6 +3420,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tp-la-bibliotheque-matplotlib" class="md-nav__link">
+    TP : La bibliothèque matplotlib
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#td" class="md-nav__link">
     TD
   </a>
@@ -3463,12 +3574,12 @@ Vérifier que la correction a été faite.</p>
 <p>Les types de bases manipulés jusqu'à présent ne permettent pas de manipuler des ensembles de valeurs, appelés en informatique des <strong>collections</strong>. Pour stocker des éléments <em>d'un même type</em>, on peut utiliser un <strong>tableau</strong>.</p>
 <h3 id="a-definition">A. Définition<a class="headerlink" href="#a-definition" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p>Un <strong>tableau</strong> est une collection d'éléments de <strong><em>même type, de taille fixée</em></strong>, stockés les uns à la suite des autres, dont la valeur est accessible grâce à leur <strong><em>indice</em></strong>.</p>
+<p class="admonition-title">Un <strong>tableau</strong> est une collection d'éléments de <strong><em>même type, de taille fixée</em></strong>, stockés les uns à la suite des autres, dont la valeur est accessible grâce à leur <strong><em>indice</em></strong>.</p>
 </div>
 <p>En Python, on utilise le terme plus général de <strong><em>liste</em></strong> pour représenter des <strong>tableaux</strong>.</p>
 <h3 id="b-creation">B. Création<a class="headerlink" href="#b-creation" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p>On déclare un nouveau tableau en séparant ses éléments par des <strong>virgules</strong>, l'ensemble étant entouré de <strong>crochets</strong>. <code>[]</code> est un tableau <strong>vide</strong>.</p>
+<p class="admonition-title">On déclare un nouveau tableau en séparant ses éléments par des <strong>virgules</strong>, l'ensemble étant entouré de <strong>crochets</strong>. <code>[]</code> est un tableau <strong>vide</strong>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
@@ -3485,7 +3596,7 @@ Les différents éléments sont stockés côte à côte dans la mémoire. Compl�
 </div>
 <h3 id="c-indexation">C. Indexation<a class="headerlink" href="#c-indexation" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p>Les éléments d'un tableau <code>tab</code> sont indexés à partir de <strong>0</strong>, jusqu'à la <strong>taille du tableau - 1</strong> (en Python : <code>len(tab)-1</code>). On accède à l'élément d'indice <code>i</code> avec la syntaxe <code>tab[i]</code>.</p>
+<p class="admonition-title">Les éléments d'un tableau <code>tab</code> sont indexés à partir de <strong>0</strong>, jusqu'à la <strong>taille du tableau - 1</strong> (en Python : <code>len(tab)-1</code>). On accède à l'élément d'indice <code>i</code> avec la syntaxe <code>tab[i]</code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple :</p>
@@ -3558,7 +3669,7 @@ Les différents éléments sont stockés côte à côte dans la mémoire. Compl�
 </div>
 <h3 id="d-modification">D. Modification<a class="headerlink" href="#d-modification" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p>Il est possible de modifier la valeur d'un élément d'un tableau <code>t</code> après sa création, en lui affectant une nouvelle valeur avec la syntaxe <code>t[i] = v</code>.</p>
+<p class="admonition-title">Il est possible de modifier la valeur d'un élément d'un tableau <code>t</code> après sa création, en lui affectant une nouvelle valeur avec la syntaxe <code>t[i] = v</code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemples</p>
@@ -3638,7 +3749,7 @@ Les différents éléments sont stockés côte à côte dans la mémoire. Compl�
 </div>
 <h3 id="g-les-tableaux-a-2-dimensions">G. Les tableaux à 2-dimensions<a class="headerlink" href="#g-les-tableaux-a-2-dimensions" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p>Un <strong>tableau à deux dimensions</strong>, appelé <strong>matrice</strong>, est un tableau dont chaque élément est aussi un tableau. On accède à un élément par son numéro de ligne <code>i</code> et son numéro de colonne <code>j</code> : si elle s'appelle <code>mat</code>, cela correspond à <code>mat[i][j]</code>.</p>
+<p class="admonition-title">Un <strong>tableau à deux dimensions</strong>, appelé <strong>matrice</strong>, est un tableau dont chaque élément est aussi un tableau. On accède à un élément par son numéro de ligne <code>i</code> et son numéro de colonne <code>j</code> : si elle s'appelle <code>mat</code>, cela correspond à <code>mat[i][j]</code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple :</p>
@@ -3705,14 +3816,140 @@ Les différents éléments sont stockés côte à côte dans la mémoire. Compl�
 </ul>
 </div>
 <hr />
+<h2 id="tp-la-bibliotheque-matplotlib">TP : La bibliothèque <code>matplotlib</code><a class="headerlink" href="#tp-la-bibliotheque-matplotlib" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Pour ce TP, créer un dossier <code>TP_Matplotlib</code> dans votre dossier <code>NSI</code>, dossier <code>seq5</code>,  et enregistrer un nouveau fichier pour chaque tracé.</p>
+</div>
+<p>La bibliothèque <code>matplotlib</code> (pour <em>"mathematic plot library"</em>) sert à représenter des données sous la forme de graphiques. Avant de commencer, écrire l'import de la librairie en haut du fichier Python :
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+</code></pre></div>
+Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fonction()</code> (c'est dans <code>plt</code> que l'on va chercher les fonctions).</p>
+<h3 id="a-graphiques-simples">A. Graphiques simples<a class="headerlink" href="#a-graphiques-simples" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Pour représenter des abscisses, notées <code>x</code>, en fonction d'ordonnées, notées <code>y</code>, on utilise des tableaux. Par exemple :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>     <span class="c1"># on trace x en foncton de y</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>        <span class="c1"># on montre le graphique</span>
+</code></pre></div>
+</div>
+<p>Exécuter ce code. Le graphique doit apparaître à l'écran. </p>
+</li>
+<li>
+<p>On peut changer l'apparence des points (couleur et forme) en rajoutant un paramètre à la fonction <code>plot</code>. Essayez le code avec les différents appels suivant de la fonction :</p>
+<p><img src="../img/matplotlib_plot.png" height=125 style="float:right;padding-left:15px"></p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>   
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;rs&#39;</span><span class="p">)</span>   
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span> 
+</code></pre></div>
+</div>
+<p>Noter ce qui change à chaque fois.</p>
+</li>
+<li>
+<p>Plutôt que de rentrer les valeurs des abscisses et ordonnées à la main dans le tableau, on peut créer des tableaux automatiquement avec la compréhension. On veut représenter la fonction <span class="arithmatex">\(f(x) = 2x\)</span>. Créer le tableau des <code>y</code> pour obtenir les bonnes valeurs.  </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>  <span class="c1"># permet de représenter 100 points</span>
+<span class="n">y</span> <span class="o">=</span> <span class="o">...</span>            <span class="c1"># à compléter - y doit être de taille 100 aussi </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>     <span class="c1"># vous pouvez rajouter le 3ème paramètre qui vous convient le mieux</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>        
+</code></pre></div>
+</div>
+<ol>
+<li>On peut représenter des fonctions plus complexes. Importer la fonction <code>cos</code> de la bibliothèque <code>math</code> avec l'instruction <code>from math import cos</code> placée en début de fichier. Compléter l'instructions remplissant le tableaux <code>ordonnees</code> pour représenter la fonction <span class="arithmatex">\(f(x) = cos(s)\)</span>.</li>
+</ol>
+<p><img src="../img/matplotlib_cos.png" height=140 style="float:left"></p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">abscisses</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">ordonnees</span> <span class="o">=</span> <span class="o">...</span>    <span class="c1"># à compléter - y doit être de taille 100 aussi</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">abscisses</span><span class="p">,</span> <span class="n">ordonnees</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</li>
+</ol>
+<h3 id="b-diagramme-en-barres-et-histogrammes">B. Diagramme en barres et histogrammes<a class="headerlink" href="#b-diagramme-en-barres-et-histogrammes" title="Permanent link">&para;</a></h3>
+<p><img src="../img/matplotlib_bar.png" height=200 style="float:right;padding-left:15px"></p>
+<ol>
+<li>
+<p>Le code est similaire pour représenter des diagrammes en barres : il faut une variable <code>x</code> associée à une variable <code>y</code> qui correspond à la hauteur des barres. On utilise la fonction <code>bar</code> à la place de la fonction <code>plot</code>. Exécuter le code suviant : </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p>La fonction <code>hist</code> permet de représenter des histogrammes. Il faut lui donner en paramètre une liste de valeurs, et le nombre de groupes à tracer parmi ces valeurs, et la fonction représente le nombre de fois qu'apparaîssent les différentes valeurs dans chaque groupe.  </p>
+<p>Par exemple, on peut tracer combien de fois on tombe sur chacun des chiffres de 1 à 6 en lançant un dé à 6 faces 100 fois, en utilisant la fonction <code>randint</code> de la bibliothèque <code>random</code> <em>(</em><em>attention !</em><em> il faut rajouter <code>from random import randint</code> au début du fichier)</em>. Préciser les paramètres de <code>randint</code> à utiliser :   </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">liste</span> <span class="o">=</span><span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</li>
+</ol>
+<h3 id="c-nuage-de-points">C. Nuage de points<a class="headerlink" href="#c-nuage-de-points" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>La fonction <code>scatter</code> permet de représenter des nuages de points, dont on donne l'abscisse <code>x</code> et l'ordonnée <code>y</code>. Utiliser la compréhension pour créer les 2 listes <code>x</code> et <code>y</code> de taille <code>1000</code>, en tirant à chaque fois au hasard un nombre entre <code>1</code> et <code>100</code>. </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="n">randint</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">)]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>  <span class="c1"># il faut ici rajouter le nom de paramètre c pour changer la couleur</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p>On peut faire plusieurs graphiques sur un seul, il suffit d'appeler plusieurs fois la fonction de tracé (ici <code>scatter</code>) avant de faire appel à <code>show</code>.<br />
+    Générer 3 tirages différents pour <code>x</code> et <code>y</code>, et les représenter sur le même graphique en utilisant des couleurs différentes.</p>
+<p><center><img src="../img/matplotlib_scatter.png" height=200></center></p>
+</li>
+</ol>
+<h3 id="d-camemberts">D. Camemberts<a class="headerlink" href="#d-camemberts" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Les camemberts (fonction <code>pie</code>) permettent de représenter la répartition de données entre différentes catégories. Les catégories ont un <strong>nom</strong> et une <strong>taille</strong> (un nombre de données). </p>
+<p>On veut représenter la répartition d'animaux : 15 animaux dans la catégorie <code>Loup</code>, 30 dans la catégorie <code>Renard</code>, 45 pour <code>Belette</code> et 10 pour <code>Jument</code>. Compléter les listes <code>noms</code> et <code>tailles</code> pour obtenir le graphique demandé. </p>
+<p><center><img src="../img/matplotlib_pie.png" height=225 style="float:right;padding-left:15px"></center></p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">noms</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">tailles</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">tailles</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">noms</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</li>
+</ol>
+<hr />
 <h2 id="td">TD<a class="headerlink" href="#td" title="Permanent link">&para;</a></h2>
-<h3 id="exercice-1-sur-feuille">Exercice 1 : <em>(sur feuille)</em><a class="headerlink" href="#exercice-1-sur-feuille" title="Permanent link">&para;</a></h3>
-<p>Qu'affiche le programme suivant ?
+<h3 id="exercice-1">Exercice 1 :<a class="headerlink" href="#exercice-1" title="Permanent link">&para;</a></h3>
+<p>Qu'affiche le programme suivant ?</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;un&quot;</span><span class="p">,</span> <span class="s2">&quot;trois&quot;</span><span class="p">,</span> <span class="s2">&quot;deux&quot;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-</code></pre></div></p>
-<h3 id="exercice-2-sur-feuille">Exercice 2 : <em>(sur feuille)</em><a class="headerlink" href="#exercice-2-sur-feuille" title="Permanent link">&para;</a></h3>
-<p>Comment accéder sans erreur au 5ème élément d'un tableau <code>t</code> dont on ne connaît pas encore la taille ?
+</code></pre></div>
+</div>
+<h3 id="exercice-2">Exercice 2 :<a class="headerlink" href="#exercice-2" title="Permanent link">&para;</a></h3>
+<p>Comment accéder sans erreur au 5ème élément d'un tableau <code>t</code> dont on ne connaît pas encore la taille ?</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># proposition a</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 <span class="c1"># proposition b</span>
@@ -3729,74 +3966,116 @@ Les différents éléments sont stockés côte à côte dans la mémoire. Compl�
     <span class="n">a</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
 <span class="c1"># proposition f</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-</code></pre></div></p>
-<h3 id="exercice-3-les-jours-sur-ordinateur">Exercice 3 : les jours <em>(sur ordinateur)</em><a class="headerlink" href="#exercice-3-les-jours-sur-ordinateur" title="Permanent link">&para;</a></h3>
+</code></pre></div>
+</div>
+<h3 id="exercice-3-les-jours">Exercice 3 : les jours<a class="headerlink" href="#exercice-3-les-jours" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Ecrire une <em>instruction</em> Python stockant le nom des sept jours de la semaine dans un tableau nommé <code>jours</code>.</p>
+<p>Ecrire une <strong>instruction</strong> Python stockant le nom des sept jours de la semaine dans un tableau nommé <code>jours</code>.</p>
 </li>
 <li>
-<p>Ecrire un <em>programme</em> permettant d'afficher le noms des sept jours, en utilisant une <strong><em>boucle</em></strong> et la fonction renvoyant la longueur(taille) d'un tableau.</p>
+<p>Ecrire un <strong>programme</strong> permettant d'afficher le noms des sept jours, en utilisant une <strong><em>boucle</em></strong> et la fonction renvoyant la longueur d'un tableau.</p>
 </li>
 </ol>
-<h3 id="exercice-4-multiples-sur-ordinateur">Exercice 4 : multiples <em>(sur ordinateur)</em><a class="headerlink" href="#exercice-4-multiples-sur-ordinateur" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-4-ajouter-des-elements-a-un-tableau-sur-ordinateur">Exercice 4 : ajouter des éléments à un tableau <em>(sur ordinateur)</em><a class="headerlink" href="#exercice-4-ajouter-des-elements-a-un-tableau-sur-ordinateur" title="Permanent link">&para;</a></h3>
+<p>Un tableau est une structure de <strong>taille fixe</strong>. Dans certains cas, ce n'est pas pratique car on veut pouvoir rajouter des éléments au fur et à mesure.</p>
 <ol>
 <li>
-<p>Ecrire une <em>fonction</em> <code>multiples10</code> prenant en paramètre un entier positif <code>n</code> et renvoyant un tableau contenant les 10 premiers multiples non nuls de <code>n</code>.</p>
+<p>Il est possible de le faire avec l'opérateur <code>+</code>. Exécuter le code suivant :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div>
+</div>
+<ol>
+<li>Ecrire un <strong>programme</strong> créant un tableau vide, et ajoutant successivement les valeurs <code>5</code>, <code>10</code>, <code>15</code> et <code>20</code>. </li>
+</ol>
 </li>
 <li>
-<p>Ecrire une <em>fonction</em> <code>multiples1000</code> prenant en paramètre un entier positif <code>n</code> et renvoyant un tableau contenant les multiples de <code>n</code> strictement inférieurs à 1000.</p>
+<p>Ecrire une <strong>fonction</strong> <code>multiples1000(n)</code> prenant en paramètre un entier positif <code>n</code> et renvoyant un tableau contenant les multiples de <code>n</code> strictement inférieurs à 1000. </p>
+</li>
+<li>
+<p>Ecrire une <strong>fonction</strong> <code>trie_pairs(t)</code> prenant en paramètre un tableau d'entiers <code>t</code> et renvoyant un nouveau tableau ne contenant que les entiers pairs de <code>t</code>.</p>
 </li>
 </ol>
-<h3 id="exercice-5-morpion-sur-ordinateur">Exercice 5 : morpion <em>(sur ordinateur)</em><a class="headerlink" href="#exercice-5-morpion-sur-ordinateur" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-5-la-comprehension">Exercice 5 : la compréhension<a class="headerlink" href="#exercice-5-la-comprehension" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Ecrire une <em>instruction</em> permettant de générer le tableau à 2 dimensions représentant le jeu du morpion ci-dessous.
+<p>Ecrire une <strong>instruction</strong> permettant de créer par compréhension un tableau contenant la table de multiplication de <code>6</code> (donc les valeurs allant de <code>1*6</code> à <code>9*6</code>).</p>
+</li>
+<li>
+<p>Ecrire une <strong>instruction</strong> permettant de créer par compréhension un tableau à 2 dimensions contenant les tables de multiplication de tous les chiffres de 2 à 9. </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span>    <span class="c1"># table de 2</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">27</span><span class="p">],</span>   <span class="c1"># table de 3</span>
+<span class="o">...</span>                                   <span class="c1"># etc</span>
+<span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">81</span><span class="p">]]</span>  <span class="c1"># table de 9</span>
+</code></pre></div>
+</div>
+</li>
+</ol>
+<h3 id="exercice-6-multiples">Exercice 6 : multiples<a class="headerlink" href="#exercice-6-multiples" title="Permanent link">&para;</a></h3>
+<p>Ecrire une <strong>fonction</strong> <code>multiples10(n)</code> prenant en paramètre un entier positif <code>n</code> et renvoyant un tableau contenant les 10 premiers multiples non nuls de <code>n</code>.</p>
+<p>On utilisera un tableau de taille 10, initialisé <strong><em>par compréhension</em></strong> avec des 0.</p>
+<h3 id="exercice-7-morpion">Exercice 7 : morpion<a class="headerlink" href="#exercice-7-morpion" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ecrire une <strong>instruction</strong> permettant de générer le tableau à 2 dimensions représentant le jeu du morpion ci-dessous.
 <center>
 <img src="../img/morpion.png" height=110></center></p>
 </li>
 <li>
-<p>C'est au joueur ayant les <code>'X'</code> de jouer. Ecrire l'instruction qui lui permet de gagner <em>(il faut qu'il aligne 3 <code>'X'</code> !)</em>.</p>
+<p>C'est au joueur ayant les <code>'X'</code> de jouer. Ecrire l'instruction qui lui permet de gagner <em>(il faut qu'il aligne 3 <code>'X'</code> !)</em>. </p>
+</li>
+<li>
+<p>Ecrire un <strong>programme</strong> parcourant tous les éléments du tableau à 2 dimensions les uns après les autres <em>(il faut utiliser 2 boucles imbriquées)</em>. </p>
 </li>
 </ol>
-<h3 id="exercice-6-la-comprehension-sur-ordinateur">Exercice 6 : la compréhension <em>(sur ordinateur)</em><a class="headerlink" href="#exercice-6-la-comprehension-sur-ordinateur" title="Permanent link">&para;</a></h3>
+<h3 id="exercice-8-qcm">Exercice 8 : QCM<a class="headerlink" href="#exercice-8-qcm" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Ecrire une <em>instruction</em> permettant de créer par compréhension la table de multiplication de 6 (donc les valeurs allant de <code>1*6</code> à <code>9*6</code>).</p>
+<p>On dispose d'une liste définie par <code>L = [15,17,12,23]</code>.<br />
+    Quelle est la valeur de <code>L</code> après l'instruction <code>L[2] = 25</code> ?<br />
+<strong>A</strong> <code>[15,25,12,23]</code><br />
+<strong>B</strong> <code>[15,17,25,12,23]</code><br />
+<strong>C</strong> <code>[15,17,25,23]</code><br />
+<strong>D</strong> <code>[15,17,12,25,23]</code>  </p>
 </li>
 <li>
-<p>Ecrire une <em>instruction</em> permettant de créer par compréhension les tables de multiplication de tous les chiffres de 2 à 9. Toutes les tables sont stockées dans une seule matrice :  </p>
+<p>On définit ainsi une liste M :<br />
+<code>M = [['A','B','C','D'], ['E','F','G','H'], ['I','J','K','L']]</code><br />
+    Quelle expression vaut la chaîne de caractères <code>'H'</code> ?<br />
+<strong>A</strong> <code>M[1][3]</code><br />
+<strong>B</strong> <code>M[3][1]</code><br />
+<strong>C</strong> <code>M(7)</code><br />
+<strong>D</strong> <code>M(8)</code></p>
 </li>
-</ol>
-<p><div class="highlight"><pre><span></span><code><span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span>    <span class="c1"># table de 2</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">27</span><span class="p">],</span>   <span class="c1"># table de 3</span>
- <span class="o">...</span>                                   <span class="c1"># etc</span>
- <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">81</span><span class="p">]]</span>  <span class="c1"># table de 9</span>
- <span class="err">```</span>
-
-<span class="c1">### Exercice 7 : ajouter des éléments à un tableau *(sur ordinateur)*</span>
-
-<span class="n">Un</span> <span class="n">tableau</span> <span class="n">est</span> <span class="n">une</span> <span class="n">structure</span> <span class="n">de</span> <span class="o">**</span><span class="n">taille</span> <span class="n">fixe</span><span class="o">**.</span> <span class="n">Dans</span> <span class="n">certains</span> <span class="n">cas</span><span class="p">,</span> <span class="n">ce</span> <span class="n">n</span><span class="s1">&#39;est pas pratique car on veut pouvoir rajouter des éléments au fur et à mesure. Il faut pour cela utiliser des **tableaux dynamiques** : des tableaux dont la taille varie.</span>
-
-<span class="n">Le</span> <span class="nb">type</span> <span class="err">`</span><span class="nb">list</span><span class="err">`</span> <span class="n">de</span> <span class="n">Python</span> <span class="n">implémente</span> <span class="n">cette</span> <span class="n">structure</span><span class="o">.</span> <span class="n">On</span> <span class="n">peut</span> <span class="n">appliquer</span> <span class="n">des</span> <span class="n">fonctions</span> <span class="n">un</span> <span class="n">peu</span> <span class="n">spéciales</span><span class="p">,</span> <span class="n">appelées</span> <span class="o">*</span><span class="n">méthodes</span><span class="o">*</span><span class="p">,</span> <span class="n">comme</span> <span class="n">la</span> <span class="n">fonction</span> <span class="err">`</span><span class="n">append</span><span class="err">`</span> <span class="n">qui</span> <span class="n">ajoute</span> <span class="n">un</span> <span class="n">élément</span> <span class="n">à</span> <span class="n">la</span> <span class="n">fin</span> <span class="n">de</span> <span class="n">la</span> <span class="n">liste</span> <span class="n">Python</span><span class="o">.</span>
-
-<span class="mf">1.</span> <span class="n">Exécuter</span> <span class="n">le</span> <span class="n">code</span> <span class="n">suivant</span> <span class="p">:</span>
-<span class="err">```</span><span class="n">python</span>
-<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>     <span class="c1"># noter qu&#39;on ne l&#39;appelle pas comme une fonction usuelle!</span>
+<li>
+<p>Que vaut l'expression <code>[ 2*k for k in range(5) ]</code> ?<br />
+<strong>A</strong> <code>[0,2,4,6,8]</code><br />
+<strong>B</strong> <code>[2,4,6,8,10]</code><br />
+<strong>C</strong> <code>[1,2,4,8,16]</code><br />
+<strong>D</strong> <code>[2,4,8,16,32]</code></p>
+</li>
+<li>
+<p>On exécute le code suivant :  </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="n">A</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
 </code></pre></div>
-Que contient <code>t</code> après son exécution ?</p>
-<ol>
-<li>
-<p>Ecrire un programme créant un tableau vide, et ajoutant successivement les valeurs <code>5</code>, <code>10</code>, <code>15</code> et <code>20</code>.</p>
+</div>
+<p>Que vaut <code>B</code> à la fin de l'exécution ?
+<strong>A</strong> rien du tout, le programme déclenche une erreur d'exécution<br />
+<strong>B</strong> <code>[ [3,2,1], [6,5,4], [9,8,7] ]</code><br />
+<strong>C</strong> <code>[ [1,4,7], [2,5,8], [3,6,9] ]</code><br />
+<strong>D</strong> <code>[ [7,8,9], [4,5,6], [1,2,3] ]</code>  </p>
 </li>
-<li>
-<p>Il est possible de faire la même chose, mais avec l'opérateur <code>+</code>. Exécuter le code suivant, et vérifier que l'on obtient la même chose que pour la question 1 :
-<div class="highlight"><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-</code></pre></div></p>
-</li>
-<li>Ecrire un programme faisant la même chose que celui de la question 2, mais en utilisant l'opérateur <code>+</code> à la place de <code>append</code>.</li>
 </ol>
 
 
