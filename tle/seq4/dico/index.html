@@ -3429,27 +3429,27 @@ text-align: justify}
 <div class="admonition success">
 <p class="admonition-title">Rappels</p>
 <ol>
-<li>Comment vous pouvez effectuer les opérations primitives sur un dictionnaire Python, noté <code>d</code> ? Commencer par créer un dictionnaire vide.</li>
-</ol>
+<li>
+<p>Comment vous pouvez effectuer les opérations primitives sur un dictionnaire Python, noté <code>d</code> ? Commencer par créer un dictionnaire vide.</p>
 <details class="note">
 <summary>Solution</summary>
 <div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">d</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span> <span class="o">=</span> <span class="n">v1</span>   <span class="c1">#ajout d&#39;une nouvelle valeur à une nouvelle clé</span>
 <span class="n">d</span><span class="p">[</span><span class="n">cle</span><span class="p">]</span> <span class="o">=</span> <span class="n">v2</span>   <span class="c1">#modification de la valeur associée à cle</span>
 <span class="n">d</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>  <span class="c1">#supprime cle et sa valeur associée</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;cle&#39;</span><span class="p">])</span>  <span class="c1">#recherche de la valeur associée à cle</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">cle</span><span class="p">])</span>  <span class="c1">#recherche de la valeur associée à cle</span>
 </code></pre></div>
 </details>
-<ol>
-<li>Avec quelle méthode accède-t-on à la liste des clés de <code>d</code> ? A la liste de ses valeurs ?  </li>
-</ol>
+</li>
+<li>
+<p>Avec quelle méthode accède-t-on à la liste des clés de <code>d</code> ? A la liste de ses valeurs ?  </p>
 <details class="note">
 <summary>Solution</summary>
 <p><code>d.keys()</code> et <code>d.values()</code> donnent respectivement la liste des clés et des valeurs.</p>
 </details>
-<ol>
-<li>Comment peut-on afficher l'ensemble des clés et des valeurs associées, en parcourant <code>d</code> ?</li>
-</ol>
+</li>
+<li>
+<p>Comment peut-on afficher l'ensemble des clés et des valeurs associées, en parcourant <code>d</code> ?</p>
 <details class="note">
 <summary>Solution</summary>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
@@ -3458,6 +3458,8 @@ text-align: justify}
 <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>  <span class="c1">#donne la liste des couples</span>
 </code></pre></div>
 </details>
+</li>
+</ol>
 </div>
 <h3 id="c-acces-a-un-element">C. Accès à un élément<a class="headerlink" href="#c-acces-a-un-element" title="Permanent link">&para;</a></h3>
 <p>L'<strong>accès à un élément</strong> dans un tableau associatif s'effectue, comme dans un tableau, en <strong>temps constant</strong>. Il est indépendant de la taille de la structure. </p>
@@ -3467,44 +3469,28 @@ text-align: justify}
 </div>
 <ul>
 <li>
-<p>Ecrire une fonction <code>occurrence_dico(d, k)</code> recherchant la clé <code>k</code> dans le dictionnaire <code>d</code>. Si elle trouve cette clé, elle renvoie le tuple <code>k</code>, valeur associée à <code>k</code>, sinon elle renvoie <code>None, 0</code>.<br />
-    <div class="highlight"><pre><span></span><code>
-</code></pre></div></p>
+<p>Ecrire une fonction <code>occurrence_dico(d, k)</code> recherchant la clé <code>k</code> dans le dictionnaire <code>d</code>. Si elle trouve cette clé, elle renvoie le tuple <code>k</code>, valeur associée à <code>k</code>, sinon elle renvoie <code>None, 0</code>.  </p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000031" class="comment">###</span><div class="line" id="editor_00000031"></div><div id="term_editor_00000031"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000031","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000031","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000031').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000031" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000031")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000031")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000031" class="py_mk_hide"></span><span id="corr_content_editor_00000031" class="py_mk_hide" data-strudel=""></span></p>
 </li>
 <li>
 <p>Ecrire une fonction <code>maxi_dico(d)</code> renvoyant la <strong>valeur maximale</strong> du dictionnaire <code>d</code> non-vide, constitué d'entiers positifs, et la <strong>clé</strong> associée. </p>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000032" class="comment">###</span><div class="line" id="editor_00000032"></div><div id="term_editor_00000032"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000032","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000032","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000032').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000032" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000032")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000032")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000032" class="py_mk_hide"></span><span id="corr_content_editor_00000032" class="py_mk_hide" data-strudel=""></span></p>
 </li>
 <li>
 <p>Ecrire une fonction <code>moyenne_dico(d)</code> renvoyant la moyenne des valeurs du dictionnaire <code>d</code> non-vide sur l'ensemble de ses clés. On suppose que toutes les valeurs sont des entiers ou des flottants. </p>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000033" class="comment">###</span><div class="line" id="editor_00000033"></div><div id="term_editor_00000033"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000033","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000033","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000033').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000033" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000033")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000033")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000033" class="py_mk_hide"></span><span id="corr_content_editor_00000033" class="py_mk_hide" data-strudel=""></span></p>
 </li>
 </ul>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice</p>
-<p>1) Écrire en Python une fonction <code>tabToDict</code> qui prend en paramètre d’entrée une liste Python de la forme [clé1, valeur1, clé2, valeur2,…] et retourne un dictionnaire correspondant de la forme { clé1 : valeur1, clé2 : valeur2,…}.</p>
-<details class="note">
-<summary>Solution</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tabToDict</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
-        <span class="n">d</span><span class="p">[</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">d</span>
-</code></pre></div>
-</details>
-<p>2) Réciproquement, écrire une fonction en Python <code>dictToTab</code> qui permet de passer d'un dictionnaire à une liste.</p>
-<details class="note">
-<summary>Solution</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">dictToTab</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
-    <span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-        <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-        <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">l</span>
-</code></pre></div>
-</details>
+<ol>
+<li>
+<p>Écrire en Python une fonction <code>tabToDict</code> qui prend en paramètre d’entrée une liste Python de la forme [clé1, valeur1, clé2, valeur2,…] et retourne un dictionnaire correspondant de la forme { clé1 : valeur1, clé2 : valeur2,…}.</p>
+</li>
+<li>
+<p>Réciproquement, écrire une fonction en Python <code>dictToTab</code> qui permet de passer d'un dictionnaire à une liste.</p>
+</li>
+</ol>
 </div>
 
 

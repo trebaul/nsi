@@ -3414,23 +3414,25 @@ text-align: justify}
 <hr />
 <h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&para;</a></h2>
 <h3 id="exercice-1-structures-et-interfaces">Exercice 1 : structures et interfaces<a class="headerlink" href="#exercice-1-structures-et-interfaces" title="Permanent link">&para;</a></h3>
-<p>A. Quelle opération ne fait pas partie de l’interface d’une <strong>pile</strong> ?<br />
+<p><strong>A.</strong> Quelle opération ne fait pas partie de l’interface d’une <strong>pile</strong> ?<br />
 1. ajouter un élément à la pile<br />
 2. supprimer l’élément le plus récent de la pile <br />
 3. retirer l’élément le plus ancien de la pile   </p>
-<p>B. Quelle opération ne fait pas partie de l’interface d’une <strong>file</strong> ?<br />
+<p><strong>B.</strong> Quelle opération ne fait pas partie de l’interface d’une <strong>file</strong> ?<br />
 1. ajouter un élément à la file<br />
 2. supprimer l’élément le plus récent de la file <br />
 3. retirer l’élément le plus ancien de la file   </p>
-<p>C. Pour que <strong>deux implémentations</strong> du même type abstrait soient interchangeables, il faut que :<br />
+<p><strong>C.</strong> Pour que <strong>deux implémentations</strong> du même type abstrait soient interchangeables, il faut que :<br />
 1. la complexité en temps soit la même dans les deux cas<br />
 2. l’interface de la structure de données soit la même dans les deux cas<br />
 3. les deux implémentations soient parfaitement identiques  </p>
 <h3 id="exercice-2-choisir-une-structure-de-donnees">Exercice 2 : choisir une structure de données<a class="headerlink" href="#exercice-2-choisir-une-structure-de-donnees" title="Permanent link">&para;</a></h3>
-<p>Associer une structure de données adaptée à chaque situation.
-- Dans une administration, on souhaite insérer dans une structure de données les doléances reçues afin de les traiter selon leur ordre d’arrivée. On aura plutôt intérêt à les enregistrer dans :<br />
-<strong>a)</strong> une liste  <strong>b)</strong> une pile <strong>c)</strong> une file  </p>
+<p>Associer une structure de données adaptée à chaque situation.</p>
 <ul>
+<li>
+<p>Dans une administration, on souhaite insérer dans une structure de données les doléances reçues afin de les traiter selon leur ordre d’arrivée. On aura plutôt intérêt à les enregistrer dans :<br />
+<strong>a)</strong> une liste  <strong>b)</strong> une pile <strong>c)</strong> une file  </p>
+</li>
 <li>
 <p>Pour un logiciel, on doit enregistrer la liste des actions dans une structure de données de sorte à voir la dernière action en priorité. On enregistrera donc les actions dans :<br />
 <strong>a)</strong> une liste <strong>b)</strong> une pile <strong>c)</strong> une file</p>
@@ -3441,16 +3443,24 @@ text-align: justify}
 </li>
 </ul>
 <h3 id="exercice-3-algorithmes-sur-les-files-et-les-piles">Exercice 3 : algorithmes sur les files et les piles<a class="headerlink" href="#exercice-3-algorithmes-sur-les-files-et-les-piles" title="Permanent link">&para;</a></h3>
-<p>Dans ces deux questions, on utilise une implémentation des structures en POO.  </p>
+<p>Dans ces deux questions, on utilise une implémentation des structures en POO. Pour tester les fonctions, il faut importer les classes correspondantes dans le fichier de travail.</p>
+<div class="admonition info">
+<p class="admonition-title">Les structures ont les primitives <em>(ici des méthodes)</em> usuelles :</p>
+<ul>
+<li>Pour les <strong>files</strong> : <code>enfiler(elt)</code>, <code>defiler()</code>, <code>est_vide()</code> testant si la file est vide. <code>f = File()</code> crée une nouvelle file.  </li>
+<li>Pour les <strong>piles</strong> : <code>empiler(elt)</code>, <code>depiler()</code>, <code>est_vide()</code> testant si la file est vide. <code>p = Pile()</code> crée une nouvelle file.</li>
+</ul>
+</div>
 <ul>
 <li>
 <p>On dispose d’une <strong>file</strong> contenant des entiers, écrire une fonction qui renvoie une file dont on aura enlevé les nombres impairs, mais dont les nombres pairs sont dans le même ordre qu’initialement.</p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000034" class="comment">###</span><div class="line" id="editor_00000034"></div><div id="term_editor_00000034"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000034","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000034","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000034').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000034" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000034")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000034")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000034" class="py_mk_hide"></span><span id="corr_content_editor_00000034" class="py_mk_hide" data-strudel=""></span></p>
 </li>
 <li>
 <p>On dispose d’une <strong>pile</strong> contenant des entiers, écrire une fonction qui renvoie une pile dont on aura enlevé les nombres pairs, mais dont les nombres impairs sont dans le même ordre qu’initialement.</p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000035" class="comment">###</span><div class="line" id="editor_00000035"></div><div id="term_editor_00000035"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000035","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000035","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000035').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000035" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000035")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000035")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000035" class="py_mk_hide"></span><span id="corr_content_editor_00000035" class="py_mk_hide" data-strudel=""></span></p>
 </li>
 </ul>
-<p><br><br></p>
 <h3 id="exercice-4-synthese">Exercice 4 : synthèse<a class="headerlink" href="#exercice-4-synthese" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
