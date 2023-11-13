@@ -1,0 +1,8 @@
+I. La console
+
+6. Si l'on veut faire des changements dans la console, il faut tout réécrire. 
+
+Conclusion
+
+Avec un IDE Python, on peut facilement faire des modifications dans le code, et on peut le sauvegarder. Cela n'est pas possible avec juste une console.
+

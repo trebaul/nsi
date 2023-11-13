@@ -3765,12 +3765,14 @@ age --&gt; F[est_majeur];
 <p>Exécuter le code. Que se passe-t-il maintenant lorsque vous appelez la fonction <em>(dans la console)</em> avec l'argument <code>-1</code> ? </p>
 </li>
 <li>
-<p>Les assertions peuvent aussi être utilisées pour vérifier que l'on obtient le bon résultat en sortie d'une fonction. On teste donc si un <strong><em>appel</em></strong> de fonction donne le résultat attendu. Ajouter, <strong><em>dans le programme principal</em></strong> (donc en dehors de la définition de <code>racine</code>) :
-    !!! quote "Code"
-        <div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">racine</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Erreur pour la valeur 4&quot;</span>
+<p>Les assertions peuvent aussi être utilisées pour vérifier que l'on obtient le bon résultat en sortie d'une fonction. On teste donc si un <strong><em>appel</em></strong> de fonction donne le résultat attendu. Ajouter, <strong><em>dans le programme principal</em></strong> (donc en dehors de la définition de <code>racine</code>) :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">racine</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Erreur pour la valeur 4&quot;</span>
 </code></pre></div>
-    a. Exécuter le programme, et vérifier <strong><em>que rien ne se passe</em></strong> (cela veut dire que le test fait dans l'assertion renvoie <code>True</code>).<br />
-    b. Rajouter 2 autres assertions, avec des tests différents, pour vérifier le bon fonctionnement de votre fonction.</p>
+</div>
+<p>a. Exécuter le programme, et vérifier <strong><em>que rien ne se passe</em></strong> (cela veut dire que le test fait dans l'assertion renvoie <code>True</code>).<br />
+b. Rajouter 2 autres assertions, avec des tests différents, pour vérifier le bon fonctionnement de votre fonction.</p>
 </li>
 </ol>
 <hr />
@@ -3839,7 +3841,7 @@ age --&gt; F[est_majeur];
 <li>Le fichier est accessible avec la variable nommée ici <code>f</code>.</li>
 <li>Pour écrire avec la fonction <code>write</code>, on utilise une syntaxe un peu particulière : <code>f.write(...)</code>  </li>
 </ul>
-<p>Modifier ce code et le placer à la fin de votre programme de manière à stocker le score qui est le nombre de coups qu'a mis l'utilisateur pour trouver le nombre mystère. Le fichier utilisé se nommera <code>score.txt</code>.</p>
+<p>Modifier ce code et le placer à la fin de votre programme de manière à stocker le score qui est le nombre de coups qu'a mis l'utilisateur pour trouver le nombre mystère. Le fichier utilisé se nommera <code>score.txt</code>. Ce qui est écrit dans le fichier doit être de type chaîne de caractères, vous pouvez faire la conversion avec la fonction <code>str()</code>.</p>
 </li>
 </ol>
 <p><strong><em>Pour aller plus loin...</em></strong> <em>(à faire si vous avez le temps)</em><br />

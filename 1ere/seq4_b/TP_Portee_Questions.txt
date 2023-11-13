@@ -1,0 +1,18 @@
+1. La valeur de a, utilisée dans une fonction, n'est pas accessible depuis la console.
+
+2. La valeur de a est accessible depuis la console. Elle n'est pas écrite dans la fonction, mais en dehors.
+
+3. Les deux appels de mystere font le même calcul, mais n'utilisent pas le même nom pour la variable d'entrée. On peut utiliser le nom a en dehors de la fonction, sans que cela change sa valeur dans la fonction. Ce sont des variables différentes.
+
+4. p vaut successivement : 2, 4, 8, 16, 32.
+
+5. 
+		   p	i
+initialisation	   1    x
+itération 1 	   2    0
+iteration 2        4    1
+iteration 3        8    2
+iteration 4        16   3
+iteration 5        32   4
+
+La fonction mystere calcule 2 à la puissance a.
