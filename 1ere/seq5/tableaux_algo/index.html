@@ -3485,7 +3485,7 @@ text-align: justify}
 <details class="note">
 <summary>Proposer un algorithme de recherche du <strong>minimum</strong> d'un tableau, renvoyant cette valeur minimale.</summary>
 <div class="highlight"><pre><span></span><code><span class="n">entrée</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span>
-<span class="n">sortie</span> <span class="p">:</span> <span class="n">mini</span>
+<span class="n">sortie</span> <span class="p">:</span> <span class="n">entier</span> <span class="n">ou</span> <span class="n">flottant</span> <span class="n">mini</span>
 
 <span class="n">on</span> <span class="n">initialise</span> <span class="n">une</span> <span class="n">variable</span> <span class="n">mini</span> <span class="n">avec</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">on</span> <span class="n">parcourt</span> <span class="n">un</span> <span class="n">à</span> <span class="n">un</span> <span class="n">le</span> <span class="n">reste</span> <span class="n">des</span> <span class="n">éléments</span> <span class="n">de</span> <span class="n">t</span> <span class="n">avec</span> <span class="n">leur</span> <span class="n">indice</span> <span class="n">i</span>
@@ -3493,44 +3493,50 @@ text-align: justify}
         <span class="n">on</span> <span class="n">actualise</span> <span class="n">mini</span> <span class="n">avec</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 <span class="n">on</span> <span class="n">renvoie</span> <span class="n">mini</span>
 </code></pre></div>
-</details>
 <details class="note">
 <summary>Comment faut-il le modifier pour obtenir la valeur <strong>maximale</strong> ?</summary>
-<p>On remplace le "inférieur à" par "supérieur à".</p>
+<p>On remplace le "inférieur à" par "supérieur à". On change aussi le nom de la variable <code>mini</code> pour l'appeler <code>maxi</code>.</p>
 </details>
-<details class="note">
-<summary>Appliquer cet algorithme au tableau <code>t</code>, et compléter la table de trace suivante :</summary>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Appliquer cet algorithme au tableau <code>t</code>, et compléter la table de trace suivante :</p>
 <table>
 <thead>
 <tr>
 <th align="center">itération</th>
 <th align="center">variable mini</th>
+<th align="center">condition</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center">init</td>
 <td align="center">2.4</td>
+<td align="center">x</td>
 </tr>
 <tr>
 <td align="center">1</td>
-<td align="center">2.4</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">2</td>
-<td align="center">2.4</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">3</td>
-<td align="center">-28.2</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">4</td>
-<td align="center">-28.2</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
-</details>
+</div>
 <h3 id="b-recherche-doccurrence">B. Recherche d'occurrence<a class="headerlink" href="#b-recherche-doccurrence" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Définition</p>
@@ -3549,7 +3555,7 @@ text-align: justify}
 <details class="note">
 <summary>Proposer un algorithme effectuant ce comptage :</summary>
 <div class="highlight"><pre><span></span><code><span class="n">entrée</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span>
-<span class="n">sortie</span> <span class="p">:</span> <span class="n">nb_occ</span>
+<span class="n">sortie</span> <span class="p">:</span> <span class="n">entier</span> <span class="n">nb_occ</span>
 
 <span class="n">on</span> <span class="n">initialise</span> <span class="n">nb_occ</span> <span class="n">à</span> <span class="mi">0</span>
 <span class="n">on</span> <span class="n">parcourt</span> <span class="n">un</span> <span class="n">à</span> <span class="n">un</span> <span class="n">tous</span> <span class="n">les</span> <span class="n">éléments</span> <span class="n">de</span> <span class="n">t</span> <span class="n">avec</span> <span class="n">leur</span> <span class="n">indice</span> <span class="n">i</span>
@@ -3557,43 +3563,50 @@ text-align: justify}
         <span class="n">on</span> <span class="n">incrémente</span> <span class="n">nb_occ</span>
 </code></pre></div>
 </details>
-<details class="note">
-<summary>Appliquer cet algorithme à <code>t</code> pour la valeur <code>chat</code>, et remplir la table de trace suivante :</summary>
+<div class="admonition note">
+<p class="admonition-title">Appliquer cet algorithme à <code>t</code> pour la valeur <code>chat</code>, et remplir la table de trace suivante :</p>
 <table>
 <thead>
 <tr>
 <th align="center">itération</th>
 <th align="center">variable <br><br></th>
+<th align="center">condition</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center">init</td>
 <td align="center">0</td>
+<td align="center">x</td>
 </tr>
 <tr>
 <td align="center">1</td>
-<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">2</td>
-<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">3</td>
-<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">4</td>
-<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">5</td>
-<td align="center">2</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
-</details>
+</div>
 <h4 id="b2-trouver-une-occurrence">B.2. Trouver une occurrence<a class="headerlink" href="#b2-trouver-une-occurrence" title="Permanent link">&para;</a></h4>
 <p>On veut cette fois-ci indiquer si une valeur est présente dans le tableau ou non.</p>
 <details class="note">
@@ -3607,7 +3620,7 @@ text-align: justify}
 <details class="note">
 <summary>Comment, alors, écrire l'algorithme ?</summary>
 <div class="highlight"><pre><span></span><code><span class="n">entrée</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span><span class="p">,</span> <span class="n">valeur</span> <span class="n">v</span>
-<span class="n">sortie</span> <span class="p">:</span> <span class="n">trouve</span>
+<span class="n">sortie</span> <span class="p">:</span> <span class="n">booléen</span> <span class="n">trouve</span>
 
 <span class="n">on</span> <span class="n">initialise</span> <span class="n">trouve</span> <span class="n">à</span> <span class="kc">False</span>
 <span class="n">tant</span> <span class="n">que</span> <span class="n">trouve</span> <span class="n">vaut</span> <span class="kc">False</span> <span class="n">et</span> <span class="n">qu</span> <span class="n">il</span> <span class="n">reste</span> <span class="n">des</span> <span class="n">éléments</span> <span class="n">dans</span> <span class="n">t</span>
@@ -3629,7 +3642,7 @@ text-align: justify}
 <details class="note">
 <summary>Proposer un algorithme :</summary>
 <div class="highlight"><pre><span></span><code><span class="n">entrée</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span>
-<span class="n">sortie</span> <span class="p">:</span> <span class="n">moy</span>
+<span class="n">sortie</span> <span class="p">:</span> <span class="n">flottant</span> <span class="n">moy</span>
 
 <span class="n">on</span> <span class="n">initialise</span> <span class="n">somme</span> <span class="n">à</span> <span class="mi">0</span>
 <span class="n">on</span> <span class="n">parcourt</span> <span class="n">les</span> <span class="n">éléments</span> <span class="n">de</span> <span class="n">t</span>
@@ -3655,33 +3668,33 @@ text-align: justify}
 </tr>
 <tr>
 <td align="center">1</td>
-<td align="center">2</td>
-<td align="center">x</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">2</td>
-<td align="center">85</td>
-<td align="center">x</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">3</td>
-<td align="center">102</td>
-<td align="center">x</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">4</td>
-<td align="center">82</td>
-<td align="center">x</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">5</td>
-<td align="center">77</td>
-<td align="center">x</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">fin</td>
-<td align="center">77</td>
-<td align="center">15.4</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
@@ -3692,57 +3705,49 @@ text-align: justify}
 <h3 id="a-un-premier-algorithme">A. Un premier algorithme<a class="headerlink" href="#a-un-premier-algorithme" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p><strong><em>Sans l'exécuter</em></strong>, analyser le programme ci-dessous, et prédire la valeur de sortie pour le test donné.</p>
-</li>
-<li>
-<p>Exécuter ensuite le programme. Le résultat correspond-il à ce que vous aviez prédit ?</p>
-</li>
-</ol>
+<p><strong><em>Sans l'exécuter</em></strong>, analyser le programme ci-dessous. A quel algorithme correspond-il ?</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fonction1</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">var</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">var</span><span class="p">:</span>
             <span class="n">var</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">var</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Premier test :&quot;</span><span class="p">,</span> <span class="n">fonction1</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">13</span><span class="p">]))</span>
 </code></pre></div>
-<ol>
-<li>Ajouter, dans la cellule précédente, un deuxième test pour <code>tab</code> valant <code>[-10, 30, 4, 7, 16]</code>.</li>
-<li>En déduire ce que fait cette fonction. La copier ci-dessous, et la renommer, ainsi que la variable <code>var</code> pour que son nom soit plus explicite.</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="c1">#recopier et renommer la fonction ici</span>
-</code></pre></div>
-<ol>
-<li>Que faut-il modifier pour que l'on renvoie l'indice de l'élément plutôt que sa valeur ? C'est à dire que :<ul>
+</li>
+<li>
+<p>a. Quel doit être le résultat de l'appel <code>fonction1([1, -5, 14, -2, 13])</code> ?<br />
+    b. Ecrire l'assertion correspondante.<br />
+    c. Quelle est la signature de la fonction ?  </p>
+</li>
+<li>
+<p>Réecrire la fonction en lui donnant un nom explicite, en renommant aussi <code>var</code>, et avec sa signature. L'enregistrer dans un fichier Python avec l'assertion de la question 2. </p>
+</li>
+<li>
+<p>Que faut-il modifier pour que l'on renvoie l'indice de l'élément plutôt que sa valeur ? C'est à dire que :</p>
+<ul>
 <li>si l'entrée vaut <code>[1, -5, 14, -2, 13]</code>, on renvoie <code>2</code> au lieu de <code>14</code>,</li>
 <li>si l'entrée vaut <code>[-10, 30, 4, 7, 16]</code>, on renvoie <code>1</code> au lieu de <code>30</code>.<br />
-Faire la modification ci-dessous, en renommant la fonction :</li>
+Faire la modification ci-dessous, renommer la fonction et l'écrire dans le fichier Python avec les assertions vérifiant les 2 tests donnés.</li>
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="c1">#modifier et renommer la fonction ici</span>
-</code></pre></div>
 <h3 id="b-un-deuxieme-algorithme">B. Un deuxième algorithme<a class="headerlink" href="#b-un-deuxieme-algorithme" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Que faut-il modifier pour que :<ul>
-<li>si l'entrée vaut <code>[1, -5, 14, -2, 13]</code>, on renvoie <code>-5</code>,</li>
-<li>si l'entrée vaut <code>[-10, 30, 4, 7, 16]</code>, on renvoie <code>-10</code> ?<br />
-Faire la modification ci-dessous, en choisissant un nom approprié pour la fonction :</li>
+<li>
+<ul>
+<li>Que représente <code>-5</code>, comme caractéristique de <code>[1, -5, 14, -2, 13]</code> ? </li>
+<li>Que représente <code>-10</code>, comme caractéristique de <code>[-10, 30, 4, 7, 16]</code> ?<br />
+Ecrire la fonction permettant d'extraire cette caractéristique. On écrira sa signature et les assertions correspondant aux tests donnés.</li>
 </ul>
 </li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="c1">#modifier et renommer la fonction ici</span>
-</code></pre></div>
-<ol>
-<li>De manière similaire à la question A.4., on veut pouvoir renvoyer l'indice. Modifier la fonction pour que :<ul>
+<li>
+<p>De manière similaire à la question <strong>A.4.</strong>, on veut pouvoir renvoyer l'indice. Ecrire une autre fonction donnant les résultats suivants :</p>
+<ul>
 <li>si l'entrée vaut <code>[1, -5, 14, -2, 13]</code>, on renvoie <code>1</code> au lieu de <code>-5</code>,</li>
 <li>si l'entrée vaut <code>[-10, 30, 4, 7, 16]</code>, on renvoie <code>0</code> au lieu de <code>-10</code> ?  </li>
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="c1">#modifier et renommer la fonction ici</span>
-</code></pre></div>
 <p><strong><em>Ces algorithmes, avec leurs variations, sont à savoir retrouver.</em></strong></p>
 <hr />
 <h2 id="tp-algorithmique-sur-les-tableaux-2">TP : Algorithmique sur les tableaux 2<a class="headerlink" href="#tp-algorithmique-sur-les-tableaux-2" title="Permanent link">&para;</a></h2>
@@ -3754,8 +3759,8 @@ Faire la modification ci-dessous, en choisissant un nom approprié pour la fonct
 on renvoie Faux
 </code></pre></div></p>
 <ol>
-<li>Implémenter cet algorithme, en complétant la fonction suivante :</li>
-</ol>
+<li>
+<p>Implémenter cet algorithme, en complétant la fonction suivante :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>   
     <span class="c1"># à compléter</span>
 
@@ -3763,9 +3768,9 @@ on renvoie Faux
 <span class="k">assert</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
 <span class="k">assert</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="mi">25</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
 </code></pre></div>
-<ol>
-<li>Modifier cette fonction pour qu'elle ne renvoie pas un booléen, mais l'indice de l'élément recherché, et -1 s'il ne se trouve pas dans le tableau :</li>
-</ol>
+</li>
+<li>
+<p>Modifier cette fonction pour qu'elle ne renvoie pas un booléen, mais l'indice de l'élément recherché, et -1 s'il ne se trouve pas dans le tableau :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_indice</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="c1"># à compléter</span>
 
@@ -3773,9 +3778,9 @@ on renvoie Faux
 <span class="k">assert</span> <span class="n">recherche_indice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
 <span class="k">assert</span> <span class="n">recherche_indice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="mi">25</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span>
 </code></pre></div>
-<ol>
-<li>Un élément peut se trouver plusieurs fois dans le tableau. Modifier l'algorithme pour que votre fonction renvoie l'indice de la <strong>dernière occurrence</strong> de <code>e</code>, ou <code>-1</code> si <code>e</code> n'est pas présent :</li>
-</ol>
+</li>
+<li>
+<p>Un élément peut se trouver plusieurs fois dans le tableau. Modifier l'algorithme pour que votre fonction renvoie l'indice de la <strong>dernière occurrence</strong> de <code>e</code>, ou <code>-1</code> si <code>e</code> n'est pas présent :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dernier</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="c1"># à compléter</span>
 
@@ -3783,6 +3788,8 @@ on renvoie Faux
 <span class="k">assert</span> <span class="n">recherche_dernier</span><span class="p">([</span><span class="s1">&#39;chat&#39;</span><span class="p">,</span> <span class="s1">&#39;chien&#39;</span><span class="p">,</span> <span class="s1">&#39;rat&#39;</span><span class="p">,</span> <span class="s1">&#39;chat&#39;</span><span class="p">],</span> <span class="s1">&#39;chat&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
 <span class="k">assert</span> <span class="n">recherche_dernier</span><span class="p">([</span><span class="s1">&#39;loup&#39;</span><span class="p">,</span> <span class="s1">&#39;renard&#39;</span><span class="p">,</span> <span class="s1">&#39;belette&#39;</span><span class="p">],</span> <span class="s1">&#39;chat&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span>
 </code></pre></div>
+</li>
+</ol>
 <p><strong><em>Cet algorithme, avec ses variations, est également à savoir retrouver.</em></strong></p>
 <hr />
 <h2 id="tp-implementation-du-calcul-de-la-moyenne">TP : Implémentation du calcul de la moyenne<a class="headerlink" href="#tp-implementation-du-calcul-de-la-moyenne" title="Permanent link">&para;</a></h2>
@@ -3798,10 +3805,8 @@ on renvoie Faux
 </li>
 <li>
 <p>Vérifier que l'appel de <code>moyenne([9,18,31,7,5])</code> renvoie bien le résultat <code>14.0</code>.</p>
-</li>
-</ol>
 <p>Nous avons pour l'instant utilisé des petits tableaux, mais en pratique on stocke souvent plus de données. On veut évaluer comment le temps d'exécution de notre fonction varie, en fonction de la longueur du tableau.</p>
-<ol>
+</li>
 <li>
 <p>Créer un tableau <code>t1</code> par compréhension, stockant la valeur de l'indice de chaque élément du tableau (la valeur du <code>i</code> du <code>range</code>), de longueur 100 000.</p>
 </li>
