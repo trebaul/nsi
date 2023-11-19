@@ -1,0 +1,31 @@
+A. Trouver le nombre
+
+1.
+
+nombre_mystere <- nombre choisi aléatoirement entre 0 et 100 
+nombre <- -1
+nb_essais <- 0
+
+tant que nombre est différent de nombre_mystere et nb_essais inférieur à 10
+	nombre <- demander à l'utilisateur d'entrer un nombre
+	incrémenter nb_essais
+	si nombre supérieur à nombre_mystere
+		afficher "Le nombre est inférieur"
+	sinon si nombre inférieur à nombre_mystere
+		afficher "Le nombre est supérieur"
+	sinon
+		afficher "vous avez trouvé en" nb_essais "essais"
+	si nombre_essais egal à nombre
+		afficher "Vous avez perdu"
+
+3. a. randint prend en paramètre 2 entiers a et b.
+   b. Elle renvoie un entier compris entre a et b inclus.
+
+4. On peut faire l'appel randint(0,100) pour obtenir un entier aléatoire compris entre 0 et 100. 
+
+
+B. Stockage du score dans un fichier
+
+1. Le mode 'r' ouvre le fichier en mode lecture, le mode 'w' en écriture, 'x' crée un nouveau fichier et l'ouvre en écriture, 'a' l'ouvre en écriture et écrit à la fin du fichier s'il existe déjà. 
+
+

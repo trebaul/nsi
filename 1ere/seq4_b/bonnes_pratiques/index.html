@@ -3721,23 +3721,23 @@ age --&gt; F[est_majeur];
 <p>On donne le code suivant, implémentant la méthode de Héron pour trouver la racine carrée d'un nombre :</p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">racine</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">racine</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">a</span><span class="o">/</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
-    <span class="k">return</span> <span class="n">x</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">y</span>
 </code></pre></div>
 </div>
 <p>Réécrire ce code <strong><em>dans l'éditeur</em></strong> et le compléter avec sa spécification sous la forme suivante (remplacer type_de_a par le type de a, type_de_x par le type de x, et la partie <code>"Rôle de la fonction"</code> par ce qu'elle fait) :</p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">racine</span><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="n">type_de_a</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">type_de_x</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">racine</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">type_de_x</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">type_de_y</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Rôle de la fonction</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">a</span><span class="o">/</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
-    <span class="k">return</span> <span class="n">x</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">y</span>
 </code></pre></div>
 </div>
 </li>
@@ -3747,7 +3747,7 @@ age --&gt; F[est_majeur];
 </code></pre></div></p>
 </li>
 <li>
-<p>Faites l'appel de <code>racine(-1)</code> <strong><em>dans la console</em></strong>. Que se passe-t-il ? Est-ce normal ?</p>
+<p>Faites l'appel de <code>racine(-1)</code> <strong><em>dans la console</em></strong>. Que se passe-t-il ? Est-ce que le comportement de la fonction est clair pour l'utilisateur ?</p>
 </li>
 <li>
 <p>On ne peut pas toujours faire confiance à l'utilisateur pour bien utiliser un code. Nous allons le forcer à respecter le type de l'entrée, avec une <strong>assertion</strong>. La syntaxe est la suivante :
@@ -3756,9 +3756,9 @@ age --&gt; F[est_majeur];
     Compléter votre fonction en ajoutant l'assertion <strong><em>avant les premières instructions</em></strong> de la fonction :</p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">racine</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span><span class="o">-&gt;</span> <span class="o">...</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; [Garder la documentation de la question précédente &quot;&quot;&quot;</span>
-    <span class="k">assert</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="s2">&quot;[à compléter]&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">racine</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span><span class="o">-&gt;</span> <span class="o">...</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Garder la documentation de la question précédente &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="s2">&quot;à compléter avec un message indiquant à l&#39;utilisateur quel est le problème&quot;</span>
     <span class="o">...</span>
 </code></pre></div>
 </div>
@@ -3768,15 +3768,18 @@ age --&gt; F[est_majeur];
 <p>Les assertions peuvent aussi être utilisées pour vérifier que l'on obtient le bon résultat en sortie d'une fonction. On teste donc si un <strong><em>appel</em></strong> de fonction donne le résultat attendu. Ajouter, <strong><em>dans le programme principal</em></strong> (donc en dehors de la définition de <code>racine</code>) :</p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">racine</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Erreur pour la valeur 4&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="nb">round</span><span class="p">(</span><span class="n">racine</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Erreur pour la valeur 4&quot;</span>
 </code></pre></div>
 </div>
 <p>a. Exécuter le programme, et vérifier <strong><em>que rien ne se passe</em></strong> (cela veut dire que le test fait dans l'assertion renvoie <code>True</code>).<br />
-b. Rajouter 2 autres assertions, avec des tests différents, pour vérifier le bon fonctionnement de votre fonction.</p>
+b. La fonction <code>round</code> permet d'arrondir le résultat, pour qu'il soit un entier. Pourquoi fait-on cette opérations ici <em>(faire le lien avec le cours sur la représentation des nombres)</em> ?<br />
+c. Rajouter 2 autres assertions, avec des tests différents, pour vérifier le bon fonctionnement de votre fonction.</p>
 </li>
 </ol>
 <hr />
 <h2 id="tp-bibliotheque-random-et-stockage-dans-des-fichiers">TP : Bibliothèque <code>random</code> et stockage dans des fichiers<a class="headerlink" href="#tp-bibliotheque-random-et-stockage-dans-des-fichiers" title="Permanent link">&para;</a></h2>
+<p><a href="../TP_Bibliotheque_Fichiers_Correction.py"><strong>Code</strong></a><br />
+<a href="../TP_Bibliotheque_Fichiers_Questions.txt"><strong>Questions</strong></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Créer un fichier <code>TP_Bibliotheque_Fichiers.py</code> dans votre dossier <code>NSI</code>, et dans le dossier <code>seq4</code>. Ecrire les réponses aux questions sur votre cahier de TP.</p>
 </div>

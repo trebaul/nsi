@@ -3457,38 +3457,33 @@ text-align: justify}
 <h1 id="i-le-type-tableau">I. Le type tableau<a class="headerlink" href="#i-le-type-tableau" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="tp-introduction-aux-tableaux">TP : Introduction aux tableaux<a class="headerlink" href="#tp-introduction-aux-tableaux" title="Permanent link">&para;</a></h2>
-<div class="admonition tip">
-<p class="admonition-title">Créer un nouveau fichier, et l'enregistrer dans votre dossier NSI sous le nom <code>TP_Tableaux.py</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Créer un nouveau fichier, et l'enregistrer dans votre dossier <code>NSI</code>, dans un nouveau dossier <code>seq5</code>, sous le nom <code>TP_Introduction_Tableaux.py</code>. Répondre aux questions dans votre cahier de TP.</p>
 </div>
 <p>Jusqu'à présent, nous avons manipulé des valeurs stockées dans des variables une par une. Mais les programmes traitent en général plus qu'une ou deux données à la fois.</p>
 <ol>
 <li>
 <p>On veut stocker les moyennes d'un petit groupe de 5 élèves. Au lieu d'utiliser 5 variables de type <code>float</code>, on les regroupe dans une seule. Taper <strong><em>dans votre éditeur</em></strong> l'instruction initialisant la variable :
-<div class="highlight"><pre><span></span><code><span class="n">moyennes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.2</span><span class="p">,</span> <span class="mf">15.7</span><span class="p">,</span> <span class="mf">7.3</span><span class="p">,</span> <span class="mf">18.1</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">]</span>
+    <div class="highlight"><pre><span></span><code><span class="n">moyennes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.2</span><span class="p">,</span> <span class="mf">15.7</span><span class="p">,</span> <span class="mf">7.3</span><span class="p">,</span> <span class="mf">18.1</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">]</span>
 </code></pre></div>
-Exécuter le code et vérifier le contenu de <code>moyennes</code> en tapant son nom <strong><em>dans la console</em></strong>.</p>
+    Exécuter le code et vérifier le contenu de <code>moyennes</code> en tapant son nom <strong><em>dans la console</em></strong>.</p>
 </li>
 <li>
 <p>Quel est le type de cette variable ? Appeler la fonction <code>type</code> <strong><em>dans la console</em></strong> avec la variable <code>moyennes</code> en entrée pour le savoir.</p>
 </li>
 <li>
-<p>Ce type Python correspond en fait à une structure de tableau. Pour accéder aux différents éléments, on utilise leur indice. Pour avoir l'élément d'indice 0, on écrit :
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">moyennes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<p>Ce type Python correspond en fait à une structure de tableau. Pour accéder aux différents éléments, on utilise leur <strong>indice</strong>, qui donne leur position par rapport aux autres. Pour avoir l'élément d'indice 0, on écrit :
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">moyennes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
-Quel est-il ? ...................</p>
+    Quel est-il ? </p>
 </li>
 <li>
-<p>Pour trouver l'indice des éléments, on compte de 1 en 1, donc en commençant à 0. Quel doit être l'élément d'indice 1 ? ........... Le vérifier en remplaçant 0 par 1 dans l'instruction précédente.</p>
-</li>
-<li>
-<p>La fonction <code>len(nom_du_tableau)</code> donne le nombre d'élément dans un tableau, autrement dit sa <em>longueur</em>. Que donne ici l'instruction suivante <strong><em>(dans la console)</em></strong> ?
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">moyennes</span><span class="p">)</span>
-</code></pre></div></p>
+<p>Pour trouver l'indice des éléments, on compte de 1 en 1, donc en commençant à 0.<br />
+    a. Quel doit être l'élément d'indice 1 ? <br />
+    b. Le vérifier en remplaçant 0 par 1 dans l'instruction précédente.</p>
 </li>
 <li>
 <p>Pour l'exemple du tableau <code>moyennes</code>, remplir la correspondance entre la valeur de ses différents éléments et leur indice <em>(rajouter des lignes pour avoir tous les éléments)</em>:</p>
-</li>
-</ol>
 <table>
 <thead>
 <tr>
@@ -3508,34 +3503,38 @@ Quel est-il ? ...................</p>
 </tbody>
 </table>
 <p><br><br></p>
-<ol>
-<li>
-<p>Quelle instruction faut-il taper pour obtenir la valeur <code>18.1</code> ? .......................</p>
 </li>
 <li>
-<p>Déduire de la question 6 quel est l'indice du dernier élément du tableau <code>moyennes</code>, en fonction de sa longueur  : ...........................</p>
+<p>Quelle instruction faut-il taper pour obtenir la valeur <code>18.1</code> ? </p>
+</li>
+<li>
+<p>La fonction <code>len(nom_du_tableau)</code> donne le nombre d'élément dans un tableau, autrement dit sa <em>longueur</em>. Que donne ici l'instruction suivante <strong><em>(dans la console)</em></strong> ?
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">moyennes</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Déduire de la question 5 quel est l'indice du dernier élément du tableau <code>moyennes</code>, en fonction de sa longueur donnée par <code>len(moyennes)</code>.</p>
 </li>
 <li>
 <p>Taper l'instruction suivante :
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">moyennes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">moyennes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
-Quelle valeur renvoie-t-elle ? .............. En déduire à quel indice <em>positif</em>, l'indice -1 est-il équivalent : ......................</p>
+    a. Quelle valeur renvoie-t-elle ? 
+    b. En déduire à quel indice <em>positif</em>, l'indice -1 est-il équivalent.</p>
 </li>
 <li>
 <p>On s'est trompé sur la valeur de la première moyenne du tableau. La corriger avec l'instruction suivante <strong><em>(dans l'éditeur)</em></strong> :
-<div class="highlight"><pre><span></span><code><span class="n">moyennes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">11.0</span>
+    <div class="highlight"><pre><span></span><code><span class="n">moyennes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">11.0</span>
 </code></pre></div>
-Vérifier que la correction a été faite.</p>
+    Vérifier que la correction a été faite.</p>
 </li>
 <li>
 <p>Dans un tableau, on peut stocker autre chose que des nombres. Créer le tableau suivant, en le déclarant <strong><em>dans l'éditeur</em></strong> :
-<div class="highlight"><pre><span></span><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poire&#39;</span><span class="p">,</span> <span class="s1">&#39;cerise&#39;</span><span class="p">,</span> <span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;abricot&#39;</span><span class="p">]</span>
+    <div class="highlight"><pre><span></span><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;poire&#39;</span><span class="p">,</span> <span class="s1">&#39;cerise&#39;</span><span class="p">,</span> <span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;abricot&#39;</span><span class="p">]</span>
 </code></pre></div></p>
 </li>
 <li>
 <p>Remplir la correspondance entre les éléments du tableau <code>fruits</code> et leurs indices <em>(rajouter les lignes nécessaires)</em> :</p>
-</li>
-</ol>
 <table>
 <thead>
 <tr>
@@ -3555,18 +3554,18 @@ Vérifier que la correction a été faite.</p>
 </tbody>
 </table>
 <p><br><br></p>
-<ol>
-<li>
-<p>En déduire l'instruction pour obtenir la valeur <code>'cerise'</code> : .................</p>
 </li>
 <li>
-<p>Compléter le code suivant <strong><em>(le tester dans l'éditeur et compléter sur la feuille)</em></strong> pour afficher la valeur de l'ensemble des éléments de <code>fruits</code> :
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">......</span><span class="p">):</span>
+<p>En déduire l'instruction pour obtenir la valeur <code>'cerise'</code>.</p>
+</li>
+<li>
+<p>Compléter le code suivant <strong><em>(le tester dans l'éditeur et compléter sur votre cahier)</em></strong> pour afficher la valeur de l'ensemble des éléments de <code>fruits</code> :
+    <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">......</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="o">......</span><span class="p">])</span>
 </code></pre></div></p>
 </li>
 <li>
-<p>Quelle instruction permet de modifier le dernier élément de <code>fruits</code> pour lui affecter la valeur <code>'pêche'</code> ? .......................................</p>
+<p>Quelle instruction permet de modifier le dernier élément de <code>fruits</code> pour lui affecter la valeur <code>'pêche'</code> ? </p>
 </li>
 </ol>
 <hr />
@@ -3817,7 +3816,7 @@ Les différents éléments sont stockés côte à côte dans la mémoire. Compl�
 </div>
 <hr />
 <h2 id="tp-la-bibliotheque-matplotlib">TP : La bibliothèque <code>matplotlib</code><a class="headerlink" href="#tp-la-bibliotheque-matplotlib" title="Permanent link">&para;</a></h2>
-<div class="admonition tip">
+<div class="admonition warning">
 <p class="admonition-title">Pour ce TP, créer un dossier <code>TP_Matplotlib</code> dans votre dossier <code>NSI</code>, dossier <code>seq5</code>,  et enregistrer un nouveau fichier pour chaque tracé.</p>
 </div>
 <p>La bibliothèque <code>matplotlib</code> (pour <em>"mathematic plot library"</em>) sert à représenter des données sous la forme de graphiques. Avant de commencer, écrire l'import de la librairie en haut du fichier Python :
@@ -3832,11 +3831,11 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>     <span class="c1"># on trace x en foncton de y</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>     <span class="c1"># on trace x en fonction de y</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>        <span class="c1"># on montre le graphique</span>
 </code></pre></div>
 </div>
-<p>Exécuter ce code. Le graphique doit apparaître à l'écran. </p>
+<p>Exécuter ce code dans un fichier <code>graphe1.py</code>. Le graphique doit apparaître à l'écran. </p>
 </li>
 <li>
 <p>On peut changer l'apparence des points (couleur et forme) en rajoutant un paramètre à la fonction <code>plot</code>. Essayez le code avec les différents appels suivant de la fonction :</p>
@@ -3855,8 +3854,8 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <p>Plutôt que de rentrer les valeurs des abscisses et ordonnées à la main dans le tableau, on peut créer des tableaux automatiquement avec la <strong>compréhension</strong>.<br />
     a. La compréhension utilise une boucle entre les crochets pour affecter directement une valeur à chaque élément du tableau.<br />
 <code>[i for i in range(10)]</code> crée le tableau <code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code><br />
-    On peut manipuler les paramètres du <code>range</code> pour créer d'autres tableau. Quelle instruction permet de créer par compréhension le tableau <code>[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</code> ? </p>
-<p>b. On veut représenter la fonction <span class="arithmatex">\(f(x) = 3x\)</span>. Recopier le code suivant et le compléter avec le tableau des <code>y</code> pour obtenir les bonnes valeurs.  </p>
+    On peut manipuler les paramètres du <code>range</code> ou bien faire des opérations sur la variable <code>i</code> pour créer d'autres tableau. Quelle instruction permet de créer par compréhension le tableau <code>[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</code> ? </p>
+<p>b. On veut représenter la fonction <span class="arithmatex">\(f(x) = 3x\)</span>. Recopier le code suivant dans un fichier <code>graphe2.py</code> et le compléter avec le tableau des <code>y</code> pour obtenir les bonnes valeurs.  </p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>  <span class="c1"># permet de représenter 100 points</span>
@@ -3865,9 +3864,12 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>        
 </code></pre></div>
 </div>
-<ol>
-<li>On peut représenter des fonctions plus complexes. Importer la fonction <code>cos</code> de la bibliothèque <code>math</code> avec l'instruction <code>from math import cos</code> placée en début de fichier. Compléter l'instructions remplissant le tableaux <code>ordonnees</code> pour représenter la fonction <span class="arithmatex">\(f(x) = cos(s)\)</span>.</li>
-</ol>
+<div class="admonition tip">
+<p class="admonition-title">Ne pas oublier de faire l'import de la bibliothèque en début de fichier.</p>
+</div>
+</li>
+<li>
+<p>On peut représenter des fonctions plus complexes. Dans un fichier <code>graphe_cos.py</code>, importer la fonction <code>cos</code> de la bibliothèque <code>math</code> avec l'instruction <code>from math import cos</code> placée en début de fichier. Compléter l'instructions remplissant le tableaux <code>ordonnees</code> pour représenter la fonction <span class="arithmatex">\(f(x) = cos(s)\)</span>.</p>
 <p><img src="../img/matplotlib_cos.png" height=140 style="float:left"></p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
@@ -3883,7 +3885,7 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <p><img src="../img/matplotlib_bar.png" height=200 style="float:right;padding-left:15px"></p>
 <ol>
 <li>
-<p>Le code est similaire pour représenter des diagrammes en barres : il faut une variable <code>x</code> associée à une variable <code>y</code> qui correspond à la hauteur des barres. On utilise la fonction <code>bar</code> à la place de la fonction <code>plot</code>. Exécuter le code suviant : </p>
+<p>Le code est similaire pour représenter des diagrammes en barres : il faut une variable <code>x</code> associée à une variable <code>y</code> qui correspond à la hauteur des barres. On utilise la fonction <code>bar</code> à la place de la fonction <code>plot</code>. Exécuter le code suviant, dans un fichier <code>barres.py</code> : </p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
@@ -3892,13 +3894,14 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 </div>
+<p>Le modifier pour avoir les valeurs <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code> et <code>5</code> en ordonnée <code>y</code>, associées aux abscisses <code>x</code> allant de <code>3</code> à <code>7</code>.</p>
 </li>
 <li>
 <p>La fonction <code>hist</code> permet de représenter des histogrammes. Il faut lui donner en paramètre une liste de valeurs, et le nombre de groupes à tracer parmi ces valeurs, et la fonction représente le nombre de fois qu'apparaîssent les différentes valeurs dans chaque groupe.  </p>
-<p>Par exemple, on peut tracer combien de fois on tombe sur chacun des chiffres de 1 à 6 en lançant un dé à 6 faces 100 fois, en utilisant la fonction <code>randint</code> de la bibliothèque <code>random</code> <em>(</em><em>attention !</em><em> il faut rajouter <code>from random import randint</code> au début du fichier)</em>. Préciser les paramètres de <code>randint</code> à utiliser :   </p>
+<p>Par exemple, on peut tracer combien de fois on tombe sur chacun des chiffres de 1 à 6 en lançant un dé à 6 faces 100 fois, en utilisant la fonction <code>randint</code> de la bibliothèque <code>random</code> <em>(il faut rajouter <code>from random import randint</code> au début du fichier)</em>. Compléter le code suivant, dans un fichier <code>histogramme.py</code> :   </p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
-<div class="highlight"><pre><span></span><code><span class="n">liste</span> <span class="o">=</span><span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><span class="n">liste</span> <span class="o">=</span><span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
@@ -3908,7 +3911,7 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <h3 id="c-nuage-de-points">C. Nuage de points<a class="headerlink" href="#c-nuage-de-points" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>La fonction <code>scatter</code> permet de représenter des nuages de points, dont on donne l'abscisse <code>x</code> et l'ordonnée <code>y</code>. Utiliser la compréhension pour créer les 2 listes <code>x</code> et <code>y</code> de taille <code>1000</code>, en tirant à chaque fois au hasard un nombre entre <code>1</code> et <code>100</code>. </p>
+<p>La fonction <code>scatter</code> permet de représenter des nuages de points, dont on donne l'abscisse <code>x</code> et l'ordonnée <code>y</code>. Utiliser la compréhension pour créer les 2 listes <code>x</code> et <code>y</code> de taille <code>1000</code>, en tirant à chaque fois au hasard un nombre entre <code>1</code> et <code>100</code>. Enregistrer le code suivant dans un fichier <code>nuage1.py</code>. </p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="n">randint</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">)]</span>
@@ -3920,7 +3923,7 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 </li>
 <li>
 <p>On peut faire plusieurs graphiques sur un seul, il suffit d'appeler plusieurs fois la fonction de tracé (ici <code>scatter</code>) avant de faire appel à <code>show</code>.<br />
-    Générer 3 tirages différents pour <code>x</code> et <code>y</code>, et les représenter sur le même graphique en utilisant des couleurs différentes.</p>
+    Générer 3 tirages différents pour <code>x</code> et <code>y</code>, et les représenter sur le même graphique en utilisant des couleurs différentes. L'enregistrer dans un fichier <code>nuage2.py</code>.</p>
 <p><center><img src="../img/matplotlib_scatter.png" height=200></center></p>
 </li>
 </ol>
@@ -3928,7 +3931,7 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <ol>
 <li>
 <p>Les camemberts (fonction <code>pie</code>) permettent de représenter la répartition de données entre différentes catégories. Les catégories ont un <strong>nom</strong> et une <strong>taille</strong> (un nombre de données). </p>
-<p>On veut représenter la répartition d'animaux : 15 animaux dans la catégorie <code>Loup</code>, 30 dans la catégorie <code>Renard</code>, 45 pour <code>Belette</code> et 10 pour <code>Jument</code>. Compléter les listes <code>noms</code> et <code>tailles</code> pour obtenir le graphique demandé. </p>
+<p>On veut représenter la répartition d'animaux : 15 animaux dans la catégorie <code>Loup</code>, 30 dans la catégorie <code>Renard</code>, 45 pour <code>Belette</code> et 10 pour <code>Jument</code>. Compléter les listes <code>noms</code> et <code>tailles</code> pour obtenir le graphique demandé. Enregistrer le code sous <code>camembert.py</code>.</p>
 <p><center><img src="../img/matplotlib_pie.png" height=225 style="float:right;padding-left:15px"></center></p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
