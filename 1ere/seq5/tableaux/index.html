@@ -2914,6 +2914,8 @@
         
           
         
+          
+        
       
       
         
@@ -2959,14 +2961,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_2">
-          Méthodologie de projet
+          2023 - Tle - Projet interdisciplinaire
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Méthodologie de projet" data-md-level="2">
+      <nav class="md-nav" aria-label="2023 - Tle - Projet interdisciplinaire" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
-          Méthodologie de projet
+          2023 - Tle - Projet interdisciplinaire
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3037,19 +3039,17 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4_3">
-          Sujets
+          2023 - 1ere - Projet interdisciplinaire
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Sujets" data-md-level="2">
+      <nav class="md-nav" aria-label="2023 - 1ere - Projet interdisciplinaire" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
-          Sujets
+          2023 - 1ere - Projet interdisciplinaire
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3060,12 +3060,65 @@
   
     <li class="md-nav__item">
       <a href="../../../projets/1ere_interdisciplines/sujets/" class="md-nav__link">
-        2023 - 1ere - Projet interdisciplinaire
+        I. Les sujets
       </a>
     </li>
   
 
             
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_interdisciplines/rendus/" class="md-nav__link">
+        II. Organisation et rendus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Annales des projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Annales des projets" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Annales des projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -3111,7 +3164,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
       
       
       
@@ -3129,14 +3182,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../projets/trophees/">Les Trophées NSI</a>
           
-            <label for="__nav_4_4">
+            <label for="__nav_4_5">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Les Trophées NSI" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_4">
+        <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Les Trophées NSI
         </label>
@@ -3819,10 +3872,9 @@ Les différents éléments sont stockés côte à côte dans la mémoire. Compl�
 <div class="admonition warning">
 <p class="admonition-title">Pour ce TP, créer un dossier <code>TP_Matplotlib</code> dans votre dossier <code>NSI</code>, dossier <code>seq5</code>,  et enregistrer un nouveau fichier pour chaque tracé.</p>
 </div>
-<p>La bibliothèque <code>matplotlib</code> (pour <em>"mathematic plot library"</em>) sert à représenter des données sous la forme de graphiques. Avant de commencer, écrire l'import de la librairie en haut du fichier Python :
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
-</code></pre></div>
-Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fonction()</code> (c'est dans <code>plt</code> que l'on va chercher les fonctions).</p>
+<p>La bibliothèque <code>matplotlib</code> (pour <em>"mathematic plot library"</em>) sert à représenter des données sous la forme de graphiques, on utilise son module <code>pyplot</code>. Avant de commencer, écrire l'import de la librairie en haut du fichier Python :
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="o">*</span> 
+</code></pre></div></p>
 <h3 id="a-graphiques-simples">A. Graphiques simples<a class="headerlink" href="#a-graphiques-simples" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -3831,8 +3883,8 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>     <span class="c1"># on trace x en fonction de y</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>        <span class="c1"># on montre le graphique</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>     <span class="c1"># on trace x en fonction de y</span>
+<span class="n">show</span><span class="p">()</span>        <span class="c1"># on montre le graphique</span>
 </code></pre></div>
 </div>
 <p>Exécuter ce code dans un fichier <code>graphe1.py</code>. Le graphique doit apparaître à l'écran. </p>
@@ -3842,10 +3894,10 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <p><img src="../img/matplotlib_plot.png" height=125 style="float:right;padding-left:15px"></p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
-<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>   
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;rs&#39;</span><span class="p">)</span>   
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span> 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span> 
+<div class="highlight"><pre><span></span><code><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>   
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;rs&#39;</span><span class="p">)</span>   
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span> 
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span> 
 </code></pre></div>
 </div>
 <p>Noter ce qui change à chaque fois.</p>
@@ -3860,8 +3912,8 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>  <span class="c1"># permet de représenter 100 points</span>
 <span class="n">y</span> <span class="o">=</span> <span class="o">...</span>            <span class="c1"># à compléter - y doit être de taille 100 aussi </span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>     <span class="c1"># vous pouvez rajouter le 3ème paramètre qui vous convient le mieux</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>        
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>     <span class="c1"># vous pouvez rajouter le 3ème paramètre qui vous convient le mieux</span>
+<span class="n">show</span><span class="p">()</span>        
 </code></pre></div>
 </div>
 <div class="admonition tip">
@@ -3875,8 +3927,8 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">abscisses</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
 <span class="n">ordonnees</span> <span class="o">=</span> <span class="o">...</span>    <span class="c1"># à compléter - y doit être de taille 100 aussi</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">abscisses</span><span class="p">,</span> <span class="n">ordonnees</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">abscisses</span><span class="p">,</span> <span class="n">ordonnees</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 </div>
 </li>
@@ -3890,8 +3942,8 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 </div>
 <p>Le modifier pour avoir les valeurs <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code> et <code>5</code> en ordonnée <code>y</code>, associées aux abscisses <code>x</code> allant de <code>3</code> à <code>7</code>.</p>
@@ -3902,8 +3954,8 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">liste</span> <span class="o">=</span><span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">hist</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 </div>
 </li>
@@ -3916,8 +3968,8 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="n">randint</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">)]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>  <span class="c1"># il faut ici rajouter le nom de paramètre c pour changer la couleur</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>  <span class="c1"># il faut ici rajouter le nom de paramètre c pour changer la couleur</span>
+<span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 </div>
 </li>
@@ -3937,8 +3989,8 @@ Les fonctions de la bibliothèques seront appelées avec la syntaxe <code>plt.fo
 <p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="n">noms</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">tailles</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">tailles</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">noms</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">pie</span><span class="p">(</span><span class="n">tailles</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">noms</span><span class="p">)</span>
+<span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 </div>
 </li>

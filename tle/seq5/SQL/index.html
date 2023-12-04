@@ -2919,6 +2919,8 @@
         
           
         
+          
+        
       
       
         
@@ -2964,14 +2966,14 @@
       
       
         <label class="md-nav__link" for="__nav_4_2">
-          Méthodologie de projet
+          2023 - Tle - Projet interdisciplinaire
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Méthodologie de projet" data-md-level="2">
+      <nav class="md-nav" aria-label="2023 - Tle - Projet interdisciplinaire" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
-          Méthodologie de projet
+          2023 - Tle - Projet interdisciplinaire
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3042,19 +3044,17 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4_3">
-          Sujets
+          2023 - 1ere - Projet interdisciplinaire
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Sujets" data-md-level="2">
+      <nav class="md-nav" aria-label="2023 - 1ere - Projet interdisciplinaire" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
-          Sujets
+          2023 - 1ere - Projet interdisciplinaire
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3065,12 +3065,65 @@
   
     <li class="md-nav__item">
       <a href="../../../projets/1ere_interdisciplines/sujets/" class="md-nav__link">
-        2023 - 1ere - Projet interdisciplinaire
+        I. Les sujets
       </a>
     </li>
   
 
             
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/1ere_interdisciplines/rendus/" class="md-nav__link">
+        II. Organisation et rendus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Annales des projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Annales des projets" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Annales des projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -3116,7 +3169,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
       
       
       
@@ -3134,14 +3187,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../projets/trophees/">Les Trophées NSI</a>
           
-            <label for="__nav_4_4">
+            <label for="__nav_4_5">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Les Trophées NSI" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_4">
+        <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Les Trophées NSI
         </label>
@@ -3602,7 +3655,9 @@ text-align: justify}
 <p>Que représentent les attributs Client et Produit dans la table Achats ?</p>
 </li>
 <li>
-<p>Compléter les commandes suivantes, permettant de créer les tables Clients et Achats, avec les domaines des attributs et les clés :
+<p>Compléter les commandes suivantes, permettant de créer les tables Clients et Achats, avec les domaines des attributs et les clés :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Clients</span><span class="p">(</span>
 <span class="w">    </span><span class="n">Identifiant</span><span class="w"> </span><span class="p">...</span><span class="w"> </span>
 <span class="w">    </span><span class="n">Nom</span><span class="w"> </span><span class="p">...</span>
@@ -3619,7 +3674,8 @@ text-align: justify}
 
 
 <span class="p">);</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
 </li>
 <li>
 <p>L’entreprise aimerait connaître tous ses produits valant plus de 100 euros. Ecrire la commande permettant de lire tous les éléments de la table Produits dont le prix est supérieur à 100 euros.</p>
@@ -3631,9 +3687,12 @@ text-align: justify}
 <p>Ecrire la commande permettant de compter le nombre de transactions réalisées après le 1er janvier 2020.</p>
 </li>
 <li>
-<p>Donner le résultat de cette commande :
+<p>Donner le résultat de cette commande :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Client</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Achats</span><span class="w"> </span><span class="p">;</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
 </li>
 <li>
 <p>Damien vient d’acheter un bureau. Ecrire la commande permettant de mettre à jour la table des achats.</p>
@@ -3654,7 +3713,7 @@ text-align: justify}
 <p>Dans ce TP, nous allons implémenter la table contenant les figures de l’informatique, et la manipuler avec le <strong>SGBD SQLite</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Instructions</p>
-<p>Télécharger une console <strong>sqlite3</strong>, depuis l'ENT. Télécharger aussi la base de données <code>Figures.db</code>.</p>
+<p>Télécharger une console <a href="../sqlite3.exe">sqlite3</a>, depuis l'ENT. Télécharger aussi la base de données <a href="../Figures.db">&gt; Figures.db &lt;</a>.</p>
 </div>
 <ol>
 <li>
@@ -3665,8 +3724,8 @@ text-align: justify}
 </li>
 <li>
 <p>On utilise la même table que dans le TP d'introduction. Des enregistrements ont été ajoutés à la base de données. Regarder ce qu'elle contient, en utilisant une requête de <strong>sélection</strong>.  </p>
-<p>Les enregistrements suivants doivent apparaître :<br />
-1 | Al-Khwarismi | Muhammad | 780 | ouzbek<br />
+<p>Les enregistrements suivants doivent apparaître :  </p>
+<p>1 | Al-Khwarismi | Muhammad | 780 | ouzbek<br />
 2 | Hamilton | Margaret | 1936 | américaine<br />
 3 | Lovelace | Ada | 1815 | britannique<br />
 4 | Knuth | Donald | 1938 | américaine<br />
@@ -3676,10 +3735,13 @@ text-align: justify}
 8 | Berners-Lee | Tim | 1954 | britannique  </p>
 </li>
 <li>
-<p>Ecrire une requête d'<strong>insertion</strong>, pour insérer les n-uplets suivants :
-    <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">Hopper</span><span class="p">,</span><span class="w"> </span><span class="n">Grace</span><span class="p">,</span><span class="w"> </span><span class="mi">1906</span><span class="p">,</span><span class="w"> </span><span class="n">américaine</span><span class="p">)</span>
+<p>Ecrire une requête d'<strong>insertion</strong>, pour insérer les n-uplets suivants :</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">Hopper</span><span class="p">,</span><span class="w"> </span><span class="n">Grace</span><span class="p">,</span><span class="w"> </span><span class="mi">1906</span><span class="p">,</span><span class="w"> </span><span class="n">américaine</span><span class="p">)</span>
 <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">Von</span><span class="w"> </span><span class="n">Neumann</span><span class="p">,</span><span class="w"> </span><span class="n">John</span><span class="p">,</span><span class="w"> </span><span class="mi">1903</span><span class="p">,</span><span class="w"> </span><span class="n">hongroise</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
 </li>
 <li>
 <p>Ecrire les requêtes de <strong>sélection</strong> permettant de récupérer :  </p>
@@ -3709,105 +3771,317 @@ Supprimer Noam Chomsky de cette liste.</p>
 </div>
 <h3 id="i-une-base-de-donnees-de-livres">I. Une base de données de livres<a class="headerlink" href="#i-une-base-de-donnees-de-livres" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
-<p class="admonition-title">Télécharger la base de données <code>Bibliothèque.db</code>.</p>
+<p class="admonition-title">Télécharger la base de données <a href="../Bibliotheque.db">&gt; Bibliotheque.db &lt;</a>.</p>
 </div>
 <p>On s'intéresse à une base de données de livres, avec une table <code>Livres</code> et une table <code>Auteurs</code>. </p>
 <h4 id="ii-1-creation-des-tables">II. 1. Création des tables<a class="headerlink" href="#ii-1-creation-des-tables" title="Permanent link">&para;</a></h4>
-<p>1) Le schéma relationnel de la table <code>Auteurs</code> est le suivant :<br />
-{<strong>id</strong> : entier, nom : caractères, prenom : caractères, ann_naissance : entier, langue_ecriture : caractères} avec id est la clé primaire.<br />
-Vérifier que ce schéma correspond à la table implémentée.</p>
-<p>2) On définit la table <code>Livres</code> de la manière suivante :<br />
-{id : entier, titre: caractères, id_auteur: entier, ann_publi: entier, note: entier}<br />
-Grâce à l'instruction sqlite <code>.schema</code>, identifier :<br />
-    - la clé primaire :<br />
-    - la clé étrangère, et la clé primaire à laquelle elle fait référence :<br />
-    - les domaines SQL des attributs :<br />
-<br></p>
-<p>3) Vérifier que les tables contiennent bien les enregistrements suivants :</p>
-<pre><code>- La table `Auteurs` :
-
-| id | nom | prenom | ann_naissance | langue_ecriture |
-| :---: | :---: | :---: | :---: | :---: |
-1 | ‘Orwell’ | ‘George’ | 1903 | ‘anglais’
-2| ‘Herbert’ | ‘Frank’ | 1920 | ‘anglais’
-3 | ‘Asimov’ | ‘Isaac’ | 1920 | ‘anglais’
-4 | ‘Huxley’ | ‘Aldous’ | 1894 | ‘anglais’
-5 | ‘Bradbury’ | ‘Ray’ | 1920 | ‘anglais’
-6 | ‘K.Dick’ | ‘Philip’ | 1928 | ‘anglais’
-7 | ‘Barjavel’ | ‘René’ | 1911 | ‘français’
-
-
-- la table `Livres` :
-
-| id | titre | id_auteur | ann_publi | note
-| :---: | :---: | :---: | :---: | :---: |
-1 | ‘1984’ | 1 | 1949 | 10
-2 | ‘Dune’ | 2 | 1965 | 8
-3 | ‘Fondation’ | 3 | 1951 | 9
-4 | ‘Le meilleur des mondes’ | 4 | 1931 | 7
-5 | ‘Fahrenheit 451’ | 5 | 1953 | 7
-6 | ‘Chroniques martiennes’ | 5 | 1950 | 8
-</code></pre>
-<p>4) Insérer dans la table <code>Livres</code> :<br />
-    - "Blade Runner", écrit par K.Dick en 1968 et noté à 8/10,<br />
-    - "Les robots", écrit par Asimov en 1950 et noté à 9/10.</p>
+<ol>
+<li>
+<p>Le schéma relationnel de la table <code>Auteurs</code> est le suivant :<br />
+    {<strong>id</strong> : entier, nom : caractères, prenom : caractères, ann_naissance : entier, langue_ecriture : caractères} avec id la <strong>clé primaire</strong>.<br />
+    Vérifier que ce schéma correspond à la table implémentée avec l'instruction <code>.schema</code>. </p>
+</li>
+<li>
+<p>On définit la table <code>Livres</code> de la manière suivante :<br />
+    {id : entier, titre: caractères, id_auteur: entier, ann_publi: entier, note: entier}<br />
+    Grâce à l'instruction sqlite <code>.schema</code>, identifier :<br />
+        - la clé primaire :<br />
+        - la clé étrangère, et la clé primaire à laquelle elle fait référence :<br />
+        - les domaines SQL des attributs :<br />
+    <br></p>
+</li>
+<li>
+<p>Vérifier que les tables contiennent bien les enregistrements suivants :</p>
+<ul>
+<li>La table <code>Auteurs</code> :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">nom</th>
+<th align="center">prenom</th>
+<th align="center">ann_naissance</th>
+<th align="center">langue_ecriture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">‘Orwell’</td>
+<td align="center">‘George’</td>
+<td align="center">1903</td>
+<td align="center">‘anglais’</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">‘Herbert’</td>
+<td align="center">‘Frank’</td>
+<td align="center">1920</td>
+<td align="center">‘anglais’</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">‘Asimov’</td>
+<td align="center">‘Isaac’</td>
+<td align="center">1920</td>
+<td align="center">‘anglais’</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">‘Huxley’</td>
+<td align="center">‘Aldous’</td>
+<td align="center">1894</td>
+<td align="center">‘anglais’</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">‘Bradbury’</td>
+<td align="center">‘Ray’</td>
+<td align="center">1920</td>
+<td align="center">‘anglais’</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">‘K.Dick’</td>
+<td align="center">‘Philip’</td>
+<td align="center">1928</td>
+<td align="center">‘anglais’</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">‘Barjavel’</td>
+<td align="center">‘René’</td>
+<td align="center">1911</td>
+<td align="center">‘français’</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>la table <code>Livres</code> :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">titre</th>
+<th align="center">id_auteur</th>
+<th align="center">ann_publi</th>
+<th align="center">note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">‘1984’</td>
+<td align="center">1</td>
+<td align="center">1949</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">‘Dune’</td>
+<td align="center">2</td>
+<td align="center">1965</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">‘Fondation’</td>
+<td align="center">3</td>
+<td align="center">1951</td>
+<td align="center">9</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">‘Le meilleur des mondes’</td>
+<td align="center">4</td>
+<td align="center">1931</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">‘Fahrenheit 451’</td>
+<td align="center">5</td>
+<td align="center">1953</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">‘Chroniques martiennes’</td>
+<td align="center">5</td>
+<td align="center">1950</td>
+<td align="center">8</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Insérer dans la table <code>Livres</code> :  </p>
+<ul>
+<li>"Blade Runner", écrit par K.Dick en 1968 et noté à 8/10,  </li>
+<li>"Les robots", écrit par Asimov en 1950 et noté à 9/10.</li>
+</ul>
+</li>
+</ol>
 <h4 id="ii2-les-projectionsselections">II.2. Les projections/sélections<a class="headerlink" href="#ii2-les-projectionsselections" title="Permanent link">&para;</a></h4>
-<p>4) Sélectionner les titres des livres dont l’auteur est Asimov en les rangeant par rapport à leur année de publication.
-5) Projeter la table <code>Livres</code> sur son attribut <code>ann_publi</code>, sachant que l’on ne veut pas de répétitions.
-6) Faire une sélection permettant de compter le nombre de livres écrits après 1950.</p>
+<ol>
+<li>Sélectionner les titres des livres dont l’auteur est Asimov en les rangeant par rapport à leur année de publication.</li>
+<li>Projeter la table <code>Livres</code> sur son attribut <code>ann_publi</code>, sachant que l’on ne veut pas de répétitions.</li>
+<li>Faire une sélection permettant de compter le nombre de livres écrits après 1950.</li>
+</ol>
 <h4 id="ii3-les-jointures">II.3. Les jointures<a class="headerlink" href="#ii3-les-jointures" title="Permanent link">&para;</a></h4>
-<p>7) Que va faire la jointure suivante ? 
-    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<ol>
+<li>
+<p>Que va faire la jointure suivante ? </p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Livres</span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Auteurs</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Livres</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Auteurs</span><span class="p">.</span><span class="n">id</span><span class="w"> </span>
-</code></pre></div></p>
-<p>8) Écrire une jointure permettant d’afficher le titre des livres ainsi que le nom et prénom de leur auteur.</p>
-<p>9) Écrire une jointure permettant d’afficher le titre des livres dont la note est supérieure à 8 ainsi que la langue d’écriture de leur auteur.</p>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p>Écrire une jointure permettant d’afficher le titre des livres ainsi que le nom et prénom de leur auteur.</p>
+</li>
+<li>
+<p>Écrire une jointure permettant d’afficher le titre des livres dont la note est supérieure à 8 ainsi que la langue d’écriture de leur auteur.</p>
+</li>
+</ol>
 <h4 id="ii4-modification">II.4. Modification<a class="headerlink" href="#ii4-modification" title="Permanent link">&para;</a></h4>
-<p>10) Mettre à jour la note du livre dont le titre est « Blade Runner » pour la passer à 9.
-11) Supprimer de la table le livre dont le titre est « Fahrenheit 451 ».</p>
+<ol>
+<li>Mettre à jour la note du livre dont le titre est « Blade Runner » pour la passer à 9.</li>
+<li>Supprimer de la table le livre dont le titre est « Fahrenheit 451 ».</li>
+</ol>
 <h3 id="ii-la-base-de-donnees-de-lhistoire-de-linformatique">II. La base de données de l’histoire de l’informatique<a class="headerlink" href="#ii-la-base-de-donnees-de-lhistoire-de-linformatique" title="Permanent link">&para;</a></h3>
 <p>Reprenons la base de données sur l'histoire de l'informatique créée dans le premier TP.</p>
-<p>1) Dans cette base de données, qui contient déjà la table Figures, on a créé les 2 tables <code>Avancées</code> (définie dans le cours) et <code>Programme</code> (définie en TD).</p>
-<pre><code>!!! tip "Télécharger la version actualisée de la base de données `BDDInformatique.db`."
-
-Des enregistrements ont été ajoutés :
-
-Dans **Avancées** :
-
-| id_a | nom | date | id_f |
-| :---: | :---: | :---: | :---: |
-1 | Premier compilateur | 1951 |9
-2 | Développement de logiciels pour la NASA | 1965 |2
-3 | Premier programme informatique | 1843 | 3
-4 | Langage TeX | 1976 | 4
-5 | Machine universelle | 1936 | 7
-6 | Déchiffrement d’Enigma | 1941|7
-7 |  Principe de transmission du signal à la base du Wifi | 1941 | 6
-
-
-Pour **Programme** :
-
-| id_p | contenu | capacite | theme | id_f
-| :---: | :---: | :---: | :---: | :---: |
-| 1 | Calculabilité, décidabilité | Comprendre que la calculabilité ne dépend pas du langage utilisé. | Langages et programmation | 7
-| 2 | Calculabilité, décidabilité | Montrer, sans formalisme théorique, que le problème de l’arrêt est indécidable. | Langages et programmation | 7
-</code></pre>
-<p>2) Vérifier le contenu des tables, avec une sélection sur l'ensemble des enregistrements.</p>
-<p>3) Ajouter les enregistrements suivants :
-    - A <code>Avancées</code> :
-    <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">Le</span><span class="w"> </span><span class="n">Web</span><span class="p">,</span><span class="w"> </span><span class="mi">1989</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span>
+<div class="admonition tip">
+<p class="admonition-title">Télécharger la version actualisée de la base de données <a href="../BDDInformatique.db">&gt; BDDInformatique.db &lt;</a>.</p>
+</div>
+<ol>
+<li>
+<p>Dans cette base de données, qui contient déjà la table Figures, on a créé les 2 tables <code>Avancées</code> (définie dans le cours) et <code>Programme</code> (définie en TD).</p>
+<p>Des enregistrements ont été ajoutés :</p>
+<p>Dans <strong>Avancées</strong> :</p>
+<table>
+<thead>
+<tr>
+<th align="center">id_a</th>
+<th align="center">nom</th>
+<th align="center">date</th>
+<th align="center">id_f</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">Premier compilateur</td>
+<td align="center">1951</td>
+<td align="center">9</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Développement de logiciels pour la NASA</td>
+<td align="center">1965</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Premier programme informatique</td>
+<td align="center">1843</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Langage TeX</td>
+<td align="center">1976</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">Machine universelle</td>
+<td align="center">1936</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">Déchiffrement d’Enigma</td>
+<td align="center">1941</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">Principe de transmission du signal à la base du Wifi</td>
+<td align="center">1941</td>
+<td align="center">6</td>
+</tr>
+</tbody>
+</table>
+<p>Pour <strong>Programme</strong> :</p>
+<table>
+<thead>
+<tr>
+<th align="center">id_p</th>
+<th align="center">contenu</th>
+<th align="center">capacite</th>
+<th align="center">theme</th>
+<th align="center">id_f</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">Calculabilité, décidabilité</td>
+<td align="center">Comprendre que la calculabilité ne dépend pas du langage utilisé.</td>
+<td align="center">Langages et programmation</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Calculabilité, décidabilité</td>
+<td align="center">Montrer, sans formalisme théorique, que le problème de l’arrêt est indécidable.</td>
+<td align="center">Langages et programmation</td>
+<td align="center">7</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Vérifier le contenu des tables, avec une sélection sur l'ensemble des enregistrements.</p>
+</li>
+<li>
+<p>Ajouter les enregistrements suivants :</p>
+<ul>
+<li>A <code>Avancées</code> :</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">Le</span><span class="w"> </span><span class="n">Web</span><span class="p">,</span><span class="w"> </span><span class="mi">1989</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span>
 <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">Modèle</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">architecture</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">ordinateurs</span><span class="p">,</span><span class="w"> </span><span class="mi">1945</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
-    - A <code>Programme</code> :
-    <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Modèle</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">architecture</span><span class="w"> </span><span class="n">séquentielle</span><span class="w"> </span><span class="p">(</span><span class="n">von</span><span class="w"> </span><span class="n">Neumann</span><span class="p">),</span><span class="w"> </span><span class="n">Distinguer</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">rôles</span><span class="w"> </span><span class="n">et</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">caractéristiques</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">différents</span><span class="w"> </span><span class="n">constituants</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">une</span><span class="w"> </span><span class="n">machine</span><span class="p">,</span><span class="w"> </span><span class="n">Architectures</span><span class="w"> </span><span class="n">matérielles</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+</div>
+<ul>
+<li>A <code>Programme</code> :</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Modèle</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">architecture</span><span class="w"> </span><span class="n">séquentielle</span><span class="w"> </span><span class="p">(</span><span class="n">von</span><span class="w"> </span><span class="n">Neumann</span><span class="p">),</span><span class="w"> </span><span class="n">Distinguer</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">rôles</span><span class="w"> </span><span class="n">et</span><span class="w"> </span><span class="n">les</span><span class="w"> </span><span class="n">caractéristiques</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">différents</span><span class="w"> </span><span class="n">constituants</span><span class="w"> </span><span class="n">d</span><span class="err">’</span><span class="n">une</span><span class="w"> </span><span class="n">machine</span><span class="p">,</span><span class="w"> </span><span class="n">Architectures</span><span class="w"> </span><span class="n">matérielles</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
 <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">Constructions</span><span class="w"> </span><span class="err">é</span><span class="n">lémentaires</span><span class="p">,</span><span class="w"> </span><span class="n">Mettre</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="err">é</span><span class="n">vidence</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="n">corpus</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">constructions</span><span class="w"> </span><span class="err">é</span><span class="n">lémentaires</span><span class="p">,</span><span class="w"> </span><span class="n">Langages</span><span class="w"> </span><span class="n">et</span><span class="w"> </span><span class="n">programmation</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
-</code></pre></div></p>
-<pre><code>Nous allons faire des jointures sur ces tables. Pensez à utiliser des alias pour rendre les requêtes plus lisibles.
-</code></pre>
-<p>3) Écrire une jointure affichant les noms et prénoms des figures avec les dates de leurs avancées.</p>
-<p>4) Écrire une jointure affichant les noms des avancées découvertes par une figure britannique.</p>
-<p>5) Écrire une jointure affichant les contenus et capacités du programme que nous devons à des recherches d’Alan Turing.</p>
+</code></pre></div>
+</div>
+<p>Nous allons faire des jointures sur ces tables. Pensez à utiliser des alias pour rendre les requêtes plus lisibles.</p>
+</li>
+<li>
+<p>Écrire une jointure affichant les noms et prénoms des figures avec les dates de leurs avancées.</p>
+</li>
+<li>
+<p>Écrire une jointure affichant les noms des avancées découvertes par une figure britannique.</p>
+</li>
+<li>
+<p>Écrire une jointure affichant les contenus et capacités du programme que nous devons à des recherches d’Alan Turing.</p>
+</li>
+</ol>
 
 
   
