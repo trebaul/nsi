@@ -2975,6 +2975,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_3">
@@ -2993,6 +2995,34 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../rendus/" class="md-nav__link">
+        I. Organisation et rendus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suivi/" class="md-nav__link">
+        II. Suivi de projet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -3005,12 +3035,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          I. Les sujets
+          III. Les sujets
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        I. Les sujets
+        III. Les sujets
       </a>
       
         
@@ -3069,20 +3099,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../rendus/" class="md-nav__link">
-        II. Organisation et rendus
-      </a>
     </li>
   
 
@@ -3541,23 +3557,38 @@ text-align: justify}
 <p class="admonition-title">Vous devez choisir un des sujets proposés, ou bien proposer un sujet de votre choix rentrant dans le thème : un programme informatique utile pour une autre discipline que l'informatique. Dans ce cas, <strong><em>soumettez-moi votre idée pour validation avant de commencer</em></strong>.</p>
 </div>
 <h2 id="sujet-1-probabilites-et-statistiques-avec-le-jeu-de-la-roulette-maths">Sujet 1 : Probabilités et statistiques avec le jeu de la roulette <em>(Maths)</em><a class="headerlink" href="#sujet-1-probabilites-et-statistiques-avec-le-jeu-de-la-roulette-maths" title="Permanent link">&para;</a></h2>
-<p>Simulation du jeu de la roulette, selon les règles définies ici :  </p>
+<p><img src= "../roulette.jpg">
+Simulation du jeu de la roulette et visualisation des statistiques des lancers de la bille.  </p>
 <div class="admonition info">
 <p class="admonition-title">Niveau 2 (note maximale : 10/20 pour groupe de 3 ou 4, 15/20 pour groupe de 2)</p>
 <ul>
-<li>Programme interactif demandant au joueur son pari,</li>
-<li>Lancer aléatoire de la bille avec la bibliothèque <code>random</code>,</li>
-<li>Calcul des gains/perte à chaque lancer de la bille,</li>
-<li>Calcul du score total sur une partie.</li>
+<li>Programme interactif demandant au joueur son <strong>type de mise</strong> parmi celles à <strong>chances simples</strong> (Noir/Rouge, Pair/Impair, Manque/Passe - <em>voir les règles ci-dessous</em>),  </li>
+<li><strong>Lancer aléatoire</strong> de la bille avec une fonction de la bibliothèque <code>random</code>,  </li>
+<li>Affichage dans la console des <strong>statistiques</strong> des numéros et des couleurs déjà sorties au cours de la partie,  </li>
+<li>Actualisation de la mise du joueur après chaque lancer de la bille,</li>
+<li>Le jeu s'arrête lorsque la mise est à 0, ou que le joueur veut quitter. </li>
 </ul>
+<details class="tip">
+<summary>Indications</summary>
+<p>On se base sur la <strong>roulette française</strong> dont les règles et types de mises possibles sont indiquées sur la page <a href="https://fr.wikipedia.org/wiki/Roulette_(jeu_de_hasard)"><strong>Wikipédia</strong></a> correspondante. </p>
+<p><img src= "../Roulette_table_fr.svg.png"></p>
+</details>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Niveau 3 (note maximale : 15/20 pour groupe de 3 ou 4, 20/20 pour groupe de 2)</p>
-<p><strong><em>(en plus du niveau 2)</em></strong> Affichage des statistiques des lancers précédents avec un graphe de la bibliothèque <code>matplotlib</code>, actualisé à chaque coup.</p>
+<p><strong><em>(en plus du niveau 2)</em></strong> Affichage des statistiques des lancers précédents (couleurs et numéros tirés au sort) avec des <strong>graphes</strong> de la bibliothèque <code>matplotlib</code>, actualisé à chaque coup.  </p>
+<details class="tip">
+<summary>Indications</summary>
+<p>Utiliser la fonction <code>subplot</code> pour afficher plusieurs graphes en même temps.</p>
+</details>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Niveau 4 (note maximale : 20/20 pour tout groupe)</p>
-<p><strong><em>(en plus du niveau 3)</em></strong> Conseil au joueur pour chaque nouveau pari, basé sur le calcul de l'espérance mathématique.</p>
+<p><strong><em>(en plus du niveau 3)</em></strong> Ajout d'au moins 4 types de mise à <strong>chances multiples</strong>, avec le calcul automatique de leur <strong>espérance mathématique</strong>. </p>
+<details class="tip">
+<summary>Indications</summary>
+<p>L'espérance <span class="arithmatex">\(E\)</span> est donnée par la formule <span class="arithmatex">\(E = \dfrac{N}{M}*100\)</span>, <span class="arithmatex">\(N\)</span> étant le nombre de numéros sur lesquels se fait le pari, et <span class="arithmatex">\(M\)</span> le nombre de numéros total. </p>
+</details>
 </div>
 <hr />
 <h2 id="sujet-2-visualisation-des-images-en-optique-physique">Sujet 2 : Visualisation des images en optique <em>(Physique)</em><a class="headerlink" href="#sujet-2-visualisation-des-images-en-optique-physique" title="Permanent link">&para;</a></h2>
@@ -3701,7 +3732,7 @@ Par exemple, visualisation des performances d'une entreprise, comme ici : <a hre
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../../tle_poo_rec/Rendus/" class="md-footer__link md-footer__link--prev" aria-label="Previous: III. Les rendus de projet" rel="prev">
+        <a href="../suivi/" class="md-footer__link md-footer__link--prev" aria-label="Previous: II. Suivi de projet" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3710,20 +3741,20 @@ Par exemple, visualisation des performances d'une entreprise, comme ici : <a hre
               <span class="md-footer__direction">
                 Previous
               </span>
-              III. Les rendus de projet
+              II. Suivi de projet
             </div>
           </div>
         </a>
       
       
         
-        <a href="../rendus/" class="md-footer__link md-footer__link--next" aria-label="Next: II. Organisation et rendus" rel="next">
+        <a href="../../1ere_cyber/Pr%C3%A9sentation_Sujets/" class="md-footer__link md-footer__link--next" aria-label="Next: 2022 - 1ère - Cybersécurité" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              II. Organisation et rendus
+              2022 - 1ère - Cybersécurité
             </div>
           </div>
           <div class="md-footer__button md-icon">
