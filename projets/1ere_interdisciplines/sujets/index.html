@@ -2335,6 +2335,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_5">
@@ -2385,6 +2387,20 @@
     <li class="md-nav__item">
       <a href="../../../tle/seq5/SQL/" class="md-nav__link">
         III. Structured Query Language (SQL)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tle/seq5/entrainement/" class="md-nav__link">
+        Pour s'entraîner
       </a>
     </li>
   
@@ -3082,8 +3098,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sujet-4-dictionnaire-bilingue-langue-vivante" class="md-nav__link">
-    Sujet 4 : Dictionnaire bilingue (Langue vivante)
+  <a href="#sujet-4-dictionnaire-bilingue-langue-vivante-anglais" class="md-nav__link">
+    Sujet 4 : Dictionnaire bilingue (Langue vivante - Anglais)
   </a>
   
 </li>
@@ -3503,8 +3519,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sujet-4-dictionnaire-bilingue-langue-vivante" class="md-nav__link">
-    Sujet 4 : Dictionnaire bilingue (Langue vivante)
+  <a href="#sujet-4-dictionnaire-bilingue-langue-vivante-anglais" class="md-nav__link">
+    Sujet 4 : Dictionnaire bilingue (Langue vivante - Anglais)
   </a>
   
 </li>
@@ -3592,35 +3608,33 @@ Simulation du jeu de la roulette et visualisation des statistiques des lancers d
 </div>
 <hr />
 <h2 id="sujet-2-visualisation-des-images-en-optique-physique">Sujet 2 : Visualisation des images en optique <em>(Physique)</em><a class="headerlink" href="#sujet-2-visualisation-des-images-en-optique-physique" title="Permanent link">&para;</a></h2>
-<p>Visualisation de l'image d'un objet à travers une lentille. L'objet est un tableau à 2 dimensions, soit une image en informatique. 
-<center>
-<img src="../lentille.bmp"></center></p>
+<p>Visualisation de l'<strong>image</strong> d'un <strong>objet</strong> à travers une <strong>lentille</strong>. L'objet est représenté par une matrice. </p>
+<p><center> <img src="../optique.png"></center></p>
 <div class="admonition info">
 <p class="admonition-title">Niveau 2 (note maximale : 10/20 pour groupe de 3 ou 4, 15/20 pour groupe de 2)</p>
 <ul>
 <li>L'utilisateur donne la <strong>distance de l'objet à la lentille <span class="arithmatex">\(OA\)</span></strong> et la <strong>distance focale <span class="arithmatex">\(f'\)</span></strong> de la lentille.</li>
 <li>L'ordinateur calcule la <strong>position <span class="arithmatex">\(OA'\)</span></strong> de l'image par rapport à la lentille.</li>
-<li>L'ordinateur calcule l'<strong>image</strong> à travers la lentille en fonction de la valeur du <strong>grandissement</strong> <em>(possible renversement et agrandissement ou rétrécissement, visualisé avec <code>matplotlib</code>)</em>. </li>
-<li>L'objet est une image informatique représentée en noir et blanc et est générée par l'ordinateur.   </li>
+<li>L'ordinateur calcule l'<strong>image</strong> à travers la lentille en fonction de la valeur du <strong>grandissement</strong> : il l'agrandit si le grandissement est supérieur à 1 en valeur absolue, et la retourne s'il est négatif.  </li>
+<li>L'<strong>objet</strong> est une matrice représentant une image en couleurs, qui doit être asymétrique - pas un carré simple - (voir le <em>TP Dessin automatique d'image</em>).   </li>
+<li>Objet et image sont représentés sur un même graphe avec avec <code>matplotlib</code>.</li>
 </ul>
 <details class="tip">
 <summary>Indications</summary>
-<ul>
-<li>On obtient la distance de l'image à la lentille <span class="arithmatex">\(OA'\)</span> avec la formule <span class="arithmatex">\(OA'= \dfrac{OA*f'}{OA+f'}\)</span>  </li>
-<li>Le <strong>grandissement</strong> vaut <span class="arithmatex">\(\dfrac{OA'}{OA}\)</span>. </li>
-<li>Si le grandissement est négatif, l'image doit être retournée.</li>
-<li>S'il est plus grand que 1, <em>il est arrondi à l'entier le plus proche</em> et l'image est agrandie.</li>
-<li>S'il est plus petit elle est rétrécie, et de la même façon elle est divisée par 2, par 3, etc, pas par un nombre à virgule.</li>
-</ul>
+<p><center>
+<img src="../lentille.bmp"></center>
+- On obtient la distance de l'image à la lentille <span class="arithmatex">\(OA'\)</span> avec la formule <span class="arithmatex">\(OA'= \dfrac{OA*f'}{OA+f'}\)</span><br />
+- Le <strong>grandissement</strong> vaut <span class="arithmatex">\(\dfrac{OA'}{OA}\)</span>.<br />
+- S'il est plus grand que 1, <em>il est arrondi à l'entier le plus proche</em> et l'image est agrandie. </p>
 </details>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Niveau 3 (note maximale : 15/20 pour groupe de 3 ou 4, 20/20 pour groupe de 2)</p>
-<p><strong><em>(en plus du niveau 2)</em></strong> L'objet généré par l'ordinateur est en couleurs.  </p>
+<p><strong><em>(en plus du niveau 2)</em></strong> L'image est rétrécie si le grandissement en valeur absolue vaut moins que 1. De la même façon que pour le grandissement, on divise la taille de l'image par un nombre entier.    </p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Niveau 4 (note maximale : 20/20 pour tout groupe)</p>
-<p><strong><em>(en plus du niveau 3)</em></strong> Un ensemble d'objets est généré par l'ordinateur en couleur, elles peuvent être choisies par l'utilisateur.</p>
+<p><strong><em>(en plus du niveau 3)</em></strong> La matrice représentant l'objet peut être donnée par l'utilisateur.</p>
 </div>
 <hr />
 <h2 id="sujet-3-representation-de-donnees-socio-economiques-ses">Sujet 3 : Représentation de données socio-économiques <em>(SES)</em><a class="headerlink" href="#sujet-3-representation-de-donnees-socio-economiques-ses" title="Permanent link">&para;</a></h2>
@@ -3648,25 +3662,40 @@ Par exemple, visualisation des performances d'une entreprise, comme ici : <a hre
 <p><strong><em>(en plus du niveau 3)</em></strong> L'utilisateur peut visualiser plusieurs jeux de données stockés dans des fichiers. </p>
 </div>
 <hr />
-<h2 id="sujet-4-dictionnaire-bilingue-langue-vivante">Sujet 4 : Dictionnaire bilingue <em>(Langue vivante)</em><a class="headerlink" href="#sujet-4-dictionnaire-bilingue-langue-vivante" title="Permanent link">&para;</a></h2>
-<p>Traduction automatique entre le français et une langue étrangère à partir des données d'un dictionnaire bilingue sauvegardées dans un fichier.</p>
+<h2 id="sujet-4-dictionnaire-bilingue-langue-vivante-anglais">Sujet 4 : Dictionnaire bilingue <em>(Langue vivante - Anglais)</em><a class="headerlink" href="#sujet-4-dictionnaire-bilingue-langue-vivante-anglais" title="Permanent link">&para;</a></h2>
+<p>Traduction automatique entre le <strong>français</strong> et l'<strong>anglais</strong> à partir des données d'un dictionnaire bilingue sauvegardées dans des fichiers <code>txt</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">Niveau 2 (note maximale : 10/20 pour groupe de 3 ou 4, 15/20 pour groupe de 2)</p>
 <ul>
-<li>L'utilisateur entre un mot en français à traduire dans une langue étrangère, l'ordinateur propose une traduction </li>
-<li>L'utilisateur entre un mot dans une langue étrangère à traduire en français, l'ordinateur propose une traduction </li>
+<li>L'utilisateur entre un mot en <strong>français</strong> à traduire en <strong>anglais</strong>, l'ordinateur propose une traduction </li>
+<li>On utilise 2 fichiers <code>.txt</code>, un avec les mots en français, un avec les mots en anglais </li>
+<li>Les mots sont chargés depuis ces fichiers, et stockés dans des tableaux</li>
 </ul>
+<details class="tip">
+<summary>Indications</summary>
+<p>Utiliser les fichiers suivant : <a href="../francais.txt">français.txt</a> et <a href="../anglais.txt">anglais.txt</a>. </p>
+</details>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Niveau 3 (note maximale : 15/20 pour groupe de 3 ou 4, 20/20 pour groupe de 2)</p>
-<p><strong><em>(en plus du niveau 2)</em></strong> Si le mot n'est pas présent dans le dictionnaire, l'ordinateur le précise à l'utilisateur, et lui propose la traduction du mot le plus proche.</p>
+<p><strong><em>(en plus du niveau 2)</em></strong> Si le mot n'est pas présent dans le dictionnaire, l'ordinateur le précise à l'utilisateur, et lui propose la traduction du mot le plus proche. </p>
+<details class="tip">
+<summary>Indications</summary>
+<ul>
+<li>Utiliser la <strong>distance de Hamming</strong> pour trouver les mots les plus proches.  </li>
+<li>Si les mots ne sont pas de la même taille, rajouter des espaces <code>' '</code> au mot le plus court.</li>
+</ul>
+</details>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Niveau 4 (note maximale : 20/20 pour tout groupe)</p>
 <ul>
-<li><strong><em>(en plus du niveau 3)</em></strong> L'utilisateur peut rentrer une phrase à traduire </li>
-<li>Le résultat de la traduction peut être sauvegardé dans un fichier  </li>
+<li><strong><em>(en plus du niveau 3)</em></strong> L'utilisateur peut entrer un mot en <strong>anglais</strong>, traduit par l'ordinateur en <strong>français</strong> </li>
 </ul>
+<details class="tip">
+<summary>Indications</summary>
+<p>Il faut modifier le fichier <code>anglais.txt</code> pour ne pas avoir plusieurs propositions pour 1 mot en français.</p>
+</details>
 </div>
 <hr />
 <h2 id="sujet-5-correcteur-orthographique-francais">Sujet 5 : Correcteur orthographique <em>(Français)</em><a class="headerlink" href="#sujet-5-correcteur-orthographique-francais" title="Permanent link">&para;</a></h2>
@@ -3701,7 +3730,7 @@ Par exemple, visualisation des performances d'une entreprise, comme ici : <a hre
 </div>
 <div class="admonition info">
 <p class="admonition-title">Niveau 4 (note maximale : 20/20 pour tout groupe)</p>
-<p><strong><em>(en plus du niveau 3)</em></strong> Stockage des corrections effectuées dans un fichier dont on demande le nom à l'utilisateur</p>
+<p><strong><em>(en plus du niveau 3)</em></strong> Stockage des corrections effectuées dans un fichier dont on demande le nom à l'utilisateur.</p>
 </div>
 
 
