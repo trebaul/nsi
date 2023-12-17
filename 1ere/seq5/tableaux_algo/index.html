@@ -4095,6 +4095,9 @@ on renvoie Faux
 </ol>
 <hr />
 <h2 id="tp-dessin-automatique-dimages">TP : Dessin automatique d'images<a class="headerlink" href="#tp-dessin-automatique-dimages" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Répondre aux questions sur votre cahier de TP.</p>
+</div>
 <p>Une image est un <strong>tableau à 2 dimensions</strong>, autrement dit une <strong>matrice</strong>. Chacun des points contient une valeur : sa couleur. </p>
 <h3 id="a-images-en-noir-et-blanc">A. Images en noir et blanc<a class="headerlink" href="#a-images-en-noir-et-blanc" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
@@ -4130,40 +4133,37 @@ on renvoie Faux
 <span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 </div>
-<p>c. Ecrire une fonction <code>carre(image)</code> prenant une matrice <code>image</code> remplie de <code>0</code> en paramètre et renvoyant l'image modifiée pour tracer un carré. Placer cette fonction en haut du programme <em>(mais sous l'import)</em>, et faire un appel à cette fonction avant de l'afficher avec <code>imshow</code>.</p>
 </li>
 <li>
-<p>Ecrire le code permettant de générer les formes ci-dessous. Pour cela, identifier à chaque fois les caractéristiques des coordonnées <code>i</code> et <code>j</code> des points dont il faut faire passer la valeur à <code>1</code>. </p>
+<p>Ecrire le code permettant de générer les formes ci-dessous. Pour cela, identifier à chaque fois pour quelles coordonnées <code>i</code> et <code>j</code> il faut faire passer la valeur à <code>1</code>. </p>
 <p><img src="../img/tp_img2.png" height=150 style="float:right;padding-left:15px"> <img src="../img/tp_img3.png" height=150 style="float:left;padding-right:15px"></p>
 </li>
 </ol>
 <h3 id="b-images-en-couleur">B. Images en couleur<a class="headerlink" href="#b-images-en-couleur" title="Permanent link">&para;</a></h3>
-<div class="admonition tip">
-<p class="admonition-title">Pour cette partie, créer un fichier <code>TP_Image_Couleur.py</code>.</p>
-</div>
 <p><img src="../img/tp_img_rvb.png" height=60 style="float:right;padding-left:15px"></p>
 <p>La couleur est représentée par un triplet de nombres : un pour l'intensité du <strong>rouge</strong>, un pour le <strong>vert</strong>, et un pour le <strong>bleu</strong> (R, V, B). Ce nombre est stocké sur 1 octet, donc varie entre <strong>0 et 255</strong>. Le schéma ci-contre indique comment coder les couleurs de base.</p>
 <p>Pour représenter le triplet, on utilise un tuple : un ensemble de valeurs séparées par des virgules. </p>
+<div class="admonition tip">
+<p class="admonition-title">Créer un fichier <code>TP_Image_Carre_Couleurs.py</code>.</p>
+</div>
 <ol>
 <li>
-<p>Pour initialiser l'image avec du blanc pour tous les pixels, on utilise l'instruction <code>image = [ [(255, 255, 255) for i in range(...)] for j in range(...)]</code>. </p>
-<p><img src="../img/carre_base.png" height=100 style="float:right;padding-left:15px"></p>
+<p>Pour initialiser l'image avec du noir pour tous les pixels, on utilise l'instruction <code>image = [ [(0, 0, 0) for i in range(...)] for j in range(...)]</code>. </p>
 </li>
 <li>
-<p>Tracer le contour de l'image en adaptant la fonction <code>carre</code> de la première partie : pour le mettre en noir, il faut mettre les pixels du contour à la valeur <code>(0,0,0)</code>. </p>
-<p><br><br></p>
-</li>
-<li>
-<p>Créer une fonction permettant de créer un carré soit rouge, soit vert, soit bleu, soit jaune : <code>carre_couleur(c)</code> prenant en paramètre la couleur <code>c</code> écrite sous la forme d'une chaîne de caractères et renvoyant le carré de la bonne couleur. </p>
+<p>Créer une fonction permettant de créer un carré soit rouge, soit vert, soit bleu, soit jaune : <code>carre_couleur(image, c)</code> prenant en paramètre l'image <code>image</code> dont on a initialisé la couleur, et la couleur <code>c</code> écrite sous la forme d'une chaîne de caractères remplissant tous les pixels sauf les bords de cette couleur. </p>
 <p><center>
 <img src="../img/carre_rouge.png" height=100 style="float:left;padding-right:15px">  <img src="../img/carre_vert.png" height=100 style="float:left;padding-right:15px"> <img src="../img/carre_bleu.png" height=100 style="float:left;padding-right:15px"> <img src="../img/carre_jaune.png" height=100 style="float:left;padding-right:15px"> 
 </center></p>
 <p><br><br><br><br><br></p>
+<div class="admonition tip">
+<p class="admonition-title">Créer un fichier <code>TP_Image_Carre_Multicolor.py</code>.</p>
+</div>
 </li>
 <li>
 <p>Ecrire le code permettant de créer l'image suivante : </p>
 <p><center>
-<img src="../img/tp_img_couleur.png" height=150 ></center></p>
+<img src="../img/tp_img_couleur.png" height=150 ></center> </p>
 </li>
 </ol>
 
