@@ -3718,6 +3718,7 @@ text-align: justify}
 </details>
 <details class="note">
 <summary>Comment, alors, écrire l'algorithme ?</summary>
+<p><strong>Version avec boucle non-bornée</strong>
 <div class="highlight"><pre><span></span><code><span class="n">entrée</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span><span class="p">,</span> <span class="n">valeur</span> <span class="n">v</span>
 <span class="n">sortie</span> <span class="p">:</span> <span class="n">booléen</span> <span class="n">trouve</span>
 
@@ -3726,7 +3727,17 @@ text-align: justify}
     <span class="n">on</span> <span class="n">parcourt</span> <span class="n">l</span> <span class="n">élément</span> <span class="n">suivant</span> <span class="n">de</span> <span class="n">t</span> <span class="n">d</span> <span class="n">indice</span> <span class="n">i</span>
         <span class="n">si</span> <span class="n">l</span> <span class="n">élément</span> <span class="n">i</span> <span class="n">de</span> <span class="n">t</span> <span class="n">vaut</span> <span class="n">v</span>
             <span class="n">on</span> <span class="n">actualise</span> <span class="n">trouve</span> <span class="n">à</span> <span class="kc">True</span>
-</code></pre></div>
+</code></pre></div></p>
+<p><strong>Version avec boucle bornée <em>(possible dans une fonction)</em></strong>
+<div class="highlight"><pre><span></span><code><span class="n">fonction</span> <span class="n">recherche_occurrence</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="n">entrée</span> <span class="p">:</span> <span class="n">tableau</span> <span class="n">t</span><span class="p">,</span> <span class="n">valeur</span> <span class="n">v</span>
+    <span class="n">sortie</span> <span class="p">:</span> <span class="n">booléen</span> <span class="n">trouve</span>
+
+    <span class="n">on</span> <span class="n">parcourt</span> <span class="n">un</span> <span class="n">à</span> <span class="n">un</span> <span class="n">tous</span> <span class="n">les</span> <span class="n">éléments</span> <span class="n">de</span> <span class="n">t</span> <span class="n">avec</span> <span class="n">leur</span> <span class="n">indice</span> <span class="n">i</span>
+        <span class="n">si</span> <span class="n">l</span> <span class="n">élément</span> <span class="n">i</span> <span class="n">de</span> <span class="n">t</span> <span class="n">vaut</span> <span class="n">v</span>
+            <span class="n">on</span> <span class="n">renvoie</span> <span class="kc">True</span>
+    <span class="n">on</span> <span class="n">renvoie</span> <span class="kc">False</span>
+</code></pre></div></p>
 </details>
 <h3 id="c-calcul-de-moyenne">C. Calcul de moyenne<a class="headerlink" href="#c-calcul-de-moyenne" title="Permanent link">&para;</a></h3>
 <p>Comment obtenir la <strong>moyenne</strong> d'un tableau de nombres ? </p>
@@ -3735,8 +3746,8 @@ text-align: justify}
 <p>moy = somme des éléments / nombre d'éléments</p>
 </details>
 <details class="note">
-<summary>2. Identifier le type de parcours à appliquer, et les variables à utiliser.</summary>
-<p>Il faut faire un parcours total, et utiliser une variable stockant la somme des éléments.</p>
+<summary>2. Identifier comment faire le parcours, et les variables à utiliser.</summary>
+<p>Il faut parcourir tous les éléments, et utiliser une variable stockant la somme des éléments.</p>
 </details>
 <details class="note">
 <summary>Proposer un algorithme :</summary>
