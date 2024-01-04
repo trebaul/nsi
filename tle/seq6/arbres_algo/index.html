@@ -2554,63 +2554,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
-      
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_7">
-          6. Architectures matérielles
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="6. Architectures matérielles" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_7">
-          <span class="md-nav__icon md-icon"></span>
-          6. Architectures matérielles
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../seq3/Cours_SoC/" class="md-nav__link">
-        I. Les systèmes sur puce
+      <a href="../../seq9/securisation/" class="md-nav__link">
+        6. Sécuriser les communications
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../seq8/processus/" class="md-nav__link">
-        II. Les processus
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -2704,10 +2651,63 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_9" type="checkbox" id="__nav_3_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_9">
+          8. Algorithmes sur les graphes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="8. Algorithmes sur les graphes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          8. Algorithmes sur les graphes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../seq9/securisation/" class="md-nav__link">
-        8. Sécuriser les communications
+      <a href="../../seq10/representation/" class="md-nav__link">
+        I. Représentation
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seq10/algo/" class="md-nav__link">
+        II. Algorithmique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2734,14 +2734,14 @@
       
       
         <label class="md-nav__link" for="__nav_3_10">
-          9. Algorithmes sur les graphes
+          9. Architectures matérielles
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="9. Algorithmes sur les graphes" data-md-level="2">
+      <nav class="md-nav" aria-label="9. Architectures matérielles" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_10">
           <span class="md-nav__icon md-icon"></span>
-          9. Algorithmes sur les graphes
+          9. Architectures matérielles
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2751,8 +2751,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../seq10/representation/" class="md-nav__link">
-        I. Représentation
+      <a href="../../seq3/Cours_SoC/" class="md-nav__link">
+        I. Les systèmes sur puce
       </a>
     </li>
   
@@ -2765,8 +2765,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../seq10/algo/" class="md-nav__link">
-        II. Algorithmique
+      <a href="../../seq8/processus/" class="md-nav__link">
+        II. Les processus
       </a>
     </li>
   
@@ -3548,10 +3548,10 @@ text-align: justify}
 <p class="admonition-title">Définition</p>
 <p>Un <strong>parcours en profondeur</strong> consiste à parcourir les nœuds en suivant les branches.</p>
 </div>
-<p>On considère que chaque nœud d'un arbre binaire est visité 3 fois, dans l'ordre suivant :<br />
-- une fois par la gauche,<br />
-- une fois par en-dessous,<br />
-- une fois par la droite.</p>
+<p>On considère que chaque nœud d'un arbre binaire peut être visité 3 fois :<br />
+- une fois par la gauche <em>(en venant de son père)</em>,<br />
+- une fois par en-dessous <em>(en venant de son sous-arbre gauche)</em>,<br />
+- une fois par la droite <em>(en venant de son sous-arbre droit)</em>.</p>
 <div class="admonition example">
 <p class="admonition-title">Illustrons-le sur l'arbre suivant :</p>
 <pre class="mermaid"><code>graph TB
@@ -3562,23 +3562,24 @@ B --&gt; E
 C --&gt; G
 C --&gt; H</code></pre>
 </div>
-<ul>
-<li><strong>Parcours préfixe :</strong> on liste chaque nœud la première fois qu'il est rencontré.</li>
-</ul>
+<p>Il y a donc <strong>3 parcours en profondeur</strong> possibles :</p>
+<div class="admonition info">
+<p class="admonition-title"><strong>Parcours préfixe :</strong> on liste chaque nœud la <em>première fois</em> qu'il est rencontré.</p>
+</div>
 <details class="example">
 <summary>Quel est le parcours préfixe de l'arbre précédent ?</summary>
 <p>A, B, D, E, C, G, H.</p>
 </details>
-<ul>
-<li><strong>Parcours infixe :</strong> on liste chaque nœud la deuxième fois qu'il est rencontré.</li>
-</ul>
+<div class="admonition info">
+<p class="admonition-title"><strong>Parcours infixe :</strong> on liste chaque nœud la <em>deuxième fois</em> qu'il est rencontré.</p>
+</div>
 <details class="example">
 <summary>Quel est le parcours infixe de l'arbre précédent ?</summary>
 <p>D, B, E, A, G, C, H</p>
 </details>
-<ul>
-<li><strong>Parcours suffixe ou postfixe :</strong> on liste chaque nœud la dernière fois qu'il est rencontré.</li>
-</ul>
+<div class="admonition info">
+<p class="admonition-title"><strong>Parcours suffixe ou postfixe :</strong> on liste chaque nœud la <em>dernière fois</em> qu'il est rencontré.</p>
+</div>
 <details class="example">
 <summary>quel est le parcours sufixe de l'arbre précédent ?</summary>
 <p>D, E, B, G, H, C, A</p>
@@ -3586,7 +3587,7 @@ C --&gt; H</code></pre>
 <h3 id="aii-parcours-en-largeur">A.II. Parcours en largeur<a class="headerlink" href="#aii-parcours-en-largeur" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Définition</p>
-<p>Dans un <strong>parcours en largeur</strong>, on liste dans les noeuds par ordre de profondeur croissante.</p>
+<p>Dans un <strong>parcours en largeur</strong>, on liste dans les noeuds par profondeur croissante.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Représenter ce parcours sur l'arbre ci-dessous :</p>
@@ -3714,35 +3715,49 @@ Dans les deux derniers cas, on réapplique l'algorithme en partant de la racine 
 <hr />
 <h2 id="tp-algorithmes-sur-les-arbres-binaires">TP : Algorithmes sur les arbres binaires<a class="headerlink" href="#tp-algorithmes-sur-les-arbres-binaires" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
-<p class="admonition-title">Dans ce TP, nous utilisons la classe <code>ArbreBinaire</code> définie dans le TP sur l'implémentation des arbres binaires, et l'arbre d'exemple du même TP.</p>
+<p class="admonition-title">Dans ce TP, nous utilisons la classe <code>ArbreBinaire</code> définie dans le TP sur l'implémentation des arbres binaires (en téléchargement <a href="../arbre.py"><strong><em>&gt; ici &lt;</em></strong></a>).</p>
 </div>
 <h3 id="a-calcul-de-mesures">A. Calcul de mesures<a class="headerlink" href="#a-calcul-de-mesures" title="Permanent link">&para;</a></h3>
 <h4 id="bi-la-taille">B.I. La taille<a class="headerlink" href="#bi-la-taille" title="Permanent link">&para;</a></h4>
-<p>1) On propose une description d’un algorithme <strong>récursif</strong> permettant de calculer la taille d’un arbre binaire. A
+<ol>
+<li>
+<p>On propose une description d’un algorithme <strong>récursif</strong> permettant de calculer la taille d’un arbre binaire. A
 partir de celle-ci, proposer un pseudo-code de l’algorithme.</p>
 <div class="admonition note">
 <p class="admonition-title">Description</p>
 <p>La taille de l’arbre correspond à la <strong>somme de la taille de ses sous-arbres</strong>. On parcourt donc les sous-arbres gauche et droit récursivement, et on incrémente la taille à chaque fois que l’on rencontre un nouveau nœud.<br />
 L’algorithme s’arrête lorsque l’appel récursif se fait sur un arbre vide.</p>
 </div>
-<p>2) Tester cet algorithme en l’implémentant en Python et en utilisant l’arbre d'exemple implémenté précédemment avec la classe <code>ArbreBinaire</code>. N'oubliez pas que vous pouvez afficher le résultat avec la méthode <code>affiche</code>.</p>
+</li>
+<li>
+<p>Tester cet algorithme en l’implémentant en Python et en utilisant l’arbre d'exemple implémenté précédemment avec la classe <code>ArbreBinaire</code>. N'oubliez pas que vous pouvez afficher le résultat avec la méthode <code>affiche</code>.</p>
+</li>
+</ol>
 <h4 id="bii-la-hauteur">B.II. La hauteur<a class="headerlink" href="#bii-la-hauteur" title="Permanent link">&para;</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Description</p>
 <p>L’algorithme qui permet de calculer la <strong>hauteur</strong> d’un arbre binaire est similaire à celui utilisé pour la taille. La différence est qu’à chaque niveau de profondeur atteint (chaque nouvel appel récursif), on incrémente de 1 la hauteur, et on sélectionne le maximum des hauteurs entre celle du sous-arbre gauche et celle du sous-arbre droit.</p>
 </div>
-<p>1) Proposer un pseudo-code de cet algorithme.
-2) L’implémenter sur le même arbre qu’en I.A.</p>
-<p><strong>N.B.:</strong> on pourra utiliser la fonction <code>max</code> de Python pour sélectionner la plus grande des deux hauteurs.</p>
+<ol>
+<li>Proposer un pseudo-code de cet algorithme.</li>
+<li>L’implémenter sur le même arbre qu’en I.A.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">On peut utiliser la fonction <code>max</code> de Python pour sélectionner la plus grande des deux hauteurs.</p>
+</div>
 <h3 id="b-ii-les-parcours">B. II. Les parcours<a class="headerlink" href="#b-ii-les-parcours" title="Permanent link">&para;</a></h3>
 <h4 id="iia-parcours-en-profondeur">II.A. Parcours en profondeur<a class="headerlink" href="#iia-parcours-en-profondeur" title="Permanent link">&para;</a></h4>
-<p>1) Donner les parcours préfixe, infixe et postfixe de l’arbre d'exemple du TP précédent : </p>
+<ol>
+<li>
+<p>Donner les parcours préfixe, infixe et postfixe de l’arbre d'exemple du TP précédent : </p>
 <pre class="mermaid"><code>graph TB
-  A(( )) --&gt; B(2)
-  A --&gt; C(0)
-  B --&gt; D(2)
-  B --&gt; E(3)</code></pre>
+A(html) --&gt; B(head)
+A --&gt; C(body)
+C --&gt; D(h1)
+C --&gt; E(p)</code></pre>
 <p>On propose une fonction qui effectue un de ces parcours en profondeur d’un arbre binaire et stocke le résultat dans une liste Python.</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parcours</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">arbre</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[]</span>
@@ -3752,15 +3767,30 @@ L’algorithme s’arrête lorsque l’appel récursif se fait sur un arbre vide
         <span class="n">ad</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">getABDroit</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">parcours</span><span class="p">(</span><span class="n">ag</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">+</span> <span class="n">parcours</span><span class="p">(</span><span class="n">ad</span><span class="p">)</span>
 </code></pre></div>
-<p>2) A quel parcours ce code-correspond-il ? Justifier.</p>
-<p>3) Combien de fois accède-t-on à chaque nœud de l’arbre ? En déduire la complexité de cet algorithme en fonction
+</div>
+</li>
+<li>
+<p>A quel parcours ce code-correspond-il ? Justifier.</p>
+</li>
+<li>
+<p>Combien de fois accède-t-on à chaque nœud de l’arbre ? En déduire la complexité de cet algorithme en fonction
 de la taille de l’arbre <span class="arithmatex">\(n\)</span>.</p>
-<p>4) Modifier le code pour obtenir les deux autres parcours en profondeur.</p>
-<p>5) Tester ces parcours sur l’arbre d'exemple et vérifier leur bon fonctionnement grâce aux résultats obtenus ”à la main”.</p>
-<p>6) Proposer une autre version de chacun de ces parcours, qui ne renvoie pas une liste Python mais <em>affiche</em> au
+</li>
+<li>
+<p>Modifier le code pour obtenir les deux autres parcours en profondeur.</p>
+</li>
+<li>
+<p>Tester ces parcours sur l’arbre d'exemple et vérifier leur bon fonctionnement grâce aux résultats obtenus ”à la main”.</p>
+</li>
+<li>
+<p>Proposer une autre version de chacun de ces parcours, qui ne renvoie pas une liste Python mais <em>affiche</em> au
 fur et à mesure les nœuds de l’arbre rencontrés.</p>
+</li>
+</ol>
 <h4 id="iib-parcours-en-largeur">II.B. Parcours en largeur<a class="headerlink" href="#iib-parcours-en-largeur" title="Permanent link">&para;</a></h4>
-<p>On fournit un code du parcours en largeur d’un arbre binaire.
+<p>On fournit un code du parcours en largeur d’un arbre binaire.</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parcoursLargeur</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
     <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
     <span class="n">parcours</span> <span class="o">=</span> <span class="p">[]</span>
@@ -3776,15 +3806,33 @@ fur et à mesure les nœuds de l’arbre rencontrés.</p>
 
     <span class="k">return</span> <span class="n">parcours</span>
 </code></pre></div>
-1) Identifier les types des entrées et sorties, ainsi que celui de la variable temporaire.</p>
-<p>1) Indiquer le contenu des variables <code>e</code>, <code>f</code> et <code>parcours</code> à l’initialisation (code exécuté jusqu’à la ligne 4) et à la fin de chaque passage de boucle lorsque la fonction est appliquée à l’arbre d'exemple utilisé dans les parties précédentes. On représentera l’arbre schématiquement.</p>
-<p>2) Quelle est l’utilité de <code>f</code> ?</p>
-<p>3) Recopier cette fonction sur ordinateur en ajoutant sa spécification <em>(les types des variables d’entrée
+</div>
+<ol>
+<li>
+<p>Identifier les types des entrées et sorties, ainsi que celui de la variable temporaire.</p>
+</li>
+<li>
+<p>Indiquer le contenu des variables <code>e</code>, <code>f</code> et <code>parcours</code> à l’initialisation (code exécuté jusqu’à la ligne 4) et à la fin de chaque passage de boucle lorsque la fonction est appliquée à l’arbre d'exemple utilisé dans les parties précédentes. On représentera l’arbre schématiquement.</p>
+</li>
+<li>
+<p>Quelle est l’utilité de <code>f</code> ?</p>
+</li>
+<li>
+<p>Recopier cette fonction sur ordinateur en ajoutant sa spécification <em>(les types des variables d’entrée
 et sortie)</em>. On n’oubliera pas d’importer une implémentation de structure de file.</p>
-<p>4) Tester le programme sur l’arbre d'exemple.</p>
+</li>
+<li>
+<p>Tester le programme sur l’arbre d'exemple.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Télécharger si besoin l'implémentation d'une file en POO : <a href="../File.py"><strong>&gt; ici &lt;</strong></a></p>
+</div>
 <h2 id="tp-algorithmes-sur-les-arbres-binaires-de-recherche">TP : Algorithmes sur les arbres binaires de recherche<a class="headerlink" href="#tp-algorithmes-sur-les-arbres-binaires-de-recherche" title="Permanent link">&para;</a></h2>
 <h3 id="a-representation">A. Représentation<a class="headerlink" href="#a-representation" title="Permanent link">&para;</a></h3>
 <p>On propose d’utiliser une autre représentation pour manipuler des arbres binaires de recherche. On utilise deux classes : <code>Noeud</code> et <code>ABR</code>.</p>
+<div class="admonition quote">
+<p class="admonition-title">Code</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ABR</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">racine</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">racine</span> <span class="o">=</span> <span class="n">racine</span>
@@ -3810,8 +3858,10 @@ et sortie)</em>. On n’oubliera pas d’importer une implémentation de structu
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fils_droit</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">fils_droit</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">space</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
-<p><strong><em>Exemple d'utilisation des classes :</em></strong>
-Le code suivant représente l'arbre ci-dessous :
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple d'utilisation des classes</p>
+<p>Le code suivant représente l'arbre ci-dessous :
 <div class="highlight"><pre><span></span><code><span class="n">n7</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 <span class="n">n6</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n7</span><span class="p">)</span>
 <span class="n">n2</span> <span class="o">=</span> <span class="n">Noeud</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
@@ -3824,39 +3874,50 @@ Le code suivant représente l'arbre ci-dessous :
 <span class="n">a</span> <span class="o">=</span> <span class="n">ABR</span><span class="p">(</span><span class="n">n8</span><span class="p">)</span>
 </code></pre></div>
 <pre class="mermaid"><code>graph TB
-  A((8)) --&gt; B((4))
-  A --&gt; C((12))
-  B --&gt; D((2))
-  B --&gt; E((6))
-  E --&gt; G((7))
-  C --&gt; H((9))
-  C --&gt; I((15))
-  I --&gt; J((20))</code></pre></p>
+A((8)) --&gt; B((4))
+A --&gt; C((12))
+B --&gt; D((2))
+B --&gt; E((6))
+E --&gt; G((7))
+C --&gt; H((9))
+C --&gt; I((15))
+I --&gt; J((20))</code></pre></p>
+</div>
 <div class="admonition tip">
-<p class="admonition-title">Récupérer le fichier suivant sur l'ENT.</p>
+<p class="admonition-title">Récupérer le fichier suivant : <a href="../abr.py"><em>abr.py</em></a></p>
 </div>
 <ol>
-<li>Utiliser ces classes pour représenter l’ABR du TD précédent (ci-dessous), en vous aidant de l’exemple.</li>
-</ol>
+<li>
+<p>Utiliser ces classes pour représenter l’ABR du TD précédent (ci-dessous), en vous aidant de l’exemple.</p>
 <pre class="mermaid"><code>graph TB
-  A((9)) --&gt; B(3)
-  A --&gt; C(13)
-  B --&gt; D(2)
-  B --&gt; E(5)
+A((9)) --&gt; B(3)
+A --&gt; C(13)
+B --&gt; D(2)
+B --&gt; E(5)
 
-  C --&gt; I(11)
-  C --&gt; J(17)
+C --&gt; I(11)
+C --&gt; J(17)
 
-  J --&gt; L(19)</code></pre>
-<p>2) Afficher l’arbre obtenu en utilisant la méthode <code>affiche_abr</code>.</p>
+J --&gt; L(19)</code></pre>
+</li>
+<li>
+<p>Afficher l’arbre obtenu en utilisant la méthode <code>affiche_abr</code>.</p>
+</li>
+</ol>
 <h3 id="b-algorithme-de-recherche">B. Algorithme de recherche<a class="headerlink" href="#b-algorithme-de-recherche" title="Permanent link">&para;</a></h3>
 <p>Nous allons cette fois-ci écrire des méthodes pour les deux classes, <em>en nous inspirant de ce qui a été fait pour la
 fonction d’affichage (implémentée dans les deux classes)</em>.</p>
 <p>Le principe est d’effectuer la recherche dans la classe <code>Noeud</code> (en considérant qu’on peut la faire en partant de
 n’importe quel noeud de l’ABR) et donc de créer une méthode <code>rechercher</code> dans celle-ci, puis de créer une méthode
 <code>rechercher_abr</code> dans la classe <code>ABR</code>, en appelant la méthode <code>rechercher</code> de la classe <code>Noeud</code> sur la racine de l’ABR.</p>
-<p>1) Implémenter ces méthodes pour rechercher une clé dans un ABR, à partir de l’algorithme décrit dans le cours.</p>
-<p>2) Les tester sur l’ABR d'exemple utilisé dans les TP précédents.</p>
+<ol>
+<li>
+<p>Implémenter ces méthodes pour rechercher une clé dans un ABR, à partir de l’algorithme décrit dans le cours.</p>
+</li>
+<li>
+<p>Les tester sur l’ABR d'exemple utilisé dans les TP précédents.</p>
+</li>
+</ol>
 <h3 id="c-algorithme-dinsertion">C. Algorithme d'insertion<a class="headerlink" href="#c-algorithme-dinsertion" title="Permanent link">&para;</a></h3>
 <p>De la même manière que pour la recherche, implémenter une méthode <code>inserer</code> dans la classe <code>Noeud</code> et une dans la classe <code>ABR</code>, <code>inserer_abr</code>, qui permettent d’insérer une clé. Les tester sur le même ABR que l'algorithme de recherche.</p>
 
@@ -3904,13 +3965,13 @@ n’importe quel noeud de l’ABR) et donc de créer une méthode <code>recherch
       
       
         
-        <a href="../../seq3/Cours_SoC/" class="md-footer__link md-footer__link--next" aria-label="Next: I. Les systèmes sur puce" rel="next">
+        <a href="../../seq9/securisation/" class="md-footer__link md-footer__link--next" aria-label="Next: 6. Sécuriser les communications" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              I. Les systèmes sur puce
+              6. Sécuriser les communications
             </div>
           </div>
           <div class="md-footer__button md-icon">
