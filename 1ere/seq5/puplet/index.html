@@ -1323,6 +1323,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3476,6 +3483,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3502,16 +3516,17 @@ text-align: justify}
 <h2 id="cours">Cours<a class="headerlink" href="#cours" title="Permanent link">&para;</a></h2>
 <h3 id="a-definition">A. Définition<a class="headerlink" href="#a-definition" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p class="admonition-title">Un <strong>p-uplet</strong> est une collection ordonnée de <em>p</em> éléments (un nombre donné d'éléments). Ils peuvent être de <strong>différents types</strong>.</p>
+<p class="admonition-title">Un <strong>p-uplet</strong> est un ensemble ordonné de <em>p</em> éléments (un nombre donné d'éléments). Ils peuvent être de <strong>différents types</strong>.</p>
 </div>
-<p>En Python, on utilise le type <code>tuple</code> (terme que l'on retrouve dans quintuple -5 éléments-, sextuple -6 éléments-,...).</p>
+<p>En Python, on utilise le type <code>tuple</code> (terme que l'on retrouve par exemple dans <em>quintuple</em> : un ensemble de 5 éléments).</p>
 <h3 id="b-creation">B. Création<a class="headerlink" href="#b-creation" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p class="admonition-title">Différents éléments séparés par des <strong>virgules</strong> permettent de créer un <code>tuple</code>. Pour la lisibilité du code, on encadre ces éléments par des <strong>parenthèses</strong>.</p>
+<p class="admonition-title">Différents éléments séparés par des <strong>virgules</strong> permettent de créer un <code>tuple</code>. Pour la lisibilité du code, on encadre ces éléments par des <strong>parenthèses</strong>. Comme pour les tableaux, son nombre d'éléments ou <strong>longueur</strong> est donné par la fonction <code>len()</code> pouvant prendre en paramètre un tuple.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<p><code>tuple1 = (0, 5, 2)</code></p>
+<p><code>tuple1 = (0, 5, 2)</code> 
+Cette variable est de longueur ..........</p>
 </div>
 <h3 id="c-indexation">C. Indexation<a class="headerlink" href="#c-indexation" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
@@ -3526,14 +3541,14 @@ text-align: justify}
 <div class="admonition info">
 <p class="admonition-title">C'est une spécificité du <code>tuple</code>, il n'est pas modifiable ! Il est dit <strong>non-muable</strong>.</p>
 </div>
-<p>S'il est choisi au lieu d'un tableau, c'est souvent pour cette particularité : pour éviter que des valeurs soient modifiée en cours de programme.</p>
+<p>S'il est choisi au lieu d'un tableau, c'est souvent pour cette particularité : pour éviter que des valeurs soient modifiée en cours de programme. </p>
 <h3 id="e-utilisation-dans-des-fonctions">E. Utilisation dans des fonctions<a class="headerlink" href="#e-utilisation-dans-des-fonctions" title="Permanent link">&para;</a></h3>
 <p>Il est possible de faire renvoyer plusieurs valeurs à une fonction. Ces valeurs sont alors renvoyées sous la forme d'un <code>tuple</code>.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <div class="admonition quote">
 <p class="admonition-title">Code</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
     <span class="n">max_val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">max_ind</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span>
@@ -3544,18 +3559,63 @@ text-align: justify}
 </code></pre></div>
 </div>
 <details class="note">
-<summary>1. Ecrire l'appel de la fonction <code>maximum</code> pour <code>t</code> valant <code>[-15, 7, 36, -1]</code>, permettant de stocker la valeur et l'indice du maximum dans des variables.</summary>
-<div class="highlight"><pre><span></span><code><span class="n">v</span><span class="p">,</span><span class="n">i</span><span class="o">=</span><span class="n">maximum</span><span class="p">([</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">36</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<summary>1. Ecrire l'appel de la fonction <code>maximum</code> pour <code>t</code> valant <code>[-15.0, 7.4, 36.8, -3.14]</code>, mais stockant les valeurs de sortie dans une seule variable. Afficher ensuite ces valeurs séparément.</summary>
+<div class="highlight"><pre><span></span><code><span class="n">resultat</span> <span class="o">=</span> <span class="n">maximum</span><span class="p">([</span><span class="o">-</span><span class="mf">15.0</span><span class="p">,</span> <span class="mf">7.4</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.14</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La valeur maximum est :&quot;</span><span class="p">,</span> <span class="n">resultat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;indice du maximum est :&quot;</span><span class="p">,</span> <span class="n">resultat</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </code></pre></div>
 </details>
 <details class="note">
-<summary>2. Ecrire le même appel, mais stockant les valeurs de sortie dans une variable. Afficher ensuite ces valeurs séparément.</summary>
-<div class="highlight"><pre><span></span><code><span class="n">maxi</span><span class="o">=</span><span class="n">maximum</span><span class="p">([</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">36</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La valeur maximum est :&quot;</span><span class="p">,</span> <span class="n">maxi</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;indice du maximum est :&quot;</span><span class="p">,</span> <span class="n">maxi</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<summary>2. Ecrire le même appel, mais en stockant la valeur et l'indice du maximum dans des variables différentes, séparées par des virgules.</summary>
+<div class="highlight"><pre><span></span><code><span class="n">maxi</span><span class="p">,</span> <span class="n">indice</span> <span class="o">=</span> <span class="n">maximum</span><span class="p">([</span><span class="o">-</span><span class="mf">15.0</span><span class="p">,</span> <span class="mf">7.4</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.14</span><span class="p">])</span>  
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La valeur maximum est :&quot;</span><span class="p">,</span> <span class="n">maxi</span><span class="p">)</span>  
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;indice du maximum est :&quot;</span><span class="p">,</span> <span class="n">indice</span><span class="p">)</span>
 </code></pre></div>
 </details>
 </div>
+<hr />
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Créer un tuple <code>info</code> stockant les information suivantes, de différents types, sur une personne <em>(garder l'ordre donné)</em>: </p>
+<ul>
+<li>prénom : Ada,</li>
+<li>nom : Lovelace,</li>
+<li>année de naissance : 1815,</li>
+<li>pays : Angleterre. </li>
+</ul>
+</li>
+<li>
+<p>Quelle instruction Python permet d'accéder à la valeur <code>Angleterre</code> ?</p>
+</li>
+<li>
+<p>On veut modifier le pays, pour le remplacer par Royaume-Unis. Quelle instruction Python permet de faire de la modification ? </p>
+</li>
+</ol>
+<h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">&para;</a></h3>
+<p>Un p-uplet n'est pas modifiable, mais on peut faire des opérations dessus et stocker le résultat dans d'autres variables. On peut utiliser l'addition avec l'opérateur <code>+</code> et la multiplication avec l'opérateur <code>*</code>. </p>
+<ol>
+<li>
+<p>Que renvoie l'expression <code>('Juliette', 2006) + ('Anna', 2003)</code> ? </p>
+</li>
+<li>
+<p>Que renvoie l'expression <code>3 * ('orange', 6)</code> ?  </p>
+</li>
+</ol>
+<h3 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">liste</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">eleve</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">eleve</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">nom</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">eleve</span>
+    <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+<span class="n">liste_eleves</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Jean&#39;</span><span class="p">,</span> <span class="s1">&#39;Dugarden&#39;</span><span class="p">,</span> <span class="mi">2006</span><span class="p">,</span> <span class="s1">&#39;1ere1&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Marion&#39;</span><span class="p">,</span> <span class="s1">&#39;Cotillon&#39;</span><span class="p">,</span> <span class="mi">2005</span><span class="p">,</span> <span class="s1">&#39;tle3&#39;</span><span class="p">)]</span>
+</code></pre></div>
+1. Que contiennent les variables <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code> après exécution de l'instruction suivante : <code>a, b, c, d = recherche('Cotillon', liste_eleves)</code> ? </p>
+<ol>
+<li>Que renverra la fonction <code>recherche()</code> si l'élève recherché n'est pas dans la liste ? </li>
+</ol>
 
 
   
