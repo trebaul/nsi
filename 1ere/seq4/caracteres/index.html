@@ -3548,75 +3548,64 @@ text-align: justify}
 <h3 id="b-comparer-des-chaines-de-caracteres">B. Comparer des chaînes de caractères<a class="headerlink" href="#b-comparer-des-chaines-de-caracteres" title="Permanent link">&para;</a></h3>
 <p>La <strong>comparaison</strong> de chaînes avec les opérateurs inférieur (<code>&lt;</code>) ou supérieur (<code>&gt;</code>) est possible car chacun des caractères est représenté dans la machine par un nombre, son code Unicode. On compare donc le code de 2 caractères pour déterminer celui qui est inférieur à l'autre.</p>
 <div class="admonition example">
-<p class="admonition-title">Exemple</p>
+<p class="admonition-title">Exemple de comparaison d'1 caractère</p>
 <p><code>a</code> est inférieur à <code>m</code> car son code ASCII est inférieur. L'ordre des caractères dans le code ASCII respecte l'ordre alphabétique, et c'est la même chose avec les majuscules. <br />
 <code>1</code> est inférieur à <code>9</code> pour la même raison. Le code ASCII respecte l'ordre croissant des chiffres.</p>
 </div>
 <p>Une <strong>chaîne de caractères</strong> est une <strong>séquence</strong>, c'est-à-dire qu'elle comprend plusieurs éléments qui sont ici de type caractères. il n'y a donc généralement pas qu'une valeur à comparer avec une autre. </p>
-<p>L'<strong>algorithme</strong> appliqué pour déterminer quelle chaine est inférieure (ou supérieure) à l'autre est le suivant :<br />
-- On compare les premiers caractères de chaque chaîne.<br />
-- S'ils n'ont pas le même code ASCII, l'un est inférieur à l'autre. L'algorithme s'arrête, cette relation d'ordre est valable pour la chaîne entière.<br />
-- Sinon, on compare les caractères suivant de chaque chaîne, et on réapplique l'algorithme. Au maximum, on va jusqu'au bout de chaque chaîne.  </p>
 <div class="admonition example">
-<p class="admonition-title">Exemple</p>
+<p class="admonition-title">Exemple de comparaison de chaînes de caractères</p>
 <p>On compare <code>abracadabra</code> à <code>abc</code> :<br />
 - <code>a</code> et <code>a</code> sont identiques, on regarde les caractères suivants.<br />
 - <code>b</code> et <code>b</code> sont identiques, on regarde les caractères suivants.<br />
 - <code>r</code> et <code>c</code> sont différents, le code ASCII de <code>c</code> est inférieur à celui de <code>r</code>. L'algorithme s'arrête, et <code>abc</code> est inférieur à <code>abracadabra</code>.</p>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Algorithme appliqué pour comparer 2 chaînes de caractères</p>
+<ol>
+<li>On compare les premiers caractères de chaque chaîne.  </li>
+<li>S'ils n'ont pas le même code Unicode, l'un est inférieur à l'autre. <strong><em>L'algorithme s'arrête</em></strong>, cette relation d'ordre est valable pour la chaîne entière.  </li>
+<li>Sinon, on compare les caractères suivant de chaque chaîne, et <strong><em>on réapplique les étapes précédentes</em></strong>. </li>
+<li>Si on arrive au bout d'une chaine, mais qu'il reste des caractères dans l'autre, alors la 1ère est inférieure à la 2ème. Si on arrive au bout des 2, elles sont égales.  </li>
+</ol>
+</div>
 <h3 id="c-indexation-des-chaines-de-caracteres">C. Indexation des chaînes de caractères<a class="headerlink" href="#c-indexation-des-chaines-de-caracteres" title="Permanent link">&para;</a></h3>
-<p>Une <strong>chaîne de caractères</strong>  stocke plusieurs plusieurs caractères. On accède à chaque caractère individuellement grâce à leur <strong>position</strong> dans la chaîne, appelée leur <strong>indice</strong> (on dit que les caractères sont <strong><em>indexés</em></strong>). </p>
+<p>Une <strong>chaîne de caractères</strong>  stocke plusieurs plusieurs caractères. On accède à chaque caractère individuellement grâce à leur <strong>position</strong> dans la chaîne, appelée leur <strong>indice</strong> (on dit que les caractères sont <strong><em>indexés</em></strong>). On accède à un caractère d'une chaîne qui est d'indice <code>ind</code> avec la syntaxe <code>caracteres[ind]</code>.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<p>Le tableau suivant donne l'indice des différents caractères de la chaîne <code>caracteres = "chaine"</code> :</p>
+<p>Le tableau suivant donne l'indice des différents caractères de la chaîne <code>caracteres = "hello"</code> :</p>
 <table>
 <thead>
 <tr>
 <th align="center">Caractère</th>
-<th align="center">Indice</th>
+<th align="center"><code>"h"</code></th>
+<th align="center"><code>"e"</code></th>
+<th align="center"><code>"l"</code></th>
+<th align="center"><code>"l"</code></th>
+<th align="center"><code>"o"</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>c</code></td>
+<td align="center"><strong>Indice</strong></td>
 <td align="center">0</td>
-</tr>
-<tr>
-<td align="center"><code>h</code></td>
 <td align="center">1</td>
-</tr>
-<tr>
-<td align="center"><code>a</code></td>
 <td align="center">2</td>
-</tr>
-<tr>
-<td align="center"><code>i</code></td>
 <td align="center">3</td>
-</tr>
-<tr>
-<td align="center"><code>n</code></td>
 <td align="center">4</td>
-</tr>
-<tr>
-<td align="center"><code>e</code></td>
-<td align="center">5</td>
 </tr>
 </tbody>
 </table>
-</div>
-<p>On accède à un caractère d'une chaîne qui est d'indice <code>indice</code> avec la syntaxe <code>caracteres[indice]</code>. </p>
-<div class="admonition example">
-<p class="admonition-title">Exemple</p>
 <p>L'instruction <code>caracteres[2]</code> renvoie dans cet exemple la valeur <code>a</code>.</p>
 <details class="note">
-<summary>Avec quelle instruction obtient-on la valeur <code>n</code> ? <code>c</code> ?</summary>
-<p>Avec respectivement l'instruction <code>caracteres[4]</code> et <code>caracteres[0]</code>. </p>
+<summary>Avec quelle instruction obtient-on la valeur <code>e</code> ? <code>o</code> ?</summary>
+<p>Avec respectivement l'instruction <code>caracteres[1]</code> et <code>caracteres[4]</code>. </p>
 </details>
 </div>
 <p>L'indice du dernier élément d'une chaîne s'exprime en fonction de sa <strong>longueur</strong>, c'est-à-dire de son nombre de caractères, que l'on obtient avec la fonction <code>len</code> qui prend un paramètre une chaîne. Comme on commence à <code>0</code>, au va au maximum jusqu'à l'indice <code>len(caracteres)-1</code>.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<p>Dans notre cas, il y a 6 éléments dans <code>caracteres</code>, et l'indice du dernier élément, le <code>e</code>, est <code>5</code>. On a en effet <code>5</code> qui vaut <code>len(caracteres)-1</code>.</p>
+<p>Dans notre cas, il y a 5 éléments dans <code>caracteres</code>, et l'indice du dernier élément, le <code>"o"</code>, est <code>4</code>. <code>4</code> vaut en effet <code>5-1 = len(caracteres)-1</code>.</p>
 </div>
 <h3 id="d-parcours-des-chaines-de-caracteres">D. Parcours des chaînes de caractères<a class="headerlink" href="#d-parcours-des-chaines-de-caracteres" title="Permanent link">&para;</a></h3>
 <p>Pour accéder à chacun des caractères les uns à la suite des autres, on peut utiliser une <strong>boucle bornée</strong>. Il y a deux manières de le faire :</p>
