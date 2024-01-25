@@ -1400,6 +1400,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercices-sur-les-chaines-de-caracteres" class="md-nav__link">
+    Exercices sur les chaînes de caractères
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3490,6 +3497,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercices-sur-les-chaines-de-caracteres" class="md-nav__link">
+    Exercices sur les chaînes de caractères
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3627,6 +3641,38 @@ text-align: justify}
 </div>
 <div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000008" class="comment">###</span><div class="line_v"><div id="editor_00000008"></div></div><div id="term_editor_00000008"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000008","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000008","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000008').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000008" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000008")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000008")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
 <p><span id="content_editor_00000008" class="py_mk_hide"></span><span id="corr_content_editor_00000008" class="py_mk_hide" data-strudel=""></span></p>
+<h2 id="exercices-sur-les-chaines-de-caracteres">Exercices sur les chaînes de caractères<a class="headerlink" href="#exercices-sur-les-chaines-de-caracteres" title="Permanent link">&para;</a></h2>
+<h3 id="exercice-1-comparaison-de-chaines">Exercice 1 : comparaison de chaînes<a class="headerlink" href="#exercice-1-comparaison-de-chaines" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Laquelle de ces listes de chaînes de caractères est triée en ordre croissant ?<br />
+<strong>A</strong> <code>["112", "19", "27", "45", "8"]</code><br />
+<strong>B</strong> <code>["8", "19", "27", "45", "112"]</code><br />
+<strong>C</strong> <code>["8", "112", "19", "27", "45"]</code><br />
+<strong>D</strong> <code>["19", "112", "27", "45", "8"]</code></p>
+</li>
+<li>
+<p>Trier dans l'ordre croissant les chaînes suivantes : <code>"Python"</code>, <code>"Pygame"</code>, <code>"Spyder"</code>, <code>"Py"</code>, <code>"Anaconda"</code>.</p>
+</li>
+</ol>
+<p><br></p>
+<h3 id="exercice-2-renverser-une-chaine">Exercice 2 : renverser une chaîne<a class="headerlink" href="#exercice-2-renverser-une-chaine" title="Permanent link">&para;</a></h3>
+<p>Ecrire une fonction <code>renverse(chaine)</code> prenant en paramètre une chaîne de caractères <code>chaine</code> et renvoyant une chaîne contenant les mêmes caractères mais dans l'ordre inverse. </p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<h3 id="exercice-3-conversion-en-binaire">Exercice 3 : conversion en binaire<a class="headerlink" href="#exercice-3-conversion-en-binaire" title="Permanent link">&para;</a></h3>
+<p>Pour écrire un programme effectuant la conversion d'un entier de la base 10 à la base 2, on peut utiliser une chaîne de caractères pour stocker le nombre converti en binaire <em>(on aurait aussi pu utiliser un tableau d'entiers)</em>. Il faut ajouter chaque nouveau reste à cette chaîne.</p>
+<p>Compléter le code de la fonction ci-dessous, faisant cette conversion :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">dec_to_bin</span><span class="p">(</span><span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>   <span class="c1"># le résultat de la conversion en binaire</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">d</span>    <span class="c1"># stocke le quotient de chaque division euclidienne</span>
+
+    <span class="k">while</span> <span class="n">q</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="o">...</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="o">...</span>
+
+    <span class="k">return</span> <span class="n">b</span>
+</code></pre></div>
 
 
   
