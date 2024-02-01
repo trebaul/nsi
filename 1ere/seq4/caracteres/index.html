@@ -3563,16 +3563,15 @@ text-align: justify}
 <p>La <strong>comparaison</strong> de chaînes avec les opérateurs inférieur (<code>&lt;</code>) ou supérieur (<code>&gt;</code>) est possible car chacun des caractères est représenté dans la machine par un nombre, son code Unicode. On compare donc le code de 2 caractères pour déterminer celui qui est inférieur à l'autre.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple de comparaison d'1 caractère</p>
-<p><code>a</code> est inférieur à <code>m</code> car son code ASCII est inférieur. L'ordre des caractères dans le code ASCII respecte l'ordre alphabétique, et c'est la même chose avec les majuscules. <br />
-<code>1</code> est inférieur à <code>9</code> pour la même raison. Le code ASCII respecte l'ordre croissant des chiffres.</p>
+<p><code>"a"</code> est inférieur à <code>"m"</code> car <strong><em>son code ASCII est inférieur (<code>"a"&lt;"n"</code> vaut <code>True)****. L'ordre des caractères dans le code ASCII respecte l'ordre alphabétique *(pour les minuscules et majuscules)*.</code>"1"<code>(code ASCII : **</code>49<code>**) est inférieur à</code>9<code>(code ASCII : **</code>57`</em>*) pour la même raison. Le code ASCII respecte l'</strong>ordre croissant** des chiffres.</p>
 </div>
 <p>Une <strong>chaîne de caractères</strong> est une <strong>séquence</strong>, c'est-à-dire qu'elle comprend plusieurs éléments qui sont ici de type caractères. il n'y a donc généralement pas qu'une valeur à comparer avec une autre. </p>
 <div class="admonition example">
 <p class="admonition-title">Exemple de comparaison de chaînes de caractères</p>
 <p>On compare <code>abracadabra</code> à <code>abc</code> :<br />
-- <code>a</code> et <code>a</code> sont identiques, on regarde les caractères suivants.<br />
-- <code>b</code> et <code>b</code> sont identiques, on regarde les caractères suivants.<br />
-- <code>r</code> et <code>c</code> sont différents, le code ASCII de <code>c</code> est inférieur à celui de <code>r</code>. L'algorithme s'arrête, et <code>abc</code> est inférieur à <code>abracadabra</code>.</p>
+- <code>a</code> et <code>a</code> sont identiques, <strong><em>on regarde les caractères suivants.</em></strong><br />
+- <code>b</code> et <code>b</code> sont identiques, <strong><em>on regarde les caractères suivants.</em></strong><br />
+- <code>r</code> et <code>c</code> sont différents, <strong><em>le code ASCII de <code>c</code> est inférieur à celui de <code>r</code>. L'algorithme s'arrête, et <code>abc</code> est inférieur à <code>abracadabra</code>.</em></strong></p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Algorithme appliqué pour comparer 2 chaînes de caractères</p>
@@ -3610,7 +3609,7 @@ text-align: justify}
 </tr>
 </tbody>
 </table>
-<p>L'instruction <code>caracteres[2]</code> renvoie dans cet exemple la valeur <code>a</code>.</p>
+<p>L'instruction <code>caracteres[2]</code> renvoie dans cet exemple la valeur <code>l</code>.</p>
 <details class="note">
 <summary>Avec quelle instruction obtient-on la valeur <code>e</code> ? <code>o</code> ?</summary>
 <p>Avec respectivement l'instruction <code>caracteres[1]</code> et <code>caracteres[4]</code>. </p>
